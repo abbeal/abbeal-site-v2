@@ -114,7 +114,13 @@ export function Hero({
             </motion.span>
             <motion.span
               {...h1Line(0.22)}
-              className="block italic text-[var(--color-brand-teal)]"
+              className="block italic bg-clip-text text-transparent"
+              style={{
+                backgroundImage:
+                  "linear-gradient(135deg, #144F4F 0%, #42B296 45%, #80E8BA 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
             >
               {d.hero.h1Bottom}
             </motion.span>

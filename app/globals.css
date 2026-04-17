@@ -3,12 +3,18 @@
 @theme inline {
   /* Brand */
   --color-brand-teal: #42b296;
+  --color-brand-mint: #80e8ba;
+  --color-brand-deep: #144f4f;
   --color-brand-teal-fg: #0a3429;
   --color-ink: #0c343d;
   --color-ink-soft: #2a4f57;
   --color-bg-light: #fafaf8;
   --color-bg-cream: #f4f1ea;
   --color-bg-paper: #ffffff;
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(135deg, #144f4f 0%, #42b296 45%, #80e8ba 100%);
+  --gradient-brand-soft: linear-gradient(135deg, #42b296 0%, #80e8ba 100%);
 
   /* Semantic */
   --color-background: var(--color-bg-light);
