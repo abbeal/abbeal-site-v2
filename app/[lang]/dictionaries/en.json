@@ -1,0 +1,666 @@
+{
+  "meta": {
+    "title": "Abbeal · Tri-geo engineering pod",
+    "description": "The IT services firm is dead. Tech takes back the power. Software, AI, Data, Robotics. Paris · Montréal · Tokyo. Senior squads, continuous 24/7 delivery.",
+    "ogTitle": "Abbeal · The IT services firm is dead. Tech takes back the power.",
+    "ogDescription": "Tri-geo engineering pod. Software, AI, Data, Robotics. Senior squads. Tokyo, Montréal, Paris."
+  },
+  "nav": {
+    "services": "Services",
+    "expertises": "Expertise",
+    "stories": "Stories",
+    "mobbeal": "Mobbeal",
+    "team": "Team",
+    "insights": "Insights",
+    "careers": "Careers",
+    "contact": "Contact",
+    "ctaPrimary": "Talk to an architect"
+  },
+  "hero": {
+    "tape": "// 01 · Engineering pod",
+    "h1Top": "The IT services firm is dead.",
+    "h1Bottom": "Tech takes back the power.",
+    "subtitle": "Software, AI, Data, Robotics. In Paris, Montréal, Tokyo. Embedded senior squads, continuous delivery, 24/7.",
+    "proof": "Senior teams. Production-grade delivery. Pragmatic decisions.",
+    "ctaPrimary": "Talk to an architect",
+    "ctaSecondary": "Discover Mobbeal",
+    "clocksLabel": "Adaptive Follow-the-Sun · tri-geo clocks",
+    "mastheadTitle": "Follow-the-Sun · 24/7",
+    "live": "LIVE",
+    "cities": [
+      {
+        "key": "paris",
+        "name": "Paris",
+        "label": "EU Hub"
+      },
+      {
+        "key": "montreal",
+        "name": "Montréal",
+        "label": "Americas Hub"
+      },
+      {
+        "key": "tokyo",
+        "name": "Tokyo",
+        "label": "Asia Hub"
+      }
+    ]
+  },
+  "kpis": {
+    "tape": "// 02 — Proof",
+    "items": [
+      {
+        "value": "100+",
+        "label": "Companies shipped with"
+      },
+      {
+        "value": "3",
+        "label": "Hubs · Paris, Montréal, Tokyo"
+      },
+      {
+        "value": "50+",
+        "label": "Engineers relocated via Mobbeal"
+      },
+      {
+        "value": "10+",
+        "label": "Years of engineering"
+      }
+    ]
+  },
+  "adn": {
+    "tape": "// 03 — Our DNA",
+    "title": "Why Abbeal?",
+    "subtitle": "Three pillars, no more. Everything else is execution.",
+    "pillars": [
+      {
+        "number": "01",
+        "title": "Adaptive Follow-the-Sun",
+        "punch": "Your roadmaps move forward while you sleep.",
+        "body": "Three synced hubs turn time zones into an edge. Clean handoffs, mastered overlap, 24/7 with no debt.",
+        "stat": "24/7 continuous delivery"
+      },
+      {
+        "number": "02",
+        "title": "AI-first",
+        "punch": "AI in production. Not in demos.",
+        "body": "RAG that holds under load, workflow-oriented agents, embedded vision and AI. Evaluation, monitoring, cost control. Responsible use, not hype.",
+        "stat": "Top 1% of engineers sourced"
+      },
+      {
+        "number": "03",
+        "title": "GreenOps & Performance",
+        "punch": "Less carbon. Less cost.",
+        "body": "The most sustainable code is the code we don't write. Cloud budgets, profiling, frugal infra, dynamic scaling. GreenOps applied right down to this site.",
+        "stat": "Lighthouse 90+ everywhere"
+      }
+    ]
+  },
+  "services": {
+    "tape": "// 04 — How we engage",
+    "title": "Three ways to work together.",
+    "subtitle": "We step in where technical risk is high and speed matters.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Embedded squads",
+        "subtitle": "Staff Augmentation",
+        "body": "We join your teams with scope ownership. Dev, Ops, Data, QA. Fast ramp-up, mentoring, quality at the right level.",
+        "cta": "Reinforce a team"
+      },
+      {
+        "number": "02",
+        "title": "Technical hiring",
+        "subtitle": "Talent Acquisition",
+        "body": "Top 1% sourced by engineers, validated through a short technical process. CTOs, Leads, niche experts.",
+        "cta": "Open a search"
+      },
+      {
+        "number": "03",
+        "title": "End-to-end delivery",
+        "subtitle": "Digital Solutions",
+        "body": "From design to run. Output-based engagement, not time & material. SLOs, observability, mastered run.",
+        "cta": "Frame a project"
+      }
+    ]
+  },
+  "expertises": {
+    "tape": "// 05 — Tech landscape 2026",
+    "title": "Four playgrounds.",
+    "subtitle": "Four expertise areas, aligned with the critical needs of 2026.",
+    "items": [
+      {
+        "tag": "Web & Mobile",
+        "title": "High-performance interfaces.",
+        "body": "Design systems, performance budgets, multi-platform apps that scale.",
+        "stack": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Vue",
+          "Tailwind",
+          "Flutter",
+          "Swift",
+          "Kotlin",
+          "GraphQL"
+        ]
+      },
+      {
+        "tag": "Data & AI",
+        "title": "From raw data to AI in production.",
+        "body": "RAG pipelines, agentic workflows, model serving, eval & monitoring.",
+        "stack": [
+          "Python",
+          "LangChain",
+          "OpenAI",
+          "Mistral",
+          "Hugging Face",
+          "Pinecone",
+          "Weaviate",
+          "PyTorch",
+          "MLOps"
+        ]
+      },
+      {
+        "tag": "Cloud & Reliability",
+        "title": "Cloud-native, secure, resilient.",
+        "body": "Platform engineering, CI/CD, SLOs, observability, DevSecOps.",
+        "stack": [
+          "AWS",
+          "GCP",
+          "Azure",
+          "Kubernetes",
+          "Terraform",
+          "OpenTofu",
+          "ArgoCD",
+          "GitHub Actions"
+        ]
+      },
+      {
+        "tag": "Embedded & Robotics",
+        "title": "Where code meets the physical world.",
+        "body": "Real-time control, edge deployment, ROS2 integrations, vision.",
+        "stack": [
+          "C++",
+          "Rust",
+          "ROS 2",
+          "NVIDIA Jetson",
+          "Isaac",
+          "Edge Impulse",
+          "MQTT",
+          "Yocto"
+        ]
+      }
+    ]
+  },
+  "techRadar": {
+    "tape": "// 06 — Tech radar 2026",
+    "title": "What we push, what we evaluate, what we set aside.",
+    "subtitle": "Honest tech watch. Updated every quarter.",
+    "rings": {
+      "adopt": "Adopt",
+      "trial": "Trial",
+      "assess": "Assess",
+      "hold": "Hold"
+    },
+    "items": [
+      {
+        "name": "Rust for systems",
+        "ring": "adopt",
+        "category": "languages"
+      },
+      {
+        "name": "RAG in production",
+        "ring": "adopt",
+        "category": "ai"
+      },
+      {
+        "name": "ROS 2 + Isaac",
+        "ring": "adopt",
+        "category": "robotics"
+      },
+      {
+        "name": "OpenTofu",
+        "ring": "adopt",
+        "category": "infra"
+      },
+      {
+        "name": "Cache Components Next 16",
+        "ring": "trial",
+        "category": "frontend"
+      },
+      {
+        "name": "Multi-tool agents",
+        "ring": "trial",
+        "category": "ai"
+      },
+      {
+        "name": "Edge AI (Jetson)",
+        "ring": "trial",
+        "category": "robotics"
+      },
+      {
+        "name": "WASM on backend",
+        "ring": "assess",
+        "category": "languages"
+      },
+      {
+        "name": "Managed vector DBs",
+        "ring": "assess",
+        "category": "ai"
+      },
+      {
+        "name": "Low-code frameworks",
+        "ring": "hold",
+        "category": "frontend"
+      },
+      {
+        "name": "B2B crypto-payment",
+        "ring": "hold",
+        "category": "infra"
+      }
+    ]
+  },
+  "stories": {
+    "tape": "// 07 — Success stories",
+    "title": "Four engagements. Four outcomes.",
+    "subtitle": "Anonymised when needed. Always measured.",
+    "items": [
+      {
+        "kpi": "-30%",
+        "kpiLabel": "infra cost",
+        "sector": "Mobility scale-up",
+        "geo": "Hubs Montréal · Paris",
+        "body": "Microservices rebuild, end-to-end observability, GreenOps applied. More resilience, smaller cloud bill."
+      },
+      {
+        "kpi": "PWA",
+        "kpiLabel": "high perf",
+        "sector": "Sports e-commerce leader",
+        "geo": "Hub Paris",
+        "body": "Migration to a high-performance PWA, mobile conversion optimisation. Smoother UX, shorter checkout."
+      },
+      {
+        "kpi": "ROS 2",
+        "kpiLabel": "autonomous nav",
+        "sector": "Industry & robotics",
+        "geo": "Hub Tokyo",
+        "body": "Autonomous navigation on a robot fleet using ROS 2 and vision. Robust behaviours in real environments."
+      },
+      {
+        "kpi": "ISO 27001",
+        "kpiLabel": "compliance",
+        "sector": "FinTech SaaS",
+        "geo": "Tri-geo",
+        "body": "Security audit, DevSecOps compliance. Risk reduction, secure delivery without breaking cadence."
+      }
+    ]
+  },
+  "insights": {
+    "tape": "// 08 — Engineering insights",
+    "title": "Our tech watch. No bullshit.",
+    "subtitle": "Field reports, owned trade-offs, reusable patterns.",
+    "ctaAll": "All articles",
+    "items": [
+      {
+        "tag": "AI",
+        "title": "AI agents in production: avoiding the demo theatre.",
+        "excerpt": "Reliability, cost, security, evaluation. Seven patterns we actually use with our clients.",
+        "readTime": "8 min",
+        "slug": "ai-agents-production"
+      },
+      {
+        "tag": "GreenOps",
+        "title": "Seven GreenOps levers that cut your cloud bill.",
+        "excerpt": "Without sacrificing performance. Concrete cases: -30% on the bill, same SLOs.",
+        "readTime": "6 min",
+        "slug": "greenops-7-levers"
+      },
+      {
+        "tag": "Tech radar",
+        "title": "Why Rust and ROS 2 dominate our 2026 tech radar.",
+        "excerpt": "Criteria, field reports, trade-offs. What we actually adopt vs what we assess.",
+        "readTime": "10 min",
+        "slug": "tech-radar-2026"
+      }
+    ]
+  },
+  "ctaFinal": {
+    "tape": "// 09 — Let's talk?",
+    "title": "Are you on the client side or the engineering side?",
+    "client": {
+      "title": "You have a critical system to ship.",
+      "body": "We frame your project in 30 minutes with a senior architect. No commitment.",
+      "cta": "Talk to an architect"
+    },
+    "engineer": {
+      "title": "You want to work on tech that matters.",
+      "body": "Tokyo, Montréal, Paris. Senior squads, complex projects, international mobility via Mobbeal.",
+      "cta": "Join the team"
+    }
+  },
+  "footer": {
+    "tagline": "Tri-geo engineering pod. Since 2015.",
+    "addresses": {
+      "title": "Offices",
+      "items": [
+        {
+          "city": "Paris",
+          "address": "54 rue Greneta, 75002 Paris",
+          "tag": "EU Hub"
+        },
+        {
+          "city": "Montréal",
+          "address": "4388 Rue Saint-Denis, QC H2J 2L1",
+          "tag": "Americas Hub"
+        },
+        {
+          "city": "Tokyo",
+          "address": "1-23-5 Higashiazabu, Minato-ku, 106-0044",
+          "tag": "Asia Hub"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "general": "contact@abbeal.com",
+      "recruitment": "recrutement@abbeal.com"
+    },
+    "follow": {
+      "title": "Follow",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    },
+    "navTitle": "Site",
+    "legalTitle": "Legal",
+    "legal": {
+      "mentions": "Legal notice",
+      "privacy": "Privacy"
+    },
+    "copyright": "© 2026 Abbeal. All rights reserved."
+  },
+  "mobbeal": {
+    "nav": "Mobbeal",
+    "meta": {
+      "title": "Mobbeal · Keep your job, change your life",
+      "description": "International mobility program for engineers. Paris, Montréal, Tokyo. Keep your client, change your life. 100% visa success. 50+ relocated."
+    },
+    "hero": {
+      "tape": "// Mobbeal · International mobility program",
+      "h1Top": "Keep your job.",
+      "h1Bottom": "Change your life.",
+      "subtitle": "Turn your current mission into a passport for Tokyo, Montréal or Paris. Visa, payroll, admin — we handle it all. Zero upfront cost.",
+      "ctaPrimary": "Talk to Sébastien",
+      "ctaSecondary": "See testimonials",
+      "kpis": [
+        {
+          "value": "100%",
+          "label": "Visa applications accepted"
+        },
+        {
+          "value": "50+",
+          "label": "Engineers relocated"
+        },
+        {
+          "value": "3",
+          "label": "Destinations"
+        },
+        {
+          "value": "$0",
+          "label": "Upfront cost"
+        }
+      ]
+    },
+    "piliers": {
+      "tape": "// How it works",
+      "title": "Three pillars. Zero friction.",
+      "subtitle": "The model we've tested on 50+ engineers. Simple, tracked, no surprises.",
+      "items": [
+        {
+          "number": "01",
+          "title": "The contract passport",
+          "body": "You have a happy client. We turn your French contract into an expat contract. Same mission, new country."
+        },
+        {
+          "number": "02",
+          "title": "Zero upfront cost",
+          "body": "Our management fees (€2-3k/month) are deducted directly from client billing. You don't pay a euro upfront."
+        },
+        {
+          "number": "03",
+          "title": "We handle everything",
+          "body": "Visa, local payroll, legal, housing, banking. You focus on your client and your new life."
+        }
+      ]
+    },
+    "destinations": {
+      "tape": "// Three destinations",
+      "title": "Pick your corner of the world.",
+      "subtitle": "Three Abbeal hubs, three rhythms, one support quality.",
+      "items": [
+        {
+          "flag": "🇯🇵",
+          "city": "Tokyo",
+          "punch": "Full immersion.",
+          "body": "Morning overlap with Europe (your evening = their morning). Absolute safety. Pro English is enough.",
+          "stats": [
+            {
+              "label": "EU overlap",
+              "value": "Morning"
+            },
+            {
+              "label": "Language",
+              "value": "EN / JP"
+            }
+          ]
+        },
+        {
+          "flag": "🇨🇦",
+          "city": "Montréal",
+          "punch": "North-American ecosystem.",
+          "body": "Afternoon overlap (your morning = their morning). French-speaking. Easy integration. Quality of life.",
+          "stats": [
+            {
+              "label": "EU overlap",
+              "value": "Afternoon"
+            },
+            {
+              "label": "Language",
+              "value": "FR / EN"
+            }
+          ]
+        },
+        {
+          "flag": "🇫🇷",
+          "city": "Paris",
+          "punch": "Premium EU hub.",
+          "body": "For international engineers who want to settle in Europe with their current client. Same timezone as your EU clients.",
+          "stats": [
+            {
+              "label": "EU overlap",
+              "value": "Full-time"
+            },
+            {
+              "label": "Language",
+              "value": "FR"
+            }
+          ]
+        }
+      ]
+    },
+    "testimonials": {
+      "tape": "// They did it",
+      "title": "Three voices. Three changed lives.",
+      "items": [
+        {
+          "name": "Grégoire",
+          "role": "Backend Dev",
+          "location": "Tokyo · 18 months",
+          "quote": "French e-commerce client, €600 day rate. Now in Shibuya with the same client. Best career choice I've made."
+        },
+        {
+          "name": "Kevyn",
+          "role": "Lead Dev",
+          "location": "Montréal · 12 months",
+          "quote": "I kept my mission at a large French company. Perfect afternoon overlap, incomparable quality of life."
+        },
+        {
+          "name": "Alex",
+          "role": "Data Consultant",
+          "location": "Tokyo · 6 months",
+          "quote": "The process was simpler than expected. Mobbeal handled everything, I focused on my client."
+        }
+      ]
+    },
+    "faq": {
+      "tape": "// Frequent questions",
+      "title": "The 7 questions we always get.",
+      "items": [
+        {
+          "q": "Do I pay taxes in two countries?",
+          "a": "No. You become a tax resident of the host country after 6 months. International tax treaties. We guide you through the paperwork."
+        },
+        {
+          "q": "What about my social security?",
+          "a": "You switch to the local system (Sécu in France, JNHI in Japan, RAMQ in Canada). Retirement rights are preserved through totalisation agreements."
+        },
+        {
+          "q": "Can my partner come?",
+          "a": "Yes. Highly Skilled Professional visa (Japan) or Work Permit (Canada) includes a dependent visa. Your partner can work locally."
+        },
+        {
+          "q": "Minimum commitment?",
+          "a": "None. You can come back anytime. 3-month trial period with easy return."
+        },
+        {
+          "q": "What if my client cancels?",
+          "a": "We help you find a local mission or ease your return. Local client network (PayPay, Credit Saison in Japan, banks in Paris, Montréal tech ecosystem)."
+        },
+        {
+          "q": "How much does it really cost?",
+          "a": "€2-3k/month range deducted from client billing. Zero upfront cost, zero surprises."
+        },
+        {
+          "q": "Does my language need to be perfect?",
+          "a": "Japan: pro English is enough. Canada: FR or EN. France: FR B2. Local language classes included."
+        }
+      ]
+    },
+    "ctaFinal": {
+      "tape": "// Ready?",
+      "title": "30 minutes with Sébastien.",
+      "body": "Tell me your situation, I'll honestly tell you if your case passes. No commitment.",
+      "cta": "Book a call"
+    }
+  },
+  "contact": {
+    "tape": "// Contact",
+    "h1": "Talk to an architect.",
+    "subtitle": "30 minutes, no commitment. We understand your context, honestly tell you if we can help.",
+    "form": {
+      "name": "Name",
+      "email": "Work email",
+      "company": "Company",
+      "role": "Role",
+      "message": "Your context",
+      "messagePlaceholder": "Current stack, pain point, timeline…",
+      "submit": "Send",
+      "success": "Message received. We'll come back to you within 24h.",
+      "error": "Send error. Try again or email contact@abbeal.com."
+    },
+    "offices": "Three offices",
+    "emailsTitle": "Or directly"
+  },
+  "careers": {
+    "tape": "// Careers",
+    "h1": "Join the team.",
+    "subtitle": "Four roles open. Senior-only. Stable clients, clean delivery, international mobility available via Mobbeal.",
+    "applyTo": "Apply",
+    "applyEmail": "recrutement@abbeal.com",
+    "roles": [
+      {
+        "slug": "senior-fullstack",
+        "title": "Senior Fullstack Developer",
+        "stack": "JS · Java · Python",
+        "location": "Paris / Montréal / Tokyo",
+        "subject": "Fullstack Abbeal",
+        "body": "Design and ship complex features. Frontend + Backend. Product-centric, clean code, tests. Mentor juniors. Stack: React/Vue/Angular/Next + Node/Java/Python. PostgreSQL/NoSQL. Docker/CI-CD."
+      },
+      {
+        "slug": "ai-engineer",
+        "title": "AI Engineer",
+        "stack": "GenAI · LLM · RAG · MLOps",
+        "location": "Paris / Tokyo",
+        "subject": "AI Engineer Abbeal",
+        "body": "Move AI out of labs and into production. RAG, agents, MLOps, vision/NLP. Python, PyTorch, LangChain/LlamaIndex, Pinecone/Weaviate, FastAPI. Cost/token optimisation."
+      },
+      {
+        "slug": "cloud-devops",
+        "title": "Cloud & DevOps Engineer",
+        "stack": "AWS · K8s · Terraform",
+        "location": "Paris / Montréal",
+        "subject": "DevOps Abbeal",
+        "body": "IaC (Terraform/Pulumi), CI/CD (GitLab/GitHub Actions), Docker + Kubernetes in prod, observability (Prometheus/Grafana/Datadog). 'You build it, you run it'."
+      },
+      {
+        "slug": "embedded-robotics",
+        "title": "Embedded & Robotics Engineer",
+        "stack": "C++ · Rust · ROS 2",
+        "location": "Tokyo / Paris",
+        "subject": "Embedded/Robotics Abbeal",
+        "body": "Low-level code (C/C++ modern), embedded Linux (Yocto) or RTOS. ROS/ROS2 (navigation, perception). MQTT/BLE/CAN protocols. Absolute rigour."
+      }
+    ]
+  },
+  "team": {
+    "tape": "// Team",
+    "h1": "Engineers, not junior bodyshop.",
+    "subtitle": "Seniors in production, tri-geo. Paris since 2015, Tokyo 2021, Montréal 2023. The people behind the deliveries.",
+    "hubs": [
+      {
+        "city": "Paris",
+        "leader": "Sébastien Lonjon · CEO",
+        "team": "Tech leads, recruiters, back-office."
+      },
+      {
+        "city": "Montréal",
+        "leader": "Vianney Blanquart · COO",
+        "team": "Engineering managers, North America ops."
+      },
+      {
+        "city": "Tokyo",
+        "leader": "Ko-san + Hiroshi-san · Japan Ops",
+        "team": "Local support, client success, placement."
+      }
+    ]
+  },
+  "insightsIndex": {
+    "tape": "// Insights",
+    "h1": "No bullshit.",
+    "subtitle": "Field reports from Abbeal teams. Quarterly updates."
+  },
+  "legal": {
+    "mentions": {
+      "h1": "Legal notice",
+      "publisher": "Publisher",
+      "publisherName": "Abbeal SAS",
+      "publisherAddress": "54 rue Greneta, 75002 Paris, France",
+      "publisherSiren": "SIREN: to fill",
+      "publisherDirector": "Publication director: Sébastien Lonjon",
+      "publisherContact": "contact@abbeal.com",
+      "hosting": "Hosting",
+      "hostingName": "Vercel Inc.",
+      "hostingAddress": "340 S Lemon Ave #4133, Walnut CA 91789, USA",
+      "ip": "Intellectual property",
+      "ipBody": "The entire website (text, visuals, logos) is the exclusive property of Abbeal SAS. Any reproduction without authorisation is forbidden.",
+      "updated": "Updated: 2026-04"
+    },
+    "privacy": {
+      "h1": "Privacy policy",
+      "intro": "Abbeal respects GDPR (France), Law 25 (Quebec) and APPI (Japan). No third-party cookies, no invasive tracking. Analytics: Plausible self-hosted (no cookie, no data sharing).",
+      "collection": "Data collected",
+      "collectionBody": "Only data submitted via the contact form (name, email, company, message). Stored in EU (Vercel EU regions).",
+      "rights": "Your rights",
+      "rightsBody": "Access, rectification, deletion, portability. To exercise: contact@abbeal.com. Response time: 30 days.",
+      "updated": "Updated: 2026-04"
+    }
+  }
+}

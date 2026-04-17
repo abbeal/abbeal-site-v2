@@ -1,41 +1,56 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
+!.env.example
+!.vscode/extensions.json
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
+# .claude/skills/ kept in repo for sharing — but verify no secrets inside
+# Debug
+# Dependencies
+# Editor
+# Env / secrets
+# Misc
+# Next.js
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Skills installed locally per project (do NOT commit secrets/API keys)
+# Testing
+# TypeScript
+# Vercel
 # debug
+# dependencies
+# env files (can opt-in for committing if needed)
+# misc
+# next.js
+# production
+# testing
+# typescript
+# vercel
+*.pem
+*.tsbuildinfo
+.DS_Store
+.env*
+.idea/
+.mcp.json
+.next/
+.pnp
+.pnp.*
+.pnpm-debug.log*
+.vercel
+.vscode/*
+.yarn/*
+/.next/
+/.pnp
+/build
+/coverage
+/node_modules
+/out/
+build/
+coverage
+dist/
+next-env.d.ts
+node_modules/
 npm-debug.log*
+out/
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts

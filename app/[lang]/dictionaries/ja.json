@@ -1,0 +1,666 @@
+{
+  "meta": {
+    "title": "Abbeal · トライジオ・エンジニアリング・ポッド",
+    "description": "SI企業の時代は終わった。テックが主導権を取り戻す。ソフトウェア、AI、データ、ロボティクス。パリ・モントリオール・東京。シニアスクワッド、24時間365日の継続デリバリー。",
+    "ogTitle": "Abbeal · SI企業の時代は終わった。テックが主導権を取り戻す。",
+    "ogDescription": "トライジオ・エンジニアリング・ポッド。ソフトウェア、AI、データ、ロボティクス。シニアスクワッド。東京、モントリオール、パリ。"
+  },
+  "nav": {
+    "services": "サービス",
+    "expertises": "専門領域",
+    "stories": "実績",
+    "mobbeal": "Mobbeal",
+    "team": "チーム",
+    "insights": "インサイト",
+    "careers": "採用",
+    "contact": "お問い合わせ",
+    "ctaPrimary": "アーキテクトと相談"
+  },
+  "hero": {
+    "tape": "// 01 · エンジニアリング・ポッド",
+    "h1Top": "SI企業の時代は終わった。",
+    "h1Bottom": "テックが主導権を取り戻す。",
+    "subtitle": "ソフトウェア、AI、データ、ロボティクス。パリ、モントリオール、東京。組み込み型シニアスクワッド、24時間365日の継続デリバリー。",
+    "proof": "シニアチーム。本番投入前提のデリバリー。実用主義の意思決定。",
+    "ctaPrimary": "アーキテクトと相談",
+    "ctaSecondary": "Mobbealを見る",
+    "clocksLabel": "Adaptive Follow-the-Sun · トライジオ時計",
+    "mastheadTitle": "Follow-the-Sun · 24/7",
+    "live": "LIVE",
+    "cities": [
+      {
+        "key": "paris",
+        "name": "パリ",
+        "label": "欧州拠点"
+      },
+      {
+        "key": "montreal",
+        "name": "モントリオール",
+        "label": "アメリカ拠点"
+      },
+      {
+        "key": "tokyo",
+        "name": "東京",
+        "label": "アジア拠点"
+      }
+    ]
+  },
+  "kpis": {
+    "tape": "// 02 — 実績",
+    "items": [
+      {
+        "value": "100+",
+        "label": "支援企業数"
+      },
+      {
+        "value": "3",
+        "label": "拠点 · パリ、モントリオール、東京"
+      },
+      {
+        "value": "50+",
+        "label": "Mobbealで海外赴任したエンジニア"
+      },
+      {
+        "value": "10+",
+        "label": "エンジニアリング歴"
+      }
+    ]
+  },
+  "adn": {
+    "tape": "// 03 — 私たちのDNA",
+    "title": "なぜAbbealか？",
+    "subtitle": "3つの柱、それ以上はない。残りはすべて実行力。",
+    "pillars": [
+      {
+        "number": "01",
+        "title": "Adaptive Follow-the-Sun",
+        "punch": "あなたが寝ている間にロードマップが進む。",
+        "body": "3つの同期された拠点が時差を強みに変える。クリーンなハンドオフ、最適化されたオーバーラップ、負債なしの24時間365日。",
+        "stat": "24時間365日の継続デリバリー"
+      },
+      {
+        "number": "02",
+        "title": "AI-first",
+        "punch": "本番のAI。デモではなく。",
+        "body": "負荷に耐えるRAG、ワークフロー指向のエージェント、組み込みのビジョンとAI。評価、モニタリング、コスト管理。誇大広告ではなく、責任ある活用。",
+        "stat": "ソーシングしたエンジニアの上位1%"
+      },
+      {
+        "number": "03",
+        "title": "GreenOps & Performance",
+        "punch": "炭素を減らす。コストを減らす。",
+        "body": "最も持続可能なコードは書かないコード。クラウド予算、プロファイリング、フルーガルインフラ、動的スケーリング。GreenOpsはこのサイトにも適用。",
+        "stat": "Lighthouse 90+ どこでも"
+      }
+    ]
+  },
+  "services": {
+    "tape": "// 04 — 関わり方",
+    "title": "3つのコラボレーション方法。",
+    "subtitle": "技術リスクが高くスピードが重要な領域に介入する。",
+    "items": [
+      {
+        "number": "01",
+        "title": "組み込み型スクワッド",
+        "subtitle": "Staff Augmentation",
+        "body": "スコープのオーナーシップを持って貴社チームに参加。Dev、Ops、Data、QA。迅速な立ち上げ、メンタリング、適切な品質。",
+        "cta": "チームを強化"
+      },
+      {
+        "number": "02",
+        "title": "技術採用",
+        "subtitle": "Talent Acquisition",
+        "body": "エンジニアによるソーシング、短い技術プロセスで検証された上位1%。CTO、リード、ニッチな専門家。",
+        "cta": "ポジションを開く"
+      },
+      {
+        "number": "03",
+        "title": "エンドツーエンドデリバリー",
+        "subtitle": "Digital Solutions",
+        "body": "設計から運用まで。タイム&マテリアルではなく、アウトプットベースのエンゲージメント。SLO、観測性、運用の安定性。",
+        "cta": "プロジェクトを設計"
+      }
+    ]
+  },
+  "expertises": {
+    "tape": "// 05 — 2026 Tech landscape",
+    "title": "4つの遊び場。",
+    "subtitle": "2026年の重要なニーズに沿った4つの専門領域。",
+    "items": [
+      {
+        "tag": "Web & Mobile",
+        "title": "高性能なインターフェース。",
+        "body": "デザインシステム、パフォーマンス予算、スケールするマルチプラットフォームアプリ。",
+        "stack": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Vue",
+          "Tailwind",
+          "Flutter",
+          "Swift",
+          "Kotlin",
+          "GraphQL"
+        ]
+      },
+      {
+        "tag": "Data & AI",
+        "title": "生データから本番AIへ。",
+        "body": "RAGパイプライン、エージェント型ワークフロー、モデルサービング、評価とモニタリング。",
+        "stack": [
+          "Python",
+          "LangChain",
+          "OpenAI",
+          "Mistral",
+          "Hugging Face",
+          "Pinecone",
+          "Weaviate",
+          "PyTorch",
+          "MLOps"
+        ]
+      },
+      {
+        "tag": "Cloud & Reliability",
+        "title": "クラウドネイティブ、セキュア、レジリエント。",
+        "body": "プラットフォームエンジニアリング、CI/CD、SLO、観測性、DevSecOps。",
+        "stack": [
+          "AWS",
+          "GCP",
+          "Azure",
+          "Kubernetes",
+          "Terraform",
+          "OpenTofu",
+          "ArgoCD",
+          "GitHub Actions"
+        ]
+      },
+      {
+        "tag": "Embedded & Robotics",
+        "title": "コードが物理世界と出会う。",
+        "body": "リアルタイム制御、エッジデプロイ、ROS2統合、ビジョン。",
+        "stack": [
+          "C++",
+          "Rust",
+          "ROS 2",
+          "NVIDIA Jetson",
+          "Isaac",
+          "Edge Impulse",
+          "MQTT",
+          "Yocto"
+        ]
+      }
+    ]
+  },
+  "techRadar": {
+    "tape": "// 06 — 2026 Tech radar",
+    "title": "推進するもの、評価するもの、見送るもの。",
+    "subtitle": "正直なテックウォッチ。四半期ごとに更新。",
+    "rings": {
+      "adopt": "Adopt",
+      "trial": "Trial",
+      "assess": "Assess",
+      "hold": "Hold"
+    },
+    "items": [
+      {
+        "name": "Rust for systems",
+        "ring": "adopt",
+        "category": "languages"
+      },
+      {
+        "name": "RAG in production",
+        "ring": "adopt",
+        "category": "ai"
+      },
+      {
+        "name": "ROS 2 + Isaac",
+        "ring": "adopt",
+        "category": "robotics"
+      },
+      {
+        "name": "OpenTofu",
+        "ring": "adopt",
+        "category": "infra"
+      },
+      {
+        "name": "Cache Components Next 16",
+        "ring": "trial",
+        "category": "frontend"
+      },
+      {
+        "name": "Multi-tool agents",
+        "ring": "trial",
+        "category": "ai"
+      },
+      {
+        "name": "Edge AI (Jetson)",
+        "ring": "trial",
+        "category": "robotics"
+      },
+      {
+        "name": "WASM on backend",
+        "ring": "assess",
+        "category": "languages"
+      },
+      {
+        "name": "Managed vector DBs",
+        "ring": "assess",
+        "category": "ai"
+      },
+      {
+        "name": "Low-code frameworks",
+        "ring": "hold",
+        "category": "frontend"
+      },
+      {
+        "name": "B2B crypto-payment",
+        "ring": "hold",
+        "category": "infra"
+      }
+    ]
+  },
+  "stories": {
+    "tape": "// 07 — 成功事例",
+    "title": "4つの案件、4つの成果。",
+    "subtitle": "必要に応じて匿名化。常に計測。",
+    "items": [
+      {
+        "kpi": "-30%",
+        "kpiLabel": "インフラコスト",
+        "sector": "モビリティ・スケールアップ",
+        "geo": "拠点 モントリオール · パリ",
+        "body": "マイクロサービス再構築、エンドツーエンドの観測性、GreenOps適用。より高い回復力、より少ないクラウド請求。"
+      },
+      {
+        "kpi": "PWA",
+        "kpiLabel": "高性能",
+        "sector": "スポーツEC大手",
+        "geo": "拠点 パリ",
+        "body": "高性能PWAへの移行、モバイルコンバージョン最適化。スムーズなUX、短縮されたチェックアウト。"
+      },
+      {
+        "kpi": "ROS 2",
+        "kpiLabel": "自律ナビ",
+        "sector": "産業 & ロボティクス",
+        "geo": "拠点 東京",
+        "body": "ROS 2とビジョンを使ったロボットフリートの自律ナビゲーション。実環境での堅牢な動作。"
+      },
+      {
+        "kpi": "ISO 27001",
+        "kpiLabel": "コンプライアンス",
+        "sector": "FinTech SaaS",
+        "geo": "トライジオ",
+        "body": "セキュリティ監査、DevSecOpsコンプライアンス。リスク低減、ペースを乱さない安全なデリバリー。"
+      }
+    ]
+  },
+  "insights": {
+    "tape": "// 08 — エンジニアリング・インサイト",
+    "title": "私たちのテックウォッチ。誇張なし。",
+    "subtitle": "現場レポート、引き受けるトレードオフ、再利用可能なパターン。",
+    "ctaAll": "全ての記事",
+    "items": [
+      {
+        "tag": "AI",
+        "title": "本番のAIエージェント：デモ劇場を避ける。",
+        "excerpt": "信頼性、コスト、セキュリティ、評価。クライアントで実際に使う7つのパターン。",
+        "readTime": "8分",
+        "slug": "ai-agents-production"
+      },
+      {
+        "tag": "GreenOps",
+        "title": "クラウドコストを削減する7つのGreenOpsレバー。",
+        "excerpt": "パフォーマンスを犠牲にせず。具体例：請求-30%、SLO同等。",
+        "readTime": "6分",
+        "slug": "greenops-7-levers"
+      },
+      {
+        "tag": "Tech radar",
+        "title": "なぜRustとROS 2が2026 Tech radarを支配するか。",
+        "excerpt": "基準、現場レポート、トレードオフ。実際にAdoptするものとAssessするもの。",
+        "readTime": "10分",
+        "slug": "tech-radar-2026"
+      }
+    ]
+  },
+  "ctaFinal": {
+    "tape": "// 09 — お話ししませんか？",
+    "title": "クライアント側ですか、それともエンジニアリング側ですか？",
+    "client": {
+      "title": "本番投入前提のシステムを抱えている。",
+      "body": "シニアアーキテクトと30分でプロジェクトをフレーミング。コミットなし。",
+      "cta": "アーキテクトと相談"
+    },
+    "engineer": {
+      "title": "意義のあるテックで仕事したい。",
+      "body": "東京、モントリオール、パリ。シニアスクワッド、複雑なプロジェクト、Mobbealによる海外赴任。",
+      "cta": "チームに参加"
+    }
+  },
+  "footer": {
+    "tagline": "トライジオ・エンジニアリング・ポッド。2015年から。",
+    "addresses": {
+      "title": "オフィス",
+      "items": [
+        {
+          "city": "パリ",
+          "address": "54 rue Greneta, 75002 Paris",
+          "tag": "欧州拠点"
+        },
+        {
+          "city": "モントリオール",
+          "address": "4388 Rue Saint-Denis, QC H2J 2L1",
+          "tag": "アメリカ拠点"
+        },
+        {
+          "city": "東京",
+          "address": "東京都港区東麻布1-23-5",
+          "tag": "アジア拠点"
+        }
+      ]
+    },
+    "contact": {
+      "title": "お問い合わせ",
+      "general": "contact@abbeal.com",
+      "recruitment": "recrutement@abbeal.com"
+    },
+    "follow": {
+      "title": "フォロー",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    },
+    "navTitle": "サイト",
+    "legalTitle": "規約",
+    "legal": {
+      "mentions": "法的通知",
+      "privacy": "プライバシー"
+    },
+    "copyright": "© 2026 Abbeal. All rights reserved."
+  },
+  "mobbeal": {
+    "nav": "Mobbeal",
+    "meta": {
+      "title": "Mobbeal · 仕事はそのまま、人生を変える",
+      "description": "エンジニアのための国際モビリティプログラム。パリ、モントリオール、東京。クライアントを維持して、人生を変える。ビザ100%。50人以上が海外赴任。"
+    },
+    "hero": {
+      "tape": "// Mobbeal · 国際モビリティプログラム",
+      "h1Top": "仕事はそのまま、",
+      "h1Bottom": "人生を変える。",
+      "subtitle": "現在のミッションを、東京、モントリオール、パリへのパスポートに。ビザ、給与管理、事務——すべて当社が。初期費用ゼロ。",
+      "ctaPrimary": "Sébastienと相談",
+      "ctaSecondary": "体験談を見る",
+      "kpis": [
+        {
+          "value": "100%",
+          "label": "ビザ承認率"
+        },
+        {
+          "value": "50+",
+          "label": "海外赴任したエンジニア"
+        },
+        {
+          "value": "3",
+          "label": "赴任地"
+        },
+        {
+          "value": "¥0",
+          "label": "初期費用"
+        }
+      ]
+    },
+    "piliers": {
+      "tape": "// 仕組み",
+      "title": "3つの柱。摩擦ゼロ。",
+      "subtitle": "50人以上のエンジニアで実証したモデル。シンプル、トレース可能、驚きなし。",
+      "items": [
+        {
+          "number": "01",
+          "title": "契約のパスポート",
+          "body": "満足したクライアントがいれば、フランスの契約を海外契約に変換します。同じミッション、新しい国。"
+        },
+        {
+          "number": "02",
+          "title": "初期費用ゼロ",
+          "body": "管理費(月2-3千ユーロ)はクライアントの請求から直接控除されます。1ユーロも前払いなし。"
+        },
+        {
+          "number": "03",
+          "title": "すべて代行",
+          "body": "ビザ、現地の給与管理、法務、住居、銀行。あなたはクライアントと新生活に集中。"
+        }
+      ]
+    },
+    "destinations": {
+      "tape": "// 3つの赴任地",
+      "title": "自分の居場所を選ぼう。",
+      "subtitle": "3つのAbbeal拠点、3つのリズム、同じ品質のサポート。",
+      "items": [
+        {
+          "flag": "🇯🇵",
+          "city": "東京",
+          "punch": "完全な異文化体験。",
+          "body": "欧州との朝のオーバーラップ(あなたの夕方=先方の朝)。絶対的な安全。ビジネス英語で十分。",
+          "stats": [
+            {
+              "label": "EU overlap",
+              "value": "朝"
+            },
+            {
+              "label": "言語",
+              "value": "EN / JP"
+            }
+          ]
+        },
+        {
+          "flag": "🇨🇦",
+          "city": "モントリオール",
+          "punch": "北米エコシステム。",
+          "body": "午後のオーバーラップ(あなたの朝=先方の朝)。フランス語圏。溶け込みやすさ。生活の質。",
+          "stats": [
+            {
+              "label": "EU overlap",
+              "value": "午後"
+            },
+            {
+              "label": "言語",
+              "value": "FR / EN"
+            }
+          ]
+        },
+        {
+          "flag": "🇫🇷",
+          "city": "パリ",
+          "punch": "プレミアムEU拠点。",
+          "body": "国際的なエンジニアで現在のクライアントとヨーロッパに定住したい方向け。EUクライアントと同じタイムゾーン。",
+          "stats": [
+            {
+              "label": "EU overlap",
+              "value": "フル"
+            },
+            {
+              "label": "言語",
+              "value": "FR"
+            }
+          ]
+        }
+      ]
+    },
+    "testimonials": {
+      "tape": "// 実現した人々",
+      "title": "3つの声。3つの変わった人生。",
+      "items": [
+        {
+          "name": "Grégoire",
+          "role": "バックエンド開発",
+          "location": "東京 · 18ヶ月",
+          "quote": "フランスのEC企業、日当600ユーロ。今は同じクライアントと渋谷で。キャリアで最高の選択。"
+        },
+        {
+          "name": "Kevyn",
+          "role": "リード開発",
+          "location": "モントリオール · 12ヶ月",
+          "quote": "フランスの大手企業のミッションを維持。午後のオーバーラップが完璧、生活の質は比べ物にならない。"
+        },
+        {
+          "name": "Alex",
+          "role": "データコンサルタント",
+          "location": "東京 · 6ヶ月",
+          "quote": "プロセスは予想より簡単だった。Mobbealがすべて処理してくれて、クライアントに集中できた。"
+        }
+      ]
+    },
+    "faq": {
+      "tape": "// よくある質問",
+      "title": "いつも聞かれる7つの質問。",
+      "items": [
+        {
+          "q": "2カ国で税金を払う?",
+          "a": "いいえ。6ヶ月後に赴任国の税務居住者となります。国際租税条約。当社が手続きをサポート。"
+        },
+        {
+          "q": "社会保険は?",
+          "a": "現地のシステムに切り替え(フランスのSécu、日本のJNHI、カナダのRAMQ)。退職金は合算協定により維持。"
+        },
+        {
+          "q": "配偶者は同行できる?",
+          "a": "はい。高度専門職ビザ(日本)または労働許可証(カナダ)には扶養ビザが含まれます。配偶者は現地で就労可能。"
+        },
+        {
+          "q": "最低コミットメント?",
+          "a": "なし。いつでも戻れます。3ヶ月の試用期間付きで簡単に帰国可能。"
+        },
+        {
+          "q": "クライアントがキャンセルしたら?",
+          "a": "現地のミッション探しまたは帰国をサポート。現地クライアントネットワーク(日本のPayPay、Credit Saison、パリの銀行、モントリオールのテックエコシステム)。"
+        },
+        {
+          "q": "実際のコストは?",
+          "a": "月2-3千ユーロがクライアント請求から控除されます。初期費用ゼロ、サプライズなし。"
+        },
+        {
+          "q": "語学力は完璧でないといけない?",
+          "a": "日本: ビジネス英語で十分。カナダ: FRまたはEN。フランス: FR B2。現地語学クラス付き。"
+        }
+      ]
+    },
+    "ctaFinal": {
+      "tape": "// 準備はいい?",
+      "title": "Sébastienと30分。",
+      "body": "状況を教えてください。正直にケースが通るかお伝えします。コミットなし。",
+      "cta": "通話を予約"
+    }
+  },
+  "contact": {
+    "tape": "// お問い合わせ",
+    "h1": "アーキテクトと話す。",
+    "subtitle": "30分、コミットなし。状況を理解し、正直にお手伝いできるかお伝えします。",
+    "form": {
+      "name": "お名前",
+      "email": "業務用メール",
+      "company": "会社名",
+      "role": "役職",
+      "message": "状況",
+      "messagePlaceholder": "現在のスタック、課題、タイムライン…",
+      "submit": "送信",
+      "success": "受け付けました。24時間以内にご返信します。",
+      "error": "送信エラー。再試行するか、contact@abbeal.comへご連絡ください。"
+    },
+    "offices": "3拠点",
+    "emailsTitle": "またはメールで"
+  },
+  "careers": {
+    "tape": "// 採用",
+    "h1": "チームに参加。",
+    "subtitle": "4つのポジション募集中。シニアのみ。安定したクライアント、クリーンなデリバリー、Mobbealによる海外赴任可能。",
+    "applyTo": "応募",
+    "applyEmail": "recrutement@abbeal.com",
+    "roles": [
+      {
+        "slug": "senior-fullstack",
+        "title": "シニアフルスタックエンジニア",
+        "stack": "JS · Java · Python",
+        "location": "パリ / モントリオール / 東京",
+        "subject": "Fullstack Abbeal",
+        "body": "複雑な機能を設計・開発。フロント+バック。プロダクト志向、クリーンコード、テスト。ジュニアのメンタリング。"
+      },
+      {
+        "slug": "ai-engineer",
+        "title": "AIエンジニア",
+        "stack": "GenAI · LLM · RAG · MLOps",
+        "location": "パリ / 東京",
+        "subject": "AI Engineer Abbeal",
+        "body": "AIをラボから本番へ。RAG、エージェント、MLOps、ビジョン/NLP。"
+      },
+      {
+        "slug": "cloud-devops",
+        "title": "Cloud & DevOpsエンジニア",
+        "stack": "AWS · K8s · Terraform",
+        "location": "パリ / モントリオール",
+        "subject": "DevOps Abbeal",
+        "body": "IaC、CI/CD、Docker+K8s本番、観測性。"
+      },
+      {
+        "slug": "embedded-robotics",
+        "title": "組込 & ロボティクスエンジニア",
+        "stack": "C++ · Rust · ROS 2",
+        "location": "東京 / パリ",
+        "subject": "Embedded/Robotics Abbeal",
+        "body": "低レベルコード、組込Linux/RTOS、ROS/ROS2、MQTT/BLE/CAN。"
+      }
+    ]
+  },
+  "team": {
+    "tape": "// チーム",
+    "h1": "エンジニア、ボディショップではない。",
+    "subtitle": "本番のシニア、トライジオ。パリ2015年〜、東京2021年〜、モントリオール2023年〜。",
+    "hubs": [
+      {
+        "city": "パリ",
+        "leader": "Sébastien Lonjon · CEO",
+        "team": "テックリード、採用、バックオフィス。"
+      },
+      {
+        "city": "モントリオール",
+        "leader": "Vianney Blanquart · COO",
+        "team": "エンジニアリングマネージャー、北米オペ。"
+      },
+      {
+        "city": "東京",
+        "leader": "Ko-san + Hiroshi-san · 日本オペ",
+        "team": "現地サポート、カスタマーサクセス、配属。"
+      }
+    ]
+  },
+  "insightsIndex": {
+    "tape": "// インサイト",
+    "h1": "誇張なし。",
+    "subtitle": "Abbealチームの現場レポート。四半期更新。"
+  },
+  "legal": {
+    "mentions": {
+      "h1": "法的通知",
+      "publisher": "発行者",
+      "publisherName": "Abbeal SAS",
+      "publisherAddress": "54 rue Greneta, 75002 Paris, France",
+      "publisherSiren": "SIREN: 記入予定",
+      "publisherDirector": "発行責任者: Sébastien Lonjon",
+      "publisherContact": "contact@abbeal.com",
+      "hosting": "ホスティング",
+      "hostingName": "Vercel Inc.",
+      "hostingAddress": "340 S Lemon Ave #4133, Walnut CA 91789, USA",
+      "ip": "知的財産",
+      "ipBody": "本ウェブサイト全体（テキスト、ビジュアル、ロゴ）はAbbeal SASの独占的財産です。無断複製は禁止されています。",
+      "updated": "更新: 2026-04"
+    },
+    "privacy": {
+      "h1": "プライバシーポリシー",
+      "intro": "AbbealはGDPR（フランス）、Law 25（ケベック）、APPI（日本）を遵守します。サードパーティCookieなし、侵襲的トラッキングなし。アナリティクス：Plausible self-hosted（Cookieなし、データ共有なし）。",
+      "collection": "収集データ",
+      "collectionBody": "お問い合わせフォーム経由で送信されたデータのみ（氏名、メール、会社、メッセージ）。EU内保管（Vercel EUリージョン）。",
+      "rights": "ユーザーの権利",
+      "rightsBody": "アクセス、訂正、削除、ポータビリティ。行使方法：contact@abbeal.com。回答期限：30日。",
+      "updated": "更新: 2026-04"
+    }
+  }
+}
