@@ -63,7 +63,8 @@
         "value": "10+",
         "label": "Years of engineering"
       }
-    ]
+    ],
+    "clientsLabel": "They trust us"
   },
   "adn": {
     "tape": "// 03 · Our DNA",

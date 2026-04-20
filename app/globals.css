@@ -105,6 +105,58 @@ body {
   transform-origin: left center;
 }
 
+/* Client logos marquee — seamless infinite horizontal scroll */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 4rem;
+  animation: marquee 45s linear infinite;
+  will-change: transform;
+}
+
+.marquee-pause:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+}
+
+.logo-mono {
+  filter: grayscale(1) brightness(0.45);
+  opacity: 0.75;
+  transition:
+    filter 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.logo-mono:hover {
+  filter: none;
+  opacity: 1;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -112,5 +164,8 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+  .marquee-track {
+    animation: none;
   }
 }

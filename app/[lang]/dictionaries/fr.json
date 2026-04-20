@@ -63,7 +63,8 @@
         "value": "10+",
         "label": "Ans d'engineering"
       }
-    ]
+    ],
+    "clientsLabel": "Ils nous font confiance"
   },
   "adn": {
     "tape": "// 03 · Notre ADN",

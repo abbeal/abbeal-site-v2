@@ -7,8 +7,28 @@ type KpiDict = {
   kpis: {
     tape: string;
     items: { value: string; label: string }[];
+    clientsLabel: string;
   };
 };
+
+/* 15 client logos — monochrome rendering via CSS filter, full color on hover */
+const LOGOS = [
+  { slug: "bnp", name: "BNP Paribas" },
+  { slug: "societe-generale", name: "Société Générale" },
+  { slug: "bnc", name: "Banque Nationale du Canada" },
+  { slug: "desjardins", name: "Desjardins" },
+  { slug: "smbc", name: "SMBC" },
+  { slug: "mufg", name: "MUFG" },
+  { slug: "money-forward", name: "Money Forward" },
+  { slug: "paypay", name: "PayPay" },
+  { slug: "credit-saison", name: "Credit Saison" },
+  { slug: "kering", name: "Kering" },
+  { slug: "cartier", name: "Cartier" },
+  { slug: "ticketmaster", name: "Ticketmaster" },
+  { slug: "pwc", name: "PwC" },
+  { slug: "le-monde", name: "Le Monde" },
+  { slug: "decathlon", name: "Decathlon" },
+] as const;
 
 function Counter({ target }: { target: string }) {
   const match = target.match(/^(\d+)(.*)$/);
@@ -71,6 +91,31 @@ export function KPIs({ dict }: { dict: Record<string, unknown> }) {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Clients marquee — 15 logos */}
+        <div className="mt-16 md:mt-20 pt-10 border-t border-dashed border-[var(--color-border)]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-muted)] mb-6">
+            {d.kpis.clientsLabel}
+          </p>
+          <div className="marquee-pause marquee-mask overflow-hidden">
+            <div className="marquee-track items-center py-2">
+              {[...LOGOS, ...LOGOS].map((logo, i) => (
+                <div
+                  key={`${logo.slug}-${i}`}
+                  className="shrink-0 flex items-center justify-center h-10 md:h-12 min-w-[120px]"
+                  aria-label={logo.name}
+                >
+                  <img
+                    src={`/logos/${logo.slug}.svg`}
+                    alt={logo.name}
+                    className="logo-mono h-full w-auto max-w-[140px] object-contain"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
