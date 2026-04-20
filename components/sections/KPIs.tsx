@@ -24,7 +24,6 @@ const LOGOS = [
   { slug: "hydro-quebec", name: "Hydro-Québec" },
   { slug: "paypay", name: "PayPay" },
   { slug: "edf", name: "EDF" },
-  { slug: "shopify", name: "Shopify" },
   { slug: "money-forward", name: "Money Forward" },
   { slug: "cartier", name: "Cartier" },
   { slug: "carrefour", name: "Carrefour" },
@@ -33,7 +32,6 @@ const LOGOS = [
   { slug: "pwc", name: "PwC" },
   { slug: "qonto", name: "Qonto" },
   { slug: "le-monde", name: "Le Monde" },
-  { slug: "skello", name: "Skello" },
   { slug: "decathlon", name: "Decathlon" },
 ] as const;
 
