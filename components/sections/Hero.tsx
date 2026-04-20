@@ -114,13 +114,7 @@ export function Hero({
             </motion.span>
             <motion.span
               {...h1Line(0.22)}
-              className="block italic bg-clip-text text-transparent"
-              style={{
-                backgroundImage:
-                  "linear-gradient(135deg, #144F4F 0%, #42B296 45%, #80E8BA 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
+              className="block italic gradient-brand-text"
             >
               {d.hero.h1Bottom}
             </motion.span>
@@ -129,7 +123,7 @@ export function Hero({
           <motion.span
             {...ruleAnim}
             aria-hidden
-            className="mt-8 block h-px w-28 origin-left bg-[var(--color-brand-teal)]"
+            className="mt-8 block h-[2px] w-28 origin-left gradient-brand-bg"
           />
 
           <motion.p

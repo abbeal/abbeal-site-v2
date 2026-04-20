@@ -74,7 +74,13 @@ export function MobbealHero({
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease }}
-            className="block text-[var(--color-brand-teal)] italic"
+            className="block italic bg-clip-text text-transparent"
+            style={{
+              backgroundImage:
+                "linear-gradient(135deg, #42B296 0%, #80E8BA 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
           >
             {d.h1Bottom}
           </motion.span>
@@ -96,9 +102,9 @@ export function MobbealHero({
           className="mt-10 flex flex-wrap items-center gap-4"
         >
           <ButtonLink
-            href="https://calendly.com/sebastien-lonjon/une-nouvelle-vie-a-l-etranger"
+            href="https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal"
             size="lg"
-            className="bg-[var(--color-brand-teal)] text-[var(--color-ink)] hover:bg-[var(--color-bg-light)]"
+            className="gradient-brand-soft-bg text-[var(--color-brand-teal-fg)] hover:brightness-110"
           >
             {d.ctaPrimary}
             <span aria-hidden className="ml-1">→</span>

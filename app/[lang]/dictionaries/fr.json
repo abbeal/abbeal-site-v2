@@ -388,7 +388,7 @@
       "h1Top": "Garde ton job.",
       "h1Bottom": "Change de vie.",
       "subtitle": "Transforme ta mission actuelle en passeport pour Tokyo, Montréal ou Paris. Visa, portage, admin : on gère tout. Zéro frais d'avance.",
-      "ctaPrimary": "Parler à Sébastien",
+      "ctaPrimary": "Parler à Vianney ou Sébastien",
       "ctaSecondary": "Voir les témoignages",
       "kpis": [
         {
@@ -546,8 +546,8 @@
     },
     "ctaFinal": {
       "tape": "// Prêt ?",
-      "title": "30 minutes avec Sébastien.",
-      "body": "Tu m'expliques ta situation, je te dis honnêtement si ton dossier passe. Sans engagement.",
+      "title": "30 minutes avec Vianney ou Sébastien.",
+      "body": "Tu nous expliques ta situation, on te dit honnêtement si ton dossier passe. Sans engagement.",
       "cta": "Réserver un appel"
     }
   },

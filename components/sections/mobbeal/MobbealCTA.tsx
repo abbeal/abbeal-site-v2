@@ -32,10 +32,10 @@ export function MobbealCTA({ dict }: { dict: Record<string, unknown> }) {
             {d.body}
           </p>
           <a
-            href="https://calendly.com/sebastien-lonjon/une-nouvelle-vie-a-l-etranger"
+            href="https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 inline-flex items-center gap-2 h-14 px-8 text-lg bg-[var(--color-brand-teal)] text-[var(--color-ink)] hover:bg-[var(--color-bg-light)] transition-colors font-medium"
+            className="mt-10 inline-flex items-center gap-2 h-14 px-8 text-lg gradient-brand-soft-bg text-[var(--color-brand-teal-fg)] hover:brightness-110 transition-all font-medium"
           >
             {d.cta}
             <span aria-hidden>→</span>
