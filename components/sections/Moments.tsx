@@ -43,7 +43,10 @@ export function Moments({ dict }: { dict: Record<string, unknown> }) {
         </p>
       </div>
 
-      <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:grid-rows-4 gap-3 md:gap-4 auto-rows-[220px] md:auto-rows-[200px]">
+      <div
+        className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4"
+        style={{ gridAutoRows: "200px" }}
+      >
         {d.items.map((item, i) => (
           <motion.figure
             key={item.slug}
@@ -55,7 +58,7 @@ export function Moments({ dict }: { dict: Record<string, unknown> }) {
               delay: i * 0.06,
               ease: [0.16, 1, 0.3, 1] as const,
             }}
-            className={`group relative overflow-hidden bg-[var(--color-ink)] ${sizeClass[item.size] ?? ""}`}
+            className={`group relative overflow-hidden bg-[var(--color-ink)] min-h-[200px] ${sizeClass[item.size] ?? ""}`}
           >
             <Image
               src={`/moments/${item.slug}.jpg`}
