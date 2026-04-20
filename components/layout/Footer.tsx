@@ -92,6 +92,14 @@ export function Footer({
               </li>
               <li>
                 <Link
+                  href={`${p}/about`}
+                  className="hover:text-[var(--color-brand-teal)]"
+                >
+                  {(d.nav as unknown as Record<string, string>).about}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href={`${p}/mobbeal`}
                   className="hover:text-[var(--color-brand-teal)]"
                 >

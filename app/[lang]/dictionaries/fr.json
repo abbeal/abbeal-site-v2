@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Abbeal · Pôle d'ingénierie tri-geo",
+    "title": "Abbeal · Software, IA, Data, Robotique",
     "description": "L'ESN est morte. La Tech reprend le pouvoir. Software, IA, Data, Robotique. Paris · Montréal · Tokyo. Senior squads, livraison continue 24/7.",
     "ogTitle": "Abbeal · L'ESN est morte. La Tech reprend le pouvoir.",
     "ogDescription": "Pôle d'ingénierie tri-geo. Software, IA, Data, Robotique. Senior squads. Tokyo, Montréal, Paris."
@@ -13,7 +13,8 @@
     "insights": "Insights",
     "careers": "Carrières",
     "contact": "Contact",
-    "ctaPrimary": "Parler à un architecte"
+    "ctaPrimary": "Parler à un architecte",
+    "about": "À propos"
   },
   "hero": {
     "tape": "// 01 · Manifesto",
@@ -567,7 +568,10 @@
       "error": "Erreur d'envoi. Réessaie ou écris à contact@abbeal.com."
     },
     "offices": "Trois bureaux",
-    "emailsTitle": "Ou directement"
+    "emailsTitle": "Ou directement",
+    "calendlyTitle": "Réservez 30 min avec un architecte",
+    "calendlySub": "Sans engagement. On comprend votre contexte, on vous dit honnêtement si on peut aider.",
+    "altTitle": "Ou écrivez-nous"
   },
   "careers": {
     "tape": "// Carrières",
@@ -621,14 +625,18 @@
       "publisher": "Éditeur",
       "publisherName": "Abbeal SAS",
       "publisherAddress": "54 rue Greneta, 75002 Paris, France",
-      "publisherSiren": "SIREN : à renseigner",
-      "publisherDirector": "Directeur de publication : Sébastien Lonjon",
+      "publisherSiren": "SIREN : 790 172 928",
+      "publisherRcs": "RCS Paris : 790 172 928 (immatriculée le 24/12/2012)",
+      "publisherCapital": "Capital social : 24 000 €",
+      "publisherTva": "TVA intracommunautaire : FR10 790172928",
+      "publisherForm": "Forme juridique : SAS (Société par Actions Simplifiée)",
+      "publisherDirector": "Directeur de la publication : Sébastien Lonjon (CEO)",
       "publisherContact": "contact@abbeal.com",
       "hosting": "Hébergeur",
       "hostingName": "Vercel Inc.",
-      "hostingAddress": "340 S Lemon Ave #4133, Walnut CA 91789, USA",
+      "hostingAddress": "340 S Lemon Ave #4133, Walnut CA 91789, USA — vercel.com",
       "ip": "Propriété intellectuelle",
-      "ipBody": "L'ensemble du site (textes, visuels, logos) est la propriété exclusive d'Abbeal SAS. Toute reproduction sans autorisation est interdite.",
+      "ipBody": "L'ensemble du site (textes, visuels, logos, code) est la propriété exclusive d'Abbeal SAS et de ses partenaires. Toute reproduction, partielle ou totale, sans autorisation écrite préalable, est interdite.",
       "updated": "Mise à jour : 2026-04"
     },
     "privacy": {
@@ -683,5 +691,80 @@
         "size": "s"
       }
     ]
+  },
+  "about": {
+    "meta": {
+      "title": "À propos · Abbeal",
+      "description": "Abbeal est un pôle d'ingénierie tri-geo fondé en 2015. Paris, Montréal, Tokyo. 100+ boîtes accompagnées, 50+ expatriés, 10+ ans d'engineering."
+    },
+    "tape": "// À propos",
+    "h1Top": "Construit pour durer.",
+    "h1Bottom": "Depuis 2015.",
+    "intro": "Abbeal n'est pas une ESN. C'est un pôle d'ingénierie tri-geo. Trois hubs synchronisés — Paris, Montréal, Tokyo — pour livrer en continu, sans dette, aux boîtes qui prennent la tech au sérieux.",
+    "timelineTape": "// Timeline",
+    "timelineTitle": "Dix ans. Trois continents.",
+    "timeline": [
+      {
+        "year": "2015",
+        "city": "Paris",
+        "event": "Fondation d'Abbeal par Sébastien Lonjon. Premier hub Paris."
+      },
+      {
+        "year": "2021",
+        "city": "Tokyo",
+        "event": "Ouverture du hub Asie. Premiers clients japonais (PayPay, Credit Saison, MUFG)."
+      },
+      {
+        "year": "2023",
+        "city": "Montréal",
+        "event": "Ouverture du hub Amériques. Vianney Blanquart prend la direction du Canada."
+      },
+      {
+        "year": "2026",
+        "city": "Tri-geo",
+        "event": "100+ clients, 50+ talents expatriés via Mobbeal, Follow-the-Sun opérationnel 24/7."
+      }
+    ],
+    "leadersTape": "// Leadership",
+    "leadersTitle": "Deux fondateurs. Trois fuseaux.",
+    "leaders": [
+      {
+        "name": "Sébastien Lonjon",
+        "role": "CEO · Fondateur",
+        "hub": "Hub EU · Tokyo",
+        "photo": "sebastien.jpg",
+        "bio": "Fonde Abbeal en 2015. CEO de Paris, s'expatrie à Tokyo en 2024 pour piloter le hub Asie."
+      },
+      {
+        "name": "Vianney Blanquart",
+        "role": "COO · Directeur Général",
+        "hub": "Hub Amériques · Montréal",
+        "photo": "vianney.jpg",
+        "bio": "Co-fondateur du hub Montréal (2023). DG depuis novembre 2024. Pilote les opérations Nord-Amérique."
+      }
+    ],
+    "statsTape": "// Chiffres",
+    "statsTitle": "L'échelle, pas le bruit.",
+    "stats": [
+      {
+        "value": "100+",
+        "label": "Boîtes accompagnées"
+      },
+      {
+        "value": "50+",
+        "label": "Talents expatriés via Mobbeal"
+      },
+      {
+        "value": "3",
+        "label": "Hubs · Paris, Montréal, Tokyo"
+      },
+      {
+        "value": "10+",
+        "label": "Ans d'engineering"
+      }
+    ],
+    "ctaTitle": "On parle ?",
+    "ctaSub": "30 minutes avec un architecte. Sans engagement.",
+    "ctaLabel": "Réserver un appel"
   }
 }

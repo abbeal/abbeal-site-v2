@@ -8,6 +8,9 @@ type Dict = {
     tape: string;
     h1: string;
     subtitle: string;
+    calendlyTitle: string;
+    calendlySub: string;
+    altTitle: string;
     form: {
       name: string;
       email: string;
@@ -25,6 +28,8 @@ type Dict = {
     contact: { general: string; recruitment: string };
   };
 };
+
+const CALENDLY_URL = "https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal";
 
 export async function generateMetadata({
   params,
@@ -52,7 +57,33 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
         {d.subtitle}
       </p>
 
-      <div className="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+      {/* Calendly inline embed — primary conversion path */}
+      <div className="mt-14 border border-[var(--color-border)] bg-[var(--color-bg-paper)] overflow-hidden">
+        <div className="px-6 md:px-8 pt-6 pb-2 border-b border-[var(--color-border)]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
+            {d.calendlyTitle}
+          </p>
+          <p className="mt-2 text-sm text-[var(--color-ink-soft)]">
+            {d.calendlySub}
+          </p>
+        </div>
+        <iframe
+          src={`${CALENDLY_URL}?hide_gdpr_banner=1&primary_color=42b296&text_color=0c343d&background_color=ffffff`}
+          title="Calendly"
+          className="w-full"
+          style={{ minHeight: "680px", border: "none" }}
+          loading="lazy"
+        />
+      </div>
+
+      {/* Alternative: form + offices + emails */}
+      <div className="mt-16 pt-14 border-t border-dashed border-[var(--color-border)]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-muted)] mb-8">
+          // {d.altTitle}
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
         <form
           action={`mailto:${dict.footer.contact.general}`}
           method="post"

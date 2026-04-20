@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Abbeal · トライジオ・エンジニアリング・ポッド",
+    "title": "Abbeal · ソフトウェア、AI、データ、ロボティクス",
     "description": "SI企業の時代は終わった。テックが主導権を取り戻す。ソフトウェア、AI、データ、ロボティクス。パリ・モントリオール・東京。シニアスクワッド、24時間365日の継続デリバリー。",
     "ogTitle": "Abbeal · SI企業の時代は終わった。テックが主導権を取り戻す。",
     "ogDescription": "トライジオ・エンジニアリング・ポッド。ソフトウェア、AI、データ、ロボティクス。シニアスクワッド。東京、モントリオール、パリ。"
@@ -13,7 +13,8 @@
     "insights": "インサイト",
     "careers": "採用",
     "contact": "お問い合わせ",
-    "ctaPrimary": "アーキテクトと相談"
+    "ctaPrimary": "アーキテクトと相談",
+    "about": "会社概要"
   },
   "hero": {
     "tape": "// 01 · マニフェスト",
@@ -567,7 +568,10 @@
       "error": "送信エラー。再試行するか、contact@abbeal.comへご連絡ください。"
     },
     "offices": "3拠点",
-    "emailsTitle": "またはメールで"
+    "emailsTitle": "またはメールで",
+    "calendlyTitle": "アーキテクトと30分ご予約",
+    "calendlySub": "コミットなし。状況を理解し、正直にお手伝いできるかお伝えします。",
+    "altTitle": "またはメッセージ"
   },
   "careers": {
     "tape": "// 採用",
@@ -621,14 +625,18 @@
       "publisher": "発行者",
       "publisherName": "Abbeal SAS",
       "publisherAddress": "54 rue Greneta, 75002 Paris, France",
-      "publisherSiren": "SIREN: 記入予定",
-      "publisherDirector": "発行責任者: Sébastien Lonjon",
+      "publisherSiren": "SIREN: 790 172 928",
+      "publisherRcs": "RCS Paris: 790 172 928 (登録日: 2012年12月24日)",
+      "publisherCapital": "資本金: 24,000ユーロ",
+      "publisherTva": "EU VAT番号: FR10 790172928",
+      "publisherForm": "法的形態: SAS (簡易株式会社)",
+      "publisherDirector": "発行責任者: Sébastien Lonjon (CEO)",
       "publisherContact": "contact@abbeal.com",
       "hosting": "ホスティング",
       "hostingName": "Vercel Inc.",
-      "hostingAddress": "340 S Lemon Ave #4133, Walnut CA 91789, USA",
+      "hostingAddress": "340 S Lemon Ave #4133, Walnut CA 91789, USA — vercel.com",
       "ip": "知的財産",
-      "ipBody": "本ウェブサイト全体（テキスト、ビジュアル、ロゴ）はAbbeal SASの独占的財産です。無断複製は禁止されています。",
+      "ipBody": "本ウェブサイト全体（テキスト、ビジュアル、ロゴ、コード）はAbbeal SASおよびそのパートナーの独占的財産です。書面による事前の許可なしに、部分的または全体的な複製は禁止されています。",
       "updated": "更新: 2026-04"
     },
     "privacy": {
@@ -683,5 +691,80 @@
         "size": "s"
       }
     ]
+  },
+  "about": {
+    "meta": {
+      "title": "会社概要 · Abbeal",
+      "description": "Abbealは2015年に設立されたトライジオ・エンジニアリング・ポッドです。パリ、モントリオール、東京。100社以上の支援、50人以上の海外赴任、10年以上のエンジニアリング。"
+    },
+    "tape": "// 会社概要",
+    "h1Top": "持続する。",
+    "h1Bottom": "2015年から。",
+    "intro": "AbbealはSI企業ではありません。トライジオ・エンジニアリング・ポッドです。3つの同期された拠点——パリ、モントリオール、東京——で、負債なしに継続的に、テックを真剣に捉える企業にデリバリーします。",
+    "timelineTape": "// タイムライン",
+    "timelineTitle": "10年。3大陸。",
+    "timeline": [
+      {
+        "year": "2015",
+        "city": "パリ",
+        "event": "Sébastien LonjonによりAbbeal設立。パリ拠点スタート。"
+      },
+      {
+        "year": "2021",
+        "city": "東京",
+        "event": "アジア拠点開設。最初の日本クライアント（PayPay、Credit Saison、MUFG）。"
+      },
+      {
+        "year": "2023",
+        "city": "モントリオール",
+        "event": "アメリカ拠点開設。Vianney Blanquartがカナダ運営を引き継ぐ。"
+      },
+      {
+        "year": "2026",
+        "city": "トライジオ",
+        "event": "100社以上のクライアント、Mobbealで50人以上赴任、24/7 Follow-the-Sun稼働。"
+      }
+    ],
+    "leadersTape": "// リーダーシップ",
+    "leadersTitle": "2人の創業者。3つのタイムゾーン。",
+    "leaders": [
+      {
+        "name": "Sébastien Lonjon",
+        "role": "CEO · 創業者",
+        "hub": "EU拠点 · 東京",
+        "photo": "sebastien.jpg",
+        "bio": "2015年にAbbeal設立。パリでCEO、2024年に東京に移住しアジア拠点を指揮。"
+      },
+      {
+        "name": "Vianney Blanquart",
+        "role": "COO · 社長",
+        "hub": "アメリカ拠点 · モントリオール",
+        "photo": "vianney.jpg",
+        "bio": "モントリオール拠点共同創業（2023年）。2024年11月より社長。北米運営を指揮。"
+      }
+    ],
+    "statsTape": "// 数字",
+    "statsTitle": "規模であって、騒音ではない。",
+    "stats": [
+      {
+        "value": "100+",
+        "label": "支援企業数"
+      },
+      {
+        "value": "50+",
+        "label": "Mobbealで海外赴任したエンジニア"
+      },
+      {
+        "value": "3",
+        "label": "拠点 · パリ、モントリオール、東京"
+      },
+      {
+        "value": "10+",
+        "label": "エンジニアリング歴"
+      }
+    ],
+    "ctaTitle": "お話ししませんか？",
+    "ctaSub": "アーキテクトと30分。コミットなし。",
+    "ctaLabel": "通話を予約"
   }
 }

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Abbeal · Tri-geo engineering pod",
+    "title": "Abbeal · Software, AI, Data, Robotics",
     "description": "The IT services firm is dead. Tech takes back the power. Software, AI, Data, Robotics. Paris · Montréal · Tokyo. Senior squads, continuous 24/7 delivery.",
     "ogTitle": "Abbeal · The IT services firm is dead. Tech takes back the power.",
     "ogDescription": "Tri-geo engineering pod. Software, AI, Data, Robotics. Senior squads. Tokyo, Montréal, Paris."
@@ -13,7 +13,8 @@
     "insights": "Insights",
     "careers": "Careers",
     "contact": "Contact",
-    "ctaPrimary": "Talk to an architect"
+    "ctaPrimary": "Talk to an architect",
+    "about": "About"
   },
   "hero": {
     "tape": "// 01 · Manifesto",
@@ -567,7 +568,10 @@
       "error": "Send error. Try again or email contact@abbeal.com."
     },
     "offices": "Three offices",
-    "emailsTitle": "Or directly"
+    "emailsTitle": "Or directly",
+    "calendlyTitle": "Book 30 min with an architect",
+    "calendlySub": "No commitment. We understand your context, honestly tell you if we can help.",
+    "altTitle": "Or write to us"
   },
   "careers": {
     "tape": "// Careers",
@@ -621,14 +625,18 @@
       "publisher": "Publisher",
       "publisherName": "Abbeal SAS",
       "publisherAddress": "54 rue Greneta, 75002 Paris, France",
-      "publisherSiren": "SIREN: to fill",
-      "publisherDirector": "Publication director: Sébastien Lonjon",
+      "publisherSiren": "SIREN: 790 172 928",
+      "publisherRcs": "RCS Paris: 790 172 928 (registered 2012-12-24)",
+      "publisherCapital": "Share capital: €24,000",
+      "publisherTva": "EU VAT: FR10 790172928",
+      "publisherForm": "Legal form: SAS (Société par Actions Simplifiée)",
+      "publisherDirector": "Publication director: Sébastien Lonjon (CEO)",
       "publisherContact": "contact@abbeal.com",
       "hosting": "Hosting",
       "hostingName": "Vercel Inc.",
-      "hostingAddress": "340 S Lemon Ave #4133, Walnut CA 91789, USA",
+      "hostingAddress": "340 S Lemon Ave #4133, Walnut CA 91789, USA — vercel.com",
       "ip": "Intellectual property",
-      "ipBody": "The entire website (text, visuals, logos) is the exclusive property of Abbeal SAS. Any reproduction without authorisation is forbidden.",
+      "ipBody": "The entire website (text, visuals, logos, code) is the exclusive property of Abbeal SAS and its partners. Any reproduction, partial or total, without prior written authorization, is forbidden.",
       "updated": "Updated: 2026-04"
     },
     "privacy": {
@@ -683,5 +691,80 @@
         "size": "s"
       }
     ]
+  },
+  "about": {
+    "meta": {
+      "title": "About · Abbeal",
+      "description": "Abbeal is a tri-geo engineering pod founded in 2015. Paris, Montréal, Tokyo. 100+ companies shipped with, 50+ relocated engineers, 10+ years of engineering."
+    },
+    "tape": "// About",
+    "h1Top": "Built to last.",
+    "h1Bottom": "Since 2015.",
+    "intro": "Abbeal isn't an IT services firm. It's a tri-geo engineering pod. Three synced hubs — Paris, Montréal, Tokyo — to deliver continuously, without debt, for companies who take tech seriously.",
+    "timelineTape": "// Timeline",
+    "timelineTitle": "Ten years. Three continents.",
+    "timeline": [
+      {
+        "year": "2015",
+        "city": "Paris",
+        "event": "Abbeal founded by Sébastien Lonjon. First hub in Paris."
+      },
+      {
+        "year": "2021",
+        "city": "Tokyo",
+        "event": "Asia hub opened. First Japanese clients (PayPay, Credit Saison, MUFG)."
+      },
+      {
+        "year": "2023",
+        "city": "Montréal",
+        "event": "Americas hub opened. Vianney Blanquart takes over Canada operations."
+      },
+      {
+        "year": "2026",
+        "city": "Tri-geo",
+        "event": "100+ clients, 50+ relocated via Mobbeal, 24/7 Follow-the-Sun operational."
+      }
+    ],
+    "leadersTape": "// Leadership",
+    "leadersTitle": "Two founders. Three time zones.",
+    "leaders": [
+      {
+        "name": "Sébastien Lonjon",
+        "role": "CEO · Founder",
+        "hub": "Hub EU · Tokyo",
+        "photo": "sebastien.jpg",
+        "bio": "Founded Abbeal in 2015. Paris CEO, moved to Tokyo in 2024 to lead the Asia hub."
+      },
+      {
+        "name": "Vianney Blanquart",
+        "role": "COO · Managing Director",
+        "hub": "Americas Hub · Montréal",
+        "photo": "vianney.jpg",
+        "bio": "Co-founder of the Montréal hub (2023). Managing Director since November 2024. Leads North America operations."
+      }
+    ],
+    "statsTape": "// Numbers",
+    "statsTitle": "Scale, not noise.",
+    "stats": [
+      {
+        "value": "100+",
+        "label": "Companies shipped with"
+      },
+      {
+        "value": "50+",
+        "label": "Engineers relocated via Mobbeal"
+      },
+      {
+        "value": "3",
+        "label": "Hubs · Paris, Montréal, Tokyo"
+      },
+      {
+        "value": "10+",
+        "label": "Years of engineering"
+      }
+    ],
+    "ctaTitle": "Let's talk?",
+    "ctaSub": "30 minutes with an architect. No commitment.",
+    "ctaLabel": "Book a call"
   }
 }

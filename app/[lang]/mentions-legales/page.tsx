@@ -11,6 +11,10 @@ type Dict = {
       publisherName: string;
       publisherAddress: string;
       publisherSiren: string;
+      publisherRcs: string;
+      publisherCapital: string;
+      publisherTva: string;
+      publisherForm: string;
       publisherDirector: string;
       publisherContact: string;
       hosting: string;
@@ -49,8 +53,12 @@ export default async function MentionsPage({ params }: PageProps<"/[lang]/mentio
 
       <Block title={m.publisher}>
         <p className="font-semibold">{m.publisherName}</p>
+        <p>{m.publisherForm}</p>
         <p>{m.publisherAddress}</p>
         <p>{m.publisherSiren}</p>
+        <p>{m.publisherRcs}</p>
+        <p>{m.publisherCapital}</p>
+        <p>{m.publisherTva}</p>
         <p>{m.publisherDirector}</p>
         <p>
           <a href={`mailto:${m.publisherContact}`} className="text-[var(--color-brand-teal)] hover:underline">
