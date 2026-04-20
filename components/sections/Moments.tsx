@@ -30,7 +30,7 @@ const objectPosition: Record<string, string> = {
   "nomikai-tokyo": "right center",
   "stand-up-paris": "left center",
   "pokemon-tokyo": "center top",
-  "alex-tateyama": "center top",
+  "alex-tateyama": "center 25%",
 };
 
 export function Moments({ dict }: { dict: Record<string, unknown> }) {
