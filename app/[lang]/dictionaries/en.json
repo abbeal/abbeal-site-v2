@@ -658,9 +658,9 @@
         "size": "l"
       },
       {
-        "slug": "rooftop-montreal",
-        "caption": "Rooftop coworking · Montréal",
-        "sub": "Break & code review.",
+        "slug": "pokemon-tokyo",
+        "caption": "Pokémon Center · Tokyo",
+        "sub": "The only real danger of remote work in Japan: 5 min away.",
         "size": "l"
       },
       {
@@ -671,14 +671,14 @@
       },
       {
         "slug": "stand-up-paris",
-        "caption": "Stand-up · Paris",
-        "sub": "Delivery in progress.",
+        "caption": "Office · Paris",
+        "sub": "Welcome to the Jungle, a Tuesday morning.",
         "size": "m"
       },
       {
-        "slug": "portrait-aurelie",
-        "caption": "Aurélie · Dev",
-        "sub": "Montréal Hub.",
+        "slug": "alex-tateyama",
+        "caption": "Japanese Alps · Tateyama",
+        "sub": "Alex, Senior Dev. Weekend between two PRs.",
         "size": "s"
       }
     ]
