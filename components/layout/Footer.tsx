@@ -108,7 +108,7 @@ export function Footer({
               </li>
               <li>
                 <Link
-                  href={`${p}/carrieres`}
+                  href={`${p}/careers`}
                   className="hover:text-[var(--color-brand-teal)]"
                 >
                   {d.nav.careers}

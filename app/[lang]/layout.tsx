@@ -36,7 +36,10 @@ export async function generateMetadata({
       ogDescription: string;
     };
   };
+  const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
+  const ogImage = `${SITE}/brand/og-image.png`;
   return {
+    metadataBase: new URL(SITE),
     title: dict.meta.title,
     description: dict.meta.description,
     openGraph: {
@@ -44,12 +47,23 @@ export async function generateMetadata({
       description: dict.meta.ogDescription,
       locale: lang,
       type: "website",
+      siteName: "Abbeal",
+      url: `${SITE}/${lang}`,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: "Abbeal" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.meta.ogTitle,
+      description: dict.meta.ogDescription,
+      images: [ogImage],
     },
     alternates: {
+      canonical: `${SITE}/${lang}`,
       languages: {
-        fr: "/fr",
-        en: "/en",
-        ja: "/ja",
+        fr: `${SITE}/fr`,
+        en: `${SITE}/en`,
+        ja: `${SITE}/ja`,
+        "x-default": `${SITE}/fr`,
       },
     },
   };

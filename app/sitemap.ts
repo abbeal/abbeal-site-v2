@@ -3,7 +3,7 @@ import { locales } from "@/lib/i18n";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
 
-const ROUTES = ["", "/mobbeal", "/insights", "/carrieres", "/contact"] as const;
+const ROUTES = ["", "/mobbeal", "/insights", "/careers", "/contact"] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -17,9 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: route === "" ? "weekly" : "monthly",
         priority: route === "" ? 1.0 : route === "/mobbeal" ? 0.9 : 0.7,
         alternates: {
-          languages: Object.fromEntries(
-            locales.map((l) => [l, `${SITE_URL}/${l}${route}`]),
-          ),
+          languages: {
+            ...Object.fromEntries(
+              locales.map((l) => [l, `${SITE_URL}/${l}${route}`]),
+            ),
+            "x-default": `${SITE_URL}/fr${route}`,
+          },
         },
       });
     }

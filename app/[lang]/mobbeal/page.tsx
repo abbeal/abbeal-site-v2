@@ -33,10 +33,30 @@ export default async function MobbealPage({
 }: PageProps<"/[lang]/mobbeal">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
-  const dict = (await getDictionary(lang as Locale)) as Record<string, unknown>;
+  const dict = (await getDictionary(lang as Locale)) as Record<string, unknown> & {
+    mobbeal: { faq: { items: { q: string; a: string }[] } };
+  };
+
+  // FAQ JSON-LD schema for rich snippets + LLM extraction
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: dict.mobbeal.faq.items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <MobbealHero locale={lang as Locale} dict={dict} />
       <Piliers dict={dict} />
       <Destinations dict={dict} />

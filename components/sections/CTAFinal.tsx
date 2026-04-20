@@ -39,7 +39,7 @@ export function CTAFinal({
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-px bg-[var(--color-bg-light)]/10 border border-[var(--color-bg-light)]/10">
           {[
             { ...d.ctaFinal.client, key: "client", href: `${p}/contact` },
-            { ...d.ctaFinal.engineer, key: "engineer", href: `${p}/carrieres` },
+            { ...d.ctaFinal.engineer, key: "engineer", href: `${p}/careers` },
           ].map((b, i) => (
             <motion.div
               key={b.key}

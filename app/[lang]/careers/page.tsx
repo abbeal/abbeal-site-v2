@@ -23,14 +23,14 @@ type Dict = {
 
 export async function generateMetadata({
   params,
-}: PageProps<"/[lang]/carrieres">): Promise<Metadata> {
+}: PageProps<"/[lang]/careers">): Promise<Metadata> {
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const dict = (await getDictionary(lang as Locale)) as Dict;
   return { title: `${dict.careers.h1} · Abbeal`, description: dict.careers.subtitle };
 }
 
-export default async function CareersPage({ params }: PageProps<"/[lang]/carrieres">) {
+export default async function CareersPage({ params }: PageProps<"/[lang]/careers">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
   const dict = (await getDictionary(lang as Locale)) as Dict;

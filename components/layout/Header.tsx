@@ -34,7 +34,7 @@ export function Header({
     { label: d.nav.stories, href: `${prefix}#stories` },
     { label: d.nav.mobbeal, href: `${prefix}/mobbeal` },
     { label: d.nav.insights, href: `${prefix}/insights` },
-    { label: d.nav.careers, href: `${prefix}/carrieres` },
+    { label: d.nav.careers, href: `${prefix}/careers` },
   ];
 
   return (
