@@ -3,7 +3,7 @@ import { locales } from "@/lib/i18n";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
 
-const ROUTES = ["", "/mobbeal", "/insights", "/equipe", "/carrieres", "/contact"] as const;
+const ROUTES = ["", "/mobbeal", "/insights", "/carrieres", "/contact"] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

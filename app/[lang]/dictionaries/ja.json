@@ -10,7 +10,6 @@
     "expertises": "専門領域",
     "stories": "実績",
     "mobbeal": "Mobbeal",
-    "team": "チーム",
     "insights": "インサイト",
     "careers": "採用",
     "contact": "お問い合わせ",
@@ -610,28 +609,6 @@
       }
     ]
   },
-  "team": {
-    "tape": "// チーム",
-    "h1": "エンジニア、ボディショップではない。",
-    "subtitle": "本番のシニア、トライジオ。パリ2015年〜、東京2021年〜、モントリオール2023年〜。",
-    "hubs": [
-      {
-        "city": "パリ",
-        "leader": "Sébastien Lonjon · CEO",
-        "team": "テックリード、採用、バックオフィス。"
-      },
-      {
-        "city": "モントリオール",
-        "leader": "Vianney Blanquart · COO",
-        "team": "エンジニアリングマネージャー、北米オペ。"
-      },
-      {
-        "city": "東京",
-        "leader": "Ko-san + Hiroshi-san · 日本オペ",
-        "team": "現地サポート、カスタマーサクセス、配属。"
-      }
-    ]
-  },
   "insightsIndex": {
     "tape": "// インサイト",
     "h1": "誇張なし。",
@@ -662,5 +639,48 @@
       "rightsBody": "アクセス、訂正、削除、ポータビリティ。行使方法：contact@abbeal.com。回答期限：30日。",
       "updated": "更新: 2026-04"
     }
+  },
+  "moments": {
+    "tape": "// 06 — 舞台裏",
+    "title": "人。スライドではなく。",
+    "subtitle": "3拠点、1チーム。オフサイト、スタンドアップ、飲み会、ルーフトップ。Abbealのリアルな素材。",
+    "items": [
+      {
+        "slug": "offsite-chalet-montreal",
+        "caption": "オフサイト · モントリオール",
+        "sub": "全拠点合同、2024年3月。",
+        "size": "xl"
+      },
+      {
+        "slug": "nomikai-tokyo",
+        "caption": "飲み会 · 東京",
+        "sub": "アジア拠点、金曜の夜。",
+        "size": "l"
+      },
+      {
+        "slug": "rooftop-montreal",
+        "caption": "ルーフトップ · モントリオール",
+        "sub": "休憩 & コードレビュー。",
+        "size": "l"
+      },
+      {
+        "slug": "portrait-vianney",
+        "caption": "Vianney Blanquart · COO",
+        "sub": "アメリカ拠点。",
+        "size": "s"
+      },
+      {
+        "slug": "stand-up-paris",
+        "caption": "スタンドアップ · パリ",
+        "sub": "デリバリー進行中。",
+        "size": "m"
+      },
+      {
+        "slug": "portrait-aurelie",
+        "caption": "Aurélie · 開発",
+        "sub": "モントリオール拠点。",
+        "size": "s"
+      }
+    ]
   }
 }

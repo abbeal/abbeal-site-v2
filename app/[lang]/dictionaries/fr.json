@@ -10,7 +10,6 @@
     "expertises": "Expertises",
     "stories": "Stories",
     "mobbeal": "Mobbeal",
-    "team": "Équipe",
     "insights": "Insights",
     "careers": "Carrières",
     "contact": "Contact",
@@ -610,28 +609,6 @@
       }
     ]
   },
-  "team": {
-    "tape": "// Équipe",
-    "h1": "Des ingénieurs, pas des juniors en régie.",
-    "subtitle": "Seniors en prod, tri-geo. 2015 pour Paris, 2021 pour Tokyo, 2023 pour Montréal. Les gens derrière les livraisons.",
-    "hubs": [
-      {
-        "city": "Paris",
-        "leader": "Sébastien Lonjon · CEO",
-        "team": "Tech leads, recruiters, back-office."
-      },
-      {
-        "city": "Montréal",
-        "leader": "Vianney Blanquart · COO",
-        "team": "Engineering managers, Nord-Amérique ops."
-      },
-      {
-        "city": "Tokyo",
-        "leader": "Ko-san + Hiroshi-san · Ops Japon",
-        "team": "Support local, client success, placement."
-      }
-    ]
-  },
   "insightsIndex": {
     "tape": "// Insights",
     "h1": "Sans bullshit.",
@@ -662,5 +639,48 @@
       "rightsBody": "Accès, rectification, suppression, portabilité. Pour exercer : contact@abbeal.com. Délai de réponse : 30 jours.",
       "updated": "Mise à jour : 2026-04"
     }
+  },
+  "moments": {
+    "tape": "// 06 — Coulisses",
+    "title": "Des gens. Pas des slides.",
+    "subtitle": "Trois hubs, une équipe. Offsites, stand-ups, nomikai, rooftops. La vraie matière d'Abbeal.",
+    "items": [
+      {
+        "slug": "offsite-chalet-montreal",
+        "caption": "Offsite Chalet · Montréal",
+        "sub": "Tous les hubs synchros, Mars 2024.",
+        "size": "xl"
+      },
+      {
+        "slug": "nomikai-tokyo",
+        "caption": "Nomikai · Tokyo",
+        "sub": "Hub Asie, vendredi soir.",
+        "size": "l"
+      },
+      {
+        "slug": "rooftop-montreal",
+        "caption": "Rooftop coworking · Montréal",
+        "sub": "Pause & code review.",
+        "size": "l"
+      },
+      {
+        "slug": "portrait-vianney",
+        "caption": "Vianney Blanquart · COO",
+        "sub": "Hub Amériques.",
+        "size": "s"
+      },
+      {
+        "slug": "stand-up-paris",
+        "caption": "Stand-up · Paris",
+        "sub": "Delivery en cours.",
+        "size": "m"
+      },
+      {
+        "slug": "portrait-aurelie",
+        "caption": "Aurélie · Dev",
+        "sub": "Hub Montréal.",
+        "size": "s"
+      }
+    ]
   }
 }

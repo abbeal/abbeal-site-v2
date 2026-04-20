@@ -10,7 +10,6 @@
     "expertises": "Expertise",
     "stories": "Stories",
     "mobbeal": "Mobbeal",
-    "team": "Team",
     "insights": "Insights",
     "careers": "Careers",
     "contact": "Contact",
@@ -610,28 +609,6 @@
       }
     ]
   },
-  "team": {
-    "tape": "// Team",
-    "h1": "Engineers, not junior bodyshop.",
-    "subtitle": "Seniors in production, tri-geo. Paris since 2015, Tokyo 2021, Montréal 2023. The people behind the deliveries.",
-    "hubs": [
-      {
-        "city": "Paris",
-        "leader": "Sébastien Lonjon · CEO",
-        "team": "Tech leads, recruiters, back-office."
-      },
-      {
-        "city": "Montréal",
-        "leader": "Vianney Blanquart · COO",
-        "team": "Engineering managers, North America ops."
-      },
-      {
-        "city": "Tokyo",
-        "leader": "Ko-san + Hiroshi-san · Japan Ops",
-        "team": "Local support, client success, placement."
-      }
-    ]
-  },
   "insightsIndex": {
     "tape": "// Insights",
     "h1": "No bullshit.",
@@ -662,5 +639,48 @@
       "rightsBody": "Access, rectification, deletion, portability. To exercise: contact@abbeal.com. Response time: 30 days.",
       "updated": "Updated: 2026-04"
     }
+  },
+  "moments": {
+    "tape": "// 06 — Behind the scenes",
+    "title": "People. Not slides.",
+    "subtitle": "Three hubs, one team. Offsites, stand-ups, nomikai, rooftops. The real fabric of Abbeal.",
+    "items": [
+      {
+        "slug": "offsite-chalet-montreal",
+        "caption": "Offsite Chalet · Montréal",
+        "sub": "All hubs synced, March 2024.",
+        "size": "xl"
+      },
+      {
+        "slug": "nomikai-tokyo",
+        "caption": "Nomikai · Tokyo",
+        "sub": "Asia hub, Friday night.",
+        "size": "l"
+      },
+      {
+        "slug": "rooftop-montreal",
+        "caption": "Rooftop coworking · Montréal",
+        "sub": "Break & code review.",
+        "size": "l"
+      },
+      {
+        "slug": "portrait-vianney",
+        "caption": "Vianney Blanquart · COO",
+        "sub": "Americas Hub.",
+        "size": "s"
+      },
+      {
+        "slug": "stand-up-paris",
+        "caption": "Stand-up · Paris",
+        "sub": "Delivery in progress.",
+        "size": "m"
+      },
+      {
+        "slug": "portrait-aurelie",
+        "caption": "Aurélie · Dev",
+        "sub": "Montréal Hub.",
+        "size": "s"
+      }
+    ]
   }
 }

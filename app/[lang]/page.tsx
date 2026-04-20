@@ -8,6 +8,7 @@ import { Services } from "@/components/sections/Services";
 import { Expertises } from "@/components/sections/Expertises";
 import { TechRadar } from "@/components/sections/TechRadar";
 import { Stories } from "@/components/sections/Stories";
+import { Moments } from "@/components/sections/Moments";
 import { Insights } from "@/components/sections/Insights";
 import { CTAFinal } from "@/components/sections/CTAFinal";
 
@@ -25,6 +26,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       <Expertises dict={dict} />
       <TechRadar dict={dict} />
       <Stories dict={dict} />
+      <Moments dict={dict} />
       <Insights locale={lang as Locale} dict={dict} />
       <CTAFinal locale={lang as Locale} dict={dict} />
     </>
