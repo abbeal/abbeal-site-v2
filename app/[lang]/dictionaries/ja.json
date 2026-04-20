@@ -659,9 +659,9 @@
         "size": "l"
       },
       {
-        "slug": "pokemon-tokyo",
-        "caption": "ポケモンセンター · 東京",
-        "sub": "日本でのリモートワーク唯一の危険：徒歩5分。",
+        "slug": "stand-up-paris",
+        "caption": "オフィス · パリ",
+        "sub": "フランス拠点のオンボーディング。",
         "size": "l"
       },
       {
@@ -671,15 +671,15 @@
         "size": "s"
       },
       {
-        "slug": "stand-up-paris",
-        "caption": "オフィス · パリ",
-        "sub": "Welcome to the Jungle、火曜の朝。",
-        "size": "m"
-      },
-      {
         "slug": "alex-tateyama",
         "caption": "日本アルプス · 立山",
         "sub": "シニア開発者アレックス。2つのPRの間の週末。",
+        "size": "m"
+      },
+      {
+        "slug": "pokemon-tokyo",
+        "caption": "ポケモンセンター · 東京",
+        "sub": "日本でのリモートワーク唯一の危険：徒歩5分。",
         "size": "s"
       }
     ]

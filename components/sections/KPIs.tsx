@@ -11,22 +11,29 @@ type KpiDict = {
   };
 };
 
-/* 15 client logos — monochrome rendering via CSS filter, full color on hover */
+/* 22 client logos — mixed by geo for visual diversity (FR/CA/JP/global) */
 const LOGOS = [
   { slug: "bnp", name: "BNP Paribas" },
-  { slug: "societe-generale", name: "Société Générale" },
   { slug: "bnc", name: "Banque Nationale du Canada" },
-  { slug: "desjardins", name: "Desjardins" },
   { slug: "smbc", name: "SMBC" },
-  { slug: "mufg", name: "MUFG" },
-  { slug: "money-forward", name: "Money Forward" },
-  { slug: "paypay", name: "PayPay" },
-  { slug: "credit-saison", name: "Credit Saison" },
   { slug: "kering", name: "Kering" },
+  { slug: "rakuten", name: "Rakuten" },
+  { slug: "desjardins", name: "Desjardins" },
+  { slug: "societe-generale", name: "Société Générale" },
+  { slug: "mufg", name: "MUFG" },
+  { slug: "hydro-quebec", name: "Hydro-Québec" },
+  { slug: "paypay", name: "PayPay" },
+  { slug: "edf", name: "EDF" },
+  { slug: "shopify", name: "Shopify" },
+  { slug: "money-forward", name: "Money Forward" },
   { slug: "cartier", name: "Cartier" },
+  { slug: "carrefour", name: "Carrefour" },
   { slug: "ticketmaster", name: "Ticketmaster" },
+  { slug: "enedis", name: "Enedis" },
   { slug: "pwc", name: "PwC" },
+  { slug: "qonto", name: "Qonto" },
   { slug: "le-monde", name: "Le Monde" },
+  { slug: "skello", name: "Skello" },
   { slug: "decathlon", name: "Decathlon" },
 ] as const;
 

@@ -659,9 +659,9 @@
         "size": "l"
       },
       {
-        "slug": "pokemon-tokyo",
-        "caption": "Pokémon Center · Tokyo",
-        "sub": "The only real danger of remote work in Japan: 5 min away.",
+        "slug": "stand-up-paris",
+        "caption": "Office · Paris",
+        "sub": "Onboarding, FR side.",
         "size": "l"
       },
       {
@@ -671,15 +671,15 @@
         "size": "s"
       },
       {
-        "slug": "stand-up-paris",
-        "caption": "Office · Paris",
-        "sub": "Welcome to the Jungle, a Tuesday morning.",
-        "size": "m"
-      },
-      {
         "slug": "alex-tateyama",
         "caption": "Japanese Alps · Tateyama",
         "sub": "Alex, Senior Dev. Weekend between two PRs.",
+        "size": "m"
+      },
+      {
+        "slug": "pokemon-tokyo",
+        "caption": "Pokémon Center · Tokyo",
+        "sub": "The only real danger of remote work in Japan: 5 min away.",
         "size": "s"
       }
     ]

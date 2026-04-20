@@ -25,6 +25,14 @@ const sizeClass: Record<string, string> = {
   s: "md:col-span-1 md:row-span-2",
 };
 
+/* Per-photo object-position to fix cropping on non-centered subjects */
+const objectPosition: Record<string, string> = {
+  "nomikai-tokyo": "right center",
+  "stand-up-paris": "left center",
+  "pokemon-tokyo": "center top",
+  "alex-tateyama": "center top",
+};
+
 export function Moments({ dict }: { dict: Record<string, unknown> }) {
   const d = (dict as unknown as MomentsDict).moments;
 
@@ -65,6 +73,7 @@ export function Moments({ dict }: { dict: Record<string, unknown> }) {
               alt={item.caption}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              style={{ objectPosition: objectPosition[item.slug] ?? "center center" }}
               className="object-cover grayscale-[20%] transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.02]"
             />
             {/* Bottom gradient overlay for caption legibility */}
