@@ -45,7 +45,7 @@
     ]
   },
   "kpis": {
-    "tape": "// 02 — Preuves",
+    "tape": "// 02 · Preuves",
     "items": [
       {
         "value": "100+",
@@ -66,7 +66,7 @@
     ]
   },
   "adn": {
-    "tape": "// 03 — Notre ADN",
+    "tape": "// 03 · Notre ADN",
     "title": "Pourquoi Abbeal ?",
     "subtitle": "Trois piliers, pas un de plus. Tout le reste est exécution.",
     "pillars": [
@@ -94,7 +94,7 @@
     ]
   },
   "services": {
-    "tape": "// 04 — Comment on intervient",
+    "tape": "// 04 · Comment on intervient",
     "title": "Trois façons de bosser ensemble.",
     "subtitle": "On intervient là où le risque technique est élevé et où la vitesse compte.",
     "items": [
@@ -122,7 +122,7 @@
     ]
   },
   "expertises": {
-    "tape": "// 05 — Tech landscape 2026",
+    "tape": "// 05 · Tech landscape 2026",
     "title": "Quatre terrains de jeu.",
     "subtitle": "Quatre expertises, alignées sur les besoins critiques de 2026.",
     "items": [
@@ -191,7 +191,7 @@
     ]
   },
   "techRadar": {
-    "tape": "// 06 — Tech radar 2026",
+    "tape": "// 06 · Tech radar 2026",
     "title": "Ce qu'on pousse, ce qu'on évalue, ce qu'on met de côté.",
     "subtitle": "Notre veille honnête. Mise à jour chaque trimestre.",
     "rings": {
@@ -259,7 +259,7 @@
     ]
   },
   "stories": {
-    "tape": "// 07 — Success stories",
+    "tape": "// 07 · Success stories",
     "title": "Quatre engagements. Quatre résultats.",
     "subtitle": "Anonymisés quand il le faut. Toujours mesurés.",
     "items": [
@@ -294,7 +294,7 @@
     ]
   },
   "insights": {
-    "tape": "// 08 — Engineering insights",
+    "tape": "// 09 · Engineering insights",
     "title": "Notre veille. Sans bullshit.",
     "subtitle": "Retours terrain, trade-offs assumés, pratiques réutilisables.",
     "ctaAll": "Tous les articles",
@@ -323,7 +323,7 @@
     ]
   },
   "ctaFinal": {
-    "tape": "// 09 — On parle ?",
+    "tape": "// 10 · On parle ?",
     "title": "Dites-nous ce qui vous amène.",
     "client": {
       "title": "Vous avez un système critique à livrer.",
@@ -641,7 +641,7 @@
     }
   },
   "moments": {
-    "tape": "// 06 — Coulisses",
+    "tape": "// 08 · Coulisses",
     "title": "Des gens. Pas des slides.",
     "subtitle": "Trois hubs, une équipe. Offsites, stand-ups, nomikai, rooftops. La vraie matière d'Abbeal.",
     "items": [

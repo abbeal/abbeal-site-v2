@@ -45,7 +45,7 @@
     ]
   },
   "kpis": {
-    "tape": "// 02 — Proof",
+    "tape": "// 02 · Proof",
     "items": [
       {
         "value": "100+",
@@ -66,7 +66,7 @@
     ]
   },
   "adn": {
-    "tape": "// 03 — Our DNA",
+    "tape": "// 03 · Our DNA",
     "title": "Why Abbeal?",
     "subtitle": "Three pillars, no more. Everything else is execution.",
     "pillars": [
@@ -94,7 +94,7 @@
     ]
   },
   "services": {
-    "tape": "// 04 — How we engage",
+    "tape": "// 04 · How we engage",
     "title": "Three ways to work together.",
     "subtitle": "We step in where technical risk is high and speed matters.",
     "items": [
@@ -122,7 +122,7 @@
     ]
   },
   "expertises": {
-    "tape": "// 05 — Tech landscape 2026",
+    "tape": "// 05 · Tech landscape 2026",
     "title": "Four playgrounds.",
     "subtitle": "Four expertise areas, aligned with the critical needs of 2026.",
     "items": [
@@ -191,7 +191,7 @@
     ]
   },
   "techRadar": {
-    "tape": "// 06 — Tech radar 2026",
+    "tape": "// 06 · Tech radar 2026",
     "title": "What we push, what we evaluate, what we set aside.",
     "subtitle": "Honest tech watch. Updated every quarter.",
     "rings": {
@@ -259,7 +259,7 @@
     ]
   },
   "stories": {
-    "tape": "// 07 — Success stories",
+    "tape": "// 07 · Success stories",
     "title": "Four engagements. Four outcomes.",
     "subtitle": "Anonymised when needed. Always measured.",
     "items": [
@@ -294,7 +294,7 @@
     ]
   },
   "insights": {
-    "tape": "// 08 — Engineering insights",
+    "tape": "// 09 · Engineering insights",
     "title": "Our tech watch. No bullshit.",
     "subtitle": "Field reports, owned trade-offs, reusable patterns.",
     "ctaAll": "All articles",
@@ -323,7 +323,7 @@
     ]
   },
   "ctaFinal": {
-    "tape": "// 09 — Let's talk?",
+    "tape": "// 10 · Let's talk?",
     "title": "Tell us what brings you here.",
     "client": {
       "title": "You have a critical system to ship.",
@@ -641,7 +641,7 @@
     }
   },
   "moments": {
-    "tape": "// 06 — Behind the scenes",
+    "tape": "// 08 · Behind the scenes",
     "title": "People. Not slides.",
     "subtitle": "Three hubs, one team. Offsites, stand-ups, nomikai, rooftops. The real fabric of Abbeal.",
     "items": [
