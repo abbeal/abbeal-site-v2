@@ -27,7 +27,7 @@ const sizeClass: Record<string, string> = {
 
 /* Per-photo object-position to fix cropping on non-centered subjects */
 const objectPosition: Record<string, string> = {
-  "nomikai-tokyo": "center center",
+  "nomikai-tokyo": "center 35%",
   "stand-up-paris": "left center",
   "pokemon-tokyo": "center top",
   "alex-tateyama": "center 25%",
