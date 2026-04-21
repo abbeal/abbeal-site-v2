@@ -14,6 +14,7 @@ type HeroDict = {
     proof: string;
     ctaPrimary: string;
     ctaSecondary: string;
+    ctaTertiary: string;
     clocksLabel: string;
     mastheadTitle: string;
     live: string;
@@ -160,6 +161,20 @@ export function Hero({
             </ButtonLink>
             <ButtonLink href={`${p}/mobbeal`} variant="secondary" size="lg">
               {d.hero.ctaSecondary}
+            </ButtonLink>
+            <ButtonLink href={`${p}/careers`} variant="ghost" size="lg">
+              {d.hero.ctaTertiary}
+              <svg
+                aria-hidden
+                viewBox="0 0 24 24"
+                className="ml-1 h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="square"
+              >
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
             </ButtonLink>
           </motion.div>
         </div>

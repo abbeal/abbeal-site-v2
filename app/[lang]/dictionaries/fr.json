@@ -43,7 +43,8 @@
         "name": "Tokyo",
         "label": "Hub Asie"
       }
-    ]
+    ],
+    "ctaTertiary": "Rejoindre l'équipe"
   },
   "kpis": {
     "tape": "// 02 · Preuves",
