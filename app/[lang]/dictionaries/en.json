@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Abbeal · Software, AI, Data, Robotics",
-    "description": "The IT services firm is dead. Tech takes back the power. Software, AI, Data, Robotics. Paris · Montréal · Tokyo. Senior squads, continuous 24/7 delivery.",
-    "ogTitle": "Abbeal · The IT services firm is dead. Tech takes back the power.",
+    "description": "The tech we wished existed. So we built it. Software, AI, Data, Robotics. Paris · Montréal · Tokyo. Senior squads, continuous 24/7 delivery.",
+    "ogTitle": "Abbeal · The tech we wished existed. So we built it.",
     "ogDescription": "Tri-geo engineering pod. Software, AI, Data, Robotics. Senior squads. Tokyo, Montréal, Paris."
   },
   "nav": {
@@ -18,8 +18,8 @@
   },
   "hero": {
     "tape": "// 01 · Manifesto",
-    "h1Top": "The IT services firm is dead.",
-    "h1Bottom": "Tech takes back the power.",
+    "h1Top": "The tech we wished existed.",
+    "h1Bottom": "So we built it.",
     "subtitle": "Software, AI, Data, Robotics. In Paris, Montréal, Tokyo. Embedded senior squads, continuous delivery, 24/7.",
     "proof": "Senior teams. Production-grade delivery. Pragmatic decisions.",
     "ctaPrimary": "Talk to an architect",

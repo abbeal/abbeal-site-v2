@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Abbeal · Software, IA, Data, Robotique",
-    "description": "L'ESN est morte. La Tech reprend le pouvoir. Software, IA, Data, Robotique. Paris · Montréal · Tokyo. Senior squads, livraison continue 24/7.",
-    "ogTitle": "Abbeal · L'ESN est morte. La Tech reprend le pouvoir.",
+    "description": "La Tech qu'on aurait aimé trouver. On l'a fondée. Software, IA, Data, Robotique. Paris · Montréal · Tokyo. Senior squads, livraison continue 24/7.",
+    "ogTitle": "Abbeal · La Tech qu'on aurait aimé trouver. On l'a fondée.",
     "ogDescription": "Pôle d'ingénierie tri-geo. Software, IA, Data, Robotique. Senior squads. Tokyo, Montréal, Paris."
   },
   "nav": {
@@ -18,8 +18,8 @@
   },
   "hero": {
     "tape": "// 01 · Manifesto",
-    "h1Top": "L'ESN est morte.",
-    "h1Bottom": "La Tech reprend le pouvoir.",
+    "h1Top": "La Tech qu'on aurait aimé trouver.",
+    "h1Bottom": "On l'a fondée.",
     "subtitle": "Software, IA, Data, Robotique. À Paris, Montréal, Tokyo. Senior squads embarqués, livraison continue, 24/7.",
     "proof": "Équipes seniors. Livraison en production. Décisions pragmatiques.",
     "ctaPrimary": "Parler à un architecte",
