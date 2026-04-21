@@ -135,7 +135,7 @@ export function Hero({
 
           <motion.p
             {...fade(0.6, 8)}
-            className="mt-6 font-mono text-sm tracking-tight text-[var(--color-ink-soft)]"
+            className="mt-6 max-w-2xl font-mono text-sm tracking-tight text-[var(--color-ink-soft)] whitespace-pre-line text-balance"
           >
             {d.hero.proof}
           </motion.p>
