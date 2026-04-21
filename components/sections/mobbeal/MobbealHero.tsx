@@ -61,7 +61,7 @@ export function MobbealHero({
           {d.tape}
         </motion.span>
 
-        <h1 className="mt-8 font-sans font-semibold tracking-[-0.03em] text-[clamp(2.75rem,7vw,6.5rem)] leading-[0.95] max-w-4xl">
+        <h1 className="mt-8 font-sans font-semibold tracking-[-0.03em] text-[clamp(2.75rem,7vw,6.5rem)] leading-[1.02] max-w-4xl">
           <motion.span
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ export function MobbealHero({
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease }}
-            className="block italic bg-clip-text text-transparent"
+            className="block italic bg-clip-text text-transparent pb-[0.05em]"
             style={{
               backgroundImage:
                 "linear-gradient(135deg, #42B296 0%, #80E8BA 100%)",

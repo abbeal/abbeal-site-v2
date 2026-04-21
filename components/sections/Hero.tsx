@@ -105,7 +105,7 @@ export function Hero({
             <span className="tape-label">{d.hero.tape}</span>
           </motion.div>
 
-          <h1 className="mt-8 font-sans font-semibold tracking-[-0.03em] text-[clamp(2.75rem,6.5vw,6rem)] leading-[0.95]">
+          <h1 className="mt-8 font-sans font-semibold tracking-[-0.03em] text-[clamp(2.75rem,6.5vw,6rem)] leading-[1.02]">
             <motion.span
               {...h1Line(0.1)}
               className="block text-[var(--color-ink)]"
@@ -114,7 +114,7 @@ export function Hero({
             </motion.span>
             <motion.span
               {...h1Line(0.22)}
-              className="block italic gradient-brand-text"
+              className="block italic gradient-brand-text pb-[0.05em]"
             >
               {d.hero.h1Bottom}
             </motion.span>
