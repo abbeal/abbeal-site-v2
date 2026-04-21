@@ -128,7 +128,7 @@ export function Hero({
 
           <motion.p
             {...fade(0.45, 16)}
-            className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--color-ink-soft)] md:text-xl"
+            className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--color-ink-soft)] md:text-xl text-balance"
           >
             {d.hero.subtitle}
           </motion.p>
