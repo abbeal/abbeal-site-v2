@@ -10,6 +10,7 @@ type ADNDict = {
     pillars: {
       number: string;
       title: string;
+      gloss?: string;
       punch: string;
       body: string;
       stat: string;
@@ -48,6 +49,12 @@ export function ADN({ dict }: { dict: Record<string, unknown> }) {
             <h3 className="mt-6 text-2xl md:text-3xl font-semibold tracking-tight text-[var(--color-ink)]">
               {pillar.title}
             </h3>
+            {pillar.gloss && (
+              <p className="mt-1 font-mono text-xs italic text-[var(--color-muted)]">
+                <span aria-hidden className="mr-1.5">↳</span>
+                {pillar.gloss}
+              </p>
+            )}
             <p className="mt-3 text-lg italic text-[var(--color-brand-teal)] leading-snug">
               {pillar.punch}
             </p>
