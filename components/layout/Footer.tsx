@@ -13,7 +13,7 @@ type FooterDict = {
     follow: { title: string; linkedin: string; youtube: string };
     navTitle: string;
     legalTitle: string;
-    legal: { mentions: string; privacy: string };
+    legal: { mentions: string; privacy: string; cgu?: string };
     copyright: string;
   };
   nav: {
@@ -108,10 +108,34 @@ export function Footer({
               </li>
               <li>
                 <Link
+                  href={`${p}/cases`}
+                  className="hover:text-[var(--color-brand-teal)]"
+                >
+                  {d.nav.stories}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href={`${p}/insights`}
                   className="hover:text-[var(--color-brand-teal)]"
                 >
                   {d.nav.insights}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`${p}/glossaire`}
+                  className="hover:text-[var(--color-brand-teal)]"
+                >
+                  {(d.nav as unknown as Record<string, string>).glossary ?? "Glossaire"}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`${p}/partners`}
+                  className="hover:text-[var(--color-brand-teal)]"
+                >
+                  {(d.nav as unknown as Record<string, string>).partners ?? "Partenaires"}
                 </Link>
               </li>
               <li>
@@ -198,6 +222,11 @@ export function Footer({
             <li>
               <Link href={`${p}/confidentialite`} className="hover:text-[var(--color-ink)]">
                 {d.footer.legal.privacy}
+              </Link>
+            </li>
+            <li>
+              <Link href={`${p}/cgu`} className="hover:text-[var(--color-ink)]">
+                {d.footer.legal.cgu ?? "CGU"}
               </Link>
             </li>
           </ul>

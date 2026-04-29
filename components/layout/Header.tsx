@@ -31,7 +31,7 @@ export function Header({
   const items = [
     { label: d.nav.services, href: `${prefix}#services` },
     { label: d.nav.expertises, href: `${prefix}#expertises` },
-    { label: d.nav.stories, href: `${prefix}#stories` },
+    { label: d.nav.stories, href: `${prefix}/cases` },
     { label: d.nav.mobbeal, href: `${prefix}/mobbeal` },
     { label: d.nav.insights, href: `${prefix}/insights` },
     { label: d.nav.careers, href: `${prefix}/careers` },

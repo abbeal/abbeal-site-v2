@@ -3,7 +3,7 @@
     "title": "Abbeal · Software, IA, Data, Robotique",
     "description": "La Tech qu'on aurait aimé trouver. On l'a fondée. Software, IA, Data, Robotique. Paris · Montréal · Tokyo. Senior squads, livraison continue 24/7.",
     "ogTitle": "Abbeal · La Tech qu'on aurait aimé trouver. On l'a fondée.",
-    "ogDescription": "Pôle d'ingénierie tri-geo. Software, IA, Data, Robotique. Senior squads. Tokyo, Montréal, Paris."
+    "ogDescription": "Squads seniors pour vos projets tech critiques. Software, IA, Data, Robotique. Livré 24/7 depuis Paris, Montréal, Tokyo."
   },
   "nav": {
     "services": "Services",
@@ -14,13 +14,15 @@
     "careers": "Carrières",
     "contact": "Contact",
     "ctaPrimary": "Parler à un architecte",
-    "about": "À propos"
+    "about": "À propos",
+    "partners": "Partenaires",
+    "glossary": "Glossaire"
   },
   "hero": {
     "tape": "// 01 · Manifesto",
     "h1Top": "La Tech qu'on aurait aimé trouver.",
     "h1Bottom": "On l'a fondée.",
-    "subtitle": "Software, IA, Data, Robotique. Senior squads embarqués. Paris · Montréal · Tokyo.",
+    "subtitle": "Software, IA, Data, Robotique.",
     "proof": "Pour les boîtes ambitieuses sur leur stack.\nEt les ingés qui veulent travailler sur les sujets qui comptent.",
     "ctaPrimary": "Parler à un architecte",
     "ctaSecondary": "Mobbeal · Mobilité internationale",
@@ -207,59 +209,78 @@
       {
         "name": "Rust pour systems",
         "ring": "adopt",
-        "category": "languages"
+        "category": "languages",
+        "rationale": "Zéro cost abstractions, memory safety, écosystème robotique mature. Nos systèmes prod en sont à leur 3e release."
       },
       {
         "name": "RAG en production",
         "ring": "adopt",
-        "category": "ai"
+        "category": "ai",
+        "rationale": "Modèles ouverts + retrieval hybride (BM25 + dense). Coûts divisés par dix vs all-cloud. Garde-fous évals continus."
       },
       {
         "name": "ROS 2 + Isaac",
         "ring": "adopt",
-        "category": "robotics"
+        "category": "robotics",
+        "rationale": "Standard de fait en robotique. Isaac Sim pour simulation domain randomization. 80 AGV en prod chez un client japonais."
       },
       {
         "name": "OpenTofu",
         "ring": "adopt",
-        "category": "infra"
+        "category": "infra",
+        "rationale": "Fork communautaire de Terraform. Licence OSS, compatible, roadmap claire. On migre systématiquement."
       },
       {
         "name": "Cache Components Next 16",
         "ring": "trial",
-        "category": "frontend"
+        "category": "frontend",
+        "rationale": "PPR + use cache directive. On l'utilise sur 3 projets clients, patterns encore en construction mais gains perf réels."
       },
       {
         "name": "Agents multi-tools",
         "ring": "trial",
-        "category": "ai"
+        "category": "ai",
+        "rationale": "Orchestration via Claude + tool use. Bon pour tâches bornées, flaky sur workflows longs. On verrouille avec évals + fallbacks."
       },
       {
         "name": "Edge IA (Jetson)",
         "ring": "trial",
-        "category": "robotics"
+        "category": "robotics",
+        "rationale": "ML sur gateways industrielles. Modèles ONNX compacts, latence < 5 s. Pas encore scalé en masse mais 2 projets convaincants."
       },
       {
         "name": "WASM en backend",
         "ring": "assess",
-        "category": "languages"
+        "category": "languages",
+        "rationale": "Écosystème jeune (wasmCloud, Wasmtime). Sandboxing intéressant pour multi-tenancy, mais observabilité pénible."
       },
       {
         "name": "Vector DB managées",
         "ring": "assess",
-        "category": "ai"
+        "category": "ai",
+        "rationale": "Pinecone, Weaviate Cloud, Qdrant Cloud. Pratique pour commencer. On préfère self-host Qdrant quand les coûts grimpent."
       },
       {
         "name": "Frameworks low-code",
         "ring": "hold",
-        "category": "frontend"
+        "category": "frontend",
+        "rationale": "Lock-in vendor, debug impossible, performance moyenne. Utilisable pour prototype, pas pour produit."
       },
       {
         "name": "Crypto-payment B2B",
         "ring": "hold",
-        "category": "infra"
+        "category": "infra",
+        "rationale": "Pas de cas client viable chez nous. Volatilité, compliance floue, UX déplorable. On attend."
       }
-    ]
+    ],
+    "categories": {
+      "all": "Tout",
+      "ai": "AI",
+      "robotics": "Robotique",
+      "languages": "Langages",
+      "infra": "Infra",
+      "frontend": "Frontend"
+    }
   },
   "stories": {
     "tape": "// 07 · Success stories",
@@ -339,6 +360,34 @@
       "cta": "Rejoindre l'équipe"
     }
   },
+  "homeFaq": {
+    "items": [
+      {
+        "q": "Qu'est-ce qu'Abbeal ?",
+        "a": "Abbeal est un pôle d'ingénierie tri-géo (Paris · Montréal · Tokyo) fondé en 2015. On livre des squads d'ingénieurs seniors intégrés sur Software, IA, Data et Robotique pour des systèmes critiques en production."
+      },
+      {
+        "q": "Quelles sont vos expertises ?",
+        "a": "Quatre domaines : Software (plateformes web, microservices, observabilité), IA (LLM en production, agents, RAG, MLOps), Data (data platforms, streaming, gouvernance) et Robotique (firmware, vision, ROS, edge computing). Squads seniors uniquement, jamais de juniors planqués."
+      },
+      {
+        "q": "Où êtes-vous basés ?",
+        "a": "Trois bureaux : Paris (54 rue Greneta, 75002), Montréal (4388 Rue Saint-Denis, H2J 2L1) et Tokyo (1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Le tri-geo permet de livrer en 24/7 follow-the-sun pour les clients qui le demandent."
+      },
+      {
+        "q": "Combien coûte un projet ?",
+        "a": "Tarifs adaptés au niveau de séniorité (Lead, Architect, Principal) et à la géographie. Un cadrage gratuit de 30 minutes avec un architecte senior permet de chiffrer précisément. Sans engagement."
+      },
+      {
+        "q": "Comment démarrer un projet ?",
+        "a": "Un appel de cadrage de 30 minutes avec un architecte senior. On qualifie le contexte, les contraintes, le périmètre. Si on est aligné, on propose une équipe et un planning sous 5 jours ouvrés. Premier livrable client en moyenne sous 3 semaines."
+      },
+      {
+        "q": "Qu'est-ce que Mobbeal ?",
+        "a": "Mobbeal est notre programme de mobilité internationale pour ingénieurs : tu gardes ton client français, on transforme ton contrat en expatriation vers Tokyo, Montréal ou Paris. Visa, portage local, juridique et logement gérés. Zéro avance de frais. 50+ talents expatriés, 100% de visas obtenus."
+      }
+    ]
+  },
   "footer": {
     "tagline": "Paris · Montréal · Tokyo. Depuis 2015.",
     "addresses": {
@@ -356,7 +405,7 @@
         },
         {
           "city": "Tokyo",
-          "address": "1-23-5 Higashiazabu, Minato-ku, 106-0044",
+          "address": "1-23-5 Higashi-Azabu, Minato-ku, 106-0044",
           "tag": "Hub Asie"
         }
       ]
@@ -375,7 +424,8 @@
     "legalTitle": "Légal",
     "legal": {
       "mentions": "Mentions légales",
-      "privacy": "Confidentialité"
+      "privacy": "Confidentialité",
+      "cgu": "CGU"
     },
     "copyright": "© 2026 Abbeal. Tous droits réservés."
   },
@@ -551,6 +601,33 @@
       "title": "30 minutes avec Vianney ou Sébastien.",
       "body": "Tu nous expliques ta situation, on te dit honnêtement si ton dossier passe. Sans engagement.",
       "cta": "Réserver un appel"
+    },
+    "trust": {
+      "tape": "// Écosystème mobilité",
+      "title": "Les institutions avec lesquelles on bosse.",
+      "subtitle": "Partenaires qui facilitent l'installation de nos talents à Tokyo, Montréal et dans l'écosystème tech français.",
+      "badges": [
+        {
+          "name": "JETRO",
+          "role": "Partenaire accompagnement Japon",
+          "url": "https://www.jetro.go.jp/en/invest/"
+        },
+        {
+          "name": "La French Tech",
+          "role": "Écosystème startup",
+          "url": "https://lafrenchtech.com/"
+        },
+        {
+          "name": "Business France",
+          "role": "Accompagnement export / implantation",
+          "url": "https://www.businessfrance.fr/"
+        },
+        {
+          "name": "Montréal International",
+          "role": "Partenaire accompagnement Québec",
+          "url": "https://www.montrealinternational.com/"
+        }
+      ]
     }
   },
   "contact": {
@@ -648,6 +725,55 @@
       "rights": "Vos droits",
       "rightsBody": "Accès, rectification, suppression, portabilité. Pour exercer : contact@abbeal.com. Délai de réponse : 30 jours.",
       "updated": "Mise à jour : 2026-04"
+    },
+    "cgu": {
+      "h1": "Conditions générales d'utilisation",
+      "updated": "Mise à jour : avril 2026",
+      "intro": "Les présentes conditions régissent l'usage du site abbeal.com. En accédant au site, l'utilisateur les accepte sans réserve.",
+      "sections": [
+        {
+          "title": "Objet",
+          "body": "Le site abbeal.com présente les services d'Abbeal SAS (ingénierie software, IA/data, robotique, mobilité internationale Mobbeal, recrutement technique). Il n'effectue aucune transaction en ligne."
+        },
+        {
+          "title": "Accès au site",
+          "body": [
+            "Le site est accessible gratuitement depuis tout navigateur web. Abbeal s'efforce d'assurer une disponibilité continue mais ne garantit pas l'absence d'interruption (maintenance, incident réseau, force majeure).",
+            "L'utilisateur supporte les coûts de sa propre connexion internet."
+          ]
+        },
+        {
+          "title": "Propriété intellectuelle",
+          "body": "L'ensemble des contenus (textes, images, code, design, logos, photographies, vidéos) est la propriété d'Abbeal SAS ou de ses partenaires, protégé par le droit d'auteur. Toute reproduction, représentation ou exploitation non autorisée est interdite."
+        },
+        {
+          "title": "Protection des données personnelles",
+          "body": "Pour toute question relative au traitement de données personnelles, consulter la politique de confidentialité accessible depuis le footer du site. Le délégué à la protection des données (DPO) peut être contacté à dpo@abbeal.com."
+        },
+        {
+          "title": "Cookies",
+          "body": "Le site utilise des cookies techniques strictement nécessaires à son fonctionnement (préférence de langue via NEXT_LOCALE). Aucun cookie publicitaire ou de tracking tiers n'est déposé sans consentement explicite."
+        },
+        {
+          "title": "Liens externes",
+          "body": "Le site peut contenir des liens vers des ressources externes (LinkedIn, GitHub, Calendly, JETRO, etc.). Abbeal n'est pas responsable du contenu ni des politiques de confidentialité de ces sites tiers."
+        },
+        {
+          "title": "Responsabilité",
+          "body": "Les informations publiées sont fournies à titre indicatif. Abbeal s'efforce de garantir leur exactitude mais ne saurait être tenue responsable d'erreurs, d'omissions ou d'un usage qui en serait fait. Les cas clients sont anonymisés mais réels ; les chiffres et résultats reflètent des engagements passés et ne constituent pas une promesse de résultat identique."
+        },
+        {
+          "title": "Droit applicable",
+          "body": "Les présentes conditions sont régies par le droit français. Tout litige relève de la compétence exclusive des tribunaux de Paris, sous réserve des règles impératives de protection des consommateurs."
+        },
+        {
+          "title": "Modifications",
+          "body": "Abbeal peut modifier les présentes conditions à tout moment. La version en vigueur est celle publiée sur cette page. En continuant à utiliser le site après modification, l'utilisateur accepte les nouvelles conditions."
+        }
+      ],
+      "contact": "Contact",
+      "contactBody": "Pour toute question relative aux présentes conditions :",
+      "contactEmail": "contact@abbeal.com"
     }
   },
   "moments": {
@@ -713,7 +839,7 @@
       {
         "year": "2021",
         "city": "Tokyo",
-        "event": "Ouverture du hub Asie. Premiers clients japonais (PayPay, Credit Saison, MUFG)."
+        "event": "Ouverture du hub Asie. Premiers clients japonais (PayPay, SMBC, AXA Japan)."
       },
       {
         "year": "2023",
@@ -767,5 +893,143 @@
     "ctaTitle": "On parle ?",
     "ctaSub": "30 minutes avec un architecte. Sans engagement.",
     "ctaLabel": "Réserver un appel"
+  },
+  "casesIndex": {
+    "tape": "// Cases",
+    "h1": "Engagements concrets. Résultats mesurés.",
+    "subtitle": "Dix interventions anonymisées. Chaque case : problème, méthode, résultat chiffré."
+  },
+  "partners": {
+    "meta": {
+      "title": "Partenaires · Abbeal",
+      "description": "Écosystème tech et institutionnel autour d'Abbeal. Cloud, IA, open source, mobilité internationale."
+    },
+    "tape": "// Écosystème",
+    "h1": "Avec qui on bosse.",
+    "subtitle": "Plateformes qu'on opère en prod, institutions qu'on mobilise pour nos talents, communautés techniques qu'on soutient.",
+    "groups": [
+      {
+        "title": "Plateformes cloud & IA",
+        "subtitle": "Celles qu'on déploie en prod chez nos clients, avec certifications et retours d'expérience.",
+        "partners": [
+          {
+            "name": "Amazon Web Services",
+            "role": "Cloud principal multi-région",
+            "url": "https://aws.amazon.com/"
+          },
+          {
+            "name": "Google Cloud Platform",
+            "role": "Data & IA, Kubernetes GKE",
+            "url": "https://cloud.google.com/"
+          },
+          {
+            "name": "Microsoft Azure",
+            "role": "Secteur public & enterprise",
+            "url": "https://azure.microsoft.com/"
+          },
+          {
+            "name": "Vercel",
+            "role": "Hosting front-end & edge",
+            "url": "https://vercel.com/"
+          },
+          {
+            "name": "Anthropic",
+            "role": "LLM — Claude famille",
+            "url": "https://www.anthropic.com/"
+          },
+          {
+            "name": "OpenAI",
+            "role": "LLM — GPT famille",
+            "url": "https://openai.com/"
+          },
+          {
+            "name": "Mistral AI",
+            "role": "LLM open-weights EU",
+            "url": "https://mistral.ai/"
+          },
+          {
+            "name": "Databricks",
+            "role": "Data lakehouse & ML",
+            "url": "https://www.databricks.com/"
+          },
+          {
+            "name": "Snowflake",
+            "role": "Data warehouse",
+            "url": "https://www.snowflake.com/"
+          }
+        ]
+      },
+      {
+        "title": "Écosystème mobilité",
+        "subtitle": "Institutions qui facilitent l'installation de nos équipes à l'international.",
+        "partners": [
+          {
+            "name": "JETRO",
+            "role": "Invest Japan — relocation & setup",
+            "url": "https://www.jetro.go.jp/en/invest/"
+          },
+          {
+            "name": "Business France",
+            "role": "Export & expansion FR",
+            "url": "https://www.businessfrance.fr/"
+          },
+          {
+            "name": "La French Tech",
+            "role": "Écosystème startup FR",
+            "url": "https://lafrenchtech.com/"
+          },
+          {
+            "name": "Invest in Canada",
+            "role": "Expansion Amérique du Nord",
+            "url": "https://www.investcanada.ca/"
+          },
+          {
+            "name": "Montréal International",
+            "role": "Expansion Québec & R&D",
+            "url": "https://www.montrealinternational.com/"
+          }
+        ]
+      },
+      {
+        "title": "Communautés & open source",
+        "subtitle": "Projets et fondations qu'on utilise, qu'on contribue, qu'on supporte.",
+        "partners": [
+          {
+            "name": "Cloud Native Computing Foundation",
+            "role": "Kubernetes, Prometheus, OpenTelemetry",
+            "url": "https://www.cncf.io/"
+          },
+          {
+            "name": "Rust Foundation",
+            "role": "Langage systems & robotique",
+            "url": "https://foundation.rust-lang.org/"
+          },
+          {
+            "name": "Open Source Robotics Foundation",
+            "role": "ROS 2 — robotique",
+            "url": "https://www.openrobotics.org/"
+          },
+          {
+            "name": "Linux Foundation",
+            "role": "Infrastructures open source",
+            "url": "https://www.linuxfoundation.org/"
+          },
+          {
+            "name": "OpenTofu",
+            "role": "IaC open — fork Terraform",
+            "url": "https://opentofu.org/"
+          },
+          {
+            "name": "MACH Alliance",
+            "role": "Architectures composables",
+            "url": "https://machalliance.org/"
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Partenariat tech ou éditeur ?",
+      "btn": "Parlons-en"
+    }
   }
 }

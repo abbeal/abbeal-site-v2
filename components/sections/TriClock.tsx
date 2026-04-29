@@ -20,6 +20,7 @@ const INTL_LOCALE: Record<Locale, string> = {
   fr: "fr-FR",
   en: "en-GB",
   ja: "ja-JP",
+  "fr-ca": "fr-CA",
 };
 
 const ease = [0.16, 1, 0.3, 1] as const;

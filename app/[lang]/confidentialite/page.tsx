@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "../dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
+import { pageAlternates } from "@/lib/seo";
+import { breadcrumbs } from "@/lib/breadcrumbs";
 
 type Dict = {
   legal: {
@@ -23,17 +25,27 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const dict = (await getDictionary(lang as Locale)) as Dict;
-  return { title: `${dict.legal.privacy.h1} · Abbeal`, robots: { index: false } };
+  return {
+    title: `${dict.legal.privacy.h1} · Abbeal`,
+    robots: { index: false },
+    alternates: pageAlternates(lang as Locale, "/confidentialite"),
+  };
 }
 
 export default async function PrivacyPage({ params }: PageProps<"/[lang]/confidentialite">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
-  const dict = (await getDictionary(lang as Locale)) as Dict;
+  const locale = lang as Locale;
+  const dict = (await getDictionary(locale)) as Dict;
   const p = dict.legal.privacy;
+  const crumbs = breadcrumbs(locale, [[p.h1, "/confidentialite"]]);
 
   return (
     <article className="mx-auto max-w-[760px] px-6 md:px-10 py-20 md:py-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
+      />
       <h1 className="font-semibold tracking-[-0.025em] text-4xl md:text-5xl leading-tight">
         {p.h1}
       </h1>

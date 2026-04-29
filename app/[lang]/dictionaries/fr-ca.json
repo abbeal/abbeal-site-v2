@@ -1,0 +1,1035 @@
+{
+  "meta": {
+    "title": "Abbeal · Logiciel, IA, Données, Robotique",
+    "description": "La techno qu'on aurait aimé trouver. On l'a fondée. Logiciel, IA, Données, Robotique. Montréal · Paris · Tokyo. Équipes chevronnées, livraison continue 24/7.",
+    "ogTitle": "Abbeal · La techno qu'on aurait aimé trouver. On l'a fondée.",
+    "ogDescription": "Équipes chevronnées pour vos projets techno critiques. Logiciel, IA, Données, Robotique. Livré 24/7 depuis Montréal, Paris, Tokyo."
+  },
+  "nav": {
+    "services": "Services",
+    "expertises": "Expertises",
+    "stories": "Cas clients",
+    "mobbeal": "Mobbeal",
+    "insights": "Articles",
+    "careers": "Carrières",
+    "contact": "Contact",
+    "ctaPrimary": "Parler à un architecte",
+    "about": "À propos",
+    "partners": "Partenaires",
+    "glossary": "Glossaire"
+  },
+  "hero": {
+    "tape": "// 01 · Manifeste",
+    "h1Top": "La techno qu'on aurait aimé trouver.",
+    "h1Bottom": "On l'a fondée.",
+    "subtitle": "Logiciel, IA, Données, Robotique.",
+    "proof": "Pour les compagnies ambitieuses sur leur pile techno.\nEt les ingénieurs qui veulent travailler sur les sujets qui comptent.",
+    "ctaPrimary": "Parler à un architecte",
+    "ctaSecondary": "Mobbeal · Mobilité internationale",
+    "clocksLabel": "Adaptive Follow-the-Sun · horloges tri-géo",
+    "mastheadTitle": "Follow-the-Sun · 24/7",
+    "live": "EN DIRECT",
+    "cities": [
+      {
+        "key": "montreal",
+        "name": "Montréal",
+        "label": "Pôle Amériques"
+      },
+      {
+        "key": "paris",
+        "name": "Paris",
+        "label": "Pôle Europe"
+      },
+      {
+        "key": "tokyo",
+        "name": "Tokyo",
+        "label": "Pôle Asie"
+      }
+    ],
+    "ctaTertiary": "Rejoindre l'équipe"
+  },
+  "kpis": {
+    "tape": "// 02 · Preuves",
+    "items": [
+      {
+        "value": "100+",
+        "label": "Compagnies accompagnées"
+      },
+      {
+        "value": "3",
+        "label": "Pôles · Montréal, Paris, Tokyo"
+      },
+      {
+        "value": "50+",
+        "label": "Talents expatriés via Mobbeal"
+      },
+      {
+        "value": "10+",
+        "label": "Années d'ingénierie"
+      }
+    ],
+    "clientsLabel": "Ils nous font confiance"
+  },
+  "adn": {
+    "tape": "// 03 · Notre ADN",
+    "title": "Pourquoi Abbeal ?",
+    "subtitle": "Trois piliers, pas un de plus. Tout le reste est exécution.",
+    "pillars": [
+      {
+        "number": "01",
+        "title": "Adaptive Follow-the-Sun",
+        "punch": "Tes feuilles de route avancent pendant que tu dors.",
+        "body": "Trois pôles synchronisés — un suivi-du-soleil adaptatif — transforment les fuseaux en avantage. Passations propres, chevauchement maîtrisé, 24/7 sans dette technique.",
+        "stat": "24/7 livraison continue"
+      },
+      {
+        "number": "02",
+        "title": "Axé IA",
+        "punch": "L'IA en production. Pas en démo.",
+        "body": "RAG qui tient en charge, agents orientés flux de travail, vision et IA embarquée. Évaluation, surveillance, coûts maîtrisés. Usage responsable, pas tape-à-l'œil.",
+        "stat": "Top 1 % des ingénieurs recrutés"
+      },
+      {
+        "number": "03",
+        "title": "GreenOps & Performance",
+        "punch": "Moins de carbone. Moins de coûts.",
+        "body": "Le code le plus durable est celui qu'on n'écrit pas. Budgets infonuagiques, profilage, infrastructure frugale, mise à l'échelle dynamique. GreenOps appliqué jusqu'à ce site.",
+        "stat": "Lighthouse 90+ partout"
+      }
+    ]
+  },
+  "services": {
+    "tape": "// 04 · Comment on intervient",
+    "title": "Trois façons de bosser ensemble.",
+    "subtitle": "On intervient là où le risque technique est élevé et où la vitesse compte.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Équipes intégrées",
+        "subtitle": "Augmentation d'équipe",
+        "body": "On rejoint tes équipes avec responsabilité de périmètre. Dev, Ops, Données, AQ. Montée en charge rapide, mentorat, qualité au niveau.",
+        "cta": "Renforcer une équipe"
+      },
+      {
+        "number": "02",
+        "title": "Recrutement technique",
+        "subtitle": "Acquisition de talents",
+        "body": "Top 1 % recruté par des ingénieurs, validé en processus technique court. Directeurs des TI, responsables, experts de niche.",
+        "cta": "Ouvrir un besoin"
+      },
+      {
+        "number": "03",
+        "title": "Livraison clé en main",
+        "subtitle": "Solutions numériques",
+        "body": "De la conception à l'exploitation. Engagement de résultat, pas de facturation au temps. SLO, observabilité, exploitation maîtrisée.",
+        "cta": "Cadrer un projet"
+      }
+    ]
+  },
+  "expertises": {
+    "tape": "// 05 · Tech landscape 2026",
+    "title": "Quatre terrains de jeu.",
+    "subtitle": "Quatre expertises, alignées sur les besoins critiques de 2026.",
+    "items": [
+      {
+        "tag": "Web & Mobile",
+        "title": "Interfaces haute performance.",
+        "body": "Systèmes de conception, budgets de performance, applications multiplateformes qui se mettent à l'échelle.",
+        "stack": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Vue",
+          "Tailwind",
+          "Flutter",
+          "Swift",
+          "Kotlin",
+          "GraphQL"
+        ]
+      },
+      {
+        "tag": "Data & IA",
+        "title": "De la donnée brute à l'IA en prod.",
+        "body": "Pipelines RAG, flux agentiques, mise en service de modèles, évaluation et surveillance.",
+        "stack": [
+          "Python",
+          "LangChain",
+          "OpenAI",
+          "Mistral",
+          "Hugging Face",
+          "Pinecone",
+          "Weaviate",
+          "PyTorch",
+          "MLOps"
+        ]
+      },
+      {
+        "tag": "Cloud & Fiabilité",
+        "title": "Cloud-native, sécurisé, résilient.",
+        "body": "Ingénierie de plateforme, CI/CD, SLO, observabilité, DevSecOps.",
+        "stack": [
+          "AWS",
+          "GCP",
+          "Azure",
+          "Kubernetes",
+          "Terraform",
+          "OpenTofu",
+          "ArgoCD",
+          "GitHub Actions"
+        ]
+      },
+      {
+        "tag": "Embarqué & Robotique",
+        "title": "Le code rencontre le monde physique.",
+        "body": "Contrôle temps réel, edge deployment, intégrations ROS2, vision.",
+        "stack": [
+          "C++",
+          "Rust",
+          "ROS 2",
+          "NVIDIA Jetson",
+          "Isaac",
+          "Edge Impulse",
+          "MQTT",
+          "Yocto"
+        ]
+      }
+    ]
+  },
+  "techRadar": {
+    "tape": "// 06 · Tech radar 2026",
+    "title": "Ce qu'on pousse, ce qu'on évalue, ce qu'on met de côté.",
+    "subtitle": "Notre veille honnête. Mise à jour chaque trimestre.",
+    "rings": {
+      "adopt": "Adopt",
+      "trial": "Trial",
+      "assess": "Assess",
+      "hold": "Hold"
+    },
+    "items": [
+      {
+        "name": "Rust pour systems",
+        "ring": "adopt",
+        "category": "languages",
+        "rationale": "Zéro cost abstractions, memory safety, écosystème robotique mature. Nos systèmes prod en sont à leur 3e release."
+      },
+      {
+        "name": "RAG en production",
+        "ring": "adopt",
+        "category": "ai",
+        "rationale": "Modèles ouverts + retrieval hybride (BM25 + dense). Coûts divisés par dix vs all-cloud. Garde-fous évals continus."
+      },
+      {
+        "name": "ROS 2 + Isaac",
+        "ring": "adopt",
+        "category": "robotics",
+        "rationale": "Standard de fait en robotique. Isaac Sim pour simulation domain randomization. 80 AGV en prod chez un client japonais."
+      },
+      {
+        "name": "OpenTofu",
+        "ring": "adopt",
+        "category": "infra",
+        "rationale": "Fork communautaire de Terraform. Licence OSS, compatible, roadmap claire. On migre systématiquement."
+      },
+      {
+        "name": "Cache Components Next 16",
+        "ring": "trial",
+        "category": "frontend",
+        "rationale": "PPR + use cache directive. On l'utilise sur 3 projets clients, patterns encore en construction mais gains perf réels."
+      },
+      {
+        "name": "Agents multi-tools",
+        "ring": "trial",
+        "category": "ai",
+        "rationale": "Orchestration via Claude + appels d'outils. Bon pour tâches bornées, instable sur flux longs. On verrouille avec évaluations + plans de repli."
+      },
+      {
+        "name": "Edge IA (Jetson)",
+        "ring": "trial",
+        "category": "robotics",
+        "rationale": "ML sur gateways industrielles. Modèles ONNX compacts, latence < 5 s. Pas encore scalé en masse mais 2 projets convaincants."
+      },
+      {
+        "name": "WASM en dorsal",
+        "ring": "assess",
+        "category": "languages",
+        "rationale": "Écosystème jeune (wasmCloud, Wasmtime). Sandboxing intéressant pour multi-tenancy, mais observabilité pénible."
+      },
+      {
+        "name": "Vector DB managées",
+        "ring": "assess",
+        "category": "ai",
+        "rationale": "Pinecone, Weaviate Cloud, Qdrant Cloud. Pratique pour commencer. On préfère self-host Qdrant quand les coûts grimpent."
+      },
+      {
+        "name": "Frameworks low-code",
+        "ring": "hold",
+        "category": "frontend",
+        "rationale": "Lock-in vendor, debug impossible, performance moyenne. Utilisable pour prototype, pas pour produit."
+      },
+      {
+        "name": "Crypto-payment B2B",
+        "ring": "hold",
+        "category": "infra",
+        "rationale": "Pas de cas client viable chez nous. Volatilité, compliance floue, UX déplorable. On attend."
+      }
+    ],
+    "categories": {
+      "all": "Tout",
+      "ai": "AI",
+      "robotics": "Robotique",
+      "languages": "Langages",
+      "infra": "Infra",
+      "frontend": "Frontal"
+    }
+  },
+  "stories": {
+    "tape": "// 07 · Success stories",
+    "title": "Quatre engagements. Quatre résultats.",
+    "subtitle": "Anonymisés quand il le faut. Toujours mesurés.",
+    "items": [
+      {
+        "kpi": "-30%",
+        "kpiLabel": "coûts infra",
+        "sector": "Scale-up mobilité",
+        "geo": "Hubs Montréal · Paris",
+        "body": "Refonte micro-services, observabilité bout-en-bout, GreenOps appliqué. Plus de résilience, moins de facture cloud."
+      },
+      {
+        "kpi": "PWA",
+        "kpiLabel": "haute perf",
+        "sector": "Leader e-commerce sport",
+        "geo": "Pôle Paris",
+        "body": "Migration vers une PWA performante, optimisation de la conversion mobile. UX plus fluide, parcours d'achat raccourci."
+      },
+      {
+        "kpi": "ROS 2",
+        "kpiLabel": "navigation autonome",
+        "sector": "Industrie & robotique",
+        "geo": "Pôle Tokyo",
+        "body": "Navigation autonome sur flotte de robots avec ROS 2 et vision. Comportements robustes en environnement réel."
+      },
+      {
+        "kpi": "ISO 27001",
+        "kpiLabel": "compliance",
+        "sector": "FinTech SaaS",
+        "geo": "Tri-geo",
+        "body": "Audit sécurité, mise en conformité DevSecOps. Réduction du risque, livraison sécurisée sans casser la cadence."
+      }
+    ]
+  },
+  "insights": {
+    "tape": "// 09 · Carnet d'ingénierie",
+    "title": "Notre veille. Sans bullshit.",
+    "subtitle": "Retours terrain, trade-offs assumés, pratiques réutilisables.",
+    "ctaAll": "Tous les articles",
+    "items": [
+      {
+        "tag": "IA",
+        "title": "Agents IA en production : éviter le théâtre de démo.",
+        "excerpt": "Fiabilité, coûts, sécurité, évaluation. Sept patterns qu'on utilise vraiment chez nos clients.",
+        "readTime": "8 min",
+        "slug": "agents-ia-production"
+      },
+      {
+        "tag": "GreenOps",
+        "title": "Sept leviers GreenOps qui réduisent vos coûts cloud.",
+        "excerpt": "Sans sacrifier la performance. Cas concrets : -30% sur la facture, mêmes SLOs.",
+        "readTime": "6 min",
+        "slug": "greenops-7-leviers"
+      },
+      {
+        "tag": "Tech radar",
+        "title": "Pourquoi Rust et ROS 2 dominent notre tech radar 2026.",
+        "excerpt": "Critères, retours d'expérience, trade-offs. Ce qu'on adopte vraiment vs ce qu'on évalue.",
+        "readTime": "10 min",
+        "slug": "tech-radar-2026"
+      }
+    ]
+  },
+  "ctaFinal": {
+    "tape": "// 10 · On parle ?",
+    "title": "Dites-nous ce qui vous amène.",
+    "client": {
+      "title": "Vous avez un système critique à livrer.",
+      "body": "On cadre ton projet en 30 minutes avec un architecte chevronné. Sans engagement.",
+      "cta": "Parler à un architecte"
+    },
+    "engineer": {
+      "title": "Vous voulez bosser sur la tech qui compte.",
+      "body": "Tokyo, Montréal, Paris. Équipes chevronnées, projets complexes, mobilité internationale via Mobbeal.",
+      "cta": "Rejoindre l'équipe"
+    }
+  },
+  "homeFaq": {
+    "items": [
+      {
+        "q": "Qu'est-ce qu'Abbeal ?",
+        "a": "Abbeal est un pôle d'ingénierie tri-géo (Montréal · Paris · Tokyo) fondé en 2015. On livre des équipes d'ingénieurs chevronnés intégrées sur Logiciel, IA, Données et Robotique pour des systèmes critiques en production."
+      },
+      {
+        "q": "Quelles sont vos expertises ?",
+        "a": "Quatre domaines : Logiciel (plateformes web, microservices, observabilité), IA (GMA en production, agents, RAG, MLOps), Données (plateformes de données, diffusion, gouvernance) et Robotique (micrologiciel, vision, ROS, infonuagique de périphérie). Équipes chevronnées uniquement, jamais de débutants planqués."
+      },
+      {
+        "q": "Où êtes-vous basés ?",
+        "a": "Trois bureaux : Paris (54 rue Greneta, 75002), Montréal (4388 Rue Saint-Denis, H2J 2L1) et Tokyo (1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Le tri-geo permet de livrer en 24/7 follow-the-sun pour les clients qui le demandent."
+      },
+      {
+        "q": "Combien coûte un projet ?",
+        "a": "Tarifs adaptés au niveau d'expérience (Responsable, Architecte, Principal) et à la géographie. Un cadrage gratuit de 30 minutes avec un architecte chevronné permet de chiffrer précisément. Sans engagement."
+      },
+      {
+        "q": "Comment démarrer un projet ?",
+        "a": "Un appel de cadrage de 30 minutes avec un architecte chevronné. On qualifie le contexte, les contraintes, le périmètre. Si on est aligné, on propose une équipe et un échéancier sous 5 jours ouvrables. Premier livrable client en moyenne sous 3 semaines."
+      },
+      {
+        "q": "Qu'est-ce que Mobbeal ?",
+        "a": "Mobbeal est notre programme de mobilité internationale pour ingénieurs : tu gardes ton client français, on transforme ton contrat en expatriation vers Tokyo, Montréal ou Paris. Visa, portage local, juridique et logement gérés. Zéro avance de frais. 50+ talents expatriés, 100% de visas obtenus."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Montréal · Paris · Tokyo. Depuis 2015.",
+    "addresses": {
+      "title": "Bureaux",
+      "items": [
+        {
+          "city": "Montréal",
+          "address": "4388 rue Saint-Denis, Montréal QC H2J 2L1",
+          "tag": "Pôle Amériques"
+        },
+        {
+          "city": "Paris",
+          "address": "54 rue Greneta, 75002 Paris",
+          "tag": "Pôle Europe"
+        },
+        {
+          "city": "Tokyo",
+          "address": "1-23-5 Higashi-Azabu, Minato-ku, 106-0044",
+          "tag": "Pôle Asie"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "general": "contact@abbeal.com",
+      "recruitment": "recrutement@abbeal.com"
+    },
+    "follow": {
+      "title": "Suis-nous",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    },
+    "navTitle": "Site",
+    "legalTitle": "Légal",
+    "legal": {
+      "mentions": "Mentions légales",
+      "privacy": "Confidentialité",
+      "cgu": "CGU"
+    },
+    "copyright": "© 2026 Abbeal. Tous droits réservés."
+  },
+  "mobbeal": {
+    "nav": "Mobbeal",
+    "meta": {
+      "title": "Mobbeal · Garde ton job, change de vie",
+      "description": "Programme de mobilité internationale pour ingénieurs. Paris, Montréal, Tokyo. Garde ton client, change de vie. 100% visa. 50+ expatriés."
+    },
+    "hero": {
+      "tape": "// Mobbeal · Programme de mobilité internationale",
+      "h1Top": "Garde ta job.",
+      "h1Bottom": "Change de vie.",
+      "subtitle": "Transforme ton mandat actuel en passeport pour Tokyo, Montréal ou Paris. Visa, portage, administratif : on gère tout. Zéro frais d'avance.",
+      "ctaPrimary": "Parler à Vianney ou Sébastien",
+      "ctaSecondary": "Voir les témoignages",
+      "kpis": [
+        {
+          "value": "100%",
+          "label": "Dossiers visa acceptés"
+        },
+        {
+          "value": "50+",
+          "label": "Talents expatriés"
+        },
+        {
+          "value": "3",
+          "label": "Destinations"
+        },
+        {
+          "value": "0€",
+          "label": "Avance de frais"
+        }
+      ]
+    },
+    "piliers": {
+      "tape": "// Comment ça marche",
+      "title": "Trois piliers. Zéro friction.",
+      "subtitle": "Le modèle qu'on a testé sur 50+ talents. Simple, tracé, sans surprise.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Le passeport contrat",
+          "body": "Tu as un client satisfait. On transforme ton contrat français en contrat d'expatriation. Même mission, nouveau pays."
+        },
+        {
+          "number": "02",
+          "title": "Zéro avance de frais",
+          "body": "Nos frais de gestion (2-3k€/mois) sont déduits directement de la facturation client. Tu ne sors pas un euro."
+        },
+        {
+          "number": "03",
+          "title": "On gère tout",
+          "body": "Visa, portage salarial local, juridique, logement, banque. Tu te concentres sur ton client et ta nouvelle vie."
+        }
+      ]
+    },
+    "destinations": {
+      "tape": "// Trois destinations",
+      "title": "Choisis ton coin du monde.",
+      "subtitle": "Trois hubs Abbeal, trois rythmes, une même qualité d'accompagnement.",
+      "items": [
+        {
+          "flag": "🇯🇵",
+          "city": "Tokyo",
+          "punch": "Dépaysement total.",
+          "body": "Overlap matinal avec l'Europe (ta fin de journée = leur matin). Sécurité absolue. Anglais pro suffisant.",
+          "stats": [
+            {
+              "label": "Overlap EU",
+              "value": "Matin"
+            },
+            {
+              "label": "Langue",
+              "value": "EN / JP"
+            }
+          ]
+        },
+        {
+          "flag": "🇨🇦",
+          "city": "Montréal",
+          "punch": "Écosystème Nord-Américain.",
+          "body": "Chevauchement l'après-midi (ton matin = leur matin). Francophone. Intégration facile. Qualité de vie.",
+          "stats": [
+            {
+              "label": "Overlap EU",
+              "value": "Après-midi"
+            },
+            {
+              "label": "Langue",
+              "value": "FR / EN"
+            }
+          ]
+        },
+        {
+          "flag": "🇫🇷",
+          "city": "Paris",
+          "punch": "Pôle Europe premium.",
+          "body": "Pour les talents internationaux qui veulent s'installer en Europe avec leur client actuel. Même timezone que tes clients EU.",
+          "stats": [
+            {
+              "label": "Overlap EU",
+              "value": "Full-time"
+            },
+            {
+              "label": "Langue",
+              "value": "FR"
+            }
+          ]
+        }
+      ]
+    },
+    "testimonials": {
+      "tape": "// Ils l'ont fait",
+      "title": "Trois voix. Trois vies changées.",
+      "items": [
+        {
+          "name": "Grégoire",
+          "role": "Dév. dorsal",
+          "location": "Tokyo · 18 mois",
+          "quote": "Client e-commerce FR, TJM 600€. Aujourd'hui à Shibuya avec le même client. Le meilleur choix de ma carrière."
+        },
+        {
+          "name": "Kevyn",
+          "role": "Lead Dev",
+          "location": "Montréal · 12 mois",
+          "quote": "J'ai gardé mon mandat chez un grand compte français. Chevauchement l'après-midi parfait, qualité de vie incomparable."
+        },
+        {
+          "name": "Alex",
+          "role": "Consultant Data",
+          "location": "Tokyo · 6 mois",
+          "quote": "Le processus était plus simple que prévu. Mobbeal a tout géré, je me suis concentré sur mon client."
+        }
+      ]
+    },
+    "faq": {
+      "tape": "// Questions fréquentes",
+      "title": "Les 7 questions qu'on nous pose toujours.",
+      "items": [
+        {
+          "q": "Je paye des impôts dans deux pays ?",
+          "a": "Non. Tu deviens résident fiscal du pays d'accueil après 6 mois. Conventions fiscales internationales. On t'accompagne dans les démarches."
+        },
+        {
+          "q": "Et ma sécurité sociale ?",
+          "a": "Tu bascules sur le système local (Sécu FR, JNHI au Japon, RAMQ au Canada). Les droits retraite restent comptabilisés via les accords de totalisation."
+        },
+        {
+          "q": "Mon conjoint peut m'accompagner ?",
+          "a": "Oui. Visa Highly Skilled Professional (Japon) ou Permis de Travail (Canada) inclut un visa dépendant. Ton conjoint peut travailler localement."
+        },
+        {
+          "q": "Engagement minimum ?",
+          "a": "Aucun. Tu peux revenir quand tu veux. Période d'essai 3 mois avec retour facilité."
+        },
+        {
+          "q": "Et si mon client annule ?",
+          "a": "On t'accompagne pour trouver une mission locale ou faciliter ton retour. Réseau clients sur place (PayPay, Credit Saison au Japon, banques à Paris, écosystème tech Montréal)."
+        },
+        {
+          "q": "Combien ça coûte vraiment ?",
+          "a": "Fourchette 2-3k€/mois déduits de ta facturation client. Zéro frais d'avance, zéro surprise."
+        },
+        {
+          "q": "Mon niveau de langue doit être parfait ?",
+          "a": "Japon : anglais pro suffit. Canada : FR ou EN. France : FR B2. Cours de langue sur place inclus."
+        }
+      ]
+    },
+    "ctaFinal": {
+      "tape": "// Prêt ?",
+      "title": "30 minutes avec Vianney ou Sébastien.",
+      "body": "Tu nous expliques ta situation, on te dit honnêtement si ton dossier passe. Sans engagement.",
+      "cta": "Réserver un appel"
+    },
+    "trust": {
+      "tape": "// Écosystème mobilité",
+      "title": "Les institutions avec lesquelles on bosse.",
+      "subtitle": "Partenaires qui facilitent l'installation de nos talents à Tokyo, Montréal et dans l'écosystème tech français.",
+      "badges": [
+        {
+          "name": "JETRO",
+          "role": "Partenaire accompagnement Japon",
+          "url": "https://www.jetro.go.jp/en/invest/"
+        },
+        {
+          "name": "La French Tech",
+          "role": "Écosystème startup",
+          "url": "https://lafrenchtech.com/"
+        },
+        {
+          "name": "Business France",
+          "role": "Accompagnement export / implantation",
+          "url": "https://www.businessfrance.fr/"
+        },
+        {
+          "name": "Montréal International",
+          "role": "Partenaire accompagnement Québec",
+          "url": "https://www.montrealinternational.com/"
+        }
+      ]
+    }
+  },
+  "contact": {
+    "tape": "// Contact",
+    "h1": "Parler à un architecte.",
+    "subtitle": "30 minutes, sans engagement. On comprend votre contexte, on vous dit honnêtement si on peut aider.",
+    "form": {
+      "name": "Nom",
+      "email": "Courriel professionnel",
+      "company": "Entreprise",
+      "role": "Rôle",
+      "message": "Votre contexte",
+      "messagePlaceholder": "Pile actuelle, point de douleur, échéancier…",
+      "submit": "Envoyer",
+      "success": "Message reçu. On revient vers vous sous 24h.",
+      "error": "Erreur d'envoi. Réessaie ou écris à contact@abbeal.com."
+    },
+    "offices": "Trois bureaux",
+    "emailsTitle": "Ou directement",
+    "calendlyTitle": "Réservez 30 min avec un architecte",
+    "calendlySub": "Sans engagement. On comprend votre contexte, on vous dit honnêtement si on peut aider.",
+    "altTitle": "Ou écrivez-nous"
+  },
+  "careers": {
+    "tape": "// Carrières",
+    "h1": "Rejoindre l'équipe.",
+    "subtitle": "Quatre postes ouverts. Postes chevronnés seulement. Client stable, livraison propre, mobilité internationale possible via Mobbeal.",
+    "applyTo": "Postuler",
+    "applyEmail": "recrutement@abbeal.com",
+    "roles": [
+      {
+        "slug": "senior-fullstack",
+        "title": "Développeur logiciel chevronné",
+        "stack": "JS · Java · Python · .NET",
+        "location": "Montréal / Paris / Tokyo",
+        "subject": "Développeur logiciel Abbeal",
+        "body": "Concevoir et développer des fonctionnalités complexes. Frontal + dorsal. Centré produit, code propre, tests. Mentorat des débutants. Pile : React/Vue/Angular/Next + Node/Java/Python/.NET. PostgreSQL/NoSQL. Docker/CI-CD."
+      },
+      {
+        "slug": "ai-engineer",
+        "title": "Ingénieur IA",
+        "stack": "IA générative · GMA · RAG · MLOps",
+        "location": "Paris / Tokyo",
+        "subject": "Ingénieur IA Abbeal",
+        "body": "Sortir l'IA des laboratoires et l'intégrer en production. RAG, agents, MLOps, vision/TLN. Python, PyTorch, LangChain/LlamaIndex, Pinecone/Weaviate, FastAPI. Optimisation des coûts et des jetons."
+      },
+      {
+        "slug": "cloud-devops",
+        "title": "Ingénieur infonuagique & DevOps",
+        "stack": "AWS · K8s · Terraform",
+        "location": "Montréal / Paris",
+        "subject": "DevOps Abbeal",
+        "body": "Infrastructure-en-code (Terraform/Pulumi), intégration et livraison continues (GitLab/GitHub Actions), Docker + Kubernetes en production, observabilité (Prometheus/Grafana/Datadog). Culture « tu le construis, tu l'exploites »."
+      },
+      {
+        "slug": "embedded-robotics",
+        "title": "Ingénieur embarqué & robotique",
+        "stack": "C++ · Rust · ROS 2",
+        "location": "Tokyo / Paris",
+        "subject": "Embarqué/Robotique Abbeal",
+        "body": "Code bas niveau (C/C++ moderne), Linux embarqué (Yocto) ou systèmes temps réel. ROS/ROS2 (navigation, perception). Protocoles MQTT/BLE/CAN. Rigueur absolue."
+      }
+    ]
+  },
+  "insightsIndex": {
+    "tape": "// Insights",
+    "h1": "Sans bullshit.",
+    "subtitle": "Retours terrain des équipes Abbeal. Mises à jour trimestrielles."
+  },
+  "legal": {
+    "mentions": {
+      "h1": "Mentions légales",
+      "publisher": "Éditeur",
+      "publisherName": "Abbeal SAS",
+      "publisherAddress": "54 rue Greneta, 75002 Paris, France",
+      "publisherSiren": "SIREN : 790 172 928",
+      "publisherRcs": "RCS Paris : 790 172 928 (immatriculée le 24/12/2012)",
+      "publisherCapital": "Capital social : 24 000 €",
+      "publisherTva": "TVA intracommunautaire : FR10 790172928",
+      "publisherForm": "Forme juridique : SAS (Société par Actions Simplifiée)",
+      "publisherDirector": "Directeur de la publication : Sébastien Lonjon (PDG)",
+      "publisherContact": "contact@abbeal.com",
+      "hosting": "Hébergeur",
+      "hostingName": "Vercel Inc.",
+      "hostingAddress": "340 S Lemon Ave #4133, Walnut CA 91789, USA — vercel.com",
+      "ip": "Propriété intellectuelle",
+      "ipBody": "L'ensemble du site (textes, visuels, logos, code) est la propriété exclusive d'Abbeal SAS et de ses partenaires. Toute reproduction, partielle ou totale, sans autorisation écrite préalable, est interdite.",
+      "updated": "Mise à jour : 2026-04"
+    },
+    "privacy": {
+      "h1": "Politique de confidentialité",
+      "intro": "Abbeal respecte le RGPD (France), la Loi 25 (Québec) et l'APPI (Japon). Aucun témoin tiers, aucun pistage invasif. Statistiques : Plausible auto-hébergé (sans témoin, sans partage de données).",
+      "collection": "Données collectées",
+      "collectionBody": "Uniquement les données envoyées via le formulaire de contact (nom, email, entreprise, message). Stockées en EU (hébergeur Vercel EU regions).",
+      "rights": "Vos droits",
+      "rightsBody": "Accès, rectification, suppression, portabilité. Pour exercer : contact@abbeal.com. Délai de réponse : 30 jours.",
+      "updated": "Mise à jour : 2026-04"
+    },
+    "cgu": {
+      "h1": "Conditions générales d'utilisation",
+      "updated": "Mise à jour : avril 2026",
+      "intro": "Les présentes conditions régissent l'usage du site abbeal.com. En accédant au site, l'utilisateur les accepte sans réserve.",
+      "sections": [
+        {
+          "title": "Objet",
+          "body": "Le site abbeal.com présente les services d'Abbeal SAS (ingénierie logicielle, IA/données, robotique, mobilité internationale Mobbeal, recrutement technique). Il n'effectue aucune transaction en ligne."
+        },
+        {
+          "title": "Accès au site",
+          "body": [
+            "Le site est accessible gratuitement depuis tout navigateur web. Abbeal s'efforce d'assurer une disponibilité continue mais ne garantit pas l'absence d'interruption (maintenance, incident réseau, force majeure).",
+            "L'utilisateur supporte les coûts de sa propre connexion internet."
+          ]
+        },
+        {
+          "title": "Propriété intellectuelle",
+          "body": "L'ensemble des contenus (textes, images, code, design, logos, photographies, vidéos) est la propriété d'Abbeal SAS ou de ses partenaires, protégé par le droit d'auteur. Toute reproduction, représentation ou exploitation non autorisée est interdite."
+        },
+        {
+          "title": "Protection des données personnelles",
+          "body": "Pour toute question relative au traitement de données personnelles, consulter la politique de confidentialité accessible depuis le footer du site. Le délégué à la protection des données (DPO) peut être contacté à dpo@abbeal.com."
+        },
+        {
+          "title": "Témoins",
+          "body": "Le site utilise des témoins (cookies) techniques strictement nécessaires à son fonctionnement (préférence de langue via NEXT_LOCALE). Aucun témoin publicitaire ou de pistage tiers n'est déposé sans consentement explicite."
+        },
+        {
+          "title": "Liens externes",
+          "body": "Le site peut contenir des liens vers des ressources externes (LinkedIn, GitHub, Calendly, JETRO, etc.). Abbeal n'est pas responsable du contenu ni des politiques de confidentialité de ces sites tiers."
+        },
+        {
+          "title": "Responsabilité",
+          "body": "Les informations publiées sont fournies à titre indicatif. Abbeal s'efforce de garantir leur exactitude mais ne saurait être tenue responsable d'erreurs, d'omissions ou d'un usage qui en serait fait. Les cas clients sont anonymisés mais réels ; les chiffres et résultats reflètent des engagements passés et ne constituent pas une promesse de résultat identique."
+        },
+        {
+          "title": "Droit applicable",
+          "body": "Les présentes conditions sont régies par le droit français. Tout litige relève de la compétence exclusive des tribunaux de Paris, sous réserve des règles impératives de protection des consommateurs."
+        },
+        {
+          "title": "Modifications",
+          "body": "Abbeal peut modifier les présentes conditions à tout moment. La version en vigueur est celle publiée sur cette page. En continuant à utiliser le site après modification, l'utilisateur accepte les nouvelles conditions."
+        }
+      ],
+      "contact": "Contact",
+      "contactBody": "Pour toute question relative aux présentes conditions :",
+      "contactEmail": "contact@abbeal.com"
+    }
+  },
+  "moments": {
+    "tape": "// 08 · Coulisses",
+    "title": "Des gens. Pas des slides.",
+    "subtitle": "Trois pôles, une équipe. Retraites d'équipe, réunions debout, nomikai, toits-terrasses. La vraie matière d'Abbeal.",
+    "items": [
+      {
+        "slug": "offsite-chalet-montreal",
+        "caption": "Retraite d'équipe · Chalet · Montréal",
+        "sub": "Tous les pôles synchros, mars 2024.",
+        "size": "xl"
+      },
+      {
+        "slug": "nomikai-tokyo",
+        "caption": "Nomikai · Tokyo",
+        "sub": "Pôle Asie, vendredi soir.",
+        "size": "l"
+      },
+      {
+        "slug": "stand-up-paris",
+        "caption": "Bureaux · Paris",
+        "sub": "Intégration, côté FR.",
+        "size": "l"
+      },
+      {
+        "slug": "portrait-vianney",
+        "caption": "Vianney Blanquart · DEX",
+        "sub": "Pôle Amériques.",
+        "size": "s"
+      },
+      {
+        "slug": "alex-tateyama",
+        "caption": "Alpes japonaises · Tateyama",
+        "sub": "Alex, dév. chevronné. Fin de semaine entre deux requêtes de fusion.",
+        "size": "m"
+      },
+      {
+        "slug": "pokemon-tokyo",
+        "caption": "Pokémon Center · Tokyo",
+        "sub": "Le seul vrai danger du remote au Japon : 5 min à pied.",
+        "size": "s"
+      }
+    ]
+  },
+  "about": {
+    "meta": {
+      "title": "À propos · Abbeal",
+      "description": "Abbeal est un pôle d'ingénierie tri-géo fondé en 2015. Montréal, Paris, Tokyo. 100+ compagnies accompagnées, 50+ expatriés, 10+ années d'ingénierie."
+    },
+    "tape": "// À propos",
+    "h1Top": "Construit pour durer.",
+    "h1Bottom": "Depuis 2015.",
+    "intro": "Abbeal n'est pas une ESN. C'est un pôle d'ingénierie tri-géo. Trois pôles synchronisés — Montréal, Paris, Tokyo — pour livrer en continu, sans dette, aux compagnies qui prennent la techno au sérieux.",
+    "timelineTape": "// Timeline",
+    "timelineTitle": "Dix ans. Trois continents.",
+    "timeline": [
+      {
+        "year": "2015",
+        "city": "Paris",
+        "event": "Fondation d'Abbeal par Sébastien Lonjon. Premier pôle à Paris."
+      },
+      {
+        "year": "2021",
+        "city": "Tokyo",
+        "event": "Ouverture du pôle Asie. Premiers clients japonais (PayPay, SMBC, AXA Japan)."
+      },
+      {
+        "year": "2023",
+        "city": "Montréal",
+        "event": "Ouverture du pôle Amériques. Vianney Blanquart prend la direction du Canada."
+      },
+      {
+        "year": "2026",
+        "city": "Tri-geo",
+        "event": "100+ clients, 50+ talents expatriés via Mobbeal, Follow-the-Sun opérationnel 24/7."
+      }
+    ],
+    "leadersTape": "// Leadership",
+    "leadersTitle": "Deux fondateurs. Trois fuseaux.",
+    "leaders": [
+      {
+        "name": "Sébastien Lonjon",
+        "role": "PDG · Fondateur",
+        "hub": "Pôle Europe · Tokyo",
+        "photo": "sebastien.jpg",
+        "bio": "Fonde Abbeal en 2015. PDG depuis Paris, s'expatrie à Tokyo en 2024 pour piloter le pôle Asie."
+      },
+      {
+        "name": "Vianney Blanquart",
+        "role": "DEX · Directeur général",
+        "hub": "Pôle Amériques · Montréal",
+        "photo": "vianney.jpg",
+        "bio": "Cofondateur du pôle Montréal (2023). DG depuis novembre 2024. Pilote les opérations nord-américaines."
+      }
+    ],
+    "statsTape": "// Chiffres",
+    "statsTitle": "L'échelle, pas le bruit.",
+    "stats": [
+      {
+        "value": "100+",
+        "label": "Compagnies accompagnées"
+      },
+      {
+        "value": "50+",
+        "label": "Talents expatriés via Mobbeal"
+      },
+      {
+        "value": "3",
+        "label": "Hubs · Paris, Montréal, Tokyo"
+      },
+      {
+        "value": "10+",
+        "label": "Années d'ingénierie"
+      }
+    ],
+    "ctaTitle": "On parle ?",
+    "ctaSub": "30 minutes avec un architecte. Sans engagement.",
+    "ctaLabel": "Réserver un appel"
+  },
+  "casesIndex": {
+    "tape": "// Cases",
+    "h1": "Engagements concrets. Résultats mesurés.",
+    "subtitle": "Dix interventions anonymisées. Chaque case : problème, méthode, résultat chiffré."
+  },
+  "partners": {
+    "meta": {
+      "title": "Partenaires · Abbeal",
+      "description": "Écosystème tech et institutionnel autour d'Abbeal. Cloud, IA, open source, mobilité internationale."
+    },
+    "tape": "// Écosystème",
+    "h1": "Avec qui on bosse.",
+    "subtitle": "Plateformes qu'on opère en prod, institutions qu'on mobilise pour nos talents, communautés techniques qu'on soutient.",
+    "groups": [
+      {
+        "title": "Plateformes cloud & IA",
+        "subtitle": "Celles qu'on déploie en prod chez nos clients, avec certifications et retours d'expérience.",
+        "partners": [
+          {
+            "name": "Amazon Web Services",
+            "role": "Cloud principal multi-région",
+            "url": "https://aws.amazon.com/"
+          },
+          {
+            "name": "Google Cloud Platform",
+            "role": "Data & IA, Kubernetes GKE",
+            "url": "https://cloud.google.com/"
+          },
+          {
+            "name": "Microsoft Azure",
+            "role": "Secteur public & enterprise",
+            "url": "https://azure.microsoft.com/"
+          },
+          {
+            "name": "Vercel",
+            "role": "Hosting front-end & edge",
+            "url": "https://vercel.com/"
+          },
+          {
+            "name": "Anthropic",
+            "role": "LLM — Claude famille",
+            "url": "https://www.anthropic.com/"
+          },
+          {
+            "name": "OpenAI",
+            "role": "LLM — GPT famille",
+            "url": "https://openai.com/"
+          },
+          {
+            "name": "Mistral AI",
+            "role": "LLM open-weights EU",
+            "url": "https://mistral.ai/"
+          },
+          {
+            "name": "Databricks",
+            "role": "Data lakehouse & ML",
+            "url": "https://www.databricks.com/"
+          },
+          {
+            "name": "Snowflake",
+            "role": "Data warehouse",
+            "url": "https://www.snowflake.com/"
+          }
+        ]
+      },
+      {
+        "title": "Écosystème mobilité",
+        "subtitle": "Institutions qui facilitent l'installation de nos équipes à l'international.",
+        "partners": [
+          {
+            "name": "JETRO",
+            "role": "Invest Japan — relocation & setup",
+            "url": "https://www.jetro.go.jp/en/invest/"
+          },
+          {
+            "name": "Business France",
+            "role": "Export & expansion FR",
+            "url": "https://www.businessfrance.fr/"
+          },
+          {
+            "name": "La French Tech",
+            "role": "Écosystème startup FR",
+            "url": "https://lafrenchtech.com/"
+          },
+          {
+            "name": "Invest in Canada",
+            "role": "Expansion Amérique du Nord",
+            "url": "https://www.investcanada.ca/"
+          },
+          {
+            "name": "Montréal International",
+            "role": "Expansion Québec & R&D",
+            "url": "https://www.montrealinternational.com/"
+          }
+        ]
+      },
+      {
+        "title": "Communautés & open source",
+        "subtitle": "Projets et fondations qu'on utilise, qu'on contribue, qu'on supporte.",
+        "partners": [
+          {
+            "name": "Cloud Native Computing Foundation",
+            "role": "Kubernetes, Prometheus, OpenTelemetry",
+            "url": "https://www.cncf.io/"
+          },
+          {
+            "name": "Rust Foundation",
+            "role": "Langage systems & robotique",
+            "url": "https://foundation.rust-lang.org/"
+          },
+          {
+            "name": "Open Source Robotics Foundation",
+            "role": "ROS 2 — robotique",
+            "url": "https://www.openrobotics.org/"
+          },
+          {
+            "name": "Linux Foundation",
+            "role": "Infrastructures open source",
+            "url": "https://www.linuxfoundation.org/"
+          },
+          {
+            "name": "OpenTofu",
+            "role": "IaC open — fork Terraform",
+            "url": "https://opentofu.org/"
+          },
+          {
+            "name": "MACH Alliance",
+            "role": "Architectures composables",
+            "url": "https://machalliance.org/"
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Partenariat tech ou éditeur ?",
+      "btn": "Parlons-en"
+    }
+  }
+}

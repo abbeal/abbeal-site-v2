@@ -3,7 +3,7 @@
     "title": "Abbeal · ソフトウェア、AI、データ、ロボティクス",
     "description": "私たちが探していたテック。自分たちで創りました。ソフトウェア、AI、データ、ロボティクス。パリ・モントリオール・東京。シニアスクワッド、24時間365日の継続デリバリー。",
     "ogTitle": "Abbeal · 私たちが探していたテック。自分たちで創りました。",
-    "ogDescription": "トライジオ・エンジニアリング・ポッド。ソフトウェア、AI、データ、ロボティクス。シニアスクワッド。東京、モントリオール、パリ。"
+    "ogDescription": "重要な技術プロジェクトのためのシニアスクワッド。ソフトウェア、AI、データ、ロボティクス。パリ、モントリオール、東京から24時間365日提供。"
   },
   "nav": {
     "services": "サービス",
@@ -14,13 +14,15 @@
     "careers": "採用",
     "contact": "お問い合わせ",
     "ctaPrimary": "アーキテクトと相談",
-    "about": "会社概要"
+    "about": "会社概要",
+    "partners": "パートナー",
+    "glossary": "用語集"
   },
   "hero": {
     "tape": "// 01 · マニフェスト",
     "h1Top": "私たちが探していたテック。",
     "h1Bottom": "自分たちで創りました。",
-    "subtitle": "ソフトウェア、AI、データ、ロボティクス。組み込み型シニアスクワッド。パリ · モントリオール · 東京。",
+    "subtitle": "ソフトウェア、AI、データ、ロボティクス。",
     "proof": "スタックに野心的な企業向け。\nそして本当に意味のある仕事をしたいエンジニアへ。",
     "ctaPrimary": "アーキテクトと相談",
     "ctaSecondary": "Mobbeal · 国際モビリティ",
@@ -217,17 +219,20 @@
       {
         "name": "ROS 2 + Isaac",
         "ring": "adopt",
-        "category": "robotics"
+        "category": "robotics",
+        "rationale": "ロボティクスの事実上の標準。Isaac Simによるドメインランダム化。日本のクライアントでAGV80台が本番稼働。"
       },
       {
         "name": "OpenTofu",
         "ring": "adopt",
-        "category": "infra"
+        "category": "infra",
+        "rationale": "Terraformのコミュニティフォーク。OSSライセンス、互換性、明確なロードマップ。全面移行中。"
       },
       {
         "name": "Cache Components Next 16",
         "ring": "trial",
-        "category": "frontend"
+        "category": "frontend",
+        "rationale": "PPR＋use cacheディレクティブ。3つのクライアント案件で使用中、パターンはまだ構築中だが実際の性能向上あり。"
       },
       {
         "name": "Multi-tool agents",
@@ -259,7 +264,15 @@
         "ring": "hold",
         "category": "infra"
       }
-    ]
+    ],
+    "categories": {
+      "all": "すべて",
+      "ai": "AI",
+      "robotics": "ロボティクス",
+      "languages": "言語",
+      "infra": "インフラ",
+      "frontend": "フロントエンド"
+    }
   },
   "stories": {
     "tape": "// 07 · 成功事例",
@@ -339,6 +352,34 @@
       "cta": "チームに参加"
     }
   },
+  "homeFaq": {
+    "items": [
+      {
+        "q": "Abbealとは？",
+        "a": "Abbealは、2015年に設立されたトライジオエンジニアリング拠点（パリ・モントリオール・東京）です。Software、AI、Data、Roboticsの本番運用クリティカルシステムに、シニアエンジニアの組み込みスクワッドを提供します。"
+      },
+      {
+        "q": "どのような専門領域がありますか？",
+        "a": "4つのドメイン：Software（Webプラットフォーム、マイクロサービス、可観測性）、AI（本番LLM、エージェント、RAG、MLOps）、Data（データプラットフォーム、ストリーミング、ガバナンス）、Robotics（ファームウェア、ビジョン、ROS、エッジコンピューティング）。シニアスクワッドのみ、ジュニアの偽装はしません。"
+      },
+      {
+        "q": "拠点はどこですか？",
+        "a": "3拠点：パリ（54 rue Greneta, 75002）、モントリオール（4388 Rue Saint-Denis, H2J 2L1）、東京（東京都港区東麻布1-23-5、106-0044）。トライジオ体制により、ご要望に応じて24時間追従型デリバリーが可能です。"
+      },
+      {
+        "q": "プロジェクトの費用は？",
+        "a": "シニアレベル（Lead、Architect、Principal）と地理的拠点に応じた料金設定。シニアアーキテクトとの30分の無料スコーピングで正確な見積もりが可能です。コミットメントは不要です。"
+      },
+      {
+        "q": "プロジェクトはどのように始めますか？",
+        "a": "シニアアーキテクトとの30分のスコーピングコールから。コンテキスト、制約、スコープを確認します。整合すれば、5営業日以内にチームとロードマップを提案。最初のクライアント納品は通常3週間以内に出荷されます。"
+      },
+      {
+        "q": "Mobbealとは？",
+        "a": "Mobbealは、エンジニア向けの国際モビリティプログラムです：既存のクライアントを維持したまま、東京、モントリオール、パリへの海外赴任ステータスに契約を変換します。ビザ、現地給与、法務、住居をすべて対応。前払い手数料ゼロ。50名以上が海外赴任、ビザ取得率100%。"
+      }
+    ]
+  },
   "footer": {
     "tagline": "パリ · モントリオール · 東京。2015年から。",
     "addresses": {
@@ -375,7 +416,8 @@
     "legalTitle": "規約",
     "legal": {
       "mentions": "法的通知",
-      "privacy": "プライバシー"
+      "privacy": "プライバシー",
+      "cgu": "利用規約"
     },
     "copyright": "© 2026 Abbeal. All rights reserved."
   },
@@ -551,6 +593,33 @@
       "title": "VianneyまたはSébastienと30分。",
       "body": "状況を教えてください。正直にケースが通るかお伝えします。コミットなし。",
       "cta": "通話を予約"
+    },
+    "trust": {
+      "tape": "// モビリティ・エコシステム",
+      "title": "連携する機関。",
+      "subtitle": "東京、モントリオール、フランスのテックエコシステムへの人材の赴任をサポートするパートナー。",
+      "badges": [
+        {
+          "name": "JETRO",
+          "role": "日本赴任パートナー",
+          "url": "https://www.jetro.go.jp/"
+        },
+        {
+          "name": "La French Tech",
+          "role": "スタートアップエコシステム",
+          "url": "https://lafrenchtech.com/"
+        },
+        {
+          "name": "Business France",
+          "role": "輸出・進出サポート",
+          "url": "https://www.businessfrance.fr/"
+        },
+        {
+          "name": "Montréal International",
+          "role": "ケベック赴任パートナー",
+          "url": "https://www.montrealinternational.com/"
+        }
+      ]
     }
   },
   "contact": {
@@ -648,6 +717,55 @@
       "rights": "ユーザーの権利",
       "rightsBody": "アクセス、訂正、削除、ポータビリティ。行使方法：contact@abbeal.com。回答期限：30日。",
       "updated": "更新: 2026-04"
+    },
+    "cgu": {
+      "h1": "利用規約",
+      "updated": "更新：2026年4月",
+      "intro": "本規約は abbeal.com の利用を規定します。本サイトにアクセスすることにより、ユーザーは留保なく本規約に同意するものとします。",
+      "sections": [
+        {
+          "title": "目的",
+          "body": "abbeal.comはAbbeal SASのサービス（ソフトウェアエンジニアリング、AI・データ、ロボティクス、国際モビリティMobbeal、技術採用）を紹介するサイトです。オンライン取引は行いません。"
+        },
+        {
+          "title": "アクセス",
+          "body": [
+            "本サイトは任意のウェブブラウザから無料でアクセスできます。Abbealは継続的な可用性を目指しますが、中断のないアクセスを保証しません（メンテナンス、ネットワーク障害、不可抗力）。",
+            "ユーザーは自身のインターネット接続費用を負担します。"
+          ]
+        },
+        {
+          "title": "知的財産",
+          "body": "すべてのコンテンツ（テキスト、画像、コード、デザイン、ロゴ、写真、動画）は著作権法により保護されたAbbeal SASまたはそのパートナーの財産です。無許可の複製、表示、利用は禁止されています。"
+        },
+        {
+          "title": "個人データ保護",
+          "body": "個人データの処理に関するご質問は、サイトフッターからアクセスできるプライバシーポリシーをご参照ください。データ保護責任者（DPO）へのご連絡はdpo@abbeal.comまで。"
+        },
+        {
+          "title": "クッキー",
+          "body": "本サイトは厳密に必要な技術的クッキー（NEXT_LOCALEによる言語設定）のみを使用します。明示的な同意なしに広告やサードパーティトラッキングのクッキーを設置することはありません。"
+        },
+        {
+          "title": "外部リンク",
+          "body": "本サイトには外部リソース（LinkedIn、GitHub、Calendly、JETROなど）へのリンクが含まれる場合があります。これらサードパーティサイトのコンテンツやプライバシーポリシーについてAbbealは責任を負いません。"
+        },
+        {
+          "title": "責任",
+          "body": "掲載情報は参考目的で提供されます。Abbealは正確性を保証するよう努めますが、エラー、省略、またはその使用に対して責任を負いかねます。クライアントケースは匿名化されていますが実在のものであり、数字と成果は過去のエンゲージメントを反映しており、同一の結果を約束するものではありません。"
+        },
+        {
+          "title": "準拠法",
+          "body": "本規約はフランス法に準拠します。消費者保護に関する強行規定を除き、すべての紛争はパリの裁判所の専属管轄に属します。"
+        },
+        {
+          "title": "変更",
+          "body": "Abbealはいつでも本規約を変更できます。適用されるバージョンは本ページに掲載されているものです。変更後も本サイトの利用を継続することにより、ユーザーは新規約に同意するものとします。"
+        }
+      ],
+      "contact": "お問い合わせ",
+      "contactBody": "本規約に関するご質問：",
+      "contactEmail": "contact@abbeal.com"
     }
   },
   "moments": {
@@ -713,7 +831,7 @@
       {
         "year": "2021",
         "city": "東京",
-        "event": "アジア拠点開設。最初の日本クライアント（PayPay、Credit Saison、MUFG）。"
+        "event": "アジア拠点開設。最初の日本クライアント（PayPay、SMBC、AXA Japan）。"
       },
       {
         "year": "2023",
@@ -767,5 +885,143 @@
     "ctaTitle": "お話ししませんか？",
     "ctaSub": "アーキテクトと30分。コミットなし。",
     "ctaLabel": "通話を予約"
+  },
+  "casesIndex": {
+    "tape": "// ケース",
+    "h1": "実案件、計測済みの成果。",
+    "subtitle": "匿名化された10件のエンゲージメント。各ケース：課題、手法、計測済みの成果。"
+  },
+  "partners": {
+    "meta": {
+      "title": "パートナー · Abbeal",
+      "description": "Abbealのテックおよび制度的エコシステム。クラウド、AI、オープンソース、国際モビリティ。"
+    },
+    "tape": "// エコシステム",
+    "h1": "連携パートナー。",
+    "subtitle": "本番運用するプラットフォーム、人材赴任を支援する機関、支援する技術コミュニティ。",
+    "groups": [
+      {
+        "title": "クラウド・AIプラットフォーム",
+        "subtitle": "クライアントで本番運用しているもの。認証と現場経験あり。",
+        "partners": [
+          {
+            "name": "Amazon Web Services",
+            "role": "マルチリージョンのメインクラウド",
+            "url": "https://aws.amazon.com/jp/"
+          },
+          {
+            "name": "Google Cloud Platform",
+            "role": "データ・AI、GKE",
+            "url": "https://cloud.google.com/"
+          },
+          {
+            "name": "Microsoft Azure",
+            "role": "公共・エンタープライズ",
+            "url": "https://azure.microsoft.com/ja-jp/"
+          },
+          {
+            "name": "Vercel",
+            "role": "フロントエンド・エッジホスティング",
+            "url": "https://vercel.com/"
+          },
+          {
+            "name": "Anthropic",
+            "role": "LLM — Claudeファミリー",
+            "url": "https://www.anthropic.com/"
+          },
+          {
+            "name": "OpenAI",
+            "role": "LLM — GPTファミリー",
+            "url": "https://openai.com/"
+          },
+          {
+            "name": "Mistral AI",
+            "role": "EUオープン重みLLM",
+            "url": "https://mistral.ai/"
+          },
+          {
+            "name": "Databricks",
+            "role": "データlakehouse・ML",
+            "url": "https://www.databricks.com/jp"
+          },
+          {
+            "name": "Snowflake",
+            "role": "データウェアハウス",
+            "url": "https://www.snowflake.com/ja/"
+          }
+        ]
+      },
+      {
+        "title": "モビリティ・エコシステム",
+        "subtitle": "海外赴任を支援する機関。",
+        "partners": [
+          {
+            "name": "JETRO",
+            "role": "日本への誘致・赴任支援",
+            "url": "https://www.jetro.go.jp/"
+          },
+          {
+            "name": "Business France",
+            "role": "フランスの輸出・進出支援",
+            "url": "https://www.businessfrance.fr/"
+          },
+          {
+            "name": "La French Tech",
+            "role": "フランスのスタートアップエコシステム",
+            "url": "https://lafrenchtech.com/"
+          },
+          {
+            "name": "Invest in Canada",
+            "role": "北米進出支援",
+            "url": "https://www.investcanada.ca/"
+          },
+          {
+            "name": "Montréal International",
+            "role": "ケベック進出・R&D支援",
+            "url": "https://www.montrealinternational.com/"
+          }
+        ]
+      },
+      {
+        "title": "コミュニティ・オープンソース",
+        "subtitle": "使っている、貢献している、サポートしているプロジェクトと財団。",
+        "partners": [
+          {
+            "name": "Cloud Native Computing Foundation",
+            "role": "Kubernetes、Prometheus、OpenTelemetry",
+            "url": "https://www.cncf.io/"
+          },
+          {
+            "name": "Rust Foundation",
+            "role": "システム・ロボティクス言語",
+            "url": "https://foundation.rust-lang.org/"
+          },
+          {
+            "name": "Open Source Robotics Foundation",
+            "role": "ROS 2 — ロボティクス",
+            "url": "https://www.openrobotics.org/"
+          },
+          {
+            "name": "Linux Foundation",
+            "role": "オープンソースインフラ",
+            "url": "https://www.linuxfoundation.org/"
+          },
+          {
+            "name": "OpenTofu",
+            "role": "オープンIaC — Terraformフォーク",
+            "url": "https://opentofu.org/"
+          },
+          {
+            "name": "MACH Alliance",
+            "role": "コンポーザブルアーキテクチャ",
+            "url": "https://machalliance.org/"
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "title": "テックまたはベンダーパートナーシップ？",
+      "btn": "ご相談ください"
+    }
   }
 }

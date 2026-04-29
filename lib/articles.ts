@@ -5,6 +5,10 @@
  */
 
 import type { Locale } from "./i18n";
+import bodies from "./article-bodies.json";
+
+type BodiesMap = Record<string, { fr: ArticleBlock[]; en?: ArticleBlock[]; ja?: ArticleBlock[] }>;
+const ARTICLE_BODIES = bodies as BodiesMap;
 
 export type ArticleBlock =
   | { type: "h2"; content: string }
@@ -48,7 +52,11 @@ export const articles: Article[] = [
       en: "Reliability, cost, security, evaluation. Seven patterns we actually use with our clients.",
       ja: "信頼性、コスト、セキュリティ、評価。クライアントで実際に使う7つのパターン。",
     },
-    body: { fr: [] }, // Populated below by agent batch
+    body: {
+      fr: ARTICLE_BODIES["agents-ia-production"]?.fr ?? [],
+      en: ARTICLE_BODIES["agents-ia-production"]?.en,
+      ja: ARTICLE_BODIES["agents-ia-production"]?.ja,
+    },
   },
   // Article 2 — GreenOps, featured
   {
@@ -67,7 +75,11 @@ export const articles: Article[] = [
       en: "Without sacrificing performance. Concrete cases: -30% on the bill, same SLOs.",
       ja: "パフォーマンスを犠牲にせず。具体例：請求-30%、SLO同等。",
     },
-    body: { fr: [] },
+    body: {
+      fr: ARTICLE_BODIES["greenops-7-leviers"]?.fr ?? [],
+      en: ARTICLE_BODIES["greenops-7-leviers"]?.en,
+      ja: ARTICLE_BODIES["greenops-7-leviers"]?.ja,
+    },
   },
   // Article 3 — Tech radar, featured
   {
@@ -86,7 +98,11 @@ export const articles: Article[] = [
       en: "Criteria, field reports, trade-offs. What we actually adopt vs what we assess.",
       ja: "基準、現場レポート、トレードオフ。実際にAdoptするものとAssessするもの。",
     },
-    body: { fr: [] },
+    body: {
+      fr: ARTICLE_BODIES["tech-radar-2026"]?.fr ?? [],
+      en: ARTICLE_BODIES["tech-radar-2026"]?.en,
+      ja: ARTICLE_BODIES["tech-radar-2026"]?.ja,
+    },
   },
   // Article 4 — Follow-the-Sun
   {
@@ -105,7 +121,11 @@ export const articles: Article[] = [
       en: "Three time zones, three teams, a roadmap that moves while you sleep. How we actually operate it.",
       ja: "3つのタイムゾーン、3つのチーム、あなたが寝ている間に進むロードマップ。私たちの実際の運用。",
     },
-    body: { fr: [] },
+    body: {
+      fr: ARTICLE_BODIES["follow-the-sun-sans-bruler-equipes"]?.fr ?? [],
+      en: ARTICLE_BODIES["follow-the-sun-sans-bruler-equipes"]?.en,
+      ja: ARTICLE_BODIES["follow-the-sun-sans-bruler-equipes"]?.ja,
+    },
   },
   // Article 5 — Legacy modernization
   {
@@ -124,7 +144,11 @@ export const articles: Article[] = [
       en: "Archaeologist, Architect, Cleaner. Our multi-agent method to migrate 20 years of COBOL in six months.",
       ja: "考古学者、建築家、清掃人。20年分のCOBOLを6ヶ月で移行するマルチエージェント手法。",
     },
-    body: { fr: [] },
+    body: {
+      fr: ARTICLE_BODIES["legacy-modernization-multi-agents"]?.fr ?? [],
+      en: ARTICLE_BODIES["legacy-modernization-multi-agents"]?.en,
+      ja: ARTICLE_BODIES["legacy-modernization-multi-agents"]?.ja,
+    },
   },
   // Article 6 — RAG case study
   {
@@ -143,7 +167,11 @@ export const articles: Article[] = [
       en: "A European bank, a RAG pipeline, a hybrid strategy. How we cut inference costs by ten.",
       ja: "欧州銀行、RAGパイプライン、ハイブリッド戦略。推論コストを10分の1にした方法。",
     },
-    body: { fr: [] },
+    body: {
+      fr: ARTICLE_BODIES["rag-production-10k-a-900"]?.fr ?? [],
+      en: ARTICLE_BODIES["rag-production-10k-a-900"]?.en,
+      ja: ARTICLE_BODIES["rag-production-10k-a-900"]?.ja,
+    },
   },
   // Article 7 — COBOL retirement
   {
@@ -162,7 +190,11 @@ export const articles: Article[] = [
       en: "2025, 85% of large Japanese firms running critical systems with nobody who understands them. Our offer.",
       ja: "2025年、大手日本企業の85%が誰も理解できない基幹システムで動いている。私たちの提案。",
     },
-    body: { fr: [] },
+    body: {
+      fr: ARTICLE_BODIES["cobol-pas-mort-developpeurs-oui"]?.fr ?? [],
+      en: ARTICLE_BODIES["cobol-pas-mort-developpeurs-oui"]?.en,
+      ja: ARTICLE_BODIES["cobol-pas-mort-developpeurs-oui"]?.ja,
+    },
   },
   // Article 8 — Sovereignty FR/JP
   {
@@ -181,7 +213,11 @@ export const articles: Article[] = [
       en: "French obsession with sovereignty vs Japanese pragmatism. Hybrid architectures that pass both audits.",
       ja: "フランスの主権へのこだわり vs 日本のプラグマティズム。両方の監査を通すハイブリッドアーキテクチャ。",
     },
-    body: { fr: [] },
+    body: {
+      fr: ARTICLE_BODIES["souverainete-secnumcloud-vs-appi"]?.fr ?? [],
+      en: ARTICLE_BODIES["souverainete-secnumcloud-vs-appi"]?.en,
+      ja: ARTICLE_BODIES["souverainete-secnumcloud-vs-appi"]?.ja,
+    },
   },
   // Article 9 — Talent acquisition
   {
@@ -200,7 +236,11 @@ export const articles: Article[] = [
       en: "Engineer-led sourcing, short technical validation, closing in 48 hours. How we avoid CV-puzzles.",
       ja: "エンジニアによるソーシング、短い技術検証、48時間でクロージング。CVパズルを避ける方法。",
     },
-    body: { fr: [] },
+    body: {
+      fr: ARTICLE_BODIES["recruter-top-1-tech-process-48h"]?.fr ?? [],
+      en: ARTICLE_BODIES["recruter-top-1-tech-process-48h"]?.en,
+      ja: ARTICLE_BODIES["recruter-top-1-tech-process-48h"]?.ja,
+    },
   },
   // Article 10 — Mobbeal playbook
   {
@@ -219,7 +259,11 @@ export const articles: Article[] = [
       en: "50+ engineers relocated in five years. The model we refined, the pitfalls, the wins. And who we're looking for.",
       ja: "5年で50人以上が海外赴任。私たちが洗練したモデル、落とし穴、成功。そして探している人材。",
     },
-    body: { fr: [] },
+    body: {
+      fr: ARTICLE_BODIES["mobbeal-playbook-garde-ton-job"]?.fr ?? [],
+      en: ARTICLE_BODIES["mobbeal-playbook-garde-ton-job"]?.en,
+      ja: ARTICLE_BODIES["mobbeal-playbook-garde-ton-job"]?.ja,
+    },
   },
 ];
 

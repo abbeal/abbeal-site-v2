@@ -171,22 +171,25 @@ type InsightsDict = {
     title: string;
     subtitle: string;
     ctaAll: string;
-    items: {
-      tag: string;
-      title: string;
-      excerpt: string;
-      readTime: string;
-      slug: string;
-    }[];
   };
+};
+
+export type InsightItem = {
+  tag: string;
+  title: string;
+  excerpt: string;
+  readTime: string;
+  slug: string;
 };
 
 export function Insights({
   locale,
   dict,
+  items,
 }: {
   locale: Locale;
   dict: Record<string, unknown>;
+  items: InsightItem[];
 }) {
   const d = dict as unknown as InsightsDict;
   const p = `/${locale}`;
@@ -214,7 +217,7 @@ export function Insights({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {d.insights.items.map((item, i) => (
+          {items.map((item, i) => (
             <motion.article
               key={item.slug}
               initial={{ opacity: 0, y: 18 }}

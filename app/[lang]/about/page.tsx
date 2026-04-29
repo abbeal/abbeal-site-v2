@@ -4,8 +4,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary } from "../dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
+import { pageAlternates } from "@/lib/seo";
+import { breadcrumbs } from "@/lib/breadcrumbs";
 
 type Dict = {
+  nav: { about: string };
   about: {
     meta: { title: string; description: string };
     tape: string;
@@ -42,17 +45,55 @@ export async function generateMetadata({
   return {
     title: dict.about.meta.title,
     description: dict.about.meta.description,
+    alternates: pageAlternates(lang as Locale, "/about"),
   };
 }
 
 export default async function AboutPage({ params }: PageProps<"/[lang]/about">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
-  const dict = (await getDictionary(lang as Locale)) as Dict;
+  const locale = lang as Locale;
+  const dict = (await getDictionary(locale)) as Dict;
   const d = dict.about;
+
+  // schema.org Person — rich Knowledge Panel for Seb + Vianney
+  const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
+  const sameAsByName: Record<string, string[]> = {
+    "Sébastien Lonjon": [
+      "https://www.linkedin.com/in/sebastienlonjon/",
+    ],
+    "Vianney Blanquart": [
+      "https://www.linkedin.com/in/vianneyblanquart/",
+    ],
+  };
+  const personsLd = d.leaders.map((l) => ({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: l.name,
+    jobTitle: l.role,
+    worksFor: { "@type": "Organization", name: "Abbeal", url: SITE },
+    workLocation: l.hub,
+    description: l.bio,
+    image: `${SITE}/team/${l.photo}`,
+    url: `${SITE}/${locale}/about`,
+    sameAs: sameAsByName[l.name] ?? [],
+  }));
+
+  const crumbs = breadcrumbs(locale, [[dict.nav.about, "/about"]]);
 
   return (
     <>
+      {personsLd.map((p, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(p) }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
+      />
       {/* Hero */}
       <section className="mx-auto max-w-[1400px] px-6 md:px-10 py-20 md:py-28">
         <span className="tape-label">{d.tape}</span>

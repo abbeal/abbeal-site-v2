@@ -3,12 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary } from "../dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
+import { pageAlternates } from "@/lib/seo";
+import { breadcrumbs } from "@/lib/breadcrumbs";
+import { getAllArticles, pick } from "@/lib/articles";
 
 type Dict = {
+  nav: { insights: string };
   insightsIndex: { tape: string; h1: string; subtitle: string };
-  insights: {
-    items: { tag: string; title: string; excerpt: string; readTime: string; slug: string }[];
-  };
 };
 
 export async function generateMetadata({
@@ -17,16 +18,61 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const dict = (await getDictionary(lang as Locale)) as Dict;
-  return { title: `${dict.insightsIndex.h1} · Abbeal Insights`, description: dict.insightsIndex.subtitle };
+  return {
+    title: `${dict.insightsIndex.h1} · Abbeal Insights`,
+    description: dict.insightsIndex.subtitle,
+    alternates: pageAlternates(lang as Locale, "/insights"),
+  };
 }
 
-export default async function InsightsIndexPage({ params }: PageProps<"/[lang]/insights">) {
+export default async function InsightsIndexPage({
+  params,
+}: PageProps<"/[lang]/insights">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
-  const dict = (await getDictionary(lang as Locale)) as Dict;
+  const locale = lang as Locale;
+  const dict = (await getDictionary(locale)) as Dict;
+
+  const articles = getAllArticles().map((a) => ({
+    slug: a.slug,
+    tag: a.tag,
+    readTime: a.readTime,
+    publishedAt: a.publishedAt,
+    title: pick(a.title, locale),
+    excerpt: pick(a.excerpt, locale),
+  }));
+
+  const dateLocale =
+    locale === "fr" ? "fr-FR" : locale === "ja" ? "ja-JP" : "en-GB";
+
+  // schema.org ItemList for the articles index
+  const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
+  const listLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: dict.insightsIndex.h1,
+    description: dict.insightsIndex.subtitle,
+    numberOfItems: articles.length,
+    itemListElement: articles.map((a, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `${SITE}/${locale}/insights/${a.slug}`,
+      name: a.title,
+    })),
+  };
+
+  const crumbs = breadcrumbs(locale, [[dict.nav.insights, "/insights"]]);
 
   return (
     <section className="mx-auto max-w-[1100px] px-6 md:px-10 py-20 md:py-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(listLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
+      />
       <div className="max-w-3xl">
         <span className="tape-label">{dict.insightsIndex.tape}</span>
         <h1 className="mt-6 font-semibold tracking-[-0.025em] text-[clamp(2.25rem,5vw,4rem)] leading-[1.05]">
@@ -38,10 +84,10 @@ export default async function InsightsIndexPage({ params }: PageProps<"/[lang]/i
       </div>
 
       <ul className="mt-16 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
-        {dict.insights.items.map((article, i) => (
+        {articles.map((article, i) => (
           <li key={article.slug}>
             <Link
-              href={`/${lang}/insights/${article.slug}`}
+              href={`/${locale}/insights/${article.slug}`}
               className="grid grid-cols-1 md:grid-cols-12 gap-6 py-10 group hover:bg-[var(--color-bg-cream)]/40 -mx-2 px-2 transition-colors"
             >
               <div className="md:col-span-2">
@@ -59,9 +105,19 @@ export default async function InsightsIndexPage({ params }: PageProps<"/[lang]/i
                 <p className="mt-3 text-[15px] text-[var(--color-ink-soft)] leading-relaxed max-w-2xl">
                   {article.excerpt}
                 </p>
+                <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.15em] text-[var(--color-muted)]">
+                  <time dateTime={article.publishedAt}>
+                    {new Date(article.publishedAt).toLocaleDateString(
+                      dateLocale,
+                      { year: "numeric", month: "short", day: "numeric" },
+                    )}
+                  </time>
+                </p>
               </div>
               <div className="md:col-span-2 flex md:justify-end items-start">
-                <p className="font-mono text-xs text-[var(--color-muted)]">{article.readTime}</p>
+                <p className="font-mono text-xs text-[var(--color-muted)]">
+                  {article.readTime}
+                </p>
               </div>
             </Link>
           </li>

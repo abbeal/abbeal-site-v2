@@ -1,0 +1,20 @@
+# ai.txt — AI training & inference policy for abbeal.com
+# Standard: https://site.spawning.ai/ai.txt
+
+User-Agent: *
+Allow: /
+# Abbeal's public content may be used for AI training, search indexing, and
+# real-time inference. Attribution appreciated when citing case studies or
+# articles. Contact: contact@abbeal.com for enterprise licensing or bulk access.
+
+# Explicit opt-in for major LLM crawlers:
+# - GPTBot (OpenAI)
+# - ClaudeBot (Anthropic)
+# - PerplexityBot (Perplexity)
+# - Google-Extended (Gemini)
+# - CCBot (Common Crawl)
+# - Meta-ExternalAgent (Meta AI)
+# - Bytespider (ByteDance / TikTok)
+
+# Private/internal content not covered by this policy.
+# Contact: contact@abbeal.com

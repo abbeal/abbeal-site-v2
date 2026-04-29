@@ -11,16 +11,16 @@ type KpiDict = {
   };
 };
 
-/* 22 client logos — mixed by geo for visual diversity (FR/CA/JP/global) */
+/* Client logos — mixed by geo for visual diversity (FR/CA/JP/global).
+   Only brands with explicit authorization are listed. */
 const LOGOS = [
   { slug: "bnp", name: "BNP Paribas" },
   { slug: "bnc", name: "Banque Nationale du Canada" },
   { slug: "smbc", name: "SMBC" },
   { slug: "kering", name: "Kering" },
-  { slug: "rakuten", name: "Rakuten" },
+  { slug: "axa", name: "AXA" },
   { slug: "desjardins", name: "Desjardins" },
   { slug: "societe-generale", name: "Société Générale" },
-  { slug: "mufg", name: "MUFG" },
   { slug: "hydro-quebec", name: "Hydro-Québec" },
   { slug: "paypay", name: "PayPay" },
   { slug: "edf", name: "EDF" },

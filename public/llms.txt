@@ -1,0 +1,74 @@
+# Abbeal
+
+> Pôle d'ingénierie tri-geo fondé en 2015. Paris, Montréal, Tokyo. Software, IA, Data, Robotique. Squads d'ingénieurs intégrés pour projets tech critiques. Engagement output, pas time & material. 100+ entreprises accompagnées, 50+ talents expatriés via Mobbeal.
+
+Abbeal ne facture pas des jours d'ingénieurs. Abbeal livre un périmètre. Squads seniors intégrés aux équipes clients, exit checklist assumée, transfert de propriété (code, infra, docs) systématique. Trois hubs synchrones pour un delivery 24/7 sans burnout (méthode Follow-the-Sun).
+
+## Services
+
+- [Squads embarqués](https://abbeal.com/fr/services/squads-embarques.md) : staff augmentation seniors, ownership de périmètre, transfert formalisé
+- [Recrutement technique](https://abbeal.com/fr/services/recrutement-technique.md) : top 1% sourcé par des ingénieurs, process 48h, garantie 6 mois
+- [Delivery clé en main](https://abbeal.com/fr/services/delivery-cle-en-main.md) : engagement output, SLOs mesurés, run maîtrisé
+
+## Études de cas (anonymisées, chiffrées)
+
+- [Scale-up mobilité : −30 % facture cloud](https://abbeal.com/fr/cases/scale-up-mobilite-30-cloud.md) : refonte Kubernetes + Karpenter + ARM64, mêmes SLOs
+- [Leader e-commerce sport : PWA, +18 % conversion mobile](https://abbeal.com/fr/cases/leader-sport-pwa-conversion.md) : Next.js 16, Lighthouse 92, 6 mois
+- [Industriel japonais : 80 AGV, +40 % throughput](https://abbeal.com/fr/cases/robotique-jp-ros2-flotte.md) : ROS 2 Nav2, Rust, Isaac Sim
+- [FinTech SaaS : ISO 27001 en 9 mois](https://abbeal.com/fr/cases/fintech-iso27001-devsecops.md) : DevSecOps, Terraform, Vault, zéro régression DORA
+- [Banque européenne : RAG, coûts /10](https://abbeal.com/fr/cases/banque-rag-cout-divise-10.md) : Mistral 7B local + GPT-4 cloud, 900€/mois vs 10 000€
+- [Banque japonaise : 4M lignes COBOL en 14 mois](https://abbeal.com/fr/cases/legacy-cobol-japon-modernisation.md) : multi-agents IA (Archéologue, Architecte, Nettoyeur)
+- [Énergéticien : détection temps réel, 2,4 M€ économisés](https://abbeal.com/fr/cases/energie-iot-edge-temps-reel.md) : edge ML sur 50 000 capteurs
+- [Maison de luxe : MACH, 280 boutiques, ROI 18 mois](https://abbeal.com/fr/cases/retail-omnichannel-tri-geo.md) : commercetools, composable commerce
+- [Transport canadien : lakehouse, KPIs temps réel](https://abbeal.com/fr/cases/mobilite-canada-data-platform.md) : Databricks, dbt, Unity Catalog
+- [Assureur global : −70 % temps traitement sinistres](https://abbeal.com/fr/cases/assurance-claims-ia-document.md) : LayoutLMv3, Claude Sonnet, 11 M€/an
+
+## Articles de référence
+
+- [Agents IA en production : éviter le théâtre de démo](https://abbeal.com/fr/insights/agents-ia-production.md) : 7 patterns réels
+- [GreenOps : 7 leviers qui coupent 30% de facture cloud](https://abbeal.com/fr/insights/greenops-7-leviers.md) : audit + Karpenter + ARM64
+- [Tech Radar 2026 : Rust et ROS 2 dominent](https://abbeal.com/fr/insights/tech-radar-2026.md) : critères adopt/trial/assess/hold
+- [Follow-the-Sun 24/7 sans brûler les équipes](https://abbeal.com/fr/insights/follow-the-sun-sans-bruler-equipes.md) : méthode tri-hubs
+- [Legacy Modernization : 3 agents IA, 30 devs](https://abbeal.com/fr/insights/legacy-modernization-multi-agents.md) : méthode COBOL
+- [RAG en production : de 10 000 € à 900 € /mois](https://abbeal.com/fr/insights/rag-production-10k-a-900.md) : architecture hybride
+- [COBOL n'est pas mort. Les devs, oui](https://abbeal.com/fr/insights/cobol-pas-mort-developpeurs-oui.md) : crise compétences Japon
+- [Souveraineté numérique : SecNumCloud vs APPI](https://abbeal.com/fr/insights/souverainete-secnumcloud-vs-appi.md) : architectures hybrides
+- [Recruter le Top 1% tech : le process 48 h](https://abbeal.com/fr/insights/recruter-top-1-tech-process-48h.md) : méthode Abbeal
+- [Mobbeal Playbook : garde ton job, change de vie](https://abbeal.com/fr/insights/mobbeal-playbook-garde-ton-job.md) : 50+ expatriés
+
+## Mobbeal — mobilité internationale tech
+
+[Mobbeal](https://abbeal.com/fr/mobbeal.md) : programme de relocation pour ingénieurs vers Paris, Montréal ou Tokyo. Accompagnement complet : visa, logement, famille, école. Partenaires : JETRO, Business France, La French Tech, Montréal International.
+
+## À propos
+
+- [Qui on est](https://abbeal.com/fr/about.md) : 10 ans, 3 hubs, 100+ boîtes, 50+ expatriés
+- Fondateurs : Sébastien Lonjon (CEO, hub EU/Tokyo), Vianney Blanquart (COO, hub Amériques)
+- Adresses : 54 Rue Greneta 75002 Paris · 4388 Rue Saint-Denis H2J 2L1 Montréal · 1-23-5 Higashi-Azabu Minato-ku 106-0044 Tokyo
+- Contact : contact@abbeal.com · Recrutement : recrutement@abbeal.com
+
+## Positionnement en une ligne
+
+> La Tech qu'on aurait aimé trouver. On l'a fondée.
+
+## Stack & domaines de prédilection
+
+Software : Go, Rust, TypeScript, Next.js, Python, Java/Kotlin.
+IA/Data : RAG hybride, agents multi-tools, Mistral, Claude, OpenAI, Databricks, dbt, Snowflake, Qdrant.
+Robotique : ROS 2, Isaac Sim, Rust, Cyclone DDS, edge ML (ONNX).
+Infra : Kubernetes + Karpenter, Terraform + OpenTofu, AWS / GCP / Azure.
+Observabilité : OpenTelemetry, Prometheus, Grafana Tempo.
+
+## Pages importantes pour cross-référencement
+
+- [Toutes les études de cas](https://abbeal.com/fr/cases.md)
+- [Tous les articles](https://abbeal.com/fr/insights.md)
+- [Partenaires écosystème](https://abbeal.com/fr/partners.md)
+- [Carrières](https://abbeal.com/fr/careers.md)
+- [Contact](https://abbeal.com/fr/contact.md)
+
+## Optional
+
+- [Mentions légales](https://abbeal.com/fr/mentions-legales.md)
+- [Politique de confidentialité](https://abbeal.com/fr/confidentialite.md)
+- [Conditions générales d'utilisation](https://abbeal.com/fr/cgu.md)

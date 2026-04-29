@@ -1,0 +1,21 @@
+# Env files — always use Vercel env handling for runtime secrets
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# Local dev cache / logs
+.next/
+node_modules/
+*.log
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Local Claude skills/hooks
+.claude/
+
+# Keep .env.example for onboarding (not ignored)

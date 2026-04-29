@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "../dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
+import { pageAlternates } from "@/lib/seo";
 
 type Dict = {
   careers: {
@@ -27,7 +28,13 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const dict = (await getDictionary(lang as Locale)) as Dict;
-  return { title: `${dict.careers.h1} · Abbeal`, description: dict.careers.subtitle };
+  // /carrieres is a FR alias for /careers — both render the same content.
+  // Cross-canonical to /careers to avoid duplicate-content penalty.
+  return {
+    title: `${dict.careers.h1} · Abbeal`,
+    description: dict.careers.subtitle,
+    alternates: pageAlternates(lang as Locale, "/careers"),
+  };
 }
 
 export default async function CareersPage({ params }: PageProps<"/[lang]/carrieres">) {
