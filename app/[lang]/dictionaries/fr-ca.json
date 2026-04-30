@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "Abbeal · Logiciel, IA, Données, Robotique",
-    "description": "La techno qu'on aurait aimé trouver. On l'a fondée. Logiciel, IA, Données, Robotique. Montréal · Paris · Tokyo. Équipes chevronnées, livraison continue 24/7.",
+    "title": "Abbeal · Pôle d'ingénierie à Montréal · IA, données, robotique",
+    "description": "Pôle d'ingénierie tri-géo à Montréal, Paris et Tokyo. Équipes chevronnées pour projets techno critiques : logiciel, IA, données, robotique. Conforme à la Loi 25.",
     "ogTitle": "Abbeal · La techno qu'on aurait aimé trouver. On l'a fondée.",
-    "ogDescription": "Équipes chevronnées pour vos projets techno critiques. Logiciel, IA, Données, Robotique. Livré 24/7 depuis Montréal, Paris, Tokyo."
+    "ogDescription": "Équipes chevronnées à Montréal, Paris et Tokyo. Logiciel, IA, données, robotique. Livraison 24/7. Conforme à la Loi 25."
   },
   "nav": {
     "services": "Services",
@@ -433,8 +433,8 @@
   "mobbeal": {
     "nav": "Mobbeal",
     "meta": {
-      "title": "Mobbeal · Garde ton job, change de vie",
-      "description": "Programme de mobilité internationale pour ingénieurs. Paris, Montréal, Tokyo. Garde ton client, change de vie. 100% visa. 50+ expatriés."
+      "title": "Mobbeal · Carrière à Tokyo ou Paris pour ingénieurs québécois",
+      "description": "Programme de mobilité internationale pour ingénieurs basés à Montréal. Tu gardes ton mandat, tu changes de vie. Visa 100%, portage, administratif géré. 50+ expatriés."
     },
     "hero": {
       "tape": "// Mobbeal · Programme de mobilité internationale",
@@ -822,8 +822,8 @@
   },
   "about": {
     "meta": {
-      "title": "À propos · Abbeal",
-      "description": "Abbeal est un pôle d'ingénierie tri-géo fondé en 2015. Montréal, Paris, Tokyo. 100+ compagnies accompagnées, 50+ expatriés, 10+ années d'ingénierie."
+      "title": "À propos · Pôle Amériques d'Abbeal à Montréal depuis 2023",
+      "description": "Bureau Montréal ouvert en 2023 sur la rue Saint-Denis. Pôle Amériques d'Abbeal, fondé à Paris en 2015. Présence à Tokyo, Montréal, Paris. 100+ compagnies accompagnées."
     },
     "tape": "// À propos",
     "h1Top": "Construit pour durer.",

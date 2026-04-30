@@ -9,11 +9,11 @@ const COOKIE_MAX_AGE = 60 * 60 * 24 * 365; // 1 year
 /**
  * ISO 3166-1 alpha-2 country codes → site locale.
  * Only countries with an unambiguous FR or JA preference.
- * Canada is handled separately (Québec → fr, rest → en).
+ * Canada is handled separately (Québec / New Brunswick → fr-ca, rest → en).
  * Everything else falls through to "en" (international default).
  */
 const COUNTRY_TO_LOCALE: Record<string, Locale> = {
-  // Francophone countries
+  // Francophone countries (Europe)
   FR: "fr",
   BE: "fr",
   CH: "fr",
@@ -22,6 +22,18 @@ const COUNTRY_TO_LOCALE: Record<string, Locale> = {
   // Japanese
   JP: "ja",
 };
+
+/**
+ * Canadian provinces where French is the majority language or has
+ * significant minority status (NB is officially bilingual).
+ * Visitors from these provinces with no Accept-Language signal land on
+ * /fr-ca (OQLF-localized version: infonuagique, courriel, "ta job"…).
+ *
+ * Other CA provinces (BC, AB, SK, ON, MB, NS, PE, YT, NT, NU) → /en.
+ * Franco-Ontarians and other minority francophones with Accept-Language: fr-CA
+ * are still matched on /fr-ca via the Accept-Language step (priority 2).
+ */
+const CA_FRANCOPHONE_REGIONS = new Set(["QC", "NB"]);
 
 /**
  * Resolve the user's preferred locale.
@@ -79,12 +91,14 @@ function resolveLocale(request: NextRequest): Locale {
   // 3. Geo IP — Vercel injects these headers at the edge
   const country = request.headers.get("x-vercel-ip-country")?.toUpperCase();
 
-  // Canada: Quebec → fr, rest → en (can't decide from country alone)
+  // Canada: francophone provinces (QC, NB) → fr-ca, rest → en.
+  // Abbeal's Pôle Amériques is in Montréal, ~50% of revenue is QC-based,
+  // so Canadian francophones get the OQLF-localized variant by default.
   if (country === "CA") {
     const region = request.headers
       .get("x-vercel-ip-country-region")
       ?.toUpperCase();
-    return region === "QC" ? "fr" : "en";
+    return region && CA_FRANCOPHONE_REGIONS.has(region) ? "fr-ca" : "en";
   }
 
   if (country && COUNTRY_TO_LOCALE[country]) {

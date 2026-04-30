@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Abbeal · Software, AI, Data, Robotics",
-    "description": "The tech we wished existed. So we built it. Software, AI, Data, Robotics. Paris · Montréal · Tokyo. Senior squads, continuous 24/7 delivery.",
+    "title": "Abbeal · Senior engineering teams across Paris, Montréal, Tokyo",
+    "description": "Senior software, AI, data and robotics engineering teams embedded in your stack. Tri-geo Follow-the-Sun delivery from Paris, Montréal and Tokyo. Not an IT staffing firm — a senior engineering pod.",
     "ogTitle": "Abbeal · The tech we wished existed. So we built it.",
     "ogDescription": "Senior squads for your critical tech projects. Software, AI, Data, Robotics. Delivered 24/7 from Paris, Montréal, Tokyo."
   },
@@ -432,8 +432,8 @@
   "mobbeal": {
     "nav": "Mobbeal",
     "meta": {
-      "title": "Mobbeal · Keep your job, change your life",
-      "description": "International mobility program for engineers. Paris, Montréal, Tokyo. Keep your client, change your life. 100% visa success. 50+ relocated."
+      "title": "Tokyo, Montréal & Paris jobs for senior engineers · Visa sponsored · Mobbeal",
+      "description": "Move to Tokyo, Montréal or Paris while keeping your existing client. Visa sponsored, 100% visa success rate, 50+ engineers relocated. Mobbeal handles visa, payroll, admin — zero upfront cost."
     },
     "hero": {
       "tape": "// Mobbeal · International mobility program",
@@ -821,8 +821,8 @@
   },
   "about": {
     "meta": {
-      "title": "About · Abbeal",
-      "description": "Abbeal is a tri-geo engineering pod founded in 2015. Paris, Montréal, Tokyo. 100+ companies shipped with, 50+ relocated engineers, 10+ years of engineering."
+      "title": "About · Founded in Paris 2015, expanding through Tokyo & Montréal",
+      "description": "Tri-geo engineering pod founded in Paris in 2015, expanded to Tokyo and Montréal. Featured in JETRO case study. 100+ companies shipped with, 50+ engineers relocated through Mobbeal, 10+ years of engineering."
     },
     "tape": "// About",
     "h1Top": "Built to last.",

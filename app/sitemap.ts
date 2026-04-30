@@ -38,6 +38,23 @@ function altLanguages(path: string): Record<string, string> {
   );
 }
 
+/**
+ * Per-locale priority weight reflecting business focus.
+ * Revenue split (April 2026): QC 50% · JP 35% · FR 15%.
+ * Boost fr-ca and ja in the sitemap to signal indexation priority to Google.
+ */
+const LOCALE_PRIORITY_WEIGHT: Record<string, number> = {
+  "fr-ca": 0.2,
+  ja: 0.15,
+  en: 0.05,
+  fr: 0.0,
+};
+
+function priorityFor(route: string, locale: string): number {
+  const base = route === "" ? 0.8 : route === "/mobbeal" ? 0.7 : 0.5;
+  return Math.min(1.0, base + (LOCALE_PRIORITY_WEIGHT[locale] ?? 0));
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
@@ -48,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${SITE_URL}/${locale}${route}`,
         lastModified: now,
         changeFrequency: route === "" ? "weekly" : "monthly",
-        priority: route === "" ? 1.0 : route === "/mobbeal" ? 0.9 : 0.7,
+        priority: priorityFor(route, locale),
         alternates: { languages: altLanguages(route) },
       });
     }
