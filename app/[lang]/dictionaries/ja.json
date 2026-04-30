@@ -209,12 +209,14 @@
       {
         "name": "Rust for systems",
         "ring": "adopt",
-        "category": "languages"
+        "category": "languages",
+        "rationale": "ゼロコスト抽象化、メモリ安全性、成熟したロボティクスエコシステム。本番システムは3回目のリリースを迎えている。"
       },
       {
         "name": "RAG in production",
         "ring": "adopt",
-        "category": "ai"
+        "category": "ai",
+        "rationale": "オープンモデル＋ハイブリッドリトリーバル（BM25＋dense）。全クラウド比でコスト10分の1。継続的な評価ガードレール。"
       },
       {
         "name": "ROS 2 + Isaac",
@@ -237,32 +239,38 @@
       {
         "name": "Multi-tool agents",
         "ring": "trial",
-        "category": "ai"
+        "category": "ai",
+        "rationale": "Claude＋ツール呼び出しによるオーケストレーション。限定的なタスクには有効、長いワークフローは不安定。評価＋フォールバックで固定。"
       },
       {
         "name": "Edge AI (Jetson)",
         "ring": "trial",
-        "category": "robotics"
+        "category": "robotics",
+        "rationale": "産業ゲートウェイ上でのML。コンパクトなONNXモデル、レイテンシ5秒未満。まだ大規模展開はないが2つの有望プロジェクトあり。"
       },
       {
         "name": "WASM on backend",
         "ring": "assess",
-        "category": "languages"
+        "category": "languages",
+        "rationale": "エコシステムは若い（wasmCloud、Wasmtime）。マルチテナントのサンドボックスとして興味深いが、可観測性が課題。"
       },
       {
         "name": "Managed vector DBs",
         "ring": "assess",
-        "category": "ai"
+        "category": "ai",
+        "rationale": "Pinecone、Weaviate Cloud、Qdrant Cloud。始めるには便利。コストが上がったらQdrantをセルフホストする方が良い。"
       },
       {
         "name": "Low-code frameworks",
         "ring": "hold",
-        "category": "frontend"
+        "category": "frontend",
+        "rationale": "ベンダーロックイン、デバッグ不能、パフォーマンス平均的。プロトタイプには使えるが製品には不向き。"
       },
       {
         "name": "B2B crypto-payment",
         "ring": "hold",
-        "category": "infra"
+        "category": "infra",
+        "rationale": "当社での実用的なクライアントケースなし。ボラティリティ、不明瞭なコンプライアンス、劣悪なUX。様子見。"
       }
     ],
     "categories": {

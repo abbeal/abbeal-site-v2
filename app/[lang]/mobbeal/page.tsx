@@ -62,54 +62,82 @@ export default async function MobbealPage({
     })),
   };
 
-  // Product schema — Mobbeal mobility programme
+  // Service schema — Mobbeal mobility programme
+  // Migrated from @type:Product to @type:Service — no e-commerce fields required
+  // Resolves GSC alerts: hasMerchantReturnPolicy, shippingDetails, review, aggregateRating, audience type
+  const offerDescription =
+    locale === "fr" || locale === "fr-ca"
+      ? "Zéro avance de frais. Frais de gestion déduits de la facturation client."
+      : locale === "ja"
+        ? "前払い手数料ゼロ。管理費はクライアント請求から差し引かれます。"
+        : "Zero upfront fees. Management fees deducted from client billing.";
+
+  const audienceName =
+    locale === "fr" || locale === "fr-ca"
+      ? "Ingénieurs logiciels seniors"
+      : locale === "ja"
+        ? "シニアソフトウェアエンジニア"
+        : "Senior software engineers";
+
+  const serviceType =
+    locale === "fr" || locale === "fr-ca"
+      ? "Programme de mobilité internationale pour ingénieurs"
+      : locale === "ja"
+        ? "エンジニア向け国際モビリティプログラム"
+        : "International mobility programme for engineers";
+
+  const alternateName =
+    locale === "fr" || locale === "fr-ca"
+      ? "Programme de mobilité Abbeal"
+      : locale === "ja"
+        ? "Abbealモビリティプログラム"
+        : "Abbeal Mobility Programme";
+
   const productLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": `${SITE}/${locale}/mobbeal`,
+    "@type": "Service",
+    "@id": `${SITE}/${locale}/mobbeal#service`,
     name: "Mobbeal",
+    alternateName,
+    serviceType,
     description: dict.mobbeal.meta.description,
-    brand: { "@type": "Brand", name: "Abbeal" },
-    category:
-      locale === "fr"
-        ? "Programme de mobilité internationale pour ingénieurs"
-        : locale === "ja"
-          ? "エンジニア向け国際モビリティプログラム"
-          : "International mobility programme for engineers",
+    category: "International tech mobility",
     image: `${SITE}/og-mobbeal.png`,
     url: `${SITE}/${locale}/mobbeal`,
     inLanguage: locale,
     audience: {
-      "@type": "Audience",
-      audienceType:
-        locale === "fr"
-          ? "Ingénieurs logiciels seniors"
-          : locale === "ja"
-            ? "シニアソフトウェアエンジニア"
-            : "Senior software engineers",
+      "@type": "BusinessAudience",
+      name: audienceName,
+      audienceType: "Senior software engineers",
     },
     provider: {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
+      "@id": `${SITE}#organization`,
       name: "Abbeal",
       url: SITE,
+      logo: `${SITE}/brand/wordmark-teal.png`,
     },
     areaServed: [
       { "@type": "Country", name: "France" },
       { "@type": "Country", name: "Canada" },
       { "@type": "Country", name: "Japan" },
     ],
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: `${SITE}/${locale}/mobbeal`,
+      availableLanguage: ["French", "English", "Japanese"],
+    },
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
-      priceCurrency: "EUR",
-      price: "0",
-      description:
-        locale === "fr"
-          ? "Zéro avance de frais. Frais de gestion déduits de la facturation client."
-          : locale === "ja"
-            ? "前払い手数料ゼロ。管理費はクライアント請求から差し引かれます。"
-            : "Zero upfront fees. Management fees deducted from client billing.",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        price: "0",
+        priceCurrency: "EUR",
+        description: offerDescription,
+      },
       url: `${SITE}/${locale}/mobbeal`,
+      category: "Service B2B",
     },
   };
 

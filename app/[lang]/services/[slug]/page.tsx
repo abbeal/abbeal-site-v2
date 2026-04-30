@@ -356,7 +356,7 @@ export default async function ServiceDetailPage({
                   >
                     <div className="flex items-start justify-between gap-3">
                       <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
-                        {rc.sector}
+                        {pick(rc.sector, locale)}
                       </p>
                       <p className="font-semibold tracking-[-0.02em] text-2xl text-[var(--color-ink)] leading-none">
                         {rc.kpi.value}

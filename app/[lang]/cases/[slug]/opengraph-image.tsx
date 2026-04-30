@@ -17,10 +17,10 @@ export default async function CaseOG({
   const locale = (hasLocale(lang) ? lang : "fr") as Locale;
   const c = getCase(slug);
   const title = c ? pick(c.title, locale) : "Abbeal · Case Study";
-  const sector = c?.sector ?? "Case study";
+  const sector = c ? pick(c.sector, locale) : "Case study";
   const geo = c?.geo ?? "";
   const kpiValue = c?.kpi.value ?? "";
-  const kpiLabel = c?.kpi.label ?? "";
+  const kpiLabel = c ? pick(c.kpi.label, locale) : "";
 
   return new ImageResponse(
     (

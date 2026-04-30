@@ -42,8 +42,8 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
 
   const featuredCases = getFeaturedCases().map((c) => ({
     slug: c.slug,
-    kpi: c.kpi,
-    sector: c.sector,
+    kpi: { value: c.kpi.value, label: pick(c.kpi.label, locale) },
+    sector: pick(c.sector, locale),
     geo: c.geo,
     excerpt: pick(c.excerpt, locale),
   }));

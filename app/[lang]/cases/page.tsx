@@ -36,11 +36,11 @@ export default async function CasesIndexPage({
 
   const items = getAllCases().map((c) => ({
     slug: c.slug,
-    sector: c.sector,
+    sector: pick(c.sector, locale),
     geo: c.geo,
     duration: c.duration,
     teamSize: c.teamSize,
-    kpi: c.kpi,
+    kpi: { value: c.kpi.value, label: pick(c.kpi.label, locale) },
     techStack: c.techStack,
     title: pick(c.title, locale),
     excerpt: pick(c.excerpt, locale),

@@ -41,9 +41,9 @@ export default async function CaseStudyPage({
   const excerpt = pick(c.excerpt, locale);
   const body = pick(c.body, locale);
 
-  // Related cases: same sector → fallback to most recent
+  // Related cases: same sector (compare by FR canonical key) → fallback to most recent
   const related = getAllCases()
-    .filter((x) => x.slug !== c.slug && x.sector === c.sector)
+    .filter((x) => x.slug !== c.slug && x.sector.fr === c.sector.fr)
     .slice(0, 3);
   const fallback = getAllCases()
     .filter((x) => x.slug !== c.slug)
@@ -107,8 +107,8 @@ export default async function CaseStudyPage({
     datePublished: c.publishedAt,
     dateModified: c.publishedAt,
     inLanguage: locale,
-    about: c.sector,
-    keywords: [c.sector, c.geo, ...c.techStack].join(", "),
+    about: pick(c.sector, locale),
+    keywords: [pick(c.sector, locale), c.geo, ...c.techStack].join(", "),
     author: { "@type": "Organization", name: "Abbeal", url: SITE },
     publisher: {
       "@type": "Organization",
@@ -149,7 +149,7 @@ export default async function CaseStudyPage({
         </div>
 
         <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
-          {c.sector} · {c.geo}
+          {pick(c.sector, locale)} · {c.geo}
         </p>
 
         <h1 className="mt-4 font-semibold tracking-[-0.025em] text-[clamp(2rem,4.5vw,3.75rem)] leading-[1.1]">
@@ -170,7 +170,7 @@ export default async function CaseStudyPage({
               {c.kpi.value}
             </p>
             <p className="font-mono text-[11px] uppercase tracking-wider text-[var(--color-brand-teal)] mt-1">
-              {c.kpi.label}
+              {pick(c.kpi.label, locale)}
             </p>
           </div>
           <div>
@@ -232,7 +232,7 @@ export default async function CaseStudyPage({
                     className="group block border border-[var(--color-border)] bg-[var(--color-bg-paper)] p-6 hover:border-[var(--color-brand-teal)] transition-colors h-full"
                   >
                     <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
-                      {rc.sector} · {rc.geo}
+                      {pick(rc.sector, locale)} · {rc.geo}
                     </p>
                     <h3 className="mt-3 text-lg font-semibold tracking-tight leading-snug group-hover:text-[var(--color-brand-teal)] transition-colors">
                       {pick(rc.title, locale)}
@@ -245,7 +245,7 @@ export default async function CaseStudyPage({
                         {rc.kpi.value}
                       </p>
                       <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--color-brand-teal)]">
-                        {rc.kpi.label}
+                        {pick(rc.kpi.label, locale)}
                       </p>
                     </div>
                   </Link>
