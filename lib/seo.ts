@@ -42,6 +42,12 @@ export function pageAlternates(
   // Normalize: ensure path starts with "/" (or is empty for home)
   const cleanPath = path === "" || path === "/" ? "" : path.startsWith("/") ? path : `/${path}`;
 
+  // Hreflang strategy:
+  // - Each page has a self-canonical (canonical: this page)
+  // - languages map uses BCP-47 tags ("fr-CA"), URL slug is "/fr-ca"
+  // - No x-default: Google detects via hreflang + geo signals.
+  //   This avoids the "Page is duplicate, Google chose a different canonical"
+  //   issue that x-default=/fr was triggering on /en, /ja, /fr-ca pages.
   return {
     canonical: `${SITE}/${locale}${cleanPath}`,
     languages: {
@@ -49,7 +55,6 @@ export function pageAlternates(
       en: `${SITE}/en${cleanPath}`,
       ja: `${SITE}/ja${cleanPath}`,
       "fr-CA": `${SITE}/fr-ca${cleanPath}`,
-      "x-default": `${SITE}/fr${cleanPath}`,
     },
   };
 }

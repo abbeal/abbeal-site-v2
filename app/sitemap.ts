@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { locales } from "@/lib/i18n";
+import { htmlLang, locales } from "@/lib/i18n";
 import { articles } from "@/lib/articles";
 import { cases } from "@/lib/cases";
 import { services } from "@/lib/services";
@@ -7,6 +7,12 @@ import { glossary } from "@/lib/glossary";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
 
+/**
+ * Indexable routes only — pages with `robots: { index: false }` are excluded
+ * (mentions-legales, confidentialite). Listing them in the sitemap while
+ * they're noindex'd triggers GSC "Excluded by noindex" warnings.
+ * /cgu remains because robots: { index: true }.
+ */
 const ROUTES = [
   "",
   "/about",
@@ -17,10 +23,20 @@ const ROUTES = [
   "/glossaire",
   "/careers",
   "/contact",
-  "/mentions-legales",
-  "/confidentialite",
   "/cgu",
 ] as const;
+
+/**
+ * Build the hreflang languages map for the sitemap.
+ * Output keys use BCP-47 form (e.g. fr-CA), not the URL slug (fr-ca).
+ * No x-default: each URL is its own canonical via lib/seo.ts; we let Google
+ * pick the right variant via hreflang + geo signals (Stripe / Linear / Vercel pattern).
+ */
+function altLanguages(path: string): Record<string, string> {
+  return Object.fromEntries(
+    locales.map((l) => [htmlLang[l], `${SITE_URL}/${l}${path}`]),
+  );
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -33,14 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: now,
         changeFrequency: route === "" ? "weekly" : "monthly",
         priority: route === "" ? 1.0 : route === "/mobbeal" ? 0.9 : 0.7,
-        alternates: {
-          languages: {
-            ...Object.fromEntries(
-              locales.map((l) => [l, `${SITE_URL}/${l}${route}`]),
-            ),
-            "x-default": `${SITE_URL}/fr${route}`,
-          },
-        },
+        alternates: { languages: altLanguages(route) },
       });
     }
   }
@@ -53,17 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(article.publishedAt),
         changeFrequency: "yearly",
         priority: 0.6,
-        alternates: {
-          languages: {
-            ...Object.fromEntries(
-              locales.map((l) => [
-                l,
-                `${SITE_URL}/${l}/insights/${article.slug}`,
-              ]),
-            ),
-            "x-default": `${SITE_URL}/fr/insights/${article.slug}`,
-          },
-        },
+        alternates: { languages: altLanguages(`/insights/${article.slug}`) },
       });
     }
   }
@@ -76,14 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(c.publishedAt),
         changeFrequency: "yearly",
         priority: 0.7,
-        alternates: {
-          languages: {
-            ...Object.fromEntries(
-              locales.map((l) => [l, `${SITE_URL}/${l}/cases/${c.slug}`]),
-            ),
-            "x-default": `${SITE_URL}/fr/cases/${c.slug}`,
-          },
-        },
+        alternates: { languages: altLanguages(`/cases/${c.slug}`) },
       });
     }
   }
@@ -96,14 +88,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: now,
         changeFrequency: "monthly",
         priority: 0.8,
-        alternates: {
-          languages: {
-            ...Object.fromEntries(
-              locales.map((l) => [l, `${SITE_URL}/${l}/services/${s.slug}`]),
-            ),
-            "x-default": `${SITE_URL}/fr/services/${s.slug}`,
-          },
-        },
+        alternates: { languages: altLanguages(`/services/${s.slug}`) },
       });
     }
   }
@@ -116,14 +101,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: now,
         changeFrequency: "monthly",
         priority: 0.5,
-        alternates: {
-          languages: {
-            ...Object.fromEntries(
-              locales.map((l) => [l, `${SITE_URL}/${l}/glossaire/${g.slug}`]),
-            ),
-            "x-default": `${SITE_URL}/fr/glossaire/${g.slug}`,
-          },
-        },
+        alternates: { languages: altLanguages(`/glossaire/${g.slug}`) },
       });
     }
   }

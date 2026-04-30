@@ -4,13 +4,23 @@ import { withSentryConfig } from "@sentry/nextjs";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
-      // Anciennes URLs Heroku → routes Next 16 i18n
+      // Anciennes URLs Heroku/WordPress → routes Next 16 i18n
       // permanent: true → 308 (préserve méthode HTTP, équivalent SEO d'un 301)
       { source: "/hire", destination: "/fr/careers", permanent: true },
       { source: "/jobs", destination: "/fr/careers", permanent: true },
       { source: "/valley", destination: "/fr/about", permanent: true },
+      { source: "/valley/:slug*", destination: "/fr/about", permanent: true },
       { source: "/projets", destination: "/fr/cases", permanent: true },
       { source: "/projets/:slug*", destination: "/fr/cases", permanent: true },
+      { source: "/equipe", destination: "/fr/about", permanent: true },
+      { source: "/cookies", destination: "/fr/confidentialite", permanent: true },
+      // Anciens permaliens WordPress ?p=NNNN — catch-all → home FR
+      {
+        source: "/",
+        has: [{ type: "query", key: "p" }],
+        destination: "/fr",
+        permanent: true,
+      },
     ];
   },
 };
