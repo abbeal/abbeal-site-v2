@@ -1,7 +1,7 @@
 "use client";
 
-import { animate, motion, useInView, useReducedMotion } from "motion/react";
-import { useEffect, useRef, useState } from "react";
+import { motion } from "motion/react";
+import { CountUp } from "@/components/ui/CountUp";
 
 type KpiDict = {
   kpis: {
@@ -12,58 +12,32 @@ type KpiDict = {
 };
 
 /* Client logos — mixed by geo for visual diversity (FR/CA/JP/global).
-   Only brands with explicit authorization are listed. */
-const LOGOS = [
+   Only brands with explicit authorization are listed.
+   Split into two rows for a depth effect (forward + reverse marquee). */
+const LOGOS_ROW_1 = [
   { slug: "bnp", name: "BNP Paribas" },
-  { slug: "bnc", name: "Banque Nationale du Canada" },
   { slug: "smbc", name: "SMBC" },
   { slug: "kering", name: "Kering" },
   { slug: "axa", name: "AXA" },
-  { slug: "desjardins", name: "Desjardins" },
   { slug: "societe-generale", name: "Société Générale" },
-  { slug: "hydro-quebec", name: "Hydro-Québec" },
   { slug: "paypay", name: "PayPay" },
-  { slug: "edf", name: "EDF" },
   { slug: "money-forward", name: "Money Forward" },
-  { slug: "cartier", name: "Cartier" },
   { slug: "carrefour", name: "Carrefour" },
-  { slug: "ticketmaster", name: "Ticketmaster" },
   { slug: "enedis", name: "Enedis" },
-  { slug: "pwc", name: "PwC" },
   { slug: "qonto", name: "Qonto" },
+] as const;
+
+const LOGOS_ROW_2 = [
+  { slug: "bnc", name: "Banque Nationale du Canada" },
+  { slug: "desjardins", name: "Desjardins" },
+  { slug: "hydro-quebec", name: "Hydro-Québec" },
+  { slug: "edf", name: "EDF" },
+  { slug: "cartier", name: "Cartier" },
+  { slug: "ticketmaster", name: "Ticketmaster" },
+  { slug: "pwc", name: "PwC" },
   { slug: "le-monde", name: "Le Monde" },
   { slug: "decathlon", name: "Decathlon" },
 ] as const;
-
-function Counter({ target }: { target: string }) {
-  const match = target.match(/^(\d+)(.*)$/);
-  if (!match) return <>{target}</>;
-  return <AnimatedNumber value={Number(match[1])} suffix={match[2]} />;
-}
-
-function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.2 });
-  const reduce = useReducedMotion();
-  const [n, setN] = useState(reduce ? value : 0);
-
-  useEffect(() => {
-    if (!inView || reduce) return;
-    const controls = animate(0, value, {
-      duration: 1.6,
-      ease: [0.16, 1, 0.3, 1],
-      onUpdate: (v) => setN(Math.round(v)),
-    });
-    return () => controls.stop();
-  }, [inView, value, reduce]);
-
-  return (
-    <span ref={ref} suppressHydrationWarning>
-      {n}
-      {suffix}
-    </span>
-  );
-}
 
 export function KPIs({ dict }: { dict: Record<string, unknown> }) {
   const d = dict as unknown as KpiDict;
@@ -83,7 +57,7 @@ export function KPIs({ dict }: { dict: Record<string, unknown> }) {
               className="group"
             >
               <p className="font-sans font-semibold tracking-[-0.02em] text-4xl md:text-5xl lg:text-6xl text-[var(--color-ink)]">
-                {/^\d+/.test(kpi.value) ? <Counter target={kpi.value} /> : kpi.value}
+                <CountUp value={kpi.value} />
               </p>
               <div className="mt-3 flex items-start gap-2">
                 <span
@@ -98,27 +72,47 @@ export function KPIs({ dict }: { dict: Record<string, unknown> }) {
           ))}
         </div>
 
-        {/* Clients marquee — 15 logos */}
+        {/* Clients marquee — two rows, opposite directions for depth */}
         <div className="mt-16 md:mt-20 pt-10 border-t border-dashed border-[var(--color-border)]">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-muted)] mb-6">
             {d.kpis.clientsLabel}
           </p>
-          <div className="marquee-pause marquee-mask overflow-hidden">
-            <div className="marquee-track items-center py-2">
-              {[...LOGOS, ...LOGOS].map((logo, i) => (
-                <div
-                  key={`${logo.slug}-${i}`}
-                  className="shrink-0 flex items-center justify-center h-10 md:h-12 min-w-[120px]"
-                  aria-label={logo.name}
-                >
-                  <img
-                    src={`/logos/${logo.slug}.svg`}
-                    alt={logo.name}
-                    className="logo-mono h-full w-auto max-w-[140px] object-contain"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
+          <div className="marquee-pause space-y-4">
+            <div className="marquee-mask overflow-hidden">
+              <div className="marquee-track items-center py-2">
+                {[...LOGOS_ROW_1, ...LOGOS_ROW_1].map((logo, i) => (
+                  <div
+                    key={`r1-${logo.slug}-${i}`}
+                    className="shrink-0 flex items-center justify-center h-10 md:h-12 min-w-[120px]"
+                    aria-label={logo.name}
+                  >
+                    <img
+                      src={`/logos/${logo.slug}.svg`}
+                      alt={logo.name}
+                      className="logo-mono h-full w-auto max-w-[140px] object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="marquee-mask overflow-hidden">
+              <div className="marquee-track-reverse items-center py-2">
+                {[...LOGOS_ROW_2, ...LOGOS_ROW_2].map((logo, i) => (
+                  <div
+                    key={`r2-${logo.slug}-${i}`}
+                    className="shrink-0 flex items-center justify-center h-10 md:h-12 min-w-[120px]"
+                    aria-label={logo.name}
+                  >
+                    <img
+                      src={`/logos/${logo.slug}.svg`}
+                      alt={logo.name}
+                      className="logo-mono h-full w-auto max-w-[140px] object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

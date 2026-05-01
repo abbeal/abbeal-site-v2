@@ -46,7 +46,8 @@
         "label": "Pôle Asie"
       }
     ],
-    "ctaTertiary": "Rejoindre l'équipe"
+    "ctaTertiary": "Rejoindre l'équipe",
+    "ctaCasesLink": "Voir nos cas clients"
   },
   "kpis": {
     "tape": "// 02 · Preuves",

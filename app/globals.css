@@ -105,7 +105,9 @@ body {
   transform-origin: left center;
 }
 
-/* Client logos marquee — seamless infinite horizontal scroll */
+/* Client logos marquee — seamless infinite horizontal scroll
+   Two tracks (forward + reverse) at slightly different speeds for visual depth.
+   Pause both on hover. */
 @keyframes marquee {
   from {
     transform: translateX(0);
@@ -115,15 +117,33 @@ body {
   }
 }
 
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .marquee-track {
   display: flex;
   width: max-content;
   gap: 4rem;
-  animation: marquee 45s linear infinite;
+  animation: marquee 55s linear infinite;
   will-change: transform;
 }
 
-.marquee-pause:hover .marquee-track {
+.marquee-track-reverse {
+  display: flex;
+  width: max-content;
+  gap: 4rem;
+  animation: marquee-reverse 70s linear infinite;
+  will-change: transform;
+}
+
+.marquee-pause:hover .marquee-track,
+.marquee-pause:hover .marquee-track-reverse {
   animation-play-state: paused;
 }
 
@@ -165,7 +185,8 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .marquee-track {
+  .marquee-track,
+  .marquee-track-reverse {
     animation: none;
   }
 }

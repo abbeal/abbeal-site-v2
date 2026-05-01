@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import type { Locale } from "@/lib/i18n";
 import { ButtonLink } from "@/components/ui/Button";
+import { CountUp } from "@/components/ui/CountUp";
 
 type Dict = {
   mobbeal: {
@@ -126,7 +127,7 @@ export function MobbealHero({
               transition={{ duration: 0.55, delay: 0.7 + i * 0.08, ease }}
             >
               <p className="font-sans font-semibold tracking-tight text-4xl md:text-5xl">
-                {kpi.value}
+                <CountUp value={kpi.value} />
               </p>
               <div className="mt-3 flex items-start gap-2">
                 <span

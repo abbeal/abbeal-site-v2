@@ -46,7 +46,8 @@
         "label": "Hub Asie"
       }
     ],
-    "ctaTertiary": "Rejoindre l'équipe"
+    "ctaTertiary": "Rejoindre l'équipe",
+    "ctaCasesLink": "Voir nos cases clients"
   },
   "kpis": {
     "tape": "// 02 · Preuves",

@@ -15,6 +15,7 @@ type HeroDict = {
     ctaPrimary: string;
     ctaSecondary: string;
     ctaTertiary: string;
+    ctaCasesLink: string;
     clocksLabel: string;
     mastheadTitle: string;
     live: string;
@@ -176,6 +177,25 @@ export function Hero({
                 <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
             </ButtonLink>
+          </motion.div>
+
+          {/* Discreet link to cases — boosts internal nav for /cases without
+              competing with the 3 main CTAs above. Arrow slides on hover. */}
+          <motion.div {...fade(0.9, 6)} className="mt-6">
+            <a
+              href={`${p}/cases`}
+              className="group inline-flex items-center gap-1.5 font-mono text-sm text-[var(--color-ink-soft)] hover:text-[var(--color-brand-teal)] transition-colors"
+            >
+              <span className="border-b border-dashed border-[var(--color-ink-soft)]/40 group-hover:border-[var(--color-brand-teal)]/60 transition-colors pb-0.5">
+                {d.hero.ctaCasesLink}
+              </span>
+              <span
+                aria-hidden
+                className="inline-block transition-transform duration-300 group-hover:translate-x-1.5"
+              >
+                →
+              </span>
+            </a>
           </motion.div>
         </div>
 

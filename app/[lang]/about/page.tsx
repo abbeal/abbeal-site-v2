@@ -6,6 +6,7 @@ import { getDictionary } from "../dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
 import { pageAlternates } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
+import { CountUp } from "@/components/ui/CountUp";
 
 type Dict = {
   nav: { about: string };
@@ -196,7 +197,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           {d.stats.map((s, i) => (
             <div key={i}>
               <p className="font-sans font-semibold tracking-[-0.02em] text-4xl md:text-5xl lg:text-6xl text-[var(--color-ink)]">
-                {s.value}
+                <CountUp value={s.value} />
               </p>
               <div className="mt-3 flex items-start gap-2">
                 <span

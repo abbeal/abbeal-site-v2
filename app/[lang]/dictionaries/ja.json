@@ -46,7 +46,8 @@
         "label": "アジア拠点"
       }
     ],
-    "ctaTertiary": "チームに参加"
+    "ctaTertiary": "チームに参加",
+    "ctaCasesLink": "クライアント事例を見る"
   },
   "kpis": {
     "tape": "// 02 · 実績",

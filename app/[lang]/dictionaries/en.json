@@ -46,7 +46,8 @@
         "label": "Asia Hub"
       }
     ],
-    "ctaTertiary": "Join the team"
+    "ctaTertiary": "Join the team",
+    "ctaCasesLink": "Explore client cases"
   },
   "kpis": {
     "tape": "// 02 · Proof",
