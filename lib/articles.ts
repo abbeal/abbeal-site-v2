@@ -265,6 +265,33 @@ export const articles: Article[] = [
       ja: ARTICLE_BODIES["mobbeal-playbook-garde-ton-job"]?.ja,
     },
   },
+  // Article 11 — EN-first piece. AI agents in production, framed for the
+  // English-speaking enterprise CTO market (Tokyo / Mtl / NY). FR body is a
+  // short pointer back to the existing FR-language piece on the same topic.
+  // Strengthens /en differentiation against /fr to fight the GSC duplicate
+  // perception flagged 2026-04-30.
+  {
+    slug: "ai-agents-french-banks",
+    featured: false,
+    tag: "AI",
+    readTime: "7 min",
+    publishedAt: "2026-04-28",
+    title: {
+      fr: "Agents IA dans les banques françaises : 7 leçons côté production.",
+      en: "AI agents in production: 7 patterns French banks taught us.",
+      ja: "本番のAIエージェント：フランスの銀行から学んだ7つのパターン。",
+    },
+    excerpt: {
+      fr: "Article publié en anglais. Synthèse FR ci-dessous, version complète en EN.",
+      en: "Field notes from BNP, SocGen and a top-3 French insurer. What changes when your agent runs against COBOL cores, ACPR audit logs and a 4 ms p99 budget.",
+      ja: "BNP、SocGen、フランス大手保険会社からのフィールドノート。COBOLコア、ACPR監査ログ、4ms p99予算に対してエージェントが動作する場合の変更点。",
+    },
+    body: {
+      fr: ARTICLE_BODIES["ai-agents-french-banks"]?.fr ?? [],
+      en: ARTICLE_BODIES["ai-agents-french-banks"]?.en,
+      ja: ARTICLE_BODIES["ai-agents-french-banks"]?.ja,
+    },
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {

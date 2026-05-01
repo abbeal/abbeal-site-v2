@@ -540,7 +540,7 @@
     },
     "testimonials": {
       "tape": "// They did it",
-      "title": "Three voices. Three changed lives.",
+      "title": "Four voices. Four changed lives.",
       "items": [
         {
           "name": "Grégoire",
@@ -559,6 +559,12 @@
           "role": "Data Consultant",
           "location": "Tokyo · 6 months",
           "quote": "The process was simpler than expected. Mobbeal handled everything, I focused on my client."
+        },
+        {
+          "name": "Maya",
+          "role": "Senior Cloud Engineer",
+          "location": "Tokyo · 9 months",
+          "quote": "Came from London, kept my AWS architecture role, just changed the timezone. The Japan tax conventions worked exactly as Mobbeal explained — no surprises, no double taxation."
         }
       ]
     },
@@ -593,6 +599,14 @@
         {
           "q": "Does my language need to be perfect?",
           "a": "Japan: pro English is enough. Canada: FR or EN. France: FR B2. Local language classes included."
+        },
+        {
+          "q": "I'm UK/US-based — what about my pension and existing tax setup?",
+          "a": "UK pensions stay where they are; you stop contributing during your stay (or top up via SIPP). UK-Japan and US-Japan tax treaties prevent double taxation. After 6 months you become a Japanese tax resident and pay Japanese income tax (typically 20-33%). We connect you with a tax advisor specialised in expat moves on day one."
+        },
+        {
+          "q": "Can I keep my UK Ltd or US LLC structure?",
+          "a": "Generally yes — your home-country company invoices Mobbeal (or Abbeal direct), and we handle the Japanese employment side. This works for UK Ltd, US LLC, French SASU, Canadian Sole Proprietorship. We've done it 30+ times. Caveat: requires a clean treaty with Japan (UK/US/FR/CA all qualify)."
         }
       ]
     },
@@ -827,29 +841,34 @@
     "tape": "// About",
     "h1Top": "Built to last.",
     "h1Bottom": "Since 2015.",
-    "intro": "Abbeal isn't an IT services firm. It's a tri-geo engineering pod. Three synced hubs — Paris, Montréal, Tokyo — to deliver continuously, without debt, for companies who take tech seriously.",
+    "intro": "Abbeal isn't an IT services firm dressed up in modern fonts. It's a tri-geo engineering pod with three synchronised hubs — Paris (EU), Montréal (Americas), Tokyo (Asia) — built to ship continuously, in production, for teams who treat software as a primary asset rather than a cost line. We are featured in JETRO's case study series on French-Japanese tech expansion. Our engineers are senior. Our staffing model is integrated, not body-shopped. Our follow-the-sun model is operational, not a slide.",
     "timelineTape": "// Timeline",
     "timelineTitle": "Ten years. Three continents.",
     "timeline": [
       {
         "year": "2015",
         "city": "Paris",
-        "event": "Abbeal founded by Sébastien Lonjon. First hub in Paris."
+        "event": "Abbeal founded by Sébastien Lonjon. EU hub in the 2nd arrondissement, focused on senior software squads for French scale-ups."
       },
       {
         "year": "2021",
         "city": "Tokyo",
-        "event": "Asia hub opened. First Japanese clients (PayPay, SMBC, AXA Japan)."
+        "event": "First Japanese engagements: PayPay, SMBC, AXA Japan. Initial bridge built between French engineering and Tokyo enterprise tech."
       },
       {
         "year": "2023",
         "city": "Montréal",
-        "event": "Americas hub opened. Vianney Blanquart takes over Canada operations."
+        "event": "Americas hub opens at 4388 Saint-Denis. Vianney Blanquart leads North America operations."
+      },
+      {
+        "year": "2024",
+        "city": "Tokyo",
+        "event": "Sébastien relocates to Tokyo. Formal Asia hub launch in Higashi-Azabu. Featured in JETRO case study series on French companies expanding into Japan."
       },
       {
         "year": "2026",
         "city": "Tri-geo",
-        "event": "100+ clients, 50+ relocated via Mobbeal, 24/7 Follow-the-Sun operational."
+        "event": "100+ clients shipped with, 50+ engineers relocated through Mobbeal, 24/7 Follow-the-Sun operational across the three hubs."
       }
     ],
     "leadersTape": "// Leadership",
@@ -858,16 +877,16 @@
       {
         "name": "Sébastien Lonjon",
         "role": "CEO · Founder",
-        "hub": "Hub EU · Tokyo",
+        "hub": "EU & Asia Hubs · Tokyo",
         "photo": "sebastien.jpg",
-        "bio": "Founded Abbeal in 2015. Paris CEO, moved to Tokyo in 2024 to lead the Asia hub."
+        "bio": "Founded Abbeal in Paris in 2015 after a decade in French scale-ups. Relocated to Tokyo in 2024 to build the Asia bridge end-to-end. Spends his weeks between Tokyo enterprise CTOs and Paris architects."
       },
       {
         "name": "Vianney Blanquart",
         "role": "COO · Managing Director",
         "hub": "Americas Hub · Montréal",
         "photo": "vianney.jpg",
-        "bio": "Co-founder of the Montréal hub (2023). Managing Director since November 2024. Leads North America operations."
+        "bio": "Co-founded the Montréal hub in 2023 to anchor Abbeal in North America. Managing Director since November 2024. Owns the Americas P&L, runs Mobbeal candidate ops, hosts the Saint-Denis office Friday demos."
       }
     ],
     "statsTape": "// Numbers",

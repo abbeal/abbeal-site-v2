@@ -45,9 +45,14 @@ export function pageAlternates(
   // Hreflang strategy:
   // - Each page has a self-canonical (canonical: this page)
   // - languages map uses BCP-47 tags ("fr-CA"), URL slug is "/fr-ca"
-  // - No x-default: Google detects via hreflang + geo signals.
-  //   This avoids the "Page is duplicate, Google chose a different canonical"
-  //   issue that x-default=/fr was triggering on /en, /ja, /fr-ca pages.
+  // - x-default → /en (lingua franca for international visitors when no
+  //   locale matches their browser preferences). This consolidates the
+  //   ranking signal between locale variants and avoids Google treating
+  //   each locale as a standalone duplicate. The previous removal of
+  //   x-default (in Vague 1) was a misdiagnosis — without x-default,
+  //   Google picks a locale at random as canonical and marks the rest
+  //   as duplicates, which is what "Page is duplicate" was actually
+  //   reporting on /en, /ja, /fr-ca.
   return {
     canonical: `${SITE}/${locale}${cleanPath}`,
     languages: {
@@ -55,6 +60,7 @@ export function pageAlternates(
       en: `${SITE}/en${cleanPath}`,
       ja: `${SITE}/ja${cleanPath}`,
       "fr-CA": `${SITE}/fr-ca${cleanPath}`,
+      "x-default": `${SITE}/en${cleanPath}`,
     },
   };
 }

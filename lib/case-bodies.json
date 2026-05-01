@@ -588,5 +588,39 @@
       {"type": "h2", "content": "学んだこと"},
       {"type": "p", "content": "18kドキュメントでファインチューンされたLayoutLMv3は、標準ドキュメント（ボリュームの76%）でコスト/パフォーマンスでClaude Sonnetを打ち負かします。しかしClaude Sonnetは日本の手書きとぼやけた写真で無敵です。間違い：最終抽出スキーマを定義する前にドキュメントを注釈しました、2,000ドキュメントを再注釈。やり直すなら：1か月目から処理者とのスキーマコデザイン、ロールアウト前に5,000件の実クレームでパイロット。"}
     ]
+  },
+  "loi-25-fintech-conformite-6-semaines": {
+    "fr-ca": [
+      {"type": "p", "content": "Six semaines avant un audit de la Commission d'accès à l'information du Québec (CAI), une fintech montréalaise (B2B, ~80 employés, traitement de paiements transfrontaliers FR-CA) découvre que sa mise en conformité Loi 25 est restée à l'état de PowerPoint. Le DPO interne a démissionné, le sous-traitant juridique a livré une politique de confidentialité de 14 pages mais aucun pipeline technique. Risque maximal : sanction CAI jusqu'à 25 M$ ou 4 % du chiffre d'affaires mondial."},
+      {"type": "h2", "content": "Le contexte"},
+      {"type": "p", "content": "La Loi 25 (Loi modernisant des dispositions législatives en matière de protection des renseignements personnels) est entrée en vigueur en plusieurs phases entre 2022 et 2024 au Québec. Pour une fintech traitant des données personnelles québécoises, les exigences clés : consentement explicite et granulaire (art. 12-14), évaluation des facteurs relatifs à la vie privée (ÉFVP) avant tout nouveau traitement (art. 3.3), notification d'incident de sécurité dans les 72 h (art. 3.5-3.6), portabilité des données (art. 27), responsable de la protection des renseignements personnels nommément désigné (art. 3.1). En cas d'audit, la CAI réclame des preuves techniques, pas des intentions."},
+      {"type": "h2", "content": "Notre intervention"},
+      {"type": "p", "content": "Trois ingénieur·es Abbeal du Pôle Amériques (Montréal), 6 semaines de delivery dense en sprints d'une semaine. Pas de sprint de cadrage : la deadline CAI ne négociait pas. Méthode : audit-as-code, livraison continue, validation hebdomadaire avec le CTO et le sous-traitant juridique."},
+      {"type": "h3", "content": "Semaines 1-2 — Cartographie et ÉFVP"},
+      {"type": "p", "content": "Inventaire de tous les flux de données personnelles via instrumentation du backend Node.js et de l'app Next.js : 47 endpoints touchent des renseignements personnels, dont 9 critiques (KYC, NAS, données bancaires). Production d'une ÉFVP par flux critique, format gabarit CAI. Identification de 3 transferts hors-Québec non documentés (sous-traitants états-uniens) à formaliser ou rapatrier."},
+      {"type": "h3", "content": "Semaines 3-4 — Pipeline de consentement"},
+      {"type": "p", "content": "Réécriture du module de consentement : granulaire par finalité (paiement, marketing, analytics, partage avec partenaires), versionné en base, journalisé immuable (Postgres append-only + S3 Glacier pour la rétention 7 ans). UI repensée : opt-in explicite, langue française par défaut, retrait du consentement aussi simple que l'octroi. Intégration OneTrust pour la couche cookies."},
+      {"type": "h3", "content": "Semaines 5-6 — Gouvernance et incident response"},
+      {"type": "p", "content": "Pipeline de notification d'incident automatisé : détection via Sentry + alerting personnalisé, gabarit CAI pré-rempli, workflow d'escalade au RPRP en moins de 4 heures. Tests automatisés Cypress sur les parcours de consentement (200 scénarios). Documentation pour audit : registre des activités de traitement, ÉFVP signées, journal d'accès aux données, contrats sous-traitants conformes."},
+      {"type": "h2", "content": "Les résultats"},
+      {"type": "list", "items": ["Audit CAI passé sans réserve, deux semaines après livraison.", "Zéro impact sur la roadmap produit : les sprints features ont continué en parallèle (équipe interne de 6 devs).", "Réduction de 40 % du temps de réponse aux demandes d'accès aux renseignements personnels (de 5 jours à 3 jours en moyenne, vs 30 jours autorisés par la Loi 25).", "Pipeline de consentement réutilisable comme template pour les futurs marchés (déploiement Ontario PIPEDA prévu Q3 2026)."]},
+      {"type": "h2", "content": "Ce qu'on a appris"},
+      {"type": "p", "content": "La Loi 25 n'est pas un sujet juridique avec une couche technique en bas. C'est un sujet d'architecture qui exige une couche juridique en haut. Les fintechs québécoises qui traitent ça comme du compliance theater (politique de 14 pages, formulaire de cookies, et c'est tout) se feront rattraper. Celles qui industrialisent le pipeline de bout en bout (consentement granulaire, journalisation immuable, ÉFVP automatisées, incident response sub-72h) le voient devenir un argument commercial — les clients institutionnels demandent désormais une preuve d'ÉFVP avant signature."},
+      {"type": "callout", "tone": "teal", "content": "Si tu es CTO d'une fintech ou d'une scale-up québécoise et que la Loi 25 est encore au stade PowerPoint chez toi, on peut faire un audit gratuit de 60 minutes pour t'indiquer où sont les angles morts. Pas d'engagement."}
+    ],
+    "fr": [
+      {"type": "p", "content": "Six semaines avant un audit de la Commission d'accès à l'information du Québec (CAI), une fintech montréalaise (B2B, ~80 employés, traitement de paiements transfrontaliers FR-CA) découvre que sa mise en conformité Loi 25 est restée à l'état de PowerPoint. Le DPO interne a démissionné, le sous-traitant juridique a livré une politique de confidentialité mais aucun pipeline technique. Risque maximal : sanction CAI jusqu'à 25 M$ ou 4 % du CA mondial."},
+      {"type": "h2", "content": "Notre intervention"},
+      {"type": "p", "content": "Trois ingénieur·es Abbeal du Pôle Amériques (Montréal), 6 semaines de delivery dense, sprints d'une semaine. Audit-as-code, livraison continue, validation hebdo avec le CTO et le sous-traitant juridique. Cartographie complète des 47 endpoints touchant des données personnelles (dont 9 critiques), réécriture du module de consentement granulaire, pipeline de notification d'incident sub-72h, tests automatisés Cypress."},
+      {"type": "h2", "content": "Résultats"},
+      {"type": "p", "content": "Audit CAI passé sans réserve. Zéro impact sur la roadmap produit. Pipeline réutilisable pour les futurs marchés. Détail complet en version FR-CA (français du Québec, OQLF) sur cette même page."}
+    ],
+    "en": [
+      {"type": "p", "content": "Six weeks before a Quebec privacy commission (CAI) audit, a Montreal fintech (B2B, ~80 employees, FR-CA cross-border payments) realised their Law 25 compliance had stayed at the PowerPoint stage. Their internal DPO had resigned, the external law firm delivered a privacy policy but no technical pipeline. Worst case: CAI fine up to CA$25M or 4% of global revenue."},
+      {"type": "h2", "content": "Our engagement"},
+      {"type": "p", "content": "Three engineers from Abbeal's Americas hub (Montreal), 6 weeks of dense delivery in one-week sprints. Audit-as-code approach, continuous delivery, weekly review with the CTO and the law firm. Full mapping of 47 endpoints touching personal data (9 critical), rewrite of the consent module with granular per-purpose opt-in, sub-72h incident response pipeline, Cypress test suite covering 200 consent scenarios."},
+      {"type": "h2", "content": "Outcome"},
+      {"type": "p", "content": "CAI audit passed with zero reservations two weeks post-delivery. No product roadmap impact (parallel sprints continued). 40% faster turnaround on data access requests (3 days vs 5 previously, vs 30 allowed by law). Consent pipeline reusable as template for future jurisdictions (Ontario PIPEDA rollout planned Q3 2026)."}
+    ]
   }
 }

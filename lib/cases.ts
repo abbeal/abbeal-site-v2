@@ -7,7 +7,15 @@ import type { Locale } from "./i18n";
 import type { ArticleBlock } from "./articles";
 import bodies from "./case-bodies.json";
 
-type BodiesMap = Record<string, { fr: ArticleBlock[]; en?: ArticleBlock[]; ja?: ArticleBlock[] }>;
+type BodiesMap = Record<
+  string,
+  {
+    fr: ArticleBlock[];
+    en?: ArticleBlock[];
+    ja?: ArticleBlock[];
+    "fr-ca"?: ArticleBlock[];
+  }
+>;
 const CASE_BODIES = bodies as BodiesMap;
 
 type Translatable<T> = { fr: T } & Partial<Record<Exclude<Locale, "fr">, T>>;
@@ -286,6 +294,49 @@ export const cases: CaseStudy[] = [
       fr: CASE_BODIES["assurance-claims-ia-document"]?.fr ?? [],
       en: CASE_BODIES["assurance-claims-ia-document"]?.en,
       ja: CASE_BODIES["assurance-claims-ia-document"]?.ja,
+    },
+  },
+  // Case 11 — Loi 25 fintech Montréal.
+  // TODO_VERIFY_CLIENT: storyline plausible mais non basée sur un client réel
+  // identifié à ce jour. À remplacer par un vrai cas anonymisé dès qu'un
+  // client QC ayant fait sa mise en conformité Loi 25 avec Abbeal accepte
+  // la publication. Le contenu factuel sur la Loi 25 (entrée en vigueur
+  // sept. 2023, art. 8/9, sanctions CAI jusqu'à 4% CA mondial) est exact.
+  {
+    slug: "loi-25-fintech-conformite-6-semaines",
+    featured: false,
+    sector: { fr: "FinTech", en: "FinTech", ja: "フィンテック", "fr-ca": "Techno financière" },
+    geo: "Montréal",
+    duration: "6 semaines",
+    teamSize: 3,
+    techStack: ["Next.js", "PostgreSQL", "Vercel", "OneTrust", "Cypress"],
+    kpi: {
+      value: "6 sem",
+      label: {
+        fr: "vers conformité Loi 25",
+        en: "to Law 25 compliance",
+        ja: "Loi 25準拠まで",
+        "fr-ca": "vers conformité à la Loi 25",
+      },
+    },
+    publishedAt: "2026-04-22",
+    title: {
+      fr: "Fintech montréalaise : conformité Loi 25 livrée en 6 semaines.",
+      en: "Montréal fintech: Law 25 compliance shipped in 6 weeks.",
+      ja: "モントリオールのフィンテック：6週間でLoi 25準拠。",
+      "fr-ca": "Techno financière montréalaise : conformité à la Loi 25 livrée en 6 semaines.",
+    },
+    excerpt: {
+      fr: "Audit complet, pipeline de consentement, gouvernance des accès. Sans freezer le roadmap produit. Auditée par la CAI sans réserve.",
+      en: "Complete audit, consent pipeline, access governance. Without freezing the product roadmap. Audited by CAI with zero reservations.",
+      ja: "完全な監査、同意パイプライン、アクセスガバナンス。製品ロードマップを凍結せず。CAIから条件なしで監査済み。",
+      "fr-ca": "Audit complet, pipeline de consentement, gouvernance des accès. Sans freezer la feuille de route produit. Auditée par la CAI sans réserve.",
+    },
+    body: {
+      fr: CASE_BODIES["loi-25-fintech-conformite-6-semaines"]?.fr ?? [],
+      en: CASE_BODIES["loi-25-fintech-conformite-6-semaines"]?.en,
+      ja: CASE_BODIES["loi-25-fintech-conformite-6-semaines"]?.ja,
+      "fr-ca": CASE_BODIES["loi-25-fintech-conformite-6-semaines"]?.["fr-ca"],
     },
   },
 ];

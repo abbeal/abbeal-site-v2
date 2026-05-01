@@ -29,13 +29,16 @@ const ROUTES = [
 /**
  * Build the hreflang languages map for the sitemap.
  * Output keys use BCP-47 form (e.g. fr-CA), not the URL slug (fr-ca).
- * No x-default: each URL is its own canonical via lib/seo.ts; we let Google
- * pick the right variant via hreflang + geo signals (Stripe / Linear / Vercel pattern).
+ * x-default → /en (lingua franca for unmatched browsers / international visitors).
+ * Without x-default, Google picks one locale at random as canonical and marks
+ * the others as duplicates (which is what triggered "Page in double" on /en).
  */
 function altLanguages(path: string): Record<string, string> {
-  return Object.fromEntries(
+  const langs = Object.fromEntries(
     locales.map((l) => [htmlLang[l], `${SITE_URL}/${l}${path}`]),
   );
+  langs["x-default"] = `${SITE_URL}/en${path}`;
+  return langs;
 }
 
 /**
