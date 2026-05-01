@@ -81,6 +81,27 @@ function resolveLocale(request: NextRequest): Locale {
         topPref !== "*" &&
         topPref !== "";
       if (hasLocale(matched) && !isSilentFallback) {
+        // Geo override for ambiguous "fr" preference:
+        // A user with Accept-Language: fr-FR (or generic "fr") visiting from
+        // Québec / New-Brunswick should land on /fr-ca, not /fr Europe.
+        // The user picked French as a language; geo confirms which variant.
+        // Without this, Sébastien (macOS in fr-FR) traveling to Montréal
+        // would always be routed to /fr Europe, defeating the OQLF locale.
+        if (matched === "fr" && !topPref.startsWith("fr-ca")) {
+          const country = request.headers
+            .get("x-vercel-ip-country")
+            ?.toUpperCase();
+          const region = request.headers
+            .get("x-vercel-ip-country-region")
+            ?.toUpperCase();
+          if (
+            country === "CA" &&
+            region &&
+            CA_FRANCOPHONE_REGIONS.has(region)
+          ) {
+            return "fr-ca";
+          }
+        }
         return matched;
       }
     } catch {
