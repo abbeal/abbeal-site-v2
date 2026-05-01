@@ -429,7 +429,16 @@
       "privacy": "Confidentialité",
       "cgu": "CGU"
     },
-    "copyright": "© 2026 Abbeal. Tous droits réservés."
+    "copyright": "© 2026 Abbeal. Tous droits réservés.",
+    "newsletter": {
+      "title": "Reste informé·e",
+      "subtitle": "Une fois par mois. Veille techno, nouvelles missions, retours du terrain. Pas de pourriel, désabonnement en un clic.",
+      "placeholder": "ton@courriel.com",
+      "cta": "S'abonner",
+      "ok": "Abonnement enregistré. À très bientôt.",
+      "errorGeneric": "Erreur. Réessaie ou écris-nous à contact@abbeal.com."
+    },
+    "status": "Tous les services en marche"
   },
   "mobbeal": {
     "nav": "Mobbeal",
@@ -871,6 +880,17 @@
         "photo": "vianney.jpg",
         "bio": "Cofondateur du pôle Montréal (2023). DG depuis novembre 2024. Pilote les opérations nord-américaines."
       }
+    ],
+    "teamTape": "// Équipe",
+    "teamTitle": "Les visages derrière la livraison.",
+    "teamSubtitle": "Leads, architectes, recruteurs. Quelques personnes que tu rencontreras si on travaille ensemble.",
+    "team": [
+      { "name": "Lead Engineer", "role": "Logiciel · Lead", "hub": "Pôle Europe · Paris", "photo": "team-1.jpg" },
+      { "name": "Senior Architect", "role": "Architecture · Senior", "hub": "Pôle Asie · Tokyo", "photo": "team-2.jpg" },
+      { "name": "Engineering Manager", "role": "Livraison · Gestionnaire", "hub": "Pôle Amériques · Montréal", "photo": "team-3.jpg" },
+      { "name": "Tech Recruiter", "role": "Recrutement · Lead", "hub": "Pôle Europe · Paris", "photo": "team-4.jpg" },
+      { "name": "Lead Data Engineer", "role": "Données · Lead", "hub": "Pôle Europe · Paris", "photo": "team-5.jpg" },
+      { "name": "Senior Robotics Engineer", "role": "Robotique · Senior", "hub": "Pôle Asie · Tokyo", "photo": "team-6.jpg" }
     ],
     "statsTape": "// Chiffres",
     "statsTitle": "L'échelle, pas le bruit.",

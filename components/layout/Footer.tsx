@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
+import { NewsletterForm } from "./NewsletterForm";
+import { FooterLangSwitch } from "./FooterLangSwitch";
+import { StatusIndicator } from "./StatusIndicator";
 
 type FooterDict = {
   footer: {
@@ -15,6 +18,15 @@ type FooterDict = {
     legalTitle: string;
     legal: { mentions: string; privacy: string; cgu?: string };
     copyright: string;
+    newsletter: {
+      title: string;
+      subtitle: string;
+      placeholder: string;
+      cta: string;
+      ok: string;
+      errorGeneric: string;
+    };
+    status: string;
   };
   nav: {
     services: string;
@@ -40,6 +52,30 @@ export function Footer({
   return (
     <footer className="mt-32 border-t border-[var(--color-border)] bg-[var(--color-bg-cream)]/50">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-16">
+        {/* Newsletter banner — top of footer, full width */}
+        <div className="mb-12 pb-12 border-b border-[var(--color-border)]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            <div className="lg:col-span-6">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--color-brand-teal)]">
+                {d.footer.newsletter.title}
+              </p>
+              <p className="mt-3 text-base md:text-lg text-[var(--color-ink-soft)] leading-relaxed max-w-xl">
+                {d.footer.newsletter.subtitle}
+              </p>
+            </div>
+            <div className="lg:col-span-6">
+              <NewsletterForm
+                labels={{
+                  placeholder: d.footer.newsletter.placeholder,
+                  cta: d.footer.newsletter.cta,
+                  ok: d.footer.newsletter.ok,
+                  errorGeneric: d.footer.newsletter.errorGeneric,
+                }}
+              />
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <Link href={p} className="block" aria-label="Abbeal">
@@ -209,27 +245,42 @@ export function Footer({
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-[var(--color-border)] flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <p className="font-mono text-xs text-[var(--color-muted)]">
-            {d.footer.copyright}
-          </p>
-          <ul className="flex gap-5 text-xs text-[var(--color-muted)]">
-            <li>
-              <Link href={`${p}/mentions-legales`} className="hover:text-[var(--color-ink)]">
-                {d.footer.legal.mentions}
-              </Link>
-            </li>
-            <li>
-              <Link href={`${p}/confidentialite`} className="hover:text-[var(--color-ink)]">
-                {d.footer.legal.privacy}
-              </Link>
-            </li>
-            <li>
-              <Link href={`${p}/cgu`} className="hover:text-[var(--color-ink)]">
-                {d.footer.legal.cgu ?? "CGU"}
-              </Link>
-            </li>
-          </ul>
+        <div className="mt-16 pt-8 border-t border-[var(--color-border)] flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+            <p className="font-mono text-xs text-[var(--color-muted)]">
+              {d.footer.copyright}
+            </p>
+            <StatusIndicator label={d.footer.status} />
+          </div>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+            <ul className="flex gap-5 text-xs text-[var(--color-muted)]">
+              <li>
+                <Link
+                  href={`${p}/mentions-legales`}
+                  className="hover:text-[var(--color-ink)]"
+                >
+                  {d.footer.legal.mentions}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`${p}/confidentialite`}
+                  className="hover:text-[var(--color-ink)]"
+                >
+                  {d.footer.legal.privacy}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`${p}/cgu`}
+                  className="hover:text-[var(--color-ink)]"
+                >
+                  {d.footer.legal.cgu ?? "CGU"}
+                </Link>
+              </li>
+            </ul>
+            <FooterLangSwitch current={locale} />
+          </div>
         </div>
       </div>
     </footer>

@@ -428,7 +428,16 @@
       "privacy": "Confidentialité",
       "cgu": "CGU"
     },
-    "copyright": "© 2026 Abbeal. Tous droits réservés."
+    "copyright": "© 2026 Abbeal. Tous droits réservés.",
+    "newsletter": {
+      "title": "Restez informés",
+      "subtitle": "Une fois par mois. Insights tech, nouvelles missions, retours d'expérience. Pas de spam, désinscription en un clic.",
+      "placeholder": "ton@email.com",
+      "cta": "S'abonner",
+      "ok": "Inscription enregistrée. À très vite.",
+      "errorGeneric": "Erreur. Réessaie ou écris-nous à contact@abbeal.com."
+    },
+    "status": "Tous les services opérationnels"
   },
   "mobbeal": {
     "nav": "Mobbeal",
@@ -870,6 +879,17 @@
         "photo": "vianney.jpg",
         "bio": "Co-fondateur du hub Montréal (2023). DG depuis novembre 2024. Pilote les opérations Nord-Amérique."
       }
+    ],
+    "teamTape": "// Équipe",
+    "teamTitle": "Les visages derrière la livraison.",
+    "teamSubtitle": "Leads, architectes, recruteurs. Quelques-unes des personnes que tu rencontreras si on bosse ensemble.",
+    "team": [
+      { "name": "Lead Engineer", "role": "Software · Lead", "hub": "Hub EU · Paris", "photo": "team-1.jpg" },
+      { "name": "Senior Architect", "role": "Architecture · Senior", "hub": "Hub Asie · Tokyo", "photo": "team-2.jpg" },
+      { "name": "Engineering Manager", "role": "Delivery · Manager", "hub": "Hub Amériques · Montréal", "photo": "team-3.jpg" },
+      { "name": "Tech Recruiter", "role": "Recrutement · Lead", "hub": "Hub EU · Paris", "photo": "team-4.jpg" },
+      { "name": "Lead Data Engineer", "role": "Data · Lead", "hub": "Hub EU · Paris", "photo": "team-5.jpg" },
+      { "name": "Senior Robotics Engineer", "role": "Robotique · Senior", "hub": "Hub Asie · Tokyo", "photo": "team-6.jpg" }
     ],
     "statsTape": "// Chiffres",
     "statsTitle": "L'échelle, pas le bruit.",

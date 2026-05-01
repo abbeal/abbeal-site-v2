@@ -428,7 +428,16 @@
       "privacy": "プライバシー",
       "cgu": "利用規約"
     },
-    "copyright": "© 2026 Abbeal. All rights reserved."
+    "copyright": "© 2026 Abbeal. All rights reserved.",
+    "newsletter": {
+      "title": "最新情報を受け取る",
+      "subtitle": "月1回。エンジニアリングインサイト、新規ポジション、現場レポート。スパムなし、ワンクリック解除。",
+      "placeholder": "your@email.com",
+      "cta": "登録",
+      "ok": "登録完了。またお会いしましょう。",
+      "errorGeneric": "エラーが発生しました。再試行するか、contact@abbeal.com までご連絡ください。"
+    },
+    "status": "全サービス稼働中"
   },
   "mobbeal": {
     "nav": "Mobbeal",
@@ -887,6 +896,17 @@
         "photo": "vianney.jpg",
         "bio": "Abbealを北米にアンカーするため、2023年にモントリオール拠点を共同創業。2024年11月より社長。アメリカP&L管掌、Mobbeal候補者オペレーションの責任者、サン・ドゥニ通りオフィス金曜デモのホスト役。"
       }
+    ],
+    "teamTape": "// チーム",
+    "teamTitle": "デリバリーを支える顔ぶれ。",
+    "teamSubtitle": "リード、アーキテクト、リクルーター。一緒に仕事すれば出会うメンバーの一部です。",
+    "team": [
+      { "name": "Lead Engineer", "role": "ソフトウェア · リード", "hub": "EU拠点 · パリ", "photo": "team-1.jpg" },
+      { "name": "Senior Architect", "role": "アーキテクチャ · シニア", "hub": "アジア拠点 · 東京", "photo": "team-2.jpg" },
+      { "name": "Engineering Manager", "role": "デリバリー · マネージャー", "hub": "アメリカ拠点 · モントリオール", "photo": "team-3.jpg" },
+      { "name": "Tech Recruiter", "role": "リクルートメント · リード", "hub": "EU拠点 · パリ", "photo": "team-4.jpg" },
+      { "name": "Lead Data Engineer", "role": "データ · リード", "hub": "EU拠点 · パリ", "photo": "team-5.jpg" },
+      { "name": "Senior Robotics Engineer", "role": "ロボティクス · シニア", "hub": "アジア拠点 · 東京", "photo": "team-6.jpg" }
     ],
     "statsTape": "// 数字",
     "statsTitle": "規模であって、騒音ではない。",
