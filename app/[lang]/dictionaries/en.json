@@ -426,7 +426,8 @@
     "legal": {
       "mentions": "Legal notice",
       "privacy": "Privacy",
-      "cgu": "Terms"
+      "cgu": "Terms",
+      "cookies": "Cookies"
     },
     "copyright": "© 2026 Abbeal. All rights reserved.",
     "newsletter": {
@@ -438,6 +439,44 @@
       "errorGeneric": "Something went wrong. Try again or email contact@abbeal.com."
     },
     "status": "All systems operational"
+  },
+  "cookieBanner": {
+    "title": "// Cookies & consent",
+    "body": "We use a few cookies. Strictly necessary (always on), analytics, marketing and functional. You decide.",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject all",
+    "customize": "→ Customize my preferences",
+    "preferencesHref": "/preferences-cookies"
+  },
+  "cookiePrefs": {
+    "h1": "Cookie preferences",
+    "updated": "Updated May 4, 2026",
+    "intro": "You decide which cookies we can use during your visit. Your preferences are stored for 6 months and you can come back anytime to change or withdraw them. Each choice is logged to comply with GDPR and Quebec's Law 25.",
+    "categories": {
+      "necessary": {
+        "title": "Strictly necessary",
+        "body": "Cookies required for the site to work: language preference, security, load balancing. They don't track you and are never shared with third parties."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "body": "Google Analytics 4 (anonymized) to understand how the site is used: page views, journeys, traffic sources. No advertising, no personalised targeting."
+      },
+      "ad": {
+        "title": "Marketing & advertising",
+        "body": "Cookies to measure the effectiveness of external campaigns (LinkedIn, Google Ads). No third-party cookie is active until you agree here."
+      },
+      "functional": {
+        "title": "Functional",
+        "body": "UX preferences kept between visits (dark/light theme, scroll position, form drafts). Improves the experience without tracking."
+      }
+    },
+    "saveCustom": "Save my choices",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject all",
+    "withdraw": "Withdraw consent",
+    "alwaysOn": "Always on",
+    "savedToast": "✓ Preferences saved",
+    "withdrawnToast": "✓ Consent withdrawn, the banner will reappear on your next visit"
   },
   "mobbeal": {
     "nav": "Mobbeal",

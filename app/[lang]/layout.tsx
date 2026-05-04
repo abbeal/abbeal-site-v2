@@ -9,6 +9,7 @@ import { hasLocale, htmlLang, locales, type Locale } from "@/lib/i18n";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { CookieBanner } from "@/components/cookies/CookieBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -207,6 +208,19 @@ var t=m?m[1]:(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)
 if(t==='dark')document.documentElement.classList.add('dark');
 }catch(e){}})();`;
 
+  // Cookie banner labels, plucked from the cookieBanner dict so the
+  // banner can render purely client-side without re-fetching the dict.
+  const banner = (dict as unknown as {
+    cookieBanner: {
+      title: string;
+      body: string;
+      acceptAll: string;
+      rejectAll: string;
+      customize: string;
+      preferencesHref: string;
+    };
+  }).cookieBanner;
+
   return (
     <html
       lang={htmlLang[lang as Locale]}
@@ -227,6 +241,7 @@ if(t==='dark')document.documentElement.classList.add('dark');
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
+        <CookieBanner locale={lang as Locale} labels={banner} />
       </body>
     </html>
   );

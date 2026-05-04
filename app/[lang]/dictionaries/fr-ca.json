@@ -427,7 +427,8 @@
     "legal": {
       "mentions": "Mentions légales",
       "privacy": "Confidentialité",
-      "cgu": "CGU"
+      "cgu": "CGU",
+      "cookies": "Témoins"
     },
     "copyright": "© 2026 Abbeal. Tous droits réservés.",
     "newsletter": {
@@ -439,6 +440,44 @@
       "errorGeneric": "Erreur. Réessaie ou écris-nous à contact@abbeal.com."
     },
     "status": "Tous les services en marche"
+  },
+  "cookieBanner": {
+    "title": "// Témoins et consentement",
+    "body": "On utilise quelques témoins (cookies). Strictement nécessaires (toujours actifs), mesure d'audience, marketing et confort. Tu choisis.",
+    "acceptAll": "Tout accepter",
+    "rejectAll": "Tout refuser",
+    "customize": "→ Personnaliser mes préférences",
+    "preferencesHref": "/preferences-cookies"
+  },
+  "cookiePrefs": {
+    "h1": "Préférences de témoins",
+    "updated": "Mis à jour le 4 mai 2026",
+    "intro": "Tu décides quels témoins (cookies) on peut utiliser pendant ta visite. Tes préférences sont conservées 6 mois et tu peux revenir ici en tout temps pour les modifier ou les retirer. Ce que tu choisis est journalisé pour respecter la Loi 25 (Québec) et le RGPD.",
+    "categories": {
+      "necessary": {
+        "title": "Strictement nécessaires",
+        "body": "Témoins indispensables au fonctionnement du site : préférence de langue, sécurité, équilibrage de charge. Ils ne tracent pas et ne sont jamais transmis à des tiers."
+      },
+      "analytics": {
+        "title": "Mesure d'auditoire",
+        "body": "Google Analytics 4 (anonymisé) pour comprendre comment le site est utilisé : pages vues, parcours, sources de trafic. Aucune publicité, aucun ciblage personnalisé."
+      },
+      "ad": {
+        "title": "Marketing et publicité",
+        "body": "Témoins pour mesurer l'efficacité de campagnes externes (LinkedIn, Google Ads). Aucun témoin tiers actif tant que tu ne donnes pas ton accord ici."
+      },
+      "functional": {
+        "title": "Confort d'utilisation",
+        "body": "Préférences UX persistées entre visites (thème sombre/clair, position défilement, formulaires en cours). Améliore l'expérience sans tracer."
+      }
+    },
+    "saveCustom": "Enregistrer mes choix",
+    "acceptAll": "Tout accepter",
+    "rejectAll": "Tout refuser",
+    "withdraw": "Retirer mon consentement",
+    "alwaysOn": "Toujours actif",
+    "savedToast": "✓ Préférences enregistrées",
+    "withdrawnToast": "✓ Consentement retiré, le bandeau réapparaîtra à ta prochaine visite"
   },
   "mobbeal": {
     "nav": "Mobbeal",

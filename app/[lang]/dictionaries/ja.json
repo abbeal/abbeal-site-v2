@@ -426,7 +426,8 @@
     "legal": {
       "mentions": "法的通知",
       "privacy": "プライバシー",
-      "cgu": "利用規約"
+      "cgu": "利用規約",
+      "cookies": "Cookie"
     },
     "copyright": "© 2026 Abbeal. All rights reserved.",
     "newsletter": {
@@ -438,6 +439,44 @@
       "errorGeneric": "エラーが発生しました。再試行するか、contact@abbeal.com までご連絡ください。"
     },
     "status": "全サービス稼働中"
+  },
+  "cookieBanner": {
+    "title": "// Cookieと同意",
+    "body": "当サイトでは一部のCookieを使用します。必須（常時有効）、アクセス解析、マーケティング、ユーザビリティ向上。お客様が選択できます。",
+    "acceptAll": "すべて許可",
+    "rejectAll": "すべて拒否",
+    "customize": "→ 設定をカスタマイズ",
+    "preferencesHref": "/preferences-cookies"
+  },
+  "cookiePrefs": {
+    "h1": "Cookie設定",
+    "updated": "2026年5月4日更新",
+    "intro": "訪問中に使用するCookieを選択できます。設定は6ヶ月間保存され、いつでも変更・撤回できます。GDPRおよびケベック州法25号に準拠するため、各選択はログに記録されます。",
+    "categories": {
+      "necessary": {
+        "title": "必須",
+        "body": "サイトの動作に不可欠なCookie：言語設定、セキュリティ、負荷分散。追跡せず、第三者と共有されません。"
+      },
+      "analytics": {
+        "title": "アクセス解析",
+        "body": "Google Analytics 4（匿名化）：ページビュー、導線、トラフィックソースを分析。広告やパーソナライズドターゲティングは行いません。"
+      },
+      "ad": {
+        "title": "マーケティング・広告",
+        "body": "外部キャンペーン（LinkedIn、Google Ads）の効果測定用Cookie。お客様の同意がない限り、サードパーティCookieは有効になりません。"
+      },
+      "functional": {
+        "title": "ユーザビリティ向上",
+        "body": "訪問間で保持するUX設定（ダーク/ライトテーマ、スクロール位置、入力中フォーム）。追跡なしで体験を改善します。"
+      }
+    },
+    "saveCustom": "選択を保存",
+    "acceptAll": "すべて許可",
+    "rejectAll": "すべて拒否",
+    "withdraw": "同意を撤回",
+    "alwaysOn": "常時有効",
+    "savedToast": "✓ 設定を保存しました",
+    "withdrawnToast": "✓ 同意を撤回しました。次回訪問時にバナーが再表示されます"
   },
   "mobbeal": {
     "nav": "Mobbeal",

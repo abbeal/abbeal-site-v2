@@ -16,7 +16,7 @@ type FooterDict = {
     follow: { title: string; linkedin: string; youtube: string };
     navTitle: string;
     legalTitle: string;
-    legal: { mentions: string; privacy: string; cgu?: string };
+    legal: { mentions: string; privacy: string; cgu?: string; cookies?: string };
     copyright: string;
     newsletter: {
       title: string;
@@ -276,6 +276,14 @@ export function Footer({
                   className="hover:text-[var(--color-ink)]"
                 >
                   {d.footer.legal.cgu ?? "CGU"}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`${p}/preferences-cookies`}
+                  className="hover:text-[var(--color-ink)]"
+                >
+                  {d.footer.legal.cookies ?? "Cookies"}
                 </Link>
               </li>
             </ul>
