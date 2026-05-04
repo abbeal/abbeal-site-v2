@@ -8,6 +8,7 @@ import { getDictionary } from "./dictionaries";
 import { hasLocale, htmlLang, locales, type Locale } from "@/lib/i18n";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -225,6 +226,7 @@ if(t==='dark')document.documentElement.classList.add('dark');
         <Footer locale={lang as Locale} dict={dict} />
         <Analytics />
         <SpeedInsights />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
       </body>
     </html>
   );
