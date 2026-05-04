@@ -195,11 +195,26 @@ export default async function RootLayout({
     ],
   };
 
+  // Anti-flash dark-mode bootstrap. Runs before body paints, reads the
+  // `theme` cookie (or falls back to prefers-color-scheme) and adds the
+  // `dark` class to <html> so first paint matches the user's preference.
+  // Wrapped in IIFE + try/catch so a corrupt cookie can never break the page.
+  const themeBootstrap = `
+(function(){try{
+var m=document.cookie.match(/(?:^|;\\s*)theme=(dark|light)/);
+var t=m?m[1]:(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+if(t==='dark')document.documentElement.classList.add('dark');
+}catch(e){}})();`;
+
   return (
     <html
       lang={htmlLang[lang as Locale]}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
+      </head>
       <body className="min-h-full flex flex-col grain bg-[var(--color-bg-light)] text-[var(--color-ink)]">
         <script
           type="application/ld+json"

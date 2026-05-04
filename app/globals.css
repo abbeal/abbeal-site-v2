@@ -41,6 +41,25 @@
   color-scheme: light;
 }
 
+/* Dark mode — toggled by adding `.dark` class to <html> via ThemeToggle.
+   Anti-flash script in layout.tsx applies the class before first paint.
+   We only override the semantic CSS variables; the brand teal/mint stay the
+   same to keep brand identity coherent across modes. Sections previously
+   styled as "dark on light" (bg-ink + text-bg-light) automatically invert
+   here, which is the desired behavior — those sections stay distinctive
+   either way (light strip on a light page, dark strip on a dark page). */
+html.dark {
+  color-scheme: dark;
+  --color-bg-light: #0a0e12;
+  --color-bg-cream: #13181d;
+  --color-bg-paper: #1a2027;
+  --color-ink: #f1ede2;
+  --color-ink-soft: #bfb8a8;
+  --color-muted: #7a8088;
+  --color-border: #2a3138;
+  --color-brand-teal-fg: #f1ede2;
+}
+
 html {
   background: var(--background);
   color: var(--foreground);
@@ -173,6 +192,19 @@ body {
 }
 
 .logo-mono:hover {
+  filter: none;
+  opacity: 1;
+}
+
+/* In dark mode the logos are dark-on-dark with brightness(0.45). Flip to
+   brightness above 1 + invert so the marquee stays legible. Hover restores
+   the brand colour as in light mode. */
+html.dark .logo-mono {
+  filter: grayscale(1) brightness(1.65) invert(0.92);
+  opacity: 0.65;
+}
+
+html.dark .logo-mono:hover {
   filter: none;
   opacity: 1;
 }
