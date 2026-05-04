@@ -9,6 +9,7 @@ type Dict = {
   legal: {
     cgu: {
       h1: string;
+      metaDescription: string;
       updated: string;
       intro: string;
       sections: { title: string; body: string | string[] }[];
@@ -27,6 +28,7 @@ export async function generateMetadata({
   const dict = (await getDictionary(lang as Locale)) as Dict;
   return {
     title: `${dict.legal.cgu.h1} · Abbeal`,
+    description: dict.legal.cgu.metaDescription,
     robots: { index: true },
     alternates: pageAlternates(lang as Locale, "/cgu"),
   };

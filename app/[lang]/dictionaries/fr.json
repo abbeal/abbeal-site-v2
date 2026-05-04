@@ -687,6 +687,8 @@
     "tape": "// Contact",
     "h1": "Parler à un architecte.",
     "subtitle": "30 minutes, sans engagement. On comprend votre contexte, on vous dit honnêtement si on peut aider.",
+    "metaTitle": "Contact Abbeal — Paris · Montréal · Tokyo · Réponse sous 24h",
+    "metaDescription": "Parle à un architecte Abbeal en 24h. 3 hubs : Paris, Montréal, Tokyo. Squads seniors, IA en production, livraison continue 24/7. Cadrage gratuit.",
     "form": {
       "name": "Nom",
       "email": "Email professionnel",
@@ -829,6 +831,7 @@
     },
     "cgu": {
       "h1": "Conditions générales d'utilisation",
+      "metaDescription": "Conditions générales d'utilisation du site abbeal.com — accès, propriété intellectuelle, responsabilité, droit applicable. Mises à jour avril 2026.",
       "updated": "Mise à jour : avril 2026",
       "intro": "Les présentes conditions régissent l'usage du site abbeal.com. En accédant au site, l'utilisateur les accepte sans réserve.",
       "sections": [
@@ -922,8 +925,8 @@
   },
   "about": {
     "meta": {
-      "title": "À propos · Abbeal",
-      "description": "Abbeal est un pôle d'ingénierie tri-geo fondé en 2015. Paris, Montréal, Tokyo. 100+ boîtes accompagnées, 50+ expatriés, 10+ ans d'engineering."
+      "title": "L'équipe Abbeal — 30+ ingénieurs seniors · Paris · Montréal · Tokyo",
+      "description": "Abbeal : pôle d'ingénierie tri-géo fondé en 2015. 30+ ingénieurs seniors (12+ ans XP moyenne), 3 hubs Paris · Montréal · Tokyo. 100+ clients accompagnés. Featured JETRO."
     },
     "tape": "// À propos",
     "h1Top": "Construit pour durer.",

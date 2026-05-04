@@ -701,6 +701,8 @@
     "tape": "// Contact",
     "h1": "Talk to an architect.",
     "subtitle": "30 minutes, no commitment. We understand your context, honestly tell you if we can help.",
+    "metaTitle": "Contact Abbeal — Paris · Montréal · Tokyo · 24h Response",
+    "metaDescription": "Talk to an Abbeal architect within 24h. 3 hubs: Paris, Montréal, Tokyo. Senior squads, AI in production, 24/7 delivery. Free scoping call.",
     "form": {
       "name": "Name",
       "email": "Work email",
@@ -843,6 +845,7 @@
     },
     "cgu": {
       "h1": "Terms of Service",
+      "metaDescription": "Terms of service for the abbeal.com website — access, intellectual property, liability, applicable law. Updated April 2026.",
       "updated": "Updated: April 2026",
       "intro": "These terms govern the use of abbeal.com. By accessing the site, the user accepts them without reservation.",
       "sections": [
@@ -936,8 +939,8 @@
   },
   "about": {
     "meta": {
-      "title": "About · Founded in Paris 2015, expanding through Tokyo & Montréal",
-      "description": "Tri-geo engineering pod founded in Paris in 2015, expanded to Tokyo and Montréal. Featured in JETRO case study. 100+ companies shipped with, 50+ engineers relocated through Mobbeal, 10+ years of engineering."
+      "title": "The Abbeal Team — 30+ Senior Engineers · Paris · Montréal · Tokyo",
+      "description": "Abbeal: tri-geo engineering pod founded in 2015. 30+ senior engineers (12+ years avg XP), 3 hubs Paris · Montréal · Tokyo. 100+ clients shipped with. JETRO featured."
     },
     "tape": "// About",
     "h1Top": "Built to last.",

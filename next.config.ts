@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
       { source: "/projets", destination: "/fr/cases", permanent: true },
       { source: "/projets/:slug*", destination: "/fr/cases", permanent: true },
       { source: "/equipe", destination: "/fr/about", permanent: true },
+      { source: "/team", destination: "/en/about", permanent: true },
       { source: "/cookies", destination: "/fr/confidentialite", permanent: true },
       // Anciens permaliens WordPress ?p=NNNN — catch-all → home FR
       {

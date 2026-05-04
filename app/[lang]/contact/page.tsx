@@ -12,6 +12,8 @@ type Dict = {
     tape: string;
     h1: string;
     subtitle: string;
+    metaTitle: string;
+    metaDescription: string;
     calendlyTitle: string;
     calendlySub: string;
     altTitle: string;
@@ -41,9 +43,17 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const dict = (await getDictionary(lang as Locale)) as Dict;
+  // SEO-optimized title + description (different from on-page H1/subtitle).
+  // Title front-loads "Contact Abbeal" + 3 hubs + "Réponse 24h" — addresses
+  // the GSC-observed 0.7% CTR @ pos 2.8 on /contact (90j data).
   return {
-    title: `${dict.contact.h1} · Abbeal`,
-    description: dict.contact.subtitle,
+    title: dict.contact.metaTitle,
+    description: dict.contact.metaDescription,
+    openGraph: {
+      title: dict.contact.metaTitle,
+      description: dict.contact.metaDescription,
+      locale: lang,
+    },
     alternates: pageAlternates(lang as Locale, "/contact"),
   };
 }
@@ -57,11 +67,55 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
   const f = d.form;
   const crumbs = breadcrumbs(locale, [[dict.nav.contact, "/contact"]]);
 
+  // schema.org ContactPage — gives Google a structured signal that this
+  // is the canonical contact entry point + surfaces the 3 hub addresses
+  // for local SEO.
+  const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
+  const contactPageLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${SITE}/${locale}/contact`,
+    name: d.metaTitle,
+    description: d.metaDescription,
+    inLanguage: locale,
+    url: `${SITE}/${locale}/contact`,
+    mainEntity: {
+      "@type": "Organization",
+      name: "Abbeal",
+      url: SITE,
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          contactType: "sales",
+          email: dict.footer.contact.general,
+          availableLanguage: ["French", "English", "Japanese"],
+          areaServed: ["FR", "CA", "JP"],
+        },
+        {
+          "@type": "ContactPoint",
+          contactType: "human resources",
+          email: dict.footer.contact.recruitment,
+          availableLanguage: ["French", "English", "Japanese"],
+          areaServed: ["FR", "CA", "JP"],
+        },
+      ],
+      address: dict.footer.addresses.items.map((office) => ({
+        "@type": "PostalAddress",
+        addressLocality: office.city,
+        streetAddress: office.address,
+      })),
+    },
+  };
+
   return (
     <section className="mx-auto max-w-[1100px] px-6 md:px-10 py-20 md:py-28">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageLd) }}
       />
       <span className="tape-label">{d.tape}</span>
       <h1 className="mt-6 font-semibold tracking-[-0.025em] text-[clamp(2.25rem,5vw,4rem)] leading-[1.05]">

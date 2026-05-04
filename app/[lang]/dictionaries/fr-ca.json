@@ -688,6 +688,8 @@
     "tape": "// Contact",
     "h1": "Parler à un architecte.",
     "subtitle": "30 minutes, sans engagement. On comprend votre contexte, on vous dit honnêtement si on peut aider.",
+    "metaTitle": "Contactez Abbeal — Montréal · Paris · Tokyo · Réponse en 24h",
+    "metaDescription": "Parle à un architecte Abbeal en 24h. Pôle Montréal (4388 Saint-Denis). Squad senior, IA en production, livraison continue. Cadrage gratuit, sans engagement.",
     "form": {
       "name": "Nom",
       "email": "Courriel professionnel",
@@ -830,6 +832,7 @@
     },
     "cgu": {
       "h1": "Conditions générales d'utilisation",
+      "metaDescription": "Conditions générales d'utilisation du site abbeal.com — accès, propriété intellectuelle, responsabilité, droit applicable. Mises à jour avril 2026.",
       "updated": "Mise à jour : avril 2026",
       "intro": "Les présentes conditions régissent l'usage du site abbeal.com. En accédant au site, l'utilisateur les accepte sans réserve.",
       "sections": [
@@ -923,8 +926,8 @@
   },
   "about": {
     "meta": {
-      "title": "À propos · Pôle Amériques d'Abbeal à Montréal depuis 2023",
-      "description": "Bureau Montréal ouvert en 2023 sur la rue Saint-Denis. Pôle Amériques d'Abbeal, fondé à Paris en 2015. Présence à Tokyo, Montréal, Paris. 100+ compagnies accompagnées."
+      "title": "L'équipe Abbeal — 30+ ingénieur·es seniors · Montréal · Paris · Tokyo",
+      "description": "Abbeal : pôle d'ingénierie tri-géo. Bureau Montréal (4388 Saint-Denis) depuis 2023. 30+ ingénieur·es seniors (12+ ans d'XP moyenne), 3 pôles. 100+ compagnies accompagnées."
     },
     "tape": "// À propos",
     "h1Top": "Construit pour durer.",

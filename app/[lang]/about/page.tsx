@@ -80,6 +80,37 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
     sameAs: sameAsByName[l.name] ?? [],
   }));
 
+  // schema.org AboutPage — addresses the GSC observation that /about has
+  // a strong position (2.1) but a low CTR (2.9%). The structured signal
+  // helps Google show a richer SERP card with the team headline.
+  const aboutPageLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${SITE}/${locale}/about`,
+    name: d.meta.title,
+    description: d.meta.description,
+    inLanguage: locale,
+    url: `${SITE}/${locale}/about`,
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: `${SITE}/team/sebastien.jpg`,
+    },
+    about: {
+      "@type": "Organization",
+      "@id": `${SITE}#organization`,
+      name: "Abbeal",
+      url: SITE,
+      foundingDate: "2015",
+      // TODO_VERIFY · Vianney peut confirmer le headcount exact 2026.
+      numberOfEmployees: { "@type": "QuantitativeValue", value: "30+" },
+      founders: d.leaders.map((l) => ({ "@type": "Person", name: l.name })),
+      sameAs: [
+        "https://www.linkedin.com/company/abbeal",
+        "https://www.youtube.com/@abbeal8017",
+      ],
+    },
+  };
+
   const crumbs = breadcrumbs(locale, [[dict.nav.about, "/about"]]);
 
   return (
@@ -91,6 +122,10 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(p) }}
         />
       ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
