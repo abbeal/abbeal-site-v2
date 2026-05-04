@@ -10,6 +10,7 @@
     "expertises": "Expertises",
     "stories": "Stories",
     "mobbeal": "Mobbeal",
+    "mobbealHint": "Programme de mobilité internationale pour ingénieurs (Tokyo · Montréal · Paris)",
     "insights": "Insights",
     "careers": "Carrières",
     "contact": "Contact",
@@ -101,7 +102,7 @@
   },
   "services": {
     "tape": "// 04 · Comment on intervient",
-    "title": "Trois façons de bosser ensemble.",
+    "title": "Trois façons de collaborer.",
     "subtitle": "On intervient là où le risque technique est élevé et où la vitesse compte.",
     "items": [
       {
@@ -195,6 +196,9 @@
         ]
       }
     ]
+  },
+  "techRadarHome": {
+    "deepLinkLabel": "Voir l'édition complète"
   },
   "techRadar": {
     "tape": "// 06 · Tech radar 2026",
@@ -356,7 +360,7 @@
       "cta": "Parler à un architecte"
     },
     "engineer": {
-      "title": "Vous voulez bosser sur la tech qui compte.",
+      "title": "Vous voulez travailler sur la tech qui compte.",
       "body": "Tokyo, Montréal, Paris. Senior squads, projets complexes, mobilité internationale via Mobbeal.",
       "cta": "Rejoindre l'équipe"
     }
@@ -689,7 +693,7 @@
       "company": "Entreprise",
       "role": "Rôle",
       "message": "Votre contexte",
-      "messagePlaceholder": "Stack actuelle, pain point, timeline…",
+      "messagePlaceholder": "Contexte technique, enjeux, calendrier…",
       "submit": "Envoyer",
       "success": "Message reçu. On revient vers vous sous 24h.",
       "error": "Erreur d'envoi. Réessaie ou écris à contact@abbeal.com."
@@ -700,12 +704,60 @@
     "calendlySub": "Sans engagement. On comprend votre contexte, on vous dit honnêtement si on peut aider.",
     "altTitle": "Ou écrivez-nous"
   },
+  "careersHome": {
+    "tape": "// Postes ouverts",
+    "title": "On recrute.",
+    "updated": "Postes actifs · mis à jour le 4 mai 2026",
+    "cta": "Voir toutes les offres"
+  },
   "careers": {
     "tape": "// Carrières",
     "h1": "Rejoindre l'équipe.",
     "subtitle": "Quatre rôles ouverts. Senior-only. Client stable, delivery propre, mobilité internationale possible via Mobbeal.",
     "applyTo": "Candidater",
     "applyEmail": "recrutement@abbeal.com",
+    "processTape": "// Comment on recrute",
+    "processTitle": "1 candidat sur ~50 reçoit une offre. Voici les 5 étapes.",
+    "processIntro": "Pas de leetcode artificiel, pas de quiz piège. On veut savoir si tu peux livrer du logiciel critique avec rigueur et autonomie. Le process tient en 2-3 semaines bout en bout, et tu as un retour à chaque étape — qu'il soit positif ou non.",
+    "processStats": [
+      { "value": "~50 / 1", "label": "candidats reçus / offre envoyée" },
+      { "value": "2-3 sem", "label": "durée moyenne du process" },
+      { "value": "75%", "label": "acceptance rate des offres" },
+      { "value": "100%", "label": "feedback à chaque étape" }
+    ],
+    "processSteps": [
+      {
+        "number": "01",
+        "title": "Screening intro",
+        "duration": "30 min · visio",
+        "body": "Call avec un Lead Engineer Abbeal. On qualifie tes attentes, ton parcours, ton rapport au métier. Pas de quiz technique : une vraie conversation. À l'issue, tu sais si on continue ensemble."
+      },
+      {
+        "number": "02",
+        "title": "Tech challenge",
+        "duration": "3-4h · sur ta machine",
+        "body": "Un projet open, sur ton temps, à rendre sous 5 jours. Pas de leetcode déconnecté du métier. On évalue ton code en conditions réelles : lecture de l'énoncé, choix d'archi, tests, lisibilité."
+      },
+      {
+        "number": "03",
+        "title": "System design",
+        "duration": "1h · visio",
+        "body": "Tu nous pitches une architecture que tu connais en profondeur (un projet récent, ou un sujet maison). On creuse les trade-offs, les contraintes, les pivots. On veut voir ta profondeur sur un domaine que tu maîtrises, pas tester ton bachotage."
+      },
+      {
+        "number": "04",
+        "title": "Culture fit",
+        "duration": "45 min · visio ou présentiel",
+        "body": "Avec un fondateur (Sébastien ou Vianney). On valide l'alignement : ownership, qualité, rapport au client, mobilité éventuelle via Mobbeal. C'est aussi ton moment pour poser toutes les questions difficiles."
+      },
+      {
+        "number": "05",
+        "title": "Références + offre",
+        "duration": "5-7 jours",
+        "body": "Deux références techniques appelées (avec ton accord). Si tout colle, offre détaillée envoyée — package complet, conditions de mobilité Mobbeal éventuelle, plan d'onboarding. Tu as 7 jours pour décider."
+      }
+    ],
+    "processFootnote": "TODO_VERIFY · Les chiffres ci-dessus reflètent notre cohorte de recrutement 2025 (estimés). Mise à jour annuelle.",
     "roles": [
       {
         "slug": "senior-fullstack",
@@ -953,6 +1005,10 @@
     "ctaTitle": "On parle ?",
     "ctaSub": "30 minutes avec un architecte. Sans engagement.",
     "ctaLabel": "Réserver un appel"
+  },
+  "casesCommon": {
+    "templateBadge": "Modèle sectoriel",
+    "templateNote": "Cet engagement n'est pas associé à un client public — il décrit notre méthodologie type sur ce périmètre. Les chiffres et la durée reflètent une intervention représentative."
   },
   "casesIndex": {
     "tape": "// Cases",

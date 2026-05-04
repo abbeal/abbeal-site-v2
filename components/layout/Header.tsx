@@ -29,13 +29,17 @@ export function Header({
   const d = dict as unknown as Dict;
   const prefix = `/${locale}`;
 
+  // Hint shown as native tooltip on hover (and read by screen readers).
+  // Mobbeal especially needs it — the brand alone doesn't explain the offer.
+  const navHint = (dict as unknown as { nav: { mobbealHint?: string } }).nav
+    .mobbealHint;
   const items = [
-    { label: d.nav.services, href: `${prefix}#services` },
-    { label: d.nav.expertises, href: `${prefix}#expertises` },
-    { label: d.nav.stories, href: `${prefix}/cases` },
-    { label: d.nav.mobbeal, href: `${prefix}/mobbeal` },
-    { label: d.nav.insights, href: `${prefix}/insights` },
-    { label: d.nav.careers, href: `${prefix}/careers` },
+    { label: d.nav.services, href: `${prefix}#services`, title: undefined },
+    { label: d.nav.expertises, href: `${prefix}#expertises`, title: undefined },
+    { label: d.nav.stories, href: `${prefix}/cases`, title: undefined },
+    { label: d.nav.mobbeal, href: `${prefix}/mobbeal`, title: navHint },
+    { label: d.nav.insights, href: `${prefix}/insights`, title: undefined },
+    { label: d.nav.careers, href: `${prefix}/careers`, title: undefined },
   ];
 
   return (
@@ -57,6 +61,7 @@ export function Header({
             <Link
               key={item.href}
               href={item.href}
+              title={item.title}
               className="text-sm text-[var(--color-ink-soft)] hover:text-[var(--color-ink)] transition-colors"
             >
               {item.label}

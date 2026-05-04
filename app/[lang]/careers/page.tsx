@@ -21,6 +21,17 @@ type Dict = {
       subject: string;
       body: string;
     }[];
+    processTape: string;
+    processTitle: string;
+    processIntro: string;
+    processStats: { value: string; label: string }[];
+    processSteps: {
+      number: string;
+      title: string;
+      duration: string;
+      body: string;
+    }[];
+    processFootnote: string;
   };
 };
 
@@ -61,9 +72,74 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/careers
         </p>
       </div>
 
-      <ul className="mt-16 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
+      {/* Process recrutement — encart "1 candidat sur ~50" qui étaye
+          la promesse "top 1%" en exposant le funnel */}
+      <section
+        id="process"
+        className="mt-20 pt-16 border-t border-[var(--color-border)]"
+      >
+        <div className="max-w-3xl">
+          <span className="tape-label">{d.processTape}</span>
+          <h2 className="mt-6 font-semibold tracking-[-0.025em] text-[clamp(1.75rem,3.5vw,2.75rem)] leading-[1.1]">
+            {d.processTitle}
+          </h2>
+          <p className="mt-5 text-[15px] md:text-base text-[var(--color-ink-soft)] leading-relaxed">
+            {d.processIntro}
+          </p>
+        </div>
+
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          {d.processStats.map((s, i) => (
+            <div key={i}>
+              <p className="font-sans font-semibold tracking-[-0.02em] text-2xl md:text-3xl text-[var(--color-ink)]">
+                {s.value}
+              </p>
+              <div className="mt-3 flex items-start gap-2">
+                <span
+                  aria-hidden
+                  className="mt-2 inline-block h-px w-6 bg-[var(--color-brand-teal)]"
+                />
+                <p className="font-mono text-[11px] uppercase tracking-wider text-[var(--color-muted)] leading-relaxed">
+                  {s.label}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <ol className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          {d.processSteps.map((step) => (
+            <li
+              key={step.number}
+              className="border border-[var(--color-border)] bg-[var(--color-bg-paper)] p-5"
+            >
+              <p className="font-mono text-xs tracking-widest text-[var(--color-brand-teal)]">
+                // {step.number}
+              </p>
+              <h3 className="mt-3 text-lg font-semibold tracking-tight text-[var(--color-ink)]">
+                {step.title}
+              </h3>
+              <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-[var(--color-muted)]">
+                {step.duration}
+              </p>
+              <p className="mt-3 text-[14px] text-[var(--color-ink-soft)] leading-relaxed">
+                {step.body}
+              </p>
+            </li>
+          ))}
+        </ol>
+
+        <p className="mt-6 font-mono text-[10px] uppercase tracking-wider text-[var(--color-muted)]/70">
+          {d.processFootnote}
+        </p>
+      </section>
+
+      <ul
+        id="roles"
+        className="mt-20 pt-16 border-t border-[var(--color-border)] divide-y divide-[var(--color-border)]"
+      >
         {d.roles.map((role, i) => (
-          <li key={role.slug} className="group">
+          <li id={role.slug} key={role.slug} className="group scroll-mt-24">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 py-10 md:py-12">
               <div className="md:col-span-1">
                 <span className="font-mono text-xs tracking-widest text-[var(--color-muted)]">

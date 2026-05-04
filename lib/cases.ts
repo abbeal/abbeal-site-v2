@@ -23,6 +23,11 @@ type Translatable<T> = { fr: T } & Partial<Record<Exclude<Locale, "fr">, T>>;
 export type CaseStudy = {
   slug: string;
   featured: boolean; // 4 cases mises en avant
+  /** True = exemple sectoriel basé sur notre méthodologie, pas un client
+   *  identifié. Affiche un badge "Modèle sectoriel" pour rester honnête
+   *  vs un vrai retour d'engagement. À retirer dès que le cas est associé
+   *  à un client public ou anonymisé avec accord. */
+  template?: boolean;
   sector: Translatable<string>; // "FinTech", "Mobilité", "Robotique", …
   geo: string; // "Paris", "Tokyo", "Tri-geo", "Montréal"
   duration: string; // "9 mois", "14 mois"
@@ -305,6 +310,7 @@ export const cases: CaseStudy[] = [
   {
     slug: "loi-25-fintech-conformite-6-semaines",
     featured: false,
+    template: true,
     sector: { fr: "FinTech", en: "FinTech", ja: "フィンテック", "fr-ca": "Techno financière" },
     geo: "Montréal",
     duration: "6 semaines",

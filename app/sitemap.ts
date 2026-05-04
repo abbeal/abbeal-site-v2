@@ -4,6 +4,7 @@ import { articles } from "@/lib/articles";
 import { cases } from "@/lib/cases";
 import { services } from "@/lib/services";
 import { glossary } from "@/lib/glossary";
+import { TECH_RADAR_EDITIONS } from "@/lib/tech-radar";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
 
@@ -122,6 +123,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: "monthly",
         priority: 0.5,
         alternates: { languages: altLanguages(`/glossaire/${g.slug}`) },
+      });
+    }
+  }
+
+  // Tech Radar — archive landing + each edition (high-value SEO asset:
+  // strong opinions, niche keywords like "Adopt RAG production",
+  // "Hold low-code", etc.)
+  for (const locale of locales) {
+    entries.push({
+      url: `${SITE_URL}/${locale}/insights/tech-radar`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+      alternates: { languages: altLanguages("/insights/tech-radar") },
+    });
+  }
+  for (const edition of TECH_RADAR_EDITIONS) {
+    for (const locale of locales) {
+      entries.push({
+        url: `${SITE_URL}/${locale}/insights/tech-radar/${edition.slug}`,
+        lastModified: new Date(edition.publishedAt),
+        changeFrequency: "yearly",
+        priority: 0.7,
+        alternates: {
+          languages: altLanguages(`/insights/tech-radar/${edition.slug}`),
+        },
       });
     }
   }

@@ -10,6 +10,7 @@
     "expertises": "Expertise",
     "stories": "Stories",
     "mobbeal": "Mobbeal",
+    "mobbealHint": "International mobility programme for engineers (Tokyo · Montréal · Paris)",
     "insights": "Insights",
     "careers": "Careers",
     "contact": "Contact",
@@ -195,6 +196,9 @@
         ]
       }
     ]
+  },
+  "techRadarHome": {
+    "deepLinkLabel": "See the full edition"
   },
   "techRadar": {
     "tape": "// 06 · Tech radar 2026",
@@ -714,8 +718,56 @@
     "calendlySub": "No commitment. We understand your context, honestly tell you if we can help.",
     "altTitle": "Or write to us"
   },
+  "careersHome": {
+    "tape": "// Open roles",
+    "title": "We're hiring.",
+    "updated": "Active roles · updated May 4, 2026",
+    "cta": "See all openings"
+  },
   "careers": {
     "tape": "// Careers",
+    "processTape": "// How we hire",
+    "processTitle": "1 in ~50 candidates gets an offer. Here are the 5 steps.",
+    "processIntro": "No artificial leetcode, no trick quizzes. We want to know whether you can ship critical software with rigor and autonomy. The whole process takes 2-3 weeks end-to-end, and you get feedback at every step — yes or no.",
+    "processStats": [
+      { "value": "~50 / 1", "label": "candidates seen / offers sent" },
+      { "value": "2-3 wks", "label": "average process duration" },
+      { "value": "75%", "label": "offer acceptance rate" },
+      { "value": "100%", "label": "feedback at every step" }
+    ],
+    "processSteps": [
+      {
+        "number": "01",
+        "title": "Screening intro",
+        "duration": "30 min · video call",
+        "body": "Call with an Abbeal Lead Engineer. We qualify your expectations, background, relationship to the craft. No technical quiz — a real conversation. By the end, you know whether we continue together."
+      },
+      {
+        "number": "02",
+        "title": "Tech challenge",
+        "duration": "3-4h · on your machine",
+        "body": "An open project, on your time, due within 5 days. No leetcode disconnected from the actual work. We evaluate your code under real conditions: prompt reading, architecture choices, tests, readability."
+      },
+      {
+        "number": "03",
+        "title": "System design",
+        "duration": "1h · video call",
+        "body": "You walk us through an architecture you know in depth (a recent project, or an in-house topic). We dig into trade-offs, constraints, pivots. We want to see your depth on a domain you master — not test your cramming."
+      },
+      {
+        "number": "04",
+        "title": "Culture fit",
+        "duration": "45 min · video or in-person",
+        "body": "With a founder (Sébastien or Vianney). We validate alignment: ownership, quality, client relationship, potential international mobility via Mobbeal. Your moment to ask all the hard questions."
+      },
+      {
+        "number": "05",
+        "title": "References + offer",
+        "duration": "5-7 days",
+        "body": "Two technical references called (with your consent). If everything fits, a detailed offer is sent — full package, Mobbeal mobility conditions if applicable, onboarding plan. You have 7 days to decide."
+      }
+    ],
+    "processFootnote": "TODO_VERIFY · The numbers above reflect our 2025 recruitment cohort (estimated). Updated yearly.",
     "h1": "Join the team.",
     "subtitle": "Four roles open. Senior-only. Stable clients, clean delivery, international mobility available via Mobbeal.",
     "applyTo": "Apply",
@@ -972,6 +1024,10 @@
     "ctaTitle": "Let's talk?",
     "ctaSub": "30 minutes with an architect. No commitment.",
     "ctaLabel": "Book a call"
+  },
+  "casesCommon": {
+    "templateBadge": "Sector template",
+    "templateNote": "This engagement is not tied to a public client — it describes our typical methodology for this scope. Figures and timeline reflect a representative intervention."
   },
   "casesIndex": {
     "tape": "// Cases",

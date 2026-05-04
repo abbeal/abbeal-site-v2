@@ -25,6 +25,11 @@ type RadarDict = {
   };
 };
 
+type DeepLink = {
+  href: string;
+  label: string;
+};
+
 const RING_ORDER: Ring[] = ["adopt", "trial", "assess", "hold"];
 
 const RING_STYLES: Record<
@@ -68,7 +73,17 @@ const CATEGORY_ORDER: Filter[] = [
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
-export function TechRadar({ dict }: { dict: Record<string, unknown> }) {
+export function TechRadar({
+  dict,
+  deepLink,
+}: {
+  dict: Record<string, unknown>;
+  /** When provided, shows a CTA pointing to the dedicated edition page
+   *  (so the homepage section feels like a teaser, the full page captures
+   *  long-tail SEO traffic on the permalink). Pass undefined when this
+   *  component is itself rendered on the dedicated page. */
+  deepLink?: DeepLink;
+}) {
   const d = dict as unknown as RadarDict;
   const [activeFilter, setActiveFilter] = useState<Filter>("all");
 
@@ -184,6 +199,25 @@ export function TechRadar({ dict }: { dict: Record<string, unknown> }) {
             );
           })}
         </div>
+
+        {deepLink && (
+          <div className="mt-12 pt-8 border-t border-[var(--color-border)] flex justify-end">
+            <a
+              href={deepLink.href}
+              className="group inline-flex items-center gap-1.5 font-mono text-sm text-[var(--color-ink-soft)] hover:text-[var(--color-brand-teal)] transition-colors"
+            >
+              <span className="border-b border-dashed border-[var(--color-ink-soft)]/40 group-hover:border-[var(--color-brand-teal)]/60 transition-colors pb-0.5">
+                {deepLink.label}
+              </span>
+              <span
+                aria-hidden
+                className="inline-block transition-transform duration-300 group-hover:translate-x-1.5"
+              >
+                →
+              </span>
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -9,9 +9,11 @@ import { ADN } from "@/components/sections/ADN";
 import { Services } from "@/components/sections/Services";
 import { Expertises } from "@/components/sections/Expertises";
 import { TechRadar } from "@/components/sections/TechRadar";
+import { getCurrentEdition } from "@/lib/tech-radar";
 import { Stories } from "@/components/sections/Stories";
 import { Moments } from "@/components/sections/Moments";
 import { Insights } from "@/components/sections/Insights";
+import { CareersTeaser } from "@/components/sections/CareersTeaser";
 import { CTAFinal } from "@/components/sections/CTAFinal";
 import { getFeaturedArticles, pick } from "@/lib/articles";
 import { getFeaturedCases } from "@/lib/cases";
@@ -30,7 +32,21 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
   const locale = lang as Locale;
   const dict = (await getDictionary(locale)) as Record<string, unknown> & {
     homeFaq: { items: { q: string; a: string }[] };
+    careersHome: { tape: string; title: string; updated: string; cta: string };
+    careers: {
+      roles: {
+        slug: string;
+        title: string;
+        stack: string;
+        location: string;
+      }[];
+    };
+    techRadarHome?: { deepLinkLabel: string };
   };
+
+  const currentRadarEdition = getCurrentEdition();
+  const radarDeepLinkLabel =
+    dict.techRadarHome?.deepLinkLabel ?? "See full edition";
 
   const featuredInsights = getFeaturedArticles().map((a) => ({
     slug: a.slug,
@@ -73,10 +89,21 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       <ADN dict={dict} />
       <Services locale={locale} dict={dict} />
       <Expertises dict={dict} />
-      <TechRadar dict={dict} />
+      <TechRadar
+        dict={dict}
+        deepLink={{
+          href: `/${locale}/insights/tech-radar/${currentRadarEdition.slug}`,
+          label: `${radarDeepLinkLabel} · ${currentRadarEdition.title}`,
+        }}
+      />
       <Stories locale={locale} dict={dict} items={featuredCases} />
       <Moments dict={dict} />
       <Insights locale={locale} dict={dict} items={featuredInsights} />
+      <CareersTeaser
+        locale={locale}
+        teaser={dict.careersHome}
+        roles={dict.careers.roles}
+      />
       <CTAFinal locale={locale} dict={dict} />
     </>
   );

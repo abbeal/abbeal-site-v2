@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { hasLocale, locales, type Locale } from "@/lib/i18n";
+import { getDictionary } from "../../dictionaries";
 import { cases, getCase, getAllCases } from "@/lib/cases";
 import { pick } from "@/lib/articles";
 import { ArticleBlocks } from "@/components/sections/ArticleBlocks";
@@ -36,6 +37,9 @@ export default async function CaseStudyPage({
   const locale = lang as Locale;
   const c = getCase(slug);
   if (!c) notFound();
+  const dict = (await getDictionary(locale)) as {
+    casesCommon?: { templateBadge: string; templateNote: string };
+  };
 
   const title = pick(c.title, locale);
   const excerpt = pick(c.excerpt, locale);
@@ -155,6 +159,17 @@ export default async function CaseStudyPage({
         <h1 className="mt-4 font-semibold tracking-[-0.025em] text-[clamp(2rem,4.5vw,3.75rem)] leading-[1.1]">
           {title}
         </h1>
+
+        {c.template && dict.casesCommon && (
+          <div className="mt-6 max-w-[720px] border border-[var(--color-muted)]/40 bg-[var(--color-bg-cream)]/40 px-4 py-3">
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--color-muted)]">
+              ⚠ {dict.casesCommon.templateBadge}
+            </p>
+            <p className="mt-2 text-sm text-[var(--color-ink-soft)] leading-relaxed">
+              {dict.casesCommon.templateNote}
+            </p>
+          </div>
+        )}
 
         <p className="mt-6 text-lg md:text-xl text-[var(--color-ink-soft)] leading-relaxed max-w-[720px]">
           {excerpt}

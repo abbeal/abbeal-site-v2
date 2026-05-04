@@ -11,6 +11,7 @@ import { pick } from "@/lib/articles";
 type Dict = {
   nav: { stories: string };
   casesIndex: { tape: string; h1: string; subtitle: string };
+  casesCommon: { templateBadge: string; templateNote: string };
 };
 
 export async function generateMetadata({
@@ -44,6 +45,7 @@ export default async function CasesIndexPage({
     techStack: c.techStack,
     title: pick(c.title, locale),
     excerpt: pick(c.excerpt, locale),
+    template: c.template ?? false,
   }));
 
   const teamUnit = {
@@ -120,6 +122,14 @@ export default async function CasesIndexPage({
               <h2 className="mt-6 text-xl md:text-2xl font-semibold tracking-tight leading-snug group-hover:text-[var(--color-brand-teal)] transition-colors">
                 {c.title}
               </h2>
+              {c.template && (
+                <span
+                  className="mt-3 inline-block font-mono text-[10px] uppercase tracking-[0.18em] px-2 py-1 border border-[var(--color-muted)]/40 text-[var(--color-muted)]"
+                  title={dict.casesCommon.templateNote}
+                >
+                  ⚠ {dict.casesCommon.templateBadge}
+                </span>
+              )}
               <p className="mt-3 text-[15px] text-[var(--color-ink-soft)] leading-relaxed">
                 {c.excerpt}
               </p>
