@@ -102,12 +102,17 @@ export async function POST(request: NextRequest) {
       `Schema version : ${event.v}`,
     ].join("\n");
 
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from,
       to: [to],
       subject,
       text,
     });
+
+    if (error) {
+      console.error("Consent log Resend error:", error);
+      return NextResponse.json({ ok: true, logged: false });
+    }
 
     return NextResponse.json({ ok: true, logged: true });
   } catch (err) {
