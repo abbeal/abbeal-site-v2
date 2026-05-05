@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getDictionary } from "../dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
 import { pageAlternates } from "@/lib/seo";
+import { generateJobPostings } from "@/lib/jobPosting";
 
 type Dict = {
   careers: {
@@ -40,11 +41,31 @@ export async function generateMetadata({
 export default async function CareersPage({ params }: PageProps<"/[lang]/carrieres">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
-  const dict = (await getDictionary(lang as Locale)) as Dict;
+  const locale = lang as Locale;
+  const dict = (await getDictionary(locale)) as Dict;
   const d = dict.careers;
+
+  // Schema.org JobPosting par role : eligibilite Google Jobs box.
+  // Boost CTR sur le longtail non-branded ("AI Engineer Tokyo", etc.)
+  // identifie par l'audit SEO W19.
+  const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
+  const jobPostings = generateJobPostings(
+    d.roles,
+    locale,
+    SITE,
+    d.applyEmail,
+  );
 
   return (
     <section className="mx-auto max-w-[1200px] px-6 md:px-10 py-20 md:py-28">
+      {jobPostings.map((jp, i) => (
+        <script
+          // eslint-disable-next-line react/no-array-index-key
+          key={`jp-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jp) }}
+        />
+      ))}
       <div className="max-w-3xl">
         <span className="tape-label">{d.tape}</span>
         <h1 className="mt-6 font-semibold tracking-[-0.025em] text-[clamp(2.25rem,5vw,4rem)] leading-[1.05]">
