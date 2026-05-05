@@ -152,6 +152,21 @@ export default async function CaseStudyPage({
           </Link>
         </div>
 
+        {c.clientLogo && (
+          <div className="mb-6 flex items-center h-14 md:h-16">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`/logos/${c.clientLogo}.svg`}
+              alt={`${c.slug.replace(/-/g, " ")} logo`}
+              // Pas de .logo-mono ici : on garde la couleur originale du
+              // logo client pour signaler le prestige / l'identité visuelle.
+              // Le marquee home reste en mono pour la cohérence des 19 logos.
+              className="h-full w-auto max-w-[240px] object-contain"
+              loading="eager"
+            />
+          </div>
+        )}
+
         <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
           {pick(c.sector, locale)} · {c.geo}
         </p>

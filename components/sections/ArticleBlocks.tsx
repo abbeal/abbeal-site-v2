@@ -121,6 +121,21 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
         </motion.pre>
       );
 
+    case "link":
+      return (
+        <motion.div {...fadeIn} className="my-8">
+          <a
+            href={block.href}
+            target={block.external === false ? undefined : "_blank"}
+            rel={block.external === false ? undefined : "noopener"}
+            className="inline-flex items-center gap-2 px-5 py-3 border border-[var(--color-brand-teal)] text-[var(--color-brand-teal)] hover:bg-[var(--color-brand-teal)]/10 transition-colors text-[15px] font-medium tracking-tight"
+          >
+            {block.label}
+            <span aria-hidden>→</span>
+          </a>
+        </motion.div>
+      );
+
     default:
       return null;
   }

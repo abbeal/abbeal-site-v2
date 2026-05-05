@@ -17,7 +17,9 @@ export type ArticleBlock =
   | { type: "list"; items: string[]; ordered?: boolean }
   | { type: "quote"; content: string; author?: string }
   | { type: "code"; lang?: string; content: string }
-  | { type: "callout"; tone?: "default" | "teal" | "ink"; content: string };
+  | { type: "callout"; tone?: "default" | "teal" | "ink"; content: string }
+  /** Outbound link CTA — ex: backlink vers le site client */
+  | { type: "link"; label: string; href: string; external?: boolean };
 
 type Translatable<T> = { fr: T } & Partial<Record<Exclude<Locale, "fr">, T>>;
 
