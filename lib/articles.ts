@@ -7,7 +7,15 @@
 import type { Locale } from "./i18n";
 import bodies from "./article-bodies.json";
 
-type BodiesMap = Record<string, { fr: ArticleBlock[]; en?: ArticleBlock[]; ja?: ArticleBlock[] }>;
+type BodiesMap = Record<
+  string,
+  {
+    fr: ArticleBlock[];
+    en?: ArticleBlock[];
+    ja?: ArticleBlock[];
+    "fr-ca"?: ArticleBlock[];
+  }
+>;
 const ARTICLE_BODIES = bodies as BodiesMap;
 
 export type ArticleBlock =
@@ -69,6 +77,7 @@ export const articles: Article[] = [
       fr: ARTICLE_BODIES["agents-ia-production"]?.fr ?? [],
       en: ARTICLE_BODIES["agents-ia-production"]?.en,
       ja: ARTICLE_BODIES["agents-ia-production"]?.ja,
+      "fr-ca": ARTICLE_BODIES["agents-ia-production"]?.["fr-ca"],
     },
   },
   // Article 2 — GreenOps, featured
@@ -92,6 +101,7 @@ export const articles: Article[] = [
       fr: ARTICLE_BODIES["greenops-7-leviers"]?.fr ?? [],
       en: ARTICLE_BODIES["greenops-7-leviers"]?.en,
       ja: ARTICLE_BODIES["greenops-7-leviers"]?.ja,
+      "fr-ca": ARTICLE_BODIES["greenops-7-leviers"]?.["fr-ca"],
     },
   },
   // Article 3 — Tech radar, featured
@@ -115,6 +125,7 @@ export const articles: Article[] = [
       fr: ARTICLE_BODIES["tech-radar-2026"]?.fr ?? [],
       en: ARTICLE_BODIES["tech-radar-2026"]?.en,
       ja: ARTICLE_BODIES["tech-radar-2026"]?.ja,
+      "fr-ca": ARTICLE_BODIES["tech-radar-2026"]?.["fr-ca"],
     },
   },
   // Article 4 — Follow-the-Sun
@@ -138,6 +149,7 @@ export const articles: Article[] = [
       fr: ARTICLE_BODIES["follow-the-sun-sans-bruler-equipes"]?.fr ?? [],
       en: ARTICLE_BODIES["follow-the-sun-sans-bruler-equipes"]?.en,
       ja: ARTICLE_BODIES["follow-the-sun-sans-bruler-equipes"]?.ja,
+      "fr-ca": ARTICLE_BODIES["follow-the-sun-sans-bruler-equipes"]?.["fr-ca"],
     },
   },
   // Article 5 — Legacy modernization
@@ -161,6 +173,7 @@ export const articles: Article[] = [
       fr: ARTICLE_BODIES["legacy-modernization-multi-agents"]?.fr ?? [],
       en: ARTICLE_BODIES["legacy-modernization-multi-agents"]?.en,
       ja: ARTICLE_BODIES["legacy-modernization-multi-agents"]?.ja,
+      "fr-ca": ARTICLE_BODIES["legacy-modernization-multi-agents"]?.["fr-ca"],
     },
   },
   // Article 6 — RAG case study
@@ -184,6 +197,7 @@ export const articles: Article[] = [
       fr: ARTICLE_BODIES["rag-production-10k-a-900"]?.fr ?? [],
       en: ARTICLE_BODIES["rag-production-10k-a-900"]?.en,
       ja: ARTICLE_BODIES["rag-production-10k-a-900"]?.ja,
+      "fr-ca": ARTICLE_BODIES["rag-production-10k-a-900"]?.["fr-ca"],
     },
   },
   // Article 7 — COBOL retirement
@@ -207,6 +221,7 @@ export const articles: Article[] = [
       fr: ARTICLE_BODIES["cobol-pas-mort-developpeurs-oui"]?.fr ?? [],
       en: ARTICLE_BODIES["cobol-pas-mort-developpeurs-oui"]?.en,
       ja: ARTICLE_BODIES["cobol-pas-mort-developpeurs-oui"]?.ja,
+      "fr-ca": ARTICLE_BODIES["cobol-pas-mort-developpeurs-oui"]?.["fr-ca"],
     },
   },
   // Article 8 — Sovereignty FR/JP
@@ -230,6 +245,7 @@ export const articles: Article[] = [
       fr: ARTICLE_BODIES["souverainete-secnumcloud-vs-appi"]?.fr ?? [],
       en: ARTICLE_BODIES["souverainete-secnumcloud-vs-appi"]?.en,
       ja: ARTICLE_BODIES["souverainete-secnumcloud-vs-appi"]?.ja,
+      "fr-ca": ARTICLE_BODIES["souverainete-secnumcloud-vs-appi"]?.["fr-ca"],
     },
   },
   // Article 9 — Talent acquisition
@@ -253,6 +269,7 @@ export const articles: Article[] = [
       fr: ARTICLE_BODIES["recruter-top-1-tech-process-48h"]?.fr ?? [],
       en: ARTICLE_BODIES["recruter-top-1-tech-process-48h"]?.en,
       ja: ARTICLE_BODIES["recruter-top-1-tech-process-48h"]?.ja,
+      "fr-ca": ARTICLE_BODIES["recruter-top-1-tech-process-48h"]?.["fr-ca"],
     },
   },
   // Article 10 — Mobbeal playbook
@@ -276,6 +293,7 @@ export const articles: Article[] = [
       fr: ARTICLE_BODIES["mobbeal-playbook-garde-ton-job"]?.fr ?? [],
       en: ARTICLE_BODIES["mobbeal-playbook-garde-ton-job"]?.en,
       ja: ARTICLE_BODIES["mobbeal-playbook-garde-ton-job"]?.ja,
+      "fr-ca": ARTICLE_BODIES["mobbeal-playbook-garde-ton-job"]?.["fr-ca"],
     },
   },
   // Article 11 — EN-first piece. AI agents in production, framed for the
@@ -303,6 +321,7 @@ export const articles: Article[] = [
       fr: ARTICLE_BODIES["ai-agents-french-banks"]?.fr ?? [],
       en: ARTICLE_BODIES["ai-agents-french-banks"]?.en,
       ja: ARTICLE_BODIES["ai-agents-french-banks"]?.ja,
+      "fr-ca": ARTICLE_BODIES["ai-agents-french-banks"]?.["fr-ca"],
     },
   },
   // Article 12 — Mobbeal témoignage Marie Nuellas (Tokyo). Article RH /
@@ -333,6 +352,7 @@ export const articles: Article[] = [
       fr: ARTICLE_BODIES["apprendre-japonais-tokyo-anki-wanikani-bunpro"]?.fr ?? [],
       en: ARTICLE_BODIES["apprendre-japonais-tokyo-anki-wanikani-bunpro"]?.en,
       ja: ARTICLE_BODIES["apprendre-japonais-tokyo-anki-wanikani-bunpro"]?.ja,
+      "fr-ca": ARTICLE_BODIES["apprendre-japonais-tokyo-anki-wanikani-bunpro"]?.["fr-ca"],
     },
   },
 ];
