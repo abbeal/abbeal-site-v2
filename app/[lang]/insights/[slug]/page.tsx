@@ -20,10 +20,31 @@ export async function generateMetadata({
   if (!hasLocale(lang)) return {};
   const article = getArticle(slug);
   if (!article) return { title: "Article introuvable · Abbeal" };
+  const locale = lang as Locale;
+  const title = pick(article.title, locale);
+  const description = pick(article.excerpt, locale);
+  // Override OG/Twitter pour que le partage social affiche le titre
+  // specifique de l'article. L'OG image dynamique vient de la route
+  // ./opengraph-image.tsx (1200x630 PNG avec tag + readTime).
+  const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
+  const url = `${SITE}/${locale}/insights/${slug}`;
   return {
-    title: `${pick(article.title, lang as Locale)} · Abbeal Insights`,
-    description: pick(article.excerpt, lang as Locale),
-    alternates: pageAlternates(lang as Locale, `/insights/${slug}`),
+    title: `${title} · Abbeal Insights`,
+    description,
+    alternates: pageAlternates(locale, `/insights/${slug}`),
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "article",
+      siteName: "Abbeal",
+      locale,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 

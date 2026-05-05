@@ -21,6 +21,16 @@ export default async function CaseOG({
   const geo = c?.geo ?? "";
   const kpiValue = c?.kpi.value ?? "";
   const kpiLabel = c ? pick(c.kpi.label, locale) : "";
+  // Logo client (cases nommés uniquement) : affiché en haut à droite,
+  // inversé en blanc/clair pour rester lisible sur le fond teal foncé.
+  // URL absolue requise par satori (pas de path relatif).
+  const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
+  const clientLogoUrl = c?.clientLogo
+    ? `${SITE}/logos/${c.clientLogo}.svg`
+    : null;
+  const clientLogoSecondaryUrl = c?.clientLogoSecondary
+    ? `${SITE}/logos/${c.clientLogoSecondary}.svg`
+    : null;
 
   return new ImageResponse(
     (
@@ -39,7 +49,7 @@ export default async function CaseOG({
           fontFamily: '"Geist", "Helvetica", "Arial", sans-serif',
         }}
       >
-        {/* Top band: sector · geo */}
+        {/* Top band: sector · (client logo) · geo */}
         <div
           style={{
             display: "flex",
@@ -61,7 +71,52 @@ export default async function CaseOG({
             />
             <span style={{ color: "#80E8BA" }}>// {sector}</span>
           </div>
-          <span style={{ color: "rgba(250, 250, 248, 0.6)" }}>{geo}</span>
+          <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+            {clientLogoUrl && (
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "16px",
+                  padding: "10px 18px",
+                  backgroundColor: "rgba(250, 250, 248, 0.96)",
+                  borderRadius: "6px",
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={clientLogoUrl}
+                  alt={`${c?.clientLogo ?? ""} logo`}
+                  height={42}
+                  style={{ height: "42px", maxWidth: "180px", objectFit: "contain" }}
+                />
+                {clientLogoSecondaryUrl && (
+                  <>
+                    <span
+                      style={{
+                        fontSize: 26,
+                        color: "rgba(12, 52, 61, 0.45)",
+                        fontFamily: '"Geist", "Helvetica", "Arial", sans-serif',
+                        textTransform: "none",
+                        letterSpacing: "0",
+                        display: "flex",
+                      }}
+                    >
+                      ×
+                    </span>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={clientLogoSecondaryUrl}
+                      alt={`${c?.clientLogoSecondary ?? ""} logo`}
+                      height={42}
+                      style={{ height: "42px", maxWidth: "150px", objectFit: "contain" }}
+                    />
+                  </>
+                )}
+              </div>
+            )}
+            <span style={{ color: "rgba(250, 250, 248, 0.6)" }}>{geo}</span>
+          </div>
         </div>
 
         {/* Middle: title + huge KPI */}

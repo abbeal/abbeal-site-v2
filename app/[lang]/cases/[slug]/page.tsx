@@ -22,10 +22,34 @@ export async function generateMetadata({
   if (!hasLocale(lang)) return {};
   const c = getCase(slug);
   if (!c) return { title: "Case study introuvable · Abbeal" };
+  const locale = lang as Locale;
+  const title = pick(c.title, locale);
+  const description = pick(c.excerpt, locale);
+  // Override OG/Twitter pour que le partage social affiche le titre
+  // specifique du case (et non le titre generique du root layout).
+  // L'image og dynamique est servie automatiquement via la route
+  // ./opengraph-image.tsx (1200x630 PNG avec logo client si nomme).
+  const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
+  const url = `${SITE}/${locale}/cases/${slug}`;
   return {
-    title: `${pick(c.title, lang as Locale)} · Abbeal Cases`,
-    description: pick(c.excerpt, lang as Locale),
-    alternates: pageAlternates(lang as Locale, `/cases/${slug}`),
+    title: `${title} · Abbeal Cases`,
+    description,
+    alternates: pageAlternates(locale, `/cases/${slug}`),
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "article",
+      siteName: "Abbeal",
+      locale,
+      // images: heritera de la route ./opengraph-image.tsx (Next 16
+      // injecte automatiquement l'OG image generee dynamiquement).
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
