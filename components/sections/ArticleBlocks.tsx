@@ -136,6 +136,34 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
         </motion.div>
       );
 
+    case "platformHeader":
+      return (
+        <motion.div
+          {...fadeIn}
+          className="mt-14 mb-2 flex items-baseline gap-4 flex-wrap scroll-mt-24"
+          id={block.name.toLowerCase()}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={block.logoSrc}
+            alt={`${block.name} logo`}
+            className="h-9 md:h-10 w-auto object-contain shrink-0"
+            loading="lazy"
+          />
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-[-0.02em] text-[var(--color-ink)] leading-tight">
+            {block.name}
+          </h2>
+          <a
+            href={block.href}
+            target="_blank"
+            rel="noopener"
+            className="font-mono text-[11px] uppercase tracking-wider text-[var(--color-brand-teal)] hover:underline"
+          >
+            {block.href.replace(/^https?:\/\//, "").replace(/\/$/, "")} ↗
+          </a>
+        </motion.div>
+      );
+
     default:
       return null;
   }

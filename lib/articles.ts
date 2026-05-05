@@ -19,7 +19,18 @@ export type ArticleBlock =
   | { type: "code"; lang?: string; content: string }
   | { type: "callout"; tone?: "default" | "teal" | "ink"; content: string }
   /** Outbound link CTA — ex: backlink vers le site client */
-  | { type: "link"; label: string; href: string; external?: boolean };
+  | { type: "link"; label: string; href: string; external?: boolean }
+  /** Header de section "plateforme" — combine logo + nom + lien externe.
+   *  Ex utilise dans /insights/apprendre-japonais-tokyo... pour Anki/
+   *  WaniKani/Bunpro. logoSrc = chemin absolu sous /public (ex
+   *  "/article-assets/anki.svg"). */
+  | {
+      type: "platformHeader";
+      name: string;
+      logoSrc: string;
+      href: string;
+      tagline?: string;
+    };
 
 type Translatable<T> = { fr: T } & Partial<Record<Exclude<Locale, "fr">, T>>;
 
