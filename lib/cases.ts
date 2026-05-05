@@ -252,11 +252,16 @@ export const cases: CaseStudy[] = [
   },
   // Le Monde — 1er case nommé. Mission active depuis 2019, ingénieur intégré
   // dans la team Insights Data, opère depuis Tokyo depuis 2023 → preuve
-  // tri-géo concrète Paris ↔ Tokyo. Stack initiale (JS Vanilla + React + PHP +
-  // Go) layered avec stack Insights moderne 2024-2026 (BigQuery + dbt +
-  // Airflow + GA4 server-side + Vercel Edge). Pas d'IA exposée pour rester
-  // safe vis-à-vis de la réalité mission. featured: false jusqu'à validation
-  // des autres cases nommés (Cirque, Skello, Oney, Bell, BNP, Pichet, TheFork).
+  // tri-géo concrète Paris ↔ Tokyo. Contenu mis a jour avec les vraies
+  // infos d'Alexandre L. (15/01/2026 via Slack) :
+  // - Stack reelle : JavaScript vanilla (sans framework) + Go + PHP
+  // - IA : automatisation des code reviews avec Codex (mode pilote)
+  // - Methodes : Agile sprints 2 semaines + animation des retros + pair
+  //   programming + demos techniques
+  // - Sujets actuels : outil analytics interne Forecast, unification de la
+  //   collecte de donnees (qualite des algos reco / articles les plus lus),
+  //   maintenance et evolution de la CMP (Consent Management Platform,
+  //   conformite IAB TCF europeen)
   // Préserve le SEO de l'URL legacy /projets/le-monde (308 redirect dans
   // next.config.ts).
   {
@@ -273,12 +278,12 @@ export const cases: CaseStudy[] = [
     duration: "6 ans",
     teamSize: 1,
     techStack: [
-      "BigQuery",
-      "dbt",
-      "Airflow",
-      "GA4 server-side",
-      "Vercel Edge",
-      "React",
+      "JavaScript vanilla",
+      "Go",
+      "PHP",
+      "Codex (code review IA)",
+      "Forecast (analytics interne)",
+      "CMP IAB TCF",
     ],
     kpi: {
       value: "6 ans",
@@ -297,10 +302,10 @@ export const cases: CaseStudy[] = [
       "fr-ca": "Le Monde : 6 ans dans l'équipe Insights, de Paris à Tokyo.",
     },
     excerpt: {
-      fr: "Tagging DOM, A/B testing, pipelines BigQuery + dbt, mesure d'audience server-side. Un ingénieur Abbeal au cœur de la rédaction depuis 2019 — opérant depuis Tokyo depuis 2023. Follow-the-Sun, vraiment.",
-      en: "DOM tagging, A/B testing, BigQuery + dbt pipelines, server-side audience measurement. One Abbeal engineer embedded in the newsroom since 2019 — operating from Tokyo since 2023. Follow-the-Sun, for real.",
-      ja: "DOMタグ、A/Bテスト、BigQuery + dbtパイプライン、サーバーサイド視聴計測。2019年から編集部に組み込まれた1名のAbbealエンジニア — 2023年から東京で稼働。Follow-the-Sunを本当に実現。",
-      "fr-ca": "Étiquetage DOM, tests A/B, pipelines BigQuery + dbt, mesure d'audience côté serveur. Un ingénieur Abbeal intégré à la salle de rédaction depuis 2019 — opérant depuis Tokyo depuis 2023. Follow-the-Sun, vraiment.",
+      fr: "Outil analytics interne Forecast, unification de la collecte data (algos reco + articles les plus lus), CMP IAB TCF européenne, code reviews automatisées via Codex. Stack JavaScript vanilla + Go + PHP, sprints 2 semaines, animation des rétros + pair programming. Un ingénieur Abbeal au cœur de la rédaction depuis 2019 — opérant depuis Tokyo depuis 2023.",
+      en: "Forecast internal analytics tool, data collection unification (reco algos + most-read articles), European IAB TCF CMP, AI-assisted code reviews via Codex. Vanilla JavaScript + Go + PHP stack, 2-week sprints, retros animation + pair programming. One Abbeal engineer embedded in the newsroom since 2019 — operating from Tokyo since 2023.",
+      ja: "社内アナリティクスツールForecast、データ収集統一（推薦アルゴリズム + 最多閲覧記事）、欧州IAB TCF対応CMP、Codex経由のAIコードレビュー自動化。JavaScript vanilla + Go + PHPスタック、2週間スプリント、レトロのアニメーション + ペアプログラミング。2019年から編集部に組み込まれた1名のAbbealエンジニア — 2023年から東京で稼働。",
+      "fr-ca": "Outil analytique interne Forecast, unification de la collecte de donnees (algos de recommandation + articles les plus lus), CMP IAB TCF europeenne, revues de code automatisees via Codex. Pile JavaScript vanilla + Go + PHP, sprints de 2 semaines, animation des retros + pair programming. Un ingenieur Abbeal integre a la salle de redaction depuis 2019 — operant depuis Tokyo depuis 2023.",
     },
     body: {
       fr: CASE_BODIES["le-monde"]?.fr ?? [],
