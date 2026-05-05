@@ -49,6 +49,147 @@ export type CaseStudy = {
 };
 
 export const cases: CaseStudy[] = [
+  // TheGreenBow — case nommé. Editeur français de cybersécurité (VPN
+  // souverains, fondé 1998, racheté par groupe Athena en 2025). Reprise en
+  // urgence du dev de la Console Bowrealis (CMC) après rupture du précédent
+  // prestataire en août 2025. Squad Abbeal de 3 experts (front-end senior,
+  // back-end Go, archi/DevSecOps), Q1 2026 cible de sortie.
+  //
+  // CAVEATS PROD :
+  // - TODO_VERIFY : obtenir accord ecrit de Mathieu Isai et/ou Filip Hermans
+  //   (TheGreenBow) pour utiliser le nom du client comme reference publique.
+  //   Contentieux financier de fevrier 2026 solde debut avril 2026 → terrain
+  //   sain pour la demande, formalité a effectuer.
+  // - Formulation au present prudent : non-renouvellement annonce nov. 2025
+  //   pour 2 des 3 consultants. Eviter "squad active" → "squad mobilisee
+  //   sur la mission" suffit.
+  // - Pas de citation client (a recolter aupres de Mathieu Isai ou Filip
+  //   Hermans pour renforcer la page apres validation).
+  // - Pas de mention contractuelle Dassault/Thales (juste evoques comme
+  //   "clients publics du portefeuille TheGreenBow").
+  // Logo officiel thegreenbow.svg telecharge depuis thegreenbow.com.
+  // Featured: false jusqu'a validation client.
+  {
+    slug: "thegreenbow",
+    featured: false,
+    clientLogo: "thegreenbow",
+    sector: {
+      fr: "Cybersécurité / VPN souverains",
+      en: "Cybersecurity / Sovereign VPN",
+      ja: "サイバーセキュリティ / ソブリンVPN",
+      "fr-ca": "Cybersécurité / RPV souverains",
+    },
+    geo: "Paris",
+    duration: "Reprise en urgence (depuis août 2025)",
+    teamSize: 3,
+    techStack: [
+      "HTML + CSS + PicoCSS",
+      "Go (Golang)",
+      "Figma + design system",
+      "GitLab CI/CD",
+      "DevSecOps",
+      "Architecture distribuée",
+    ],
+    kpi: {
+      value: "Squad de 3",
+      label: {
+        fr: "experts mobilisés en quelques semaines",
+        en: "experts mobilized in weeks",
+        ja: "数週間でモバイライズした3名のエキスパート",
+        "fr-ca": "experts mobilisés en quelques semaines",
+      },
+    },
+    publishedAt: "2026-05-07",
+    title: {
+      fr: "TheGreenBow : reprise en urgence de la Console VPN d'un éditeur cybersécurité français.",
+      en: "TheGreenBow: emergency takeover of the VPN console of a French cybersecurity vendor.",
+      ja: "TheGreenBow：フランスのサイバーセキュリティベンダーのVPNコンソールの緊急引継ぎ。",
+      "fr-ca": "TheGreenBow : reprise en urgence de la console RPV d'un éditeur cybersécurité français.",
+    },
+    excerpt: {
+      fr: "Éditeur français de cybersécurité (VPN souverains, certifications ANSSI, clients défense/admin). Squad Abbeal de 3 experts (front-end senior + back-end Go + DevSecOps) mobilisée en quelques semaines pour reprendre le dev de la Console Bowrealis après rupture du précédent prestataire et sécuriser la sortie produit Q1 2026.",
+      en: "French cybersecurity vendor (sovereign VPN, ANSSI certifications, defense and government clients). Abbeal squad of 3 experts (senior front-end + Go back-end + DevSecOps) mobilized in weeks to take over Bowrealis Console development after the previous vendor walked off, and secure the Q1 2026 product release.",
+      ja: "フランスのサイバーセキュリティベンダー（ソブリンVPN、ANSSI認証、防衛・政府機関クライアント）。前任ベンダーの離脱後、Bowrealis Console開発を引き継ぎ2026年Q1の製品リリースを確保するため、数週間でモバイライズされた3名のエキスパート（シニアフロントエンド + GoバックエンドDevSecOps）からなるAbbealスクワッド。",
+      "fr-ca": "Editeur francais de cybersecurite (RPV souverains, certifications ANSSI, clients defense/administration). Squad Abbeal de 3 experts (frontal senior + arriere-plan Go + DevSecOps) mobilisee en quelques semaines pour reprendre le developpement de la console Bowrealis apres rupture du precedent fournisseur et securiser la sortie produit Q1 2026.",
+    },
+    body: {
+      fr: CASE_BODIES["thegreenbow"]?.fr ?? [],
+      en: CASE_BODIES["thegreenbow"]?.en,
+      ja: CASE_BODIES["thegreenbow"]?.ja,
+      "fr-ca": CASE_BODIES["thegreenbow"]?.["fr-ca"],
+    },
+  },
+  // Money Forward — case nommé. Mission Abbeal sur le volet Data Engineering
+  // d'une nouvelle banque digitale construite from-scratch à Tokyo (joint
+  // venture entre Money Forward et un grand groupe bancaire japonais — NE
+  // JAMAIS nommer SMBC dans le contenu public, l'Article 9 du Service
+  // Agreement Money Forward × Abbeal K.K. autorise uniquement le nom et
+  // logo Money Forward).
+  //
+  // CAVEATS PROD (Garde-fous éditoriaux) :
+  // - JAMAIS écrire SMBC ou Sumitomo Mitsui (NDA) → "grand groupe bancaire
+  //   japonais" / "top-tier Japanese banking group" / "日本の大手銀行グループ"
+  // - Pas de stakeholders client (Guillaume Barroux, Kuroda-san, Saito-san,
+  //   Nishimoto-san), pas de Monthly Rates, pas de durée exacte SOW
+  // - Pas de noms de consultants → "Senior Data Engineer", "Mid-Career Data
+  //   Engineer", profils anonymisés
+  // - TODO_VERIFY : confirmer que la version Yousign signée du Service
+  //   Agreement (envoyée à Daisuke MF le 6 avril 2026) conserve l'Article 9
+  //   inchangé avant publication
+  // - TODO_VERIFY : faire valider le bloc EN par Money Forward avant publication
+  //
+  // Logo officiel money-forward.svg deja present dans /public/logos/.
+  // Featured: false jusqu'à validation Money Forward.
+  {
+    slug: "money-forward",
+    featured: false,
+    clientLogo: "money-forward",
+    sector: {
+      fr: "Banking digitale / FinTech",
+      en: "Digital banking / FinTech",
+      ja: "デジタルバンキング / FinTech",
+      "fr-ca": "Banque numérique / FinTech",
+    },
+    geo: "Tokyo (Tamachi)",
+    duration: "Mission en cours",
+    teamSize: 2,
+    techStack: [
+      "Databricks + Delta Lake",
+      "dbt + Apache Spark",
+      "AWS Tokyo Region",
+      "Unity Catalog + Great Expectations",
+      "Terraform + GitHub Actions",
+      "Amazon QuickSight",
+    ],
+    kpi: {
+      value: "Data Hub",
+      label: {
+        fr: "digital bank from-scratch Tokyo",
+        en: "from-scratch digital bank Tokyo",
+        ja: "ゼロから構築のデジタルバンク東京",
+        "fr-ca": "banque numérique from-scratch Tokyo",
+      },
+    },
+    publishedAt: "2026-05-06",
+    title: {
+      fr: "Money Forward : data backbone d'une nouvelle banque digitale à Tokyo.",
+      en: "Money Forward: data backbone of a brand-new digital bank in Tokyo.",
+      ja: "マネーフォワード：東京の新規デジタルバンクのデータ基盤。",
+      "fr-ca": "Money Forward : pile data d'une nouvelle banque numérique à Tokyo.",
+    },
+    excerpt: {
+      fr: "Money Forward, leader FinTech japonais coté à Tokyo, s'est associé à un grand groupe bancaire japonais pour lancer une nouvelle banque digitale construite from-scratch. Abbeal accompagne sur le volet Data Engineering : conception et industrialisation du Data Hub (Databricks + Delta Lake + dbt + AWS Tokyo) qui sert le reporting JFSA, l'AML, le risk management.",
+      en: "Money Forward, a Japanese FinTech leader listed in Tokyo, partnered with a top-tier Japanese banking group to launch a brand-new digital bank built from scratch. Abbeal partners on the Data Engineering side: designing and operating the Data Hub (Databricks + Delta Lake + dbt + AWS Tokyo) serving JFSA reporting, AML, risk management.",
+      ja: "東京証券取引所上場の日本FinTechリーダー、マネーフォワードは、日本の大手銀行グループとのジョイントベンチャーとして、ゼロから構築する新しいデジタルバンクを立ち上げました。Abbealはデータエンジニアリング領域で参画：JFSA報告、AML、リスクマネジメントを担うData Hub（Databricks + Delta Lake + dbt + AWS東京）の設計・運用。",
+      "fr-ca": "Money Forward, chef de file FinTech japonais cote a Tokyo, s'est associe a un grand groupe bancaire japonais pour lancer une nouvelle banque numerique batie a partir de zero. Abbeal accompagne sur le volet Data Engineering : conception et industrialisation du Data Hub (Databricks + Delta Lake + dbt + AWS Tokyo) qui sert le reporting JFSA, l'AML, la gestion des risques.",
+    },
+    body: {
+      fr: CASE_BODIES["money-forward"]?.fr ?? [],
+      en: CASE_BODIES["money-forward"]?.en,
+      ja: CASE_BODIES["money-forward"]?.ja,
+      "fr-ca": CASE_BODIES["money-forward"]?.["fr-ca"],
+    },
+  },
   // Neobrain × PwC — case nommé multi-clients. Abbeal en sous-traitance de
   // Neobrain (SaaS RH français, Talent Marketplace) pour livrer SkillBot,
   // un agent IA Agentic intégré dans Microsoft Teams chez PwC USA (35 000+
