@@ -32,6 +32,10 @@ export type CaseStudy = {
    *  les cases nommés (client public ou autorisation explicite) ont un logo.
    *  Les cases anonymisés ou template restent sans logo. */
   clientLogo?: string;
+  /** Slug d'un 2e logo client (cas multi-clients : ex Neobrain × PwC où
+   *  Neobrain est notre client direct et PwC le client final). Si présent,
+   *  affiché à droite du logo principal avec un séparateur "×". */
+  clientLogoSecondary?: string;
   sector: Translatable<string>; // "FinTech", "Mobilité", "Robotique", …
   geo: string; // "Paris", "Tokyo", "Tri-geo", "Montréal"
   duration: string; // "9 mois", "14 mois"
@@ -45,6 +49,66 @@ export type CaseStudy = {
 };
 
 export const cases: CaseStudy[] = [
+  // Neobrain × PwC — case nommé multi-clients. Abbeal en sous-traitance de
+  // Neobrain (SaaS RH français, Talent Marketplace) pour livrer SkillBot,
+  // un agent IA Agentic intégré dans Microsoft Teams chez PwC USA (35 000+
+  // collaborateurs). Mission active depuis sept. 2024. Equipe Abbeal :
+  // Pauline (lead conception), Antoine + Martial (dev), Sara (DevOps senior),
+  // renforts LangChain sourcés en quelques semaines. Sponsor commercial :
+  // Sébastien Lonjon (CEO Abbeal). Logos disponibles : neobrain.svg
+  // (officiel, telecharge) + pwc.svg (deja present). Quote Alexis Muninger
+  // (Head of Product Data Neobrain) integree dans le body.
+  {
+    slug: "neobrain-pwc-skillbot",
+    featured: false,
+    clientLogo: "neobrain",
+    clientLogoSecondary: "pwc",
+    sector: {
+      fr: "Agentic AI / SaaS RH",
+      en: "Agentic AI / HR SaaS",
+      ja: "Agentic AI / HR SaaS",
+      "fr-ca": "Agentic AI / SaaS RH",
+    },
+    geo: "Paris + Boston",
+    duration: "Mission en cours",
+    teamSize: 4,
+    techStack: [
+      "Python 3.11 + FastAPI",
+      "LangChain + GPT",
+      "MS Teams Bot Framework",
+      "Microsoft Graph",
+      "Azure + Argo CD + K8s",
+      "MongoDB",
+    ],
+    kpi: {
+      value: "35 000+",
+      label: {
+        fr: "collaborateurs PwC sur SkillBot",
+        en: "PwC employees on SkillBot",
+        ja: "SkillBot利用PwC社員",
+        "fr-ca": "employes PwC sur SkillBot",
+      },
+    },
+    publishedAt: "2026-05-05",
+    title: {
+      fr: "Neobrain × PwC : SkillBot, l'agent IA RH dans Microsoft Teams.",
+      en: "Neobrain × PwC: SkillBot, the HR AI agent inside Microsoft Teams.",
+      ja: "Neobrain × PwC：Microsoft Teams内のHR AIエージェント、SkillBot。",
+      "fr-ca": "Neobrain × PwC : SkillBot, l'agent IA RH dans Microsoft Teams.",
+    },
+    excerpt: {
+      fr: "Chatbot Agentic AI livré chez PwC pour 35 000+ collaborateurs USA, intégré nativement dans Microsoft Teams. Staff augmentation IA + DevOps senior + sourcing express LangChain pour Neobrain (Talent Marketplace IA). Du POC au go-live PwC sans dérapage de scope ni planning critique.",
+      en: "Agentic AI chatbot shipped at PwC for 35,000+ US employees, natively integrated into Microsoft Teams. AI staff augmentation + senior DevOps + express LangChain sourcing for Neobrain (AI Talent Marketplace). From POC to PwC go-live with no scope or critical schedule slip.",
+      ja: "PwCで35,000人以上の米国社員向けに納品されたAgentic AIチャットボット、Microsoft Teamsにネイティブ統合。Neobrain（AI Talent Marketplace）のためのAIスタッフ増強+シニアDevOps+LangChain即時ソーシング。POCからPwC本番投入までスコープ・重要スケジュール逸脱なし。",
+      "fr-ca": "Robot conversationnel Agentic AI livre chez PwC pour 35 000+ employes USA, integre nativement dans Microsoft Teams. Augmentation d'equipe IA + DevOps senior + recrutement express LangChain pour Neobrain (place de marche talents IA). Du POC au go-live PwC sans glissement de portee ni d'echeancier critique.",
+    },
+    body: {
+      fr: CASE_BODIES["neobrain-pwc-skillbot"]?.fr ?? [],
+      en: CASE_BODIES["neobrain-pwc-skillbot"]?.en,
+      ja: CASE_BODIES["neobrain-pwc-skillbot"]?.ja,
+      "fr-ca": CASE_BODIES["neobrain-pwc-skillbot"]?.["fr-ca"],
+    },
+  },
   // Le Monde — 1er case nommé. Mission active depuis 2019, ingénieur intégré
   // dans la team Insights Data, opère depuis Tokyo depuis 2023 → preuve
   // tri-géo concrète Paris ↔ Tokyo. Stack initiale (JS Vanilla + React + PHP +

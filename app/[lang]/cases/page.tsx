@@ -47,6 +47,7 @@ export default async function CasesIndexPage({
     excerpt: pick(c.excerpt, locale),
     template: c.template ?? false,
     clientLogo: c.clientLogo,
+    clientLogoSecondary: c.clientLogoSecondary,
   }));
 
   const teamUnit = {
@@ -121,16 +122,33 @@ export default async function CasesIndexPage({
               </div>
 
               {c.clientLogo && (
-                <div className="mt-6 h-9 flex items-center">
+                <div className="mt-6 h-9 flex items-center gap-3">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={`/logos/${c.clientLogo}.svg`}
-                    alt={`${c.slug.replace(/-/g, " ")} logo`}
+                    alt={`${c.clientLogo} logo`}
                     // Couleur native du logo client (pas de filtre .logo-mono)
                     // pour faire ressortir l'identité visuelle sur les cards.
                     className="h-full w-auto max-w-[150px] object-contain"
                     loading="lazy"
                   />
+                  {c.clientLogoSecondary && (
+                    <>
+                      <span
+                        aria-hidden
+                        className="text-base text-[var(--color-muted)] font-light leading-none select-none"
+                      >
+                        ×
+                      </span>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={`/logos/${c.clientLogoSecondary}.svg`}
+                        alt={`${c.clientLogoSecondary} logo`}
+                        className="h-full w-auto max-w-[120px] object-contain"
+                        loading="lazy"
+                      />
+                    </>
+                  )}
                 </div>
               )}
 
