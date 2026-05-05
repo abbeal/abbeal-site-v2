@@ -1841,106 +1841,106 @@
     "faq": {
       "fr": [
         {
-          "question": "C'est quoi exactement le top 1 % ?",
-          "answer": "Le top 1 % chez Abbeal, c'est un faisceau de signaux : au moins une expérience de scaling en production, du code public lisible (open source ou repo perso), capacité à défendre un choix d'archi à 4 niveaux de 'pourquoi', expérience de mentorat même informelle, et communication écrite propre. Pas une note magique, un dossier qu'on peut creuser. Si un sourceur ne peut pas défendre techniquement la candidature devant un tech lead, le profil ne passe pas."
+          "q": "C'est quoi exactement le top 1 % ?",
+          "a": "Le top 1 % chez Abbeal, c'est un faisceau de signaux : au moins une expérience de scaling en production, du code public lisible (open source ou repo perso), capacité à défendre un choix d'archi à 4 niveaux de 'pourquoi', expérience de mentorat même informelle, et communication écrite propre. Pas une note magique, un dossier qu'on peut creuser. Si un sourceur ne peut pas défendre techniquement la candidature devant un tech lead, le profil ne passe pas."
         },
         {
-          "question": "Comment vous garantissez la qualité d'un profil que vous n'avez pas formé ?",
-          "answer": "On ne forme pas, on calibre. Nos sourceurs sont d'anciens ingénieurs, donc le pré-screen technique de 45 minutes vaut plus qu'un test automatisé de 2 heures. On vérifie aussi les références côté tech lead, pas seulement RH, et on regarde le code public quand il existe. Si ça casse quand même dans les 6 mois, la garantie joue : remplacement gratuit. C'est pour ça qu'on est sélectifs en amont — un échec coûte aussi cher au cabinet qu'au client."
+          "q": "Comment vous garantissez la qualité d'un profil que vous n'avez pas formé ?",
+          "a": "On ne forme pas, on calibre. Nos sourceurs sont d'anciens ingénieurs, donc le pré-screen technique de 45 minutes vaut plus qu'un test automatisé de 2 heures. On vérifie aussi les références côté tech lead, pas seulement RH, et on regarde le code public quand il existe. Si ça casse quand même dans les 6 mois, la garantie joue : remplacement gratuit. C'est pour ça qu'on est sélectifs en amont — un échec coûte aussi cher au cabinet qu'au client."
         },
         {
-          "question": "Les profils JLPT N2+ pour Tokyo, vous en avez vraiment ?",
-          "answer": "Oui, et c'est exactement pour ça qu'on a un bureau à Tokyo (PMC Building, Higashi-Azabu) avec une équipe locale. Le marché bilingue tech-japonais est étroit mais réel : ingénieurs étrangers qui ont passé le JLPT N2 ou N1, profils japonais formés à l'anglais sur des projets internationaux, et talents Mobbeal prêts à s'expatrier avec accompagnement visa. On ne vend pas du JLPT N5 maquillé."
+          "q": "Les profils JLPT N2+ pour Tokyo, vous en avez vraiment ?",
+          "a": "Oui, et c'est exactement pour ça qu'on a un bureau à Tokyo (PMC Building, Higashi-Azabu) avec une équipe locale. Le marché bilingue tech-japonais est étroit mais réel : ingénieurs étrangers qui ont passé le JLPT N2 ou N1, profils japonais formés à l'anglais sur des projets internationaux, et talents Mobbeal prêts à s'expatrier avec accompagnement visa. On ne vend pas du JLPT N5 maquillé."
         },
         {
-          "question": "Quels sont vos délais moyens de placement ?",
-          "answer": "Shortlist sous 5 jours ouvrés après le brief, puis 2 à 4 semaines selon votre process d'entretien et la rareté du profil. Sur les postes standards (full-stack senior, DevOps), on closing souvent en 3 semaines. Sur les niches (LangChain, embedded C++, JLPT N2), comptez 4 à 6 semaines. Si on n'arrive pas à livrer en 8 semaines, on rembourse 50 % du retainer — pas de zone grise."
+          "q": "Quels sont vos délais moyens de placement ?",
+          "a": "Shortlist sous 5 jours ouvrés après le brief, puis 2 à 4 semaines selon votre process d'entretien et la rareté du profil. Sur les postes standards (full-stack senior, DevOps), on closing souvent en 3 semaines. Sur les niches (LangChain, embedded C++, JLPT N2), comptez 4 à 6 semaines. Si on n'arrive pas à livrer en 8 semaines, on rembourse 50 % du retainer — pas de zone grise."
         },
         {
-          "question": "Vous travaillez en CDI ou en freelance ?",
-          "answer": "Les deux. CDI sur les postes structurants long terme (lead, staff, principal). Freelance ou portage sur les missions courtes ou en attendant le bon CDI. On peut aussi monter un Squad embarqué Abbeal (3 à 6 ingénieurs livrés clés en main) si vous avez besoin d'aller vite sans gérer la RH. C'est ce qu'on a fait pour TheGreenBow."
+          "q": "Vous travaillez en CDI ou en freelance ?",
+          "a": "Les deux. CDI sur les postes structurants long terme (lead, staff, principal). Freelance ou portage sur les missions courtes ou en attendant le bon CDI. On peut aussi monter un Squad embarqué Abbeal (3 à 6 ingénieurs livrés clés en main) si vous avez besoin d'aller vite sans gérer la RH. C'est ce qu'on a fait pour TheGreenBow."
         },
         {
-          "question": "Si je recrute via vous, je peux ensuite débaucher mon ingé en interne ?",
-          "answer": "Oui, c'est même le but. Notre métier c'est de placer le bon profil chez vous, pas de le retenir captif. Si un Squad Abbeal devient indispensable, on a des clauses claires de transfert vers du CDI direct, sans pénalité absurde. On préfère un client qui internalise un profil et qui revient pour le prochain recrutement, plutôt qu'un client qui se sent piégé."
+          "q": "Si je recrute via vous, je peux ensuite débaucher mon ingé en interne ?",
+          "a": "Oui, c'est même le but. Notre métier c'est de placer le bon profil chez vous, pas de le retenir captif. Si un Squad Abbeal devient indispensable, on a des clauses claires de transfert vers du CDI direct, sans pénalité absurde. On préfère un client qui internalise un profil et qui revient pour le prochain recrutement, plutôt qu'un client qui se sent piégé."
         }
       ],
       "en": [
         {
-          "question": "What exactly is the top 1%?",
-          "answer": "Top 1% at Abbeal is a bundle of signals: at least one production scaling experience, readable public code (open source or personal repo), ability to defend an architecture choice through 4 levels of 'why', mentoring experience even informal, and clean written communication. Not a magic score, a dossier we can dig into. If a sourcer can't defend the candidate technically in front of a tech lead, the profile doesn't pass."
+          "q": "What exactly is the top 1%?",
+          "a": "Top 1% at Abbeal is a bundle of signals: at least one production scaling experience, readable public code (open source or personal repo), ability to defend an architecture choice through 4 levels of 'why', mentoring experience even informal, and clean written communication. Not a magic score, a dossier we can dig into. If a sourcer can't defend the candidate technically in front of a tech lead, the profile doesn't pass."
         },
         {
-          "question": "How do you guarantee the quality of a profile you didn't train?",
-          "answer": "We don't train, we calibrate. Our sourcers are former engineers, so the 45-minute technical pre-screen is worth more than a 2-hour automated test. We also check references on the tech lead side, not just HR, and look at public code when it exists. If it still breaks within 6 months, the guarantee kicks in: free replacement. That's why we're selective upfront — a failure costs the agency as much as the client."
+          "q": "How do you guarantee the quality of a profile you didn't train?",
+          "a": "We don't train, we calibrate. Our sourcers are former engineers, so the 45-minute technical pre-screen is worth more than a 2-hour automated test. We also check references on the tech lead side, not just HR, and look at public code when it exists. If it still breaks within 6 months, the guarantee kicks in: free replacement. That's why we're selective upfront — a failure costs the agency as much as the client."
         },
         {
-          "question": "JLPT N2+ profiles for Tokyo, do you really have them?",
-          "answer": "Yes, and that's exactly why we have a Tokyo office (PMC Building, Higashi-Azabu) with a local team. The bilingual tech-Japanese market is narrow but real: foreign engineers who passed JLPT N2 or N1, Japanese profiles trained in English through international projects, and Mobbeal talents ready to relocate with visa support. We don't sell JLPT N5 dressed up as N2."
+          "q": "JLPT N2+ profiles for Tokyo, do you really have them?",
+          "a": "Yes, and that's exactly why we have a Tokyo office (PMC Building, Higashi-Azabu) with a local team. The bilingual tech-Japanese market is narrow but real: foreign engineers who passed JLPT N2 or N1, Japanese profiles trained in English through international projects, and Mobbeal talents ready to relocate with visa support. We don't sell JLPT N5 dressed up as N2."
         },
         {
-          "question": "What are your average placement timelines?",
-          "answer": "Shortlist within 5 business days after the brief, then 2 to 4 weeks depending on your interview process and profile rarity. On standard roles (senior full-stack, DevOps), we often close in 3 weeks. On niche profiles (LangChain, embedded C++, JLPT N2), expect 4 to 6 weeks. If we can't deliver within 8 weeks, we refund 50% of the retainer — no grey area."
+          "q": "What are your average placement timelines?",
+          "a": "Shortlist within 5 business days after the brief, then 2 to 4 weeks depending on your interview process and profile rarity. On standard roles (senior full-stack, DevOps), we often close in 3 weeks. On niche profiles (LangChain, embedded C++, JLPT N2), expect 4 to 6 weeks. If we can't deliver within 8 weeks, we refund 50% of the retainer — no grey area."
         },
         {
-          "question": "Do you work on full-time or freelance?",
-          "answer": "Both. Full-time for structuring long-term roles (lead, staff, principal). Freelance or contractor for short missions or while waiting for the right full-time hire. We can also stand up an embedded Abbeal Squad (3 to 6 engineers delivered turnkey) if you need to move fast without managing HR. That's what we did for TheGreenBow."
+          "q": "Do you work on full-time or freelance?",
+          "a": "Both. Full-time for structuring long-term roles (lead, staff, principal). Freelance or contractor for short missions or while waiting for the right full-time hire. We can also stand up an embedded Abbeal Squad (3 to 6 engineers delivered turnkey) if you need to move fast without managing HR. That's what we did for TheGreenBow."
         },
         {
-          "question": "If I hire through you, can I later poach the engineer in-house?",
-          "answer": "Yes, that's actually the point. Our job is to place the right profile with you, not to keep them captive. If an Abbeal Squad becomes essential, we have clear conversion clauses to direct full-time, without absurd penalties. We prefer a client who internalises a profile and comes back for the next hire over a client who feels trapped."
+          "q": "If I hire through you, can I later poach the engineer in-house?",
+          "a": "Yes, that's actually the point. Our job is to place the right profile with you, not to keep them captive. If an Abbeal Squad becomes essential, we have clear conversion clauses to direct full-time, without absurd penalties. We prefer a client who internalises a profile and comes back for the next hire over a client who feels trapped."
         }
       ],
       "ja": [
         {
-          "question": "トップ1%とは具体的に何ですか？",
-          "answer": "Abbealのトップ1%は、シグナルの束です：少なくとも1回の本番スケーリング経験、読みやすい公開コード（オープンソースまたは個人リポジトリ）、4階層の「なぜ」でアーキテクチャ選択を擁護できる能力、非公式でもメンタリング経験、きれいな書面コミュニケーション。魔法のスコアではなく、深掘りできる書類です。ソーサーがテックリードの前で候補者を技術的に擁護できない場合、そのプロフィールは通りません。"
+          "q": "トップ1%とは具体的に何ですか？",
+          "a": "Abbealのトップ1%は、シグナルの束です：少なくとも1回の本番スケーリング経験、読みやすい公開コード（オープンソースまたは個人リポジトリ）、4階層の「なぜ」でアーキテクチャ選択を擁護できる能力、非公式でもメンタリング経験、きれいな書面コミュニケーション。魔法のスコアではなく、深掘りできる書類です。ソーサーがテックリードの前で候補者を技術的に擁護できない場合、そのプロフィールは通りません。"
         },
         {
-          "question": "御社が育成していない人材の品質をどう保証しますか？",
-          "answer": "私たちは育成しません、調整します。ソーサーは元エンジニアなので、45分の技術プレスクリーンは2時間の自動テストより価値があります。また、HRだけでなくテックリード側のリファレンスを確認し、公開コードがあれば見ます。それでも6ヶ月以内に問題が起きた場合、保証が発動します：無料交代。これが私たちが事前に厳選する理由です — 失敗はエージェンシーにもクライアントと同じくらいコストがかかります。"
+          "q": "御社が育成していない人材の品質をどう保証しますか？",
+          "a": "私たちは育成しません、調整します。ソーサーは元エンジニアなので、45分の技術プレスクリーンは2時間の自動テストより価値があります。また、HRだけでなくテックリード側のリファレンスを確認し、公開コードがあれば見ます。それでも6ヶ月以内に問題が起きた場合、保証が発動します：無料交代。これが私たちが事前に厳選する理由です — 失敗はエージェンシーにもクライアントと同じくらいコストがかかります。"
         },
         {
-          "question": "東京向けのJLPT N2+人材は本当にいますか？",
-          "answer": "はい、だからこそ東京（東麻布のPMCビル）に現地チームを持つオフィスがあります。バイリンガル技術日本語市場は狭いですが実在します：JLPT N2またはN1を取得した外国人エンジニア、国際プロジェクトで英語を学んだ日本人プロフィール、ビザサポート付きで赴任準備が整ったMobbealタレント。N5をN2と偽って売ることはしません。"
+          "q": "東京向けのJLPT N2+人材は本当にいますか？",
+          "a": "はい、だからこそ東京（東麻布のPMCビル）に現地チームを持つオフィスがあります。バイリンガル技術日本語市場は狭いですが実在します：JLPT N2またはN1を取得した外国人エンジニア、国際プロジェクトで英語を学んだ日本人プロフィール、ビザサポート付きで赴任準備が整ったMobbealタレント。N5をN2と偽って売ることはしません。"
         },
         {
-          "question": "平均的な配置までの期間は？",
-          "answer": "ブリーフ後5営業日以内にショートリスト、その後御社の面接プロセスとプロフィールの希少性に応じて2〜4週間。標準的な職種（シニアフルスタック、DevOps）では、しばしば3週間でクローズします。ニッチなプロフィール（LangChain、組込C++、JLPT N2）では、4〜6週間を見込んでください。8週間以内に納品できない場合、リテイナーの50%を返金します — グレーゾーンなし。"
+          "q": "平均的な配置までの期間は？",
+          "a": "ブリーフ後5営業日以内にショートリスト、その後御社の面接プロセスとプロフィールの希少性に応じて2〜4週間。標準的な職種（シニアフルスタック、DevOps）では、しばしば3週間でクローズします。ニッチなプロフィール（LangChain、組込C++、JLPT N2）では、4〜6週間を見込んでください。8週間以内に納品できない場合、リテイナーの50%を返金します — グレーゾーンなし。"
         },
         {
-          "question": "正社員ですか、フリーランスですか？",
-          "answer": "両方です。長期構造的な職種（リード、スタッフ、プリンシパル）には正社員。短期ミッションや適切な正社員を待つ間はフリーランスまたは業務委託。HRを管理せずに迅速に動く必要がある場合は、組込型Abbealスクワッド（3〜6名のエンジニアをターンキーで納品）も立ち上げ可能です。それがTheGreenBowで行ったことです。"
+          "q": "正社員ですか、フリーランスですか？",
+          "a": "両方です。長期構造的な職種（リード、スタッフ、プリンシパル）には正社員。短期ミッションや適切な正社員を待つ間はフリーランスまたは業務委託。HRを管理せずに迅速に動く必要がある場合は、組込型Abbealスクワッド（3〜6名のエンジニアをターンキーで納品）も立ち上げ可能です。それがTheGreenBowで行ったことです。"
         },
         {
-          "question": "御社経由で採用したエンジニアを、後から社内に引き抜けますか？",
-          "answer": "はい、それがむしろ目的です。私たちの仕事は適切なプロフィールを御社に配置することであり、人質に取ることではありません。Abbealスクワッドが不可欠になった場合、不合理なペナルティなしで直接正社員への明確な転換条項があります。罠にかかったと感じるクライアントよりも、プロフィールを内製化して次の採用で戻ってくるクライアントの方が好ましいです。"
+          "q": "御社経由で採用したエンジニアを、後から社内に引き抜けますか？",
+          "a": "はい、それがむしろ目的です。私たちの仕事は適切なプロフィールを御社に配置することであり、人質に取ることではありません。Abbealスクワッドが不可欠になった場合、不合理なペナルティなしで直接正社員への明確な転換条項があります。罠にかかったと感じるクライアントよりも、プロフィールを内製化して次の採用で戻ってくるクライアントの方が好ましいです。"
         }
       ],
       "fr-ca": [
         {
-          "question": "C'est quoi au juste le top 1 % ?",
-          "answer": "Le top 1 % chez Abbeal, c'est un faisceau de signaux : au moins une expérience de scaling en production, du code public lisible (open source ou repo perso), capacité à défendre un choix d'archi sur 4 niveaux de 'pourquoi', expérience de mentorat même informelle, pis communication écrite propre. Pas une note magique, un dossier qu'on peut creuser. Si un sourceur peut pas défendre techniquement la candidature devant un tech lead, le profil passe pas."
+          "q": "C'est quoi au juste le top 1 % ?",
+          "a": "Le top 1 % chez Abbeal, c'est un faisceau de signaux : au moins une expérience de scaling en production, du code public lisible (open source ou repo perso), capacité à défendre un choix d'archi sur 4 niveaux de 'pourquoi', expérience de mentorat même informelle, pis communication écrite propre. Pas une note magique, un dossier qu'on peut creuser. Si un sourceur peut pas défendre techniquement la candidature devant un tech lead, le profil passe pas."
         },
         {
-          "question": "Comment vous garantissez la qualité d'un profil que vous avez pas formé ?",
-          "answer": "On forme pas, on calibre. Nos sourceurs sont d'anciens ingés, ça fait que le pré-screen technique de 45 minutes vaut plus qu'un test automatisé de 2 heures. On vérifie aussi les références côté tech lead, pas juste RH, pis on regarde le code public quand il existe. Si ça brise pareil dans les 6 mois, la garantie joue : remplacement gratis. C'est pour ça qu'on est sélectifs en amont — un échec coûte autant cher au cabinet qu'au client."
+          "q": "Comment vous garantissez la qualité d'un profil que vous avez pas formé ?",
+          "a": "On forme pas, on calibre. Nos sourceurs sont d'anciens ingés, ça fait que le pré-screen technique de 45 minutes vaut plus qu'un test automatisé de 2 heures. On vérifie aussi les références côté tech lead, pas juste RH, pis on regarde le code public quand il existe. Si ça brise pareil dans les 6 mois, la garantie joue : remplacement gratis. C'est pour ça qu'on est sélectifs en amont — un échec coûte autant cher au cabinet qu'au client."
         },
         {
-          "question": "Les profils JLPT N2+ pour Tokyo, vous en avez pour vrai ?",
-          "answer": "Oui, pis c'est justement pour ça qu'on a un bureau à Tokyo (PMC Building, Higashi-Azabu) avec une équipe locale. Le marché bilingue techno-japonais est étroit mais réel : ingés étrangers qui ont passé le JLPT N2 ou N1, profils japonais formés à l'anglais sur des projets internationaux, pis talents Mobbeal prêts à s'expatrier avec accompagnement visa. On vend pas du JLPT N5 maquillé en N2."
+          "q": "Les profils JLPT N2+ pour Tokyo, vous en avez pour vrai ?",
+          "a": "Oui, pis c'est justement pour ça qu'on a un bureau à Tokyo (PMC Building, Higashi-Azabu) avec une équipe locale. Le marché bilingue techno-japonais est étroit mais réel : ingés étrangers qui ont passé le JLPT N2 ou N1, profils japonais formés à l'anglais sur des projets internationaux, pis talents Mobbeal prêts à s'expatrier avec accompagnement visa. On vend pas du JLPT N5 maquillé en N2."
         },
         {
-          "question": "Quels sont vos délais moyens de placement ?",
-          "answer": "Shortlist sous 5 jours ouvrables après le brief, ensuite 2 à 4 semaines selon ton processus d'entrevue pis la rareté du profil. Sur les postes standards (full-stack senior, DevOps), on close souvent en 3 semaines. Sur les niches (LangChain, embedded C++, JLPT N2), compte 4 à 6 semaines. Si on arrive pas à livrer en 8 semaines, on rembourse 50 % du retainer — pas de zone grise."
+          "q": "Quels sont vos délais moyens de placement ?",
+          "a": "Shortlist sous 5 jours ouvrables après le brief, ensuite 2 à 4 semaines selon ton processus d'entrevue pis la rareté du profil. Sur les postes standards (full-stack senior, DevOps), on close souvent en 3 semaines. Sur les niches (LangChain, embedded C++, JLPT N2), compte 4 à 6 semaines. Si on arrive pas à livrer en 8 semaines, on rembourse 50 % du retainer — pas de zone grise."
         },
         {
-          "question": "Vous travaillez en CDI ou en freelance ?",
-          "answer": "Les deux. CDI sur les postes structurants à long terme (lead, staff, principal). Freelance ou travailleur autonome sur les mandats courts ou en attendant le bon CDI. On peut aussi monter un Squad embarqué Abbeal (3 à 6 ingés livrés clé en main) si t'as besoin d'aller vite sans gérer le RH. C'est ce qu'on a fait pour TheGreenBow."
+          "q": "Vous travaillez en CDI ou en freelance ?",
+          "a": "Les deux. CDI sur les postes structurants à long terme (lead, staff, principal). Freelance ou travailleur autonome sur les mandats courts ou en attendant le bon CDI. On peut aussi monter un Squad embarqué Abbeal (3 à 6 ingés livrés clé en main) si t'as besoin d'aller vite sans gérer le RH. C'est ce qu'on a fait pour TheGreenBow."
         },
         {
-          "question": "Si je recrute via vous, je peux ensuite engager mon ingé en interne ?",
-          "answer": "Oui, c'est même le but. Notre métier c'est de placer le bon profil chez vous, pas de le garder captif. Si un Squad Abbeal devient essentiel, on a des clauses claires de transfert vers du CDI direct, sans pénalité absurde. On préfère un client qui internalise un profil pis qui revient pour le prochain recrutement, plutôt qu'un client qui se sent pogné."
+          "q": "Si je recrute via vous, je peux ensuite engager mon ingé en interne ?",
+          "a": "Oui, c'est même le but. Notre métier c'est de placer le bon profil chez vous, pas de le garder captif. Si un Squad Abbeal devient essentiel, on a des clauses claires de transfert vers du CDI direct, sans pénalité absurde. On préfère un client qui internalise un profil pis qui revient pour le prochain recrutement, plutôt qu'un client qui se sent pogné."
         }
       ]
     }
@@ -2519,106 +2519,106 @@
     "faq": {
       "fr": [
         {
-          "question": "Je parle pas japonais, je peux quand même venir ?",
-          "answer": "Oui, et c'est même le cas de la majorité des ingés Mobbeal qui débarquent à Tokyo. Les missions chez Money Forward, Le Monde ou Cartier se tiennent en anglais, et nos équipes internes aussi. Cela dit, on te paie des cours particuliers de japonais dès ton arrivée parce qu'on sait que la qualité de vie sur 3 ans dépend largement de ta capacité à interagir au izakaya, chez le médecin ou à l'école de tes enfants. Beaucoup d'ingés visent le JLPT N4 à 18 mois et le N3 à 3 ans."
+          "q": "Je parle pas japonais, je peux quand même venir ?",
+          "a": "Oui, et c'est même le cas de la majorité des ingés Mobbeal qui débarquent à Tokyo. Les missions chez Money Forward, Le Monde ou Cartier se tiennent en anglais, et nos équipes internes aussi. Cela dit, on te paie des cours particuliers de japonais dès ton arrivée parce qu'on sait que la qualité de vie sur 3 ans dépend largement de ta capacité à interagir au izakaya, chez le médecin ou à l'école de tes enfants. Beaucoup d'ingés visent le JLPT N4 à 18 mois et le N3 à 3 ans."
         },
         {
-          "question": "Quel salaire je peux espérer à Tokyo ?",
-          "answer": "On reste sur la grille Abbeal européenne, indexée sur ton expérience et ta stack. Pas de discount local, pas de réajustement à la baisse parce que tu vis à Tokyo. À ça s'ajoute l'allocation logement Mobbeal les 3 à 6 premières semaines, la prise en charge des frais de relocation, et les avantages liés au coût de la vie tokyoïte (qui reste plus accessible que Paris ou Genève sur le quotidien). On chiffre tout précisément dès le 2e call."
+          "q": "Quel salaire je peux espérer à Tokyo ?",
+          "a": "On reste sur la grille Abbeal européenne, indexée sur ton expérience et ta stack. Pas de discount local, pas de réajustement à la baisse parce que tu vis à Tokyo. À ça s'ajoute l'allocation logement Mobbeal les 3 à 6 premières semaines, la prise en charge des frais de relocation, et les avantages liés au coût de la vie tokyoïte (qui reste plus accessible que Paris ou Genève sur le quotidien). On chiffre tout précisément dès le 2e call."
         },
         {
-          "question": "Comment ça se passe pour ma famille (conjoint, enfants, école) ?",
-          "answer": "Mobbeal est un programme famille avant d'être un programme ingé. On gère le visa dépendant pour ton conjoint, on l'aide à trouver un job remote ou une école de japonais s'il veut se réorienter. Pour les enfants, on a des contacts directs au Lycée Français International de Tokyo, à la British School et à ASIJ. On t'aide à monter les dossiers d'inscription, on te prévient des deadlines, et on te connecte avec d'autres familles Mobbeal déjà sur place."
+          "q": "Comment ça se passe pour ma famille (conjoint, enfants, école) ?",
+          "a": "Mobbeal est un programme famille avant d'être un programme ingé. On gère le visa dépendant pour ton conjoint, on l'aide à trouver un job remote ou une école de japonais s'il veut se réorienter. Pour les enfants, on a des contacts directs au Lycée Français International de Tokyo, à la British School et à ASIJ. On t'aide à monter les dossiers d'inscription, on te prévient des deadlines, et on te connecte avec d'autres familles Mobbeal déjà sur place."
         },
         {
-          "question": "Combien de temps entre l'offre et l'arrivée à Tokyo ?",
-          "answer": "Compte 3 mois en moyenne. Le visa Engineer / Specialist in Humanities prend 6 à 10 semaines selon la complétude du dossier. En parallèle on cale le logement temporaire à Higashi-Azabu, l'inscription des enfants si nécessaire, et on coordonne avec ton client. Si tu as une contrainte forte (rentrée scolaire, fin de bail), on essaie d'accélérer ou de décaler en fonction."
+          "q": "Combien de temps entre l'offre et l'arrivée à Tokyo ?",
+          "a": "Compte 3 mois en moyenne. Le visa Engineer / Specialist in Humanities prend 6 à 10 semaines selon la complétude du dossier. En parallèle on cale le logement temporaire à Higashi-Azabu, l'inscription des enfants si nécessaire, et on coordonne avec ton client. Si tu as une contrainte forte (rentrée scolaire, fin de bail), on essaie d'accélérer ou de décaler en fonction."
         },
         {
-          "question": "Et si après 1 an je veux rentrer ?",
-          "answer": "Pas de drame. Le programme Mobbeal n'est pas un contrat à 5 ans avec clause de pénalité. Si après 1 an tu veux rentrer à Paris, Montréal ou ailleurs, on te repositionne sur une mission Abbeal dans la géo de ton choix. C'est arrivé deux ou trois fois, et à chaque fois on a trouvé une suite. La seule chose qu'on demande, c'est que tu nous préviennes 3 mois en avance pour qu'on puisse organiser proprement la transition côté client."
+          "q": "Et si après 1 an je veux rentrer ?",
+          "a": "Pas de drame. Le programme Mobbeal n'est pas un contrat à 5 ans avec clause de pénalité. Si après 1 an tu veux rentrer à Paris, Montréal ou ailleurs, on te repositionne sur une mission Abbeal dans la géo de ton choix. C'est arrivé deux ou trois fois, et à chaque fois on a trouvé une suite. La seule chose qu'on demande, c'est que tu nous préviennes 3 mois en avance pour qu'on puisse organiser proprement la transition côté client."
         },
         {
-          "question": "Est-ce que je peux venir voir Tokyo avant de signer ?",
-          "answer": "Oui, et on encourage carrément. On organise des semaines découverte pour les profils en fin de process : tu viens 5 à 7 jours, tu rencontres l'équipe au PMC Building Higashi-Azabu, tu visites les quartiers où tu pourrais habiter, et tu rencontres physiquement le client. Abbeal prend en charge le vol et l'hébergement. C'est le meilleur investissement qu'on fasse pour s'assurer que la décision est prise les yeux ouverts."
+          "q": "Est-ce que je peux venir voir Tokyo avant de signer ?",
+          "a": "Oui, et on encourage carrément. On organise des semaines découverte pour les profils en fin de process : tu viens 5 à 7 jours, tu rencontres l'équipe au PMC Building Higashi-Azabu, tu visites les quartiers où tu pourrais habiter, et tu rencontres physiquement le client. Abbeal prend en charge le vol et l'hébergement. C'est le meilleur investissement qu'on fasse pour s'assurer que la décision est prise les yeux ouverts."
         }
       ],
       "en": [
         {
-          "question": "I don't speak Japanese — can I still come?",
-          "answer": "Yes, and that's the case for most Mobbeal engineers landing in Tokyo. Missions at Money Forward, Le Monde or Cartier run in English, and so do our internal teams. That said, we pay for private Japanese lessons from day one because we know that quality of life over 3 years depends heavily on being able to interact at the izakaya, at the doctor's, or at your kids' school. Many engineers target JLPT N4 at 18 months and N3 at 3 years."
+          "q": "I don't speak Japanese — can I still come?",
+          "a": "Yes, and that's the case for most Mobbeal engineers landing in Tokyo. Missions at Money Forward, Le Monde or Cartier run in English, and so do our internal teams. That said, we pay for private Japanese lessons from day one because we know that quality of life over 3 years depends heavily on being able to interact at the izakaya, at the doctor's, or at your kids' school. Many engineers target JLPT N4 at 18 months and N3 at 3 years."
         },
         {
-          "question": "What salary can I expect in Tokyo?",
-          "answer": "You stay on the European Abbeal grid, indexed to your experience and stack. No local discount, no downward adjustment because you live in Tokyo. On top of that you get the Mobbeal housing allowance for the first 3 to 6 weeks, full relocation cost coverage, and the cost-of-living advantage of Tokyo (which on daily expenses remains more accessible than Paris or Geneva). We give you the precise numbers from the second call."
+          "q": "What salary can I expect in Tokyo?",
+          "a": "You stay on the European Abbeal grid, indexed to your experience and stack. No local discount, no downward adjustment because you live in Tokyo. On top of that you get the Mobbeal housing allowance for the first 3 to 6 weeks, full relocation cost coverage, and the cost-of-living advantage of Tokyo (which on daily expenses remains more accessible than Paris or Geneva). We give you the precise numbers from the second call."
         },
         {
-          "question": "How does it work for my family (partner, kids, school)?",
-          "answer": "Mobbeal is a family programme before it's an engineer programme. We handle your partner's dependent visa and help them find remote work or a Japanese language school if they want to pivot. For the kids, we have direct contacts at the Lycee Francais International de Tokyo, British School and ASIJ. We help with admissions files, flag the deadlines, and connect you with other Mobbeal families already on the ground."
+          "q": "How does it work for my family (partner, kids, school)?",
+          "a": "Mobbeal is a family programme before it's an engineer programme. We handle your partner's dependent visa and help them find remote work or a Japanese language school if they want to pivot. For the kids, we have direct contacts at the Lycee Francais International de Tokyo, British School and ASIJ. We help with admissions files, flag the deadlines, and connect you with other Mobbeal families already on the ground."
         },
         {
-          "question": "How long between the offer and arrival in Tokyo?",
-          "answer": "Roughly 3 months on average. The Engineer / Specialist in Humanities visa takes 6 to 10 weeks depending on file completeness. In parallel we secure your temporary housing in Higashi-Azabu, kids' school enrolment if needed, and coordinate with your client. If you have a hard constraint (school year, lease end), we try to accelerate or delay accordingly."
+          "q": "How long between the offer and arrival in Tokyo?",
+          "a": "Roughly 3 months on average. The Engineer / Specialist in Humanities visa takes 6 to 10 weeks depending on file completeness. In parallel we secure your temporary housing in Higashi-Azabu, kids' school enrolment if needed, and coordinate with your client. If you have a hard constraint (school year, lease end), we try to accelerate or delay accordingly."
         },
         {
-          "question": "What if after 1 year I want to go home?",
-          "answer": "No drama. The Mobbeal programme is not a 5-year lock-in with a penalty clause. If after a year you want to head back to Paris, Montreal or elsewhere, we reposition you on an Abbeal mission in the geography of your choice. It's happened a couple of times, and we've always found a next chapter. The only ask is that you give us 3 months' notice so we can organise a clean transition with the client."
+          "q": "What if after 1 year I want to go home?",
+          "a": "No drama. The Mobbeal programme is not a 5-year lock-in with a penalty clause. If after a year you want to head back to Paris, Montreal or elsewhere, we reposition you on an Abbeal mission in the geography of your choice. It's happened a couple of times, and we've always found a next chapter. The only ask is that you give us 3 months' notice so we can organise a clean transition with the client."
         },
         {
-          "question": "Can I visit Tokyo before signing?",
-          "answer": "Yes, and we strongly encourage it. We organise discovery weeks for profiles at the end of the process: you come for 5 to 7 days, meet the team at the PMC Building in Higashi-Azabu, visit neighbourhoods where you could live, and meet the client in person. Abbeal covers flights and accommodation. It's the single best investment we make to ensure the decision is taken with eyes wide open."
+          "q": "Can I visit Tokyo before signing?",
+          "a": "Yes, and we strongly encourage it. We organise discovery weeks for profiles at the end of the process: you come for 5 to 7 days, meet the team at the PMC Building in Higashi-Azabu, visit neighbourhoods where you could live, and meet the client in person. Abbeal covers flights and accommodation. It's the single best investment we make to ensure the decision is taken with eyes wide open."
         }
       ],
       "ja": [
         {
-          "question": "日本語が話せませんが、それでも応募できますか。",
-          "answer": "はい、可能です。実際、東京に着任するMobbealエンジニアの大半が同じ状況です。マネーフォワード、ル・モンド、カルティエでの案件は英語ベースで進行し、社内チームも同様です。とはいえ、3年単位での生活の質は、居酒屋、病院、お子さまの学校での日常会話力に大きく依存するため、Abbealは到着初日から個人レッスンの費用を負担します。多くのエンジニアが18か月でJLPT N4、3年でN3を目標に設定しています。"
+          "q": "日本語が話せませんが、それでも応募できますか。",
+          "a": "はい、可能です。実際、東京に着任するMobbealエンジニアの大半が同じ状況です。マネーフォワード、ル・モンド、カルティエでの案件は英語ベースで進行し、社内チームも同様です。とはいえ、3年単位での生活の質は、居酒屋、病院、お子さまの学校での日常会話力に大きく依存するため、Abbealは到着初日から個人レッスンの費用を負担します。多くのエンジニアが18か月でJLPT N4、3年でN3を目標に設定しています。"
         },
         {
-          "question": "東京での想定年収はどの程度ですか。",
-          "answer": "経験とスタックに連動した欧州Abbealグリッドを維持します。ローカル割引や、東京在住を理由とした下方修正はありません。これに加えて、最初の3から6週間のMobbeal住居手当、引っ越し費用の全額負担、そして東京の生活コストの利点（日常支出はパリやジュネーブより手頃）が加わります。詳細な金額は2回目の面談から具体的にお伝えします。"
+          "q": "東京での想定年収はどの程度ですか。",
+          "a": "経験とスタックに連動した欧州Abbealグリッドを維持します。ローカル割引や、東京在住を理由とした下方修正はありません。これに加えて、最初の3から6週間のMobbeal住居手当、引っ越し費用の全額負担、そして東京の生活コストの利点（日常支出はパリやジュネーブより手頃）が加わります。詳細な金額は2回目の面談から具体的にお伝えします。"
         },
         {
-          "question": "家族（配偶者、子ども、学校）はどうなりますか。",
-          "answer": "Mobbealはエンジニアのプログラムである前に、家族のプログラムです。配偶者の家族滞在ビザを当社が担当し、リモートワークや日本語学校を希望される場合の探索を支援します。お子さまについては、東京国際フランス学園、ブリティッシュスクール、ASIJに直接の窓口があります。出願書類の作成支援、提出期限のリマインド、現地で生活中の他のMobbealファミリーとの接続を行います。"
+          "q": "家族（配偶者、子ども、学校）はどうなりますか。",
+          "a": "Mobbealはエンジニアのプログラムである前に、家族のプログラムです。配偶者の家族滞在ビザを当社が担当し、リモートワークや日本語学校を希望される場合の探索を支援します。お子さまについては、東京国際フランス学園、ブリティッシュスクール、ASIJに直接の窓口があります。出願書類の作成支援、提出期限のリマインド、現地で生活中の他のMobbealファミリーとの接続を行います。"
         },
         {
-          "question": "オファーから東京到着まで、どのくらいかかりますか。",
-          "answer": "平均で約3か月です。エンジニア／人文知識・国際業務ビザは書類の完成度に応じて6から10週間かかります。並行して、東麻布での一時住居の手配、必要に応じてお子さまの学校登録、クライアントとの調整を進めます。学年開始や賃貸契約終了など強い制約がある場合は、可能な範囲で前倒しまたは後ろ倒しを行います。"
+          "q": "オファーから東京到着まで、どのくらいかかりますか。",
+          "a": "平均で約3か月です。エンジニア／人文知識・国際業務ビザは書類の完成度に応じて6から10週間かかります。並行して、東麻布での一時住居の手配、必要に応じてお子さまの学校登録、クライアントとの調整を進めます。学年開始や賃貸契約終了など強い制約がある場合は、可能な範囲で前倒しまたは後ろ倒しを行います。"
         },
         {
-          "question": "1年後に帰国したくなった場合はどうなりますか。",
-          "answer": "問題ありません。Mobbealプログラムはペナルティ付きの5年ロックインではありません。1年後にパリ、モントリオール、その他の都市への帰任を希望される場合、ご希望の地域でAbbealの別ミッションへ再配置します。過去にも数件の事例があり、いずれも次のステップを用意できました。唯一のお願いは、クライアント側の引き継ぎを丁寧に行うため、3か月前までにご連絡いただくことです。"
+          "q": "1年後に帰国したくなった場合はどうなりますか。",
+          "a": "問題ありません。Mobbealプログラムはペナルティ付きの5年ロックインではありません。1年後にパリ、モントリオール、その他の都市への帰任を希望される場合、ご希望の地域でAbbealの別ミッションへ再配置します。過去にも数件の事例があり、いずれも次のステップを用意できました。唯一のお願いは、クライアント側の引き継ぎを丁寧に行うため、3か月前までにご連絡いただくことです。"
         },
         {
-          "question": "契約前に東京を視察することはできますか。",
-          "answer": "はい、強くお勧めします。プロセス終盤の候補者向けにディスカバリーウィークを企画しています。5から7日間来日いただき、東麻布PMCビルでチームと面談、住居候補エリアの視察、クライアントとの直接面談を行います。航空券と宿泊費はAbbealが負担します。意思決定を目を見開いた状態で行っていただくための、最も価値の高い投資と考えています。"
+          "q": "契約前に東京を視察することはできますか。",
+          "a": "はい、強くお勧めします。プロセス終盤の候補者向けにディスカバリーウィークを企画しています。5から7日間来日いただき、東麻布PMCビルでチームと面談、住居候補エリアの視察、クライアントとの直接面談を行います。航空券と宿泊費はAbbealが負担します。意思決定を目を見開いた状態で行っていただくための、最も価値の高い投資と考えています。"
         }
       ],
       "fr-ca": [
         {
-          "question": "Je parle pas japonais, je peux quand même venir ?",
-          "answer": "Oui, et c'est même le cas de la majorité des ingés Mobbeal qui débarquent à Tokyo. Les mandats chez Money Forward, Le Monde ou Cartier se tiennent en anglais, et nos équipes internes aussi. Cela dit, on te paie des cours particuliers de japonais dès ton arrivée parce qu'on sait que la qualité de vie sur 3 ans dépend largement de ta capacité à interagir au izakaya, chez le médecin ou à l'école de tes enfants. Beaucoup d'ingés visent le JLPT N4 à 18 mois et le N3 à 3 ans."
+          "q": "Je parle pas japonais, je peux quand même venir ?",
+          "a": "Oui, et c'est même le cas de la majorité des ingés Mobbeal qui débarquent à Tokyo. Les mandats chez Money Forward, Le Monde ou Cartier se tiennent en anglais, et nos équipes internes aussi. Cela dit, on te paie des cours particuliers de japonais dès ton arrivée parce qu'on sait que la qualité de vie sur 3 ans dépend largement de ta capacité à interagir au izakaya, chez le médecin ou à l'école de tes enfants. Beaucoup d'ingés visent le JLPT N4 à 18 mois et le N3 à 3 ans."
         },
         {
-          "question": "Quel salaire je peux espérer à Tokyo ?",
-          "answer": "On reste sur la grille Abbeal alignée sur les standards canadiens et européens, indexée sur ton expérience et ta stack. Pas de discount local, pas de réajustement à la baisse parce que tu vis à Tokyo. À ça s'ajoute l'allocation logement Mobbeal les 3 à 6 premières semaines, la prise en charge des frais de relocation, et les avantages liés au coût de la vie tokyoïte (qui reste plus accessible que Montréal ou Paris sur le quotidien). On chiffre tout précisément dès le 2e call."
+          "q": "Quel salaire je peux espérer à Tokyo ?",
+          "a": "On reste sur la grille Abbeal alignée sur les standards canadiens et européens, indexée sur ton expérience et ta stack. Pas de discount local, pas de réajustement à la baisse parce que tu vis à Tokyo. À ça s'ajoute l'allocation logement Mobbeal les 3 à 6 premières semaines, la prise en charge des frais de relocation, et les avantages liés au coût de la vie tokyoïte (qui reste plus accessible que Montréal ou Paris sur le quotidien). On chiffre tout précisément dès le 2e call."
         },
         {
-          "question": "Comment ça se passe pour ma famille (conjoint, enfants, école) ?",
-          "answer": "Mobbeal, c'est un programme famille avant d'être un programme ingé. On gère le visa dépendant pour ton conjoint, on l'aide à trouver une job remote ou une école de japonais s'il veut se réorienter. Pour les enfants, on a des contacts directs au Lycée Français International de Tokyo, à la British School et à ASIJ. On t'aide à monter les dossiers d'inscription, on te prévient des deadlines, et on te connecte avec d'autres familles Mobbeal déjà sur place."
+          "q": "Comment ça se passe pour ma famille (conjoint, enfants, école) ?",
+          "a": "Mobbeal, c'est un programme famille avant d'être un programme ingé. On gère le visa dépendant pour ton conjoint, on l'aide à trouver une job remote ou une école de japonais s'il veut se réorienter. Pour les enfants, on a des contacts directs au Lycée Français International de Tokyo, à la British School et à ASIJ. On t'aide à monter les dossiers d'inscription, on te prévient des deadlines, et on te connecte avec d'autres familles Mobbeal déjà sur place."
         },
         {
-          "question": "Combien de temps entre l'offre et l'arrivée à Tokyo ?",
-          "answer": "Compte 3 mois en moyenne. Le visa Engineer / Specialist in Humanities prend 6 à 10 semaines selon la complétude du dossier. En parallèle on cale le logement temporaire à Higashi-Azabu, l'inscription des enfants si nécessaire, et on coordonne avec ton client. Si tu as une contrainte forte (rentrée scolaire, fin de bail), on essaie d'accélérer ou de décaler en fonction."
+          "q": "Combien de temps entre l'offre et l'arrivée à Tokyo ?",
+          "a": "Compte 3 mois en moyenne. Le visa Engineer / Specialist in Humanities prend 6 à 10 semaines selon la complétude du dossier. En parallèle on cale le logement temporaire à Higashi-Azabu, l'inscription des enfants si nécessaire, et on coordonne avec ton client. Si tu as une contrainte forte (rentrée scolaire, fin de bail), on essaie d'accélérer ou de décaler en fonction."
         },
         {
-          "question": "Et si après 1 an je veux rentrer ?",
-          "answer": "Pas de drame. Le programme Mobbeal, c'est pas un contrat à 5 ans avec clause de pénalité. Si après 1 an tu veux rentrer à Montréal, Paris ou ailleurs, on te repositionne sur un mandat Abbeal dans la géo de ton choix. C'est arrivé deux ou trois fois, et à chaque fois on a trouvé une suite. La seule chose qu'on demande, c'est que tu nous préviennes 3 mois en avance pour qu'on puisse organiser proprement la transition côté client."
+          "q": "Et si après 1 an je veux rentrer ?",
+          "a": "Pas de drame. Le programme Mobbeal, c'est pas un contrat à 5 ans avec clause de pénalité. Si après 1 an tu veux rentrer à Montréal, Paris ou ailleurs, on te repositionne sur un mandat Abbeal dans la géo de ton choix. C'est arrivé deux ou trois fois, et à chaque fois on a trouvé une suite. La seule chose qu'on demande, c'est que tu nous préviennes 3 mois en avance pour qu'on puisse organiser proprement la transition côté client."
         },
         {
-          "question": "Est-ce que je peux venir voir Tokyo avant de signer ?",
-          "answer": "Oui, et on encourage carrément. On organise des semaines découverte pour les profils en fin de process : tu viens 5 à 7 jours, tu rencontres l'équipe au PMC Building Higashi-Azabu, tu visites les quartiers où tu pourrais habiter, et tu rencontres physiquement le client. Abbeal prend en charge le vol et l'hébergement. C'est le meilleur investissement qu'on fasse pour s'assurer que la décision est prise les yeux ouverts."
+          "q": "Est-ce que je peux venir voir Tokyo avant de signer ?",
+          "a": "Oui, et on encourage carrément. On organise des semaines découverte pour les profils en fin de process : tu viens 5 à 7 jours, tu rencontres l'équipe au PMC Building Higashi-Azabu, tu visites les quartiers où tu pourrais habiter, et tu rencontres physiquement le client. Abbeal prend en charge le vol et l'hébergement. C'est le meilleur investissement qu'on fasse pour s'assurer que la décision est prise les yeux ouverts."
         }
       ]
     }
