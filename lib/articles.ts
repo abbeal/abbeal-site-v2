@@ -294,6 +294,36 @@ export const articles: Article[] = [
       ja: ARTICLE_BODIES["ai-agents-french-banks"]?.ja,
     },
   },
+  // Article 12 — Mobbeal témoignage Marie Nuellas (Tokyo). Article RH /
+  // expat / proof point Mobbeal pour candidats devs intéressés par Tokyo.
+  // Slug SEO longtail "apprendre japonais Tokyo + outils Anki/WaniKani/
+  // Bunpro". Contenu original en FR fourni par Marie, traduit EN/JA/FR-CA.
+  // Tag "Mobbeal" : matche le pattern existant (mobbeal-playbook). FR-CA
+  // disponible en cohérence avec le reste du site multilingue.
+  {
+    slug: "apprendre-japonais-tokyo-anki-wanikani-bunpro",
+    featured: false,
+    tag: "Mobbeal",
+    readTime: "5 min",
+    publishedAt: "2026-05-08",
+    title: {
+      fr: "Apprendre le japonais à Tokyo après le JLPT N2 : ma routine quotidienne.",
+      en: "Learning Japanese in Tokyo after JLPT N2: my daily routine.",
+      ja: "東京でJLPT N2取得後の日本語学習：私の日々のルーティン。",
+      "fr-ca": "Apprendre le japonais à Tokyo après le JLPT N2 : ma routine quotidienne.",
+    },
+    excerpt: {
+      fr: "Pas de solution miracle pour apprendre une langue. Anki, WaniKani et Bunpro : les trois outils qui me permettent de progresser en japonais au quotidien depuis Tokyo, en complément de mes cours particuliers offerts par Abbeal.",
+      en: "No magic bullet to learn a language. Anki, WaniKani and Bunpro: the three tools I use daily to keep progressing in Japanese from Tokyo, on top of the private lessons Abbeal offers me.",
+      ja: "言語学習に魔法の解決策はない。Anki、WaniKani、Bunpro：東京から日本語の上達を続けるために毎日使う3つのツール。Abbealが提供してくれる個人レッスンに加えて。",
+      "fr-ca": "Pas de solution miracle pour apprendre une langue. Anki, WaniKani et Bunpro : les trois outils qui me permettent de progresser en japonais au quotidien depuis Tokyo, en complément de mes cours particuliers offerts par Abbeal.",
+    },
+    body: {
+      fr: ARTICLE_BODIES["apprendre-japonais-tokyo-anki-wanikani-bunpro"]?.fr ?? [],
+      en: ARTICLE_BODIES["apprendre-japonais-tokyo-anki-wanikani-bunpro"]?.en,
+      ja: ARTICLE_BODIES["apprendre-japonais-tokyo-anki-wanikani-bunpro"]?.ja,
+    },
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
