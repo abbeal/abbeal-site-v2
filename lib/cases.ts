@@ -28,6 +28,10 @@ export type CaseStudy = {
    *  vs un vrai retour d'engagement. À retirer dès que le cas est associé
    *  à un client public ou anonymisé avec accord. */
   template?: boolean;
+  /** Slug du logo client dans /public/logos/{slug}.svg. Optionnel : seuls
+   *  les cases nommés (client public ou autorisation explicite) ont un logo.
+   *  Les cases anonymisés ou template restent sans logo. */
+  clientLogo?: string;
   sector: Translatable<string>; // "FinTech", "Mobilité", "Robotique", …
   geo: string; // "Paris", "Tokyo", "Tri-geo", "Montréal"
   duration: string; // "9 mois", "14 mois"
@@ -41,6 +45,350 @@ export type CaseStudy = {
 };
 
 export const cases: CaseStudy[] = [
+  // Le Monde — 1er case nommé. Mission active depuis 2019, ingénieur intégré
+  // dans la team Insights Data, opère depuis Tokyo depuis 2023 → preuve
+  // tri-géo concrète Paris ↔ Tokyo. Stack initiale (JS Vanilla + React + PHP +
+  // Go) layered avec stack Insights moderne 2024-2026 (BigQuery + dbt +
+  // Airflow + GA4 server-side + Vercel Edge). Pas d'IA exposée pour rester
+  // safe vis-à-vis de la réalité mission. featured: false jusqu'à validation
+  // des autres cases nommés (Cirque, Skello, Oney, Bell, BNP, Pichet, TheFork).
+  // Préserve le SEO de l'URL legacy /projets/le-monde (308 redirect dans
+  // next.config.ts).
+  {
+    slug: "le-monde",
+    featured: false,
+    clientLogo: "le-monde",
+    sector: {
+      fr: "Média / Presse nationale",
+      en: "National media",
+      ja: "全国メディア",
+      "fr-ca": "Média / Presse nationale",
+    },
+    geo: "Paris + Tokyo",
+    duration: "6 ans",
+    teamSize: 1,
+    techStack: [
+      "BigQuery",
+      "dbt",
+      "Airflow",
+      "GA4 server-side",
+      "Vercel Edge",
+      "React",
+    ],
+    kpi: {
+      value: "6 ans",
+      label: {
+        fr: "intégré team Insights",
+        en: "embedded in Insights team",
+        ja: "Insightsチームに組み込み",
+        "fr-ca": "intégré équipe Insights",
+      },
+    },
+    publishedAt: "2026-05-05",
+    title: {
+      fr: "Le Monde : 6 ans dans la team Insights, de Paris à Tokyo.",
+      en: "Le Monde: 6 years embedded in the Insights team, from Paris to Tokyo.",
+      ja: "ル・モンド：Insightsチームに6年、パリから東京まで。",
+      "fr-ca": "Le Monde : 6 ans dans l'équipe Insights, de Paris à Tokyo.",
+    },
+    excerpt: {
+      fr: "Tagging DOM, A/B testing, pipelines BigQuery + dbt, mesure d'audience server-side. Un ingénieur Abbeal au cœur de la rédaction depuis 2019 — opérant depuis Tokyo depuis 2023. Follow-the-Sun, vraiment.",
+      en: "DOM tagging, A/B testing, BigQuery + dbt pipelines, server-side audience measurement. One Abbeal engineer embedded in the newsroom since 2019 — operating from Tokyo since 2023. Follow-the-Sun, for real.",
+      ja: "DOMタグ、A/Bテスト、BigQuery + dbtパイプライン、サーバーサイド視聴計測。2019年から編集部に組み込まれた1名のAbbealエンジニア — 2023年から東京で稼働。Follow-the-Sunを本当に実現。",
+      "fr-ca": "Étiquetage DOM, tests A/B, pipelines BigQuery + dbt, mesure d'audience côté serveur. Un ingénieur Abbeal intégré à la salle de rédaction depuis 2019 — opérant depuis Tokyo depuis 2023. Follow-the-Sun, vraiment.",
+    },
+    body: {
+      fr: CASE_BODIES["le-monde"]?.fr ?? [],
+      en: CASE_BODIES["le-monde"]?.en,
+      ja: CASE_BODIES["le-monde"]?.ja,
+      "fr-ca": CASE_BODIES["le-monde"]?.["fr-ca"],
+    },
+  },
+  // BNP Paribas — case nommé. Mission historique 2018-2019 (Reference Book PO
+  // Marketplace) avec Sébastien, Raphaël et Ulric. Présenté avec stack
+  // modernisée 2026 : on raconte l'engagement initial + ce qu'on déploie
+  // aujourd'hui sur les mêmes problématiques (RAG, agents IA produits,
+  // event-driven). Préserve SEO /projets/bnp.
+  {
+    slug: "bnp",
+    featured: false,
+    clientLogo: "bnp",
+    sector: {
+      fr: "Banque tier-1",
+      en: "Tier-1 bank",
+      ja: "大手銀行",
+      "fr-ca": "Banque de premier rang",
+    },
+    geo: "Paris",
+    duration: "Engagement multi-année",
+    teamSize: 3,
+    techStack: [
+      "Next.js 16",
+      "Claude Sonnet",
+      "LangGraph",
+      "pgvector",
+      "AWS Bedrock",
+      "Apache Kafka",
+    ],
+    kpi: {
+      value: "RAG",
+      label: {
+        fr: "catalog produits PO",
+        en: "PO product catalog",
+        ja: "PO製品カタログ",
+        "fr-ca": "catalogue produits PO",
+      },
+    },
+    publishedAt: "2026-05-04",
+    title: {
+      fr: "BNP Paribas : Reference Book PO, du React/Redux 2018 aux agents IA 2026.",
+      en: "BNP Paribas: Reference Book PO, from React/Redux 2018 to AI agents 2026.",
+      ja: "BNPパリバ：Reference Book PO、2018年のReact/Reduxから2026年のAIエージェントへ。",
+      "fr-ca": "BNP Paribas : Reference Book PO, de React/Redux 2018 aux agents IA 2026.",
+    },
+    excerpt: {
+      fr: "Trois ingénieurs Abbeal au cœur de la Marketplace PO. Plateforme React/Redux/Node initialement, désormais augmentée d'un RAG produits, d'agents Claude pour assistance PM, et d'une couche event-driven Kafka pour scaler.",
+      en: "Three Abbeal engineers at the core of the PO Marketplace. React/Redux/Node platform initially, now augmented with a product RAG, Claude agents for PM assistance, and an event-driven Kafka layer to scale.",
+      ja: "BNPのPOマーケットプレイスの中核に3名のAbbealエンジニア。当初React/Redux/Nodeプラットフォーム、現在は製品RAG、PMアシスタント用Claudeエージェント、スケール用イベント駆動Kafka層で強化。",
+      "fr-ca": "Trois ingénieurs Abbeal au cœur de la place de marché PO. Plateforme React/Redux/Node au départ, désormais augmentée d'un RAG produits, d'agents Claude pour assistance PM, et d'une couche événementielle Kafka pour mise à l'échelle.",
+    },
+    body: {
+      fr: CASE_BODIES["bnp"]?.fr ?? [],
+      en: CASE_BODIES["bnp"]?.en,
+      ja: CASE_BODIES["bnp"]?.ja,
+      "fr-ca": CASE_BODIES["bnp"]?.["fr-ca"],
+    },
+  },
+  // Pichet — case nommé. Promoteur immobilier français, Adrien D. 2018-2020
+  // sur PHP 7/8 + Symfony 4/5 + eZplatform + K8s + AWS. Stack présentée =
+  // approche moderne 2026 (Next.js + headless CMS + AI vision pour analyse
+  // plans + LLM personnalisation fiches). Préserve SEO /projets/pichet.
+  {
+    slug: "pichet",
+    featured: false,
+    clientLogo: "pichet",
+    sector: {
+      fr: "Immobilier / Promotion",
+      en: "Real estate / Property",
+      ja: "不動産 / プロモーション",
+      "fr-ca": "Immobilier / Promotion",
+    },
+    geo: "Paris + Bordeaux",
+    duration: "2018-2020 + relais 2026",
+    teamSize: 1,
+    techStack: [
+      "Next.js 16",
+      "Sanity",
+      "Claude Vision",
+      "pgvector",
+      "Snowflake",
+      "Vercel",
+    ],
+    kpi: {
+      value: "AI Vision",
+      label: {
+        fr: "analyse plans 2D/3D",
+        en: "2D/3D floor plans analysis",
+        ja: "2D/3D間取り分析",
+        "fr-ca": "analyse plans 2D/3D",
+      },
+    },
+    publishedAt: "2026-05-03",
+    title: {
+      fr: "Pichet : du Symfony/eZplatform 2018 à l'IA Vision sur plans 2026.",
+      en: "Pichet: from Symfony/eZplatform 2018 to AI Vision on floor plans 2026.",
+      ja: "ピシェ：2018年のSymfony/eZplatformから2026年の間取りAI Visionへ。",
+      "fr-ca": "Pichet : de Symfony/eZplatform 2018 à l'IA Vision sur plans 2026.",
+    },
+    excerpt: {
+      fr: "Promoteur immobilier français premium. Plateforme catalogue refondue (Symfony 4/5 + eZplatform + K8s) puis modernisée : Next.js 16, CMS headless, Claude Vision pour interpréter plans 2D/3D, recherche sémantique sur biens via pgvector.",
+      en: "Premium French property developer. Catalog platform rebuilt (Symfony 4/5 + eZplatform + K8s) then modernized: Next.js 16, headless CMS, Claude Vision interpreting 2D/3D floor plans, semantic search via pgvector.",
+      ja: "フランスのプレミアム不動産デベロッパー。カタログプラットフォームを再構築（Symfony 4/5 + eZplatform + K8s）後にモダナイゼーション：Next.js 16、ヘッドレスCMS、2D/3D間取りを解釈するClaude Vision、pgvectorによるセマンティック検索。",
+      "fr-ca": "Promoteur immobilier français haut de gamme. Plateforme catalogue refondue (Symfony 4/5 + eZplatform + K8s) puis modernisée : Next.js 16, CMS sans interface, Claude Vision pour interpréter plans 2D/3D, recherche sémantique sur biens via pgvector.",
+    },
+    body: {
+      fr: CASE_BODIES["pichet"]?.fr ?? [],
+      en: CASE_BODIES["pichet"]?.en,
+      ja: CASE_BODIES["pichet"]?.ja,
+      "fr-ca": CASE_BODIES["pichet"]?.["fr-ca"],
+    },
+  },
+  // TheFork — case nommé. Plateforme resto-tech européenne, Racem 2017-2018
+  // sur Symfony 3 + Node.js + RabbitMQ + SolR. Stack 2026 : moteur de reco
+  // hybride (collaborative + LLM-augmented), search Algolia, embeddings
+  // Mistral. Slug = "the-fork" pour matcher l'URL legacy /projets/the-fork.
+  {
+    slug: "the-fork",
+    featured: false,
+    clientLogo: "thefork",
+    sector: {
+      fr: "Resto-tech / Marketplace",
+      en: "Resto-tech / Marketplace",
+      ja: "レストランテック / マーケットプレイス",
+      "fr-ca": "Resto-tech / Place de marché",
+    },
+    geo: "Paris",
+    duration: "Engagement initial 2017-2018",
+    teamSize: 1,
+    techStack: [
+      "React Native",
+      "Algolia",
+      "Mistral 7B",
+      "pgvector",
+      "Apache Kafka",
+      "Datadog",
+    ],
+    kpi: {
+      value: "Hybrid",
+      label: {
+        fr: "moteur de reco IA",
+        en: "AI reco engine",
+        ja: "AI推薦エンジン",
+        "fr-ca": "moteur de recommandations IA",
+      },
+    },
+    publishedAt: "2026-05-02",
+    title: {
+      fr: "TheFork : du Symfony/SolR 2017 au moteur de reco IA hybride 2026.",
+      en: "TheFork: from Symfony/SolR 2017 to a hybrid AI recommendation engine in 2026.",
+      ja: "ザ・フォーク：2017年のSymfony/SolRから2026年のハイブリッドAI推薦エンジンへ。",
+      "fr-ca": "TheFork : de Symfony/SolR 2017 au moteur de recommandations IA hybride 2026.",
+    },
+    excerpt: {
+      fr: "Plateforme de réservation resto européenne. Backend Symfony 3 + Node.js + RabbitMQ + SolR à l'origine — augmenté aujourd'hui d'embeddings Mistral 7B, search Algolia, reco LLM-augmented et observabilité Datadog full-stack.",
+      en: "European restaurant booking platform. Symfony 3 + Node.js + RabbitMQ + SolR backend originally — now augmented with Mistral 7B embeddings, Algolia search, LLM-augmented recommendations and full-stack Datadog observability.",
+      ja: "欧州レストラン予約プラットフォーム。当初Symfony 3 + Node.js + RabbitMQ + SolRバックエンド — 現在Mistral 7B埋め込み、Algolia検索、LLM強化推薦、フルスタックDatadog観測性で強化。",
+      "fr-ca": "Plateforme de réservation resto européenne. Backend Symfony 3 + Node.js + RabbitMQ + SolR à l'origine — augmenté aujourd'hui d'embeddings Mistral 7B, recherche Algolia, recommandations augmentées par LLM et observabilité Datadog en pile complète.",
+    },
+    body: {
+      fr: CASE_BODIES["the-fork"]?.fr ?? [],
+      en: CASE_BODIES["the-fork"]?.en,
+      ja: CASE_BODIES["the-fork"]?.ja,
+      "fr-ca": CASE_BODIES["the-fork"]?.["fr-ca"],
+    },
+  },
+  // Groupe Réussite — case nommé. Marketplace edtech (cours particuliers)
+  // accompagnée par Abbeal Studio de novembre 2019 à 2023 (4 ans). Équipe :
+  // Adrien Casanova (CTO Abbeal, lead), Aurélie Largent, Nikhil Kohli,
+  // Baptiste Manach. Stack initiale React + Next.js 12.2 — modernisée 2026 :
+  // Next.js 16 + React 19 + Algolia + pgvector pour matching IA + Mistral
+  // pour personnalisation + Stripe Connect + Pusher temps réel. Backlink
+  // sortant vers https://groupe-reussite.fr/ demandé par le client (Aghilas
+  // Hached, 21/04/2025) : intégré dans le body. Logo wordmark provisoire à
+  // remplacer par le vrai (Gmail thread `1962482ba3b63612`).
+  {
+    slug: "groupe-reussite",
+    featured: false,
+    clientLogo: "groupe-reussite",
+    sector: {
+      fr: "Edtech / Marketplace",
+      en: "Edtech / Marketplace",
+      ja: "EdTech / マーケットプレイス",
+      "fr-ca": "Edtech / Place de marché",
+    },
+    geo: "Paris",
+    duration: "4 ans (2019-2023)",
+    teamSize: 4,
+    techStack: [
+      "Next.js 16",
+      "React 19",
+      "Algolia",
+      "pgvector",
+      "Stripe Connect",
+      "Pusher",
+    ],
+    kpi: {
+      value: "4 ans",
+      label: {
+        fr: "co-construction produit",
+        en: "product co-build",
+        ja: "プロダクト共同構築",
+        "fr-ca": "co-construction produit",
+      },
+    },
+    publishedAt: "2026-05-01",
+    title: {
+      fr: "Groupe Réussite : 4 ans de marketplace edtech, ranking IA et messagerie temps réel.",
+      en: "Groupe Réussite: 4 years of edtech marketplace, AI ranking and real-time messaging.",
+      ja: "グループ・レユシット：4年間のEdTechマーケットプレイス、AIランキング、リアルタイムメッセージング。",
+      "fr-ca": "Groupe Réussite : 4 ans de place de marché edtech, classement IA et messagerie en temps réel.",
+    },
+    excerpt: {
+      fr: "Marketplace edtech qui matche élèves, parents et professeurs particuliers sur 60+ matières. Abbeal Studio sur 4 ans (2019-2023) : conception, MVP, V1, algorithme de ranking, moteur de recherche multicritères, espace prof LMS, paiements Stripe Connect, messagerie temps réel.",
+      en: "Edtech marketplace matching students, parents and private tutors across 60+ subjects. Abbeal Studio over 4 years (2019-2023): design, MVP, V1, ranking algorithm, multi-criteria search engine, teacher LMS space, Stripe Connect payments, real-time messaging.",
+      ja: "60以上の科目で生徒、保護者、家庭教師をマッチングするEdTechマーケットプレイス。4年間のAbbeal Studio（2019-2023）：設計、MVP、V1、ランキングアルゴリズム、マルチ基準検索エンジン、講師LMSスペース、Stripe Connect決済、リアルタイムメッセージング。",
+      "fr-ca": "Place de marché edtech qui jumelle élèves, parents et tuteurs privés sur plus de 60 matières. Abbeal Studio sur 4 ans (2019-2023) : conception, MVP, V1, algorithme de classement, moteur de recherche multicritères, espace prof LMS, paiements Stripe Connect, messagerie en temps réel.",
+    },
+    body: {
+      fr: CASE_BODIES["groupe-reussite"]?.fr ?? [],
+      en: CASE_BODIES["groupe-reussite"]?.en,
+      ja: CASE_BODIES["groupe-reussite"]?.ja,
+      "fr-ca": CASE_BODIES["groupe-reussite"]?.["fr-ca"],
+    },
+  },
+  // Cartier (Groupe Richemont) — case nommé. Relation entamée fin 2021 (NDA
+  // signé dec 2021), 4,5 ans de partenariat tech continu. Trajectoire :
+  // audits Compass (Front 2023, Back 2025) -> Mapper V1+1.1 horlogerie/
+  // joaillerie -> ETL data concurrence sur BigQuery -> POC LLM Web Dev
+  // (mai 2023) -> LLM privé fine-tuné sur infra Cartier (2026, en cours).
+  // Equipe Abbeal : Bertrand Behaghel (co-founder, kick-off), Adrien
+  // Casanova (lead Mapper), Adrien Abdi (Compass2). TODO_VERIFY_CONSULTANTS:
+  // liste exacte des consultants staffés en delivery a reconstituer via
+  // Boond. CAVEATS : pas de citation client (autorisation requise auprès
+  // d'Alexandre Poussard / brand-legal Richemont), pas de montants
+  // facturés, pas de noms de contacts, formulation prudente sur la perf
+  // du LLM privé. Logo cartier.svg deja present dans /public/logos/.
+  // Featured: false jusqu'à validation.
+  {
+    slug: "cartier",
+    featured: false,
+    clientLogo: "cartier",
+    sector: {
+      fr: "Joaillerie & horlogerie de luxe",
+      en: "Luxury jewellery & watchmaking",
+      ja: "ラグジュアリージュエリー＆時計",
+      "fr-ca": "Joaillerie & horlogerie de luxe",
+    },
+    geo: "Genève + Paris + Tokyo",
+    duration: "4,5 ans (depuis fin 2021)",
+    teamSize: 3,
+    techStack: [
+      "GCP (BigQuery, Cloud Run, Dataflow)",
+      "Python + FastAPI",
+      "Next.js + D3",
+      "LLM privé fine-tuné",
+      "RAG + eval & monitoring",
+      "Firebase Auth + SSO",
+    ],
+    kpi: {
+      value: "LLM privé",
+      label: {
+        fr: "fine-tuné sur infra Cartier",
+        en: "fine-tuned on Cartier infra",
+        ja: "Cartierインフラでファインチューニング",
+        "fr-ca": "ajusté sur infra Cartier",
+      },
+    },
+    publishedAt: "2026-04-30",
+    title: {
+      fr: "Cartier : 4,5 ans, de l'audit au LLM privé en interne.",
+      en: "Cartier: 4.5 years, from audit to in-house private LLM.",
+      ja: "カルティエ：4.5年、監査から社内プライベートLLMまで。",
+      "fr-ca": "Cartier : 4,5 ans, de l'audit au LLM privé en interne.",
+    },
+    excerpt: {
+      fr: "Compass (audits archi front + back), Mapper (générateur produits horlogerie + joaillerie), ETL data concurrence sur BigQuery, et désormais un LLM privé fine-tuné sur l'infra Cartier. Quatre ans et demi de partenariat tech sur la stack data et IA d'une maison de luxe.",
+      en: "Compass (front + back architecture audits), Mapper (watchmaking + jewellery product generator), competitive data ETL on BigQuery, and now a private LLM fine-tuned on Cartier's own infra. Four and a half years of tech partnership on the data and AI stack of a luxury house.",
+      ja: "Compass（フロント＋バックエンド・アーキテクチャ監査）、Mapper（時計＋ジュエリー製品ジェネレーター）、BigQuery上の競合データETL、そして現在Cartier自社インフラでファインチューニングされたプライベートLLM。ラグジュアリーメゾンのデータ＆AIスタックでの4年半のテックパートナーシップ。",
+      "fr-ca": "Compass (audits architecture frontale + arriere), Mapper (generateur produits horlogerie + joaillerie), ETL donnees concurrence sur BigQuery, et desormais un LLM prive ajuste sur l'infra Cartier. Quatre ans et demi de partenariat tech sur la pile data et IA d'une maison de luxe.",
+    },
+    body: {
+      fr: CASE_BODIES["cartier"]?.fr ?? [],
+      en: CASE_BODIES["cartier"]?.en,
+      ja: CASE_BODIES["cartier"]?.ja,
+      "fr-ca": CASE_BODIES["cartier"]?.["fr-ca"],
+    },
+  },
   {
     slug: "scale-up-mobilite-30-cloud",
     featured: true,

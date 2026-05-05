@@ -1,0 +1,8 @@
+<!--
+  Wordmark provisoire pour Pichet (promoteur immobilier).
+  TODO: remplacer par le vrai logo client si autorisation obtenue.
+  Police system-ui en gras, monochrome ink (var via .logo-mono CSS class).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" width="220" height="48" role="img" aria-label="Pichet">
+  <text x="0" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="0.02em" fill="#111110">PICHET</text>
+</svg>

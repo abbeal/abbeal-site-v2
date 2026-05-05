@@ -152,6 +152,18 @@ export default async function CaseStudyPage({
           </Link>
         </div>
 
+        {c.clientLogo && (
+          <div className="mb-6 flex items-center h-12 md:h-14">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`/logos/${c.clientLogo}.svg`}
+              alt={`${c.slug.replace(/-/g, " ")} logo`}
+              className="logo-mono h-full w-auto max-w-[220px] object-contain"
+              loading="eager"
+            />
+          </div>
+        )}
+
         <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
           {pick(c.sector, locale)} · {c.geo}
         </p>

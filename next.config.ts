@@ -10,6 +10,15 @@ const nextConfig: NextConfig = {
       { source: "/jobs", destination: "/fr/careers", permanent: true },
       { source: "/valley", destination: "/fr/about", permanent: true },
       { source: "/valley/:slug*", destination: "/fr/about", permanent: true },
+      // Projets — cases nommes AVANT la regle generique catch-all
+      // (preserve le SEO des URLs legacy /projets/* qui drainent du trafic GSC).
+      { source: "/projets/le-monde", destination: "/fr/cases/le-monde", permanent: true },
+      { source: "/projets/bnp", destination: "/fr/cases/bnp", permanent: true },
+      { source: "/projets/pichet", destination: "/fr/cases/pichet", permanent: true },
+      { source: "/projets/the-fork", destination: "/fr/cases/the-fork", permanent: true },
+      { source: "/projets/groupe-reussite", destination: "/fr/cases/groupe-reussite", permanent: true },
+      { source: "/projets/cartier", destination: "/fr/cases/cartier", permanent: true },
+      // Catch-all : tout autre /projets/* tombe sur l'index /fr/cases
       { source: "/projets", destination: "/fr/cases", permanent: true },
       { source: "/projets/:slug*", destination: "/fr/cases", permanent: true },
       { source: "/equipe", destination: "/fr/about", permanent: true },

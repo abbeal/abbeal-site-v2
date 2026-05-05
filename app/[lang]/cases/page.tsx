@@ -46,6 +46,7 @@ export default async function CasesIndexPage({
     title: pick(c.title, locale),
     excerpt: pick(c.excerpt, locale),
     template: c.template ?? false,
+    clientLogo: c.clientLogo,
   }));
 
   const teamUnit = {
@@ -118,6 +119,18 @@ export default async function CasesIndexPage({
                   </p>
                 </div>
               </div>
+
+              {c.clientLogo && (
+                <div className="mt-6 h-8 flex items-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`/logos/${c.clientLogo}.svg`}
+                    alt={`${c.slug.replace(/-/g, " ")} logo`}
+                    className="logo-mono h-full w-auto max-w-[140px] object-contain opacity-90"
+                    loading="lazy"
+                  />
+                </div>
+              )}
 
               <h2 className="mt-6 text-xl md:text-2xl font-semibold tracking-tight leading-snug group-hover:text-[var(--color-brand-teal)] transition-colors">
                 {c.title}
