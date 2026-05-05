@@ -299,12 +299,12 @@ export const cases: CaseStudy[] = [
       "Pusher",
     ],
     kpi: {
-      value: "4 ans",
+      value: "Algorithme",
       label: {
-        fr: "co-construction produit",
-        en: "product co-build",
-        ja: "プロダクト共同構築",
-        "fr-ca": "co-construction produit",
+        fr: "ranking IA professeurs",
+        en: "AI tutor ranking",
+        ja: "AI講師ランキング",
+        "fr-ca": "classement IA tuteurs",
       },
     },
     publishedAt: "2026-05-01",
@@ -351,7 +351,7 @@ export const cases: CaseStudy[] = [
       "fr-ca": "Joaillerie & horlogerie de luxe",
     },
     geo: "Genève + Paris + Tokyo",
-    duration: "4,5 ans (depuis fin 2021)",
+    duration: "Multi-projets depuis 2021",
     teamSize: 3,
     techStack: [
       "GCP (BigQuery, Cloud Run, Dataflow)",
