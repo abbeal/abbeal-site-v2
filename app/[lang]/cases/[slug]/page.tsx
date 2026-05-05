@@ -327,19 +327,22 @@ export default async function CaseStudyPage({
         </section>
       )}
 
-      {/* CTA */}
+      {/* CTA — Calendly partagé pour booker direct (vs /contact qui ajoute
+          une étape de saisie de formulaire). Lien externe = nouvel onglet. */}
       <section className="bg-[var(--color-ink)] text-[var(--color-bg-light)]">
         <div className="mx-auto max-w-[1100px] px-6 md:px-10 py-16 md:py-20 text-center">
           <h2 className="font-semibold tracking-[-0.02em] text-[clamp(1.75rem,3.5vw,2.75rem)] leading-tight max-w-2xl mx-auto">
             {t.ctaTitle}
           </h2>
-          <Link
-            href={`/${locale}/contact`}
+          <a
+            href="https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal"
+            target="_blank"
+            rel="noopener"
             className="mt-8 inline-flex items-center gap-2 h-12 px-6 text-base gradient-brand-soft-bg text-[var(--color-brand-teal-fg)] hover:brightness-110 transition-all font-medium"
           >
             {t.ctaBtn}
             <span aria-hidden>→</span>
-          </Link>
+          </a>
         </div>
       </section>
     </article>

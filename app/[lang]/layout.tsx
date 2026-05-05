@@ -108,8 +108,18 @@ export default async function RootLayout({
     ],
     foundingDate: "2015",
     founders: [
-      { "@type": "Person", name: "Sébastien Lonjon" },
-      { "@type": "Person", name: "Vianney Blanquart" },
+      {
+        "@type": "Person",
+        name: "Sébastien Lonjon",
+        jobTitle: "Founder & CEO",
+        sameAs: "https://www.linkedin.com/in/slonjon/",
+      },
+      {
+        "@type": "Person",
+        name: "Vianney Blanquart",
+        jobTitle: "Co-founder & COO",
+        sameAs: "https://www.linkedin.com/in/vianney-blanquart/",
+      },
     ],
     numberOfEmployees: { "@type": "QuantitativeValue", value: "50+" },
     areaServed: [

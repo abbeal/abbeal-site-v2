@@ -1,0 +1,55 @@
+/* TEAM */
+
+Founder & CEO: Sébastien Lonjon
+Contact: sebastien.lonjon [at] abbeal.com
+LinkedIn: https://www.linkedin.com/in/slonjon/
+Hub: Paris · Tokyo
+
+Co-founder & COO: Vianney Blanquart
+LinkedIn: https://www.linkedin.com/in/vianney-blanquart/
+Hub: Montréal · Paris
+
+CTO Studio: Adrien Casanova
+Hub: Paris
+
+/* THANKS */
+
+100+ entreprises accompagnées depuis 2015, dont :
+Le Monde · BNP Paribas · Cartier · Money Forward · Tripadvisor (TheFork)
+TheGreenBow · Pichet · Groupe Réussite · Neobrain · PwC
+Société Générale · AXA · BNC · Hydro-Québec · EDF · Enedis
+SMBC · PayPay · Money Forward · Carrefour · Decathlon
+Kering · Cartier · Ticketmaster · PwC · Qonto · Desjardins
+
+50+ talents internationaux via le programme Mobbeal — Paris ⇄ Montréal ⇄ Tokyo
+
+/* SITE */
+
+Last update: 2026-05-08
+Languages: Français · English · 日本語 · Français (Canada)
+Standards: HTML5, CSS, ECMAScript 2024, Schema.org JSON-LD
+Components: Next.js 16 (App Router), Tailwind v4, React 19
+Software: Vercel, Sanity, Cloudflare
+Tools: Figma, Linear, Notion, Slack, Codex
+Methodology: Adaptive Follow-the-Sun · Sprints courts · Code review IA-assistée
+
+/* CONTACT */
+
+contact@abbeal.com — questions générales
+recrutement@abbeal.com — opportunités
+sebastien.lonjon@abbeal.com — partenariats stratégiques
+calendly: https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal
+
+/* ADDRESSES */
+
+Paris HQ
+54 Rue Greneta
+75002 Paris, France
+
+Montréal
+4388 Rue Saint-Denis
+H2J 2L1 Montréal, QC, Canada
+
+Tokyo
+PMC Building, 1-23-5 Higashi-Azabu
+Minato-ku, Tokyo 106-0044, Japan

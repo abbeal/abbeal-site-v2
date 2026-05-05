@@ -10,7 +10,19 @@ Abbeal ne facture pas des jours d'ingénieurs. Abbeal livre un périmètre. Squa
 - [Recrutement technique](https://abbeal.com/fr/services/recrutement-technique.md) : top 1% sourcé par des ingénieurs, process 48h, garantie 6 mois
 - [Delivery clé en main](https://abbeal.com/fr/services/delivery-cle-en-main.md) : engagement output, SLOs mesurés, run maîtrisé
 
-## Études de cas (anonymisées, chiffrées)
+## Études de cas — clients nommés
+
+- [Money Forward : data backbone d'une nouvelle banque digitale à Tokyo](https://abbeal.com/fr/cases/money-forward.md) : Databricks + Delta Lake + dbt + AWS Tokyo + Unity Catalog, joint venture FinTech leader japonais et grand groupe bancaire
+- [Le Monde : 6 ans dans la team Insights, de Paris à Tokyo](https://abbeal.com/fr/cases/le-monde.md) : JS vanilla + Go + PHP + Codex, outil analytics interne Forecast + CMP IAB TCF
+- [Cartier : de l'audit au LLM privé en interne](https://abbeal.com/fr/cases/cartier.md) : 4,5 ans, GCP + Python + Next.js + LLM fine-tuné, trajectoire Compass → Mapper → ETL → IA souveraine
+- [Neobrain × PwC : SkillBot, l'agent IA RH dans Microsoft Teams](https://abbeal.com/fr/cases/neobrain-pwc-skillbot.md) : 35 000+ collaborateurs PwC USA, LangChain + GPT + MS Teams Bot Framework + Argo CD
+- [BNP Paribas : Reference Book PO, de React/Redux aux agents IA produits](https://abbeal.com/fr/cases/bnp.md) : Next.js 16 + Claude Sonnet + LangGraph + pgvector + Bedrock + Kafka
+- [Tripadvisor (TheFork) : du Symfony/SolR à la reco IA hybride](https://abbeal.com/fr/cases/the-fork.md) : Algolia + Mistral 7B + pgvector + Kafka + Datadog
+- [TheGreenBow : reprise en urgence de la Console VPN](https://abbeal.com/fr/cases/thegreenbow.md) : squad de 3 experts (front-end senior + back-end Go + DevSecOps) mobilisée en quelques semaines
+- [Pichet : du Symfony/eZplatform à l'IA Vision sur plans immobiliers](https://abbeal.com/fr/cases/pichet.md) : Next.js 16 + Sanity + Claude Vision + pgvector + Snowflake + Vercel
+- [Groupe Réussite : marketplace edtech, ranking IA et messagerie temps réel](https://abbeal.com/fr/cases/groupe-reussite.md) : Next.js 16 + React 19 + Algolia + pgvector + Stripe Connect + Pusher
+
+## Études de cas — sectoriels (anonymisées, chiffrées)
 
 - [Scale-up mobilité : −30 % facture cloud](https://abbeal.com/fr/cases/scale-up-mobilite-30-cloud.md) : refonte Kubernetes + Karpenter + ARM64, mêmes SLOs
 - [Leader e-commerce sport : PWA, +18 % conversion mobile](https://abbeal.com/fr/cases/leader-sport-pwa-conversion.md) : Next.js 16, Lighthouse 92, 6 mois
@@ -22,6 +34,7 @@ Abbeal ne facture pas des jours d'ingénieurs. Abbeal livre un périmètre. Squa
 - [Maison de luxe : MACH, 280 boutiques, ROI 18 mois](https://abbeal.com/fr/cases/retail-omnichannel-tri-geo.md) : commercetools, composable commerce
 - [Transport canadien : lakehouse, KPIs temps réel](https://abbeal.com/fr/cases/mobilite-canada-data-platform.md) : Databricks, dbt, Unity Catalog
 - [Assureur global : −70 % temps traitement sinistres](https://abbeal.com/fr/cases/assurance-claims-ia-document.md) : LayoutLMv3, Claude Sonnet, 11 M€/an
+- [FinTech montréalaise : conformité Loi 25 en 6 semaines](https://abbeal.com/fr/cases/loi-25-fintech-conformite-6-semaines.md) : Next.js + PostgreSQL + OneTrust + Cypress, audit CAI sans réserve
 
 ## Articles de référence
 
@@ -35,6 +48,8 @@ Abbeal ne facture pas des jours d'ingénieurs. Abbeal livre un périmètre. Squa
 - [Souveraineté numérique : SecNumCloud vs APPI](https://abbeal.com/fr/insights/souverainete-secnumcloud-vs-appi.md) : architectures hybrides
 - [Recruter le Top 1% tech : le process 48 h](https://abbeal.com/fr/insights/recruter-top-1-tech-process-48h.md) : méthode Abbeal
 - [Mobbeal Playbook : garde ton job, change de vie](https://abbeal.com/fr/insights/mobbeal-playbook-garde-ton-job.md) : 50+ expatriés
+- [Apprendre le japonais à Tokyo après le JLPT N2 : ma routine](https://abbeal.com/fr/insights/apprendre-japonais-tokyo-anki-wanikani-bunpro.md) : Anki, WaniKani, Bunpro — témoignage Marie Nuellas (ingénieure Abbeal Tokyo)
+- [Agents IA dans les banques françaises : 7 leçons côté production](https://abbeal.com/en/insights/ai-agents-french-banks.md) : article EN-first, BNP + SocGen + assureur top 3
 
 ## Mobbeal — mobilité internationale tech
 
