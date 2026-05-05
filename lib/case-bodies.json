@@ -823,7 +823,7 @@
   },
   "the-fork": {
     "fr": [
-      {"type": "p", "content": "TheFork. Plateforme de reservation resto europeenne, des dizaines de millions d'utilisateurs, des dizaines de milliers de restaurants partenaires. La promesse : trouver le bon resto au bon moment, et y reserver en deux clics. Notre travail : le pipeline qui rend cette promesse tenable."},
+      {"type": "p", "content": "TheFork (filiale Tripadvisor depuis 2014). Plateforme de reservation resto europeenne, des dizaines de millions d'utilisateurs, des dizaines de milliers de restaurants partenaires. La promesse : trouver le bon resto au bon moment, et y reserver en deux clics. Notre travail : le pipeline qui rend cette promesse tenable."},
       {"type": "h2", "content": "Le point de depart (2017-2018)"},
       {"type": "p", "content": "Racem integre cote backend resto-tech. Stack initiale : Symfony 3 + Node.js + RabbitMQ pour le messaging asynchrone + SolR pour la recherche. Mission : tenir la charge sur les pics resa du soir et du week-end, et faire evoluer le moteur de recherche au-dela du simple matching nom + ville."},
       {"type": "h2", "content": "Ce qui a ete livre"},
@@ -838,7 +838,7 @@
       {"type": "p", "content": "TheFork a ete notre premier engagement serieux sur une marketplace haute frequence. On y a appris a optimiser le SolR de l'epoque, puis a passer a Algolia + embeddings sans casser le SLA, et surtout : qu'un moteur de reco mediocre peut couter 5 a 10% du GMV en silence. C'est ce qu'on rejoue aujourd'hui chez les autres marketplaces resto / loisirs / voyage qui basculent sur du LLM-augmented ranking."}
     ],
     "en": [
-      {"type": "p", "content": "TheFork. European restaurant booking platform, tens of millions of users, tens of thousands of partner restaurants. The promise: find the right resto at the right moment, and book it in two clicks. Our work: the pipeline that makes that promise hold."},
+      {"type": "p", "content": "TheFork (Tripadvisor subsidiary since 2014). European restaurant booking platform, tens of millions of users, tens of thousands of partner restaurants. The promise: find the right resto at the right moment, and book it in two clicks. Our work: the pipeline that makes that promise hold."},
       {"type": "h2", "content": "Starting point (2017-2018)"},
       {"type": "p", "content": "Racem embedded on the resto-tech backend. Initial stack: Symfony 3 + Node.js + RabbitMQ for async messaging + SolR for search. Mission: hold the load on evening and weekend booking peaks, and evolve the search engine beyond simple name + city matching."},
       {"type": "h2", "content": "What was delivered"},
@@ -853,7 +853,7 @@
       {"type": "p", "content": "TheFork was our first serious engagement on a high-frequency marketplace. We learned to optimize SolR back then, then move to Algolia + embeddings without breaking SLA, and above all: that a mediocre reco engine can silently cost 5 to 10% of GMV. That's the experience we replay today at other resto / leisure / travel marketplaces moving to LLM-augmented ranking."}
     ],
     "ja": [
-      {"type": "p", "content": "ザ・フォーク。欧州レストラン予約プラットフォーム、数千万ユーザー、数万のパートナーレストラン。約束：適切な時に適切なレストランを見つけ、2クリックで予約。私たちの仕事：その約束を実現可能にするパイプライン。"},
+      {"type": "p", "content": "ザ・フォーク（2014年からトリップアドバイザー子会社）。欧州レストラン予約プラットフォーム、数千万ユーザー、数万のパートナーレストラン。約束：適切な時に適切なレストランを見つけ、2クリックで予約。私たちの仕事：その約束を実現可能にするパイプライン。"},
       {"type": "h2", "content": "出発点（2017-2018）"},
       {"type": "p", "content": "Racemがレスト・テックのバックエンドに組み込み。当初スタック：非同期メッセージング用Symfony 3 + Node.js + RabbitMQ + 検索用SolR。ミッション：夕方と週末の予約ピークの負荷に耐え、単純な名前+都市マッチングを超えて検索エンジンを進化させる。"},
       {"type": "h2", "content": "納品されたもの"},
@@ -868,7 +868,7 @@
       {"type": "p", "content": "ザ・フォークは高頻度マーケットプレイスでの最初の本格的なエンゲージメントでした。私たちは当時のSolRを最適化し、SLAを壊さずにAlgolia + 埋め込みに移行し、何より：平凡な推薦エンジンが静かにGMVの5-10%を失わせ得ることを学びました。それが今日、LLM強化ランキングに移行する他のレスト / レジャー / 旅行マーケットプレイスで再生する経験です。"}
     ],
     "fr-ca": [
-      {"type": "p", "content": "TheFork. Plateforme de reservation resto europeenne, des dizaines de millions d'utilisateurs, des dizaines de milliers de restaurants partenaires. La promesse : trouver le bon resto au bon moment, et y reserver en deux clics. Notre travail : le pipeline qui rend cette promesse tenable."},
+      {"type": "p", "content": "TheFork (filiale Tripadvisor depuis 2014). Plateforme de reservation resto europeenne, des dizaines de millions d'utilisateurs, des dizaines de milliers de restaurants partenaires. La promesse : trouver le bon resto au bon moment, et y reserver en deux clics. Notre travail : le pipeline qui rend cette promesse tenable."},
       {"type": "h2", "content": "Le point de depart (2017-2018)"},
       {"type": "p", "content": "Racem integre cote arriere-plan resto-tech. Pile initiale : Symfony 3 + Node.js + RabbitMQ pour la messagerie asynchrone + SolR pour la recherche. Mandat : tenir la charge sur les pointes de reservation du soir et de la fin de semaine, et faire evoluer le moteur de recherche au-dela du simple appariement nom + ville."},
       {"type": "h2", "content": "Ce qui a ete livre"},
@@ -886,6 +886,7 @@
   "groupe-reussite": {
     "fr": [
       {"type": "p", "content": "Groupe Reussite. Marketplace edtech qui met en relation eleves, parents et professeurs particuliers, sur 60+ matieres scolaires et extra-scolaires. Quatre ans de co-construction produit avec Abbeal Studio (2019-2023). Une plateforme toujours en production en 2026."},
+      {"type": "link", "label": "Visiter groupe-reussite.fr", "href": "https://groupe-reussite.fr/"},
       {"type": "h2", "content": "Le contexte"},
       {"type": "p", "content": "Aghilas Hached, Jonathan Molon, Remy Beharaing et Slim Ghorbal ont fonde Groupe Reussite avec une obsession : faire de la mise en relation eleve / professeur particulier une experience aussi simple qu'une reservation Airbnb. Pas un annuaire, pas un appel telephonique : une marketplace fluide, double interface, transactionnelle."},
       {"type": "h2", "content": "Le defi"},
@@ -905,6 +906,7 @@
     ],
     "en": [
       {"type": "p", "content": "Groupe Reussite. Edtech marketplace matching students, parents and private tutors across 60+ scholastic and extra-scholastic subjects. Four years of product co-build with Abbeal Studio (2019-2023). A platform still in production in 2026."},
+      {"type": "link", "label": "Visit groupe-reussite.fr", "href": "https://groupe-reussite.fr/"},
       {"type": "h2", "content": "Context"},
       {"type": "p", "content": "Aghilas Hached, Jonathan Molon, Remy Beharaing and Slim Ghorbal founded Groupe Reussite with one obsession: making student / private tutor matching as simple as an Airbnb booking. Not a directory, not a phone call: a fluid, dual-interface, transactional marketplace."},
       {"type": "h2", "content": "The challenge"},
@@ -924,6 +926,7 @@
     ],
     "ja": [
       {"type": "p", "content": "グループ・レユシット。60以上の学校および学校外の科目で、生徒、保護者、家庭教師をマッチングするEdTechマーケットプレイス。Abbeal Studioとの4年間の製品共同構築（2019-2023）。2026年現在も本番稼働中のプラットフォーム。"},
+      {"type": "link", "label": "groupe-reussite.frにアクセス", "href": "https://groupe-reussite.fr/"},
       {"type": "h2", "content": "コンテキスト"},
       {"type": "p", "content": "Aghilas Hached、Jonathan Molon、Remy Beharaing、Slim Ghorbalが、生徒と家庭教師のマッチングをAirbnbの予約のようにシンプルにするという1つのこだわりでグループ・レユシットを設立。ディレクトリではなく、電話でもなく：流動的で、デュアルインターフェース、トランザクション型マーケットプレイス。"},
       {"type": "h2", "content": "チャレンジ"},
@@ -943,6 +946,7 @@
     ],
     "fr-ca": [
       {"type": "p", "content": "Groupe Reussite. Place de marche edtech qui jumelle eleves, parents et tuteurs prives, sur plus de 60 matieres scolaires et extra-scolaires. Quatre ans de co-construction produit avec Abbeal Studio (2019-2023). Une plateforme toujours en production en 2026."},
+      {"type": "link", "label": "Visiter groupe-reussite.fr", "href": "https://groupe-reussite.fr/"},
       {"type": "h2", "content": "Le contexte"},
       {"type": "p", "content": "Aghilas Hached, Jonathan Molon, Remy Beharaing et Slim Ghorbal ont fonde Groupe Reussite avec une obsession : faire du jumelage eleve / tuteur prive une experience aussi simple qu'une reservation Airbnb. Pas un annuaire, pas un appel telephonique : une place de marche fluide, double interface, transactionnelle."},
       {"type": "h2", "content": "Le defi"},

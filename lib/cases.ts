@@ -213,21 +213,22 @@ export const cases: CaseStudy[] = [
       "fr-ca": CASE_BODIES["pichet"]?.["fr-ca"],
     },
   },
-  // TheFork — case nommé. Plateforme resto-tech européenne, Racem 2017-2018
-  // sur Symfony 3 + Node.js + RabbitMQ + SolR. Stack 2026 : moteur de reco
-  // hybride (collaborative + LLM-augmented), search Algolia, embeddings
-  // Mistral. Slug = "the-fork" pour matcher l'URL legacy /projets/the-fork.
+  // Tripadvisor (groupe propriétaire de TheFork, filiale depuis 2014) — case
+  // nommé. Engagement initial sur la stack TheFork (Racem 2017-2018, Symfony
+  // 3 + Node.js + RabbitMQ + SolR). Présenté ici sous l'ombrelle Tripadvisor
+  // (marque-mère reconnue mondialement) avec stack moderne 2026. Slug
+  // "the-fork" conservé pour préserver le SEO de l'URL legacy /projets/the-fork.
   {
     slug: "the-fork",
     featured: false,
-    clientLogo: "thefork",
+    clientLogo: "tripadvisor",
     sector: {
-      fr: "Resto-tech / Marketplace",
-      en: "Resto-tech / Marketplace",
-      ja: "レストランテック / マーケットプレイス",
-      "fr-ca": "Resto-tech / Place de marché",
+      fr: "Travel-tech / Marketplace resto",
+      en: "Travel-tech / Restaurant marketplace",
+      ja: "トラベルテック / レストランマーケットプレイス",
+      "fr-ca": "Travel-tech / Place de marché resto",
     },
-    geo: "Paris",
+    geo: "Paris + Europe",
     duration: "Engagement initial 2017-2018",
     teamSize: 1,
     techStack: [
@@ -249,16 +250,16 @@ export const cases: CaseStudy[] = [
     },
     publishedAt: "2026-05-02",
     title: {
-      fr: "TheFork : du Symfony/SolR 2017 au moteur de reco IA hybride 2026.",
-      en: "TheFork: from Symfony/SolR 2017 to a hybrid AI recommendation engine in 2026.",
-      ja: "ザ・フォーク：2017年のSymfony/SolRから2026年のハイブリッドAI推薦エンジンへ。",
-      "fr-ca": "TheFork : de Symfony/SolR 2017 au moteur de recommandations IA hybride 2026.",
+      fr: "Tripadvisor (TheFork) : du Symfony/SolR 2017 à la reco IA hybride 2026.",
+      en: "Tripadvisor (TheFork): from Symfony/SolR 2017 to hybrid AI reco in 2026.",
+      ja: "トリップアドバイザー（ザ・フォーク）：2017年のSymfony/SolRから2026年のハイブリッドAI推薦へ。",
+      "fr-ca": "Tripadvisor (TheFork) : de Symfony/SolR 2017 à la reco IA hybride 2026.",
     },
     excerpt: {
-      fr: "Plateforme de réservation resto européenne. Backend Symfony 3 + Node.js + RabbitMQ + SolR à l'origine — augmenté aujourd'hui d'embeddings Mistral 7B, search Algolia, reco LLM-augmented et observabilité Datadog full-stack.",
-      en: "European restaurant booking platform. Symfony 3 + Node.js + RabbitMQ + SolR backend originally — now augmented with Mistral 7B embeddings, Algolia search, LLM-augmented recommendations and full-stack Datadog observability.",
-      ja: "欧州レストラン予約プラットフォーム。当初Symfony 3 + Node.js + RabbitMQ + SolRバックエンド — 現在Mistral 7B埋め込み、Algolia検索、LLM強化推薦、フルスタックDatadog観測性で強化。",
-      "fr-ca": "Plateforme de réservation resto européenne. Backend Symfony 3 + Node.js + RabbitMQ + SolR à l'origine — augmenté aujourd'hui d'embeddings Mistral 7B, recherche Algolia, recommandations augmentées par LLM et observabilité Datadog en pile complète.",
+      fr: "TheFork (filiale Tripadvisor depuis 2014), plateforme de réservation resto européenne. Backend Symfony 3 + Node.js + RabbitMQ + SolR à l'origine — augmenté aujourd'hui d'embeddings Mistral 7B, search Algolia, reco LLM-augmented et observabilité Datadog full-stack.",
+      en: "TheFork (Tripadvisor subsidiary since 2014), European restaurant booking platform. Symfony 3 + Node.js + RabbitMQ + SolR backend originally — now augmented with Mistral 7B embeddings, Algolia search, LLM-augmented recommendations and full-stack Datadog observability.",
+      ja: "ザ・フォーク（2014年からトリップアドバイザー子会社）、欧州レストラン予約プラットフォーム。当初Symfony 3 + Node.js + RabbitMQ + SolRバックエンド — 現在Mistral 7B埋め込み、Algolia検索、LLM強化推薦、フルスタックDatadog観測性で強化。",
+      "fr-ca": "TheFork (filiale Tripadvisor depuis 2014), plateforme de réservation resto européenne. Backend Symfony 3 + Node.js + RabbitMQ + SolR à l'origine — augmenté aujourd'hui d'embeddings Mistral 7B, recherche Algolia, recommandations augmentées par LLM et observabilité Datadog en pile complète.",
     },
     body: {
       fr: CASE_BODIES["the-fork"]?.fr ?? [],

@@ -121,12 +121,14 @@ export default async function CasesIndexPage({
               </div>
 
               {c.clientLogo && (
-                <div className="mt-6 h-8 flex items-center">
+                <div className="mt-6 h-9 flex items-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={`/logos/${c.clientLogo}.svg`}
                     alt={`${c.slug.replace(/-/g, " ")} logo`}
-                    className="logo-mono h-full w-auto max-w-[140px] object-contain opacity-90"
+                    // Couleur native du logo client (pas de filtre .logo-mono)
+                    // pour faire ressortir l'identité visuelle sur les cards.
+                    className="h-full w-auto max-w-[150px] object-contain"
                     loading="lazy"
                   />
                 </div>
