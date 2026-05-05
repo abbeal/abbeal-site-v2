@@ -1,0 +1,2626 @@
+{
+  "follow-the-sun-delivery": {
+    "body": {
+      "fr": [
+        {
+          "type": "p",
+          "content": "Follow-the-Sun Delivery, ce n'est pas un mot-clef qu'on a collé sur un slide pour faire moderne. C'est une mécanique opérationnelle qu'on opère depuis 9 ans, sur des produits qui tournent en prod, pour des clients qui paient des SLA. 3 hubs synchrones - Paris, Montréal, Tokyo. 24h de delivery utile par jour ouvré. Zéro ingénieur qui code à 3h du matin pour rattraper un fuseau. C'est ça, l'Adaptive Follow-the-Sun. Le reste, c'est du marketing."
+        },
+        {
+          "type": "h2",
+          "content": "Le problème : pourquoi 24/7 est mort en 9-to-5"
+        },
+        {
+          "type": "p",
+          "content": "La plupart des ESN vendent du 24/7 en empilant des astreintes. Tu te retrouves avec une équipe parisienne qui ferme à 19h, un on-call qui prend le relais en mode pompier, et un backlog qui repart le lendemain matin avec 10 tickets à trier. Résultat - tu paies 24h et tu livres 8h."
+        },
+        {
+          "type": "p",
+          "content": "L'autre option classique - le near-shoring low-cost en Inde ou au Maghreb. Tu gagnes 4-6h de chevauchement, tu perds en qualité, en propriété intellectuelle, et tu finis avec 2 équipes qui se renvoient la balle sur Slack à coup de 'pas mon ticket'. Le ticket dort 16h."
+        },
+        {
+          "type": "p",
+          "content": "Les vrais coûts cachés du modèle mono-géo classique sur un produit critique :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Time-to-market dégradé - chaque incident traité hors heures ouvrées coûte 3 à 5x plus cher en MTTR.",
+            "Burn-out structurel - les astreintes répétées font fuir les seniors en 18 mois.",
+            "Dette technique invisible - le code écrit à 2h du matin par un on-call fatigué finit en bug payant 6 mois plus tard.",
+            "Perte de momentum - une feature livrée le vendredi soir attend lundi matin pour être validée. 60h de delay sur une release."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Notre méthode Adaptive Follow-the-Sun"
+        },
+        {
+          "type": "p",
+          "content": "Adaptive, parce qu'on ne fait pas tourner 3 équipes parallèles qui se marchent dessus. On orchestre 3 cellules synchrones autour d'un même produit, avec un seul backlog, un seul standard de qualité, une seule définition du Done. Les ingénieurs de Paris, Montréal et Tokyo travaillent sur le même Git, les mêmes runbooks, les mêmes ADRs."
+        },
+        {
+          "type": "p",
+          "content": "Le secret n'est pas dans les fuseaux horaires. Le secret est dans le handover. On a passé 4 ans à rationaliser le passage de relais entre hubs - check-list de 12 points, vidéo asynchrone Loom de 5 minutes max, dashboard d'état partagé, ownership tracé dans chaque PR. Quand Tokyo termine sa journée, Paris reprend exactement où Tokyo s'est arrêté. Pas de redite, pas de re-onboarding, pas de 'rappelle-moi le contexte'."
+        },
+        {
+          "type": "p",
+          "content": "Les 3 piliers techniques qui rendent l'Adaptive Follow-the-Sun viable :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Documentation as code - chaque décision d'architecture est versionnée, chaque runbook est exécutable, chaque incident génère un post-mortem auto-indexé.",
+            "Observabilité partagée - dashboards Grafana ou Datadog accessibles aux 3 hubs, alerting routé sur le hub actif, pas d'astreinte cumulée.",
+            "Trunk-based development + feature flags - pas de longues branches qui divergent entre fuseaux, releases continues, rollback en 30 secondes."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Comment ca marche concretement (handover toutes les 8h)"
+        },
+        {
+          "type": "p",
+          "content": "Une journée type sur un produit Follow-the-Sun ressemble à ceci. Les heures sont en CET, mais la mécanique est la même quel que soit le hub qui démarre."
+        },
+        {
+          "type": "list",
+          "items": [
+            "08h00 CET - Paris ouvre. Lecture du handover de Tokyo (Loom + dashboard). Reprise du backlog là où Tokyo l'a laissé.",
+            "12h00 CET - Sync de 15 min Paris-Montréal (Montréal vient d'ouvrir à 7h locale).",
+            "16h00 CET - Paris passe la main à Montréal via handover structuré. Loom + check-list. Paris ferme.",
+            "20h00 CET - Montréal continue, Tokyo se prépare à ouvrir (5h locale Tokyo).",
+            "00h00 CET - Montréal passe la main à Tokyo. Tokyo prend le relais sur incidents et features prioritaires.",
+            "08h00 CET - Tokyo passe la main à Paris. Boucle bouclée."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Le mythe à casser - Follow-the-Sun n'est pas une question de fuseaux horaires. C'est une question de discipline de handover. Sans process écrit, sans ownership tracé, sans documentation exécutable, 3 hubs ne livrent pas plus vite qu'1 seul. Ils livrent 3 fois plus de bugs."
+        },
+        {
+          "type": "h2",
+          "content": "La preuve : 6 ans de Follow-the-Sun chez Le Monde"
+        },
+        {
+          "type": "p",
+          "content": "Le Monde nous fait confiance depuis 6 ans sur sa stack data et insights. La mission a démarré à Paris, intégrée dans la team Insights du journal. En 2023, l'ingénieur référent - Alexandre L. - a déménagé à Tokyo. La mission n'a pas bougé. Au contraire, elle a gagné en couverture."
+        },
+        {
+          "type": "p",
+          "content": "Aujourd'hui, Le Monde bénéficie d'une présence active sur la plage 5h-22h CET. Quand un incident éditorial pète à 6h du matin à Paris pendant un live politique, Tokyo est encore en pleine après-midi et déclenche le fix avant que Paris ait fini son café. C'est le seul Follow-the-Sun en production que je connais sur un média français de cette envergure. Et ça tient depuis 6 ans."
+        },
+        {
+          "type": "h2",
+          "content": "Pourquoi 3 hubs et pas 2 ou 4"
+        },
+        {
+          "type": "p",
+          "content": "Question légitime, on nous la pose à chaque RFP. La réponse est mathématique avant d'être stratégique."
+        },
+        {
+          "type": "list",
+          "items": [
+            "2 hubs (Paris-Tokyo ou Paris-Montréal) - tu couvres 16h par jour, tu laisses un trou de 8h. Pas de Follow-the-Sun, juste du extended-day.",
+            "3 hubs (Paris-Montréal-Tokyo) - tu couvres 24h, chaque hub travaille 8h, chaque handover est synchrone (chevauchement de 1 à 2h entre hubs voisins). Sweet spot.",
+            "4 hubs et plus - chaque handover ajoute du bruit, du retravail, de la dilution de contexte. Au-delà de 3, le coût de coordination dépasse le gain de couverture."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "p",
+          "content": "Paris, Montréal, Tokyo - ce n'est pas un choix géographique romantique. C'est le triangle qui maximise la couverture horaire avec le minimum de friction culturelle. 3 langues de travail (FR, EN, JP), 3 cultures du code review, 1 standard commun."
+        },
+        {
+          "type": "h2",
+          "content": "Ce qu'on évite (anti-patterns)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "L'astreinte cumulée - jamais. Si tu fais Follow-the-Sun pour épargner les astreintes et que tes ingénieurs sont quand même de garde, tu n'as rien gagné.",
+            "Le handover vocal non documenté - le 'je t'explique vite fait en visio' ne passe pas l'épreuve du turnover. Tout passe par Loom + dashboard.",
+            "Les 3 backlogs parallèles - 1 seul backlog, 1 seule définition du Done, 1 seul propriétaire produit. Sinon, tu as 3 mini-équipes en silo.",
+            "Le suivi du soleil mécanique - on n'envoie pas un ticket à Tokyo juste parce qu'il est 18h à Paris. On envoie à Tokyo quand Tokyo est le bon hub pour le ticket (compétences, contexte, priorité).",
+            "Le reporting à 3 voix - 1 seul PM, 1 seul reporting, 1 seul interlocuteur côté client. Le client ne doit jamais 'gérer' 3 équipes."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Si tu opères un produit critique en Europe et que tes incidents nocturnes te coûtent un ingénieur senior par an en burn-out, on devrait parler. Le Follow-the-Sun n'est pas pour tout le monde - mais quand il fit, il change la courbe. Calendly direct, 30 minutes, sans bullshit."
+        }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "content": "Follow-the-Sun Delivery isn't a buzzword we slapped on a slide to look modern. It's an operating model we've been running for 9 years, on products in production, for clients paying real SLAs. 3 synced hubs - Paris, Montreal, Tokyo. 24 hours of useful delivery per business day. Zero engineers coding at 3am to catch up with a timezone. That's Adaptive Follow-the-Sun. The rest is marketing."
+        },
+        {
+          "type": "h2",
+          "content": "The problem: why 24/7 died inside 9-to-5"
+        },
+        {
+          "type": "p",
+          "content": "Most consultancies sell 24/7 by stacking on-call rotations. You end up with a Paris team that closes at 7pm, a firefighter on-call who takes over reactively, and a backlog that restarts the next morning with 10 tickets to triage. You pay for 24h, you ship 8h."
+        },
+        {
+          "type": "p",
+          "content": "The other classic option - low-cost near-shoring in India or North Africa. You gain 4-6h of overlap, you lose quality, IP control, and you end up with 2 teams ping-ponging tickets on Slack with 'not my issue'. The ticket sleeps 16 hours."
+        },
+        {
+          "type": "p",
+          "content": "The real hidden costs of mono-geo delivery on a critical product:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Degraded time-to-market - every incident handled outside business hours costs 3 to 5x more in MTTR.",
+            "Structural burnout - repeated on-call rotations push senior engineers out within 18 months.",
+            "Invisible tech debt - code written at 2am by an exhausted on-call ships as a paying bug 6 months later.",
+            "Lost momentum - a feature delivered Friday evening waits until Monday morning for validation. 60h of delay per release."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Our Adaptive Follow-the-Sun method"
+        },
+        {
+          "type": "p",
+          "content": "Adaptive, because we don't run 3 parallel teams that step on each other. We orchestrate 3 synced cells around a single product, with one backlog, one quality bar, one Definition of Done. Engineers in Paris, Montreal and Tokyo work on the same Git, the same runbooks, the same ADRs."
+        },
+        {
+          "type": "p",
+          "content": "The secret isn't in the timezones. The secret is in the handover. We spent 4 years industrializing the handoff between hubs - 12-point checklist, async Loom video capped at 5 minutes, shared status dashboard, ownership tracked in every PR. When Tokyo wraps its day, Paris picks up exactly where Tokyo stopped. No retread, no re-onboarding, no 'remind me the context'."
+        },
+        {
+          "type": "p",
+          "content": "The 3 technical pillars that make Adaptive Follow-the-Sun viable:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Documentation as code - every architecture decision is versioned, every runbook is executable, every incident auto-generates an indexed postmortem.",
+            "Shared observability - Grafana or Datadog dashboards accessible to all 3 hubs, alerting routed to the active hub, no cumulative on-call.",
+            "Trunk-based development + feature flags - no long-lived branches diverging across timezones, continuous releases, 30-second rollback."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "How it actually works (handover every 8h)"
+        },
+        {
+          "type": "p",
+          "content": "A typical day on a Follow-the-Sun product looks like this. Times are in CET, but the mechanics hold whichever hub starts."
+        },
+        {
+          "type": "list",
+          "items": [
+            "08:00 CET - Paris opens. Reads Tokyo's handover (Loom + dashboard). Picks up the backlog where Tokyo left it.",
+            "12:00 CET - 15-min sync Paris-Montreal (Montreal just opened at 7am local).",
+            "16:00 CET - Paris hands over to Montreal via structured handover. Loom + checklist. Paris closes.",
+            "20:00 CET - Montreal continues, Tokyo prepares to open (5am Tokyo local).",
+            "00:00 CET - Montreal hands over to Tokyo. Tokyo takes the wheel on incidents and priority features.",
+            "08:00 CET - Tokyo hands back to Paris. Loop closed."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "The myth to kill - Follow-the-Sun isn't about timezones. It's about handover discipline. Without written process, tracked ownership and executable docs, 3 hubs don't ship faster than 1. They ship 3x more bugs."
+        },
+        {
+          "type": "h2",
+          "content": "The proof: 6 years of Follow-the-Sun at Le Monde"
+        },
+        {
+          "type": "p",
+          "content": "Le Monde has trusted us for 6 years on its data and insights stack. The mission started in Paris, embedded in the newspaper's Insights team. In 2023, the lead engineer - Alexandre L. - relocated to Tokyo. The mission didn't move. It actually gained coverage."
+        },
+        {
+          "type": "p",
+          "content": "Today, Le Monde gets active coverage on the 5am-10pm CET window. When an editorial incident hits Paris at 6am during a live political broadcast, Tokyo is mid-afternoon and triggers the fix before Paris has finished coffee. It's the only Follow-the-Sun in production I know of on a French media outlet of that size. And it's been holding for 6 years."
+        },
+        {
+          "type": "h2",
+          "content": "Why 3 hubs, not 2 or 4"
+        },
+        {
+          "type": "p",
+          "content": "Fair question, we get it on every RFP. The answer is mathematical before it's strategic."
+        },
+        {
+          "type": "list",
+          "items": [
+            "2 hubs (Paris-Tokyo or Paris-Montreal) - 16h coverage per day, 8h gap. Not Follow-the-Sun, just extended-day.",
+            "3 hubs (Paris-Montreal-Tokyo) - 24h coverage, each hub works 8h, each handover is synchronous (1-2h overlap between adjacent hubs). Sweet spot.",
+            "4+ hubs - each handover adds noise, rework, context dilution. Past 3, coordination cost outpaces coverage gain."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "p",
+          "content": "Paris, Montreal, Tokyo - this isn't a romantic geographic pick. It's the triangle that maximizes time coverage with minimum cultural friction. 3 working languages (FR, EN, JP), 3 code review cultures, 1 shared standard."
+        },
+        {
+          "type": "h2",
+          "content": "What we avoid (anti-patterns)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cumulative on-call - never. If you do Follow-the-Sun to spare on-call rotations and your engineers still page at night, you've gained nothing.",
+            "Undocumented voice handover - the 'quick sync over Zoom' doesn't survive turnover. Everything goes through Loom + dashboard.",
+            "3 parallel backlogs - one backlog, one Definition of Done, one product owner. Otherwise, you get 3 mini-teams in silos.",
+            "Mechanical sun-following - we don't ship a ticket to Tokyo just because it's 6pm in Paris. We ship to Tokyo when Tokyo is the right hub for the ticket (skills, context, priority).",
+            "3-voice reporting - one PM, one reporting line, one client interlocutor. The client must never 'manage' 3 teams."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "If you operate a critical product in Europe and your nightly incidents cost you a senior engineer per year in burnout, we should talk. Follow-the-Sun isn't for everyone - but when it fits, it bends the curve. Direct Calendly, 30 minutes, no bullshit."
+        }
+      ],
+      "ja": [
+        {
+          "type": "p",
+          "content": "Follow-the-Sun デリバリーは、スライドに貼り付けたバズワードではない。9年間、本番稼働中のプロダクトで、実際のSLAを支払うクライアントのために運用してきたオペレーティングモデルだ。同期する3拠点 - パリ、モントリオール、東京。営業日あたり24時間の有効デリバリー。深夜3時にタイムゾーンを追いかけるエンジニアはゼロ。これがアダプティブFollow-the-Sun。それ以外はマーケティングにすぎない。"
+        },
+        {
+          "type": "h2",
+          "content": "課題 - なぜ24/7は9-to-5の中で死んだのか"
+        },
+        {
+          "type": "p",
+          "content": "多くのSIerはオンコールローテーションを積み重ねて24/7を売る。19時に閉まるパリチーム、消火活動的に引き継ぐオンコール担当、翌朝10件のチケットでリスタートするバックログ。24時間支払って、8時間しか出荷できない。"
+        },
+        {
+          "type": "p",
+          "content": "もう1つの定番 - インドや北アフリカの低コストニアショア。重複時間は4-6時間稼げるが、品質、知財管理を失い、Slackで「私の担当じゃない」とチケットを投げ合う2チームになる。チケットは16時間眠る。"
+        },
+        {
+          "type": "p",
+          "content": "単一拠点デリバリーが重要プロダクトで生む隠れコスト - "
+        },
+        {
+          "type": "list",
+          "items": [
+            "市場投入の遅延 - 営業時間外のインシデント対応はMTTRが3-5倍に膨らむ。",
+            "構造的バーンアウト - 繰り返すオンコールでシニアは18ヶ月以内に離脱する。",
+            "見えない技術的負債 - 疲弊したオンコールが深夜2時に書いたコードは、6ヶ月後に課金バグとして表面化する。",
+            "モメンタムの喪失 - 金曜夜にデリバリーされた機能は月曜朝まで検証待ち。リリースごとに60時間の遅延。"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "アダプティブFollow-the-Sunメソッド"
+        },
+        {
+          "type": "p",
+          "content": "アダプティブと呼ぶのは、3つの並列チームが互いを踏みつけるのではなく、1つのプロダクトを中心に同期する3セルをオーケストレーションするからだ。バックログは1つ、品質基準は1つ、Definition of Doneは1つ。パリ、モントリオール、東京のエンジニアは同じGit、同じRunbook、同じADRで動く。"
+        },
+        {
+          "type": "p",
+          "content": "秘密はタイムゾーンではない。ハンドオーバーにある。我々は4年かけて拠点間の引き継ぎを工業化した - 12項目のチェックリスト、5分以内の非同期Loom動画、共有ステータスダッシュボード、PRごとに記録されるオーナーシップ。東京が1日を終えるとき、パリは東京が止めた地点から正確に再開する。重複なし、再オンボーディングなし、「文脈を再度教えて」もなし。"
+        },
+        {
+          "type": "p",
+          "content": "アダプティブFollow-the-Sunを成立させる3つの技術的柱 - "
+        },
+        {
+          "type": "list",
+          "items": [
+            "Documentation as code - すべてのアーキテクチャ決定はバージョン管理され、すべてのRunbookは実行可能、すべてのインシデントは自動でインデックス化されたポストモーテムを生成する。",
+            "共有オブザーバビリティ - GrafanaまたはDatadogのダッシュボードを3拠点で共有、アクティブな拠点へアラートをルーティング、累積オンコールなし。",
+            "トランクベース開発 + フィーチャーフラグ - タイムゾーン間で乖離する長期ブランチなし、継続的リリース、30秒でロールバック。"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "具体的にどう動くか - 8時間ごとのハンドオーバー"
+        },
+        {
+          "type": "p",
+          "content": "Follow-the-Sunプロダクトの典型的な1日はこうなる。時刻はCETだが、どの拠点が始まろうと仕組みは同じだ。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "08:00 CET - パリ始動。東京のハンドオーバー(Loom + ダッシュボード)を読み、東京が残したバックログを引き継ぐ。",
+            "12:00 CET - パリ-モントリオール15分同期(モントリオールは現地7時に始動したばかり)。",
+            "16:00 CET - パリが構造化ハンドオーバーでモントリオールへ引き継ぎ。Loom + チェックリスト。パリ終了。",
+            "20:00 CET - モントリオール継続、東京は始動準備(東京現地5時)。",
+            "00:00 CET - モントリオールが東京へ引き継ぎ。東京はインシデントと優先機能を主導。",
+            "08:00 CET - 東京がパリへ引き継ぎ。ループ完了。"
+          ],
+          "ordered": true
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "打ち砕くべき神話 - Follow-the-Sunはタイムゾーンの話ではない。ハンドオーバー規律の話だ。書面化されたプロセス、追跡可能なオーナーシップ、実行可能なドキュメントなしには、3拠点は1拠点より速く出荷しない。バグを3倍出荷するだけだ。"
+        },
+        {
+          "type": "h2",
+          "content": "証拠 - ル・モンド紙での6年間のFollow-the-Sun"
+        },
+        {
+          "type": "p",
+          "content": "ル・モンド紙は6年間、データとインサイトのスタックで我々を信頼してくれている。ミッションはパリで開始、新聞社のInsightsチームに組み込まれた。2023年、リードエンジニアのAlexandre L.が東京へ移住。ミッションは止まらなかった。むしろカバレッジが広がった。"
+        },
+        {
+          "type": "p",
+          "content": "現在、ル・モンドはCET 5時から22時のレンジで能動的なカバレッジを得ている。政治ライブ放送中の朝6時にパリで編集インシデントが発生したとき、東京は午後の真っ最中で、パリがコーヒーを飲み終える前に修正を発動する。私が知る限り、この規模のフランスメディアで本番稼働しているFollow-the-Sunはここだけ。そしてそれが6年続いている。"
+        },
+        {
+          "type": "h2",
+          "content": "なぜ3拠点で、2でも4でもないのか"
+        },
+        {
+          "type": "p",
+          "content": "正当な質問、RFPごとに聞かれる。答えは戦略的である前に数学的だ。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "2拠点(パリ-東京またはパリ-モントリオール) - 1日16時間カバー、8時間の穴。Follow-the-Sunではなく単なる延長営業日。",
+            "3拠点(パリ-モントリオール-東京) - 24時間カバー、各拠点8時間稼働、各ハンドオーバーは同期(隣接拠点間で1-2時間の重複)。スイートスポット。",
+            "4拠点以上 - ハンドオーバーごとにノイズ、手戻り、文脈の希釈が増える。3を超えると、調整コストがカバレッジ利得を上回る。"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "p",
+          "content": "パリ、モントリオール、東京 - これはロマンチックな地理的選択ではない。文化的摩擦を最小化しつつ時間カバレッジを最大化する三角形だ。3つの作業言語(FR, EN, JP)、3つのコードレビュー文化、1つの共通基準。"
+        },
+        {
+          "type": "h2",
+          "content": "我々が避けること(アンチパターン)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "累積オンコール - 絶対にしない。Follow-the-Sunでオンコールを軽減する目的で導入したのに、エンジニアが夜間呼び出されるなら、何も得ていない。",
+            "ドキュメント化されない口頭ハンドオーバー - 「Zoomで簡単に説明」は離職に耐えない。すべてLoom + ダッシュボード経由。",
+            "3つの並列バックログ - バックログは1つ、Definition of Doneは1つ、プロダクトオーナーは1人。さもなくばサイロ化した3つのミニチームになる。",
+            "機械的な太陽追跡 - パリで18時だからという理由だけで東京にチケットを送ったりしない。東京がそのチケットに最適な拠点(スキル、文脈、優先度)である場合に送る。",
+            "3声のレポーティング - PMは1人、レポートラインは1つ、クライアント側の窓口は1人。クライアントが3チームを「管理」することは絶対にあってはならない。"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "欧州で重要プロダクトを運用していて、夜間インシデントで毎年シニアエンジニアを1人バーンアウトで失っているなら、話そう。Follow-the-Sunは万人向けではない。だがフィットすれば、曲線を変える。Calendlyへ直接、30分、無駄な前置きなし。"
+        }
+      ],
+      "fr-ca": [
+        {
+          "type": "p",
+          "content": "Follow-the-Sun Delivery, ce n'est pas un mot-clic qu'on a colle sur une diapo pour avoir l'air a la mode. C'est une mecanique operationnelle qu'on opere depuis 9 ans, sur des produits qui roulent en prod, pour des clients qui paient des ententes de service reelles. 3 poles synchrones - Paris, Montreal, Tokyo. 24h de livraison utile par jour ouvrable. Zero ingenieur qui code a 3h du matin pour rattraper un fuseau. C'est ca, l'Adaptive Follow-the-Sun. Le reste, c'est de la mise en marche."
+        },
+        {
+          "type": "h2",
+          "content": "Le probleme - pourquoi le 24/7 est mort dans le 9-to-5"
+        },
+        {
+          "type": "p",
+          "content": "La plupart des firmes de service vendent du 24/7 en empilant des gardes. Tu te ramasses avec une equipe parisienne qui ferme a 19h, un de garde qui prend la releve en mode pompier, et une liste de billets qui repart le lendemain matin avec 10 items a trier. Resultat - tu paies 24h et tu livres 8h."
+        },
+        {
+          "type": "p",
+          "content": "L'autre option classique - la sous-traitance a bas cout en Inde ou au Maghreb. Tu gagnes 4 a 6h de chevauchement, tu perds en qualite, en propriete intellectuelle, et tu finis avec 2 equipes qui se renvoient la balle sur Slack a coups de 'pas mon billet'. Le billet dort 16h."
+        },
+        {
+          "type": "p",
+          "content": "Les vrais couts caches du modele mono-geo classique sur un produit critique - "
+        },
+        {
+          "type": "list",
+          "items": [
+            "Mise en marche degradee - chaque incident traite hors heures ouvrables coute 3 a 5x plus cher en MTTR.",
+            "Epuisement structurel - les gardes repetees font fuir les seniors en 18 mois.",
+            "Dette technique invisible - le code ecrit a 2h du matin par un de garde fatigue finit en bogue payant 6 mois plus tard.",
+            "Perte de momentum - une fonctionnalite livree le vendredi soir attend lundi matin pour etre validee. 60h de delai par version."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Notre methode Adaptive Follow-the-Sun"
+        },
+        {
+          "type": "p",
+          "content": "Adaptive, parce qu'on ne fait pas rouler 3 equipes paralleles qui se pilent sur les pieds. On orchestre 3 cellules synchrones autour d'un meme produit, avec une seule liste de travail, un seul standard de qualite, une seule definition du Done. Les ingenieurs de Paris, Montreal et Tokyo travaillent sur le meme Git, les memes carnets de bord, les memes ADR."
+        },
+        {
+          "type": "p",
+          "content": "Le secret n'est pas dans les fuseaux horaires. Le secret est dans la passation. On a passe 4 ans a rationaliser le passage de relais entre poles - liste de verification de 12 points, video asynchrone Loom de 5 minutes maximum, tableau de bord d'etat partage, propriete tracee dans chaque PR. Quand Tokyo termine sa journee, Paris reprend exactement ou Tokyo s'est arrete. Pas de redite, pas de re-integration, pas de 'rappelle-moi le contexte'."
+        },
+        {
+          "type": "p",
+          "content": "Les 3 piliers techniques qui rendent l'Adaptive Follow-the-Sun viable - "
+        },
+        {
+          "type": "list",
+          "items": [
+            "Documentation comme du code - chaque decision d'architecture est versionnee, chaque carnet de bord est executable, chaque incident genere un post-mortem auto-indexe.",
+            "Observabilite partagee - tableaux de bord Grafana ou Datadog accessibles aux 3 poles, alertes acheminees vers le pole actif, pas de garde cumulee.",
+            "Developpement trunk-based + drapeaux de fonctionnalite - pas de longues branches qui divergent entre fuseaux, livraisons continues, retour arriere en 30 secondes."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Comment ca marche concretement (passation aux 8h)"
+        },
+        {
+          "type": "p",
+          "content": "Une journee type sur un produit Follow-the-Sun ressemble a ceci. Les heures sont en CET, mais la mecanique est la meme peu importe quel pole demarre."
+        },
+        {
+          "type": "list",
+          "items": [
+            "08h00 CET - Paris ouvre. Lecture de la passation de Tokyo (Loom + tableau de bord). Reprise de la liste de travail la ou Tokyo l'a laissee.",
+            "12h00 CET - Synchro de 15 min Paris-Montreal (Montreal vient d'ouvrir a 7h locale).",
+            "16h00 CET - Paris passe le flambeau a Montreal via passation structuree. Loom + liste de verification. Paris ferme.",
+            "20h00 CET - Montreal continue, Tokyo se prepare a ouvrir (5h locale Tokyo).",
+            "00h00 CET - Montreal passe le flambeau a Tokyo. Tokyo prend le relais sur incidents et fonctionnalites prioritaires.",
+            "08h00 CET - Tokyo passe le flambeau a Paris. Boucle bouclee."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Le mythe a casser - le Follow-the-Sun n'est pas une question de fuseaux horaires. C'est une question de discipline de passation. Sans processus ecrit, sans propriete tracee, sans documentation executable, 3 poles ne livrent pas plus vite qu'un seul. Ils livrent 3 fois plus de bogues."
+        },
+        {
+          "type": "h2",
+          "content": "La preuve - 6 ans de Follow-the-Sun chez Le Monde"
+        },
+        {
+          "type": "p",
+          "content": "Le Monde nous fait confiance depuis 6 ans sur sa pile data et insights. La mission a demarre a Paris, integree dans l'equipe Insights du journal. En 2023, l'ingenieur referent - Alexandre L. - a demenage a Tokyo. La mission n'a pas bouge. Au contraire, elle a gagne en couverture."
+        },
+        {
+          "type": "p",
+          "content": "Aujourd'hui, Le Monde beneficie d'une presence active sur la plage 5h-22h CET. Quand un incident editorial pete a 6h du matin a Paris pendant un direct politique, Tokyo est encore en plein apres-midi et declenche le correctif avant que Paris ait fini son cafe. C'est le seul Follow-the-Sun en prod que je connais sur un media francais de cette envergure. Et ca tient depuis 6 ans."
+        },
+        {
+          "type": "h2",
+          "content": "Pourquoi 3 poles et pas 2 ou 4"
+        },
+        {
+          "type": "p",
+          "content": "Question legitime, on nous la pose a chaque appel d'offres. La reponse est mathematique avant d'etre strategique."
+        },
+        {
+          "type": "list",
+          "items": [
+            "2 poles (Paris-Tokyo ou Paris-Montreal) - tu couvres 16h par jour, tu laisses un trou de 8h. Pas de Follow-the-Sun, juste de la journee allongee.",
+            "3 poles (Paris-Montreal-Tokyo) - tu couvres 24h, chaque pole travaille 8h, chaque passation est synchrone (chevauchement de 1 a 2h entre poles voisins). Le sweet spot.",
+            "4 poles et plus - chaque passation ajoute du bruit, du retravail, de la dilution de contexte. Au-dela de 3, le cout de coordination depasse le gain de couverture."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "p",
+          "content": "Paris, Montreal, Tokyo - ce n'est pas un choix geographique romantique. C'est le triangle qui maximise la couverture horaire avec le minimum de friction culturelle. 3 langues de travail (FR, EN, JP), 3 cultures de revue de code, 1 standard commun."
+        },
+        {
+          "type": "h2",
+          "content": "Ce qu'on evite (anti-patrons)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "La garde cumulee - jamais. Si tu fais du Follow-the-Sun pour epargner les gardes et que tes ingenieurs sont quand meme appeles la nuit, tu n'as rien gagne.",
+            "La passation vocale non documentee - le 'je t'explique vite fait en visio' ne passe pas l'epreuve du roulement de personnel. Tout passe par Loom + tableau de bord.",
+            "Les 3 listes de travail paralleles - 1 seule liste, 1 seule definition du Done, 1 seul proprietaire produit. Sinon, tu as 3 mini-equipes en silo.",
+            "Le suivi du soleil mecanique - on n'envoie pas un billet a Tokyo juste parce qu'il est 18h a Paris. On envoie a Tokyo quand Tokyo est le bon pole pour le billet (competences, contexte, priorite).",
+            "La reddition de comptes a 3 voix - 1 seul charge de projet, 1 seule reddition, 1 seul interlocuteur cote client. Le client ne doit jamais 'gerer' 3 equipes."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Si tu operes un produit critique en Europe et que tes incidents nocturnes te coutent un ingenieur senior par annee en epuisement, on devrait se parler. Le Follow-the-Sun n'est pas pour tout le monde - mais quand ca cliche, ca change la courbe. Calendly direct, 30 minutes, sans bullshit."
+        }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "q": "Comment garantir la qualite quand 3 equipes touchent au meme code ?",
+          "a": "En appliquant trunk-based development + feature flags + 1 seul Definition of Done partage. Chaque PR est revue par un ingenieur d'un autre hub avant merge - revue croisee Paris-Montreal, Montreal-Tokyo, Tokyo-Paris. Les conflits Git sont rares (branches courtes, releases continues), et chaque incident genere un post-mortem partage aux 3 hubs. Resultat mesure sur nos missions - le taux de defauts en prod est inferieur a celui d'une equipe mono-geo equivalente, parce que le code est revu par 3 cultures d'ingenierie differentes."
+        },
+        {
+          "q": "Quel est le surcout d'une equipe tri-geo vs mono-geo ?",
+          "a": "Sur le TJM facial, comptez +15 a +25% par rapport a une equipe parisienne pure. Sur le TCO reel (incidents + burn-out + retravail + delais), c'est -30 a -40% sur 12 mois. La difference vient du MTTR divise par 3 sur les incidents nocturnes, de la suppression des astreintes coutuses, et du time-to-market accelere. On peut chiffrer precisement sur ton cas - 30 minutes de Calendly suffisent."
+        },
+        {
+          "q": "Les fuseaux horaires, c'est pas un cauchemar pour la coordination ?",
+          "a": "Si tu coordonnes mal, oui. Si tu coordonnes bien, non. Le piege c'est de vouloir tout synchroniser - reunions tri-hub a 8h Paris / 15h Tokyo / 2h Montreal, ca tue tout le monde. Notre regle - 1 seule reunion synchrone tri-hub par semaine (45 min), tout le reste asynchrone via Loom + Notion + dashboard. Les standups quotidiens sont par hub, le suivi global est ecrit. Resultat - moins de reunions qu'une equipe mono-geo, paradoxalement."
+        },
+        {
+          "q": "Vous operez sur quelles stacks tech ?",
+          "a": "Web et Mobile (React, Next.js, Vue, Swift, Kotlin, React Native), Data et IA (Python, Databricks, Snowflake, dbt, MLflow, LangChain, LlamaIndex), Cloud et Fiabilite (AWS, GCP, Azure, Kubernetes, Terraform, Datadog, Grafana), Embarque et Robotique (C/C++, Rust, ROS, FreeRTOS). Le Follow-the-Sun marche sur n'importe quelle stack du moment que la documentation est versionnee et l'observabilite est partagee. On adapte au contexte client, pas l'inverse."
+        },
+        {
+          "q": "Comment commencer une mission Follow-the-Sun ?",
+          "a": "On ne commence jamais a 3 hubs d'un coup, c'est une connerie. La sequence eprouvee - Mois 1-2, on demarre mono-hub (Paris generalement), on industrialise la documentation et l'observabilite. Mois 3, on ajoute Montreal ou Tokyo selon ta priorite (couverture US-Asie). Mois 4-6, on bascule sur 3 hubs synchrones avec handover formalise. Le premier handover entre 2 hubs casse 80% des sceptiques internes. Calendly direct - calendly.com/d/csr7-3vm-vhw/meeting-abbeal."
+        },
+        {
+          "q": "Et si mon produit n'est pas critique 24/7, ca vaut le coup ?",
+          "a": "Honnetement - non. Le Follow-the-Sun a un sens si tu as au moins l'un de ces 3 marqueurs - audience internationale (US + Europe + Asie), incidents nocturnes recurrents qui couttent cher, ou time-to-market qui est ton avantage competitif. Si tu fais un SaaS B2B FR avec 9-18h de trafic utile, reste mono-geo, on te dira la verite avant de signer. Notre interet long terme, c'est que tu ne gaspilles pas ton budget."
+        }
+      ],
+      "en": [
+        {
+          "q": "How do you guarantee quality when 3 teams touch the same code?",
+          "a": "Trunk-based development + feature flags + one shared Definition of Done. Every PR gets reviewed by an engineer from another hub before merge - cross-review Paris-Montreal, Montreal-Tokyo, Tokyo-Paris. Git conflicts are rare (short branches, continuous releases), and every incident generates a postmortem shared across the 3 hubs. Measured on our missions - production defect rate sits lower than an equivalent mono-geo team, because code gets reviewed by 3 different engineering cultures."
+        },
+        {
+          "q": "What's the cost premium of a tri-geo team vs mono-geo?",
+          "a": "On day-rate alone, expect +15 to +25% vs a pure Paris team. On real TCO (incidents + burnout + rework + delays), it's -30 to -40% over 12 months. The delta comes from MTTR divided by 3 on nightly incidents, eliminated on-call costs, and accelerated time-to-market. We can model it precisely on your case - 30 min of Calendly is enough."
+        },
+        {
+          "q": "Aren't timezones a coordination nightmare?",
+          "a": "If you coordinate badly, yes. If you coordinate well, no. The trap is wanting to sync everything - tri-hub meetings at 8am Paris / 3pm Tokyo / 2am Montreal kill everyone. Our rule - 1 synchronous tri-hub meeting per week (45 min), everything else async via Loom + Notion + dashboard. Daily standups are per-hub, global tracking is written. Result - paradoxically fewer meetings than a mono-geo team."
+        },
+        {
+          "q": "What tech stacks do you operate on?",
+          "a": "Web and Mobile (React, Next.js, Vue, Swift, Kotlin, React Native), Data and AI (Python, Databricks, Snowflake, dbt, MLflow, LangChain, LlamaIndex), Cloud and Reliability (AWS, GCP, Azure, Kubernetes, Terraform, Datadog, Grafana), Embedded and Robotics (C/C++, Rust, ROS, FreeRTOS). Follow-the-Sun works on any stack as long as documentation is versioned and observability is shared. We adapt to the client context, not the other way around."
+        },
+        {
+          "q": "How do you start a Follow-the-Sun mission?",
+          "a": "You never start at 3 hubs at once, that's amateur hour. The proven sequence - Month 1-2, we start mono-hub (usually Paris), industrializing docs and observability. Month 3, we add Montreal or Tokyo depending on your priority (US or Asia coverage). Month 4-6, we switch to 3 synced hubs with formalized handover. The first handover between 2 hubs converts 80% of internal skeptics. Direct Calendly - calendly.com/d/csr7-3vm-vhw/meeting-abbeal."
+        },
+        {
+          "q": "What if my product isn't critical 24/7, is it worth it?",
+          "a": "Honestly - no. Follow-the-Sun makes sense if you have at least one of these 3 markers - international audience (US + Europe + Asia), recurring nightly incidents that cost real money, or time-to-market as your competitive edge. If you run a French B2B SaaS with 9-6pm useful traffic, stay mono-geo, we'll tell you the truth before signing. Our long-term interest is that you don't waste your budget."
+        }
+      ],
+      "ja": [
+        {
+          "q": "3チームが同じコードを触るとき、どう品質を保証するのか?",
+          "a": "トランクベース開発 + フィーチャーフラグ + 共有された1つのDefinition of Done。各PRはマージ前に別拠点のエンジニアがレビュー - パリ-モントリオール、モントリオール-東京、東京-パリのクロスレビュー。Gitコンフリクトは稀(短いブランチ、継続的リリース)、各インシデントは3拠点で共有されるポストモーテムを生成する。我々のミッションで測定された結果 - 同等の単一拠点チームより本番障害率が低い。3つの異なるエンジニアリング文化がコードをレビューするからだ。"
+        },
+        {
+          "q": "単一拠点と比べた3拠点チームの追加コストは?",
+          "a": "表面的な日次レートでは、純粋なパリチームに対して+15-25%。実際のTCO(インシデント + バーンアウト + 手戻り + 遅延)では、12ヶ月で-30-40%。差分は、夜間インシデントのMTTRが3分の1になること、コストのかかるオンコールの撤廃、市場投入の加速から生まれる。あなたのケースで正確にモデル化できる - 30分のCalendlyで十分だ。"
+        },
+        {
+          "q": "タイムゾーンは調整の悪夢ではないのか?",
+          "a": "調整が下手ならイエス。調整がうまければノー。罠は全部を同期させようとすること - パリ8時/東京15時/モントリオール2時の3拠点会議は全員を殺す。我々のルール - 同期的な3拠点会議は週1回(45分)、それ以外はすべて非同期(Loom + Notion + ダッシュボード)。日次スタンドアップは拠点別、全体トラッキングは文書化。結果 - 逆説的に、単一拠点チームより会議が少ない。"
+        },
+        {
+          "q": "どのような技術スタックで運用しているか?",
+          "a": "WebとモバイルReact, Next.js, Vue, Swift, Kotlin, React Native)、データとAI(Python, Databricks, Snowflake, dbt, MLflow, LangChain, LlamaIndex)、クラウドと信頼性(AWS, GCP, Azure, Kubernetes, Terraform, Datadog, Grafana)、組み込みとロボティクス(C/C++, Rust, ROS, FreeRTOS)。ドキュメントがバージョン管理され、オブザーバビリティが共有されている限り、Follow-the-Sunはどのスタックでも動く。我々がクライアントの文脈に適応する、その逆ではない。"
+        },
+        {
+          "q": "Follow-the-Sunミッションをどう始めるか?",
+          "a": "いきなり3拠点で始めるのは素人仕事。実証されたシーケンス - 1-2ヶ月目、単一拠点(通常パリ)で開始、ドキュメントとオブザーバビリティを工業化。3ヶ月目、優先度(米国カバレッジかアジアカバレッジか)に応じてモントリオールまたは東京を追加。4-6ヶ月目、形式化されたハンドオーバーで3拠点同期に切り替え。2拠点間の最初のハンドオーバーが社内懐疑派の80%を改宗させる。Calendly直リンク - calendly.com/d/csr7-3vm-vhw/meeting-abbeal。"
+        },
+        {
+          "q": "私のプロダクトは24/7クリティカルではないが、それでも価値はあるか?",
+          "a": "正直に言うと - ノー。Follow-the-Sunは次の3つのマーカーのうち少なくとも1つがある場合に意味を持つ - 国際的なオーディエンス(米国 + 欧州 + アジア)、本当のお金がかかる夜間の繰り返しインシデント、または競争優位としての市場投入速度。9時から18時の有効トラフィックの日本国内向けB2B SaaSなら、単一拠点に留まれ。契約前に真実を伝える。我々の長期的な利益は、あなたが予算を無駄にしないことだ。"
+        }
+      ],
+      "fr-ca": [
+        {
+          "q": "Comment garantir la qualite quand 3 equipes touchent au meme code ?",
+          "a": "En appliquant le developpement trunk-based + drapeaux de fonctionnalite + 1 seule Definition of Done partagee. Chaque PR est revisee par un ingenieur d'un autre pole avant fusion - revision croisee Paris-Montreal, Montreal-Tokyo, Tokyo-Paris. Les conflits Git sont rares (branches courtes, livraisons continues), et chaque incident genere un post-mortem partage aux 3 poles. Resultat mesure sur nos missions - le taux de defauts en prod est inferieur a celui d'une equipe mono-geo equivalente, parce que le code est revu par 3 cultures d'ingenierie differentes."
+        },
+        {
+          "q": "Quel est le surcout d'une equipe tri-geo vs mono-geo ?",
+          "a": "Sur le taux journalier facial, comptez +15 a +25% par rapport a une equipe parisienne pure. Sur le cout total reel (incidents + epuisement + retravail + delais), c'est -30 a -40% sur 12 mois. La difference vient du MTTR divise par 3 sur les incidents nocturnes, de la suppression des gardes couteuses, et de la mise en marche acceleree. On peut chiffrer precisement sur ton cas - 30 minutes de Calendly suffisent."
+        },
+        {
+          "q": "Les fuseaux horaires, c'est pas un cauchemar pour la coordination ?",
+          "a": "Si tu coordonnes mal, oui. Si tu coordonnes bien, non. Le piege c'est de vouloir tout synchroniser - rencontres tri-poles a 8h Paris / 15h Tokyo / 2h Montreal, ca tue tout le monde. Notre regle - 1 seule rencontre synchrone tri-pole par semaine (45 min), tout le reste asynchrone via Loom + Notion + tableau de bord. Les melees quotidiennes sont par pole, le suivi global est ecrit. Resultat - moins de rencontres qu'une equipe mono-geo, paradoxalement."
+        },
+        {
+          "q": "Vous operez sur quelles piles tech ?",
+          "a": "Web et mobile (React, Next.js, Vue, Swift, Kotlin, React Native), donnees et IA (Python, Databricks, Snowflake, dbt, MLflow, LangChain, LlamaIndex), infonuagique et fiabilite (AWS, GCP, Azure, Kubernetes, Terraform, Datadog, Grafana), embarque et robotique (C/C++, Rust, ROS, FreeRTOS). Le Follow-the-Sun marche sur n'importe quelle pile du moment que la documentation est versionnee et l'observabilite est partagee. On s'adapte au contexte client, pas l'inverse."
+        },
+        {
+          "q": "Comment commencer une mission Follow-the-Sun ?",
+          "a": "On ne commence jamais a 3 poles d'un coup, c'est de l'amateurisme. La sequence eprouvee - Mois 1-2, on demarre mono-pole (Paris generalement), on industrialise la documentation et l'observabilite. Mois 3, on ajoute Montreal ou Tokyo selon ta priorite (couverture US ou Asie). Mois 4-6, on bascule sur 3 poles synchrones avec passation formalisee. La premiere passation entre 2 poles convertit 80% des sceptiques internes. Calendly direct - calendly.com/d/csr7-3vm-vhw/meeting-abbeal."
+        },
+        {
+          "q": "Et si mon produit n'est pas critique 24/7, ca vaut la peine ?",
+          "a": "Honnetement - non. Le Follow-the-Sun a du sens si tu as au moins un de ces 3 marqueurs - auditoire international (US + Europe + Asie), incidents nocturnes recurrents qui coutent cher, ou mise en marche qui est ton avantage concurrentiel. Si tu fais un SaaS B2B francophone avec 9h-18h de trafic utile, reste mono-pole, on va te dire la verite avant de signer. Notre interet long terme, c'est que tu ne gaspilles pas ton budget."
+        }
+      ]
+    }
+  },
+  "tech-consulting-tokyo": {
+    "body": {
+      "fr": [
+        {
+          "type": "p",
+          "content": "Tokyo n'est pas un marché tech comme les autres. C'est un écosystème ou la JFSA (Financial Services Agency) impose ses propres règles, ou le JLPT N2 fait la difference entre un meeting qui avance et un meeting poli qui ne mène nulle part, et ou le mode 100% remote reste une exception culturelle. Pour une entreprise occidentale qui veut s'implanter ou scaler ses opérations tech au Japon, le mur n'est pas technique. Il est culturel, réglementaire et logistique. Abbeal opère un hub Tokyo basé à Higashi-Azabu (PMC Building, 1-23-5, Minato-ku 106-0044) depuis 2018, et nos équipes ingé seniors interviennent en mode hybride sur les sites clients (Tamachi, Otemachi, Roppongi) avec un staffing JLPT N2+ obligatoire."
+        },
+        {
+          "type": "h2",
+          "content": "Le problème : pourquoi tant de boîtes occidentales se cassent les dents au Japon"
+        },
+        {
+          "type": "p",
+          "content": "On voit le même schéma se répéter depuis 2018 : une entreprise européenne ou américaine débarque à Tokyo, signe avec une grosse SIer japonaise (NTT Data, Fujitsu, NRI), et 18 mois plus tard le projet est en retard, le budget a doublé et personne ne sait ou est passée la roadmap. Pourquoi ? Parce que les SIer japonaises optimisent pour la stabilité du process, pas pour la vitesse d'exécution. Et parce que les ingés bilingues senior (JLPT N2+ avec 8+ ans d'XP cloud/data) sont une denrée rare : LinkedIn Tokyo recense moins de 3 000 profils qui cochent les deux cases."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Différences culturelles tech : nemawashi (consensus pré-meeting) vs sprints agiles, méfiance face aux décisions rapides, hiérarchie verticale qui ralentit les arbitrages",
+            "Pénurie d'ingés bilingues senior : moins de 3 000 profils JLPT N2+ avec 8 ans d'XP cloud/data sur tout le Grand Tokyo",
+            "Contrats locaux : les SIer japonaises imposent des contrats haken (派遣) ou gyomu-itaku (業務委託) que les juristes occidentaux ne maitrisent pas",
+            "Présence physique obligatoire : aucun client tier-1 japonais (banque, assurance, FinTech) n'accepte un projet 100% remote sans présence Tamachi/Otemachi a minima 2j/semaine",
+            "Conformité JFSA : pour tout projet financier, l'équipe doit être identifiable, traçable, et opérer depuis le sol japonais avec une entité locale"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Le hub Tokyo Abbeal : 8 ans d'opération à Higashi-Azabu"
+        },
+        {
+          "type": "p",
+          "content": "Le hub Tokyo a été ouvert fin 2018 avec une logique simple : si on veut servir des clients japonais, il faut une équipe sur place, pas un commercial qui débarque en mission tous les 6 mois. Notre adresse - PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 - est une vraie entité opérationnelle Abbeal Japan KK enregistrée au registre du commerce, avec une équipe permanente, un Country Manager, et une trésorerie en yen. C'est ce qui nous permet de signer des contrats directs avec Money Forward, Cartier Japan, Le Monde Tokyo bureau, sans intermediaire local."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Entité légale : Abbeal Japan KK enregistrée Tokyo Legal Affairs Bureau, capital libéré, comptes en yen",
+            "Bureau Higashi-Azabu : meeting room pour clients, salles de pair programming, stockage matériel sensible",
+            "Country Manager full-time : interface culturelle, négociation contrats locaux, gestion des sponsors visa",
+            "Réseau bancaire japonais : compte SMBC + MUFG pour facturation client direct sans Forex friction",
+            "Sponsorship visa Engineer / Specialist in Humanities : on parraine nous-mêmes les ingés Mobbeal qui rejoignent Tokyo"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Notre staffing : JLPT N2+ obligatoire, mode hybride Tamachi"
+        },
+        {
+          "type": "p",
+          "content": "Le filtre JLPT N2+ n'est pas négociable. Un ingé qui n'a pas N2 ne peut pas lire un document de spec en kanji, ne peut pas suivre un standup en japonais, et ne sera pas pris au sérieux dans une réunion d'arbitrage avec un Director japonais. C'est dur, c'est sélectif, et c'est exactement ce qui fait que nos consultants restent en mission 18+ mois en moyenne sans churn. Le mode hybride (3j sur site Tamachi/Otemachi, 2j depuis le bureau Abbeal Higashi-Azabu ou en remote) est devenu le standard de facto pour les missions tier-1 depuis 2023."
+        },
+        {
+          "type": "list",
+          "items": [
+            "JLPT N2 minimum, N1 préféré pour les missions FinTech / banque",
+            "8+ ans d'XP technique sur la stack ciblée (Databricks, GCP, AWS Tokyo, dbt, Terraform)",
+            "Background international validé : majorité des consultants ont déjà bossé Paris ou Montréal avant Tokyo",
+            "Mode hybride 3j sur site / 2j flex, jamais 100% remote pour les clients tier-1",
+            "Disponibilité fuseau JST stricte : standups 9h30, retros 17h, alignement Asie-Pacifique"
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Pré-requis culturel Japon : la méfiance vaut mieux que la précipitation. Un client japonais préfère un partenaire qui dit 'on va prendre 2 semaines pour valider' plutôt qu'un cowboy qui promet de livrer en 3 jours. Tous nos consultants Tokyo sont briefés sur ça avant leur premier meeting client. Si tu débarques avec un mindset Silicon Valley pure, tu vas crasher."
+        },
+        {
+          "type": "h2",
+          "content": "Cas concrets : Money Forward + Cartier + Le Monde"
+        },
+        {
+          "type": "p",
+          "content": "Trois missions actives qui illustrent ce qu'on fait concrètement à Tokyo. Money Forward (FinTech listée TSE, capi ~1.2 Mds USD) nous a confié depuis avril 2026 la construction du data backbone d'une nouvelle banque digitale, joint venture entre Money Forward et un grand groupe bancaire japonais. Stack : Databricks + Delta Lake + dbt + AWS Tokyo (région ap-northeast-1) + Unity Catalog pour la gouvernance + Great Expectations pour la qualité + Terraform + GitHub Actions pour le CI/CD. L'équipe opère en hybride depuis Tamachi, avec validation conformité JFSA à chaque release majeure."
+        },
+        {
+          "type": "p",
+          "content": "Cartier (Cartier Suisse + équipe Japon) est notre plus vieille mission active : 4,5 ans de partenariat continu, qui a démarré sur un audit data, puis a évolué vers un Mapper produit interne, puis vers une plateforme ETL, et aujourd'hui sur un LLM privé fine-tuné déployé en interne pour les équipes retail Tokyo et Genève. Stack GCP + Python + Next.js + LLM custom. Trois géographies coordonnées (Genève, Paris, Tokyo) en mode follow-the-sun. C'est l'archétype du client qui voulait pas d'une SIer japonaise classique."
+        },
+        {
+          "type": "p",
+          "content": "Le Monde nous a placé un ingé senior intégré à la team Insights depuis 2019, qui a basculé son opération sur Tokyo en 2023 sans interruption de service. Preuve concrète qu'un consultant Abbeal peut suivre un client occidental dans sa stratégie de présence asiatique sans rebooter la relation. C'est le scenario typique pour les médias et grandes marques qui veulent ouvrir un bureau Tokyo sans recruter from-scratch."
+        },
+        {
+          "type": "h2",
+          "content": "Réglementation : JFSA, AML, conformité bancaire japonaise"
+        },
+        {
+          "type": "p",
+          "content": "Tout projet data ou software qui touche du flux financier au Japon tombe sous l'œil de la JFSA (Financial Services Agency). C'est l'équivalent de l'ACPR française ou du FCA britannique, mais avec ses propres règles : audit trail obligatoire, ségrégation des environnements dev/staging/prod, certification annuelle des opérateurs, et reporting AML (Anti-Money Laundering) qui suit les standards FATF. Notre expérience Money Forward nous a permis de structurer une méthodo conformité que peu d'acteurs occidentaux maitrisent."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Audit trail JFSA : tous les commits, déploiements et accès data sont tracés et conservés 7 ans",
+            "Ségrégation stricte dev/staging/prod avec accès role-based via Unity Catalog",
+            "Certification annuelle JFSA : nos consultants suivent la formation interne Money Forward et passent l'examen",
+            "Reporting AML conforme FATF : pipeline de détection transactions suspectes intégré au data backbone",
+            "Data residency : toutes les données client restent en région AWS Tokyo (ap-northeast-1), aucune sortie vers Singapour ou US"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Comment on bosse avec des sponsors Tokyo : process, NDAs, milestones"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Discovery call 30 min en visio (anglais ou japonais), couverture du périmètre et des contraintes JFSA si applicable",
+            "NDA bilatéral en anglais + japonais (template Abbeal Japan KK), signature électronique sous 48h",
+            "Proposition technique chiffrée en yen avec milestones de 4 à 6 semaines, paiement 30% upfront / 40% mid / 30% final",
+            "Onboarding consultant sur site client : badge, accès VPN, comptes Slack/Notion, briefing nemawashi",
+            "Reporting hebdo en japonais ET anglais, validation Country Manager Abbeal Japan avant chaque release",
+            "Closure de mission : passation documentée, formation équipe interne client, rétrospective en présentiel"
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Mobbeal : 50+ ingés internationaux qui circulent entre Paris, Montréal et Tokyo. Tu peux démarrer une mission avec un consultant Paris qui rejoindra Tokyo en 6 mois (sponsor visa Engineer assuré par Abbeal Japan KK), ou inversement. C'est cette mobilité qui nous permet d'absorber un pic de charge tier-1 sans externaliser à des freelances japonais que tu ne contrôles pas."
+        },
+        {
+          "type": "p",
+          "content": "Si tu cherches à structurer ta présence tech à Tokyo - que ce soit pour un projet ponctuel JFSA, un build from-scratch FinTech, ou une équipe data permanente sponsorisée - on peut caller cette semaine. Notre Country Manager Tokyo est dispo pour un discovery call en JST."
+        }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "content": "Tokyo is not just another tech market. It's an ecosystem where the JFSA (Financial Services Agency) sets its own rules, where JLPT N2 fluency is the difference between a meeting that moves forward and a polite meeting that goes nowhere, and where 100% remote remains a cultural exception. For Western enterprises trying to land or scale tech operations in Japan, the wall is not technical. It's cultural, regulatory, and logistical. Abbeal has operated a Tokyo hub from Higashi-Azabu (PMC Building, 1-23-5, Minato-ku 106-0044) since 2018, and our senior engineering teams deliver hybrid on-site (Tamachi, Otemachi, Roppongi) with mandatory JLPT N2+ staffing."
+        },
+        {
+          "type": "h2",
+          "content": "The problem: why so many Western companies fail in Japan"
+        },
+        {
+          "type": "p",
+          "content": "Same pattern since 2018: a European or American enterprise lands in Tokyo, signs with a major Japanese SIer (NTT Data, Fujitsu, NRI), and 18 months later the project is late, the budget has doubled, and nobody knows where the roadmap went. Why? Because Japanese SIers optimize for process stability, not execution speed. And because senior bilingual engineers (JLPT N2+ with 8+ years of cloud/data XP) are scarce: LinkedIn Tokyo lists fewer than 3,000 profiles that tick both boxes."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cultural tech differences: nemawashi (pre-meeting consensus) vs agile sprints, distrust of fast decisions, vertical hierarchy that slows arbitration",
+            "Senior bilingual engineer shortage: fewer than 3,000 JLPT N2+ profiles with 8 years of cloud/data XP across Greater Tokyo",
+            "Local contracts: Japanese SIers impose haken (派遣) or gyomu-itaku (業務委託) contracts that Western lawyers don't master",
+            "Mandatory physical presence: no tier-1 Japanese client (bank, insurance, FinTech) accepts a 100% remote project without on-site Tamachi/Otemachi 2 days a week minimum",
+            "JFSA compliance: for any financial project, the team must be identifiable, traceable, and operate from Japanese soil with a local entity"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "The Abbeal Tokyo hub: 8 years of operation in Higashi-Azabu"
+        },
+        {
+          "type": "p",
+          "content": "The Tokyo hub opened late 2018 with a simple logic: if you want to serve Japanese clients, you need a local team, not a salesperson flying in every 6 months. Our address - PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 - is a real Abbeal Japan KK operational entity registered with the commercial registry, with a permanent team, a Country Manager, and JPY treasury. That's what allows us to sign direct contracts with Money Forward, Cartier Japan, and Le Monde Tokyo bureau without local intermediaries."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Legal entity: Abbeal Japan KK registered with Tokyo Legal Affairs Bureau, paid-up capital, JPY accounts",
+            "Higashi-Azabu office: client meeting rooms, pair-programming spaces, sensitive equipment storage",
+            "Full-time Country Manager: cultural interface, local contract negotiation, visa sponsor management",
+            "Japanese banking network: SMBC + MUFG accounts for direct client billing without Forex friction",
+            "Engineer / Specialist in Humanities visa sponsorship: we directly sponsor the Mobbeal engineers joining Tokyo"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Our staffing: JLPT N2+ mandatory, hybrid mode in Tamachi"
+        },
+        {
+          "type": "p",
+          "content": "The JLPT N2+ filter is non-negotiable. An engineer without N2 cannot read a kanji spec doc, cannot follow a Japanese standup, and won't be taken seriously in an arbitration meeting with a Japanese Director. It's hard, it's selective, and it's exactly why our consultants stay on missions 18+ months on average with zero churn. Hybrid mode (3 days on-site Tamachi/Otemachi, 2 days from the Abbeal Higashi-Azabu office or remote) became the de facto standard for tier-1 missions starting in 2023."
+        },
+        {
+          "type": "list",
+          "items": [
+            "JLPT N2 minimum, N1 preferred for FinTech / banking missions",
+            "8+ years of technical XP on the target stack (Databricks, GCP, AWS Tokyo, dbt, Terraform)",
+            "Validated international background: majority of consultants worked Paris or Montreal before Tokyo",
+            "Hybrid mode 3 days on-site / 2 days flex, never 100% remote for tier-1 clients",
+            "Strict JST availability: 9:30 standups, 17:00 retros, Asia-Pacific alignment"
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Japan cultural prerequisite: caution beats rush. A Japanese client prefers a partner who says 'we'll take 2 weeks to validate' over a cowboy who promises delivery in 3 days. All our Tokyo consultants are briefed on this before their first client meeting. If you land with a pure Silicon Valley mindset, you'll crash."
+        },
+        {
+          "type": "h2",
+          "content": "Real cases: Money Forward + Cartier + Le Monde"
+        },
+        {
+          "type": "p",
+          "content": "Three active missions that illustrate concretely what we do in Tokyo. Money Forward (TSE-listed FinTech, ~1.2B USD market cap) entrusted us since April 2026 with the data backbone build for a new digital bank, joint venture between Money Forward and a major Japanese banking group. Stack: Databricks + Delta Lake + dbt + AWS Tokyo (ap-northeast-1 region) + Unity Catalog for governance + Great Expectations for quality + Terraform + GitHub Actions for CI/CD. The team operates hybrid from Tamachi, with JFSA compliance validation on every major release."
+        },
+        {
+          "type": "p",
+          "content": "Cartier (Cartier Switzerland + Japan team) is our oldest active mission: 4.5 years of continuous partnership, starting with a data audit, then evolving into an internal product Mapper, then an ETL platform, and today a fine-tuned private LLM deployed internally for retail teams in Tokyo and Geneva. Stack: GCP + Python + Next.js + custom LLM. Three coordinated geographies (Geneva, Paris, Tokyo) in follow-the-sun mode. The archetype of a client that did not want a classic Japanese SIer."
+        },
+        {
+          "type": "p",
+          "content": "Le Monde placed one of our senior engineers embedded with the Insights team starting 2019, who relocated his operation to Tokyo in 2023 without service interruption. Concrete proof that an Abbeal consultant can follow a Western client through their Asian presence strategy without rebooting the relationship. Typical scenario for media and major brands opening a Tokyo office without recruiting from scratch."
+        },
+        {
+          "type": "h2",
+          "content": "Regulation: JFSA, AML, Japanese banking compliance"
+        },
+        {
+          "type": "p",
+          "content": "Any data or software project touching a financial flow in Japan falls under the JFSA (Financial Services Agency) eye. It's the equivalent of the French ACPR or UK FCA, but with its own rules: mandatory audit trail, dev/staging/prod environment segregation, annual operator certification, and AML (Anti-Money Laundering) reporting following FATF standards. Our Money Forward experience helped us structure a compliance methodology few Western actors master."
+        },
+        {
+          "type": "list",
+          "items": [
+            "JFSA audit trail: all commits, deployments, and data access tracked and stored 7 years",
+            "Strict dev/staging/prod segregation with role-based access via Unity Catalog",
+            "Annual JFSA certification: our consultants follow Money Forward internal training and pass the exam",
+            "FATF-compliant AML reporting: suspicious transaction detection pipeline integrated into the data backbone",
+            "Data residency: all client data stays in AWS Tokyo (ap-northeast-1) region, no flow to Singapore or US"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "How we work with Tokyo sponsors: process, NDAs, milestones"
+        },
+        {
+          "type": "list",
+          "items": [
+            "30-min discovery call over video (English or Japanese), covering scope and JFSA constraints if applicable",
+            "Bilateral NDA in English + Japanese (Abbeal Japan KK template), e-signature within 48h",
+            "Technical proposal priced in JPY with 4-to-6-week milestones, payment 30% upfront / 40% mid / 30% final",
+            "Consultant onboarding on client site: badge, VPN access, Slack/Notion accounts, nemawashi briefing",
+            "Weekly reporting in Japanese AND English, Abbeal Japan Country Manager validation before every release",
+            "Mission closure: documented handover, internal client team training, in-person retrospective"
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Mobbeal: 50+ international engineers rotating between Paris, Montreal and Tokyo. You can start a mission with a Paris consultant who will join Tokyo in 6 months (Engineer visa sponsor secured by Abbeal Japan KK), or vice versa. This mobility is what lets us absorb a tier-1 load spike without outsourcing to Japanese freelancers you don't control."
+        },
+        {
+          "type": "p",
+          "content": "If you're looking to structure your tech presence in Tokyo - whether for a one-off JFSA project, a FinTech build from scratch, or a permanent sponsored data team - we can call this week. Our Tokyo Country Manager is available for a discovery call in JST."
+        }
+      ],
+      "ja": [
+        {
+          "type": "p",
+          "content": "東京は単なるテック市場ではありません。金融庁(JFSA)が独自のルールを定め、JLPT N2レベルの日本語力が会議を前進させるか、礼儀正しいだけで終わるかを分け、100%リモート勤務が文化的に例外として残る独特なエコシステムです。日本でテック事業を立ち上げ、または拡大しようとする欧米企業にとって、壁は技術的なものではなく、文化、規制、そしてロジスティクスにあります。Abbealは2018年から東京・東麻布(PMCビル、1-23-5、港区106-0044)に拠点を構え、JLPT N2以上を必須とするシニアエンジニアリングチームを、田町・大手町・六本木のクライアント先にハイブリッド体制で派遣しています。"
+        },
+        {
+          "type": "h2",
+          "content": "課題:なぜ多くの欧米企業が日本で失敗するのか"
+        },
+        {
+          "type": "p",
+          "content": "2018年以降、同じパターンを何度も見てきました。欧米企業が東京に進出し、大手日系SIer(NTTデータ、富士通、NRI)と契約を結ぶ。18ヶ月後、プロジェクトは遅延し、予算は倍増し、ロードマップは行方不明。なぜか?日系SIerは実行スピードではなくプロセスの安定性を最適化するからです。そして、JLPT N2以上かつクラウド/データ8年以上の経験を持つバイリンガルシニアエンジニアは希少です。LinkedIn東京で両方の条件を満たすプロフィールは3,000人未満です。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "テック文化の違い:根回し(会議前の合意形成)対アジャイルスプリント、迅速な意思決定への不信、調整を遅らせる縦型ヒエラルキー",
+            "シニアバイリンガルエンジニア不足:首都圏全体でJLPT N2以上かつクラウド/データ8年以上の経験者は3,000人未満",
+            "現地契約:日系SIerは欧米の法務担当者には扱いにくい派遣契約や業務委託契約を要求",
+            "物理的な常駐の必要性:Tier-1の日系クライアント(銀行、保険、FinTech)は週2日以上の田町・大手町常駐なしでの100%リモート案件を受け入れない",
+            "JFSA準拠:金融プロジェクトでは、チームは識別可能、追跡可能で、日本の現地法人を通じて日本国内から運営する必要がある"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Abbeal東京拠点:東麻布での8年間の運営実績"
+        },
+        {
+          "type": "p",
+          "content": "東京拠点は2018年末にシンプルなロジックで開設しました。日系クライアントにサービスを提供したいなら、6ヶ月に1度出張する営業ではなく、現地に常駐するチームが必要です。住所はPMCビル、1-23-5東麻布、港区106-0044。商業登記簿に登録されたAbbeal Japan KKという実在の事業体で、常駐チーム、カントリーマネージャー、円建ての財務を備えています。これによりMoney Forward、Cartier Japan、Le Monde東京支局と現地仲介業者なしで直接契約を締結できます。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "法人格:Abbeal Japan KKは東京法務局に登記済み、払込資本金あり、円建て口座保有",
+            "東麻布オフィス:クライアント会議室、ペアプログラミングスペース、機密機材保管庫",
+            "フルタイムのカントリーマネージャー:文化的インターフェース、現地契約交渉、ビザスポンサー管理",
+            "日系銀行ネットワーク:SMBC + MUFGの口座でForex摩擦なしのクライアント直接請求",
+            "技術・人文知識・国際業務ビザのスポンサーシップ:東京に来るMobbealエンジニアを直接スポンサーリング"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "スタッフィング体制:JLPT N2以上必須、田町ハイブリッド"
+        },
+        {
+          "type": "p",
+          "content": "JLPT N2以上というフィルターは交渉の余地がありません。N2を持たないエンジニアは漢字の仕様書を読めず、日本語のスタンドアップに参加できず、日系ディレクターとの調整会議で真剣に受け止められません。厳しく、選択的ですが、これこそが当社のコンサルタントが平均18ヶ月以上、離職ゼロでミッションに留まる理由です。ハイブリッド体制(週3日田町・大手町オンサイト、週2日Abbeal東麻布オフィスまたはリモート)は2023年以降、Tier-1案件のデファクトスタンダードとなっています。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "JLPT N2が最低条件、FinTech・銀行案件にはN1推奨",
+            "対象スタック(Databricks、GCP、AWS Tokyo、dbt、Terraform)で8年以上の技術経験",
+            "国際的な経歴:コンサルタントの大半が東京赴任前にパリまたはモントリオールで勤務",
+            "ハイブリッド体制週3日オンサイト/週2日フレックス、Tier-1クライアントには100%リモートはなし",
+            "JST厳守:9時30分スタンドアップ、17時レトロ、アジア太平洋地域とのアライメント"
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "日本での文化的前提:慎重さは性急さに勝る。日系クライアントは「3日で納品します」と約束するカウボーイよりも、「2週間かけて検証します」と言うパートナーを好みます。当社の東京コンサルタントは全員、初回クライアントミーティング前にこの点をブリーフィングされます。シリコンバレー型のマインドセットだけで来日すると失敗します。"
+        },
+        {
+          "type": "h2",
+          "content": "実績:Money Forward + Cartier + Le Monde"
+        },
+        {
+          "type": "p",
+          "content": "東京で実際に行っている案件を象徴する3つの現役ミッションです。Money Forward(東証上場FinTech、時価総額約12億ドル)は2026年4月から、新しいデジタルバンクのデータバックボーン構築を当社に委託しています。Money Forwardと大手日系銀行グループの合弁事業です。スタックはDatabricks + Delta Lake + dbt + AWS Tokyo(ap-northeast-1)+ ガバナンスのUnity Catalog + 品質管理のGreat Expectations + Terraform + CI/CDのGitHub Actions。チームは田町からハイブリッドで運営し、メジャーリリースごとにJFSA準拠の検証を行います。"
+        },
+        {
+          "type": "p",
+          "content": "Cartier(Cartier Switzerland + 日本チーム)は当社最古の現役案件で、4.5年間継続中のパートナーシップです。データ監査からスタートし、社内プロダクトのMapper、ETLプラットフォーム、そして現在は東京とジュネーブのリテールチーム向けにファインチューニングされたプライベートLLMの社内デプロイメントへと進化しました。スタックはGCP + Python + Next.js + カスタムLLM。3つの地域(ジュネーブ、パリ、東京)をフォロー・ザ・サン体制で連携。日系SIerではなく当社を選んだクライアントの典型例です。"
+        },
+        {
+          "type": "p",
+          "content": "Le Mondeは2019年からInsightsチームに当社のシニアエンジニアを1名常駐させており、2023年にサービス無中断で東京に拠点を移しました。Abbealのコンサルタントが欧米クライアントのアジア戦略に追随し、関係性を再構築することなく継続できる具体的な証拠です。東京オフィスを開設したいがゼロから採用したくないメディア・大手ブランドにとって典型的なシナリオです。"
+        },
+        {
+          "type": "h2",
+          "content": "規制:JFSA、AML、日本の銀行コンプライアンス"
+        },
+        {
+          "type": "p",
+          "content": "日本で金融フローに関わるあらゆるデータ・ソフトウェア案件は金融庁(JFSA)の監督下にあります。フランスのACPRや英国のFCAに相当しますが、独自のルールがあります。監査証跡の必須化、開発/ステージング/本番環境の分離、年次のオペレーター認証、FATF基準に準拠したAML(マネーロンダリング対策)レポーティング。Money Forwardでの経験により、欧米事業者ではほとんど習得していないコンプライアンス手法を構築できました。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "JFSA監査証跡:すべてのコミット、デプロイメント、データアクセスを7年間追跡・保存",
+            "Unity Catalogによるロールベースアクセスでdev/staging/prod環境を厳格に分離",
+            "JFSA年次認証:当社コンサルタントはMoney Forward社内研修を受講し、試験に合格",
+            "FATF準拠のAMLレポーティング:疑わしい取引検出パイプラインをデータバックボーンに統合",
+            "データレジデンシー:すべてのクライアントデータはAWS Tokyo(ap-northeast-1)に留まり、シンガポールや米国には流出しない"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "東京スポンサーとの仕事の進め方:プロセス、NDA、マイルストーン"
+        },
+        {
+          "type": "list",
+          "items": [
+            "30分のディスカバリーコール(ビデオ、英語または日本語)、スコープと該当する場合はJFSA要件をカバー",
+            "英語+日本語の双務NDA(Abbeal Japan KKテンプレート)、48時間以内に電子署名",
+            "円建ての技術提案書、4〜6週間のマイルストーン、支払い30%前払い/40%中間/30%最終",
+            "クライアント先でのコンサルタントオンボーディング:バッジ、VPNアクセス、Slack/Notionアカウント、根回しブリーフィング",
+            "週次レポート(日本語と英語の両方)、各リリース前にAbbeal Japanカントリーマネージャーが検証",
+            "ミッション終了:ドキュメント化された引き継ぎ、クライアント社内チーム研修、対面レトロスペクティブ"
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Mobbeal:パリ、モントリオール、東京を循環する50名以上の国際的なエンジニア。パリのコンサルタントでミッションを開始し、6ヶ月後に東京に合流させることも可能です(技術ビザはAbbeal Japan KKがスポンサー)。逆も可能です。この機動性により、コントロールできない日系フリーランサーにアウトソースすることなく、Tier-1の負荷ピークを吸収できます。"
+        },
+        {
+          "type": "p",
+          "content": "東京でのテックプレゼンスを構築したい場合 — 単発のJFSA案件、FinTechのフルスクラッチ構築、スポンサー付き恒久データチームなど — 今週中にコールできます。東京カントリーマネージャーがJSTでのディスカバリーコールに対応可能です。"
+        }
+      ],
+      "fr-ca": [
+        {
+          "type": "p",
+          "content": "Tokyo n'est pas un marché techno comme les autres. C'est un écosystème ou la JFSA (Financial Services Agency) impose ses propres règles, ou le JLPT N2 fait la différence entre une rencontre qui avance et une rencontre polie qui ne mène nulle part, et ou le mode 100% télétravail reste une exception culturelle. Pour une entreprise occidentale qui veut s'implanter ou faire croitre ses opérations techno au Japon, le mur n'est pas technique. Il est culturel, réglementaire et logistique. Abbeal opère un carrefour Tokyo basé à Higashi-Azabu (PMC Building, 1-23-5, Minato-ku 106-0044) depuis 2018, et nos équipes d'ingénierie seniors interviennent en mode hybride sur les sites clients (Tamachi, Otemachi, Roppongi) avec un staffing JLPT N2+ obligatoire."
+        },
+        {
+          "type": "h2",
+          "content": "Le problème : pourquoi tant de boites occidentales se cassent les dents au Japon"
+        },
+        {
+          "type": "p",
+          "content": "On voit la même affaire se répéter depuis 2018 : une entreprise européenne ou nord-américaine débarque à Tokyo, signe avec une grosse SIer japonaise (NTT Data, Fujitsu, NRI), et 18 mois plus tard le projet est en retard, le budget a doublé et personne ne sait ou est passée la feuille de route. Pourquoi? Parce que les SIer japonaises optimisent pour la stabilité du processus, pas pour la vitesse d'exécution. Et parce que les ingénieurs bilingues seniors (JLPT N2+ avec 8+ ans d'expérience infonuagique/données) sont une denrée rare : LinkedIn Tokyo recense moins de 3 000 profils qui cochent les deux cases."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Différences culturelles techno : nemawashi (consensus pré-rencontre) contre sprints agiles, méfiance face aux décisions rapides, hiérarchie verticale qui ralentit les arbitrages",
+            "Pénurie d'ingénieurs bilingues seniors : moins de 3 000 profils JLPT N2+ avec 8 ans d'expérience infonuagique/données dans tout le Grand Tokyo",
+            "Contrats locaux : les SIer japonaises imposent des contrats haken (派遣) ou gyomu-itaku (業務委託) que les juristes occidentaux ne maitrisent pas",
+            "Présence physique obligatoire : aucun client tier-1 japonais (banque, assurance, FinTech) n'accepte un projet 100% télétravail sans présence Tamachi/Otemachi à raison de 2 jours par semaine au minimum",
+            "Conformité JFSA : pour tout projet financier, l'équipe doit être identifiable, traçable, et opérer depuis le sol japonais avec une entité locale"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Le carrefour Tokyo Abbeal : 8 ans d'opération à Higashi-Azabu"
+        },
+        {
+          "type": "p",
+          "content": "Le carrefour Tokyo a été ouvert fin 2018 avec une logique simple : si on veut servir des clients japonais, ca prend une équipe sur place, pas un commercial qui débarque en mission tous les 6 mois. Notre adresse - PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 - est une vraie entité opérationnelle Abbeal Japan KK enregistrée au registre du commerce, avec une équipe permanente, un Country Manager, et une trésorerie en yen. C'est ce qui nous permet de signer des contrats directs avec Money Forward, Cartier Japan, Le Monde bureau Tokyo, sans intermédiaire local."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Entité légale : Abbeal Japan KK enregistrée au Tokyo Legal Affairs Bureau, capital libéré, comptes en yen",
+            "Bureau Higashi-Azabu : salle de rencontre pour clients, espaces de programmation en duo, entreposage matériel sensible",
+            "Country Manager temps plein : interface culturelle, négociation contrats locaux, gestion des parrains de visa",
+            "Réseau bancaire japonais : compte SMBC + MUFG pour facturation client direct sans friction de change",
+            "Parrainage visa Engineer / Specialist in Humanities : on parraine nous-mêmes les ingénieurs Mobbeal qui rejoignent Tokyo"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Notre staffing : JLPT N2+ obligatoire, mode hybride à Tamachi"
+        },
+        {
+          "type": "p",
+          "content": "Le filtre JLPT N2+ n'est pas négociable. Un ingénieur qui n'a pas N2 ne peut pas lire un document de spécification en kanji, ne peut pas suivre un standup en japonais, et ne sera pas pris au sérieux dans une rencontre d'arbitrage avec un Director japonais. C'est dur, c'est sélectif, et c'est exactement ce qui fait que nos consultants restent en mission 18+ mois en moyenne sans churn. Le mode hybride (3 jours sur site Tamachi/Otemachi, 2 jours depuis le bureau Abbeal Higashi-Azabu ou en télétravail) est devenu le standard de facto pour les missions tier-1 depuis 2023."
+        },
+        {
+          "type": "list",
+          "items": [
+            "JLPT N2 minimum, N1 préféré pour les missions FinTech / banque",
+            "8+ ans d'expérience technique sur la pile ciblée (Databricks, GCP, AWS Tokyo, dbt, Terraform)",
+            "Parcours international validé : la majorité des consultants ont déjà bossé à Paris ou à Montréal avant Tokyo",
+            "Mode hybride 3 jours sur site / 2 jours flex, jamais 100% télétravail pour les clients tier-1",
+            "Disponibilité fuseau JST stricte : standups 9h30, rétros 17h, alignement Asie-Pacifique"
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Pré-requis culturel Japon : la méfiance vaut mieux que la précipitation. Un client japonais préfère un partenaire qui dit 'on va prendre 2 semaines pour valider' plutôt qu'un cowboy qui promet de livrer en 3 jours. Tous nos consultants Tokyo sont briefés sur ca avant leur première rencontre client. Si tu débarques avec un mindset Silicon Valley pure, tu vas planter."
+        },
+        {
+          "type": "h2",
+          "content": "Cas concrets : Money Forward + Cartier + Le Monde"
+        },
+        {
+          "type": "p",
+          "content": "Trois missions actives qui illustrent ce qu'on fait concrètement à Tokyo. Money Forward (FinTech listée TSE, capi ~1.2 G$ US) nous a confié depuis avril 2026 la construction de la colonne vertébrale de données d'une nouvelle banque numérique, coentreprise entre Money Forward et un grand groupe bancaire japonais. Pile : Databricks + Delta Lake + dbt + AWS Tokyo (région ap-northeast-1) + Unity Catalog pour la gouvernance + Great Expectations pour la qualité + Terraform + GitHub Actions pour le CI/CD. L'équipe opère en hybride depuis Tamachi, avec validation conformité JFSA à chaque livraison majeure."
+        },
+        {
+          "type": "p",
+          "content": "Cartier (Cartier Suisse + équipe Japon) est notre plus vieille mission active : 4,5 ans de partenariat continu, qui a démarré sur un audit données, puis a évolué vers un Mapper produit interne, puis vers une plateforme ETL, et aujourd'hui sur un LLM privé fine-tuné déployé en interne pour les équipes détail Tokyo et Genève. Pile GCP + Python + Next.js + LLM custom. Trois géographies coordonnées (Genève, Paris, Tokyo) en mode follow-the-sun. C'est l'archétype du client qui voulait pas d'une SIer japonaise classique."
+        },
+        {
+          "type": "p",
+          "content": "Le Monde nous a placé un ingénieur senior intégré à l'équipe Insights depuis 2019, qui a basculé son opération sur Tokyo en 2023 sans interruption de service. Preuve concrète qu'un consultant Abbeal peut suivre un client occidental dans sa stratégie de présence asiatique sans repartir à zéro la relation. C'est le scénario typique pour les médias et grandes marques qui veulent ouvrir un bureau Tokyo sans recruter à partir de rien."
+        },
+        {
+          "type": "h2",
+          "content": "Réglementation : JFSA, AML, conformité bancaire japonaise"
+        },
+        {
+          "type": "p",
+          "content": "Tout projet données ou logiciel qui touche un flux financier au Japon tombe sous l'oeil de la JFSA (Financial Services Agency). C'est l'équivalent de l'ACPR francaise ou du FCA britannique, mais avec ses propres règles : piste de vérification obligatoire, ségrégation des environnements dev/staging/prod, certification annuelle des opérateurs, et reporting AML (Anti-Money Laundering) qui suit les standards FATF. Notre expérience Money Forward nous a permis de structurer une méthodologie conformité que peu d'acteurs occidentaux maitrisent."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Piste de vérification JFSA : tous les commits, déploiements et accès données sont tracés et conservés 7 ans",
+            "Ségrégation stricte dev/staging/prod avec accès basé sur les roles via Unity Catalog",
+            "Certification annuelle JFSA : nos consultants suivent la formation interne Money Forward et passent l'examen",
+            "Reporting AML conforme FATF : pipeline de détection transactions suspectes intégré à la colonne vertébrale de données",
+            "Résidence des données : toutes les données client restent en région AWS Tokyo (ap-northeast-1), aucune sortie vers Singapour ou les États-Unis"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Comment on bosse avec des parrains Tokyo : processus, NDA, jalons"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Appel de découverte 30 min en visio (anglais ou japonais), couverture du périmètre et des contraintes JFSA si applicable",
+            "NDA bilatéral en anglais + japonais (gabarit Abbeal Japan KK), signature électronique sous 48h",
+            "Proposition technique chiffrée en yen avec jalons de 4 à 6 semaines, paiement 30% à l'avance / 40% mi-parcours / 30% final",
+            "Intégration consultant sur site client : badge, accès VPN, comptes Slack/Notion, briefing nemawashi",
+            "Reporting hebdo en japonais ET anglais, validation Country Manager Abbeal Japan avant chaque livraison",
+            "Cloture de mission : passation documentée, formation équipe interne client, rétrospective en présentiel"
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Mobbeal : 50+ ingénieurs internationaux qui circulent entre Paris, Montréal et Tokyo. Tu peux démarrer une mission avec un consultant Paris qui rejoindra Tokyo dans 6 mois (parrainage visa Engineer assuré par Abbeal Japan KK), ou inversement. C'est cette mobilité qui nous permet d'absorber un pic de charge tier-1 sans externaliser à des pigistes japonais que tu ne controles pas."
+        },
+        {
+          "type": "p",
+          "content": "Si tu cherches à structurer ta présence techno à Tokyo - que ce soit pour un projet ponctuel JFSA, un build à partir de rien FinTech, ou une équipe données permanente parrainée - on peut caller cette semaine. Notre Country Manager Tokyo est dispo pour un appel de découverte en JST."
+        }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "q": "Vos consultants parlent-ils japonais ?",
+          "a": "Oui, JLPT N2 minimum est obligatoire pour toute mission Tokyo. La plupart de nos seniors FinTech ont N1. C'est le seuil en-dessous duquel un ingé ne peut ni lire un kanji spec doc, ni suivre un standup en japonais, ni être pris au sérieux par un Director japonais."
+        },
+        {
+          "q": "Mode 100% remote ou hybride obligatoire ?",
+          "a": "Hybride obligatoire pour les clients tier-1 (banques, FinTech, grands comptes). Standard 3 jours sur site (Tamachi, Otemachi, Roppongi) + 2 jours flex depuis notre bureau Higashi-Azabu ou en remote. Aucun client tier-1 japonais n'accepte 100% remote."
+        },
+        {
+          "q": "Comment vous différenciez d'une ESN japonaise locale ?",
+          "a": "Trois choses : 1) on signe des contrats directs en yen via Abbeal Japan KK, sans cascade de sous-traitance haken, 2) nos consultants sont staffés en mode produit, pas en mode resource, 3) on opère en follow-the-sun avec Paris et Montréal, ce qu'aucun SIer japonais ne propose."
+        },
+        {
+          "q": "Pouvez-vous gérer la conformité JFSA / AML ?",
+          "a": "Oui. Notre mission Money Forward depuis avril 2026 nous a structurés sur audit trail JFSA, ségrégation dev/staging/prod via Unity Catalog, certification annuelle opérateurs, et reporting AML conforme FATF. On peut briefer ton équipe juridique sur les exigences spécifiques."
+        },
+        {
+          "q": "Combien de temps pour démarrer une mission ?",
+          "a": "Discovery call sous 48h, proposition chiffrée sous 5 jours ouvrés, NDA signé sous 48h supplémentaires. Démarrage consultant sur site sous 3 à 6 semaines selon le besoin de sponsor visa. Pour un consultant déjà au Japon, on peut être opérationnel en 10 jours."
+        },
+        {
+          "q": "Vos consultants Tokyo sont des locaux ou des expats ?",
+          "a": "Mix des deux via le programme Mobbeal : 50+ ingénieurs internationaux qui circulent entre Paris, Montréal et Tokyo. On parraine nous-mêmes les visas Engineer / Specialist in Humanities via Abbeal Japan KK. Avantage : continuité de relation client si ton ingé bouge entre les géos."
+        }
+      ],
+      "en": [
+        {
+          "q": "Do your consultants speak Japanese?",
+          "a": "Yes, JLPT N2 minimum is mandatory for any Tokyo mission. Most of our FinTech seniors hold N1. That's the threshold below which an engineer can neither read a kanji spec doc, nor follow a Japanese standup, nor be taken seriously by a Japanese Director."
+        },
+        {
+          "q": "100% remote or mandatory hybrid?",
+          "a": "Mandatory hybrid for tier-1 clients (banks, FinTech, large enterprises). Standard 3 days on-site (Tamachi, Otemachi, Roppongi) + 2 days flex from our Higashi-Azabu office or remote. No tier-1 Japanese client accepts 100% remote."
+        },
+        {
+          "q": "How do you differ from a local Japanese SIer?",
+          "a": "Three things: 1) we sign direct contracts in JPY via Abbeal Japan KK, without haken subcontracting cascades, 2) our consultants are staffed in product mode, not resource mode, 3) we operate follow-the-sun with Paris and Montreal, which no Japanese SIer offers."
+        },
+        {
+          "q": "Can you handle JFSA / AML compliance?",
+          "a": "Yes. Our Money Forward mission since April 2026 has structured us on JFSA audit trail, dev/staging/prod segregation via Unity Catalog, annual operator certification, and FATF-compliant AML reporting. We can brief your legal team on the specific requirements."
+        },
+        {
+          "q": "How long to start a mission?",
+          "a": "Discovery call within 48h, priced proposal within 5 business days, NDA signed within an additional 48h. Consultant on-site start within 3 to 6 weeks depending on the visa sponsor need. For a consultant already in Japan, we can be operational in 10 days."
+        },
+        {
+          "q": "Are your Tokyo consultants locals or expats?",
+          "a": "Mix of both via the Mobbeal program: 50+ international engineers rotating between Paris, Montreal and Tokyo. We directly sponsor Engineer / Specialist in Humanities visas via Abbeal Japan KK. Upside: continuity of client relationship if your engineer rotates between geos."
+        }
+      ],
+      "ja": [
+        {
+          "q": "御社のコンサルタントは日本語を話せますか?",
+          "a": "はい、東京案件にはJLPT N2以上が必須です。FinTechのシニアの多くはN1を保有しています。このレベル未満では、エンジニアは漢字の仕様書を読めず、日本語のスタンドアップに参加できず、日系ディレクターに真剣に受け止められないからです。"
+        },
+        {
+          "q": "100%リモートですか、それともハイブリッド必須ですか?",
+          "a": "Tier-1クライアント(銀行、FinTech、大手企業)にはハイブリッド必須です。標準は週3日のオンサイト勤務(田町、大手町、六本木)+ 週2日の東麻布オフィスまたはリモートのフレックス。100%リモートを受け入れるTier-1日系クライアントは存在しません。"
+        },
+        {
+          "q": "日系SIerとの違いは?",
+          "a": "3点あります。1)Abbeal Japan KK経由で円建ての直接契約、派遣の多重下請けなし。2)コンサルタントはリソースモードではなくプロダクトモードで配置。3)パリとモントリオールとのフォロー・ザ・サン体制で運営、日系SIerには提供できないサービスです。"
+        },
+        {
+          "q": "JFSA・AMLコンプライアンスに対応できますか?",
+          "a": "はい。2026年4月からのMoney Forward案件により、JFSA監査証跡、Unity Catalogによるdev/staging/prod環境分離、オペレーター年次認証、FATF準拠のAMLレポーティングを体系化しました。御社の法務チームに具体的な要件をブリーフィング可能です。"
+        },
+        {
+          "q": "ミッション開始までどのくらいかかりますか?",
+          "a": "ディスカバリーコールは48時間以内、価格付き提案書は5営業日以内、NDA締結はさらに48時間以内。ビザスポンサーが必要な場合、コンサルタントのオンサイト開始は3〜6週間。すでに日本にいるコンサルタントなら10日で稼働開始可能です。"
+        },
+        {
+          "q": "東京のコンサルタントは現地採用ですか、駐在ですか?",
+          "a": "Mobbealプログラムによる両方のミックスです。パリ、モントリオール、東京を循環する50名以上の国際的エンジニア。Abbeal Japan KKを通じて技術・人文知識・国際業務ビザを直接スポンサーしています。メリット:エンジニアが地域間を移動してもクライアント関係の継続性が保たれます。"
+        }
+      ],
+      "fr-ca": [
+        {
+          "q": "Vos consultants parlent-ils japonais ?",
+          "a": "Oui, JLPT N2 minimum est obligatoire pour toute mission Tokyo. La plupart de nos seniors FinTech ont N1. C'est le seuil en-dessous duquel un ingénieur ne peut ni lire un document de spec en kanji, ni suivre un standup en japonais, ni être pris au sérieux par un Director japonais."
+        },
+        {
+          "q": "Mode 100% télétravail ou hybride obligatoire ?",
+          "a": "Hybride obligatoire pour les clients tier-1 (banques, FinTech, grands comptes). Standard 3 jours sur site (Tamachi, Otemachi, Roppongi) + 2 jours flex depuis notre bureau Higashi-Azabu ou en télétravail. Aucun client tier-1 japonais n'accepte 100% télétravail."
+        },
+        {
+          "q": "Comment vous différenciez d'une SIer japonaise locale ?",
+          "a": "Trois affaires : 1) on signe des contrats directs en yen via Abbeal Japan KK, sans cascade de sous-traitance haken, 2) nos consultants sont staffés en mode produit, pas en mode ressource, 3) on opère en follow-the-sun avec Paris et Montréal, ce qu'aucun SIer japonais ne propose."
+        },
+        {
+          "q": "Pouvez-vous gérer la conformité JFSA / AML ?",
+          "a": "Oui. Notre mission Money Forward depuis avril 2026 nous a structurés sur piste de vérification JFSA, ségrégation dev/staging/prod via Unity Catalog, certification annuelle opérateurs, et reporting AML conforme FATF. On peut briefer ton équipe juridique sur les exigences spécifiques."
+        },
+        {
+          "q": "Combien de temps pour démarrer une mission ?",
+          "a": "Appel de découverte sous 48h, proposition chiffrée sous 5 jours ouvrables, NDA signé sous 48h supplémentaires. Démarrage consultant sur site sous 3 à 6 semaines selon le besoin de parrain de visa. Pour un consultant déjà au Japon, on peut être opérationnel en 10 jours."
+        },
+        {
+          "q": "Vos consultants Tokyo sont des locaux ou des expatriés ?",
+          "a": "Mix des deux via le programme Mobbeal : 50+ ingénieurs internationaux qui circulent entre Paris, Montréal et Tokyo. On parraine nous-mêmes les visas Engineer / Specialist in Humanities via Abbeal Japan KK. Avantage : continuité de relation client si ton ingénieur bouge entre les géographies."
+        }
+      ]
+    }
+  },
+  "tech-recruitment-3-hubs": {
+    "body": {
+      "fr": [
+        {
+          "type": "p",
+          "content": "Recruter un senior dev à Paris, un data engineer à Montréal et un SRE à Tokyo dans le même trimestre, ce n'est pas un casse-tête logistique. C'est une discipline. Trois marchés du travail, trois cultures contractuelles, trois définitions du mot 'senior' qui n'ont rien à voir entre elles. La plupart des boîtes répondent à ça avec trois cabinets locaux, trois Slack différents, trois grilles de salaire qui dérapent en silence et un CTO qui passe sa semaine à arbitrer des incohérences. On a choisi l'inverse : un seul cabinet, trois hubs synchrones, une seule équipe qui parle directement à vos ingénieurs."
+        },
+        {
+          "type": "p",
+          "content": "Abbeal, c'est 10 ans de recrutement tech, 100+ entreprises accompagnées, et trois bureaux physiques qui ne sont pas des boîtes postales : Paris (54 rue Greneta, 75002), Montréal (4388 rue Saint-Denis, H2J 2L1) et Tokyo (PMC Building, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Quand on vous présente un profil JLPT N2 à Tokyo ou un staff engineer Go à Montréal, c'est un humain qui l'a vu en vrai, pas un scraper LinkedIn."
+        },
+        {
+          "type": "h2",
+          "content": "Le problème : 3 boîtes locales = 3 incohérences"
+        },
+        {
+          "type": "p",
+          "content": "Quand vous travaillez avec un cabinet à Paris, un autre à Montréal et un troisième à Tokyo, vous achetez trois fois le même service mal fait. Personne n'a la vue d'ensemble, personne n'arbitre les écarts, et c'est vous qui payez la facture du chaos."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Trois grilles de salaire qui divergent : votre senior backend à Paris coûte 30 % de moins que le même profil à Montréal, et vous le découvrez dans Glassdoor six mois plus tard.",
+            "Trois définitions du mot 'senior' : à Tokyo c'est 8 ans, à Paris c'est 5, à Montréal personne n'est d'accord.",
+            "Trois process d'entretien : votre live coding est différent par hub, donc vous ne pouvez plus comparer.",
+            "Trois contrats, trois juristes, trois assurances responsabilité civile, trois factures dans des devises différentes.",
+            "Personne n'a la vision globale du headcount, et vos managers passent leur vendredi à reconcilier des CV en PDF."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "p",
+          "content": "Avec Abbeal, vous avez un seul interlocuteur, une seule grille de calibration, un seul reporting consolidé. Et trois équipes locales qui connaissent leur marché — pas un open space en Inde qui prétend connaître Tokyo."
+        },
+        {
+          "type": "h2",
+          "content": "Notre process 48 h : sourcing par ingénieurs"
+        },
+        {
+          "type": "p",
+          "content": "Le recrutement tech raté commence presque toujours au même endroit : un recruteur qui ne comprend pas la techno screen 80 candidats sur des mots-clés. On a inversé le modèle. Chez Abbeal, le sourcing est fait par d'anciens ingénieurs reconvertis. Pas par des chasseurs qui découvrent ce qu'est Kubernetes le matin du brief."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Brief technique avec votre tech lead — 30 minutes, pas une heure de blabla commercial.",
+            "Sourcing actif sur 48 h : LinkedIn, GitHub, Stack Overflow, communautés Discord, meetups locaux, alumni des écoles ciblées.",
+            "Pré-screen technique court (45 minutes) sur le stack réel, pas sur des questions de manuel.",
+            "Présentation de la shortlist sous 5 jours ouvrés avec note de calibration et red flags.",
+            "Vous validez, on déclenche les entretiens. Closing en 48 h après votre offre.",
+            "Onboarding suivi à J+30, J+90, J+180. Si ça casse pendant les 6 premiers mois, on remplace gratuitement."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "p",
+          "content": "On ne vous noie pas sous 12 CV. Trois profils calibrés, présentés avec leur dossier complet. Si on ne trouve personne sous 3 semaines, on vous le dit franchement et on rembourse le retainer. Pas de bullshit."
+        },
+        {
+          "type": "h2",
+          "content": "Top 1 % tech : qu'est-ce que ça veut dire concrètement"
+        },
+        {
+          "type": "p",
+          "content": "Tout le monde dit 'top 1 %'. Personne ne le définit. Chez Abbeal, c'est documenté et vérifiable. Le top 1 % combine un signal technique fort, un track record qu'on peut creuser et des soft skills qui survivent à un projet client en feu."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Au moins une expérience de scaling à fort trafic ou de système distribué en production.",
+            "Contribution open source mesurable, ou repo perso qui montre du code propre.",
+            "Capacité à expliquer un trade-off d'archi à un non-tech sans le perdre.",
+            "Au moins une expérience de mentoring ou de tech lead, même informel.",
+            "Resistance au stress projet : on cherche le contre-exemple dans son parcours, pas la version polie du CV.",
+            "Curiosité affichée : ils lisent des papers, suivent des conférences, codent le week-end ou animent un meetup.",
+            "Communication écrite propre : on lit leurs PR descriptions, leurs issues GitHub, leurs posts techniques."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "p",
+          "content": "Le top 1 % ne se mesure pas à la longueur du CV. Il se mesure à la profondeur des réponses quand on creuse un projet à 4 niveaux de questions. Nos sourceurs ingénieurs savent creuser. C'est tout l'intérêt."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Le top 1 % n'envoie pas son CV en réponse à une offre. Il faut le chercher, le convaincre que votre projet vaut son temps, et le débaucher proprement. C'est exactement ce qu'on fait toute la journée."
+        },
+        {
+          "type": "h2",
+          "content": "Garantie 6 mois : ce que ça couvre vraiment"
+        },
+        {
+          "type": "p",
+          "content": "La garantie 6 mois, beaucoup de cabinets l'écrivent en petit. Chez Abbeal, c'est gros et on l'applique sans discussion. Si l'ingénieur qu'on a placé démissionne, est licencié pour insuffisance ou ne convient pas après votre période d'essai étendue, on relance le sourcing à nos frais."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Remplacement gratuit si départ pendant les 6 premiers mois (sauf cas de réorganisation interne de votre côté).",
+            "Re-sourcing prioritaire : on remet un sourceur dédié sur le poste sous 5 jours.",
+            "Pas de carry-over : si on ne trouve personne sous 8 semaines, on rembourse 50 % des honoraires versés.",
+            "Suivi onboarding J+30 / J+90 / J+180 : on appelle l'ingénieur ET le manager pour anticiper les casses.",
+            "Médiation incluse : si la relation se dégrade, on intervient comme tiers neutre avant qu'elle casse."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Profils niche : IA, Robotique, FinTech, expert JLPT"
+        },
+        {
+          "type": "p",
+          "content": "Sur les profils standards (full-stack JS, DevOps AWS, data analyst), tout le monde sait recruter. C'est sur les profils niche qu'un cabinet se juge. Quand Neobrain a eu besoin d'un développeur LangChain qualifié pour un projet PwC, on a livré le profil en quelques semaines, sur un marché où ce skill set est quasi introuvable. Quand TheGreenBow a vu son prestataire principal lâcher en cours de route sur leur Console VPN, on a mobilisé en quelques semaines un squad de 3 — front-end senior, back-end Go, DevSecOps — pour reprendre le projet sans casser le delivery. Pas de promesse en l'air : preuve par exécution."
+        },
+        {
+          "type": "list",
+          "items": [
+            "IA / ML / LLM : profils LangChain, RAG, fine-tuning, MLOps, computer vision.",
+            "Robotique & embarqué : ROS, C++ temps réel, FPGA, drivers Linux, automotive.",
+            "FinTech : ingénieurs habitués aux contraintes réglementaires (PCI DSS, PSD2, KYC).",
+            "Tokyo bilingue : profils JLPT N2+ qui peuvent gérer un standup en japonais et une revue de code en anglais.",
+            "Sécurité : pentesters, AppSec, SOC engineers, ingénieurs cryptographie."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Mobbeal : recruter quelqu'un qui veut s'expatrier"
+        },
+        {
+          "type": "p",
+          "content": "Vous cherchez un dev senior à Tokyo et personne ne veut bouger ? Notre programme Mobbeal a déjà accompagné 50+ talents internationaux dans leur expatriation. On gère la partie administrative (visa de travail, logement transitoire, bank account, my number, NIE pour le Japon, NAS pour le Canada), on prépare la famille (école pour les enfants, conjoint·e), et on suit la personne pendant ses 6 premiers mois sur place. Résultat : un taux de rétention bien supérieur à un recrutement local raté à répétition."
+        },
+        {
+          "type": "h2",
+          "content": "Tarifs : honoraires fixes vs % salaire"
+        },
+        {
+          "type": "p",
+          "content": "Sur les postes en CDI, on travaille au pourcentage du package annuel — barème transparent communiqué dès le brief, pas de surprise à la facture. Sur les missions de Squad embarqué ou de Delivery clé en main, on facture en TJM ou au forfait selon le scope. Pas de double-facturation, pas de placement déguisé en consulting. Vous savez ce que vous payez, à quoi ça correspond, et ce qui se passe si on rate la mission."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "On embauche pour vous comme on embaucherait pour nous. Pas comme un commercial qui veut closer son trimestre — comme un ingénieur qui sait que le mauvais profil va coûter 6 mois à l'équipe."
+        }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "content": "Hiring a senior dev in Paris, a data engineer in Montreal and an SRE in Tokyo within the same quarter is not a logistics puzzle. It's a discipline. Three labour markets, three contractual cultures, three definitions of the word 'senior' that have nothing in common. Most companies handle it with three local agencies, three Slacks, three salary grids drifting silently apart, and a CTO who spends the week arbitrating inconsistencies. We picked the opposite path: one agency, three synchronous hubs, one team that talks directly to your engineers."
+        },
+        {
+          "type": "p",
+          "content": "Abbeal is 10 years of tech recruitment, 100+ companies served, and three physical offices that are not PO boxes: Paris (54 rue Greneta, 75002), Montreal (4388 rue Saint-Denis, H2J 2L1) and Tokyo (PMC Building, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). When we present a JLPT N2 profile in Tokyo or a Go staff engineer in Montreal, a human met them in person — not a LinkedIn scraper."
+        },
+        {
+          "type": "h2",
+          "content": "The problem: 3 local agencies = 3 inconsistencies"
+        },
+        {
+          "type": "p",
+          "content": "Working with one agency in Paris, another in Montreal and a third in Tokyo means you buy the same broken service three times. Nobody owns the global view, nobody arbitrates the gaps, and you pay for the chaos."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Three diverging salary grids: your Paris senior backend costs 30% less than the same profile in Montreal, and you find out on Glassdoor six months later.",
+            "Three definitions of 'senior': in Tokyo it's 8 years, in Paris it's 5, in Montreal nobody agrees.",
+            "Three interview loops: your live coding differs by hub, so you can no longer compare candidates.",
+            "Three contracts, three lawyers, three liability insurances, three invoices in different currencies.",
+            "Nobody owns the global headcount view, and your managers spend Friday reconciling PDF resumes."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "p",
+          "content": "With Abbeal, you get a single point of contact, a single calibration grid and a single consolidated report. Plus three local teams that actually know their market — not an open space in India that pretends to know Tokyo."
+        },
+        {
+          "type": "h2",
+          "content": "Our 48-hour process: sourcing run by engineers"
+        },
+        {
+          "type": "p",
+          "content": "Failed tech recruitment almost always starts at the same place: a recruiter who doesn't understand the stack screening 80 candidates on keywords. We flipped the model. At Abbeal, sourcing is done by former engineers turned recruiters. Not by hunters who learn what Kubernetes is on the morning of the brief."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Technical brief with your tech lead — 30 minutes, not an hour of sales noise.",
+            "Active sourcing within 48 hours: LinkedIn, GitHub, Stack Overflow, Discord communities, local meetups, targeted school alumni.",
+            "Short technical pre-screen (45 minutes) on the actual stack, not textbook trivia.",
+            "Shortlist presented within 5 business days, with calibration notes and red flags.",
+            "You validate, we trigger interviews. Closing in 48 hours after your offer.",
+            "Onboarding follow-up at D+30, D+90, D+180. If it breaks within the first 6 months, we replace at no cost."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "p",
+          "content": "We don't drown you in 12 resumes. Three calibrated profiles, presented with full dossiers. If we can't find anyone within 3 weeks, we tell you straight and refund the retainer. No bullshit."
+        },
+        {
+          "type": "h2",
+          "content": "Top 1% tech: what does it actually mean"
+        },
+        {
+          "type": "p",
+          "content": "Everyone says 'top 1%'. Nobody defines it. At Abbeal, it's documented and verifiable. Top 1% combines a strong technical signal, a track record we can dig into, and soft skills that survive a client project on fire."
+        },
+        {
+          "type": "list",
+          "items": [
+            "At least one experience of high-traffic scaling or distributed systems in production.",
+            "Measurable open-source contribution, or a personal repo showing clean code.",
+            "Ability to explain an architectural trade-off to a non-tech audience without losing them.",
+            "At least one mentoring or tech lead experience, even informal.",
+            "Project-stress resilience: we look for the counter-example in their journey, not the polished CV version.",
+            "Visible curiosity: they read papers, follow conferences, code on weekends or run a meetup.",
+            "Clean written communication: we read their PR descriptions, GitHub issues and technical posts."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "p",
+          "content": "The top 1% isn't measured by resume length. It's measured by depth of answers when you dig four levels deep into a project. Our engineer-sourcers know how to dig. That's the whole point."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "The top 1% don't send their CV in response to a job ad. You have to find them, convince them your project is worth their time, and poach them properly. That's exactly what we do all day."
+        },
+        {
+          "type": "h2",
+          "content": "6-month guarantee: what it actually covers"
+        },
+        {
+          "type": "p",
+          "content": "Most agencies write the 6-month guarantee in fine print. At Abbeal, it's bold and we apply it without debate. If the engineer we placed quits, gets let go for performance, or doesn't fit after your extended trial, we restart sourcing at our cost."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Free replacement if the engineer leaves within the first 6 months (excluding internal reorg on your side).",
+            "Priority re-sourcing: a dedicated sourcer is back on the role within 5 days.",
+            "No carry-over: if we don't find anyone within 8 weeks, we refund 50% of the fees paid.",
+            "Onboarding follow-up at D+30 / D+90 / D+180: we call both the engineer AND the manager to catch breakage early.",
+            "Mediation included: if the relationship sours, we step in as a neutral third party before it cracks."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Niche profiles: AI, Robotics, FinTech, JLPT experts"
+        },
+        {
+          "type": "p",
+          "content": "On standard profiles (full-stack JS, DevOps AWS, data analyst), everyone can recruit. Niche profiles are where an agency proves itself. When Neobrain needed a qualified LangChain developer for a PwC project, we delivered the profile in a few weeks on a market where this skill set is nearly impossible to find. When TheGreenBow saw their main vendor drop the ball mid-flight on their VPN Console, we mobilised a 3-engineer squad — senior front-end, Go back-end, DevSecOps — within a few weeks to take over the project without breaking delivery. No empty promises: proof by execution."
+        },
+        {
+          "type": "list",
+          "items": [
+            "AI / ML / LLM: LangChain, RAG, fine-tuning, MLOps, computer vision profiles.",
+            "Robotics & embedded: ROS, real-time C++, FPGA, Linux drivers, automotive.",
+            "FinTech: engineers used to regulatory constraints (PCI DSS, PSD2, KYC).",
+            "Tokyo bilingual: JLPT N2+ profiles who can run a standup in Japanese and a code review in English.",
+            "Security: pentesters, AppSec, SOC engineers, cryptography engineers."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Mobbeal: hiring someone who actually wants to expatriate"
+        },
+        {
+          "type": "p",
+          "content": "Looking for a senior dev in Tokyo and nobody wants to relocate? Our Mobbeal program has already supported 50+ international talents through their expatriation. We handle the admin (work visa, transitional housing, bank account, my number for Japan, NAS for Canada), prep the family (school for kids, partner support) and follow the person through their first 6 months on the ground. Result: retention rates significantly higher than a local hire that fails on repeat."
+        },
+        {
+          "type": "h2",
+          "content": "Pricing: fixed fees vs % of salary"
+        },
+        {
+          "type": "p",
+          "content": "On full-time hires, we work on a percentage of the annual package — transparent pricing communicated from the brief, no surprise on the invoice. On embedded Squad missions or turnkey Delivery, we charge a daily rate or a fixed package depending on scope. No double-billing, no placement disguised as consulting. You know what you pay, what it covers, and what happens if we miss."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "We hire for you the way we'd hire for ourselves. Not like a salesperson trying to close their quarter — like an engineer who knows the wrong hire costs the team six months."
+        }
+      ],
+      "ja": [
+        {
+          "type": "p",
+          "content": "パリでシニア開発者、モントリオールでデータエンジニア、東京でSREを同じ四半期に採用するのは、物流の問題ではありません。規律の問題です。3つの労働市場、3つの契約文化、共通点のない3つの「シニア」の定義。多くの企業は、3つの現地エージェンシー、3つのSlack、静かにずれていく3つの給与表、そして矛盾を週中ずっと調整するCTOで対応しています。私たちは逆を選びました。1つのエージェンシー、3つの同期した拠点、御社のエンジニアと直接話す1つのチームです。"
+        },
+        {
+          "type": "p",
+          "content": "Abbealは、テック採用10年、100社以上の支援実績、そして私書箱ではない3つの実在オフィスを持っています。パリ（54 rue Greneta, 75002）、モントリオール（4388 rue Saint-Denis, H2J 2L1）、東京（PMCビル、東京都港区東麻布1-23-5、106-0044）。東京のJLPT N2人材やモントリオールのGoスタッフエンジニアをご紹介する際、それは人間が直接会った人物であり、LinkedInのスクレイパーではありません。"
+        },
+        {
+          "type": "h2",
+          "content": "問題：3つの現地エージェンシー = 3つの不整合"
+        },
+        {
+          "type": "p",
+          "content": "パリで1社、モントリオールで1社、東京で1社のエージェンシーを使うと、同じ壊れたサービスを3回購入することになります。全体像を持つ人がおらず、ギャップを調整する人もおらず、混乱の費用を御社が払うことになります。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "ばらつく3つの給与表：パリのシニアバックエンドはモントリオールの同じプロフィールより30%安く、6ヶ月後にGlassdoorで気づきます。",
+            "3つの「シニア」の定義：東京は8年、パリは5年、モントリオールは誰も合意しません。",
+            "3つの面接プロセス：ライブコーディングが拠点ごとに違うので、候補者を比較できなくなります。",
+            "3つの契約、3人の弁護士、3つの賠償責任保険、3つの異なる通貨での請求書。",
+            "誰もグローバルなヘッドカウントを持たず、マネージャーは金曜日にPDFのCVを照合することに費やします。"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "p",
+          "content": "Abbealなら、窓口は1つ、キャリブレーション基準は1つ、レポートは統合されています。そして、現地市場を本当に理解している3つのローカルチーム — 東京を知ったふりをするインドのオープンスペースではありません。"
+        },
+        {
+          "type": "h2",
+          "content": "48時間プロセス：エンジニアによるソーシング"
+        },
+        {
+          "type": "p",
+          "content": "失敗するテック採用は、ほぼ常に同じ場所から始まります。技術スタックを理解しないリクルーターが、キーワードで80人の候補者をスクリーニングするところです。私たちはモデルを反転させました。Abbealでは、ソーシングは元エンジニアが行います。ブリーフ当日の朝にKubernetesが何かを知るハンターではありません。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "テックリードとの技術ブリーフィング — 30分、営業の雑談1時間ではありません。",
+            "48時間以内のアクティブソーシング：LinkedIn、GitHub、Stack Overflow、Discordコミュニティ、ローカルミートアップ、対象校の卒業生。",
+            "実際のスタックに基づく短い技術プレスクリーン（45分）、教科書的な質問ではありません。",
+            "5営業日以内にショートリストを提示、キャリブレーションメモとレッドフラッグ付き。",
+            "御社が承認したら、面接を開始。オファー後48時間でクロージング。",
+            "D+30、D+90、D+180でオンボーディングフォローアップ。最初の6ヶ月以内に問題があれば、無料で交代。"
+          ],
+          "ordered": true
+        },
+        {
+          "type": "p",
+          "content": "12通のCVで埋め尽くしません。完全な書類とともに提示する3つの調整済みプロフィール。3週間以内に見つけられない場合は、率直にお伝えしリテイナーを返金します。ごまかしなし。"
+        },
+        {
+          "type": "h2",
+          "content": "テックトップ1%：具体的に何を意味するのか"
+        },
+        {
+          "type": "p",
+          "content": "誰もが「トップ1%」と言います。誰も定義しません。Abbealでは、文書化されており検証可能です。トップ1%は、強い技術シグナル、深掘りできる実績、炎上中のクライアントプロジェクトを生き延びるソフトスキルを兼ね備えています。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "高トラフィックのスケーリングまたは本番環境の分散システムの経験が少なくとも1回。",
+            "測定可能なオープンソース貢献、またはきれいなコードを示す個人リポジトリ。",
+            "アーキテクチャのトレードオフを非エンジニアに失わずに説明できる能力。",
+            "メンタリングまたはテックリードの経験が少なくとも1回（非公式でも可）。",
+            "プロジェクトストレス耐性：磨かれたCV版ではなく、経歴の中の反例を探します。",
+            "目に見える好奇心：論文を読み、カンファレンスをフォローし、週末にコードを書き、ミートアップを運営。",
+            "きれいな書面コミュニケーション：PRの説明、GitHubのissue、技術ブログを読みます。"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "p",
+          "content": "トップ1%はCVの長さで測りません。プロジェクトを4階層深く掘り下げたときの回答の深さで測ります。私たちのエンジニアソーサーは掘り下げ方を知っています。それが核心です。"
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "トップ1%は求人広告にCVを送りません。探し出し、御社のプロジェクトが時間を割く価値があると説得し、きちんと引き抜く必要があります。それが私たちの一日の仕事そのものです。"
+        },
+        {
+          "type": "h2",
+          "content": "6ヶ月保証：実際にカバーする内容"
+        },
+        {
+          "type": "p",
+          "content": "多くのエージェンシーは6ヶ月保証を小さな文字で書きます。Abbealでは大きく書き、議論なしで適用します。配置したエンジニアが退職、業績不振で解雇、または延長試用期間後にフィットしない場合、当社の費用で再ソーシングを開始します。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "最初の6ヶ月以内に退職した場合の無料交代（御社側の組織再編による場合を除く）。",
+            "優先再ソーシング：5日以内に専任ソーサーを再投入。",
+            "繰越なし：8週間以内に見つからない場合、支払済み報酬の50%を返金。",
+            "D+30 / D+90 / D+180でオンボーディングフォロー：エンジニアとマネージャーの両方に電話して早期に破綻を察知。",
+            "メディエーション込み：関係が悪化した場合、決裂前に中立の第三者として介入。"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "ニッチ人材：AI、ロボティクス、FinTech、JLPTエキスパート"
+        },
+        {
+          "type": "p",
+          "content": "標準的なプロフィール（フルスタックJS、DevOps AWS、データアナリスト）は誰でも採用できます。エージェンシーが評価されるのはニッチ人材です。NeobrainがPwCプロジェクト向けに有資格のLangChain開発者を必要としたとき、このスキルセットがほぼ見つからない市場で、数週間でプロフィールを納品しました。TheGreenBowがVPNコンソールで主要ベンダーが途中で離脱したとき、シニアフロントエンド、Goバックエンド、DevSecOpsの3名のスクワッドを数週間で動員し、デリバリーを壊さずにプロジェクトを引き継ぎました。空約束ではなく、実行による証明です。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "AI / ML / LLM：LangChain、RAG、ファインチューニング、MLOps、コンピュータビジョンの人材。",
+            "ロボティクス・組込：ROS、リアルタイムC++、FPGA、Linuxドライバ、自動車。",
+            "FinTech：規制制約（PCI DSS、PSD2、KYC）に慣れたエンジニア。",
+            "東京バイリンガル：日本語でスタンドアップ、英語でコードレビューができるJLPT N2+の人材。",
+            "セキュリティ：ペンテスター、AppSec、SOCエンジニア、暗号化エンジニア。"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Mobbeal：本当に海外移住したい人を採用する"
+        },
+        {
+          "type": "p",
+          "content": "東京でシニア開発者を探していて、誰も移動したがらない？私たちのMobbealプログラムは、すでに50名以上の国際人材の海外赴任をサポートしてきました。行政手続き（就労ビザ、暫定住居、銀行口座、マイナンバー、カナダのNAS）を処理し、家族の準備（子供の学校、パートナーサポート）を行い、現地での最初の6ヶ月間フォローします。結果：失敗を繰り返す現地採用よりもはるかに高い定着率です。"
+        },
+        {
+          "type": "h2",
+          "content": "料金：固定報酬 vs 給与の%"
+        },
+        {
+          "type": "p",
+          "content": "正社員採用では、年間パッケージのパーセンテージで作業します — ブリーフ時から透明な料金体系を伝え、請求時に驚きはありません。組込スクワッドのミッションやターンキーデリバリーでは、スコープに応じて日額または定額で請求します。二重請求なし、コンサルに偽装した配置なし。何にお金を払い、何をカバーし、私たちが失敗した場合に何が起こるかを把握できます。"
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "私たちは自社採用と同じやり方で御社のために採用します。四半期をクローズしたい営業のようにではなく、間違った採用がチームに6ヶ月のコストを与えることを知っているエンジニアのように。"
+        }
+      ],
+      "fr-ca": [
+        {
+          "type": "p",
+          "content": "Embaucher un dev senior à Paris, un data engineer à Montréal pis un SRE à Tokyo dans le même trimestre, c'est pas un casse-tête de logistique. C'est une discipline. Trois marchés du travail, trois cultures contractuelles, trois définitions du mot 'senior' qui ont rien à voir entre elles. La plupart des boîtes répondent à ça avec trois cabinets locaux, trois Slack différents, trois grilles salariales qui dérapent en silence pis un CTO qui passe sa semaine à arbitrer des incohérences. On a choisi le contraire : un seul cabinet, trois pôles synchrones, une seule équipe qui parle directement à tes ingés."
+        },
+        {
+          "type": "p",
+          "content": "Abbeal, c'est 10 ans de recrutement techno, 100+ entreprises accompagnées, pis trois bureaux physiques qui sont pas des boîtes postales : Paris (54 rue Greneta, 75002), Montréal (4388 rue Saint-Denis, H2J 2L1) pis Tokyo (PMC Building, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Quand on te présente un profil JLPT N2 à Tokyo ou un staff engineer Go à Montréal, c'est un humain qui l'a vu en personne, pas un scraper LinkedIn."
+        },
+        {
+          "type": "h2",
+          "content": "Le problème : 3 boîtes locales = 3 incohérences"
+        },
+        {
+          "type": "p",
+          "content": "Quand tu travailles avec un cabinet à Paris, un autre à Montréal pis un troisième à Tokyo, tu paies trois fois pour le même service mal fait. Personne a la vue d'ensemble, personne arbitre les écarts, pis c'est toi qui paies la facture du chaos."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Trois grilles salariales qui divergent : ton senior backend à Paris coûte 30 % de moins que le même profil à Montréal, pis tu l'apprends sur Glassdoor six mois plus tard.",
+            "Trois définitions du mot 'senior' : à Tokyo c'est 8 ans, à Paris c'est 5, à Montréal personne s'entend.",
+            "Trois processus d'entrevue : ton live coding est différent d'un pôle à l'autre, ça fait que tu peux pus comparer.",
+            "Trois contrats, trois avocats, trois assurances responsabilité civile, trois factures dans des devises différentes.",
+            "Personne a la vision globale du headcount, pis tes gestionnaires passent leur vendredi à concilier des CV en PDF."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "p",
+          "content": "Avec Abbeal, t'as un seul interlocuteur, une seule grille de calibration, un seul rapport consolidé. Pis trois équipes locales qui connaissent leur marché — pas un open space en Inde qui prétend connaître Tokyo."
+        },
+        {
+          "type": "h2",
+          "content": "Notre processus 48 h : sourcing par des ingés"
+        },
+        {
+          "type": "p",
+          "content": "Le recrutement techno raté commence presque toujours à la même place : un recruteur qui comprend pas la techno screen 80 candidats sur des mots-clés. On a renversé le modèle. Chez Abbeal, le sourcing est fait par d'anciens ingés reconvertis. Pas par des chasseurs qui découvrent c'est quoi Kubernetes le matin du brief."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Brief technique avec ton tech lead — 30 minutes, pas une heure de jasette commerciale.",
+            "Sourcing actif sur 48 h : LinkedIn, GitHub, Stack Overflow, communautés Discord, meetups locaux, anciens des écoles ciblées.",
+            "Pré-screen technique court (45 minutes) sur le vrai stack, pas sur des questions de manuel.",
+            "Présentation de la shortlist sous 5 jours ouvrables avec note de calibration pis red flags.",
+            "Tu valides, on déclenche les entrevues. Closing en 48 h après ton offre.",
+            "Suivi onboarding à J+30, J+90, J+180. Si ça brise dans les 6 premiers mois, on remplace gratis."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "p",
+          "content": "On te noie pas en-dessous de 12 CV. Trois profils calibrés, présentés avec leur dossier complet. Si on trouve personne en 3 semaines, on te le dit drette pis on rembourse le retainer. Pas de bullshit."
+        },
+        {
+          "type": "h2",
+          "content": "Top 1 % techno : qu'est-ce que ça veut dire concrètement"
+        },
+        {
+          "type": "p",
+          "content": "Tout le monde dit 'top 1 %'. Personne le définit. Chez Abbeal, c'est documenté pis vérifiable. Le top 1 % combine un signal technique fort, un track record qu'on peut creuser pis des soft skills qui survivent à un projet client en feu."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Au moins une expérience de scaling à fort trafic ou de système distribué en production.",
+            "Contribution open source mesurable, ou repo perso qui montre du code propre.",
+            "Capacité à expliquer un trade-off d'archi à un non-techno sans le perdre.",
+            "Au moins une expérience de mentorat ou de tech lead, même informelle.",
+            "Résistance au stress projet : on cherche le contre-exemple dans son parcours, pas la version polie du CV.",
+            "Curiosité affichée : ils lisent des papers, suivent des conférences, codent la fin de semaine ou animent un meetup.",
+            "Communication écrite propre : on lit leurs PR descriptions, leurs issues GitHub, leurs posts techniques."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "p",
+          "content": "Le top 1 % se mesure pas à la longueur du CV. Ça se mesure à la profondeur des réponses quand on creuse un projet sur 4 niveaux de questions. Nos sourceurs ingés savent creuser. C'est ça, l'intérêt."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Le top 1 % envoie pas son CV en réponse à une offre. Faut le chercher, le convaincre que ton projet vaut son temps, pis le débaucher comme du monde. C'est exactement ce qu'on fait toute la journée."
+        },
+        {
+          "type": "h2",
+          "content": "Garantie 6 mois : ce que ça couvre pour vrai"
+        },
+        {
+          "type": "p",
+          "content": "La garantie 6 mois, ben des cabinets l'écrivent en p'tit. Chez Abbeal, c'est gros pis on l'applique sans discussion. Si l'ingé qu'on a placé démissionne, est congédié pour insuffisance ou fitte pas après ta période d'essai prolongée, on relance le sourcing à nos frais."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Remplacement gratis si départ pendant les 6 premiers mois (sauf cas de réorganisation interne de ton bord).",
+            "Re-sourcing prioritaire : on remet un sourceur dédié sur le poste sous 5 jours.",
+            "Pas de carry-over : si on trouve personne en 8 semaines, on rembourse 50 % des honoraires versés.",
+            "Suivi onboarding J+30 / J+90 / J+180 : on appelle l'ingé PIS le gestionnaire pour anticiper les bris.",
+            "Médiation incluse : si la relation se dégrade, on intervient comme tiers neutre avant que ça pète."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Profils niche : IA, Robotique, FinTech, expert JLPT"
+        },
+        {
+          "type": "p",
+          "content": "Sur les profils standards (full-stack JS, DevOps AWS, analyste de données), tout le monde sait recruter. C'est sur les profils niche qu'un cabinet se juge. Quand Neobrain a eu besoin d'un développeur LangChain qualifié pour un projet PwC, on a livré le profil en quelques semaines, sur un marché où ce skill set est quasi introuvable. Quand TheGreenBow a vu son fournisseur principal lâcher en cours de route sur leur Console VPN, on a mobilisé en quelques semaines un squad de 3 — front-end senior, back-end Go, DevSecOps — pour reprendre le projet sans casser le delivery. Pas de promesses en l'air : preuve par exécution."
+        },
+        {
+          "type": "list",
+          "items": [
+            "IA / ML / LLM : profils LangChain, RAG, fine-tuning, MLOps, vision par ordinateur.",
+            "Robotique pis embarqué : ROS, C++ temps réel, FPGA, drivers Linux, automobile.",
+            "FinTech : ingés habitués aux contraintes réglementaires (PCI DSS, PSD2, KYC).",
+            "Tokyo bilingue : profils JLPT N2+ qui peuvent gérer un standup en japonais pis une revue de code en anglais.",
+            "Sécurité : pentesters, AppSec, SOC engineers, ingés cryptographie."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Mobbeal : recruter quelqu'un qui veut s'expatrier"
+        },
+        {
+          "type": "p",
+          "content": "Tu cherches un dev senior à Tokyo pis personne veut bouger ? Notre programme Mobbeal a déjà accompagné 50+ talents internationaux dans leur expatriation. On gère le côté administratif (visa de travail, logement transitoire, compte de banque, my number, NAS pour le Canada), on prépare la famille (école pour les enfants, conjoint·e), pis on suit la personne pendant ses 6 premiers mois sur place. Résultat : un taux de rétention pas mal plus élevé qu'un recrutement local raté à répétition."
+        },
+        {
+          "type": "h2",
+          "content": "Tarifs : honoraires fixes vs % du salaire"
+        },
+        {
+          "type": "p",
+          "content": "Sur les postes en CDI, on travaille au pourcentage du package annuel — barème transparent communiqué dès le brief, pas de surprise sur la facture. Sur les missions de Squad embarqué ou de Delivery clé en main, on facture en TJM ou au forfait selon le scope. Pas de double facturation, pas de placement déguisé en consulting. Tu sais ce que tu paies, à quoi ça correspond, pis ce qui se passe si on rate la mission."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "On embauche pour toi comme on embaucherait pour nous. Pas comme un vendeur qui veut closer son trimestre — comme un ingé qui sait que le mauvais profil va coûter 6 mois à l'équipe."
+        }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "question": "C'est quoi exactement le top 1 % ?",
+          "answer": "Le top 1 % chez Abbeal, c'est un faisceau de signaux : au moins une expérience de scaling en production, du code public lisible (open source ou repo perso), capacité à défendre un choix d'archi à 4 niveaux de 'pourquoi', expérience de mentorat même informelle, et communication écrite propre. Pas une note magique, un dossier qu'on peut creuser. Si un sourceur ne peut pas défendre techniquement la candidature devant un tech lead, le profil ne passe pas."
+        },
+        {
+          "question": "Comment vous garantissez la qualité d'un profil que vous n'avez pas formé ?",
+          "answer": "On ne forme pas, on calibre. Nos sourceurs sont d'anciens ingénieurs, donc le pré-screen technique de 45 minutes vaut plus qu'un test automatisé de 2 heures. On vérifie aussi les références côté tech lead, pas seulement RH, et on regarde le code public quand il existe. Si ça casse quand même dans les 6 mois, la garantie joue : remplacement gratuit. C'est pour ça qu'on est sélectifs en amont — un échec coûte aussi cher au cabinet qu'au client."
+        },
+        {
+          "question": "Les profils JLPT N2+ pour Tokyo, vous en avez vraiment ?",
+          "answer": "Oui, et c'est exactement pour ça qu'on a un bureau à Tokyo (PMC Building, Higashi-Azabu) avec une équipe locale. Le marché bilingue tech-japonais est étroit mais réel : ingénieurs étrangers qui ont passé le JLPT N2 ou N1, profils japonais formés à l'anglais sur des projets internationaux, et talents Mobbeal prêts à s'expatrier avec accompagnement visa. On ne vend pas du JLPT N5 maquillé."
+        },
+        {
+          "question": "Quels sont vos délais moyens de placement ?",
+          "answer": "Shortlist sous 5 jours ouvrés après le brief, puis 2 à 4 semaines selon votre process d'entretien et la rareté du profil. Sur les postes standards (full-stack senior, DevOps), on closing souvent en 3 semaines. Sur les niches (LangChain, embedded C++, JLPT N2), comptez 4 à 6 semaines. Si on n'arrive pas à livrer en 8 semaines, on rembourse 50 % du retainer — pas de zone grise."
+        },
+        {
+          "question": "Vous travaillez en CDI ou en freelance ?",
+          "answer": "Les deux. CDI sur les postes structurants long terme (lead, staff, principal). Freelance ou portage sur les missions courtes ou en attendant le bon CDI. On peut aussi monter un Squad embarqué Abbeal (3 à 6 ingénieurs livrés clés en main) si vous avez besoin d'aller vite sans gérer la RH. C'est ce qu'on a fait pour TheGreenBow."
+        },
+        {
+          "question": "Si je recrute via vous, je peux ensuite débaucher mon ingé en interne ?",
+          "answer": "Oui, c'est même le but. Notre métier c'est de placer le bon profil chez vous, pas de le retenir captif. Si un Squad Abbeal devient indispensable, on a des clauses claires de transfert vers du CDI direct, sans pénalité absurde. On préfère un client qui internalise un profil et qui revient pour le prochain recrutement, plutôt qu'un client qui se sent piégé."
+        }
+      ],
+      "en": [
+        {
+          "question": "What exactly is the top 1%?",
+          "answer": "Top 1% at Abbeal is a bundle of signals: at least one production scaling experience, readable public code (open source or personal repo), ability to defend an architecture choice through 4 levels of 'why', mentoring experience even informal, and clean written communication. Not a magic score, a dossier we can dig into. If a sourcer can't defend the candidate technically in front of a tech lead, the profile doesn't pass."
+        },
+        {
+          "question": "How do you guarantee the quality of a profile you didn't train?",
+          "answer": "We don't train, we calibrate. Our sourcers are former engineers, so the 45-minute technical pre-screen is worth more than a 2-hour automated test. We also check references on the tech lead side, not just HR, and look at public code when it exists. If it still breaks within 6 months, the guarantee kicks in: free replacement. That's why we're selective upfront — a failure costs the agency as much as the client."
+        },
+        {
+          "question": "JLPT N2+ profiles for Tokyo, do you really have them?",
+          "answer": "Yes, and that's exactly why we have a Tokyo office (PMC Building, Higashi-Azabu) with a local team. The bilingual tech-Japanese market is narrow but real: foreign engineers who passed JLPT N2 or N1, Japanese profiles trained in English through international projects, and Mobbeal talents ready to relocate with visa support. We don't sell JLPT N5 dressed up as N2."
+        },
+        {
+          "question": "What are your average placement timelines?",
+          "answer": "Shortlist within 5 business days after the brief, then 2 to 4 weeks depending on your interview process and profile rarity. On standard roles (senior full-stack, DevOps), we often close in 3 weeks. On niche profiles (LangChain, embedded C++, JLPT N2), expect 4 to 6 weeks. If we can't deliver within 8 weeks, we refund 50% of the retainer — no grey area."
+        },
+        {
+          "question": "Do you work on full-time or freelance?",
+          "answer": "Both. Full-time for structuring long-term roles (lead, staff, principal). Freelance or contractor for short missions or while waiting for the right full-time hire. We can also stand up an embedded Abbeal Squad (3 to 6 engineers delivered turnkey) if you need to move fast without managing HR. That's what we did for TheGreenBow."
+        },
+        {
+          "question": "If I hire through you, can I later poach the engineer in-house?",
+          "answer": "Yes, that's actually the point. Our job is to place the right profile with you, not to keep them captive. If an Abbeal Squad becomes essential, we have clear conversion clauses to direct full-time, without absurd penalties. We prefer a client who internalises a profile and comes back for the next hire over a client who feels trapped."
+        }
+      ],
+      "ja": [
+        {
+          "question": "トップ1%とは具体的に何ですか？",
+          "answer": "Abbealのトップ1%は、シグナルの束です：少なくとも1回の本番スケーリング経験、読みやすい公開コード（オープンソースまたは個人リポジトリ）、4階層の「なぜ」でアーキテクチャ選択を擁護できる能力、非公式でもメンタリング経験、きれいな書面コミュニケーション。魔法のスコアではなく、深掘りできる書類です。ソーサーがテックリードの前で候補者を技術的に擁護できない場合、そのプロフィールは通りません。"
+        },
+        {
+          "question": "御社が育成していない人材の品質をどう保証しますか？",
+          "answer": "私たちは育成しません、調整します。ソーサーは元エンジニアなので、45分の技術プレスクリーンは2時間の自動テストより価値があります。また、HRだけでなくテックリード側のリファレンスを確認し、公開コードがあれば見ます。それでも6ヶ月以内に問題が起きた場合、保証が発動します：無料交代。これが私たちが事前に厳選する理由です — 失敗はエージェンシーにもクライアントと同じくらいコストがかかります。"
+        },
+        {
+          "question": "東京向けのJLPT N2+人材は本当にいますか？",
+          "answer": "はい、だからこそ東京（東麻布のPMCビル）に現地チームを持つオフィスがあります。バイリンガル技術日本語市場は狭いですが実在します：JLPT N2またはN1を取得した外国人エンジニア、国際プロジェクトで英語を学んだ日本人プロフィール、ビザサポート付きで赴任準備が整ったMobbealタレント。N5をN2と偽って売ることはしません。"
+        },
+        {
+          "question": "平均的な配置までの期間は？",
+          "answer": "ブリーフ後5営業日以内にショートリスト、その後御社の面接プロセスとプロフィールの希少性に応じて2〜4週間。標準的な職種（シニアフルスタック、DevOps）では、しばしば3週間でクローズします。ニッチなプロフィール（LangChain、組込C++、JLPT N2）では、4〜6週間を見込んでください。8週間以内に納品できない場合、リテイナーの50%を返金します — グレーゾーンなし。"
+        },
+        {
+          "question": "正社員ですか、フリーランスですか？",
+          "answer": "両方です。長期構造的な職種（リード、スタッフ、プリンシパル）には正社員。短期ミッションや適切な正社員を待つ間はフリーランスまたは業務委託。HRを管理せずに迅速に動く必要がある場合は、組込型Abbealスクワッド（3〜6名のエンジニアをターンキーで納品）も立ち上げ可能です。それがTheGreenBowで行ったことです。"
+        },
+        {
+          "question": "御社経由で採用したエンジニアを、後から社内に引き抜けますか？",
+          "answer": "はい、それがむしろ目的です。私たちの仕事は適切なプロフィールを御社に配置することであり、人質に取ることではありません。Abbealスクワッドが不可欠になった場合、不合理なペナルティなしで直接正社員への明確な転換条項があります。罠にかかったと感じるクライアントよりも、プロフィールを内製化して次の採用で戻ってくるクライアントの方が好ましいです。"
+        }
+      ],
+      "fr-ca": [
+        {
+          "question": "C'est quoi au juste le top 1 % ?",
+          "answer": "Le top 1 % chez Abbeal, c'est un faisceau de signaux : au moins une expérience de scaling en production, du code public lisible (open source ou repo perso), capacité à défendre un choix d'archi sur 4 niveaux de 'pourquoi', expérience de mentorat même informelle, pis communication écrite propre. Pas une note magique, un dossier qu'on peut creuser. Si un sourceur peut pas défendre techniquement la candidature devant un tech lead, le profil passe pas."
+        },
+        {
+          "question": "Comment vous garantissez la qualité d'un profil que vous avez pas formé ?",
+          "answer": "On forme pas, on calibre. Nos sourceurs sont d'anciens ingés, ça fait que le pré-screen technique de 45 minutes vaut plus qu'un test automatisé de 2 heures. On vérifie aussi les références côté tech lead, pas juste RH, pis on regarde le code public quand il existe. Si ça brise pareil dans les 6 mois, la garantie joue : remplacement gratis. C'est pour ça qu'on est sélectifs en amont — un échec coûte autant cher au cabinet qu'au client."
+        },
+        {
+          "question": "Les profils JLPT N2+ pour Tokyo, vous en avez pour vrai ?",
+          "answer": "Oui, pis c'est justement pour ça qu'on a un bureau à Tokyo (PMC Building, Higashi-Azabu) avec une équipe locale. Le marché bilingue techno-japonais est étroit mais réel : ingés étrangers qui ont passé le JLPT N2 ou N1, profils japonais formés à l'anglais sur des projets internationaux, pis talents Mobbeal prêts à s'expatrier avec accompagnement visa. On vend pas du JLPT N5 maquillé en N2."
+        },
+        {
+          "question": "Quels sont vos délais moyens de placement ?",
+          "answer": "Shortlist sous 5 jours ouvrables après le brief, ensuite 2 à 4 semaines selon ton processus d'entrevue pis la rareté du profil. Sur les postes standards (full-stack senior, DevOps), on close souvent en 3 semaines. Sur les niches (LangChain, embedded C++, JLPT N2), compte 4 à 6 semaines. Si on arrive pas à livrer en 8 semaines, on rembourse 50 % du retainer — pas de zone grise."
+        },
+        {
+          "question": "Vous travaillez en CDI ou en freelance ?",
+          "answer": "Les deux. CDI sur les postes structurants à long terme (lead, staff, principal). Freelance ou travailleur autonome sur les mandats courts ou en attendant le bon CDI. On peut aussi monter un Squad embarqué Abbeal (3 à 6 ingés livrés clé en main) si t'as besoin d'aller vite sans gérer le RH. C'est ce qu'on a fait pour TheGreenBow."
+        },
+        {
+          "question": "Si je recrute via vous, je peux ensuite engager mon ingé en interne ?",
+          "answer": "Oui, c'est même le but. Notre métier c'est de placer le bon profil chez vous, pas de le garder captif. Si un Squad Abbeal devient essentiel, on a des clauses claires de transfert vers du CDI direct, sans pénalité absurde. On préfère un client qui internalise un profil pis qui revient pour le prochain recrutement, plutôt qu'un client qui se sent pogné."
+        }
+      ]
+    }
+  },
+  "engineering-jobs-tokyo": {
+    "body": {
+      "fr": [
+        {
+          "type": "p",
+          "content": "Tokyo te tente ? Tu te demandes si l'aventure Japon est jouable sans cramer ta carrière, sans paumer ta famille en route, sans te taper six mois de paperasse opaque ? Bonne nouvelle : c'est exactement la question à laquelle on répond depuis 2018 avec le programme Mobbeal. Notre hub Tokyo est ouvert au PMC Building, 1-23-5 Higashi-Azabu, Minato-ku, et on a déjà relocalisé plus de 50 ingénieurs internationaux à Tokyo, Montréal et ailleurs. L'idée n'est pas de te vendre du rêve nippon en marketing slide. L'idée est de te garder dans ton équipe Abbeal, sur des missions tech sérieuses, mais en te déposant à Narita avec un visa, un appart, une école pour les gosses, et un onboarding au cordeau."
+        },
+        {
+          "type": "h2",
+          "content": "Pourquoi Tokyo en 2026, et pourquoi Abbeal"
+        },
+        {
+          "type": "p",
+          "content": "Tokyo en 2026, c'est plus la même histoire qu'il y a dix ans. Le yen reste accessible pour les profils payés en euros, dollars ou francs suisses. La scène tech locale s'est ouverte aux ingénieurs étrangers : Money Forward, Rakuten, Mercari, LINE, sans parler des grands groupes français qui montent leur tech à Tokyo. Le marché est tendu côté talent, et les ESN japonaises classiques peinent à délivrer. C'est précisément là où Abbeal joue."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Qualité de vie : la ville la plus sûre du monde, transports publics qui marchent, bouffe au-dessus de tout, nature à 40 minutes de Shibuya.",
+            "Scène tech mature : Databricks, AWS Tokyo, GCP Tokyo region, communautés Python/Go/Rust très actives.",
+            "Salaires alignés sur l'Europe pour nos ingénieurs (on ne te paie pas en yen au tarif local japonais — tu restes sur la grille Abbeal).",
+            "Marché : nos clients Tokyo cherchent des ingés bilingues anglais qui savent livrer, pas des touristes qui veulent voir les cerisiers."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Mobbeal : ce qu'on prend en charge concrètement"
+        },
+        {
+          "type": "p",
+          "content": "Mobbeal n'est pas une promesse marketing. C'est un dispositif opérationnel rodé, partenaire JETRO, Business France et La French Tech Tokyo. Voilà ce qu'on couvre quand tu signes."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Visa Engineer / Specialist in Humanities : on monte le dossier, on bosse avec un avocat immigration spécialisé, délai moyen 6 à 10 semaines.",
+            "Logement temporaire à l'arrivée (3 à 6 semaines) puis location longue durée — on signe le bail à ta place, on gère le hosho-nin (garant) qui bloque 90 % des étrangers.",
+            "Allocation famille : si ton conjoint te suit, on gère son visa dépendant et on l'aide à trouver un job ou une école de langue.",
+            "Écoles internationales pour les enfants : Lycée Français International de Tokyo, British School, ASIJ — on a des contacts directs et on t'aide à monter les dossiers d'inscription.",
+            "Intégration JETRO et Business France : networking, masterclasses fiscalité, communauté francophone et anglophone de Tokyo."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Les missions sur lesquelles tu peux atterrir"
+        },
+        {
+          "type": "p",
+          "content": "On ne te parachute pas chez n'importe quel client juste parce qu'on a un siège vide. Voici trois exemples réels de missions actuellement staffées par des ingés Abbeal à Tokyo."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Money Forward : Data Engineering sur leur banque digitale greenfield. Stack Databricks, AWS Tokyo, dbt. Mode hybride avec leurs bureaux à Tamachi. Idéal si tu kiffes construire un data warehouse from scratch dans une fintech qui scale.",
+            "Le Monde : ingénieur intégré à la team Insights depuis Tokyo, en remote complet sur Paris. Stack JS vanilla, Go, PHP, et Codex pour les code reviews assistées IA. Sprints 2 semaines, daily Paris-Tokyo en milieu d'aprem JST.",
+            "Cartier : LLM privé en interne pour la maison horlogère. GCP, Python, équipe mixte Cartier Suisse + équipe Japon. Beaucoup d'enjeux confidentialité et qualité du data pipeline.",
+            "Et d'autres clients selon ton profil : on staffe régulièrement sur du SRE, du backend Go/Rust, du frontend React/Next, et de l'IA appliquée."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "La courbe de Tokyo, on la connaît bien : tu débarques, tu galères trois mois sur les hiragana, tu doutes au sixième mois, et au bout d'un an tu tiens une vraie conversation au izakaya. Marie Nuellas, ingé Abbeal Tokyo, a documenté son parcours JLPT N2 via Anki, WaniKani et Bunpro dans un article qu'on relaie avec fierté. Abbeal te paie les cours particuliers de japonais — c'est un investissement, pas un avantage en nature."
+        },
+        {
+          "type": "h2",
+          "content": "Le profil qu'on cherche"
+        },
+        {
+          "type": "p",
+          "content": "On cherche des ingés sérieux, pas des aventuriers. Tokyo n'est pas un city break de deux ans. Les profils qui réussissent chez nous partagent quelques traits communs."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "5+ ans d'expérience tech solide sur ta stack principale (data, backend, frontend, SRE, ML).",
+            "Anglais courant à l'oral et à l'écrit — c'est ta langue de travail quotidienne avec les clients et l'équipe.",
+            "Vraie motivation Japon : tu as déjà voyagé là-bas, tu lis sur la culture, tu sais que ce n'est pas Paris en plus exotique.",
+            "JLPT N5 ou N4 bienvenu mais pas obligatoire au démarrage. On t'aide à monter en niveau sur place.",
+            "Capacité à bosser en autonomie : on est en Adaptive Follow-the-Sun, ton manager peut être à Paris ou Montréal."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Le process : du premier call à l'arrivée à Narita"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Call screening 30 minutes avec l'équipe Mobbeal pour valider la motivation et la stack.",
+            "Tech interview avec un de nos staff engineers — pair coding ou system design selon ton profil.",
+            "Présentation client : on te prépare, on te briefe sur l'équipe, tu rencontres le manager côté client.",
+            "Offre Abbeal Tokyo signée — on cale le package, la date d'arrivée, les éventuels imprévus famille.",
+            "Montage visa et préparation déménagement (6 à 10 semaines).",
+            "Arrivée à Narita, accueil par l'équipe Tokyo, installation et premiers pas au PMC Building Higashi-Azabu, environ 3 mois après l'offre."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Vivre à Tokyo : ce qu'on aimerait t'avoir dit avant de partir"
+        },
+        {
+          "type": "p",
+          "content": "Voici quelques vérités terrain qu'on partage avec tous les arrivants Mobbeal. Pas du Lonely Planet, juste du retour d'expérience d'ingés qui y vivent."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Logement : Higashi-Azabu pour être à 5 minutes du bureau. Setagaya pour la vie de famille au calme. Shibuya/Ebisu pour la vie sociale anglophone, Nakameguro pour l'esthétique.",
+            "Transport : oublie le JR Pass (réservé aux touristes). Prends une carte Suica et abonne-toi sur ta ligne principale. Le métro s'arrête vers minuit, prévois un Uber ou un taxi pour les fins de soirée.",
+            "Food : tu mangeras mieux pour 1200 yen dans un teishoku de quartier que dans 90 % des restaus français. Apprends 'osusume wa nan desu ka' et laisse-toi guider.",
+            "Vie sociale : la communauté tech française et anglophone est dense. Meetups Python Tokyo, Tokyo Dev, French Tech, Apéros expat. Tu ne seras jamais seul.",
+            "Famille : Tokyo est une ville incroyablement enfants-friendly. Parcs partout, métros sécurisés, écoles internationales solides. Les conjoint(e)s qui s'épanouissent sont ceux qui se créent un projet sur place — école de japonais, freelance remote, asso."
+          ]
+        },
+        {
+          "type": "quote",
+          "content": "Tu vis à Tokyo, tu codes pour Le Monde Paris, tu vois ta famille à Genève toutes les 6 semaines. C'est ça le futur du remote, et Abbeal m'a juste filé les clés.",
+          "author": "Ingénieur Mobbeal Tokyo, mission Le Monde"
+        },
+        {
+          "type": "h2",
+          "content": "Comment postuler"
+        },
+        {
+          "type": "p",
+          "content": "Si tu te reconnais dans ce qu'on raconte, la suite est simple. Tu prends 30 minutes sur le Calendly de l'équipe Mobbeal pour un premier call, ou tu nous écris directement avec ton CV et un mot sur ton projet Japon. On te répond sous 48h ouvrées, sans copier-coller, par un humain qui a lu ton message."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Calendly Mobbeal Tokyo : https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+            "Email recrutement : recrutement@abbeal.com",
+            "Bureau Tokyo : PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044"
+          ]
+        }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "content": "Tokyo on your mind? You're wondering if the Japan move is doable without burning your career, losing your family along the way, or drowning in six months of opaque paperwork? Good news: that's exactly the question we've been answering since 2018 with the Mobbeal programme. Our Tokyo hub sits at PMC Building, 1-23-5 Higashi-Azabu, Minato-ku, and we've already relocated 50+ international engineers to Tokyo, Montreal and beyond. The point is not to sell you a glossy Japan dream. The point is to keep you on your Abbeal team, on serious tech missions, but drop you off at Narita with a visa, an apartment, a school for the kids, and an onboarding that actually works."
+        },
+        {
+          "type": "h2",
+          "content": "Why Tokyo in 2026, and why Abbeal"
+        },
+        {
+          "type": "p",
+          "content": "Tokyo in 2026 is no longer the story it was ten years ago. The yen remains accessible for engineers paid in euros, dollars, or Swiss francs. The local tech scene has opened up to foreign engineers: Money Forward, Rakuten, Mercari, LINE, plus the major French and European groups building their tech offices in Tokyo. The talent market is tight, and traditional Japanese ESNs struggle to deliver. That's exactly where Abbeal plays."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Quality of life: the safest large city in the world, public transport that just works, food beyond compare, real nature 40 minutes from Shibuya.",
+            "Mature tech scene: Databricks, AWS Tokyo, GCP Tokyo region, very active Python, Go and Rust communities.",
+            "Salaries aligned with European levels for our engineers — you stay on the Abbeal grid, no local Japanese discount.",
+            "Market reality: our Tokyo clients want bilingual English engineers who ship, not tourists chasing cherry blossoms."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Mobbeal: what we actually take care of"
+        },
+        {
+          "type": "p",
+          "content": "Mobbeal is not a marketing promise. It's an operational programme refined over years, with JETRO, Business France and La French Tech Tokyo as partners. Here's what we cover when you sign."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Engineer / Specialist in Humanities visa: we build the file, we work with a specialised immigration lawyer, average lead time 6 to 10 weeks.",
+            "Temporary housing on arrival (3 to 6 weeks), then long-term lease — we sign in our name and handle the hosho-nin (guarantor), which blocks 90% of foreigners trying to rent in Tokyo.",
+            "Family allowance: if your partner follows, we handle the dependent visa and help them find work or a language school.",
+            "International schools for kids: Lycee Francais International de Tokyo, British School, ASIJ — we have direct contacts and help you with admissions.",
+            "JETRO and Business France integration: networking, tax masterclasses, French and English-speaking community in Tokyo."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "The missions you can actually land on"
+        },
+        {
+          "type": "p",
+          "content": "We don't drop you on a random client just because we have an empty seat. Here are three real examples of missions currently staffed by Abbeal engineers in Tokyo."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Money Forward: Data Engineering on their greenfield digital bank. Stack Databricks, AWS Tokyo, dbt. Hybrid mode with their Tamachi office. Ideal if you love building a data warehouse from scratch in a scaling fintech.",
+            "Le Monde: engineer embedded with the Insights team from Tokyo, fully remote on Paris. Stack vanilla JS, Go, PHP, and Codex for AI-assisted code reviews. Two-week sprints, daily Paris-Tokyo in mid-afternoon JST.",
+            "Cartier: private LLM in-house for the watchmaker. GCP, Python, mixed team between Cartier Switzerland and the Japan team. Heavy stakes around confidentiality and data pipeline quality.",
+            "And other clients depending on your profile: we regularly staff SRE, Go/Rust backend, React/Next frontend and applied AI roles."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "We know the Tokyo learning curve well: you land, struggle with hiragana for three months, doubt yourself around month six, and by month twelve you hold a real conversation at the izakaya. Marie Nuellas, an Abbeal Tokyo engineer, documented her JLPT N2 journey through Anki, WaniKani and Bunpro in an article we proudly relay. Abbeal pays for your private Japanese lessons — we treat it as an investment, not a perk."
+        },
+        {
+          "type": "h2",
+          "content": "The profile we're looking for"
+        },
+        {
+          "type": "p",
+          "content": "We're looking for serious engineers, not adventurers. Tokyo is not a two-year city break. The profiles who thrive with us share a few common traits."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "5+ years of solid tech experience on your main stack (data, backend, frontend, SRE, ML).",
+            "Fluent English, written and spoken — it's your daily working language with clients and teammates.",
+            "Genuine Japan motivation: you've travelled there, you read about the culture, you know it's not Paris with a temple bonus.",
+            "JLPT N5 or N4 welcome but not required at the start. We help you level up once you're on the ground.",
+            "Ability to work autonomously: we run on Adaptive Follow-the-Sun, your manager may sit in Paris or Montreal."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "The process: from first call to landing at Narita"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "30-minute screening call with the Mobbeal team to validate motivation and stack.",
+            "Tech interview with one of our staff engineers — pair coding or system design depending on your profile.",
+            "Client presentation: we prep you, brief you on the team, you meet the client manager.",
+            "Abbeal Tokyo offer signed — package, arrival date, family contingencies all aligned.",
+            "Visa filing and relocation prep (6 to 10 weeks).",
+            "Arrival at Narita, welcome by the Tokyo team, settlement and first steps at the PMC Building in Higashi-Azabu, around 3 months after the offer."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Living in Tokyo: what we wish we'd told you before you packed"
+        },
+        {
+          "type": "p",
+          "content": "A few field truths we share with every Mobbeal arrival. Not Lonely Planet — just the lived experience of engineers who actually live there."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Housing: Higashi-Azabu for a 5-minute walk to the office. Setagaya for quiet family life. Shibuya/Ebisu for English-speaking social life. Nakameguro for the aesthetic.",
+            "Transport: forget the JR Pass (tourists only). Get a Suica card and a monthly pass on your main line. The metro stops around midnight — budget for an Uber or taxi for late nights.",
+            "Food: you'll eat better for 1200 yen in a neighbourhood teishoku than in 90% of French restaurants. Learn 'osusume wa nan desu ka' and let the chef guide you.",
+            "Social life: the French and English-speaking tech community is dense. Python Tokyo meetups, Tokyo Dev, French Tech, expat aperos. You will never be alone.",
+            "Family: Tokyo is incredibly kid-friendly. Parks everywhere, safe metros, solid international schools. The partners who thrive are the ones who build their own project — language school, remote freelance, community work."
+          ]
+        },
+        {
+          "type": "quote",
+          "content": "You live in Tokyo, you code for Le Monde Paris, you see your family in Geneva every 6 weeks. That's the future of remote, and Abbeal just handed me the keys.",
+          "author": "Mobbeal Tokyo engineer, Le Monde mission"
+        },
+        {
+          "type": "h2",
+          "content": "How to apply"
+        },
+        {
+          "type": "p",
+          "content": "If you recognise yourself in any of this, what comes next is simple. Take 30 minutes on the Mobbeal team Calendly for a first call, or write to us directly with your CV and a few lines on your Japan project. We reply within 48 working hours, no copy-paste, by an actual human who read your message."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Mobbeal Tokyo Calendly: https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+            "Recruitment email: recrutement@abbeal.com",
+            "Tokyo office: PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044"
+          ]
+        }
+      ],
+      "ja": [
+        {
+          "type": "p",
+          "content": "東京で働くことに興味がありますか。キャリアを犠牲にせず、家族と離れず、半年にわたる不透明な手続きに埋もれずに日本へ移住できるのか、と疑問に思っていませんか。良い知らせがあります。それこそが、Abbealが2018年からMobbealプログラムを通じて答え続けてきた問いです。東京拠点は港区東麻布1-23-5 PMCビルにあり、これまで50名以上の海外エンジニアを東京、モントリオール、その他の都市へ移住させてきました。きらびやかな日本の夢を売るつもりはありません。Abbealのチームに残ったまま、本格的な技術案件に従事し、ビザ、住居、お子さまの学校、そして実際に機能するオンボーディングとともに成田に降り立っていただく、それが目的です。"
+        },
+        {
+          "type": "h2",
+          "content": "なぜ2026年の東京で、なぜAbbealなのか"
+        },
+        {
+          "type": "p",
+          "content": "2026年の東京は、10年前とはまったく別の物語です。ユーロ、ドル、スイスフランで給与を受け取るエンジニアにとって、円は依然として手の届く水準にあります。ローカルのテックシーンも海外エンジニアに開かれました。マネーフォワード、楽天、メルカリ、LINE、さらにフランスや欧州の主要グループも東京にテック拠点を構えています。人材市場は逼迫しており、従来型の国内SIerは納品に苦労しています。Abbealはまさにそこで力を発揮します。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "生活の質：世界で最も安全な大都市、機能する公共交通、比類なき食文化、渋谷から40分で本物の自然へ。",
+            "成熟したテックシーン：Databricks、AWS東京、GCP東京リージョン、活発なPython、Go、Rustコミュニティ。",
+            "給与水準は欧州基準でAbbealのグリッドを維持します。日本ローカル価格への割引はありません。",
+            "市場の現実：東京のクライアントが求めているのは、納品できるバイリンガル英語エンジニアであり、桜を追う観光客ではありません。"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Mobbealが具体的に引き受けること"
+        },
+        {
+          "type": "p",
+          "content": "Mobbealはマーケティング上の約束ではありません。JETRO、ビジネスフランス、La French Tech Tokyoをパートナーに、長年磨き上げてきた運用プログラムです。契約後にカバーする内容は以下のとおりです。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "エンジニア／人文知識・国際業務ビザ：書類作成、専門の入管弁護士との連携、平均リードタイム6から10週間。",
+            "到着時の一時住居（3から6週間）、その後の長期賃貸契約。Abbeal名義で契約し、外国人の賃貸を阻む保証人問題も当社が担当します。",
+            "家族手当：配偶者が同行する場合、家族滞在ビザの申請と、就労または日本語学校探しを支援します。",
+            "お子さま向けインターナショナルスクール：東京国際フランス学園、ブリティッシュスクール、ASIJなど直接の窓口があり、入学手続きをサポートします。",
+            "JETROおよびビジネスフランスとの連携：ネットワーキング、税務マスタークラス、東京のフランス語圏・英語圏コミュニティ。"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "実際にアサイン可能なミッション"
+        },
+        {
+          "type": "p",
+          "content": "席が空いているからといって任意のクライアントに送り込むことはありません。現在Abbealのエンジニアが東京で従事している実例を3件ご紹介します。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "マネーフォワード：グリーンフィールドのデジタルバンク向けデータエンジニアリング。Databricks、AWS東京、dbt。田町オフィスでのハイブリッド勤務。スケーリング中のフィンテックでデータウェアハウスをゼロから構築したい方に最適です。",
+            "ル・モンド：東京から完全リモートで、パリのInsightsチームに参加するエンジニア。Vanilla JS、Go、PHP、AI支援コードレビュー用Codex。2週間スプリント、日本時間の午後にパリ・東京デイリー。",
+            "カルティエ：高級時計メゾンの社内専用LLM。GCP、Python、カルティエスイス本部と日本チームの混成。機密性とデータパイプライン品質に高い要件。",
+            "プロフィールに応じてその他のクライアントへもアサイン：SRE、Go/Rustバックエンド、React/Nextフロントエンド、応用AIなど常時募集中。"
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "東京で日本語を学ぶ道のりは私たちもよく理解しています。最初の3か月はひらがなと格闘し、6か月目に自信を失い、12か月後には居酒屋で本物の会話ができるようになる。Abbeal東京のエンジニア、マリー・ヌエラスは、Anki、WaniKani、BunproによるJLPT N2合格までの道のりを記事にまとめました。Abbealは個人レッスン代を全額負担します。福利厚生ではなく、投資として位置づけています。"
+        },
+        {
+          "type": "h2",
+          "content": "求める人物像"
+        },
+        {
+          "type": "p",
+          "content": "求めているのは本気のエンジニアであり、冒険者ではありません。東京は2年間の長期休暇ではありません。当社で活躍する方々には共通の特徴があります。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "メイン技術スタック（データ、バックエンド、フロントエンド、SRE、ML）で5年以上の確かな経験。",
+            "口頭・文書ともに流暢な英語。クライアントとチームの日常業務言語です。",
+            "本物の日本への動機：すでに来日経験があり、文化に関する読書を欠かさず、ここがエキゾチックなパリではないと理解している方。",
+            "JLPT N5またはN4は歓迎しますが、開始時点では必須ではありません。現地でのレベルアップを支援します。",
+            "自律的に働く力：当社はAdaptive Follow-the-Sun体制で、マネージャーがパリやモントリオールにいる場合があります。"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "プロセス：初回コールから成田到着まで"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Mobbealチームによる30分のスクリーニングコールで動機とスタックを確認。",
+            "当社スタッフエンジニアによる技術面接。プロフィールに応じてペアコーディングまたはシステムデザイン。",
+            "クライアントへのプレゼンテーション。事前準備、チームブリーフィング、クライアントマネージャーとの面談。",
+            "Abbeal Tokyoとのオファー締結。パッケージ、着任日、家族関連の調整事項を確定。",
+            "ビザ申請と引っ越し準備（6から10週間）。",
+            "成田到着、東京チームによる出迎え、東麻布PMCビルでの初日。オファーから約3か月後。"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "東京での暮らし：出発前に伝えておきたかったこと"
+        },
+        {
+          "type": "p",
+          "content": "Mobbealで来日される全員に共有している現場の知見です。ガイドブックではなく、実際に東京で暮らすエンジニアの肉声です。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "住居：オフィスまで徒歩5分の東麻布、家族向けの落ち着いた世田谷、英語圏ソーシャルライフの渋谷／恵比寿、洗練された雰囲気の中目黒。",
+            "交通：JRパスは観光客向けなので不要です。Suicaと主要路線の定期券を取得してください。地下鉄は深夜0時頃に終了するため、深夜帯はUberかタクシーを想定してください。",
+            "食事：街角の定食屋で1200円あれば、フランスの90％のレストランより満足できる食事ができます。「おすすめは何ですか」を覚えて店主に任せてみてください。",
+            "ソーシャルライフ：フランス語圏・英語圏のテックコミュニティは厚みがあります。Python Tokyo、Tokyo Dev、French Tech、駐在員アペロなど。一人になることはありません。",
+            "家族：東京は驚くほど子どもに優しい街です。公園、安全な地下鉄、強固なインターナショナルスクール。配偶者が充実されるのは、語学学校、リモートフリーランス、コミュニティ活動など、現地でのプロジェクトを持つ方々です。"
+          ]
+        },
+        {
+          "type": "quote",
+          "content": "東京に住み、パリのル・モンドのためにコードを書き、6週間に一度ジュネーブの家族に会う。これがリモートワークの未来であり、Abbealはその鍵を渡してくれただけでした。",
+          "author": "Mobbeal東京エンジニア、ル・モンド案件"
+        },
+        {
+          "type": "h2",
+          "content": "応募方法"
+        },
+        {
+          "type": "p",
+          "content": "ここまで読んでご自身に当てはまると感じた方は、次のステップは簡単です。Mobbealチームの30分Calendlyで初回コールをご予約いただくか、CVと日本プロジェクトについての一言を添えて直接ご連絡ください。営業日48時間以内に、コピペではなく、メッセージを実際に読んだ人間から返信いたします。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Mobbeal東京 Calendly：https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+            "採用メール：recrutement@abbeal.com",
+            "東京オフィス：港区東麻布1-23-5 PMCビル 106-0044"
+          ]
+        }
+      ],
+      "fr-ca": [
+        {
+          "type": "p",
+          "content": "Tokyo te tente ? Tu te demandes si l'aventure Japon est faisable sans flusher ta carrière, sans perdre ta famille en chemin, sans te taper six mois de paperasse opaque ? Bonne nouvelle : c'est exactement la question à laquelle on répond depuis 2018 avec le programme Mobbeal. Notre hub Tokyo est ouvert au PMC Building, 1-23-5 Higashi-Azabu, Minato-ku, et on a déjà relocalisé plus de 50 ingénieurs internationaux à Tokyo, Montréal et ailleurs. L'idée n'est pas de te vendre du rêve nippon en marketing slide. L'idée est de te garder dans ton équipe Abbeal, sur des mandats tech sérieux, mais en te déposant à Narita avec un visa, un appart, une école pour les flos, et un onboarding au cordeau."
+        },
+        {
+          "type": "h2",
+          "content": "Pourquoi Tokyo en 2026, et pourquoi Abbeal"
+        },
+        {
+          "type": "p",
+          "content": "Tokyo en 2026, c'est plus la même histoire qu'il y a dix ans. Le yen reste accessible pour les profils payés en dollars canadiens, en euros ou en francs suisses. La scène tech locale s'est ouverte aux ingénieurs étrangers : Money Forward, Rakuten, Mercari, LINE, sans parler des grands groupes français qui montent leur tech à Tokyo. Le marché est tendu côté talent, et les ESN japonaises classiques peinent à livrer. C'est précisément là où Abbeal joue."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Qualité de vie : la grande ville la plus sécuritaire au monde, transports publics qui marchent, bouffe au-dessus de tout, nature à 40 minutes de Shibuya.",
+            "Scène tech mature : Databricks, AWS Tokyo, GCP Tokyo region, communautés Python, Go et Rust très actives.",
+            "Salaires alignés sur les standards canadiens et européens pour nos ingénieurs — tu restes sur la grille Abbeal, pas de rabais local japonais.",
+            "Marché : nos clients Tokyo cherchent des ingés bilingues anglais qui livrent, pas des touristes qui veulent voir les cerisiers."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Mobbeal : ce qu'on prend en charge concrètement"
+        },
+        {
+          "type": "p",
+          "content": "Mobbeal, c'est pas une promesse marketing. C'est un dispositif opérationnel rodé, partenaire JETRO, Business France et La French Tech Tokyo. Voilà ce qu'on couvre quand tu signes."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Visa Engineer / Specialist in Humanities : on monte le dossier, on travaille avec un avocat immigration spécialisé, délai moyen 6 à 10 semaines.",
+            "Logement temporaire à l'arrivée (3 à 6 semaines) puis location longue durée — on signe le bail à notre nom, on gère le hosho-nin (garant) qui bloque 90 % des étrangers.",
+            "Allocation famille : si ton conjoint te suit, on gère son visa dépendant et on l'aide à trouver une job ou une école de langue.",
+            "Écoles internationales pour les enfants : Lycée Français International de Tokyo, British School, ASIJ — on a des contacts directs et on t'aide à monter les dossiers d'inscription.",
+            "Intégration JETRO et Business France : networking, masterclasses fiscalité, communauté francophone et anglophone de Tokyo."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Les mandats sur lesquels tu peux atterrir"
+        },
+        {
+          "type": "p",
+          "content": "On te parachute pas chez n'importe quel client juste parce qu'on a un siège vide. Voici trois exemples réels de mandats actuellement staffés par des ingés Abbeal à Tokyo."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Money Forward : Data Engineering sur leur banque digitale greenfield. Stack Databricks, AWS Tokyo, dbt. Mode hybride avec leurs bureaux à Tamachi. Idéal si tu trippes à construire un data warehouse from scratch dans une fintech qui scale.",
+            "Le Monde : ingénieur intégré à la team Insights depuis Tokyo, en remote complet sur Paris. Stack JS vanilla, Go, PHP, et Codex pour les code reviews assistées IA. Sprints 2 semaines, daily Paris-Tokyo en milieu d'aprem JST.",
+            "Cartier : LLM privé en interne pour la maison horlogère. GCP, Python, équipe mixte Cartier Suisse + équipe Japon. Beaucoup d'enjeux confidentialité et qualité du data pipeline.",
+            "Et d'autres clients selon ton profil : on staffe régulièrement sur du SRE, du backend Go/Rust, du frontend React/Next, et de l'IA appliquée."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "La courbe de Tokyo, on la connaît bien : tu débarques, tu galères trois mois sur les hiragana, tu doutes au sixième mois, et au bout d'un an tu tiens une vraie conversation au izakaya. Marie Nuellas, ingé Abbeal Tokyo, a documenté son parcours JLPT N2 via Anki, WaniKani et Bunpro dans un article qu'on relaie avec fierté. Abbeal te paie les cours particuliers de japonais — c'est un investissement, pas un avantage en nature."
+        },
+        {
+          "type": "h2",
+          "content": "Le profil qu'on cherche"
+        },
+        {
+          "type": "p",
+          "content": "On cherche des ingés sérieux, pas des aventuriers. Tokyo, c'est pas un city break de deux ans. Les profils qui réussissent chez nous partagent quelques traits communs."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "5+ ans d'expérience tech solide sur ta stack principale (data, backend, frontend, SRE, ML).",
+            "Anglais courant à l'oral et à l'écrit — c'est ta langue de travail quotidienne avec les clients et l'équipe.",
+            "Vraie motivation Japon : tu as déjà voyagé là-bas, tu lis sur la culture, tu sais que c'est pas Montréal en plus exotique.",
+            "JLPT N5 ou N4 bienvenu mais pas obligatoire au démarrage. On t'aide à monter en niveau sur place.",
+            "Capacité à bosser en autonomie : on est en Adaptive Follow-the-Sun, ton manager peut être à Paris ou à Montréal."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Le process : du premier call à l'arrivée à Narita"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Call screening 30 minutes avec l'équipe Mobbeal pour valider la motivation et la stack.",
+            "Tech interview avec un de nos staff engineers — pair coding ou system design selon ton profil.",
+            "Présentation client : on te prépare, on te briefe sur l'équipe, tu rencontres le manager côté client.",
+            "Offre Abbeal Tokyo signée — on cale le package, la date d'arrivée, les éventuels imprévus famille.",
+            "Montage visa et préparation déménagement (6 à 10 semaines).",
+            "Arrivée à Narita, accueil par l'équipe Tokyo, installation et premiers pas au PMC Building Higashi-Azabu, environ 3 mois après l'offre."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Vivre à Tokyo : ce qu'on aimerait t'avoir dit avant de partir"
+        },
+        {
+          "type": "p",
+          "content": "Voici quelques vérités terrain qu'on partage avec tous les arrivants Mobbeal. Pas du Lonely Planet, juste du retour d'expérience d'ingés qui y vivent."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Logement : Higashi-Azabu pour être à 5 minutes du bureau. Setagaya pour la vie de famille au calme. Shibuya/Ebisu pour la vie sociale anglophone, Nakameguro pour l'esthétique.",
+            "Transport : oublie le JR Pass (réservé aux touristes). Prends une carte Suica et abonne-toi sur ta ligne principale. Le métro arrête vers minuit, prévois un Uber ou un taxi pour les fins de soirée.",
+            "Food : tu vas manger mieux pour 1200 yens dans un teishoku de quartier que dans 90 % des restaus québécois. Apprends 'osusume wa nan desu ka' et laisse-toi guider.",
+            "Vie sociale : la communauté tech française et anglophone est dense. Meetups Python Tokyo, Tokyo Dev, French Tech, apéros expat. Tu vas jamais te sentir seul.",
+            "Famille : Tokyo est une ville incroyablement enfants-friendly. Parcs partout, métros sécuritaires, écoles internationales solides. Les conjoints qui s'épanouissent sont ceux qui se créent un projet sur place — école de japonais, freelance remote, asso."
+          ]
+        },
+        {
+          "type": "quote",
+          "content": "Tu vis à Tokyo, tu codes pour Le Monde Paris, tu vois ta famille à Montréal toutes les 6 semaines. C'est ça le futur du remote, et Abbeal m'a juste filé les clés.",
+          "author": "Ingénieur Mobbeal Tokyo, mandat Le Monde"
+        },
+        {
+          "type": "h2",
+          "content": "Comment postuler"
+        },
+        {
+          "type": "p",
+          "content": "Si tu te reconnais dans ce qu'on raconte, la suite est simple. Tu prends 30 minutes sur le Calendly de l'équipe Mobbeal pour un premier call, ou tu nous écris directement avec ton CV et un mot sur ton projet Japon. On te répond sous 48h ouvrables, sans copier-coller, par un humain qui a lu ton message."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Calendly Mobbeal Tokyo : https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+            "Courriel recrutement : recrutement@abbeal.com",
+            "Bureau Tokyo : PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044"
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "question": "Je parle pas japonais, je peux quand même venir ?",
+          "answer": "Oui, et c'est même le cas de la majorité des ingés Mobbeal qui débarquent à Tokyo. Les missions chez Money Forward, Le Monde ou Cartier se tiennent en anglais, et nos équipes internes aussi. Cela dit, on te paie des cours particuliers de japonais dès ton arrivée parce qu'on sait que la qualité de vie sur 3 ans dépend largement de ta capacité à interagir au izakaya, chez le médecin ou à l'école de tes enfants. Beaucoup d'ingés visent le JLPT N4 à 18 mois et le N3 à 3 ans."
+        },
+        {
+          "question": "Quel salaire je peux espérer à Tokyo ?",
+          "answer": "On reste sur la grille Abbeal européenne, indexée sur ton expérience et ta stack. Pas de discount local, pas de réajustement à la baisse parce que tu vis à Tokyo. À ça s'ajoute l'allocation logement Mobbeal les 3 à 6 premières semaines, la prise en charge des frais de relocation, et les avantages liés au coût de la vie tokyoïte (qui reste plus accessible que Paris ou Genève sur le quotidien). On chiffre tout précisément dès le 2e call."
+        },
+        {
+          "question": "Comment ça se passe pour ma famille (conjoint, enfants, école) ?",
+          "answer": "Mobbeal est un programme famille avant d'être un programme ingé. On gère le visa dépendant pour ton conjoint, on l'aide à trouver un job remote ou une école de japonais s'il veut se réorienter. Pour les enfants, on a des contacts directs au Lycée Français International de Tokyo, à la British School et à ASIJ. On t'aide à monter les dossiers d'inscription, on te prévient des deadlines, et on te connecte avec d'autres familles Mobbeal déjà sur place."
+        },
+        {
+          "question": "Combien de temps entre l'offre et l'arrivée à Tokyo ?",
+          "answer": "Compte 3 mois en moyenne. Le visa Engineer / Specialist in Humanities prend 6 à 10 semaines selon la complétude du dossier. En parallèle on cale le logement temporaire à Higashi-Azabu, l'inscription des enfants si nécessaire, et on coordonne avec ton client. Si tu as une contrainte forte (rentrée scolaire, fin de bail), on essaie d'accélérer ou de décaler en fonction."
+        },
+        {
+          "question": "Et si après 1 an je veux rentrer ?",
+          "answer": "Pas de drame. Le programme Mobbeal n'est pas un contrat à 5 ans avec clause de pénalité. Si après 1 an tu veux rentrer à Paris, Montréal ou ailleurs, on te repositionne sur une mission Abbeal dans la géo de ton choix. C'est arrivé deux ou trois fois, et à chaque fois on a trouvé une suite. La seule chose qu'on demande, c'est que tu nous préviennes 3 mois en avance pour qu'on puisse organiser proprement la transition côté client."
+        },
+        {
+          "question": "Est-ce que je peux venir voir Tokyo avant de signer ?",
+          "answer": "Oui, et on encourage carrément. On organise des semaines découverte pour les profils en fin de process : tu viens 5 à 7 jours, tu rencontres l'équipe au PMC Building Higashi-Azabu, tu visites les quartiers où tu pourrais habiter, et tu rencontres physiquement le client. Abbeal prend en charge le vol et l'hébergement. C'est le meilleur investissement qu'on fasse pour s'assurer que la décision est prise les yeux ouverts."
+        }
+      ],
+      "en": [
+        {
+          "question": "I don't speak Japanese — can I still come?",
+          "answer": "Yes, and that's the case for most Mobbeal engineers landing in Tokyo. Missions at Money Forward, Le Monde or Cartier run in English, and so do our internal teams. That said, we pay for private Japanese lessons from day one because we know that quality of life over 3 years depends heavily on being able to interact at the izakaya, at the doctor's, or at your kids' school. Many engineers target JLPT N4 at 18 months and N3 at 3 years."
+        },
+        {
+          "question": "What salary can I expect in Tokyo?",
+          "answer": "You stay on the European Abbeal grid, indexed to your experience and stack. No local discount, no downward adjustment because you live in Tokyo. On top of that you get the Mobbeal housing allowance for the first 3 to 6 weeks, full relocation cost coverage, and the cost-of-living advantage of Tokyo (which on daily expenses remains more accessible than Paris or Geneva). We give you the precise numbers from the second call."
+        },
+        {
+          "question": "How does it work for my family (partner, kids, school)?",
+          "answer": "Mobbeal is a family programme before it's an engineer programme. We handle your partner's dependent visa and help them find remote work or a Japanese language school if they want to pivot. For the kids, we have direct contacts at the Lycee Francais International de Tokyo, British School and ASIJ. We help with admissions files, flag the deadlines, and connect you with other Mobbeal families already on the ground."
+        },
+        {
+          "question": "How long between the offer and arrival in Tokyo?",
+          "answer": "Roughly 3 months on average. The Engineer / Specialist in Humanities visa takes 6 to 10 weeks depending on file completeness. In parallel we secure your temporary housing in Higashi-Azabu, kids' school enrolment if needed, and coordinate with your client. If you have a hard constraint (school year, lease end), we try to accelerate or delay accordingly."
+        },
+        {
+          "question": "What if after 1 year I want to go home?",
+          "answer": "No drama. The Mobbeal programme is not a 5-year lock-in with a penalty clause. If after a year you want to head back to Paris, Montreal or elsewhere, we reposition you on an Abbeal mission in the geography of your choice. It's happened a couple of times, and we've always found a next chapter. The only ask is that you give us 3 months' notice so we can organise a clean transition with the client."
+        },
+        {
+          "question": "Can I visit Tokyo before signing?",
+          "answer": "Yes, and we strongly encourage it. We organise discovery weeks for profiles at the end of the process: you come for 5 to 7 days, meet the team at the PMC Building in Higashi-Azabu, visit neighbourhoods where you could live, and meet the client in person. Abbeal covers flights and accommodation. It's the single best investment we make to ensure the decision is taken with eyes wide open."
+        }
+      ],
+      "ja": [
+        {
+          "question": "日本語が話せませんが、それでも応募できますか。",
+          "answer": "はい、可能です。実際、東京に着任するMobbealエンジニアの大半が同じ状況です。マネーフォワード、ル・モンド、カルティエでの案件は英語ベースで進行し、社内チームも同様です。とはいえ、3年単位での生活の質は、居酒屋、病院、お子さまの学校での日常会話力に大きく依存するため、Abbealは到着初日から個人レッスンの費用を負担します。多くのエンジニアが18か月でJLPT N4、3年でN3を目標に設定しています。"
+        },
+        {
+          "question": "東京での想定年収はどの程度ですか。",
+          "answer": "経験とスタックに連動した欧州Abbealグリッドを維持します。ローカル割引や、東京在住を理由とした下方修正はありません。これに加えて、最初の3から6週間のMobbeal住居手当、引っ越し費用の全額負担、そして東京の生活コストの利点（日常支出はパリやジュネーブより手頃）が加わります。詳細な金額は2回目の面談から具体的にお伝えします。"
+        },
+        {
+          "question": "家族（配偶者、子ども、学校）はどうなりますか。",
+          "answer": "Mobbealはエンジニアのプログラムである前に、家族のプログラムです。配偶者の家族滞在ビザを当社が担当し、リモートワークや日本語学校を希望される場合の探索を支援します。お子さまについては、東京国際フランス学園、ブリティッシュスクール、ASIJに直接の窓口があります。出願書類の作成支援、提出期限のリマインド、現地で生活中の他のMobbealファミリーとの接続を行います。"
+        },
+        {
+          "question": "オファーから東京到着まで、どのくらいかかりますか。",
+          "answer": "平均で約3か月です。エンジニア／人文知識・国際業務ビザは書類の完成度に応じて6から10週間かかります。並行して、東麻布での一時住居の手配、必要に応じてお子さまの学校登録、クライアントとの調整を進めます。学年開始や賃貸契約終了など強い制約がある場合は、可能な範囲で前倒しまたは後ろ倒しを行います。"
+        },
+        {
+          "question": "1年後に帰国したくなった場合はどうなりますか。",
+          "answer": "問題ありません。Mobbealプログラムはペナルティ付きの5年ロックインではありません。1年後にパリ、モントリオール、その他の都市への帰任を希望される場合、ご希望の地域でAbbealの別ミッションへ再配置します。過去にも数件の事例があり、いずれも次のステップを用意できました。唯一のお願いは、クライアント側の引き継ぎを丁寧に行うため、3か月前までにご連絡いただくことです。"
+        },
+        {
+          "question": "契約前に東京を視察することはできますか。",
+          "answer": "はい、強くお勧めします。プロセス終盤の候補者向けにディスカバリーウィークを企画しています。5から7日間来日いただき、東麻布PMCビルでチームと面談、住居候補エリアの視察、クライアントとの直接面談を行います。航空券と宿泊費はAbbealが負担します。意思決定を目を見開いた状態で行っていただくための、最も価値の高い投資と考えています。"
+        }
+      ],
+      "fr-ca": [
+        {
+          "question": "Je parle pas japonais, je peux quand même venir ?",
+          "answer": "Oui, et c'est même le cas de la majorité des ingés Mobbeal qui débarquent à Tokyo. Les mandats chez Money Forward, Le Monde ou Cartier se tiennent en anglais, et nos équipes internes aussi. Cela dit, on te paie des cours particuliers de japonais dès ton arrivée parce qu'on sait que la qualité de vie sur 3 ans dépend largement de ta capacité à interagir au izakaya, chez le médecin ou à l'école de tes enfants. Beaucoup d'ingés visent le JLPT N4 à 18 mois et le N3 à 3 ans."
+        },
+        {
+          "question": "Quel salaire je peux espérer à Tokyo ?",
+          "answer": "On reste sur la grille Abbeal alignée sur les standards canadiens et européens, indexée sur ton expérience et ta stack. Pas de discount local, pas de réajustement à la baisse parce que tu vis à Tokyo. À ça s'ajoute l'allocation logement Mobbeal les 3 à 6 premières semaines, la prise en charge des frais de relocation, et les avantages liés au coût de la vie tokyoïte (qui reste plus accessible que Montréal ou Paris sur le quotidien). On chiffre tout précisément dès le 2e call."
+        },
+        {
+          "question": "Comment ça se passe pour ma famille (conjoint, enfants, école) ?",
+          "answer": "Mobbeal, c'est un programme famille avant d'être un programme ingé. On gère le visa dépendant pour ton conjoint, on l'aide à trouver une job remote ou une école de japonais s'il veut se réorienter. Pour les enfants, on a des contacts directs au Lycée Français International de Tokyo, à la British School et à ASIJ. On t'aide à monter les dossiers d'inscription, on te prévient des deadlines, et on te connecte avec d'autres familles Mobbeal déjà sur place."
+        },
+        {
+          "question": "Combien de temps entre l'offre et l'arrivée à Tokyo ?",
+          "answer": "Compte 3 mois en moyenne. Le visa Engineer / Specialist in Humanities prend 6 à 10 semaines selon la complétude du dossier. En parallèle on cale le logement temporaire à Higashi-Azabu, l'inscription des enfants si nécessaire, et on coordonne avec ton client. Si tu as une contrainte forte (rentrée scolaire, fin de bail), on essaie d'accélérer ou de décaler en fonction."
+        },
+        {
+          "question": "Et si après 1 an je veux rentrer ?",
+          "answer": "Pas de drame. Le programme Mobbeal, c'est pas un contrat à 5 ans avec clause de pénalité. Si après 1 an tu veux rentrer à Montréal, Paris ou ailleurs, on te repositionne sur un mandat Abbeal dans la géo de ton choix. C'est arrivé deux ou trois fois, et à chaque fois on a trouvé une suite. La seule chose qu'on demande, c'est que tu nous préviennes 3 mois en avance pour qu'on puisse organiser proprement la transition côté client."
+        },
+        {
+          "question": "Est-ce que je peux venir voir Tokyo avant de signer ?",
+          "answer": "Oui, et on encourage carrément. On organise des semaines découverte pour les profils en fin de process : tu viens 5 à 7 jours, tu rencontres l'équipe au PMC Building Higashi-Azabu, tu visites les quartiers où tu pourrais habiter, et tu rencontres physiquement le client. Abbeal prend en charge le vol et l'hébergement. C'est le meilleur investissement qu'on fasse pour s'assurer que la décision est prise les yeux ouverts."
+        }
+      ]
+    }
+  }
+}

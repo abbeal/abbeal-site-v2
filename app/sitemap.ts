@@ -5,6 +5,7 @@ import { cases } from "@/lib/cases";
 import { services } from "@/lib/services";
 import { glossary } from "@/lib/glossary";
 import { TECH_RADAR_EDITIONS } from "@/lib/tech-radar";
+import { landingPages } from "@/lib/landing-pages";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
 
@@ -97,6 +98,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: "yearly",
         priority: 0.7,
         alternates: { languages: altLanguages(`/cases/${c.slug}`) },
+      });
+    }
+  }
+
+  // Landing pages SEO non-branded (4 landings × 4 langues = 16 pages).
+  // Issu de l'audit W19 : pages thématiques pour ranker non-branded
+  // sur "follow-the-sun delivery", "tech consulting Tokyo", etc.
+  // Priority haute (0.85) car contenu evergreen + niche unique.
+  for (const lp of landingPages) {
+    for (const locale of locales) {
+      entries.push({
+        url: `${SITE_URL}/${locale}/${lp.slug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: Math.min(1.0, 0.85 + (LOCALE_PRIORITY_WEIGHT[locale] ?? 0)),
+        alternates: { languages: altLanguages(`/${lp.slug}`) },
       });
     }
   }
