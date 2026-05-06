@@ -16,7 +16,7 @@ import { Insights } from "@/components/sections/Insights";
 import { CareersTeaser } from "@/components/sections/CareersTeaser";
 import { CTAFinal } from "@/components/sections/CTAFinal";
 import { getFeaturedArticles, pick } from "@/lib/articles";
-import { getFeaturedCases } from "@/lib/cases";
+import { getHomeFeaturedCases } from "@/lib/cases";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 
 export async function generateMetadata({
@@ -57,7 +57,11 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
     excerpt: pick(a.excerpt, locale),
   }));
 
-  const featuredCases = getFeaturedCases().map((c) => ({
+  // Marquee Stories sur la home : on prend les cases avec featuredOnHome
+  // (4 anonymisés à fort KPI chiffré). Les 5 nommés (Cartier, BNP, Money
+  // Forward, Pichet, Le Monde) restent featured pour /cases listing mais
+  // n'apparaissent pas sur la home (decision Sebastien W19+1).
+  const featuredCases = getHomeFeaturedCases().map((c) => ({
     slug: c.slug,
     kpi: { value: c.kpi.value, label: pick(c.kpi.label, locale) },
     sector: pick(c.sector, locale),

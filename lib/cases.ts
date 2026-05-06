@@ -22,7 +22,20 @@ type Translatable<T> = { fr: T } & Partial<Record<Exclude<Locale, "fr">, T>>;
 
 export type CaseStudy = {
   slug: string;
-  featured: boolean; // 4 cases mises en avant
+  /** True = remonté en haut de /cases listing. Reservé aux 5 cases clients
+   *  nommés iconic (Cartier, BNP, Money Forward, Pichet, Le Monde) — preuve
+   *  sociale sur la page liste. Différent de `featuredOnHome` car la home
+   *  préfère mettre en avant des cases chiffrés/anonymisés (KPI bruts).
+   */
+  featured: boolean;
+  /** True = remonté dans le marquee/Stories de la homepage. Réservé aux
+   *  4 cases anonymisés à fort KPI chiffré (−30 % cloud, +18 % conversion,
+   *  +40 % throughput, ISO 27001 9 mois). Plus discret et plus "preuve
+   *  numérique" que les marques nommées : adapté à la home grand public
+   *  sans nécessiter d'accord client pour la mention. Si non défini :
+   *  fallback sur `featured`.
+   */
+  featuredOnHome?: boolean;
   /** True = exemple sectoriel basé sur notre méthodologie, pas un client
    *  identifié. Affiche un badge "Modèle sectoriel" pour rester honnête
    *  vs un vrai retour d'engagement. À retirer dès que le cas est associé
@@ -320,6 +333,7 @@ export const cases: CaseStudy[] = [
   {
     slug: "money-forward",
     featured: true,
+    featuredOnHome: false,
     clientLogo: "money-forward",
     sector: {
       fr: "Banking digitale / FinTech",
@@ -444,6 +458,7 @@ export const cases: CaseStudy[] = [
   {
     slug: "le-monde",
     featured: true,
+    featuredOnHome: false,
     clientLogo: "le-monde",
     sector: {
       fr: "Média / Presse nationale",
@@ -499,6 +514,7 @@ export const cases: CaseStudy[] = [
   {
     slug: "bnp",
     featured: true,
+    featuredOnHome: false,
     clientLogo: "bnp",
     sector: {
       fr: "Banque tier-1",
@@ -553,6 +569,7 @@ export const cases: CaseStudy[] = [
   {
     slug: "pichet",
     featured: true,
+    featuredOnHome: false,
     clientLogo: "pichet",
     sector: {
       fr: "Immobilier / Promotion",
@@ -730,6 +747,7 @@ export const cases: CaseStudy[] = [
   {
     slug: "cartier",
     featured: true,
+    featuredOnHome: false,
     clientLogo: "cartier",
     sector: {
       fr: "Joaillerie & horlogerie de luxe",
@@ -780,6 +798,7 @@ export const cases: CaseStudy[] = [
   {
     slug: "scale-up-mobilite-30-cloud",
     featured: false,
+    featuredOnHome: true,
     sector: { fr: "Mobilité urbaine", en: "Urban mobility", ja: "都市モビリティ", "fr-ca": "Mobilité urbaine" },
     geo: "Paris + Montréal",
     duration: "9 mois",
@@ -806,6 +825,7 @@ export const cases: CaseStudy[] = [
   {
     slug: "leader-sport-pwa-conversion",
     featured: false,
+    featuredOnHome: true,
     sector: { fr: "E-commerce sport", en: "Sports e-commerce", ja: "スポーツEC", "fr-ca": "Commerce électronique sport" },
     geo: "Paris",
     duration: "6 mois",
@@ -832,6 +852,7 @@ export const cases: CaseStudy[] = [
   {
     slug: "robotique-jp-ros2-flotte",
     featured: false,
+    featuredOnHome: true,
     sector: { fr: "Robotique industrielle", en: "Industrial robotics", ja: "産業ロボティクス", "fr-ca": "Robotique industrielle" },
     geo: "Tokyo",
     duration: "14 mois",
@@ -858,6 +879,7 @@ export const cases: CaseStudy[] = [
   {
     slug: "fintech-iso27001-devsecops",
     featured: false,
+    featuredOnHome: true,
     sector: { fr: "FinTech SaaS", en: "FinTech SaaS", ja: "FinTech SaaS", "fr-ca": "FinTech SaaS" },
     geo: "Tri-geo",
     duration: "11 mois",
@@ -1089,6 +1111,14 @@ export function getCase(slug: string): CaseStudy | undefined {
 
 export function getFeaturedCases(): CaseStudy[] {
   return cases.filter((c) => c.featured);
+}
+
+/** Cases mises en avant sur la HOMEPAGE (marquee Stories).
+ *  Différent de `getFeaturedCases()` qui sert le listing /cases.
+ *  Si `featuredOnHome` n'est pas défini sur un case, fallback sur `featured`.
+ */
+export function getHomeFeaturedCases(): CaseStudy[] {
+  return cases.filter((c) => c.featuredOnHome ?? c.featured);
 }
 
 export function getAllCases(): CaseStudy[] {
