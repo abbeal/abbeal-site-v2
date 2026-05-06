@@ -4,8 +4,10 @@ import { getDictionary } from "../dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
 import { pageAlternates } from "@/lib/seo";
 import { generateJobPostings } from "@/lib/jobPosting";
+import { breadcrumbs } from "@/lib/breadcrumbs";
 
 type Dict = {
+  nav?: { careers?: string };
   careers: {
     tape: string;
     h1: string;
@@ -56,8 +58,18 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/carrier
     d.applyEmail,
   );
 
+  // BreadcrumbList — audit SEO W19 (manque sur /[lang]/carrieres).
+  // Le label utilise le dict.nav.careers s'il existe, sinon fallback FR.
+  const crumbs = breadcrumbs(locale, [
+    [dict.nav?.careers ?? d.h1, "/carrieres"],
+  ]);
+
   return (
     <section className="mx-auto max-w-[1200px] px-6 md:px-10 py-20 md:py-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
+      />
       {jobPostings.map((jp, i) => (
         <script
           // eslint-disable-next-line react/no-array-index-key

@@ -73,12 +73,12 @@ export const articles: Article[] = [
     publishedAt: "2026-04-12",
     title: {
       fr: "Agents IA en production : éviter le théâtre de démo.",
-      en: "AI agents in production: avoiding the demo theatre.",
+      en: "7 patterns for AI agents in production (no demo theater).",
       ja: "本番のAIエージェント：デモ劇場を避ける。",
     },
     excerpt: {
       fr: "Fiabilité, coûts, sécurité, évaluation. Sept patterns qu'on utilise vraiment chez nos clients.",
-      en: "Reliability, cost, security, evaluation. Seven patterns we actually use with our clients.",
+      en: "Real-world patterns from RAG, agents and MLOps deployments. Senior teams shipping AI from POC to prod across Paris, Montréal, Tokyo.",
       ja: "信頼性、コスト、セキュリティ、評価。クライアントで実際に使う7つのパターン。",
     },
     body: {
@@ -122,12 +122,12 @@ export const articles: Article[] = [
     title: {
       fr: "Tech Radar 2026 : pourquoi Rust et ROS 2 dominent.",
       en: "Tech Radar 2026: why Rust and ROS 2 dominate.",
-      ja: "Tech Radar 2026：なぜRustとROS 2が支配するか。",
+      ja: "Tech Radar 2026：AdoptからHoldまで、現場視点の技術評価。",
     },
     excerpt: {
       fr: "Critères, retours d'expérience, trade-offs. Ce qu'on adopte vraiment vs ce qu'on évalue.",
       en: "Criteria, field reports, trade-offs. What we actually adopt vs what we assess.",
-      ja: "基準、現場レポート、トレードオフ。実際にAdoptするものとAssessするもの。",
+      ja: "Rust、ROS 2、LLM Agentsなど、Abbealのシニアエンジニアが2026年に推す技術と外す技術。adopt/trial/assess/holdの基準も。",
     },
     body: {
       fr: ARTICLE_BODIES["tech-radar-2026"]?.fr ?? [],
@@ -217,12 +217,12 @@ export const articles: Article[] = [
     publishedAt: "2026-03-03",
     title: {
       fr: "COBOL n'est pas mort. Les devs qui le maintenaient, oui.",
-      en: "COBOL isn't dead. The devs who maintained it, yes.",
+      en: "COBOL is not dead. The developers are.",
       ja: "COBOLは死んでいない。それを保守していた開発者は、はい。",
     },
     excerpt: {
       fr: "2025, 85 % des grandes entreprises japonaises sur des systèmes critiques sans personne pour les comprendre. Notre offre.",
-      en: "2025, 85% of large Japanese firms running critical systems with nobody who understands them. Our offer.",
+      en: "4M lines, 14 months: how a Japanese bank modernized COBOL with multi-agent AI (Archeologist, Architect, Cleaner). Senior pod, Tokyo + Paris.",
       ja: "2025年、大手日本企業の85%が誰も理解できない基幹システムで動いている。私たちの提案。",
     },
     body: {

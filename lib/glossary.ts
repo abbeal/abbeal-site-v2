@@ -221,12 +221,12 @@ export const glossary: GlossaryEntry[] = [
     term: {
       fr: "Token",
       en: "Token",
-      ja: "トークン（Token）",
+      ja: "トークン（LLM編）：課金の単位、文脈の限界、最適化の鍵",
     },
     short: {
       fr: "Unité de découpage d'un texte pour un LLM (~0.75 mot en EN).",
       en: "Text chunking unit for an LLM (~0.75 word in English).",
-      ja: "LLMがテキストを分割する単位で、英語では約0.75単語に相当します。",
+      ja: "LLMにおけるトークンの定義、コスト計算、コンテキストウィンドウ最適化のベストプラクティス。Tokyo・Paris・Montréalの実装ノウハウ。",
     },
     definition: {
       fr: "Les LLMs facturent à l'input + output tokens. Exemple : 1K tokens GPT-4 = ~750 mots EN = $0.003 à $0.06 selon le modèle. Contexte max : 128K (GPT-4) à 2M (Gemini 1.5). Toujours mesurer avant de scaler.",
@@ -625,12 +625,12 @@ export const glossary: GlossaryEntry[] = [
     term: {
       fr: "DORA metrics",
       en: "DORA metrics",
-      ja: "DORAメトリクス（DORA metrics）",
+      ja: "DORAメトリクス入門：4指標で計測するエンジニアリング生産性",
     },
     short: {
       fr: "4 métriques de performance d'une équipe d'ingénierie (Google SRE).",
       en: "Four engineering team performance metrics (Google SRE).",
-      ja: "エンジニアリングチームのパフォーマンスを測る4つのメトリクス（Google SRE発）です。",
+      ja: "DORAメトリクス（DF, LT, CFR, MTTR）の定義と実装。Tokyo・Paris・Montréalの開発組織が使う指標フレームワーク。",
     },
     definition: {
       fr: "Deployment frequency, Lead time for changes, Change failure rate, Mean time to restore. Classes : Low / Medium / High / Elite. Source : DORA annual report (Accelerate). Indicateur bien plus pertinent que lines of code ou story points.",
@@ -891,12 +891,12 @@ export const glossary: GlossaryEntry[] = [
     term: {
       fr: "Microservices",
       en: "Microservices",
-      ja: "マイクロサービス（Microservices）",
+      ja: "マイクロサービス：定義・利点・落とし穴を実装視点で",
     },
     short: {
       fr: "Architecture découpant une application en services indépendants.",
       en: "Architecture splitting an application into independent services.",
-      ja: "アプリケーションを独立したサービスに分割するアーキテクチャです。",
+      ja: "分散システムの設計から運用まで、マイクロサービスを採用する判断基準。シニアエンジニアの実例で解説。",
     },
     definition: {
       fr: "Chaque service a sa DB, son équipe, son cycle de deploy. Avantages : scale indépendant, poly-tech, résilience. Coût : complexité opérationnelle (observability, data consistency, network). Reco : commencer en monolithe modulaire, découper seulement si l'équipe dépasse 30 devs.",

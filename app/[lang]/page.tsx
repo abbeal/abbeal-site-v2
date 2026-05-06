@@ -17,6 +17,7 @@ import { CareersTeaser } from "@/components/sections/CareersTeaser";
 import { CTAFinal } from "@/components/sections/CTAFinal";
 import { getFeaturedArticles, pick } from "@/lib/articles";
 import { getFeaturedCases } from "@/lib/cases";
+import { breadcrumbs } from "@/lib/breadcrumbs";
 
 export async function generateMetadata({
   params,
@@ -78,11 +79,19 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
     })),
   };
 
+  // BreadcrumbList JSON-LD — single-item "Abbeal" sur la home pour
+  // signal navigation explicite (audit SEO W19 - manque sur /[lang]).
+  const crumbs = breadcrumbs(locale, []);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
       />
       <Hero locale={locale} dict={dict} />
       <KPIs dict={dict} />
