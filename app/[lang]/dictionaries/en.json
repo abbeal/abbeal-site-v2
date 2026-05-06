@@ -1036,6 +1036,13 @@
         "hub": "Americas Hub · Montréal",
         "photo": "sacha.jpg",
         "bio": "Senior Engineer Montréal. Long-term experience on Quebec telecom / media accounts (Cogeco) and cross-Atlantic squads."
+      },
+      {
+        "name": "Xavier Guillot",
+        "role": "Software Engineer",
+        "hub": "EU Hub · Paris",
+        "photo": "xavier.jpg",
+        "bio": "Software Engineer Paris. Embedded squads with our European clients, mix of product delivery and platform foundations."
       }
     ],
     "statsTape": "// Numbers",

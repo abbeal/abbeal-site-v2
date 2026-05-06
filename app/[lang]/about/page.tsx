@@ -85,6 +85,9 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
     "Marie Nuellas": [
       "https://www.linkedin.com/in/marie-n-334406127/",
     ],
+    "Xavier Guillot": [
+      "https://www.linkedin.com/in/xavier-guillot-744164203/",
+    ],
     // TODO_VERIFY · ajouter URL profil LinkedIn directe pour Sacha (URL fournie = recherche)
   };
   const personsLd = [...d.leaders, ...d.team].map((l) => ({

@@ -1018,6 +1018,13 @@
         "hub": "Pôle Amériques · Montréal",
         "photo": "sacha.jpg",
         "bio": "Ingénieur logiciel senior Montréal. Expérience longue durée sur des comptes télécoms / médias québécois (Cogeco) et squads transatlantiques."
+      },
+      {
+        "name": "Xavier Guillot",
+        "role": "Ingénieur logiciel",
+        "hub": "Pôle Europe · Paris",
+        "photo": "xavier.jpg",
+        "bio": "Ingénieur logiciel Paris. Squads embarquées chez nos clients européens, mix livraison produit et fondations techniques."
       }
     ],
     "statsTape": "// Chiffres",
