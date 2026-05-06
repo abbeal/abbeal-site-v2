@@ -16,7 +16,6 @@ type KpiDict = {
    Split into two rows for a depth effect (forward + reverse marquee). */
 const LOGOS_ROW_1 = [
   { slug: "bnp", name: "BNP Paribas" },
-  { slug: "smbc", name: "SMBC" },
   { slug: "kering", name: "Kering" },
   { slug: "axa", name: "AXA" },
   { slug: "societe-generale", name: "Société Générale" },
