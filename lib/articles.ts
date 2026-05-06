@@ -467,6 +467,65 @@ export const articles: Article[] = [
       "fr-ca": ARTICLE_BODIES["apprendre-japonais-tokyo-anki-wanikani-bunpro"]?.["fr-ca"],
     },
   },
+  // Article 17 — Top quartiers Tokyo (lifestyle, par Sébastien Lonjon CEO).
+  // Article lifestyle pour humaniser la marque Abbeal/Mobbeal cote CEO :
+  // Sebastien partage ses 4 quartiers favoris (Koenji, Shimokitazawa,
+  // Kichijoji, Daikanyama) + un n°1 secret (Jiyugaoka) sur demande.
+  // CTA Calendly Mobbeal "une nouvelle vie a l'etranger" en fin d'article.
+  {
+    slug: "tokyo-meilleurs-quartiers-vivre-jiyugaoka-shimokitazawa",
+    featured: false,
+    tag: "Mobbeal",
+    readTime: "6 min",
+    publishedAt: "2026-05-06",
+    title: {
+      fr: "Où vivre à Tokyo ? Mon top 4 (subjectif, assumé), par Sébastien Lonjon.",
+      en: "Where to live in Tokyo? My top 4 (subjective, no apologies), by Sébastien Lonjon.",
+      ja: "東京でどこに住む？私のトップ4（主観的、堂々と）— Sébastien Lonjonによる。",
+      "fr-ca": "Où vivre à Tokyo ? Mon top 4 (subjectif, assumé), par Sébastien Lonjon.",
+    },
+    excerpt: {
+      fr: "Après plus d'un an à Tokyo, le CEO d'Abbeal partage ses 4 quartiers favoris à recommander sans hésiter : Kōenji (punk), Shimokitazawa (slow indie), Kichijōji (parc + carte postale), Daikanyama (chic discret). Plus un n°1 gardé pour les contacts directs.",
+      en: "After more than a year in Tokyo, Abbeal's CEO shares his 4 favourite neighbourhoods to recommend without hesitation: Kōenji (punk), Shimokitazawa (slow indie), Kichijōji (park + postcard), Daikanyama (discreet chic). Plus a #1 kept for direct contacts.",
+      ja: "東京に1年以上住んだAbbealのCEOが、迷わず勧める4つのお気に入りエリアを紹介：高円寺（パンク）、下北沢（スロー・インディー）、吉祥寺（公園＋絵葉書）、代官山（控えめな上品さ）。さらに、直接の連絡先のために取っておいた1位も。",
+      "fr-ca": "Après plus d'un an à Tokyo, le CEO d'Abbeal partage ses 4 quartiers favoris à recommander sans hésiter : Kōenji (punk), Shimokitazawa (slow indie), Kichijōji (parc + carte postale), Daikanyama (chic discret). Plus un n°1 gardé pour les contacts directs.",
+    },
+    body: {
+      fr: ARTICLE_BODIES["tokyo-meilleurs-quartiers-vivre-jiyugaoka-shimokitazawa"]?.fr ?? [],
+      en: ARTICLE_BODIES["tokyo-meilleurs-quartiers-vivre-jiyugaoka-shimokitazawa"]?.en,
+      ja: ARTICLE_BODIES["tokyo-meilleurs-quartiers-vivre-jiyugaoka-shimokitazawa"]?.ja,
+      "fr-ca": ARTICLE_BODIES["tokyo-meilleurs-quartiers-vivre-jiyugaoka-shimokitazawa"]?.["fr-ca"],
+    },
+  },
+  // Article 18 — Top ramen Tokyo (lifestyle, par Sébastien Lonjon CEO).
+  // Sebastien partage ses 4 adresses ramen favorites a Tokyo : Hujishiro,
+  // Menya Kokoro, Afuri, Tamotsu + un n°1 secret. Article court, punchy,
+  // CTA Calendly Mobbeal en fin pour conversion teletravail international.
+  {
+    slug: "top-ramen-tokyo-afuri-tamotsu-menya-kokoro",
+    featured: false,
+    tag: "Mobbeal",
+    readTime: "4 min",
+    publishedAt: "2026-05-06",
+    title: {
+      fr: "Mon top ramen à Tokyo : 4 adresses qui m'ont remis à ma place.",
+      en: "My top ramen in Tokyo: 4 spots that put me back in my place.",
+      ja: "東京の私のトップラーメン：私を戒めた4軒。",
+      "fr-ca": "Mon top ramen à Tokyo : 4 adresses qui m'ont remis à ma place.",
+    },
+    excerpt: {
+      fr: "Le CEO d'Abbeal partage son top du moment : Hujishiro (classique sans chichi), Menya Kokoro (mazemen signature), Afuri (yuzu shio finesse), Tamotsu (bouillon profond canard saison). Plus un n°1 gardé pour les contacts directs.",
+      en: "Abbeal's CEO shares his current top: Hujishiro (classic, no frills), Menya Kokoro (signature mazemen), Afuri (delicate yuzu shio), Tamotsu (deep broth, seasonal duck). Plus a #1 kept for direct contacts.",
+      ja: "AbbealのCEOが今のお気に入りトップを紹介：フジシロ（気取らないクラシック）、麺屋こころ（シグネチャーまぜそば）、Afuri（繊細なゆず塩）、Tamotsu（深いスープ、季節の鴨）。さらに、直接の連絡先のために取っておいた1位も。",
+      "fr-ca": "Le CEO d'Abbeal partage son top du moment : Hujishiro (classique sans chichi), Menya Kokoro (mazemen signature), Afuri (yuzu shio finesse), Tamotsu (bouillon profond canard saison). Plus un n°1 gardé pour les contacts directs.",
+    },
+    body: {
+      fr: ARTICLE_BODIES["top-ramen-tokyo-afuri-tamotsu-menya-kokoro"]?.fr ?? [],
+      en: ARTICLE_BODIES["top-ramen-tokyo-afuri-tamotsu-menya-kokoro"]?.en,
+      ja: ARTICLE_BODIES["top-ramen-tokyo-afuri-tamotsu-menya-kokoro"]?.ja,
+      "fr-ca": ARTICLE_BODIES["top-ramen-tokyo-afuri-tamotsu-menya-kokoro"]?.["fr-ca"],
+    },
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {

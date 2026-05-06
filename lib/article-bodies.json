@@ -5447,5 +5447,685 @@
         "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
       }
     ]
+  },
+  "tokyo-meilleurs-quartiers-vivre-jiyugaoka-shimokitazawa": {
+    "fr": [
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_carte.jpg",
+        "alt": "Carte de Tokyo avec les 4 quartiers favoris",
+        "caption": "Tokyo a mille visages. Voici les 4 quartiers que je recommande sans hésiter."
+      },
+      {
+        "type": "p",
+        "content": "Après plus d'un an à Tokyo, la question revient à chaque appel : « mais tu vis où, exactement ? ». La vérité, c'est que Tokyo a mille visages — et que le \"bon quartier\" dépend autant de ton budget que de ta tolérance au bruit, de ton trajet idéal et de ton style de vie. Voici les 4 que je recommande sans hésiter, classés du plus underground au plus design."
+      },
+      {
+        "type": "h2",
+        "content": "5 — Kōenji : punk & izakaya vibes"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_koenji.jpg",
+        "alt": "Kōenji, ruelles, friperies et izakaya de Tokyo",
+        "caption": "Kōenji : ruelles tardives, friperies, live houses, matsuri."
+      },
+      {
+        "type": "p",
+        "content": "Ambiance de quartier, friperies, live houses. Parfait si tu aimes les ruelles qui vivent tard, sans chichis. En bonus : matsuri (fêtes de quartier), micro-cafés, petites salles de concert. C'est le Tokyo qui a gardé son côté rock, à l'opposé du chic de Roppongi."
+      },
+      {
+        "type": "h2",
+        "content": "4 — Shimokitazawa : slow, indie, cafés & vinyles"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_shimokitazawa.jpg",
+        "alt": "Shimokitazawa, le petit Brooklyn de Tokyo",
+        "caption": "Shimokitazawa : piéton, chill, terrasses, fripes, tiny galleries."
+      },
+      {
+        "type": "p",
+        "content": "Piéton, chill, terrasses : c'est le \"petit Brooklyn\" de Tokyo. Idéal pour bosser en remote le matin et flâner l'après-midi. Fripes, thrift stores, tiny galleries partout. Mon préféré pour les week-ends en famille — on s'y perd facilement, et c'est exactement le but."
+      },
+      {
+        "type": "h2",
+        "content": "3 — Kichijōji : carte postale & grand parc"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_kichijoji.jpg",
+        "alt": "Kichijōji et le parc Inokashira",
+        "caption": "Kichijōji : Inokashira Park, vie locale douce, atmosphère de vraie ville."
+      },
+      {
+        "type": "p",
+        "content": "Inokashira Park à deux pas, vie locale très douce. Pour les familles et les amoureux des balades. Boutiques indépendantes, restos pour tous les goûts, et une atmosphère de \"vraie ville\" qui contraste avec l'hyperdensité du centre. Un quartier où l'on peut imaginer s'installer durablement."
+      },
+      {
+        "type": "h2",
+        "content": "2 — Daikanyama : chic discret & design"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_daikanyama.jpg",
+        "alt": "Daikanyama, T-Site et coffee culture",
+        "caption": "Daikanyama : T-Site, librairies, coffee culture, rues calmes."
+      },
+      {
+        "type": "p",
+        "content": "T-Site, librairies, coffee culture, rues calmes. Tu veux tout à portée de marche, sans la foule de Shibuya. Bon mix pro / perso, idéal pour les RDV comme pour le deep work. Si tu cherches un quartier où la ville fonctionne encore à hauteur d'humain, c'est ici."
+      },
+      {
+        "type": "h2",
+        "content": "1 — Mon n°1 : sur demande"
+      },
+      {
+        "type": "p",
+        "content": "Jiyūgaoka. C'est là que je vis avec ma famille — un compromis rare entre nature, écoles internationales, accès rapide à Shibuya et calme le soir. Si tu prépares un déménagement à Tokyo, écris-moi et je t'envoie le nom + un mini-guide (pins sur carte, cafés, playgrounds, tips trajet → Shibuya)."
+      },
+      {
+        "type": "h2",
+        "content": "Remarques rapides"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Tout dépend de ton budget, de ta tolérance au bruit et de ton trajet idéal.",
+          "Tokyo a mille visages : le vrai luxe, c'est de pouvoir marcher partout.",
+          "Et oui, dans tous ces quartiers, on trouve des excellents ramen."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Tu envisages de bouger à Tokyo (ou ailleurs) sans casser ta carrière ? C'est précisément ce qu'on accompagne avec Mobbeal — la mobilité internationale encadrée, sans rompre avec tes clients en France."
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger",
+        "label": "Prendre RDV avec Sébastien — 30 min, sans engagement"
+      }
+    ],
+    "en": [
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_carte.jpg",
+        "alt": "Map of Tokyo showing the 4 favourite neighbourhoods",
+        "caption": "Tokyo has a thousand faces. Here are the 4 neighbourhoods I recommend without hesitation."
+      },
+      {
+        "type": "p",
+        "content": "After more than a year in Tokyo, one question keeps coming up on every call: \"so where exactly do you live?\". The truth is, Tokyo has a thousand faces — and the \"right neighbourhood\" depends as much on your budget as on your noise tolerance, your ideal commute and your lifestyle. Here are the 4 I recommend without hesitation, ranked from most underground to most design-forward."
+      },
+      {
+        "type": "h2",
+        "content": "5 — Kōenji: punk & izakaya vibes"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_koenji.jpg",
+        "alt": "Kōenji, alleys, thrift stores and izakaya in Tokyo",
+        "caption": "Kōenji: late-night alleys, thrift stores, live houses, matsuri."
+      },
+      {
+        "type": "p",
+        "content": "Real neighbourhood feel, thrift stores, live houses. Perfect if you like alleys that come alive late, no frills. Bonus: matsuri (neighbourhood festivals), micro-cafés, small concert venues. This is the Tokyo that kept its rock edge, the opposite of Roppongi's polish."
+      },
+      {
+        "type": "h2",
+        "content": "4 — Shimokitazawa: slow, indie, cafés & vinyl"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_shimokitazawa.jpg",
+        "alt": "Shimokitazawa, Tokyo's little Brooklyn",
+        "caption": "Shimokitazawa: pedestrian, chill, terraces, thrift stores, tiny galleries."
+      },
+      {
+        "type": "p",
+        "content": "Pedestrian, chill, terraces: this is Tokyo's \"little Brooklyn\". Ideal for working remote in the morning and wandering in the afternoon. Thrift stores, vinyl shops, tiny galleries everywhere. My favourite for weekends with family — you get lost easily, and that's exactly the point."
+      },
+      {
+        "type": "h2",
+        "content": "3 — Kichijōji: postcard & big park"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_kichijoji.jpg",
+        "alt": "Kichijōji and Inokashira Park",
+        "caption": "Kichijōji: Inokashira Park, gentle local life, real-city feel."
+      },
+      {
+        "type": "p",
+        "content": "Inokashira Park right around the corner, very gentle local life. For families and walking lovers. Independent shops, restaurants for every taste, and a \"real city\" feel that contrasts with the central hyper-density. A neighbourhood where you can imagine settling for the long haul."
+      },
+      {
+        "type": "h2",
+        "content": "2 — Daikanyama: discreet chic & design"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_daikanyama.jpg",
+        "alt": "Daikanyama, T-Site and coffee culture",
+        "caption": "Daikanyama: T-Site, bookstores, coffee culture, quiet streets."
+      },
+      {
+        "type": "p",
+        "content": "T-Site, bookstores, coffee culture, quiet streets. You want everything within walking distance, without the Shibuya crowds. Good pro / personal mix, ideal for meetings as much as for deep work. If you're looking for a neighbourhood where the city still works at human scale, this is it."
+      },
+      {
+        "type": "h2",
+        "content": "1 — My top pick: on request"
+      },
+      {
+        "type": "p",
+        "content": "Jiyūgaoka. This is where I live with my family — a rare compromise between nature, international schools, quick access to Shibuya and quiet evenings. If you're planning a move to Tokyo, write to me and I'll send you the name + a mini-guide (pins on a map, cafés, playgrounds, commute tips → Shibuya)."
+      },
+      {
+        "type": "h2",
+        "content": "Quick notes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "It all depends on your budget, your noise tolerance and your ideal commute.",
+          "Tokyo has a thousand faces: the real luxury is being able to walk everywhere.",
+          "And yes, all of these neighbourhoods have great ramen."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Thinking about moving to Tokyo (or anywhere else) without breaking your career? That's exactly what we support with Mobbeal — international mobility, structured, without losing your French clients."
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger",
+        "label": "Book a 30-min call with Sébastien — no strings attached"
+      }
+    ],
+    "ja": [
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_carte.jpg",
+        "alt": "東京のお気に入り4エリアの地図",
+        "caption": "東京には千の顔がある。私が迷わず勧める4つのエリアを紹介します。"
+      },
+      {
+        "type": "p",
+        "content": "東京に住んで1年以上が経ち、通話のたびに同じ質問が来る。「結局、どこに住んでるの？」。実のところ、東京には千の顔があり、「いいエリア」は予算、騒音への耐性、理想の通勤、ライフスタイル次第で変わる。アンダーグラウンドからデザイン志向まで、迷わず勧める4エリアを紹介する。"
+      },
+      {
+        "type": "h2",
+        "content": "5 — 高円寺：パンク＆居酒屋の雰囲気"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_koenji.jpg",
+        "alt": "高円寺の路地、古着屋、居酒屋",
+        "caption": "高円寺：深夜まで生きる路地、古着屋、ライブハウス、祭り。"
+      },
+      {
+        "type": "p",
+        "content": "下町の雰囲気、古着屋、ライブハウス。気取らず、夜遅くまで賑わう路地が好きならぴったり。おまけに祭り（地域のお祭り）、マイクロカフェ、小さなライブハウス。六本木の洗練とは対極にある、ロックの精神を残した東京。"
+      },
+      {
+        "type": "h2",
+        "content": "4 — 下北沢：スロー、インディー、カフェ＆レコード"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_shimokitazawa.jpg",
+        "alt": "下北沢、東京のリトル・ブルックリン",
+        "caption": "下北沢：歩行者天国、ゆったり、テラス、古着屋、小さなギャラリー。"
+      },
+      {
+        "type": "p",
+        "content": "歩行者天国、ゆったり、テラス：東京の「リトル・ブルックリン」。午前中はリモートワーク、午後は散策に最適。古着屋、レコードショップ、小さなギャラリーが至るところに。家族との週末のお気に入り — 簡単に迷子になれる、そしてそれこそが目的。"
+      },
+      {
+        "type": "h2",
+        "content": "3 — 吉祥寺：絵葉書のような景色＆大きな公園"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_kichijoji.jpg",
+        "alt": "吉祥寺と井の頭公園",
+        "caption": "吉祥寺：井の頭公園、穏やかな地元の生活、本物の街の雰囲気。"
+      },
+      {
+        "type": "p",
+        "content": "井の頭公園がすぐそば、とても穏やかな地元の生活。家族や散歩好きに。個性的なショップ、あらゆる好みに応えるレストラン、都心の超過密さとは対照的な「本物の街」の雰囲気。長く住むことを想像できるエリア。"
+      },
+      {
+        "type": "h2",
+        "content": "2 — 代官山：控えめな上品さ＆デザイン"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_daikanyama.jpg",
+        "alt": "代官山、T-Site、コーヒー文化",
+        "caption": "代官山：T-Site、書店、コーヒー文化、静かな通り。"
+      },
+      {
+        "type": "p",
+        "content": "T-Site、書店、コーヒー文化、静かな通り。渋谷の人混みなしで、すべて徒歩圏内に欲しい人向け。仕事と私生活のバランスがよく、打ち合わせにもディープワークにも最適。街がまだ人間のスケールで機能するエリアを探しているなら、ここ。"
+      },
+      {
+        "type": "h2",
+        "content": "1 — 私の1位：リクエスト制"
+      },
+      {
+        "type": "p",
+        "content": "自由が丘。家族と暮らしているエリア — 自然、インターナショナルスクール、渋谷へのアクセス、夜の静けさという稀な妥協点。東京への引っ越しを準備しているなら、メッセージをくれたら名前とミニガイド（地図上のピン、カフェ、遊び場、渋谷への通勤のコツ）を送ります。"
+      },
+      {
+        "type": "h2",
+        "content": "メモ"
+      },
+      {
+        "type": "list",
+        "items": [
+          "すべては予算、騒音への耐性、理想の通勤次第。",
+          "東京には千の顔がある：本当の贅沢は、どこへでも歩いて行けること。",
+          "そう、これらのエリアすべてに素晴らしいラーメンがある。"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "キャリアを壊さずに東京（または他の場所）への引っ越しを考えていますか？それこそMobbealで支援していること — フランスのクライアントとの関係を断たずに、構造化された国際的なモビリティ。"
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger",
+        "label": "Sébastienと30分通話を予約する — 義務なし"
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_carte.jpg",
+        "alt": "Carte de Tokyo avec les 4 quartiers favoris",
+        "caption": "Tokyo a mille visages. Voici les 4 quartiers que je recommande sans hésiter."
+      },
+      {
+        "type": "p",
+        "content": "Après plus d'un an à Tokyo, la question revient à chaque appel : « mais tu vis où, exactement ? ». La vérité, c'est que Tokyo a mille visages — et que le « bon quartier » dépend autant de ton budget que de ta tolérance au bruit, de ton trajet idéal et de ton style de vie. Voici les 4 que je recommande sans hésiter, classés du plus underground au plus design."
+      },
+      {
+        "type": "h2",
+        "content": "5 — Kōenji : punk & izakaya vibes"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_koenji.jpg",
+        "alt": "Kōenji, ruelles, friperies et izakaya de Tokyo",
+        "caption": "Kōenji : ruelles tardives, friperies, live houses, matsuri."
+      },
+      {
+        "type": "p",
+        "content": "Ambiance de quartier, friperies, live houses. Parfait si tu aimes les ruelles qui vivent tard, sans chichis. En prime : matsuri (fêtes de quartier), micro-cafés, petites salles de concert. C'est le Tokyo qui a gardé son côté rock, à l'opposé du chic de Roppongi."
+      },
+      {
+        "type": "h2",
+        "content": "4 — Shimokitazawa : slow, indie, cafés & vinyles"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_shimokitazawa.jpg",
+        "alt": "Shimokitazawa, le petit Brooklyn de Tokyo",
+        "caption": "Shimokitazawa : piéton, relax, terrasses, friperies, petites galeries."
+      },
+      {
+        "type": "p",
+        "content": "Piéton, relax, terrasses : c'est le « petit Brooklyn » de Tokyo. Idéal pour travailler à distance le matin et flâner l'après-midi. Friperies, magasins d'occasion, petites galeries partout. Mon préféré pour les fins de semaine en famille — on s'y perd facilement, et c'est exactement le but."
+      },
+      {
+        "type": "h2",
+        "content": "3 — Kichijōji : carte postale & grand parc"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_kichijoji.jpg",
+        "alt": "Kichijōji et le parc Inokashira",
+        "caption": "Kichijōji : parc Inokashira, vie locale douce, atmosphère de vraie ville."
+      },
+      {
+        "type": "p",
+        "content": "Parc Inokashira à deux pas, vie locale très douce. Pour les familles et les amateurs de balades. Boutiques indépendantes, restos pour tous les goûts, et une atmosphère de « vraie ville » qui contraste avec l'hyperdensité du centre. Un quartier où l'on peut imaginer s'installer durablement."
+      },
+      {
+        "type": "h2",
+        "content": "2 — Daikanyama : chic discret & design"
+      },
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_daikanyama.jpg",
+        "alt": "Daikanyama, T-Site et coffee culture",
+        "caption": "Daikanyama : T-Site, librairies, café culture, rues calmes."
+      },
+      {
+        "type": "p",
+        "content": "T-Site, librairies, café culture, rues calmes. Tu veux tout à portée de marche, sans la foule de Shibuya. Bon mélange pro / perso, idéal pour les rendez-vous comme pour le deep work. Si tu cherches un quartier où la ville fonctionne encore à hauteur d'humain, c'est ici."
+      },
+      {
+        "type": "h2",
+        "content": "1 — Mon n°1 : sur demande"
+      },
+      {
+        "type": "p",
+        "content": "Jiyūgaoka. C'est là que je vis avec ma famille — un compromis rare entre nature, écoles internationales, accès rapide à Shibuya et calme le soir. Si tu prépares un déménagement à Tokyo, écris-moi et je t'envoie le nom et un mini-guide (épingles sur carte, cafés, parcs, trucs trajet → Shibuya)."
+      },
+      {
+        "type": "h2",
+        "content": "Remarques rapides"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Tout dépend de ton budget, de ta tolérance au bruit et de ton trajet idéal.",
+          "Tokyo a mille visages : le vrai luxe, c'est de pouvoir marcher partout.",
+          "Et oui, dans tous ces quartiers, on trouve d'excellents ramen."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Tu envisages de bouger à Tokyo (ou ailleurs) sans casser ta carrière ? C'est précisément ce qu'on accompagne avec Mobbeal — la mobilité internationale encadrée, sans rompre avec tes clients."
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger",
+        "label": "Prendre rendez-vous avec Sébastien — 30 min, sans engagement"
+      }
+    ]
+  },
+  "top-ramen-tokyo-afuri-tamotsu-menya-kokoro": {
+    "fr": [
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_ramen.jpg",
+        "alt": "Bol de ramen typique de Tokyo",
+        "caption": "Bouillon profond, 12 minutes, pas de bavardage. Le rituel ramen, c'est ça."
+      },
+      {
+        "type": "p",
+        "content": "Je pensais connaître les ramen. Tokyo m'a remis à ma place. Ceux qui me connaissent le savent : bien manger compte beaucoup pour moi. Depuis mon arrivée au Japon, j'ai testé un paquet d'adresses, en solo, en famille, entre deux calls clients. Voici mon top du moment, simple et efficace, pour vos prochaines virées tokyoïtes."
+      },
+      {
+        "type": "h2",
+        "content": "5 — Hujishiro"
+      },
+      {
+        "type": "p",
+        "content": "Bol réconfortant, droit au but. Idéal quand on veut un classique sans chichi, sans surprise, juste le geste juste."
+      },
+      {
+        "type": "h2",
+        "content": "4 — Menya Kokoro"
+      },
+      {
+        "type": "p",
+        "content": "Mazemen signature, textures au top, du punch sans être lourd. Une bonne porte d'entrée pour ceux qui veulent sortir du ramen \"bouillon classique\"."
+      },
+      {
+        "type": "h2",
+        "content": "3 — Afuri"
+      },
+      {
+        "type": "p",
+        "content": "Yuzu shio tout en finesse, très propre, très net. La maison qui réconcilie ceux qui pensent que le ramen, c'est lourd. Spoiler : c'est tout l'inverse."
+      },
+      {
+        "type": "h2",
+        "content": "2 — Tamotsu"
+      },
+      {
+        "type": "p",
+        "content": "Bouillon profond, équilibre sel / gras / umami qui donne envie de reprendre une cuillère, puis une autre. Le special canard de saison vaut le détour à lui seul."
+      },
+      {
+        "type": "h2",
+        "content": "1 — Le secret"
+      },
+      {
+        "type": "p",
+        "content": "Mon n°1 est volontairement gardé pour mes contacts directs : c'est une adresse de quartier, à laquelle je tiens, et que je ne veux pas voir saturée par les guides. Si vous prévoyez un séjour à Tokyo, demandez-le-moi."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi cette obsession ?"
+      },
+      {
+        "type": "p",
+        "content": "Le ramen, c'est l'un des plats les plus codifiés de la cuisine japonaise. C'est aussi celui qui m'a appris à ralentir : tu fais la queue, tu commandes au ticket, tu t'assois, tu manges en 12 minutes, tu pars. Pas de bavardage. Juste la concentration, le respect de l'artisan et du produit. C'est un mini-rituel qui résume bien ce que je préfère dans la vie tokyoïte."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Vous voulez tester ces adresses sur votre pause midi tout en gardant votre client en France ? C'est exactement ce qu'on construit chez Abbeal avec Mobbeal — du télétravail international encadré, sans renoncer à votre carrière."
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+        "label": "Prendre RDV avec Sébastien — 30 min, sans engagement"
+      }
+    ],
+    "en": [
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_ramen.jpg",
+        "alt": "A typical bowl of Tokyo ramen",
+        "caption": "Deep broth, 12 minutes, no small talk. That's the ramen ritual."
+      },
+      {
+        "type": "p",
+        "content": "I thought I knew ramen. Tokyo put me back in my place. Those who know me know it: eating well matters a lot to me. Since I moved to Japan, I've tried a stack of addresses, solo, with family, between two client calls. Here's my current top, simple and effective, for your next Tokyo trips."
+      },
+      {
+        "type": "h2",
+        "content": "5 — Hujishiro"
+      },
+      {
+        "type": "p",
+        "content": "Comforting bowl, straight to the point. Perfect when you want a classic without frills, no surprises, just the right move."
+      },
+      {
+        "type": "h2",
+        "content": "4 — Menya Kokoro"
+      },
+      {
+        "type": "p",
+        "content": "Signature mazemen, top textures, punchy without being heavy. A good entry point for those who want to step out of \"classic broth\" ramen."
+      },
+      {
+        "type": "h2",
+        "content": "3 — Afuri"
+      },
+      {
+        "type": "p",
+        "content": "Yuzu shio all in finesse, very clean, very crisp. The place that wins over anyone who thinks ramen is heavy. Spoiler: it's the opposite."
+      },
+      {
+        "type": "h2",
+        "content": "2 — Tamotsu"
+      },
+      {
+        "type": "p",
+        "content": "Deep broth, salt / fat / umami balance that makes you want to take another spoonful, then another. The seasonal duck special is worth the trip on its own."
+      },
+      {
+        "type": "h2",
+        "content": "1 — The secret"
+      },
+      {
+        "type": "p",
+        "content": "My #1 is intentionally kept for direct contacts: it's a neighbourhood spot, one I care about, and I don't want to see it overrun by guidebooks. If you're planning a Tokyo trip, ask me."
+      },
+      {
+        "type": "h2",
+        "content": "Why this obsession?"
+      },
+      {
+        "type": "p",
+        "content": "Ramen is one of the most codified dishes in Japanese cuisine. It's also the one that taught me to slow down: you queue, you order at the ticket machine, you sit, you eat in 12 minutes, you leave. No small talk. Just focus, respect for the craftsman and the product. A mini-ritual that captures what I love most about Tokyo life."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Want to try these places on your lunch break while keeping your client in France? That's exactly what we build at Abbeal with Mobbeal — structured international remote work, without giving up your career."
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+        "label": "Book a 30-min call with Sébastien — no strings attached"
+      }
+    ],
+    "ja": [
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_ramen.jpg",
+        "alt": "東京の典型的なラーメンの一杯",
+        "caption": "深いスープ、12分、無駄話なし。それがラーメンの儀式。"
+      },
+      {
+        "type": "p",
+        "content": "ラーメンを知っていると思っていた。東京に教えられた。私を知る人なら知っている：美味しく食べることは私にとって重要だ。日本に来てから、ソロで、家族で、クライアント通話の合間に、たくさんの店を試してきた。次回の東京訪問のために、今のお気に入りトップを紹介する。シンプルで効率的に。"
+      },
+      {
+        "type": "h2",
+        "content": "5 — フジシロ"
+      },
+      {
+        "type": "p",
+        "content": "心温まる一杯、ストレート。気取らず、サプライズなし、ただ正しい所作の古典が欲しい時に最適。"
+      },
+      {
+        "type": "h2",
+        "content": "4 — 麺屋こころ"
+      },
+      {
+        "type": "p",
+        "content": "シグネチャーまぜそば、最高の食感、重くないパンチ。「クラシックな出汁」のラーメンから一歩踏み出したい人への良い入り口。"
+      },
+      {
+        "type": "h2",
+        "content": "3 — Afuri"
+      },
+      {
+        "type": "p",
+        "content": "ゆず塩、繊細、非常にクリーン、非常にシャープ。ラーメンは重いと思っている人を改宗させる店。スポイラー：その逆だ。"
+      },
+      {
+        "type": "h2",
+        "content": "2 — Tamotsu"
+      },
+      {
+        "type": "p",
+        "content": "深いスープ、塩 / 脂 / 旨味のバランスが、もう一杯、さらにもう一杯と続けたくなる。季節限定の鴨スペシャルだけでも訪れる価値あり。"
+      },
+      {
+        "type": "h2",
+        "content": "1 — 秘密"
+      },
+      {
+        "type": "p",
+        "content": "1位は意図的に直接の連絡先のために残している：地域に根ざした店で、大切に思っているため、ガイドブックで飽和させたくない。東京旅行を計画しているなら、私に聞いてください。"
+      },
+      {
+        "type": "h2",
+        "content": "なぜこの執着？"
+      },
+      {
+        "type": "p",
+        "content": "ラーメンは日本料理の中で最も体系化された料理の一つ。そして、私にスローダウンを教えてくれた料理でもある：並ぶ、食券機で注文する、座る、12分で食べる、出る。無駄話なし。集中、職人と素材への敬意のみ。東京生活で最も好きな部分を凝縮したミニ儀式。"
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "フランスのクライアントを保ちながらこれらのお店を昼休みに試したいですか？それこそAbbealとMobbealで構築していること — キャリアを諦めずに、構造化された国際的なリモートワーク。"
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+        "label": "Sébastienと30分通話を予約する — 義務なし"
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "image",
+        "src": "/article-assets/lifestyle/tokyo_ramen.jpg",
+        "alt": "Bol de ramen typique de Tokyo",
+        "caption": "Bouillon profond, 12 minutes, pas de placotage. Le rituel ramen, c'est ça."
+      },
+      {
+        "type": "p",
+        "content": "Je pensais connaître les ramen. Tokyo m'a remis à ma place. Ceux qui me connaissent le savent : bien manger compte beaucoup pour moi. Depuis mon arrivée au Japon, j'ai testé un paquet d'adresses, en solo, en famille, entre deux appels clients. Voici mon top du moment, simple et efficace, pour vos prochaines virées tokyoïtes."
+      },
+      {
+        "type": "h2",
+        "content": "5 — Hujishiro"
+      },
+      {
+        "type": "p",
+        "content": "Bol réconfortant, droit au but. Idéal quand on veut un classique sans chichi, sans surprise, juste le geste juste."
+      },
+      {
+        "type": "h2",
+        "content": "4 — Menya Kokoro"
+      },
+      {
+        "type": "p",
+        "content": "Mazemen signature, textures au top, du punch sans être lourd. Une bonne porte d'entrée pour ceux qui veulent sortir du ramen « bouillon classique »."
+      },
+      {
+        "type": "h2",
+        "content": "3 — Afuri"
+      },
+      {
+        "type": "p",
+        "content": "Yuzu shio tout en finesse, très propre, très net. La maison qui réconcilie ceux qui pensent que le ramen, c'est lourd. Spoiler : c'est tout l'inverse."
+      },
+      {
+        "type": "h2",
+        "content": "2 — Tamotsu"
+      },
+      {
+        "type": "p",
+        "content": "Bouillon profond, équilibre sel / gras / umami qui donne envie de reprendre une cuillère, puis une autre. Le special canard de saison vaut le détour à lui seul."
+      },
+      {
+        "type": "h2",
+        "content": "1 — Le secret"
+      },
+      {
+        "type": "p",
+        "content": "Mon n°1 est volontairement gardé pour mes contacts directs : c'est une adresse de quartier, à laquelle je tiens, et que je ne veux pas voir saturée par les guides. Si vous prévoyez un séjour à Tokyo, demandez-le-moi."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi cette obsession ?"
+      },
+      {
+        "type": "p",
+        "content": "Le ramen, c'est l'un des plats les plus codifiés de la cuisine japonaise. C'est aussi celui qui m'a appris à ralentir : tu fais la file, tu commandes au billet, tu t'assois, tu manges en 12 minutes, tu pars. Pas de placotage. Juste la concentration, le respect de l'artisan et du produit. C'est un mini-rituel qui résume bien ce que je préfère dans la vie tokyoïte."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Vous voulez tester ces adresses sur votre pause dîner tout en gardant votre client en France ? C'est exactement ce qu'on construit chez Abbeal avec Mobbeal — du télétravail international encadré, sans renoncer à votre carrière."
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+        "label": "Prendre rendez-vous avec Sébastien — 30 min, sans engagement"
+      }
+    ]
   }
 }
