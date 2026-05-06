@@ -984,54 +984,39 @@
         "hub": "Hub Amériques · Montréal",
         "photo": "vianney.jpg",
         "bio": "Co-fondateur du hub Montréal (2023). DG depuis novembre 2024. Pilote les opérations Nord-Amérique."
-      },
+      }
+    ],
+    "teamTape": "// Équipe",
+    "teamTitle": "Les visages derrière la livraison.",
+    "teamSubtitle": "Ingénieurs séniors aux trois hubs. Quelques visages des équipes Abbeal en mission chez nos clients.",
+    "team": [
       {
         "name": "Alexandre Lim",
         "role": "Senior Software Engineer",
         "hub": "Hub Asie · Tokyo",
         "photo": "alex.jpg",
-        "bio": "Au Japon depuis 3 ans. Senior Software Engineer côté Le Monde (équipe Insights, depuis Tokyo). 8 ans de dev, spécialisé Next.js / React. Preuve concrète du modèle Follow-the-Sun."
-      }
-    ],
-    "teamTape": "// Équipe",
-    "teamTitle": "Les visages derrière la livraison.",
-    "teamSubtitle": "Leads, architectes, recruteurs. Quelques-unes des personnes que tu rencontreras si on bosse ensemble.",
-    "team": [
+        "bio": "Au Japon depuis 3 ans. Senior Software Engineer chez Le Monde (équipe Insights, depuis Tokyo). 8 ans de dev, spécialisé Next.js / React. Preuve concrète du modèle Follow-the-Sun."
+      },
       {
-        "name": "Lead Engineer",
-        "role": "Software · Lead",
+        "name": "Aurélie Largent",
+        "role": "Senior Engineer",
         "hub": "Hub EU · Paris",
-        "photo": "team-1.jpg"
+        "photo": "aurelie.jpg",
+        "bio": "Senior Engineer côté Abbeal. Expérience produit, delivery et squads embarqués chez nos clients européens."
       },
       {
-        "name": "Senior Architect",
-        "role": "Architecture · Senior",
+        "name": "Marie Nuellas",
+        "role": "Software Engineer",
         "hub": "Hub Asie · Tokyo",
-        "photo": "team-2.jpg"
+        "photo": "marie.jpg",
+        "bio": "Software Engineer Tokyo. Auteure de l'article apprentissage du japonais (Anki / WaniKani / Bunpro) après son JLPT N2. Bilingue tech / culture japonaise."
       },
       {
-        "name": "Engineering Manager",
-        "role": "Delivery · Manager",
+        "name": "Sacha Brami",
+        "role": "Senior Engineer",
         "hub": "Hub Amériques · Montréal",
-        "photo": "team-3.jpg"
-      },
-      {
-        "name": "Tech Recruiter",
-        "role": "Recrutement · Lead",
-        "hub": "Hub EU · Paris",
-        "photo": "team-4.jpg"
-      },
-      {
-        "name": "Lead Data Engineer",
-        "role": "Data · Lead",
-        "hub": "Hub EU · Paris",
-        "photo": "team-5.jpg"
-      },
-      {
-        "name": "Senior Robotics Engineer",
-        "role": "Robotique · Senior",
-        "hub": "Hub Asie · Tokyo",
-        "photo": "team-6.jpg"
+        "photo": "sacha.jpg",
+        "bio": "Senior Engineer Montréal. Expérience long-terme sur des comptes telecom / médias québécois (Cogeco) et squads bi-rive Atlantique."
       }
     ],
     "statsTape": "// Chiffres",

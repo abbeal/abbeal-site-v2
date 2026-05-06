@@ -1003,54 +1003,39 @@
         "hub": "Americas Hub · Montréal",
         "photo": "vianney.jpg",
         "bio": "Co-founded the Montréal hub in 2023 to anchor Abbeal in North America. Managing Director since November 2024. Owns the Americas P&L, runs Mobbeal candidate ops, hosts the Saint-Denis office Friday demos."
-      },
+      }
+    ],
+    "teamTape": "// Team",
+    "teamTitle": "The faces behind delivery.",
+    "teamSubtitle": "Senior engineers across all three hubs. A few faces from the Abbeal teams embedded with our clients.",
+    "team": [
       {
         "name": "Alexandre Lim",
         "role": "Senior Software Engineer",
         "hub": "Asia Hub · Tokyo",
         "photo": "alex.jpg",
-        "bio": "In Japan for 3 years. Senior Software Engineer on the Le Monde Insights team, operating from Tokyo. 8 years of dev, specialised in Next.js / React. Concrete proof of the Follow-the-Sun model."
-      }
-    ],
-    "teamTape": "// Team",
-    "teamTitle": "The faces behind delivery.",
-    "teamSubtitle": "Leads, architects, recruiters. A handful of the people you'll meet if we work together.",
-    "team": [
+        "bio": "In Japan for 3 years. Senior Software Engineer at Le Monde (Insights team, from Tokyo). 8 years of dev, specialised in Next.js / React. Living proof of the Follow-the-Sun model."
+      },
       {
-        "name": "Lead Engineer",
-        "role": "Software · Lead",
+        "name": "Aurélie Largent",
+        "role": "Senior Engineer",
         "hub": "EU Hub · Paris",
-        "photo": "team-1.jpg"
+        "photo": "aurelie.jpg",
+        "bio": "Senior Engineer at Abbeal. Product, delivery and embedded-squad experience with our European clients."
       },
       {
-        "name": "Senior Architect",
-        "role": "Architecture · Senior",
+        "name": "Marie Nuellas",
+        "role": "Software Engineer",
         "hub": "Asia Hub · Tokyo",
-        "photo": "team-2.jpg"
+        "photo": "marie.jpg",
+        "bio": "Software Engineer Tokyo. Author of the Japanese-learning article (Anki / WaniKani / Bunpro) after passing JLPT N2. Bilingual tech / Japanese culture."
       },
       {
-        "name": "Engineering Manager",
-        "role": "Delivery · Manager",
+        "name": "Sacha Brami",
+        "role": "Senior Engineer",
         "hub": "Americas Hub · Montréal",
-        "photo": "team-3.jpg"
-      },
-      {
-        "name": "Tech Recruiter",
-        "role": "Recruitment · Lead",
-        "hub": "EU Hub · Paris",
-        "photo": "team-4.jpg"
-      },
-      {
-        "name": "Lead Data Engineer",
-        "role": "Data · Lead",
-        "hub": "EU Hub · Paris",
-        "photo": "team-5.jpg"
-      },
-      {
-        "name": "Senior Robotics Engineer",
-        "role": "Robotics · Senior",
-        "hub": "Asia Hub · Tokyo",
-        "photo": "team-6.jpg"
+        "photo": "sacha.jpg",
+        "bio": "Senior Engineer Montréal. Long-term experience on Quebec telecom / media accounts (Cogeco) and cross-Atlantic squads."
       }
     ],
     "statsTape": "// Numbers",

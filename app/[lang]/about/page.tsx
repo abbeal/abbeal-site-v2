@@ -28,6 +28,16 @@ type Dict = {
       photo: string;
       bio: string;
     }[];
+    teamTape: string;
+    teamTitle: string;
+    teamSubtitle: string;
+    team: {
+      name: string;
+      role: string;
+      hub: string;
+      photo: string;
+      bio?: string;
+    }[];
     statsTape: string;
     statsTitle: string;
     stats: { value: string; label: string }[];
@@ -69,8 +79,15 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
     "Alexandre Lim": [
       "https://www.linkedin.com/in/alexandre-lim/",
     ],
+    "Aurélie Largent": [
+      "https://www.linkedin.com/in/aur%C3%A9lie-largent-70a847102/",
+    ],
+    "Marie Nuellas": [
+      "https://www.linkedin.com/in/marie-n-334406127/",
+    ],
+    // TODO_VERIFY · ajouter URL profil LinkedIn directe pour Sacha (URL fournie = recherche)
   };
-  const personsLd = d.leaders.map((l) => ({
+  const personsLd = [...d.leaders, ...d.team].map((l) => ({
     "@context": "https://schema.org",
     "@type": "Person",
     name: l.name,
@@ -222,6 +239,55 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           </div>
         </div>
       </section>
+
+      {/* Équipe tech */}
+      {d.team.length > 0 && (
+        <section className="mx-auto max-w-[1400px] px-6 md:px-10 py-20 md:py-24">
+          <div className="max-w-3xl">
+            <span className="tape-label">{d.teamTape}</span>
+            <h2 className="mt-6 font-semibold tracking-[-0.025em] text-[clamp(2rem,4vw,3.5rem)] leading-[1.05]">
+              {d.teamTitle}
+            </h2>
+            <p className="mt-6 text-base md:text-lg text-[var(--color-ink-soft)] leading-relaxed">
+              {d.teamSubtitle}
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {d.team.map((m) => (
+              <article
+                key={m.name}
+                className="group relative bg-[var(--color-bg-paper)] border border-[var(--color-border)] overflow-hidden hover:border-[var(--color-brand-teal)] transition-colors"
+              >
+                <div className="aspect-square relative bg-[var(--color-ink)] overflow-hidden">
+                  <Image
+                    src={`/team/${m.photo}`}
+                    alt={m.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+                <div className="p-5 md:p-6">
+                  <h3 className="text-lg font-semibold tracking-tight">
+                    {m.name}
+                  </h3>
+                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--color-brand-teal)]">
+                    {m.role}
+                  </p>
+                  <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-[var(--color-muted)]">
+                    {m.hub}
+                  </p>
+                  {m.bio ? (
+                    <p className="mt-3 text-sm text-[var(--color-ink-soft)] leading-relaxed">
+                      {m.bio}
+                    </p>
+                  ) : null}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Stats */}
       <section className="mx-auto max-w-[1400px] px-6 md:px-10 py-20">

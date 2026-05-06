@@ -1001,54 +1001,39 @@
         "hub": "アメリカ拠点 · モントリオール",
         "photo": "vianney.jpg",
         "bio": "Abbealを北米にアンカーするため、2023年にモントリオール拠点を共同創業。2024年11月より社長。アメリカP&L管掌、Mobbeal候補者オペレーションの責任者、サン・ドゥニ通りオフィス金曜デモのホスト役。"
-      },
-      {
-        "name": "Alexandre Lim",
-        "role": "シニアソフトウェアエンジニア",
-        "hub": "アジアハブ・東京",
-        "photo": "alex.jpg",
-        "bio": "日本在住3年。ル・モンドのInsightsチームでシニアソフトウェアエンジニアとして東京から稼働。開発8年、Next.js / Reactに特化。Follow-the-Sunモデルの具体的な証拠。"
       }
     ],
     "teamTape": "// チーム",
     "teamTitle": "デリバリーを支える顔ぶれ。",
-    "teamSubtitle": "リード、アーキテクト、リクルーター。一緒に仕事すれば出会うメンバーの一部です。",
+    "teamSubtitle": "3つの拠点で活躍するシニアエンジニア。クライアント先で活躍するAbbealメンバーの一部です。",
     "team": [
       {
-        "name": "Lead Engineer",
-        "role": "ソフトウェア · リード",
-        "hub": "EU拠点 · パリ",
-        "photo": "team-1.jpg"
-      },
-      {
-        "name": "Senior Architect",
-        "role": "アーキテクチャ · シニア",
+        "name": "Alexandre Lim",
+        "role": "シニアソフトウェアエンジニア",
         "hub": "アジア拠点 · 東京",
-        "photo": "team-2.jpg"
+        "photo": "alex.jpg",
+        "bio": "日本在住3年。Le Monde Insightsチームのシニアソフトウェアエンジニア（東京から従事）。開発経験8年、Next.js / Reactを専門とする。Follow-the-Sunモデルの実践者。"
       },
       {
-        "name": "Engineering Manager",
-        "role": "デリバリー · マネージャー",
+        "name": "Aurélie Largent",
+        "role": "シニアエンジニア",
+        "hub": "EU拠点 · パリ",
+        "photo": "aurelie.jpg",
+        "bio": "Abbealシニアエンジニア。欧州クライアントでのプロダクト、デリバリー、エンベデッドスクワッドの経験豊富。"
+      },
+      {
+        "name": "Marie Nuellas",
+        "role": "ソフトウェアエンジニア",
+        "hub": "アジア拠点 · 東京",
+        "photo": "marie.jpg",
+        "bio": "東京拠点のソフトウェアエンジニア。JLPT N2取得後の日本語学習記事（Anki / WaniKani / Bunpro）の著者。技術と日本文化のバイリンガル。"
+      },
+      {
+        "name": "Sacha Brami",
+        "role": "シニアエンジニア",
         "hub": "アメリカ拠点 · モントリオール",
-        "photo": "team-3.jpg"
-      },
-      {
-        "name": "Tech Recruiter",
-        "role": "リクルートメント · リード",
-        "hub": "EU拠点 · パリ",
-        "photo": "team-4.jpg"
-      },
-      {
-        "name": "Lead Data Engineer",
-        "role": "データ · リード",
-        "hub": "EU拠点 · パリ",
-        "photo": "team-5.jpg"
-      },
-      {
-        "name": "Senior Robotics Engineer",
-        "role": "ロボティクス · シニア",
-        "hub": "アジア拠点 · 東京",
-        "photo": "team-6.jpg"
+        "photo": "sacha.jpg",
+        "bio": "モントリオール拠点のシニアエンジニア。ケベックの通信・メディア企業（Cogecoなど）での長期経験、大西洋横断スクワッドの実績あり。"
       }
     ],
     "statsTape": "// 数字",

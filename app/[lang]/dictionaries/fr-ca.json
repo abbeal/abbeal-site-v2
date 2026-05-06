@@ -985,54 +985,39 @@
         "hub": "Pôle Amériques · Montréal",
         "photo": "vianney.jpg",
         "bio": "Cofondateur du pôle Montréal (2023). DG depuis novembre 2024. Pilote les opérations nord-américaines."
-      },
-      {
-        "name": "Alexandre Lim",
-        "role": "Senior Software Engineer",
-        "hub": "Pôle Asie · Tokyo",
-        "photo": "alex.jpg",
-        "bio": "Au Japon depuis 3 ans. Senior Software Engineer côté Le Monde (équipe Insights, depuis Tokyo). 8 ans de dev, spécialisé Next.js / React. Preuve concrète du modèle Follow-the-Sun."
       }
     ],
     "teamTape": "// Équipe",
     "teamTitle": "Les visages derrière la livraison.",
-    "teamSubtitle": "Leads, architectes, recruteurs. Quelques personnes que tu rencontreras si on travaille ensemble.",
+    "teamSubtitle": "Ingénieurs séniors aux trois pôles. Quelques visages des équipes Abbeal en mission chez nos clients.",
     "team": [
       {
-        "name": "Lead Engineer",
-        "role": "Logiciel · Lead",
-        "hub": "Pôle Europe · Paris",
-        "photo": "team-1.jpg"
-      },
-      {
-        "name": "Senior Architect",
-        "role": "Architecture · Senior",
+        "name": "Alexandre Lim",
+        "role": "Ingénieur logiciel senior",
         "hub": "Pôle Asie · Tokyo",
-        "photo": "team-2.jpg"
+        "photo": "alex.jpg",
+        "bio": "Au Japon depuis 3 ans. Ingénieur logiciel senior chez Le Monde (équipe Insights, depuis Tokyo). 8 ans de développement, spécialisé Next.js / React. Preuve concrète du modèle Follow-the-Sun."
       },
       {
-        "name": "Engineering Manager",
-        "role": "Livraison · Gestionnaire",
+        "name": "Aurélie Largent",
+        "role": "Ingénieure logiciel senior",
+        "hub": "Pôle Europe · Paris",
+        "photo": "aurelie.jpg",
+        "bio": "Ingénieure logiciel senior chez Abbeal. Expérience produit, livraison et squads embarquées chez nos clients européens."
+      },
+      {
+        "name": "Marie Nuellas",
+        "role": "Ingénieure logiciel",
+        "hub": "Pôle Asie · Tokyo",
+        "photo": "marie.jpg",
+        "bio": "Ingénieure logiciel Tokyo. Auteure de l'article d'apprentissage du japonais (Anki / WaniKani / Bunpro) après son JLPT N2. Bilingue techno / culture japonaise."
+      },
+      {
+        "name": "Sacha Brami",
+        "role": "Ingénieur logiciel senior",
         "hub": "Pôle Amériques · Montréal",
-        "photo": "team-3.jpg"
-      },
-      {
-        "name": "Tech Recruiter",
-        "role": "Recrutement · Lead",
-        "hub": "Pôle Europe · Paris",
-        "photo": "team-4.jpg"
-      },
-      {
-        "name": "Lead Data Engineer",
-        "role": "Données · Lead",
-        "hub": "Pôle Europe · Paris",
-        "photo": "team-5.jpg"
-      },
-      {
-        "name": "Senior Robotics Engineer",
-        "role": "Robotique · Senior",
-        "hub": "Pôle Asie · Tokyo",
-        "photo": "team-6.jpg"
+        "photo": "sacha.jpg",
+        "bio": "Ingénieur logiciel senior Montréal. Expérience longue durée sur des comptes télécoms / médias québécois (Cogeco) et squads transatlantiques."
       }
     ],
     "statsTape": "// Chiffres",
