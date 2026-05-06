@@ -730,10 +730,22 @@
     "processTitle": "応募者約50名に1名がオファーを獲得。5ステップで紹介。",
     "processIntro": "人工的なLeetCodeも引っかけクイズもありません。クリティカルなソフトウェアを厳密性と自律性をもってデリバリーできるかを確認します。プロセス全体は2-3週間。各ステップでフィードバックを返します — 結果がどちらであっても。",
     "processStats": [
-      { "value": "約50/1", "label": "応募者数 / オファー数" },
-      { "value": "2-3週間", "label": "プロセス平均期間" },
-      { "value": "75%", "label": "オファー受諾率" },
-      { "value": "100%", "label": "各ステップでフィードバック" }
+      {
+        "value": "約50/1",
+        "label": "応募者数 / オファー数"
+      },
+      {
+        "value": "2-3週間",
+        "label": "プロセス平均期間"
+      },
+      {
+        "value": "75%",
+        "label": "オファー受諾率"
+      },
+      {
+        "value": "100%",
+        "label": "各ステップでフィードバック"
+      }
     ],
     "processSteps": [
       {
@@ -989,18 +1001,55 @@
         "hub": "アメリカ拠点 · モントリオール",
         "photo": "vianney.jpg",
         "bio": "Abbealを北米にアンカーするため、2023年にモントリオール拠点を共同創業。2024年11月より社長。アメリカP&L管掌、Mobbeal候補者オペレーションの責任者、サン・ドゥニ通りオフィス金曜デモのホスト役。"
+      },
+      {
+        "name": "Alexandre Lim",
+        "role": "シニアソフトウェアエンジニア",
+        "hub": "アジアハブ・東京",
+        "photo": "alex.jpg",
+        "bio": "日本在住3年。ル・モンドのInsightsチームでシニアソフトウェアエンジニアとして東京から稼働。開発8年、Next.js / Reactに特化。Follow-the-Sunモデルの具体的な証拠。"
       }
     ],
     "teamTape": "// チーム",
     "teamTitle": "デリバリーを支える顔ぶれ。",
     "teamSubtitle": "リード、アーキテクト、リクルーター。一緒に仕事すれば出会うメンバーの一部です。",
     "team": [
-      { "name": "Lead Engineer", "role": "ソフトウェア · リード", "hub": "EU拠点 · パリ", "photo": "team-1.jpg" },
-      { "name": "Senior Architect", "role": "アーキテクチャ · シニア", "hub": "アジア拠点 · 東京", "photo": "team-2.jpg" },
-      { "name": "Engineering Manager", "role": "デリバリー · マネージャー", "hub": "アメリカ拠点 · モントリオール", "photo": "team-3.jpg" },
-      { "name": "Tech Recruiter", "role": "リクルートメント · リード", "hub": "EU拠点 · パリ", "photo": "team-4.jpg" },
-      { "name": "Lead Data Engineer", "role": "データ · リード", "hub": "EU拠点 · パリ", "photo": "team-5.jpg" },
-      { "name": "Senior Robotics Engineer", "role": "ロボティクス · シニア", "hub": "アジア拠点 · 東京", "photo": "team-6.jpg" }
+      {
+        "name": "Lead Engineer",
+        "role": "ソフトウェア · リード",
+        "hub": "EU拠点 · パリ",
+        "photo": "team-1.jpg"
+      },
+      {
+        "name": "Senior Architect",
+        "role": "アーキテクチャ · シニア",
+        "hub": "アジア拠点 · 東京",
+        "photo": "team-2.jpg"
+      },
+      {
+        "name": "Engineering Manager",
+        "role": "デリバリー · マネージャー",
+        "hub": "アメリカ拠点 · モントリオール",
+        "photo": "team-3.jpg"
+      },
+      {
+        "name": "Tech Recruiter",
+        "role": "リクルートメント · リード",
+        "hub": "EU拠点 · パリ",
+        "photo": "team-4.jpg"
+      },
+      {
+        "name": "Lead Data Engineer",
+        "role": "データ · リード",
+        "hub": "EU拠点 · パリ",
+        "photo": "team-5.jpg"
+      },
+      {
+        "name": "Senior Robotics Engineer",
+        "role": "ロボティクス · シニア",
+        "hub": "アジア拠点 · 東京",
+        "photo": "team-6.jpg"
+      }
     ],
     "statsTape": "// 数字",
     "statsTitle": "規模であって、騒音ではない。",

@@ -38,6 +38,14 @@ export type ArticleBlock =
       logoSrc: string;
       href: string;
       tagline?: string;
+    }
+  /** Image illustrative dans le body. src = chemin absolu sous /public.
+   *  Caption optionnelle affichée en dessous, italique gris. */
+  | {
+      type: "image";
+      src: string;
+      alt: string;
+      caption?: string;
     };
 
 type Translatable<T> = { fr: T } & Partial<Record<Exclude<Locale, "fr">, T>>;
@@ -322,6 +330,110 @@ export const articles: Article[] = [
       en: ARTICLE_BODIES["ai-agents-french-banks"]?.en,
       ja: ARTICLE_BODIES["ai-agents-french-banks"]?.ja,
       "fr-ca": ARTICLE_BODIES["ai-agents-french-banks"]?.["fr-ca"],
+    },
+  },
+  // Article 13 — Hugo : VIE Tokyo, dev fullstack, ex-Toyota France
+  {
+    slug: "vie-tokyo-developpeur-hugo",
+    featured: false,
+    tag: "Mobbeal",
+    readTime: "5 min",
+    publishedAt: "2026-05-06",
+    title: {
+      fr: "VIE Tokyo : Hugo, développeur fullstack, parti après 3 ans chez Toyota France.",
+      en: "VIE Tokyo: Hugo, fullstack developer, left after 3 years at Toyota France.",
+      ja: "VIE東京：Hugo、フルスタック開発者、トヨタ・フランスでの3年後に出発。",
+      "fr-ca": "VIE Tokyo : Hugo, développeur fullstack, parti après 3 ans chez Toyota France.",
+    },
+    excerpt: {
+      fr: "26 ans, en VIE chez Abbeal Tokyo depuis octobre 2025 sur une mission e-commerce IBM HCL Commerce (Java + JSP). Comment l'expérience Toyota Motor Manufacturing France a façonné son envie de Japon, et comment la flexibilité de son équipe française rend le décalage horaire tenable.",
+      en: "26 years old, on VIE at Abbeal Tokyo since October 2025 on an IBM HCL Commerce (Java + JSP) e-commerce mission. How his Toyota Motor Manufacturing France experience shaped his Japan call, and how his French team's flexibility makes the time zone gap manageable.",
+      ja: "26歳、2025年10月からAbbeal東京でVIE、IBM HCL Commerce（Java + JSP）のEコマース案件。トヨタモーター・マニュファクチャリング・フランスでの経験が日本志向をどう形作ったか、フランスチームの柔軟性が時差をどう乗り越えやすくしているか。",
+      "fr-ca": "26 ans, en VIE chez Abbeal Tokyo depuis octobre 2025 sur un mandat e-commerce IBM HCL Commerce (Java + JSP). Comment l'expérience Toyota Motor Manufacturing France a façonné son envie de Japon, et comment la flexibilité de son équipe française rend le décalage horaire tenable.",
+    },
+    body: {
+      fr: ARTICLE_BODIES["vie-tokyo-developpeur-hugo"]?.fr ?? [],
+      en: ARTICLE_BODIES["vie-tokyo-developpeur-hugo"]?.en,
+      ja: ARTICLE_BODIES["vie-tokyo-developpeur-hugo"]?.ja,
+      "fr-ca": ARTICLE_BODIES["vie-tokyo-developpeur-hugo"]?.["fr-ca"],
+    },
+  },
+  // Article 14 — Alex : 3 ans Tokyo, Senior SE, Next.js/React
+  {
+    slug: "expat-tokyo-3-ans-alex-senior-engineer",
+    featured: false,
+    tag: "Mobbeal",
+    readTime: "6 min",
+    publishedAt: "2026-05-06",
+    title: {
+      fr: "3 ans à Tokyo : Alex, Senior Software Engineer, comment il vit son décalage de 7-8h.",
+      en: "3 years in Tokyo: Alex, Senior Software Engineer, how he lives his 7-8h time gap.",
+      ja: "東京で3年：Alex、シニアソフトウェアエンジニア、7-8時間の時差をどう生きるか。",
+      "fr-ca": "3 ans à Tokyo : Alex, Senior Software Engineer, comment il vit son décalage de 7-8h.",
+    },
+    excerpt: {
+      fr: "8 ans de dev, 3 ans au Japon. Alex bosse aux horaires français (14h-minuit Tokyo), avec aménagements négociés après 6 mois. Comment il a convaincu son client (« 6 mois pour voir »), et pourquoi ça dure depuis 3 ans.",
+      en: "8 years of dev, 3 years in Japan. Alex works on French hours (2pm-midnight Tokyo), with negotiated flex after 6 months. How he convinced his client (\"6 months to see\"), and why it's been running for 3 years.",
+      ja: "開発8年、日本3年。Alexはフランス時間（東京の14時-24時）で働き、6ヶ月後に交渉した柔軟性を持つ。クライアントをどう説得したか（「6ヶ月様子見」）、そしてなぜ3年続いているか。",
+      "fr-ca": "8 ans de dev, 3 ans au Japon. Alex bosse aux horaires français (14h-minuit Tokyo), avec aménagements négociés après 6 mois. Comment il a convaincu son client (« 6 mois pour voir »), et pourquoi ça dure depuis 3 ans.",
+    },
+    body: {
+      fr: ARTICLE_BODIES["expat-tokyo-3-ans-alex-senior-engineer"]?.fr ?? [],
+      en: ARTICLE_BODIES["expat-tokyo-3-ans-alex-senior-engineer"]?.en,
+      ja: ARTICLE_BODIES["expat-tokyo-3-ans-alex-senior-engineer"]?.ja,
+      "fr-ca": ARTICLE_BODIES["expat-tokyo-3-ans-alex-senior-engineer"]?.["fr-ca"],
+    },
+  },
+  // Article 15 — Kevyn : PVT puis visa travail, ingénieur méca, Amplitude Laser
+  {
+    slug: "pvt-tokyo-ingenieur-mecanique-kevyn",
+    featured: false,
+    tag: "Mobbeal",
+    readTime: "6 min",
+    publishedAt: "2026-05-06",
+    title: {
+      fr: "PVT Tokyo : Kevyn, ingénieur mécanique chez Amplitude Laser, 1 an au Japon.",
+      en: "Working Holiday Tokyo: Kevyn, mechanical engineer at Amplitude Laser, 1 year in Japan.",
+      ja: "東京PVT：Kevyn、Amplitude Laserのメカニカルエンジニア、日本1年。",
+      "fr-ca": "EIC Tokyo : Kevyn, ingénieur mécanique chez Amplitude Laser, 1 an au Japon.",
+    },
+    excerpt: {
+      fr: "26 ans, ingé méca laser haute énergie. Parti en PVT puis basculé sur visa de travail. Le décalage 7-8h devient un atout : ses nuits Tokyo = jours France, des sujets urgents se débloquent en continuité. Plus une anecdote shintoïste à la pause midi.",
+      en: "26 years old, high-energy laser mechanical engineer. Left on Working Holiday then switched to work visa. The 7-8h gap becomes an asset: his Tokyo nights = France days, urgent topics unblock in continuity. Plus a Shinto anecdote on lunch break.",
+      ja: "26歳、高エネルギーレーザーのメカニカルエンジニア。PVTで出発後、就労ビザに切り替え。7-8時間の時差が強みに：東京の夜=フランスの昼、緊急の話題が継続的に解決される。プラスお昼休みの神社エピソード。",
+      "fr-ca": "26 ans, ingé méca laser haute énergie. Parti en EIC puis basculé sur visa de travail. Le décalage 7-8h devient un atout : ses nuits Tokyo = jours France, des sujets urgents se débloquent en continuité. Plus une anecdote shintoïste à la pause midi.",
+    },
+    body: {
+      fr: ARTICLE_BODIES["pvt-tokyo-ingenieur-mecanique-kevyn"]?.fr ?? [],
+      en: ARTICLE_BODIES["pvt-tokyo-ingenieur-mecanique-kevyn"]?.en,
+      ja: ARTICLE_BODIES["pvt-tokyo-ingenieur-mecanique-kevyn"]?.ja,
+      "fr-ca": ARTICLE_BODIES["pvt-tokyo-ingenieur-mecanique-kevyn"]?.["fr-ca"],
+    },
+  },
+  // Article 16 — Grégorie : VIE Tokyo, OneID, Vue.js + DevOps + React Native
+  {
+    slug: "vie-tokyo-developpeur-gregorie",
+    featured: false,
+    tag: "Mobbeal",
+    readTime: "5 min",
+    publishedAt: "2026-05-06",
+    title: {
+      fr: "VIE Tokyo : Grégorie, dev fullstack chez OneID, le meilleur des deux mondes.",
+      en: "VIE Tokyo: Grégorie, fullstack dev at OneID, the best of both worlds.",
+      ja: "VIE東京：Grégorie、OneIDのフルスタック開発者、両世界のベスト。",
+      "fr-ca": "VIE Tokyo : Grégorie, dev fullstack chez OneID, le meilleur des deux mondes.",
+    },
+    excerpt: {
+      fr: "22 ans, après 3 ans d'alternance chez OneID. VIE négocié avec un document détaillant les avantages — horaires hybrides FR/JP : matin Tokyo (équipe France dort), soir Tokyo (créneau commun), nuit Tokyo (relais France). Vue.js + DevOps + React Native, Docker en local. Et le danger d'habiter à 2 min d'un Pokémon Center.",
+      en: "22 years old, after 3 years of work-study at OneID. VIE negotiated with a doc detailing benefits — hybrid FR/JP hours: morning Tokyo (France team sleeps), evening Tokyo (common slot), night Tokyo (France handover). Vue.js + DevOps + React Native, Docker locally. And the danger of living 2 minutes from a Pokémon Center.",
+      ja: "22歳、OneIDで3年間のアルタナンス後。利点を詳述した文書でVIEを交渉 — FR/JPハイブリッド時間：東京の朝（フランスチームは就寝）、東京の夕方（共通時間帯）、東京の夜（フランスへ引継ぎ）。Vue.js + DevOps + React Native、ローカルでDocker。そしてポケモンセンターまで2分の場所に住む危険性。",
+      "fr-ca": "22 ans, après 3 ans d'alternance chez OneID. VIE négocié avec un document détaillant les avantages — horaires hybrides FR/JP : matin Tokyo (équipe France dort), soir Tokyo (créneau commun), nuit Tokyo (relais France). Vue.js + DevOps + React Native, Docker en local. Et le danger d'habiter à 2 min d'un Pokémon Center.",
+    },
+    body: {
+      fr: ARTICLE_BODIES["vie-tokyo-developpeur-gregorie"]?.fr ?? [],
+      en: ARTICLE_BODIES["vie-tokyo-developpeur-gregorie"]?.en,
+      ja: ARTICLE_BODIES["vie-tokyo-developpeur-gregorie"]?.ja,
+      "fr-ca": ARTICLE_BODIES["vie-tokyo-developpeur-gregorie"]?.["fr-ca"],
     },
   },
   // Article 12 — Mobbeal témoignage Marie Nuellas (Tokyo). Article RH /

@@ -66,6 +66,9 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
     "Vianney Blanquart": [
       "https://www.linkedin.com/in/vianneyblanquart/",
     ],
+    "Alexandre Lim": [
+      "https://www.linkedin.com/in/alexandre-lim/",
+    ],
   };
   const personsLd = d.leaders.map((l) => ({
     "@context": "https://schema.org",

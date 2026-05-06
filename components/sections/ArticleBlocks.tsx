@@ -164,6 +164,24 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
         </motion.div>
       );
 
+    case "image":
+      return (
+        <motion.figure {...fadeIn} className="my-10">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={block.src}
+            alt={block.alt}
+            className="w-full h-auto rounded-sm border border-[var(--color-border)]"
+            loading="lazy"
+          />
+          {block.caption && (
+            <figcaption className="mt-3 font-mono text-xs text-[var(--color-muted)] italic text-center">
+              {block.caption}
+            </figcaption>
+          )}
+        </motion.figure>
+      );
+
     default:
       return null;
   }

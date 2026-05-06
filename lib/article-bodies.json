@@ -3462,8 +3462,14 @@
       }
     ],
     "ja": [
-      {"type": "p", "content": "この記事は英語で公開されています — BNP、Société Générale、フランスの大手保険会社トップ3の角度から、英語圏市場（東京、モントリオール、ニューヨーク）向けに執筆。フランス銀行業界に特有の7つのパターンを通じて、本番環境のエージェントに関する我々の汎用FRプレイブックを補完します：COBOLコア、ACPR監査、p99 4ms、Anthropic Europe撤退に耐えるフォールバックチェーン。"},
-      {"type": "p", "content": "完全版は英語で公開中：上の言語切替で英語版へ。"}
+      {
+        "type": "p",
+        "content": "この記事は英語で公開されています — BNP、Société Générale、フランスの大手保険会社トップ3の角度から、英語圏市場（東京、モントリオール、ニューヨーク）向けに執筆。フランス銀行業界に特有の7つのパターンを通じて、本番環境のエージェントに関する我々の汎用FRプレイブックを補完します：COBOLコア、ACPR監査、p99 4ms、Anthropic Europe撤退に耐えるフォールバックチェーン。"
+      },
+      {
+        "type": "p",
+        "content": "完全版は英語で公開中：上の言語切替で英語版へ。"
+      }
     ],
     "fr-ca": [
       {
@@ -3763,6 +3769,1682 @@
       {
         "type": "p",
         "content": "— Marie Nuellas, ingénieure chez Abbeal Tokyo"
+      }
+    ]
+  },
+  "vie-tokyo-developpeur-hugo": {
+    "fr": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/hugo.jpg",
+        "alt": "Hugo, développeur fullstack Abbeal Tokyo",
+        "caption": "Hugo à Tokyo, devant un izakaya."
+      },
+      {
+        "type": "p",
+        "content": "Hugo, 26 ans, est arrivé à Tokyo en octobre 2025. Il est développeur fullstack chez Abbeal sur une mission e-commerce avec une stack volontairement old-school : IBM HCL Commerce, Java côté back, JSP côté front. Avant Tokyo : 3 ans en alternance chez Toyota Motor Manufacturing France. C'est cette expérience qui a allumé la mèche."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi le Japon, et à quel moment le saut"
+      },
+      {
+        "type": "p",
+        "content": "« De par mon expérience en alternance, j'ai pu passer 3 ans chez Toyota Motor Manufacturing France. J'ai découvert les méthodes de travail japonaises mais aussi la culture grâce à l'intervention de personnes venant du Japon pour nous aider à développer les process au sein de l'entreprise. »"
+      },
+      {
+        "type": "p",
+        "content": "L'objectif de partir à l'étranger était déjà là. L'expérience Toyota a confirmé que le Japon était le bon endroit. La présence d'Abbeal au Japon a fait le reste : après 1 an dans l'entreprise, l'opportunité de Tokyo s'est présentée. Hugo a sauté."
+      },
+      {
+        "type": "h2",
+        "content": "L'organisation horaire avec une mission française"
+      },
+      {
+        "type": "p",
+        "content": "Hugo travaille sur les mêmes créneaux que ses collègues en France. La méthode agile aide : les rituels (daily, refinement, sprint review) sont à des horaires fixes, faciles à anticiper depuis Tokyo. Pour les réunions ponctuelles, l'équipe joue le jeu : on les programme plutôt en début de matinée ou début d'après-midi côté France, pour que ce ne soit pas trop tard à Tokyo."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "« J'ai la chance d'avoir une équipe flexible et qui sait s'adapter. Depuis 1 an que je suis ici, je n'ai pour l'instant pas eu de problèmes majeurs concernant l'organisation. »"
+      },
+      {
+        "type": "h2",
+        "content": "Comment il a convaincu le client"
+      },
+      {
+        "type": "p",
+        "content": "Pas de bataille rangée. Hugo avait déjà 1 an de mission avec ce client et un track record de qualité. Il était déjà majoritairement en remote (1 jour au bureau par semaine). Travailler depuis Tokyo plutôt que depuis chez lui ne changeait rien à la qualité du travail livré. Et le statut VIE apporte des avantages côté entreprise. Tout le monde s'y retrouvait."
+      },
+      {
+        "type": "h2",
+        "content": "Ce que ce modèle apporte"
+      },
+      {
+        "type": "p",
+        "content": "« Le VIE c'est une opportunité qui, au-delà de nous permettre de travailler à l'étranger, nous fait découvrir un nouveau pays, une nouvelle culture. Au Japon, la culture du travail est un gros sujet. Le fait de continuer à travailler pour une boîte française me permet de garder une zone de confort. Grâce à ça, je peux plus facilement me concentrer sur la découverte du pays et profiter de cette opportunité pour grandir en tant que personne. »"
+      },
+      {
+        "type": "h2",
+        "content": "Les limites"
+      },
+      {
+        "type": "p",
+        "content": "Une seule, mais réelle : travailler avec une boîte française fait qu'on ne pratique pas son japonais au quotidien. Abbeal finance des cours particuliers une fois par semaine — ça aide. Mais pour vraiment progresser, il faut faire l'effort de rencontrer des gens en dehors du travail. Sinon l'expérience japonaise reste partielle."
+      },
+      {
+        "type": "h2",
+        "content": "Ses conseils"
+      },
+      {
+        "type": "p",
+        "content": "La motivation est le facteur n°1. Le premier mois n'est pas évident — c'est un nouveau rythme à prendre. Mais si comme Hugo, le Japon est un objectif clair et qu'en dehors du travail vous prenez le temps de découvrir, le modèle prend très vite."
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "« Pouvoir éviter les métros surchargés parce que tout le monde est au travail pendant que vous vous baladez dans Tokyo, ça reste très agréable même après 1 an. »"
+      },
+      {
+        "type": "p",
+        "content": "— Hugo, développeur fullstack Abbeal, en VIE à Tokyo depuis octobre 2025."
+      },
+      {
+        "type": "link",
+        "label": "Vous aussi, partir à Tokyo en VIE",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ],
+    "en": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/hugo.jpg",
+        "alt": "Hugo, fullstack developer at Abbeal Tokyo",
+        "caption": "Hugo in Tokyo, in front of an izakaya."
+      },
+      {
+        "type": "p",
+        "content": "Hugo, 26, arrived in Tokyo in October 2025. He's a fullstack developer at Abbeal on an e-commerce mission with a deliberately old-school stack: IBM HCL Commerce, Java on the back, JSP on the front. Before Tokyo: 3 years on a work-study program at Toyota Motor Manufacturing France. That experience lit the fuse."
+      },
+      {
+        "type": "h2",
+        "content": "Why Japan, and when to take the leap"
+      },
+      {
+        "type": "p",
+        "content": "\"Through my work-study experience, I spent 3 years at Toyota Motor Manufacturing France. I discovered Japanese working methods but also the culture, thanks to people coming over from Japan to help us develop processes inside the company.\""
+      },
+      {
+        "type": "p",
+        "content": "The goal of going abroad was already there. The Toyota experience confirmed that Japan was the right place. Abbeal's presence in Japan did the rest: after 1 year at the company, the Tokyo opportunity came up. Hugo jumped."
+      },
+      {
+        "type": "h2",
+        "content": "Working hours with a French mission"
+      },
+      {
+        "type": "p",
+        "content": "Hugo works on the same hours as his colleagues in France. Agile methodology helps: the rituals (daily, refinement, sprint review) happen at fixed times, easy to plan from Tokyo. For one-off meetings, the team plays along: they're scheduled rather early in the morning or early afternoon France-side, so it's not too late in Tokyo."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "\"I'm lucky to have a flexible team that knows how to adapt. In the year I've been here, I haven't had any major issues with organization so far.\""
+      },
+      {
+        "type": "h2",
+        "content": "How he convinced the client"
+      },
+      {
+        "type": "p",
+        "content": "No pitched battle. Hugo already had 1 year on the mission with this client and a track record of quality. He was already mostly remote (1 day at the office per week). Working from Tokyo rather than from home didn't change the quality of work delivered. And the VIE status brings benefits on the company side. Everyone came out a winner."
+      },
+      {
+        "type": "h2",
+        "content": "What this model brings"
+      },
+      {
+        "type": "p",
+        "content": "\"VIE is an opportunity that, beyond letting us work abroad, lets us discover a new country, a new culture. In Japan, work culture is a big topic. Continuing to work for a French company lets me keep a comfort zone. Thanks to that, I can more easily focus on discovering the country and use this opportunity to grow as a person.\""
+      },
+      {
+        "type": "h2",
+        "content": "The limits"
+      },
+      {
+        "type": "p",
+        "content": "Just one, but it's real: working with a French company means you don't practice your Japanese day to day. Abbeal funds private lessons once a week — that helps. But to really progress, you have to make the effort to meet people outside work. Otherwise the Japanese experience stays partial."
+      },
+      {
+        "type": "h2",
+        "content": "His advice"
+      },
+      {
+        "type": "p",
+        "content": "Motivation is factor number one. The first month isn't easy — it's a new rhythm to settle into. But if, like Hugo, Japan is a clear goal and you take the time to explore outside work, the model clicks very fast."
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "\"Being able to dodge the packed metros because everyone's at work while you wander around Tokyo — that stays really pleasant even after 1 year.\""
+      },
+      {
+        "type": "p",
+        "content": "— Hugo, fullstack developer at Abbeal, on a VIE in Tokyo since October 2025."
+      },
+      {
+        "type": "link",
+        "label": "You too, head to Tokyo on a VIE",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ],
+    "ja": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/hugo.jpg",
+        "alt": "Hugo、Abbeal東京のフルスタック開発者",
+        "caption": "東京の居酒屋前のHugo。"
+      },
+      {
+        "type": "p",
+        "content": "Hugo、26歳は2025年10月に東京に到着しました。AbbealでEコマース案件のフルスタック開発者として、あえて古典的なスタックに取り組んでいます。IBM HCL Commerce、バックエンドはJava、フロントエンドはJSPです。東京の前は、フランスのToyota Motor Manufacturing Franceで3年間のアルテルナンス（産学連携プログラム）を経験しました。この経験が彼の背中を押しました。"
+      },
+      {
+        "type": "h2",
+        "content": "なぜ日本か、そしていつ決断したのか"
+      },
+      {
+        "type": "p",
+        "content": "「アルテルナンスを通じて、Toyota Motor Manufacturing Franceで3年間過ごすことができました。日本式の働き方を学ぶだけでなく、社内のプロセス構築のために日本から来てくれた方々を通じて、文化にも触れることができました。」"
+      },
+      {
+        "type": "p",
+        "content": "海外で働きたいという目標はすでにありました。Toyotaでの経験で、日本が最適な場所だと確信しました。残りはAbbealの日本拠点が後押ししました。入社1年後に東京の機会が訪れ、Hugoは飛び込みました。"
+      },
+      {
+        "type": "h2",
+        "content": "フランスの案件と時差の調整"
+      },
+      {
+        "type": "p",
+        "content": "Hugoはフランスの同僚と同じ時間帯で働いています。アジャイル手法が役に立っています。儀式（デイリー、リファインメント、スプリントレビュー）は決まった時間に行われ、東京から予定を立てやすいのです。スポットの会議については、チームが配慮してくれます。フランス側で午前中の早い時間か午後の早い時間に予定されるので、東京では遅すぎる時間にはなりません。"
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "「柔軟で適応力のあるチームに恵まれました。ここに来て1年、組織面で大きな問題はありませんでした。」"
+      },
+      {
+        "type": "h2",
+        "content": "クライアントをどう説得したか"
+      },
+      {
+        "type": "p",
+        "content": "戦いはありませんでした。Hugoはすでにこのクライアントとの案件で1年の実績があり、品質面での信頼もありました。すでに大半がリモート（週1日のみオフィス）でした。自宅から働くか東京から働くかで、納品物の品質は変わりません。さらにVIE（国際ボランティア制度）のステータスは企業側にもメリットをもたらします。全員にとってウィンウィンでした。"
+      },
+      {
+        "type": "h2",
+        "content": "このモデルがもたらすもの"
+      },
+      {
+        "type": "p",
+        "content": "「VIEは海外で働けるだけでなく、新しい国、新しい文化を発見できる機会です。日本では仕事文化が大きなテーマです。フランスの会社で働き続けることで、コンフォートゾーンを保てます。そのおかげで、国を知ることに集中しやすく、この機会を使って人間として成長できます。」"
+      },
+      {
+        "type": "h2",
+        "content": "限界"
+      },
+      {
+        "type": "p",
+        "content": "一つだけ、でも現実的なものです。フランスの会社で働くと日本語を日常的に使う機会がありません。Abbealは週1回のプライベートレッスンを支援してくれます。これは助かります。でも本当に上達するには、仕事以外で人と会う努力が必要です。そうしないと日本での経験が中途半端になります。"
+      },
+      {
+        "type": "h2",
+        "content": "アドバイス"
+      },
+      {
+        "type": "p",
+        "content": "モチベーションが最重要要素です。最初の1ヶ月は楽ではありません。新しいリズムに慣れる必要があります。でもHugoのように日本が明確な目標で、仕事以外の時間を使って国を発見するなら、このモデルにはすぐ馴染めます。"
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "「みんなが仕事中の時間に東京を散歩できて、混雑した地下鉄を避けられる。これは1年経っても本当に気持ちいいです。」"
+      },
+      {
+        "type": "p",
+        "content": "— Hugo、Abbealフルスタック開発者、2025年10月から東京でVIE滞在中。"
+      },
+      {
+        "type": "link",
+        "label": "あなたもVIEで東京へ",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/hugo.jpg",
+        "alt": "Hugo, développeur fullstack Abbeal Tokyo",
+        "caption": "Hugo à Tokyo, devant un izakaya."
+      },
+      {
+        "type": "p",
+        "content": "Hugo, 26 ans, est arrivé à Tokyo en octobre 2025. Il est développeur fullstack chez Abbeal sur une mandat e-commerce avec une pile volontairement old-school : IBM HCL Commerce, Java côté back, JSP côté front. Avant Tokyo : 3 ans en alternance chez Toyota Motor Manufacturing France. C'est cette expérience qui a allumé la mèche."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi le Japon, et à quel moment le saut"
+      },
+      {
+        "type": "p",
+        "content": "« De par mon expérience en alternance, j'ai pu passer 3 ans chez Toyota Motor Manufacturing France. J'ai découvert les méthodes de travail japonaises mais aussi la culture grâce à l'intervention de personnes venant du Japon pour nous aider à développer les process au sein de l'entreprise. »"
+      },
+      {
+        "type": "p",
+        "content": "L'objectif de partir à l'étranger était déjà là. L'expérience Toyota a confirmé que le Japon était le bon endroit. La présence d'Abbeal au Japon a fait le reste : après 1 an dans l'entreprise, l'opportunité de Tokyo s'est présentée. Hugo a sauté."
+      },
+      {
+        "type": "h2",
+        "content": "L'organisation horaire avec une mandat française"
+      },
+      {
+        "type": "p",
+        "content": "Hugo travaille sur les mêmes créneaux que ses collègues en France. La méthode agile aide : les rituels (daily, refinement, sprint review) sont à des horaires fixes, faciles à anticiper depuis Tokyo. Pour les réunions ponctuelles, l'équipe joue le jeu : on les programme plutôt en début de matinée ou début d'après-midi côté France, pour que ce ne soit pas trop tard à Tokyo."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "« J'ai la chance d'avoir une équipe flexible et qui sait s'adapter. Depuis 1 an que je suis ici, je n'ai pour l'instant pas eu de problèmes majeurs concernant l'organisation. »"
+      },
+      {
+        "type": "h2",
+        "content": "Comment il a convaincu le client"
+      },
+      {
+        "type": "p",
+        "content": "Pas de bataille rangée. Hugo avait déjà 1 an de mandat avec ce client et un track record de qualité. Il était déjà majoritairement en remote (1 jour au bureau par semaine). Travailler depuis Tokyo plutôt que depuis chez lui ne changeait rien à la qualité du travail livré. Et le statut VIE apporte des avantages côté entreprise. Tout le monde s'y retrouvait."
+      },
+      {
+        "type": "h2",
+        "content": "Ce que ce modèle apporte"
+      },
+      {
+        "type": "p",
+        "content": "« Le VIE c'est une opportunité qui, au-delà de nous permettre de travailler à l'étranger, nous fait découvrir un nouveau pays, une nouvelle culture. Au Japon, la culture du travail est un gros sujet. Le fait de continuer à travailler pour une boîte française me permet de garder une zone de confort. Grâce à ça, je peux plus facilement me concentrer sur la découverte du pays et profiter de cette opportunité pour grandir en tant que personne. »"
+      },
+      {
+        "type": "h2",
+        "content": "Les limites"
+      },
+      {
+        "type": "p",
+        "content": "Une seule, mais réelle : travailler avec une boîte française fait qu'on ne pratique pas son japonais au quotidien. Abbeal finance des cours particuliers une fois par semaine — ça aide. Mais pour vraiment progresser, il faut faire l'effort de rencontrer des gens en dehors du travail. Sinon l'expérience japonaise reste partielle."
+      },
+      {
+        "type": "h2",
+        "content": "Ses conseils"
+      },
+      {
+        "type": "p",
+        "content": "La motivation est le facteur n°1. Le premier mois n'est pas évident — c'est un nouveau rythme à prendre. Mais si comme Hugo, le Japon est un objectif clair et qu'en dehors du travail vous prenez le temps de découvrir, le modèle prend très vite."
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "« Pouvoir éviter les métros surchargés parce que tout le monde est au travail pendant que vous vous baladez dans Tokyo, ça reste très agréable même après 1 an. »"
+      },
+      {
+        "type": "p",
+        "content": "— Hugo, développeur fullstack Abbeal, en VIE à Tokyo depuis octobre 2025."
+      },
+      {
+        "type": "link",
+        "label": "Vous aussi, partir à Tokyo en VIE",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ]
+  },
+  "expat-tokyo-3-ans-alex-senior-engineer": {
+    "fr": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/alex.jpg",
+        "alt": "Alex en randonnée au mont Tateyama (Yamasaki, Alpes japonaises)",
+        "caption": "Alex au mont Tateyama, Alpes japonaises — un des bénéfices long-séjour."
+      },
+      {
+        "type": "p",
+        "content": "Alex vit au Japon depuis 3 ans. 8 ans de dev derrière lui, avec une spécialisation sur l'écosystème JS (Next.js, React). Son rôle officiel : Senior Software Engineer. Officieusement, il fait aussi pas mal de management de projet. Voici comment il a tenu un client français pendant 3 ans depuis Tokyo."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi le Japon, et à quel moment le saut"
+      },
+      {
+        "type": "p",
+        "content": "« Je voulais tenter une aventure à l'étranger et Abbeal possédait une branche au Canada et allait ouvrir au Japon. Je pensais visiter le Japon un jour car on m'avait dit que c'était très dépaysant. J'ai donc saisi l'opportunité proposée par Abbeal. »"
+      },
+      {
+        "type": "h2",
+        "content": "L'organisation horaire : un dev 100 % télétravail, 7-8h plus tard"
+      },
+      {
+        "type": "p",
+        "content": "Alex fait à peu près les heures françaises. Le Japon est en avance de 7h ou 8h selon le changement horaire en France. Sa plage horaire de travail à Tokyo : 14h-15h jusqu'à minuit. Pas trivial à entendre, mais c'est aménageable — il y revient plus bas."
+      },
+      {
+        "type": "p",
+        "content": "Du point de vue client et équipes, il fonctionne comme un dev 100 % télétravail. Outils : Google Meet et Slack. C'est tout. Pas de magie, juste des rituels qu'on tient."
+      },
+      {
+        "type": "h2",
+        "content": "Comment il a convaincu le client"
+      },
+      {
+        "type": "p",
+        "content": "« J'ai proposé de m'aligner sur les horaires français pour 6 mois. Cela fait maintenant 3 ans que ça dure. »"
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Le levier négo : « 6 mois pour voir ». Le client n'a rien à perdre — si ça ne marche pas, on revient à la case départ. Et 6 mois c'est assez court pour que l'engagement soit faible côté client, mais assez long pour que la confiance s'installe. Trois ans plus tard, personne ne reparle d'arrêter."
+      },
+      {
+        "type": "h2",
+        "content": "Ce que ce modèle apporte"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Découvrir le Japon en gardant un environnement de travail français — celui du Japon peut être très différent et déroutant",
+          "Organiser ses congés différemment : au Japon, ils se prennent surtout pendant la Golden Week (fin avril-début mai), Obon (mi-août) et le Nouvel An. Ne pas être dépendant du calendrier japonais est une vraie liberté",
+          "Les bénéfices du télétravail : éviter les heures de pointe (surtout l'été à 35°C), empêcher les interruptions sauvages, être plus productif"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Les difficultés et comment les contourner"
+      },
+      {
+        "type": "p",
+        "content": "Le challenge principal : le décalage horaire. Mais après avoir trouvé un bon rythme avec le client, c'est négociable. Alex présente deux options qui marchent :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Présence côté France uniquement en matinée. On termine vers 19h-20h Tokyo (12h-13h France) — fenêtre de chevauchement courte mais suffisante pour les rituels",
+          "Journées en total décalage avec 1h-2h de synchro le matin France. On termine vers 17h-18h Tokyo. Demande un peu d'organisation avec le client mais possible"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Ses conseils"
+      },
+      {
+        "type": "p",
+        "content": "Idéalement, avoir déjà vécu une expérience télétravail à 100 % pour savoir si ça vous correspond. Possible aussi de passer par le bureau d'Abbeal Tokyo et rencontrer les collègues — c'est souvent ce qui débloque la décision."
+      },
+      {
+        "type": "p",
+        "content": "Côté gestion du décalage : commencer par s'aligner sur les heures françaises avec 1h-2h de décalage le temps que chacun trouve ses repères et que la confiance s'installe. Une fois la relation construite, l'aménagement est facile à aborder."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Tenir Google Calendar et Slack à jour religieusement (statut, agenda visible)",
+          "Ne surtout pas hésiter à organiser un call si les échanges écrits font trop d'aller-retour",
+          "Pour la communication asynchrone, lire et appliquer nohello.net"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "— Alex, Senior Software Engineer Abbeal, à Tokyo depuis 3 ans."
+      },
+      {
+        "type": "link",
+        "label": "Vous aussi, partir à Tokyo en mission Abbeal",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ],
+    "en": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/alex.jpg",
+        "alt": "Alex hiking at Mount Tateyama (Yamasaki, Japanese Alps)",
+        "caption": "Alex at Mount Tateyama, Japanese Alps — one of the long-stay benefits."
+      },
+      {
+        "type": "p",
+        "content": "Alex has lived in Japan for 3 years. 8 years of dev behind him, with a specialization in the JS ecosystem (Next.js, React). His official role: Senior Software Engineer. Unofficially, he also does quite a bit of project management. Here's how he held a French client for 3 years from Tokyo."
+      },
+      {
+        "type": "h2",
+        "content": "Why Japan, and when to take the leap"
+      },
+      {
+        "type": "p",
+        "content": "\"I wanted to try an adventure abroad and Abbeal had a branch in Canada and was about to open one in Japan. I was thinking of visiting Japan one day because people had told me it was very different. So I grabbed the opportunity Abbeal offered.\""
+      },
+      {
+        "type": "h2",
+        "content": "Working hours: a 100% remote dev, 7-8h later"
+      },
+      {
+        "type": "p",
+        "content": "Alex works roughly French hours. Japan is 7h or 8h ahead depending on France's time change. His Tokyo working hours: 2pm-3pm until midnight. Not trivial when you say it out loud, but it's workable — he comes back to that below."
+      },
+      {
+        "type": "p",
+        "content": "From the client's and the team's point of view, he operates as a 100% remote dev. Tools: Google Meet and Slack. That's it. No magic, just rituals you stick to."
+      },
+      {
+        "type": "h2",
+        "content": "How he convinced the client"
+      },
+      {
+        "type": "p",
+        "content": "\"I offered to align on French hours for 6 months. It's now been 3 years.\""
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "The negotiation lever: \"6 months to see\". The client has nothing to lose — if it doesn't work, we go back to square one. And 6 months is short enough that the client's commitment is light, but long enough for trust to build. Three years later, nobody talks about stopping."
+      },
+      {
+        "type": "h2",
+        "content": "What this model brings"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Discover Japan while keeping a French work environment — Japan's can be very different and disorienting",
+          "Organize time off differently: in Japan, holidays are mostly taken during Golden Week (late April-early May), Obon (mid-August) and New Year. Not depending on the Japanese calendar is real freedom",
+          "The benefits of remote work: dodge rush hour (especially summer at 35°C), prevent random interruptions, be more productive"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "The challenges and how to work around them"
+      },
+      {
+        "type": "p",
+        "content": "The main challenge: the time difference. But once you've found a good rhythm with the client, it's negotiable. Alex offers two options that work:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "France-side presence in the morning only. You wrap around 7pm-8pm Tokyo (12pm-1pm France) — short overlap window but enough for the rituals",
+          "Fully shifted days with 1h-2h of sync in the French morning. You wrap around 5pm-6pm Tokyo. Takes some organization with the client but doable"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "His advice"
+      },
+      {
+        "type": "p",
+        "content": "Ideally, you've already lived a 100% remote experience to know if it suits you. You can also drop by the Abbeal Tokyo office and meet the colleagues — that's often what unlocks the decision."
+      },
+      {
+        "type": "p",
+        "content": "On managing the time difference: start by aligning on French hours with a 1h-2h shift while everyone finds their bearings and trust builds. Once the relationship is built, the adjustment is easy to bring up."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Keep Google Calendar and Slack religiously up to date (status, visible agenda)",
+          "Don't hesitate to schedule a call if written exchanges drag too much",
+          "For asynchronous communication, read and apply nohello.net"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "— Alex, Senior Software Engineer at Abbeal, in Tokyo for 3 years."
+      },
+      {
+        "type": "link",
+        "label": "You too, head to Tokyo on an Abbeal mission",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ],
+    "ja": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/alex.jpg",
+        "alt": "立山（山崎、日本アルプス）でハイキング中のAlex",
+        "caption": "日本アルプスの立山でのAlex。長期滞在ならではの恩恵の一つ。"
+      },
+      {
+        "type": "p",
+        "content": "Alexは日本に3年住んでいます。開発歴8年で、JSエコシステム（Next.js、React）が専門です。公式の役職はSenior Software Engineer。非公式には、プロジェクトマネジメントもかなり担当しています。東京からフランスのクライアントを3年間維持した方法を紹介します。"
+      },
+      {
+        "type": "h2",
+        "content": "なぜ日本か、そしていつ決断したのか"
+      },
+      {
+        "type": "p",
+        "content": "「海外で挑戦したかったし、Abbealはカナダに支社があり、日本にも開設予定でした。日本はとても新鮮だと聞いていたので、いつか訪れたいと思っていました。それでAbbealの提案に飛びつきました。」"
+      },
+      {
+        "type": "h2",
+        "content": "勤務時間：100%リモートワークの開発者、7〜8時間遅れ"
+      },
+      {
+        "type": "p",
+        "content": "Alexはほぼフランス時間で働いています。日本はフランスの夏時間に応じて7時間または8時間進んでいます。東京での勤務時間帯は14時〜15時から深夜0時まで。口に出すと簡単ではありませんが、調整可能です。後ほど詳しく述べます。"
+      },
+      {
+        "type": "p",
+        "content": "クライアントとチームから見れば、彼は100%リモートの開発者として機能しています。ツールはGoogle MeetとSlackだけ。魔法はなく、続ける儀式があるだけです。"
+      },
+      {
+        "type": "h2",
+        "content": "クライアントをどう説得したか"
+      },
+      {
+        "type": "p",
+        "content": "「6ヶ月間フランスの時間に合わせると提案しました。それが今では3年続いています。」"
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "交渉の切り札は「まず6ヶ月試してみよう」。クライアントは失うものがありません。うまくいかなければ元に戻ればいい。6ヶ月という期間は、クライアント側のコミットメントが軽い一方で、信頼関係を築くには十分な長さです。3年経った今、誰も中止の話はしません。"
+      },
+      {
+        "type": "h2",
+        "content": "このモデルがもたらすもの"
+      },
+      {
+        "type": "list",
+        "items": [
+          "フランスの仕事環境を保ちながら日本を発見できる。日本の働き方は大きく異なり、戸惑うこともあるため",
+          "休暇を違うやり方で組める。日本ではゴールデンウィーク（4月末〜5月初旬）、お盆（8月中旬）、年末年始に休暇が集中します。日本のカレンダーに縛られないのは本当の自由です",
+          "リモートワークの恩恵：ラッシュアワーを避けられる（特に夏場の35°C）、突然の割り込みを防げる、生産性が上がる"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "直面した困難とその対処法"
+      },
+      {
+        "type": "p",
+        "content": "主な課題は時差です。でもクライアントと良いリズムを見つけてしまえば、交渉可能です。Alexがうまく機能している2つのオプションを提案します。"
+      },
+      {
+        "type": "list",
+        "items": [
+          "フランス側での立ち会いは午前中のみ。東京時間の19〜20時（フランス12〜13時）に終業。重なる時間帯は短いですが、儀式には十分です",
+          "完全にずらした日程で、フランスの朝に1〜2時間の同期。東京時間の17〜18時に終業。クライアントとの調整は必要ですが可能です"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "アドバイス"
+      },
+      {
+        "type": "p",
+        "content": "理想的には100%リモートワークの経験をすでに持っていて、それが自分に合うか分かっていることです。Abbeal東京オフィスに立ち寄って同僚に会うこともできます。これが決断の後押しになることが多いです。"
+      },
+      {
+        "type": "p",
+        "content": "時差の管理について：まずはフランス時間に合わせて1〜2時間ずらすところから始め、お互いの感覚と信頼関係を築いていきます。関係性ができたら、調整の話は持ち出しやすくなります。"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Google CalendarとSlackを徹底的に最新の状態に保つ（ステータス、予定の可視化）",
+          "文字でのやり取りが行ったり来たりしすぎる場合は、躊躇せず通話を設定する",
+          "非同期コミュニケーションについては、nohello.netを読んで実践する"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "— Alex、AbbealのSenior Software Engineer、東京在住3年。"
+      },
+      {
+        "type": "link",
+        "label": "あなたもAbbealの案件で東京へ",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/alex.jpg",
+        "alt": "Alex en randonnée au mont Tateyama (Yamasaki, Alpes japonaises)",
+        "caption": "Alex au mont Tateyama, Alpes japonaises — un des bénéfices long-séjour."
+      },
+      {
+        "type": "p",
+        "content": "Alex vit au Japon depuis 3 ans. 8 ans de dev derrière lui, avec une spécialisation sur l'écosystème JS (Next.js, React). Son rôle officiel : Senior Software Engineer. Officieusement, il fait aussi pas mal de management de projet. Voici comment il a tenu un client français pendant 3 ans depuis Tokyo."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi le Japon, et à quel moment le saut"
+      },
+      {
+        "type": "p",
+        "content": "« Je voulais tenter une aventure à l'étranger et Abbeal possédait une branche au Canada et allait ouvrir au Japon. Je pensais visiter le Japon un jour car on m'avait dit que c'était très dépaysant. J'ai donc saisi l'opportunité proposée par Abbeal. »"
+      },
+      {
+        "type": "h2",
+        "content": "L'organisation horaire : un dev 100 % télétravail, 7-8h plus tard"
+      },
+      {
+        "type": "p",
+        "content": "Alex fait à peu près les heures françaises. Le Japon est en avance de 7h ou 8h selon le changement horaire en France. Sa plage horaire de travail à Tokyo : 14h-15h jusqu'à minuit. Pas trivial à entendre, mais c'est aménageable — il y revient plus bas."
+      },
+      {
+        "type": "p",
+        "content": "Du point de vue client et équipes, il fonctionne comme un dev 100 % télétravail. Outils : Google Meet et Slack. C'est tout. Pas de magie, juste des rituels qu'on tient."
+      },
+      {
+        "type": "h2",
+        "content": "Comment il a convaincu le client"
+      },
+      {
+        "type": "p",
+        "content": "« J'ai proposé de m'aligner sur les horaires français pour 6 mois. Cela fait maintenant 3 ans que ça dure. »"
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Le levier négo : « 6 mois pour voir ». Le client n'a rien à perdre — si ça ne marche pas, on revient à la case départ. Et 6 mois c'est assez court pour que l'engagement soit faible côté client, mais assez long pour que la confiance s'installe. Trois ans plus tard, personne ne reparle d'arrêter."
+      },
+      {
+        "type": "h2",
+        "content": "Ce que ce modèle apporte"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Découvrir le Japon en gardant un environnement de travail français — celui du Japon peut être très différent et déroutant",
+          "Organiser ses congés différemment : au Japon, ils se prennent surtout pendant la Golden Week (fin avril-début mai), Obon (mi-août) et le Nouvel An. Ne pas être dépendant du calendrier japonais est une vraie liberté",
+          "Les bénéfices du télétravail : éviter les heures de pointe (surtout l'été à 35°C), empêcher les interruptions sauvages, être plus productif"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Les difficultés et comment les contourner"
+      },
+      {
+        "type": "p",
+        "content": "Le challenge principal : le décalage horaire. Mais après avoir trouvé un bon rythme avec le client, c'est négociable. Alex présente deux options qui marchent :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Présence côté France uniquement en matinée. On termine vers 19h-20h Tokyo (12h-13h France) — fenêtre de chevauchement courte mais suffisante pour les rituels",
+          "Journées en total décalage avec 1h-2h de synchro le matin France. On termine vers 17h-18h Tokyo. Demande un peu d'organisation avec le client mais possible"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Ses conseils"
+      },
+      {
+        "type": "p",
+        "content": "Idéalement, avoir déjà vécu une expérience télétravail à 100 % pour savoir si ça vous correspond. Possible aussi de passer par le bureau d'Abbeal Tokyo et rencontrer les collègues — c'est souvent ce qui débloque la décision."
+      },
+      {
+        "type": "p",
+        "content": "Côté gestion du décalage : commencer par s'aligner sur les heures françaises avec 1h-2h de décalage le temps que chacun trouve ses repères et que la confiance s'installe. Une fois la relation construite, l'aménagement est facile à aborder."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Tenir Google Calendar et Slack à jour religieusement (statut, agenda visible)",
+          "Ne surtout pas hésiter à organiser un call si les échanges écrits font trop d'aller-retour",
+          "Pour la communication asynchrone, lire et appliquer nohello.net"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "— Alex, Senior Software Engineer Abbeal, à Tokyo depuis 3 ans."
+      },
+      {
+        "type": "link",
+        "label": "Vous aussi, partir à Tokyo en mandat Abbeal",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ]
+  },
+  "pvt-tokyo-ingenieur-mecanique-kevyn": {
+    "fr": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/kevyn.jpg",
+        "alt": "Kevyn devant le sanctuaire shintoïste de son quartier, jour de matsuri",
+        "caption": "Kevyn au matsuri du sanctuaire shintoïste de son quartier — pause déjeuner."
+      },
+      {
+        "type": "p",
+        "content": "Kevyn, 26 ans, est ingénieur en mécanique. Son client : Amplitude Laser, une entreprise française qui développe et fabrique des solutions lasers haute énergie et haute puissance pour la recherche scientifique. Il était déjà chez eux en CDI avant son départ. Au Japon depuis un peu plus d'un an, d'abord en PVT, puis en visa de travail depuis un mois. Voici son histoire."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi le Japon"
+      },
+      {
+        "type": "p",
+        "content": "Le Japon a suscité sa curiosité dès l'enfance. Culture, industrie, automobile. L'envie de partir à l'étranger était là pendant les études, mais le Covid a tout cassé. Après 2 ans et demi de boulot, le contexte s'est aligné : assez d'économies, plus la sécurité de l'emploi français, et l'envie d'aller voir."
+      },
+      {
+        "type": "p",
+        "content": "« Quitte à partir, autant aller à l'autre bout du monde pour découvrir le Japon. »"
+      },
+      {
+        "type": "p",
+        "content": "Au départ : sans emploi côté Japon, juste ses économies. Avec en tête l'option de créer son entreprise ou de rebondir avec divers clients si l'expérience prenait. Elle a pris."
+      },
+      {
+        "type": "h2",
+        "content": "L'organisation : à temps complet pour Amplitude Laser, depuis Tokyo"
+      },
+      {
+        "type": "p",
+        "content": "Kevyn travaille comme avant, mais à 8 fuseaux d'écart. Pas de changement majeur dans l'organisation — juste un démarrage de journée parfois plus tardif pour avoir plus de chevauchement avec les équipes France. Outils : Microsoft Teams pour les échanges quotidiens et les visios. Réunions de suivi hebdo, points projet en visio dès que nécessaire. Les réunions sont l'après-midi pour lui, le matin pour la France."
+      },
+      {
+        "type": "h2",
+        "content": "Comment il a convaincu Amplitude"
+      },
+      {
+        "type": "p",
+        "content": "Deux leviers, et un troisième qui est apparu après-coup."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Levier 1 : expertise métier. Kevyn connaissait déjà le domaine laser et les process internes. Pas de formation à distance d'un nouvel arrivant à organiser",
+          "Levier 2 : relation de confiance. Ayant déjà bossé avec Amplitude, il pouvait appuyer sur le fait que la distance ne serait pas un frein à la productivité, au contraire",
+          "Levier 3 (apparu après les premières semaines) : continuité de travail. Le décalage devient un asset"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "« Pour la France, je travaille la nuit. Lorsque je termine ma journée, les équipes en France prennent la relève. J'ai déjà pu débloquer des situations grâce à ce décalage : je reçois un mail le matin au Japon pour traiter un sujet urgent, je le règle, et au réveil de la France le travail est fait. Avant de signer le contrat, je n'avais pas pensé à cette option. C'est un vrai plus. »"
+      },
+      {
+        "type": "h2",
+        "content": "Ce que ce modèle apporte"
+      },
+      {
+        "type": "p",
+        "content": "Une montée en autonomie forcée. Quand la France dort, il faut décider seul. Être proactif n'est plus une option, c'est la condition de fonctionnement. Kevyn dit avoir gagné en autonomie ces derniers mois : plus de propositions de solutions, moins de dépendance aux référents techniques. Même quand les solutions ne sont pas parfaites, le réflexe d'avancer plutôt que d'attendre fait toute la différence."
+      },
+      {
+        "type": "h2",
+        "content": "Les difficultés rencontrées"
+      },
+      {
+        "type": "p",
+        "content": "La principale : la connexion aux serveurs France. Kevyn travaille avec des fichiers 3D volumineux. L'accès Japon → serveurs France était trop lent, malgré plusieurs tests informatiques. La solution finale : piloter à distance un ordinateur situé sur le site client, qui lui a accès au réseau en direct. Pas glorieux, mais ça marche."
+      },
+      {
+        "type": "h2",
+        "content": "Ses conseils"
+      },
+      {
+        "type": "p",
+        "content": "« Il ne faut pas hésiter à utiliser et démarcher son réseau. Mais le plus important, c'est de provoquer et chercher des opportunités en parlant de son projet autour de soi. Le fait de ne pas appréhender son projet et d'être capable d'en parler rend les choses concrètes. D'un côté, tu vas commencer à croire en ton projet, devenir convaincant. De l'autre, les interlocuteurs vont te prendre au sérieux. »"
+      },
+      {
+        "type": "h2",
+        "content": "Une anecdote"
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "« Il y a une semaine, le sanctuaire shintoïste de mon quartier était en fête. Ce sont des ambiances que j'adore au Japon. Sur ma pause du midi, j'ai pu m'y rendre, participer, regarder les processions et manger un truc avant de retourner travailler. »"
+      },
+      {
+        "type": "p",
+        "content": "— Kevyn, ingénieur mécanique pour Amplitude Laser, à Tokyo depuis 1 an."
+      },
+      {
+        "type": "link",
+        "label": "Vous aussi, partir à Tokyo en mission Abbeal",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ],
+    "en": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/kevyn.jpg",
+        "alt": "Kevyn in front of his neighborhood Shinto shrine on matsuri day",
+        "caption": "Kevyn at his neighborhood Shinto shrine matsuri — lunch break."
+      },
+      {
+        "type": "p",
+        "content": "Kevyn, 26, is a mechanical engineer. His client: Amplitude Laser, a French company that develops and manufactures high-energy, high-power laser solutions for scientific research. He was already working there on a permanent contract before leaving. He's been in Japan for just over a year, first on a PVT (working holiday visa), then on a work visa for the past month. Here's his story."
+      },
+      {
+        "type": "h2",
+        "content": "Why Japan"
+      },
+      {
+        "type": "p",
+        "content": "Japan sparked his curiosity from childhood. Culture, industry, automotive. The desire to go abroad was already there during his studies, but Covid broke everything. After 2 and a half years of work, the context aligned: enough savings, plus the security of his French job, and the urge to go see for himself."
+      },
+      {
+        "type": "p",
+        "content": "\"If I'm going to leave, I might as well go to the other side of the world to discover Japan.\""
+      },
+      {
+        "type": "p",
+        "content": "At first: no job on the Japan side, just his savings. With the option in mind of either starting his own company or bouncing with various clients if the experience took. It did."
+      },
+      {
+        "type": "h2",
+        "content": "Setup: full-time for Amplitude Laser, from Tokyo"
+      },
+      {
+        "type": "p",
+        "content": "Kevyn works as before, but 8 time zones away. No major change in organization — just sometimes a later start to the day to get more overlap with the France teams. Tools: Microsoft Teams for daily exchanges and video calls. Weekly follow-up meetings, project check-ins on video as needed. Meetings are in his afternoon, France's morning."
+      },
+      {
+        "type": "h2",
+        "content": "How he convinced Amplitude"
+      },
+      {
+        "type": "p",
+        "content": "Two levers, and a third that appeared after the fact."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Lever 1: domain expertise. Kevyn already knew the laser field and the internal processes. No remote training of a newcomer to organize",
+          "Lever 2: trust relationship. Having already worked with Amplitude, he could lean on the fact that distance wouldn't be a brake on productivity — quite the opposite",
+          "Lever 3 (which appeared after the first weeks): work continuity. The time difference becomes an asset"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "\"For France, I work at night. When I end my day, the France teams take over. I've already been able to unblock situations thanks to this offset: I get an email in the morning in Japan about an urgent topic, I handle it, and when France wakes up the work is done. Before signing the contract, I hadn't thought about this option. It's a real plus.\""
+      },
+      {
+        "type": "h2",
+        "content": "What this model brings"
+      },
+      {
+        "type": "p",
+        "content": "A forced step up in autonomy. When France sleeps, you have to decide on your own. Being proactive isn't an option anymore, it's the operating condition. Kevyn says he's gained autonomy these past months: more solution proposals, less dependence on technical referents. Even when the solutions aren't perfect, the reflex of moving forward rather than waiting makes all the difference."
+      },
+      {
+        "type": "h2",
+        "content": "The challenges he faced"
+      },
+      {
+        "type": "p",
+        "content": "The main one: connection to the France servers. Kevyn works with heavy 3D files. Japan → France server access was too slow, despite several IT tests. The final solution: remote control a computer located on the client site, which has direct network access. Not glorious, but it works."
+      },
+      {
+        "type": "h2",
+        "content": "His advice"
+      },
+      {
+        "type": "p",
+        "content": "\"Don't hesitate to use and reach out to your network. But the most important thing is to provoke and chase opportunities by talking about your project to people around you. The fact of not being shy about your project and being able to talk about it makes things concrete. On one hand, you start believing in your project, becoming convincing. On the other, the people you talk to take you seriously.\""
+      },
+      {
+        "type": "h2",
+        "content": "An anecdote"
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "\"A week ago, the Shinto shrine in my neighborhood was celebrating. These are the vibes I love in Japan. On my lunch break, I was able to drop by, take part, watch the processions and grab something to eat before going back to work.\""
+      },
+      {
+        "type": "p",
+        "content": "— Kevyn, mechanical engineer for Amplitude Laser, in Tokyo for 1 year."
+      },
+      {
+        "type": "link",
+        "label": "You too, head to Tokyo on an Abbeal mission",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ],
+    "ja": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/kevyn.jpg",
+        "alt": "祭りの日、地元の神社の前のKevyn",
+        "caption": "地元の神社の祭りでのKevyn。昼休み中。"
+      },
+      {
+        "type": "p",
+        "content": "Kevyn、26歳は機械エンジニアです。クライアントはAmplitude Laser。科学研究向けの高エネルギー・高出力レーザーソリューションを開発・製造するフランス企業です。出発前から正社員として在籍していました。日本に来て1年余り、最初はPVT（ワーキングホリデービザ）で、そしてこの1ヶ月は就労ビザで滞在しています。彼のストーリーを紹介します。"
+      },
+      {
+        "type": "h2",
+        "content": "なぜ日本か"
+      },
+      {
+        "type": "p",
+        "content": "日本は子供の頃から興味を引いていました。文化、産業、自動車。学生時代から海外に出たいという思いはありましたが、Covidですべてが崩れました。社会人になって2年半後、状況が揃いました。十分な貯金、フランスでの雇用の安定、そして実際に見に行きたいという気持ちです。"
+      },
+      {
+        "type": "p",
+        "content": "「どうせ出るなら、地球の反対側まで行って日本を発見したい。」"
+      },
+      {
+        "type": "p",
+        "content": "出発時点では日本側の仕事はなく、貯金だけ。会社を立ち上げるか、経験が軌道に乗ればさまざまなクライアントと仕事を続けるか、というオプションを考えていました。軌道に乗りました。"
+      },
+      {
+        "type": "h2",
+        "content": "働き方：東京からAmplitude Laserにフルタイム勤務"
+      },
+      {
+        "type": "p",
+        "content": "Kevynは以前と同じように働いていますが、8時間の時差があります。組織面で大きな変化はありません。フランスチームとの重なりを増やすため、始業がやや遅くなることがある程度です。ツールはMicrosoft Teamsで、日常的なやり取りやビデオ通話に使います。週次のフォローアップ会議、必要に応じてビデオでのプロジェクトチェックイン。会議は彼にとっては午後、フランスにとっては朝です。"
+      },
+      {
+        "type": "h2",
+        "content": "Amplitudeをどう説得したか"
+      },
+      {
+        "type": "p",
+        "content": "切り札は2つ、そして後から3つ目が現れました。"
+      },
+      {
+        "type": "list",
+        "items": [
+          "切り札1：専門性。Kevynはレーザー分野と社内プロセスをすでに熟知していました。新人の遠隔教育を組む必要なし",
+          "切り札2：信頼関係。すでにAmplitudeで働いていたので、距離が生産性の足かせにならないどころか、むしろプラスになると主張できました",
+          "切り札3（最初の数週間後に現れた）：作業の継続性。時差がアセットに変わる"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "「フランスのために、私は夜働いています。私が一日を終える頃、フランスのチームが引き継ぎます。この時差のおかげで、すでに状況を打破したことが何度かあります。日本の朝に緊急の案件のメールが届き、対応する。フランスが起きる頃には作業が完了している。契約に署名する前は、このオプションは考えていませんでした。本当のプラスです。」"
+      },
+      {
+        "type": "h2",
+        "content": "このモデルがもたらすもの"
+      },
+      {
+        "type": "p",
+        "content": "強制的な自律性の向上です。フランスが眠っている間、自分で決断するしかありません。プロアクティブであることはもはやオプションではなく、機能の条件です。Kevynはここ数ヶ月で自律性を高めたと言います。解決策の提案が増え、技術リファレントへの依存が減りました。完璧な解決策でなくても、待つよりも前に進む反射が大きな違いを生みます。"
+      },
+      {
+        "type": "h2",
+        "content": "直面した困難"
+      },
+      {
+        "type": "p",
+        "content": "主な困難はフランスのサーバーへの接続です。Kevynは大容量の3Dファイルを扱います。複数回のIT検証にもかかわらず、日本→フランスのサーバーアクセスは遅すぎました。最終的な解決策は、ネットワークに直接アクセスできるクライアント側のコンピューターをリモートで操作すること。スマートではありませんが、機能します。"
+      },
+      {
+        "type": "h2",
+        "content": "アドバイス"
+      },
+      {
+        "type": "p",
+        "content": "「自分のネットワークを使って働きかけることをためらわないこと。でも一番大事なのは、周りにプロジェクトを話してチャンスを引き寄せ、探しに行くこと。プロジェクトを臆せずに語れることで、物事が具体的になります。一方では、自分がプロジェクトを信じ始め、説得力が出てきます。もう一方では、相手があなたを真剣に受け止めてくれます。」"
+      },
+      {
+        "type": "h2",
+        "content": "ちょっとしたエピソード"
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "「先週、地元の神社で祭りがありました。日本でこういう雰囲気が大好きです。お昼休みに行って、参加して、行列を見て、何か食べてから仕事に戻れました。」"
+      },
+      {
+        "type": "p",
+        "content": "— Kevyn、Amplitude Laserの機械エンジニア、東京在住1年。"
+      },
+      {
+        "type": "link",
+        "label": "あなたもAbbealの案件で東京へ",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/kevyn.jpg",
+        "alt": "Kevyn devant le sanctuaire shintoïste de son quartier, jour de matsuri",
+        "caption": "Kevyn au matsuri du sanctuaire shintoïste de son quartier — pause déjeuner."
+      },
+      {
+        "type": "p",
+        "content": "Kevyn, 26 ans, est ingénieur en mécanique. Son client : Amplitude Laser, une entreprise française qui développe et fabrique des solutions lasers haute énergie et haute puissance pour la recherche scientifique. Il était déjà chez eux en CDI avant son départ. Au Japon depuis un peu plus d'un an, d'abord en PVT, puis en visa de travail depuis un mois. Voici son histoire."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi le Japon"
+      },
+      {
+        "type": "p",
+        "content": "Le Japon a suscité sa curiosité dès l'enfance. Culture, industrie, automobile. L'envie de partir à l'étranger était là pendant les études, mais le Covid a tout cassé. Après 2 ans et demi de boulot, le contexte s'est aligné : assez d'économies, plus la sécurité de l'emploi français, et l'envie d'aller voir."
+      },
+      {
+        "type": "p",
+        "content": "« Quitte à partir, autant aller à l'autre bout du monde pour découvrir le Japon. »"
+      },
+      {
+        "type": "p",
+        "content": "Au départ : sans emploi côté Japon, juste ses économies. Avec en tête l'option de créer son entreprise ou de rebondir avec divers clients si l'expérience prenait. Elle a pris."
+      },
+      {
+        "type": "h2",
+        "content": "L'organisation : à temps complet pour Amplitude Laser, depuis Tokyo"
+      },
+      {
+        "type": "p",
+        "content": "Kevyn travaille comme avant, mais à 8 fuseaux d'écart. Pas de changement majeur dans l'organisation — juste un démarrage de journée parfois plus tardif pour avoir plus de chevauchement avec les équipes France. Outils : Microsoft Teams pour les échanges quotidiens et les visios. Réunions de suivi hebdo, points projet en visio dès que nécessaire. Les réunions sont l'après-midi pour lui, le matin pour la France."
+      },
+      {
+        "type": "h2",
+        "content": "Comment il a convaincu Amplitude"
+      },
+      {
+        "type": "p",
+        "content": "Deux leviers, et un troisième qui est apparu après-coup."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Levier 1 : expertise métier. Kevyn connaissait déjà le domaine laser et les process internes. Pas de formation à distance d'un nouvel arrivant à organiser",
+          "Levier 2 : relation de confiance. Ayant déjà bossé avec Amplitude, il pouvait appuyer sur le fait que la distance ne serait pas un frein à la productivité, au contraire",
+          "Levier 3 (apparu après les premières semaines) : continuité de travail. Le décalage devient un asset"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "« Pour la France, je travaille la nuit. Lorsque je termine ma journée, les équipes en France prennent la relève. J'ai déjà pu débloquer des situations grâce à ce décalage : je reçois un courriel le matin au Japon pour traiter un sujet urgent, je le règle, et au réveil de la France le travail est fait. Avant de signer le contrat, je n'avais pas pensé à cette option. C'est un vrai plus. »"
+      },
+      {
+        "type": "h2",
+        "content": "Ce que ce modèle apporte"
+      },
+      {
+        "type": "p",
+        "content": "Une montée en autonomie forcée. Quand la France dort, il faut décider seul. Être proactif n'est plus une option, c'est la condition de fonctionnement. Kevyn dit avoir gagné en autonomie ces derniers mois : plus de propositions de solutions, moins de dépendance aux référents techniques. Même quand les solutions ne sont pas parfaites, le réflexe d'avancer plutôt que d'attendre fait toute la différence."
+      },
+      {
+        "type": "h2",
+        "content": "Les difficultés rencontrées"
+      },
+      {
+        "type": "p",
+        "content": "La principale : la connexion aux serveurs France. Kevyn travaille avec des fichiers 3D volumineux. L'accès Japon → serveurs France était trop lent, malgré plusieurs tests informatiques. La solution finale : piloter à distance un ordinateur situé sur le site client, qui lui a accès au réseau en direct. Pas glorieux, mais ça marche."
+      },
+      {
+        "type": "h2",
+        "content": "Ses conseils"
+      },
+      {
+        "type": "p",
+        "content": "« Il ne faut pas hésiter à utiliser et démarcher son réseau. Mais le plus important, c'est de provoquer et chercher des opportunités en parlant de son projet autour de soi. Le fait de ne pas appréhender son projet et d'être capable d'en parler rend les choses concrètes. D'un côté, tu vas commencer à croire en ton projet, devenir convaincant. De l'autre, les interlocuteurs vont te prendre au sérieux. »"
+      },
+      {
+        "type": "h2",
+        "content": "Une anecdote"
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "« Il y a une semaine, le sanctuaire shintoïste de mon quartier était en fête. Ce sont des ambiances que j'adore au Japon. Sur ma pause du midi, j'ai pu m'y rendre, participer, regarder les processions et manger un truc avant de retourner travailler. »"
+      },
+      {
+        "type": "p",
+        "content": "— Kevyn, ingénieur mécanique pour Amplitude Laser, à Tokyo depuis 1 an."
+      },
+      {
+        "type": "link",
+        "label": "Vous aussi, partir à Tokyo en mandat Abbeal",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ]
+  },
+  "vie-tokyo-developpeur-gregorie": {
+    "fr": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/gregorie.jpg",
+        "alt": "Grégorie, dev fullstack Abbeal Tokyo",
+        "caption": "Grégorie à Tokyo."
+      },
+      {
+        "type": "p",
+        "content": "Grégorie, 22 ans, est ingénieur informatique en spécialité développement logiciel. Son client : OneID, une entreprise de services informatiques (CRM, accompagnement matériel) qui édite aussi SolarID, un outil d'hypervision de parc photovoltaïque. Ses missions vont de la création de portails clients en Vue.js à la mise en place de DevOps, en passant par la gestion de projet d'apps React Native. Il est en VIE à Tokyo depuis bientôt un an."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi le Japon"
+      },
+      {
+        "type": "p",
+        "content": "Le Japon a toujours été dans le top des pays qu'il voulait voir : paysages, culture, univers manga. Un premier voyage de 2 semaines en vacances l'a laissé sur sa faim — impossible de tout voir. Pendant la fin des études, il s'est renseigné sur les solutions long-séjour : double diplôme, stages à l'étranger, PVT, VIE. L'offre VIE Abbeal correspondait parfaitement."
+      },
+      {
+        "type": "h2",
+        "content": "L'organisation horaire : moitié-moitié"
+      },
+      {
+        "type": "p",
+        "content": "Grégorie voulait un compromis : déranger le minimum son entreprise française tout en profitant au maximum de Tokyo. Avec 7 à 8 heures de décalage, c'est moins évident qu'il n'y paraît."
+      },
+      {
+        "type": "p",
+        "content": "Il a opté pour un découpage en 3 plages :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Midi Tokyo, équipe France endormie : il règle les sujets de la veille, avance ses projets en autonomie",
+          "Soirée Tokyo / matin France : plage commune, on bosse ensemble, on appelle, on fait les réunions, on avance les sujets transverses",
+          "Nuit Tokyo : pendant qu'il dort, l'équipe France peut envoyer des demandes qu'il résoudra avant leur réveil"
+        ],
+        "ordered": true
+      },
+      {
+        "type": "p",
+        "content": "Méthode agile, point d'équipe tous les lundis pour garder le lien, échanges réguliers Teams. Ça fonctionne parfaitement."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "« Je garde vraiment le meilleur des deux mondes : je me réveille tôt pour profiter de mes journées, Tokyo est une ville très nocturne donc je peux aussi profiter du soir, tout en gardant contact avec l'équipe en France. »"
+      },
+      {
+        "type": "h2",
+        "content": "Comment il a convaincu OneID"
+      },
+      {
+        "type": "p",
+        "content": "Trois ans d'alternance chez OneID avaient bâti une relation de confiance solide. À la fin de l'alternance, l'envie d'expérience internationale était claire — Japon, Canada ou Norvège. Mais en parallèle, des projets passionnants émergeaient chez OneID, et l'équipe était humaine. Le dilemme."
+      },
+      {
+        "type": "p",
+        "content": "Quand Abbeal lui propose le VIE et l'idée de présenter le concept directement à OneID, Grégorie prépare un document détaillant tous les avantages :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Horaires en commun maintenus",
+          "Encore plus de motivation côté collaborateur",
+          "Plage horaire de travail élargie (matin Tokyo + soir Tokyo couvrent une partie du jour France)",
+          "Retours en France au bureau de temps en temps"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "L'idée a plu. Et le voilà à Tokyo, à coder pour OneID."
+      },
+      {
+        "type": "h2",
+        "content": "Ce que ce modèle apporte"
+      },
+      {
+        "type": "p",
+        "content": "« Concrètement, être beaucoup plus autonome. Être dans un nouveau pays avec une nouvelle culture, une nouvelle façon de faire et surtout une nouvelle administration, ça force l'autonomie et la prise de décision. »"
+      },
+      {
+        "type": "p",
+        "content": "Et le bonus, c'est de continuer à travailler avec la culture française tout en vivant au Japon. Le meilleur des deux mondes : pouvoir rester plus longtemps à un matsuri, ou se poser dans un parc sans la pression de tout cocher en 2 semaines de vacances."
+      },
+      {
+        "type": "h2",
+        "content": "Les limites"
+      },
+      {
+        "type": "p",
+        "content": "Pratiquer le japonais moins qu'avec un client japonais. Abbeal finance des cours de langue, ça aide. Et la pratique du quotidien fait le reste, à condition de s'y mettre."
+      },
+      {
+        "type": "p",
+        "content": "Côté technique : les latences de connexion sur les serveurs de dev et prod France. Pour télécharger une base de données, il faut anticiper. La parade : travailler beaucoup plus en local, avec Docker dès que possible."
+      },
+      {
+        "type": "h2",
+        "content": "Ses conseils"
+      },
+      {
+        "type": "p",
+        "content": "Côté pro : ne pas hésiter à demander à son entreprise actuelle. Préparer un document qui démontre les bénéfices des deux côtés (horaires étendus, plage France-dort qui débloque les sujets coincés)."
+      },
+      {
+        "type": "p",
+        "content": "Côté humain : prévoir que la « phase lune de miel » est suivie de quelques mois plus durs. Ne pas culpabiliser, s'entourer, en parler. C'est normal et ça passe."
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "PS : faire attention. C'est dangereux d'habiter à 2 minutes d'un Pokémon Center."
+      },
+      {
+        "type": "p",
+        "content": "« Commencer chaque journée en découvrant un nouvel endroit, je ne m'en lasse pas. »"
+      },
+      {
+        "type": "p",
+        "content": "— Grégorie, dev fullstack Abbeal, en VIE à Tokyo chez OneID."
+      },
+      {
+        "type": "link",
+        "label": "Vous aussi, partir à Tokyo en VIE",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ],
+    "en": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/gregorie.jpg",
+        "alt": "Grégorie, fullstack dev at Abbeal Tokyo",
+        "caption": "Grégorie in Tokyo."
+      },
+      {
+        "type": "p",
+        "content": "Grégorie, 22, is a software engineer specialized in software development. His client: OneID, an IT services company (CRM, hardware support) that also publishes SolarID, a hypervision tool for photovoltaic fleets. His missions range from building client portals in Vue.js to setting up DevOps, including project management of React Native apps. He's been on a VIE in Tokyo for nearly a year."
+      },
+      {
+        "type": "h2",
+        "content": "Why Japan"
+      },
+      {
+        "type": "p",
+        "content": "Japan was always in his top countries to see: landscapes, culture, manga universe. A first 2-week trip on holiday left him wanting more — impossible to see everything. During the end of his studies, he looked into long-stay options: dual degree, internships abroad, PVT, VIE. The Abbeal VIE offer was a perfect fit."
+      },
+      {
+        "type": "h2",
+        "content": "Working hours: half and half"
+      },
+      {
+        "type": "p",
+        "content": "Grégorie wanted a compromise: disturb his French company as little as possible while making the most of Tokyo. With 7 to 8 hours of time difference, that's less obvious than it sounds."
+      },
+      {
+        "type": "p",
+        "content": "He went for a 3-block split:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Tokyo noon, France team asleep: he handles the leftovers from the previous day, moves his projects forward solo",
+          "Tokyo evening / France morning: shared window, work together, calls, meetings, push the cross-cutting topics",
+          "Tokyo night: while he sleeps, the France team can send requests he'll resolve before they wake up"
+        ],
+        "ordered": true
+      },
+      {
+        "type": "p",
+        "content": "Agile method, weekly team check-in every Monday to keep the link, regular Teams exchanges. Works perfectly."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "\"I really keep the best of both worlds: I wake up early to enjoy my days, Tokyo is a very nocturnal city so I can also enjoy the evening, all while keeping in touch with the team in France.\""
+      },
+      {
+        "type": "h2",
+        "content": "How he convinced OneID"
+      },
+      {
+        "type": "p",
+        "content": "Three years of work-study at OneID had built a solid trust relationship. At the end of the work-study, the desire for an international experience was clear — Japan, Canada or Norway. But in parallel, exciting projects were emerging at OneID, and the team was a great group. The dilemma."
+      },
+      {
+        "type": "p",
+        "content": "When Abbeal proposed the VIE and the idea of pitching the concept directly to OneID, Grégorie prepared a document detailing all the benefits:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Common working hours maintained",
+          "Even more motivation on the employee's side",
+          "Extended working hours window (Tokyo morning + Tokyo evening cover part of the France day)",
+          "Returns to France at the office from time to time"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "The idea landed. And here he is in Tokyo, coding for OneID."
+      },
+      {
+        "type": "h2",
+        "content": "What this model brings"
+      },
+      {
+        "type": "p",
+        "content": "\"Concretely, being much more autonomous. Being in a new country with a new culture, a new way of doing things and especially a new administration, it forces autonomy and decision-making.\""
+      },
+      {
+        "type": "p",
+        "content": "And the bonus is continuing to work with French culture while living in Japan. The best of both worlds: being able to stay longer at a matsuri, or sit in a park without the pressure of ticking everything off in 2 weeks of holiday."
+      },
+      {
+        "type": "h2",
+        "content": "The limits"
+      },
+      {
+        "type": "p",
+        "content": "Practicing Japanese less than with a Japanese client. Abbeal funds language lessons, that helps. And daily practice does the rest, provided you commit."
+      },
+      {
+        "type": "p",
+        "content": "On the technical side: connection latency on the France dev and prod servers. To download a database, you have to plan ahead. The workaround: work much more locally, with Docker whenever possible."
+      },
+      {
+        "type": "h2",
+        "content": "His advice"
+      },
+      {
+        "type": "p",
+        "content": "On the pro side: don't hesitate to ask your current company. Prepare a document that demonstrates the benefits on both sides (extended hours, France-asleep window that unblocks stuck topics)."
+      },
+      {
+        "type": "p",
+        "content": "On the human side: expect the \"honeymoon phase\" to be followed by a few harder months. Don't feel guilty, surround yourself, talk about it. It's normal and it passes."
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "PS: be careful. It's dangerous to live 2 minutes from a Pokémon Center."
+      },
+      {
+        "type": "p",
+        "content": "\"Starting each day by discovering a new spot — I never get tired of it.\""
+      },
+      {
+        "type": "p",
+        "content": "— Grégorie, fullstack dev at Abbeal, on a VIE in Tokyo at OneID."
+      },
+      {
+        "type": "link",
+        "label": "You too, head to Tokyo on a VIE",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ],
+    "ja": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/gregorie.jpg",
+        "alt": "Grégorie、Abbeal東京のフルスタック開発者",
+        "caption": "東京のGrégorie。"
+      },
+      {
+        "type": "p",
+        "content": "Grégorie、22歳は情報工学、ソフトウェア開発専攻のエンジニアです。クライアントはOneID。CRMやハードウェアサポートのITサービス企業で、太陽光発電所のハイパービジョンツールSolarIDも提供しています。Vue.jsでのクライアントポータル開発からDevOps構築、React Nativeアプリのプロジェクト管理まで、幅広く担当しています。東京でVIE滞在中、もうすぐ1年になります。"
+      },
+      {
+        "type": "h2",
+        "content": "なぜ日本か"
+      },
+      {
+        "type": "p",
+        "content": "日本は彼が見たい国のトップに常にありました。風景、文化、漫画の世界。初めての2週間の休暇旅行では物足りませんでした。すべてを見るのは不可能です。学生時代の終わり頃、長期滞在の選択肢を調べました。ダブルディグリー、海外インターンシップ、PVT（ワーキングホリデービザ）、VIE（国際ボランティア制度）。AbbealのVIEオファーが完璧にマッチしました。"
+      },
+      {
+        "type": "h2",
+        "content": "勤務時間：半々"
+      },
+      {
+        "type": "p",
+        "content": "Grégorieが望んだのは妥協点です。フランスの会社の邪魔を最小限に抑えながら、東京を最大限楽しむこと。7〜8時間の時差を考えると、見た目ほど簡単ではありません。"
+      },
+      {
+        "type": "p",
+        "content": "彼は3つの時間帯に分けることを選びました。"
+      },
+      {
+        "type": "list",
+        "items": [
+          "東京の昼、フランスチームは就寝中：前日の懸案を片付け、自律的にプロジェクトを進める",
+          "東京の夜／フランスの朝：共通の時間帯で、一緒に働き、通話し、会議をし、横断的な案件を進める",
+          "東京の夜中：彼が寝ている間、フランスチームはリクエストを送れる。彼は目覚める前にそれを解決する"
+        ],
+        "ordered": true
+      },
+      {
+        "type": "p",
+        "content": "アジャイル手法、毎週月曜日のチームミーティングで関係性を維持、Teamsでの定期的なやり取り。完璧に機能しています。"
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "「本当に両方の世界の良いところを取れています。早起きして日中を楽しみ、東京は夜の街なので夜も楽しめる。同時にフランスのチームともつながりを保てます。」"
+      },
+      {
+        "type": "h2",
+        "content": "OneIDをどう説得したか"
+      },
+      {
+        "type": "p",
+        "content": "OneIDでの3年間のアルテルナンス（産学連携プログラム）が強固な信頼関係を築いていました。アルテルナンス終了時、海外経験への思いは明確でした。日本、カナダ、ノルウェー。でも同時にOneIDでは魅力的なプロジェクトが立ち上がっており、チームも温かい人たちでした。ジレンマです。"
+      },
+      {
+        "type": "p",
+        "content": "AbbealがVIEを提案し、OneIDに直接コンセプトをプレゼンするアイデアを出した時、Grégorieはあらゆるメリットをまとめた資料を準備しました。"
+      },
+      {
+        "type": "list",
+        "items": [
+          "共通の勤務時間を維持",
+          "従業員側のモチベーションがさらに高まる",
+          "勤務時間帯の拡張（東京の朝＋東京の夜がフランスの一日の一部をカバー）",
+          "時々、フランスのオフィスに戻る"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "アイデアは気に入られました。そして今、彼は東京でOneIDのためにコードを書いています。"
+      },
+      {
+        "type": "h2",
+        "content": "このモデルがもたらすもの"
+      },
+      {
+        "type": "p",
+        "content": "「具体的には、ずっと自律的になること。新しい国、新しい文化、新しいやり方、特に新しい行政手続きの中にいると、自律性と意思決定が強制されます。」"
+      },
+      {
+        "type": "p",
+        "content": "そしてボーナスは、日本に住みながらフランス文化と一緒に働き続けられることです。両方の世界の良いところ。祭りに長く滞在できたり、2週間の休暇ですべてを詰め込むプレッシャーなしに公園でくつろげたりします。"
+      },
+      {
+        "type": "h2",
+        "content": "限界"
+      },
+      {
+        "type": "p",
+        "content": "日本のクライアントと働く場合に比べて、日本語の練習機会が少ないことです。Abbealは語学レッスンを支援してくれます。これは助かります。あとは日々の実践次第ですが、本気で取り組めばの話です。"
+      },
+      {
+        "type": "p",
+        "content": "技術面：フランスの開発・本番サーバーへの接続のレイテンシ。データベースをダウンロードするには、事前の準備が必要です。対策はローカルで作業すること、可能な限りDockerを使うことです。"
+      },
+      {
+        "type": "h2",
+        "content": "アドバイス"
+      },
+      {
+        "type": "p",
+        "content": "プロ面：今の会社に頼むことをためらわないこと。両方にとってのメリット（拡張された勤務時間、フランス就寝中の時間帯が止まっていた案件を解決する）を示す資料を準備すること。"
+      },
+      {
+        "type": "p",
+        "content": "人間面：「ハネムーン期」のあとに数ヶ月のしんどい時期が来ることを覚悟しておくこと。罪悪感を持たず、周りに頼り、話すこと。普通のことで、必ず過ぎ去ります。"
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "PS：気をつけて。ポケモンセンターから2分のところに住むのは危険です。"
+      },
+      {
+        "type": "p",
+        "content": "「毎日新しい場所を発見しながら一日を始める。これに飽きることがありません。」"
+      },
+      {
+        "type": "p",
+        "content": "— Grégorie、Abbealフルスタック開発者、OneIDで東京VIE滞在中。"
+      },
+      {
+        "type": "link",
+        "label": "あなたもVIEで東京へ",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "image",
+        "src": "/article-assets/team/gregorie.jpg",
+        "alt": "Grégorie, dev fullstack Abbeal Tokyo",
+        "caption": "Grégorie à Tokyo."
+      },
+      {
+        "type": "p",
+        "content": "Grégorie, 22 ans, est ingénieur informatique en spécialité développement logiciel. Son client : OneID, une entreprise de services informatiques (CRM, accompagnement matériel) qui édite aussi SolarID, un outil d'hypervision de parc photovoltaïque. Ses mandats vont de la création de portails clients en Vue.js à la mise en place de DevOps, en passant par la gestion de projet d'apps React Native. Il est en VIE à Tokyo depuis bientôt un an."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi le Japon"
+      },
+      {
+        "type": "p",
+        "content": "Le Japon a toujours été dans le top des pays qu'il voulait voir : paysages, culture, univers manga. Un premier voyage de 2 semaines en vacances l'a laissé sur sa faim — impossible de tout voir. Pendant la fin des études, il s'est renseigné sur les solutions long-séjour : double diplôme, stages à l'étranger, PVT, VIE. L'offre VIE Abbeal correspondait parfaitement."
+      },
+      {
+        "type": "h2",
+        "content": "L'organisation horaire : moitié-moitié"
+      },
+      {
+        "type": "p",
+        "content": "Grégorie voulait un compromis : déranger le minimum son entreprise française tout en profitant au maximum de Tokyo. Avec 7 à 8 heures de décalage, c'est moins évident qu'il n'y paraît."
+      },
+      {
+        "type": "p",
+        "content": "Il a opté pour un découpage en 3 plages :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Midi Tokyo, équipe France endormie : il règle les sujets de la veille, avance ses projets en autonomie",
+          "Soirée Tokyo / matin France : plage commune, on bosse ensemble, on appelle, on fait les réunions, on avance les sujets transverses",
+          "Nuit Tokyo : pendant qu'il dort, l'équipe France peut envoyer des demandes qu'il résoudra avant leur réveil"
+        ],
+        "ordered": true
+      },
+      {
+        "type": "p",
+        "content": "Méthode agile, point d'équipe tous les lundis pour garder le lien, échanges réguliers Teams. Ça fonctionne parfaitement."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "« Je garde vraiment le meilleur des deux mondes : je me réveille tôt pour profiter de mes journées, Tokyo est une ville très nocturne donc je peux aussi profiter du soir, tout en gardant contact avec l'équipe en France. »"
+      },
+      {
+        "type": "h2",
+        "content": "Comment il a convaincu OneID"
+      },
+      {
+        "type": "p",
+        "content": "Trois ans d'alternance chez OneID avaient bâti une relation de confiance solide. À la fin de l'alternance, l'envie d'expérience internationale était claire — Japon, Canada ou Norvège. Mais en parallèle, des projets passionnants émergeaient chez OneID, et l'équipe était humaine. Le dilemme."
+      },
+      {
+        "type": "p",
+        "content": "Quand Abbeal lui propose le VIE et l'idée de présenter le concept directement à OneID, Grégorie prépare un document détaillant tous les avantages :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Horaires en commun maintenus",
+          "Encore plus de motivation côté collaborateur",
+          "Plage horaire de travail élargie (matin Tokyo + soir Tokyo couvrent une partie du jour France)",
+          "Retours en France au bureau de temps en temps"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "L'idée a plu. Et le voilà à Tokyo, à coder pour OneID."
+      },
+      {
+        "type": "h2",
+        "content": "Ce que ce modèle apporte"
+      },
+      {
+        "type": "p",
+        "content": "« Concrètement, être beaucoup plus autonome. Être dans un nouveau pays avec une nouvelle culture, une nouvelle façon de faire et surtout une nouvelle administration, ça force l'autonomie et la prise de décision. »"
+      },
+      {
+        "type": "p",
+        "content": "Et le bonus, c'est de continuer à travailler avec la culture française tout en vivant au Japon. Le meilleur des deux mondes : pouvoir rester plus longtemps à un matsuri, ou se poser dans un parc sans la pression de tout cocher en 2 semaines de vacances."
+      },
+      {
+        "type": "h2",
+        "content": "Les limites"
+      },
+      {
+        "type": "p",
+        "content": "Pratiquer le japonais moins qu'avec un client japonais. Abbeal finance des cours de langue, ça aide. Et la pratique du quotidien fait le reste, à condition de s'y mettre."
+      },
+      {
+        "type": "p",
+        "content": "Côté technique : les latences de connexion sur les serveurs de dev et prod France. Pour télécharger une base de données, il faut anticiper. La parade : travailler beaucoup plus en local, avec Docker dès que possible."
+      },
+      {
+        "type": "h2",
+        "content": "Ses conseils"
+      },
+      {
+        "type": "p",
+        "content": "Côté pro : ne pas hésiter à demander à son entreprise actuelle. Préparer un document qui démontre les bénéfices des deux côtés (horaires étendus, plage France-dort qui débloque les sujets coincés)."
+      },
+      {
+        "type": "p",
+        "content": "Côté humain : prévoir que la « phase lune de miel » est suivie de quelques mois plus durs. Ne pas culpabiliser, s'entourer, en parler. C'est normal et ça passe."
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "PS : faire attention. C'est dangereux d'habiter à 2 minutes d'un Pokémon Center."
+      },
+      {
+        "type": "p",
+        "content": "« Commencer chaque journée en découvrant un nouvel endroit, je ne m'en lasse pas. »"
+      },
+      {
+        "type": "p",
+        "content": "— Grégorie, dev fullstack Abbeal, en VIE à Tokyo chez OneID."
+      },
+      {
+        "type": "link",
+        "label": "Vous aussi, partir à Tokyo en VIE",
+        "href": "https://calendly.com/d/cs8b-4cy-p5d/une-nouvelle-vie-a-l-etranger"
       }
     ]
   }

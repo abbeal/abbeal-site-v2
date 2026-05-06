@@ -722,10 +722,22 @@
     "processTitle": "1 candidat sur ~50 reçoit une offre. Voici les 5 étapes.",
     "processIntro": "Pas de leetcode artificiel, pas de quiz piège. On veut savoir si tu peux livrer du logiciel critique avec rigueur et autonomie. Le process tient en 2-3 semaines bout en bout, et tu as un retour à chaque étape — qu'il soit positif ou non.",
     "processStats": [
-      { "value": "~50 / 1", "label": "candidats reçus / offre envoyée" },
-      { "value": "2-3 sem", "label": "durée moyenne du process" },
-      { "value": "75%", "label": "acceptance rate des offres" },
-      { "value": "100%", "label": "feedback à chaque étape" }
+      {
+        "value": "~50 / 1",
+        "label": "candidats reçus / offre envoyée"
+      },
+      {
+        "value": "2-3 sem",
+        "label": "durée moyenne du process"
+      },
+      {
+        "value": "75%",
+        "label": "acceptance rate des offres"
+      },
+      {
+        "value": "100%",
+        "label": "feedback à chaque étape"
+      }
     ],
     "processSteps": [
       {
@@ -972,18 +984,55 @@
         "hub": "Hub Amériques · Montréal",
         "photo": "vianney.jpg",
         "bio": "Co-fondateur du hub Montréal (2023). DG depuis novembre 2024. Pilote les opérations Nord-Amérique."
+      },
+      {
+        "name": "Alexandre Lim",
+        "role": "Senior Software Engineer",
+        "hub": "Hub Asie · Tokyo",
+        "photo": "alex.jpg",
+        "bio": "Au Japon depuis 3 ans. Senior Software Engineer côté Le Monde (équipe Insights, depuis Tokyo). 8 ans de dev, spécialisé Next.js / React. Preuve concrète du modèle Follow-the-Sun."
       }
     ],
     "teamTape": "// Équipe",
     "teamTitle": "Les visages derrière la livraison.",
     "teamSubtitle": "Leads, architectes, recruteurs. Quelques-unes des personnes que tu rencontreras si on bosse ensemble.",
     "team": [
-      { "name": "Lead Engineer", "role": "Software · Lead", "hub": "Hub EU · Paris", "photo": "team-1.jpg" },
-      { "name": "Senior Architect", "role": "Architecture · Senior", "hub": "Hub Asie · Tokyo", "photo": "team-2.jpg" },
-      { "name": "Engineering Manager", "role": "Delivery · Manager", "hub": "Hub Amériques · Montréal", "photo": "team-3.jpg" },
-      { "name": "Tech Recruiter", "role": "Recrutement · Lead", "hub": "Hub EU · Paris", "photo": "team-4.jpg" },
-      { "name": "Lead Data Engineer", "role": "Data · Lead", "hub": "Hub EU · Paris", "photo": "team-5.jpg" },
-      { "name": "Senior Robotics Engineer", "role": "Robotique · Senior", "hub": "Hub Asie · Tokyo", "photo": "team-6.jpg" }
+      {
+        "name": "Lead Engineer",
+        "role": "Software · Lead",
+        "hub": "Hub EU · Paris",
+        "photo": "team-1.jpg"
+      },
+      {
+        "name": "Senior Architect",
+        "role": "Architecture · Senior",
+        "hub": "Hub Asie · Tokyo",
+        "photo": "team-2.jpg"
+      },
+      {
+        "name": "Engineering Manager",
+        "role": "Delivery · Manager",
+        "hub": "Hub Amériques · Montréal",
+        "photo": "team-3.jpg"
+      },
+      {
+        "name": "Tech Recruiter",
+        "role": "Recrutement · Lead",
+        "hub": "Hub EU · Paris",
+        "photo": "team-4.jpg"
+      },
+      {
+        "name": "Lead Data Engineer",
+        "role": "Data · Lead",
+        "hub": "Hub EU · Paris",
+        "photo": "team-5.jpg"
+      },
+      {
+        "name": "Senior Robotics Engineer",
+        "role": "Robotique · Senior",
+        "hub": "Hub Asie · Tokyo",
+        "photo": "team-6.jpg"
+      }
     ],
     "statsTape": "// Chiffres",
     "statsTitle": "L'échelle, pas le bruit.",
