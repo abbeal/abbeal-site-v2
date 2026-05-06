@@ -1092,7 +1092,11 @@ export function getFeaturedCases(): CaseStudy[] {
 }
 
 export function getAllCases(): CaseStudy[] {
-  return [...cases].sort((a, b) =>
-    a.publishedAt < b.publishedAt ? 1 : -1,
-  );
+  // Tri composite : featured d'abord (clients iconic Cartier/BNP/Money Forward
+  // /Pichet/Le Monde remontent), puis par date desc en fallback. Cohérent
+  // avec getAllArticles() et le marquee homepage qui pousse les 5 featured.
+  return [...cases].sort((a, b) => {
+    if (a.featured !== b.featured) return a.featured ? -1 : 1;
+    return a.publishedAt < b.publishedAt ? 1 : -1;
+  });
 }
