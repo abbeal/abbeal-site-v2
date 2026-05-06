@@ -693,6 +693,46 @@
           "url": "https://www.montrealinternational.com/"
         }
       ]
+    },
+    "stories": {
+      "tape": "// 海外勤務体験談",
+      "title": "4人のエンジニア。4つの道。東京。",
+      "subtitle": "VIE、ワーキングホリデー、シニア海外勤務 — Mobbeal経由で東京に移住したエンジニアたちの実際の軌跡。長文・無編集・良い面も大変な面も。",
+      "cta": "体験談を読む",
+      "items": [
+        {
+          "slug": "vie-tokyo-developpeur-hugo",
+          "name": "Hugo（26歳）",
+          "badge": "VIE · 2025年10月",
+          "meta": "IBM HCL Commerce · 元Toyotaフランス",
+          "pitch": "フルスタックデベロッパー、Toyota Motor Manufacturing Franceで3年勤務後、VIEで東京へ。Java/JSP、Eコマース案件、柔軟なフランスチーム。",
+          "photo": "hugo.jpg"
+        },
+        {
+          "slug": "expat-tokyo-3-ans-alex-senior-engineer",
+          "name": "Alex（シニア）",
+          "badge": "海外勤務 · 3年",
+          "meta": "Le Monde · Next.js / React",
+          "pitch": "東京からLe Mondeのシニアソフトウェアエンジニアとして従事。14時-深夜0時の勤務時間は6ヶ月後に調整。「とりあえず6ヶ月」が3年に。",
+          "photo": "alex.jpg"
+        },
+        {
+          "slug": "pvt-tokyo-ingenieur-mecanique-kevyn",
+          "name": "Kevyn（26歳）",
+          "badge": "ワーホリ → 就労ビザ",
+          "meta": "Amplitude Laser · 機械エンジニア",
+          "pitch": "高エネルギーレーザー機械エンジニア。ワーキングホリデーから就労ビザへ。7-8時間の時差が強みに（FR/JPの昼夜継続）。",
+          "photo": "kevyn.jpg"
+        },
+        {
+          "slug": "vie-tokyo-developpeur-gregorie",
+          "name": "Grégorie（22歳）",
+          "badge": "VIE · OneID",
+          "meta": "Vue.js + DevOps + React Native",
+          "pitch": "3年の交互教育を経てOneIDでフルスタック開発。3つの時間帯にまたがるFR/JPハイブリッド勤務。両方の世界の最良を享受。",
+          "photo": "gregorie.jpg"
+        }
+      ]
     }
   },
   "contact": {

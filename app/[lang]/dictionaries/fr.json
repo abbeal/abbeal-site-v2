@@ -681,6 +681,46 @@
           "url": "https://www.montrealinternational.com/"
         }
       ]
+    },
+    "stories": {
+      "tape": "// Histoires d'expatriés",
+      "title": "4 ingénieurs. 4 chemins. Tokyo.",
+      "subtitle": "VIE, PVT, expat senior — voici les vraies trajectoires d'ingénieurs partis à Tokyo via Mobbeal. Chaque témoignage est long, sans filtre, avec les bons et les moins bons côtés.",
+      "cta": "Lire le témoignage",
+      "items": [
+        {
+          "slug": "vie-tokyo-developpeur-hugo",
+          "name": "Hugo, 26 ans",
+          "badge": "VIE · Oct 2025",
+          "meta": "IBM HCL Commerce · ex-Toyota France",
+          "pitch": "Dev fullstack, parti à Tokyo en VIE après 3 ans chez Toyota Motor Manufacturing France. Java/JSP, mission e-commerce, équipe FR flexible.",
+          "photo": "hugo.jpg"
+        },
+        {
+          "slug": "expat-tokyo-3-ans-alex-senior-engineer",
+          "name": "Alex, Senior",
+          "badge": "Expat · 3 ans",
+          "meta": "Le Monde · Next.js / React",
+          "pitch": "Senior Software Engineer côté Le Monde depuis Tokyo. Horaires 14h-minuit aménagés après 6 mois. \"6 mois pour voir\" devenu 3 ans.",
+          "photo": "alex.jpg"
+        },
+        {
+          "slug": "pvt-tokyo-ingenieur-mecanique-kevyn",
+          "name": "Kevyn, 26 ans",
+          "badge": "PVT → Visa travail",
+          "meta": "Amplitude Laser · Ingé méca",
+          "pitch": "Ingénieur méca laser haute énergie. PVT puis visa travail. Le décalage 7-8h est devenu un asset (continuité jour/nuit FR/JP).",
+          "photo": "kevyn.jpg"
+        },
+        {
+          "slug": "vie-tokyo-developpeur-gregorie",
+          "name": "Grégorie, 22 ans",
+          "badge": "VIE · OneID",
+          "meta": "Vue.js + DevOps + React Native",
+          "pitch": "Dev fullstack chez OneID après 3 ans d'alternance. Horaires hybrides FR/JP en 3 plages. Le meilleur des deux mondes.",
+          "photo": "gregorie.jpg"
+        }
+      ]
     }
   },
   "contact": {

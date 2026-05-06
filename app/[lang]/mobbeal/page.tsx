@@ -7,6 +7,7 @@ import { MobbealHero } from "@/components/sections/mobbeal/MobbealHero";
 import { Piliers } from "@/components/sections/mobbeal/Piliers";
 import { Destinations } from "@/components/sections/mobbeal/Destinations";
 import { MobbealTrust } from "@/components/sections/mobbeal/MobbealTrust";
+import { MobbealStories } from "@/components/sections/mobbeal/MobbealStories";
 import { Testimonials } from "@/components/sections/mobbeal/Testimonials";
 import { MobbealFAQ } from "@/components/sections/mobbeal/MobbealFAQ";
 import { MobbealCTA } from "@/components/sections/mobbeal/MobbealCTA";
@@ -162,6 +163,7 @@ export default async function MobbealPage({
       <Piliers dict={dict} />
       <Destinations dict={dict} />
       <MobbealTrust locale={lang as Locale} dict={dict} />
+      <MobbealStories locale={lang as Locale} dict={dict} />
       <Testimonials dict={dict} />
       <MobbealFAQ dict={dict} />
       <MobbealCTA dict={dict} />

@@ -695,6 +695,46 @@
           "url": "https://www.montrealinternational.com/en/"
         }
       ]
+    },
+    "stories": {
+      "tape": "// Expat stories",
+      "title": "4 engineers. 4 paths. Tokyo.",
+      "subtitle": "VIE, working holiday visa, senior expat — these are the real trajectories of engineers who moved to Tokyo through Mobbeal. Each story is long-form, unfiltered, the good and the rough.",
+      "cta": "Read the story",
+      "items": [
+        {
+          "slug": "vie-tokyo-developpeur-hugo",
+          "name": "Hugo, 26",
+          "badge": "VIE · Oct 2025",
+          "meta": "IBM HCL Commerce · ex-Toyota France",
+          "pitch": "Fullstack dev, moved to Tokyo on VIE after 3 years at Toyota Motor Manufacturing France. Java/JSP, e-commerce mission, flexible FR team.",
+          "photo": "hugo.jpg"
+        },
+        {
+          "slug": "expat-tokyo-3-ans-alex-senior-engineer",
+          "name": "Alex, Senior",
+          "badge": "Expat · 3 years",
+          "meta": "Le Monde · Next.js / React",
+          "pitch": "Senior Software Engineer at Le Monde from Tokyo. 2pm-midnight schedule worked out after 6 months. \"6 months to see\" became 3 years.",
+          "photo": "alex.jpg"
+        },
+        {
+          "slug": "pvt-tokyo-ingenieur-mecanique-kevyn",
+          "name": "Kevyn, 26",
+          "badge": "Working holiday → Work visa",
+          "meta": "Amplitude Laser · Mech eng",
+          "pitch": "High-energy laser mechanical engineer. Working holiday then work visa. The 7-8h time difference became an asset (24/7 FR/JP continuity).",
+          "photo": "kevyn.jpg"
+        },
+        {
+          "slug": "vie-tokyo-developpeur-gregorie",
+          "name": "Grégorie, 22",
+          "badge": "VIE · OneID",
+          "meta": "Vue.js + DevOps + React Native",
+          "pitch": "Fullstack dev at OneID after 3 years of work-study. Hybrid FR/JP schedule across 3 time slots. The best of both worlds.",
+          "photo": "gregorie.jpg"
+        }
+      ]
     }
   },
   "contact": {
