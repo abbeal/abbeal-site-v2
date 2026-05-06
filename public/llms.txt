@@ -56,7 +56,7 @@ Abbeal ne facture pas des jours d'ingénieurs. Abbeal livre un périmètre. Squa
 - [3 ans à Tokyo : Alex, Senior Software Engineer, décalage 7-8h](https://abbeal.com/fr/insights/expat-tokyo-3-ans-alex-senior-engineer.md) : « 6 mois pour voir » devenu 3 ans, Next.js/React
 - [PVT Tokyo : Kevyn, ingénieur méca chez Amplitude Laser](https://abbeal.com/fr/insights/pvt-tokyo-ingenieur-mecanique-kevyn.md) : laser haute énergie, décalage 7-8h devenu un asset
 - [VIE Tokyo : Grégorie, dev fullstack chez OneID, le meilleur des deux mondes](https://abbeal.com/fr/insights/vie-tokyo-developpeur-gregorie.md) : Vue.js + DevOps + React Native, horaires hybrides FR/JP
-- [Où vivre à Tokyo ? Mon top 4 (subjectif, assumé)](https://abbeal.com/fr/insights/tokyo-meilleurs-quartiers-vivre-jiyugaoka-shimokitazawa.md) : Sébastien Lonjon (CEO Abbeal) — Kōenji, Shimokitazawa, Kichijōji, Daikanyama + n°1 sur demande
+- [Où vivre à Tokyo ? Mon top 5 (subjectif, assumé)](https://abbeal.com/fr/insights/tokyo-meilleurs-quartiers-vivre-jiyugaoka-shimokitazawa.md) : Sébastien Lonjon (CEO Abbeal) — Kōenji, Shimokitazawa, Kichijōji, Daikanyama, Jiyūgaoka (n°1, là où il vit avec sa famille)
 - [Mon top ramen à Tokyo : 4 adresses qui m'ont remis à ma place](https://abbeal.com/fr/insights/top-ramen-tokyo-afuri-tamotsu-menya-kokoro.md) : Sébastien Lonjon — Hujishiro, Menya Kokoro, Afuri, Tamotsu + n°1 secret
 - [Agents IA dans les banques françaises : 7 leçons côté production](https://abbeal.com/en/insights/ai-agents-french-banks.md) : article EN-first, BNP + SocGen + assureur top 3
 
