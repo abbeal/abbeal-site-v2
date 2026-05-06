@@ -26,10 +26,10 @@ export default async function CaseOG({
   // URL absolue requise par satori (pas de path relatif).
   const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
   const clientLogoUrl = c?.clientLogo
-    ? `${SITE}/logos/${c.clientLogo}.svg`
+    ? `${SITE}/logos/${c.clientLogo}.${c.clientLogoExt ?? "svg"}`
     : null;
   const clientLogoSecondaryUrl = c?.clientLogoSecondary
-    ? `${SITE}/logos/${c.clientLogoSecondary}.svg`
+    ? `${SITE}/logos/${c.clientLogoSecondary}.${c.clientLogoSecondaryExt ?? "svg"}`
     : null;
 
   return new ImageResponse(

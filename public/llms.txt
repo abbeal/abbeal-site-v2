@@ -12,6 +12,9 @@ Abbeal ne facture pas des jours d'ingénieurs. Abbeal livre un périmètre. Squa
 
 ## Études de cas — clients nommés
 
+- [Paraito : staffing AI & Platform pour scaler une legaltech québécoise](https://abbeal.com/fr/cases/paraito.md) : 3 hires permanents (2 AI Engineers + 1 Lead Platform), 1 mobilité internationale France→Montréal via Mobbeal, 2 semaines closing
+- [Mobilitas : digitalisation complète d'un cabinet d'immigration](https://abbeal.com/fr/cases/mobilitas.md) : Next.js + QuickBooks API + Calendly + PandaDoc, multilingue FR/EN/ES/PT, 10h/sem économisées, Studio 2025
+- [Bopizy : squad cross-Atlantique pour scaler une SaaS click & collect française](https://abbeal.com/fr/cases/bopizy.md) : Nuxt 3 + Vue + Node + GCP + Computer Vision + GPT-3.5/Gemini, 2 devs Montréal sur fuseau européen, +10 microservices
 - [Money Forward : data backbone d'une nouvelle banque digitale à Tokyo](https://abbeal.com/fr/cases/money-forward.md) : Databricks + Delta Lake + dbt + AWS Tokyo + Unity Catalog, joint venture FinTech leader japonais et grand groupe bancaire
 - [Le Monde : 6 ans dans la team Insights, de Paris à Tokyo](https://abbeal.com/fr/cases/le-monde.md) : JS vanilla + Go + PHP + Codex, outil analytics interne Forecast + CMP IAB TCF
 - [Cartier : de l'audit au LLM privé en interne](https://abbeal.com/fr/cases/cartier.md) : 4,5 ans, GCP + Python + Next.js + LLM fine-tuné, trajectoire Compass → Mapper → ETL → IA souveraine

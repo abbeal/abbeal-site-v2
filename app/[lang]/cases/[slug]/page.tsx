@@ -180,7 +180,7 @@ export default async function CaseStudyPage({
           <div className="mb-6 flex items-center gap-5 h-14 md:h-16">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`/logos/${c.clientLogo}.svg`}
+              src={`/logos/${c.clientLogo}.${c.clientLogoExt ?? "svg"}`}
               alt={`${c.clientLogo} logo`}
               // Pas de .logo-mono ici : on garde la couleur originale du
               // logo client pour signaler le prestige / l'identité visuelle.
@@ -198,7 +198,7 @@ export default async function CaseStudyPage({
                 </span>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={`/logos/${c.clientLogoSecondary}.svg`}
+                  src={`/logos/${c.clientLogoSecondary}.${c.clientLogoSecondaryExt ?? "svg"}`}
                   alt={`${c.clientLogoSecondary} logo`}
                   className="h-full w-auto max-w-[200px] object-contain"
                   loading="eager"

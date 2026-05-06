@@ -18,6 +18,9 @@ const nextConfig: NextConfig = {
       { source: "/projets/the-fork", destination: "/fr/cases/the-fork", permanent: true },
       { source: "/projets/groupe-reussite", destination: "/fr/cases/groupe-reussite", permanent: true },
       { source: "/projets/cartier", destination: "/fr/cases/cartier", permanent: true },
+      { source: "/projets/paraito", destination: "/fr/cases/paraito", permanent: true },
+      { source: "/projets/mobilitas", destination: "/fr/cases/mobilitas", permanent: true },
+      { source: "/projets/bopizy", destination: "/fr/cases/bopizy", permanent: true },
       // Catch-all : tout autre /projets/* tombe sur l'index /fr/cases
       { source: "/projets", destination: "/fr/cases", permanent: true },
       { source: "/projets/:slug*", destination: "/fr/cases", permanent: true },

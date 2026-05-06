@@ -28,14 +28,19 @@ export type CaseStudy = {
    *  vs un vrai retour d'engagement. À retirer dès que le cas est associé
    *  à un client public ou anonymisé avec accord. */
   template?: boolean;
-  /** Slug du logo client dans /public/logos/{slug}.svg. Optionnel : seuls
+  /** Slug du logo client dans /public/logos/{slug}.{ext}. Optionnel : seuls
    *  les cases nommés (client public ou autorisation explicite) ont un logo.
    *  Les cases anonymisés ou template restent sans logo. */
   clientLogo?: string;
+  /** Extension du fichier logo (default "svg"). Permet d'utiliser PNG quand
+   *  le logo officiel n'est pas disponible en SVG. */
+  clientLogoExt?: "svg" | "png";
   /** Slug d'un 2e logo client (cas multi-clients : ex Neobrain × PwC où
    *  Neobrain est notre client direct et PwC le client final). Si présent,
    *  affiché à droite du logo principal avec un séparateur "×". */
   clientLogoSecondary?: string;
+  /** Extension du 2e logo (default "svg"). */
+  clientLogoSecondaryExt?: "svg" | "png";
   sector: Translatable<string>; // "FinTech", "Mobilité", "Robotique", …
   geo: string; // "Paris", "Tokyo", "Tri-geo", "Montréal"
   duration: string; // "9 mois", "14 mois"
@@ -49,6 +54,178 @@ export type CaseStudy = {
 };
 
 export const cases: CaseStudy[] = [
+  // Paraito — case nommé. Legaltech québécoise (IA appliquée au droit
+  // immobilier, automatisation Registre foncier QC). Mission Abbeal :
+  // recrutement permanent de 3 hires stratégiques (2 AI Engineers + 1
+  // Lead Platform), dont 1 mobilité internationale France→Montréal via
+  // Mobbeal. Source : brief Vianney Blanquart 2026-05-06.
+  // Logo officiel paraito.svg telecharge depuis paraito.ca.
+  {
+    slug: "paraito",
+    featured: false,
+    clientLogo: "paraito",
+    sector: {
+      fr: "Legaltech / Droit immobilier",
+      en: "Legaltech / Real estate law",
+      ja: "リーガルテック / 不動産法",
+      "fr-ca": "Legaltech / Droit immobilier",
+    },
+    geo: "Montréal",
+    duration: "Recrutement permanent 2026",
+    teamSize: 3,
+    techStack: [
+      "AI Engineering",
+      "Platform Engineering",
+      "Recrutement permanent",
+      "Mobbeal France→Montréal",
+      "Shortlists 3-5 candidats",
+      "2 semaines closing",
+    ],
+    kpi: {
+      value: "3 hires",
+      label: {
+        fr: "AI Engineers + Lead Platform",
+        en: "AI Engineers + Lead Platform",
+        ja: "AIエンジニア + リードプラットフォーム",
+        "fr-ca": "AI Engineers + Lead Platform",
+      },
+    },
+    publishedAt: "2026-05-06",
+    title: {
+      fr: "Paraito : staffing AI & Platform pour scaler une legaltech québécoise.",
+      en: "Paraito: AI & Platform staffing to scale a Quebec legaltech.",
+      ja: "パライト：ケベック州リーガルテックのスケールアップのためのAI & プラットフォームスタッフィング。",
+      "fr-ca": "Paraito : recrutement IA & plateforme pour passer à l'échelle une legaltech québécoise.",
+    },
+    excerpt: {
+      fr: "Paraito automatise le Registre foncier du Québec pour les notaires (−70 % temps de collecte, 3× plus de dossiers à effectif constant). Abbeal a livré 3 recrutements permanents (2 AI Engineers + 1 Lead Platform), dont 1 mobilité France→Montréal via Mobbeal — différenciant fort sur un marché tech québécois en tension IA.",
+      en: "Paraito automates Quebec's Land Registry for notaries (−70% collection time, 3× more files handled at constant headcount). Abbeal delivered 3 permanent hires (2 AI Engineers + 1 Lead Platform), including 1 France→Montreal relocation via Mobbeal — a strong differentiator on a tight Quebec AI tech market.",
+      ja: "パライトは公証人向けにケベック州不動産登記簿を自動化（収集時間-70%、同人員で3倍のファイル処理）。Abbealは3名の正社員採用（AIエンジニア2名 + リードプラットフォーム1名）を実現、Mobbeal経由のフランス→モントリオール1名のモビリティを含む — ケベックAI技術市場の人材不足における強い差別化要因。",
+      "fr-ca": "Paraito automatise le Registre foncier du Québec pour les notaires (−70 % temps de collecte, 3× plus de dossiers à effectif constant). Abbeal a livré 3 recrutements permanents (2 AI Engineers + 1 Lead Platform), dont 1 mobilité France→Montréal via Mobbeal — différenciateur fort sur un marché tech québécois en tension IA.",
+    },
+    body: {
+      fr: CASE_BODIES["paraito"]?.fr ?? [],
+      en: CASE_BODIES["paraito"]?.en,
+      ja: CASE_BODIES["paraito"]?.ja,
+      "fr-ca": CASE_BODIES["paraito"]?.["fr-ca"],
+    },
+  },
+  // Mobilitas — case nommé. Cabinet québécois immigration (PVT, résidence
+  // permanente, regroupement familial...). Mission Abbeal Studio 2025 :
+  // plateforme complète multilingue (FR/EN/ES/PT) avec prise RDV en ligne,
+  // intégration QuickBooks, espace client signature électronique. Résultat :
+  // 10h/sem économisées + 100% RDV en ligne (vs WhatsApp avant).
+  // Source : brief Vianney Blanquart 2026-05-06.
+  // Logo officiel mobilitas.png telecharge depuis mobilitas.ca.
+  {
+    slug: "mobilitas",
+    featured: false,
+    clientLogo: "mobilitas",
+    clientLogoExt: "png",
+    sector: {
+      fr: "Legaltech / Immigration",
+      en: "Legaltech / Immigration",
+      ja: "リーガルテック / 移民",
+      "fr-ca": "Legaltech / Immigration",
+    },
+    geo: "Montréal",
+    duration: "Studio 2025",
+    teamSize: 3,
+    techStack: [
+      "Next.js + React",
+      "QuickBooks API",
+      "Calendly",
+      "PandaDoc",
+      "Multilingue FR/EN/ES/PT",
+      "SEO + Analytics",
+    ],
+    kpi: {
+      value: "10h/sem",
+      label: {
+        fr: "économisées en travail manuel",
+        en: "saved on manual work",
+        ja: "手作業時間削減",
+        "fr-ca": "économisées en travail manuel",
+      },
+    },
+    publishedAt: "2026-05-05",
+    title: {
+      fr: "Mobilitas : digitalisation complète d'un cabinet d'immigration, du clic à la facture.",
+      en: "Mobilitas: full digitalisation of an immigration practice, from click to invoice.",
+      ja: "モビリタス：移民事務所の完全デジタル化、クリックから請求書まで。",
+      "fr-ca": "Mobilitas : numérisation complète d'un cabinet d'immigration, du clic à la facture.",
+    },
+    excerpt: {
+      fr: "Avant Abbeal : acquisition WhatsApp, RDV éclatés sur Calendly individuels, facturation Excel manuelle. Après : landing multilingue FR/EN/ES/PT, RDV 100% en ligne avec routage par expertise, QuickBooks intégré (création client + facture + Calendly auto), espace client signé électroniquement. Résultat mesuré : 10h/sem de manuel en moins.",
+      en: "Before Abbeal: WhatsApp acquisition, fragmented Calendly accounts, manual Excel billing. After: FR/EN/ES/PT landing, 100% online booking routed by expertise, native QuickBooks integration (client + invoice + Calendly auto), e-signed client portal. Measured: 10h/week of manual work saved.",
+      ja: "Abbeal前：WhatsApp獲得、個別Calendlyアカウント、Excel手動請求。後：FR/EN/ES/PT対応ランディング、専門分野別ルーティングによる100%オンライン予約、QuickBooksネイティブ統合（クライアント + 請求書 + Calendly自動）、電子署名付きクライアントポータル。実測：週10時間の手作業削減。",
+      "fr-ca": "Avant Abbeal : acquisition WhatsApp, RDV éclatés sur Calendly individuels, facturation Excel manuelle. Après : page d'accueil multilingue FR/EN/ES/PT, RDV 100% en ligne avec acheminement par expertise, QuickBooks intégré (création client + facture + Calendly auto), espace client signé électroniquement. Résultat mesuré : 10h/sem de manuel en moins.",
+    },
+    body: {
+      fr: CASE_BODIES["mobilitas"]?.fr ?? [],
+      en: CASE_BODIES["mobilitas"]?.en,
+      ja: CASE_BODIES["mobilitas"]?.ja,
+      "fr-ca": CASE_BODIES["mobilitas"]?.["fr-ca"],
+    },
+  },
+  // Bopizy — case nommé. SaaS click & collect française pour marchands de
+  // proximité (bouchers, charcutiers, producteurs). Squad cross-Atlantique
+  // 2 devs full-time depuis Montréal sur fuseau européen pour synchronisme
+  // avec fondateurs France. Architecture microservices + computer vision
+  // (photo étal → fiche e-commerce) + IA générative (GPT-3.5/Gemini).
+  // Source : brief Vianney Blanquart 2026-05-06.
+  // Logo officiel bopizy.png telecharge depuis bopizy.com.
+  {
+    slug: "bopizy",
+    featured: false,
+    clientLogo: "bopizy",
+    clientLogoExt: "png",
+    sector: {
+      fr: "E-commerce / Click & Collect",
+      en: "E-commerce / Click & Collect",
+      ja: "Eコマース / クリック & コレクト",
+      "fr-ca": "Commerce électronique / Click & Collect",
+    },
+    geo: "Lille (opéré depuis Montréal)",
+    duration: "Mission 9 mois (2024-2025)",
+    teamSize: 2,
+    techStack: [
+      "Nuxt 3 + Vue.js + TypeScript",
+      "Node.js + DDD",
+      "MongoDB Atlas",
+      "GCP (Cloud Run, Pub/Sub)",
+      "Computer Vision",
+      "GPT-3.5 / Gemini",
+    ],
+    kpi: {
+      value: "5 min",
+      label: {
+        fr: "pour créer son e-shop marchand",
+        en: "to set up your merchant e-shop",
+        ja: "マーチャントeショップ開設まで",
+        "fr-ca": "pour créer sa boutique en ligne",
+      },
+    },
+    publishedAt: "2026-05-04",
+    title: {
+      fr: "Bopizy : squad cross-Atlantique pour scaler une SaaS click & collect française.",
+      en: "Bopizy: cross-Atlantic squad to scale a French click & collect SaaS.",
+      ja: "Bopizy：フランスのクリック&コレクトSaaSをスケールアップする大西洋横断スクワッド。",
+      "fr-ca": "Bopizy : équipe transatlantique pour passer à l'échelle un SaaS click & collect français.",
+    },
+    excerpt: {
+      fr: "Bopizy démocratise le click & collect pour les marchands de proximité (« les oubliés de la digitalisation »). Le marchand prend son étal en photo, la computer vision génère sa fiche e-shop. Squad Abbeal de 2 devs depuis Montréal sur fuseau européen : architecture +10 microservices Cloud Run + Pub/Sub, parcours onboarding IA générative (GPT-3.5/Gemini), DDD/Zod/Auth0. Production avec premiers clients printemps 2025.",
+      en: "Bopizy democratises click & collect for local merchants (\"those forgotten by digitalisation\"). The merchant photographs their stall, computer vision generates the e-shop product page. Abbeal squad of 2 devs from Montreal on European time zone: architecture of 10+ microservices Cloud Run + Pub/Sub, onboarding journey with generative AI (GPT-3.5/Gemini), DDD/Zod/Auth0. Production with first clients spring 2025.",
+      ja: "Bopizyは地元商店（「デジタル化に取り残された人々」）向けにクリック&コレクトを民主化。商人が屋台を撮影し、コンピュータビジョンがeショップ商品ページを生成。モントリオールから欧州タイムゾーンでAbbeal 2名のスクワッド：10以上のマイクロサービスCloud Run + Pub/Subアーキテクチャ、生成AI（GPT-3.5/Gemini）によるオンボーディングジャーニー、DDD/Zod/Auth0。2025年春に最初のクライアントとともに本番稼働。",
+      "fr-ca": "Bopizy démocratise le click & collect pour les marchands de proximité (« les oubliés de la numérisation »). Le marchand prend son étal en photo, la vision par ordinateur génère sa fiche e-boutique. Équipe Abbeal de 2 développeurs depuis Montréal sur fuseau européen : architecture +10 microservices Cloud Run + Pub/Sub, parcours d'intégration IA générative (GPT-3.5/Gemini), DDD/Zod/Auth0. Production avec premiers clients printemps 2025.",
+    },
+    body: {
+      fr: CASE_BODIES["bopizy"]?.fr ?? [],
+      en: CASE_BODIES["bopizy"]?.en,
+      ja: CASE_BODIES["bopizy"]?.ja,
+      "fr-ca": CASE_BODIES["bopizy"]?.["fr-ca"],
+    },
+  },
   // TheGreenBow — case nommé. Editeur français de cybersécurité (VPN
   // souverains, fondé 1998, racheté par groupe Athena en 2025). Reprise en
   // urgence du dev de la Console Bowrealis (CMC) après rupture du précédent
