@@ -90,7 +90,7 @@ export const cases: CaseStudy[] = [
         "fr-ca": "AI Engineers + Lead Platform",
       },
     },
-    publishedAt: "2026-05-06",
+    publishedAt: "2026-04-12",
     title: {
       fr: "Paraito : staffing AI & Platform pour scaler une legaltech québécoise.",
       en: "Paraito: AI & Platform staffing to scale a Quebec legaltech.",
@@ -148,7 +148,7 @@ export const cases: CaseStudy[] = [
         "fr-ca": "économisées en travail manuel",
       },
     },
-    publishedAt: "2026-05-05",
+    publishedAt: "2026-03-18",
     title: {
       fr: "Mobilitas : digitalisation complète d'un cabinet d'immigration, du clic à la facture.",
       en: "Mobilitas: full digitalisation of an immigration practice, from click to invoice.",
@@ -206,7 +206,7 @@ export const cases: CaseStudy[] = [
         "fr-ca": "pour créer sa boutique en ligne",
       },
     },
-    publishedAt: "2026-05-04",
+    publishedAt: "2026-02-25",
     title: {
       fr: "Bopizy : squad cross-Atlantique pour scaler une SaaS click & collect française.",
       en: "Bopizy: cross-Atlantic squad to scale a French click & collect SaaS.",
@@ -276,7 +276,7 @@ export const cases: CaseStudy[] = [
         "fr-ca": "experts mobilisés en quelques semaines",
       },
     },
-    publishedAt: "2026-05-07",
+    publishedAt: "2025-12-22",
     title: {
       fr: "TheGreenBow : reprise en urgence de la Console VPN d'un éditeur cybersécurité français.",
       en: "TheGreenBow: emergency takeover of the VPN console of a French cybersecurity vendor.",
@@ -319,7 +319,7 @@ export const cases: CaseStudy[] = [
   // Featured: false jusqu'à validation Money Forward.
   {
     slug: "money-forward",
-    featured: false,
+    featured: true,
     clientLogo: "money-forward",
     sector: {
       fr: "Banking digitale / FinTech",
@@ -347,7 +347,7 @@ export const cases: CaseStudy[] = [
         "fr-ca": "banque numérique from-scratch Tokyo",
       },
     },
-    publishedAt: "2026-05-06",
+    publishedAt: "2025-11-12",
     title: {
       fr: "Money Forward : data backbone d'une nouvelle banque digitale à Tokyo.",
       en: "Money Forward: data backbone of a brand-new digital bank in Tokyo.",
@@ -407,7 +407,7 @@ export const cases: CaseStudy[] = [
         "fr-ca": "employes PwC sur SkillBot",
       },
     },
-    publishedAt: "2026-05-05",
+    publishedAt: "2025-07-12",
     title: {
       fr: "Neobrain × PwC : SkillBot, l'agent IA RH dans Microsoft Teams.",
       en: "Neobrain × PwC: SkillBot, the HR AI agent inside Microsoft Teams.",
@@ -443,7 +443,7 @@ export const cases: CaseStudy[] = [
   // next.config.ts).
   {
     slug: "le-monde",
-    featured: false,
+    featured: true,
     clientLogo: "le-monde",
     sector: {
       fr: "Média / Presse nationale",
@@ -471,7 +471,7 @@ export const cases: CaseStudy[] = [
         "fr-ca": "intégré équipe Insights",
       },
     },
-    publishedAt: "2026-05-05",
+    publishedAt: "2025-09-18",
     title: {
       fr: "Le Monde : 6 ans dans la team Insights, de Paris à Tokyo.",
       en: "Le Monde: 6 years embedded in the Insights team, from Paris to Tokyo.",
@@ -498,7 +498,7 @@ export const cases: CaseStudy[] = [
   // event-driven). Préserve SEO /projets/bnp.
   {
     slug: "bnp",
-    featured: false,
+    featured: true,
     clientLogo: "bnp",
     sector: {
       fr: "Banque tier-1",
@@ -526,7 +526,7 @@ export const cases: CaseStudy[] = [
         "fr-ca": "catalogue produits PO",
       },
     },
-    publishedAt: "2026-05-04",
+    publishedAt: "2025-12-08",
     title: {
       fr: "BNP Paribas : Reference Book PO, de React/Redux aux agents IA produits.",
       en: "BNP Paribas: Reference Book PO, from React/Redux to product AI agents.",
@@ -552,7 +552,7 @@ export const cases: CaseStudy[] = [
   // plans + LLM personnalisation fiches). Préserve SEO /projets/pichet.
   {
     slug: "pichet",
-    featured: false,
+    featured: true,
     clientLogo: "pichet",
     sector: {
       fr: "Immobilier / Promotion",
@@ -580,7 +580,7 @@ export const cases: CaseStudy[] = [
         "fr-ca": "analyse plans 2D/3D",
       },
     },
-    publishedAt: "2026-05-03",
+    publishedAt: "2025-10-22",
     title: {
       fr: "Pichet : du Symfony/eZplatform à l'IA Vision sur plans immobiliers.",
       en: "Pichet: from Symfony/eZplatform to AI Vision on property floor plans.",
@@ -635,7 +635,7 @@ export const cases: CaseStudy[] = [
         "fr-ca": "moteur de recommandations IA",
       },
     },
-    publishedAt: "2026-05-02",
+    publishedAt: "2025-08-15",
     title: {
       fr: "Tripadvisor (TheFork) : du Symfony/SolR à la reco IA hybride.",
       en: "Tripadvisor (TheFork): from Symfony/SolR to hybrid AI recommendation.",
@@ -694,7 +694,7 @@ export const cases: CaseStudy[] = [
         "fr-ca": "classement IA tuteurs",
       },
     },
-    publishedAt: "2026-05-01",
+    publishedAt: "2025-06-25",
     title: {
       fr: "Groupe Réussite : marketplace edtech, ranking IA et messagerie temps réel.",
       en: "Groupe Réussite: edtech marketplace, AI ranking and real-time messaging.",
@@ -729,7 +729,7 @@ export const cases: CaseStudy[] = [
   // Featured: false jusqu'à validation.
   {
     slug: "cartier",
-    featured: false,
+    featured: true,
     clientLogo: "cartier",
     sector: {
       fr: "Joaillerie & horlogerie de luxe",
@@ -757,7 +757,7 @@ export const cases: CaseStudy[] = [
         "fr-ca": "ajusté sur infra Cartier",
       },
     },
-    publishedAt: "2026-04-30",
+    publishedAt: "2026-01-15",
     title: {
       fr: "Cartier : de l'audit au LLM privé en interne.",
       en: "Cartier: from audit to in-house private LLM.",
@@ -779,7 +779,7 @@ export const cases: CaseStudy[] = [
   },
   {
     slug: "scale-up-mobilite-30-cloud",
-    featured: true,
+    featured: false,
     sector: { fr: "Mobilité urbaine", en: "Urban mobility", ja: "都市モビリティ", "fr-ca": "Mobilité urbaine" },
     geo: "Paris + Montréal",
     duration: "9 mois",
@@ -805,7 +805,7 @@ export const cases: CaseStudy[] = [
   },
   {
     slug: "leader-sport-pwa-conversion",
-    featured: true,
+    featured: false,
     sector: { fr: "E-commerce sport", en: "Sports e-commerce", ja: "スポーツEC", "fr-ca": "Commerce électronique sport" },
     geo: "Paris",
     duration: "6 mois",
@@ -831,7 +831,7 @@ export const cases: CaseStudy[] = [
   },
   {
     slug: "robotique-jp-ros2-flotte",
-    featured: true,
+    featured: false,
     sector: { fr: "Robotique industrielle", en: "Industrial robotics", ja: "産業ロボティクス", "fr-ca": "Robotique industrielle" },
     geo: "Tokyo",
     duration: "14 mois",
@@ -857,7 +857,7 @@ export const cases: CaseStudy[] = [
   },
   {
     slug: "fintech-iso27001-devsecops",
-    featured: true,
+    featured: false,
     sector: { fr: "FinTech SaaS", en: "FinTech SaaS", ja: "FinTech SaaS", "fr-ca": "FinTech SaaS" },
     geo: "Tri-geo",
     duration: "11 mois",

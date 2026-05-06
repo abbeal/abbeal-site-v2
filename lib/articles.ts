@@ -364,7 +364,7 @@ export const articles: Article[] = [
     featured: false,
     tag: "Mobbeal",
     readTime: "6 min",
-    publishedAt: "2026-05-06",
+    publishedAt: "2026-04-25",
     title: {
       fr: "3 ans à Tokyo : Alex, Senior Software Engineer, comment il vit son décalage de 7-8h.",
       en: "3 years in Tokyo: Alex, Senior Software Engineer, how he lives his 7-8h time gap.",
@@ -390,7 +390,7 @@ export const articles: Article[] = [
     featured: false,
     tag: "Mobbeal",
     readTime: "6 min",
-    publishedAt: "2026-05-06",
+    publishedAt: "2026-04-15",
     title: {
       fr: "PVT Tokyo : Kevyn, ingénieur mécanique chez Amplitude Laser, 1 an au Japon.",
       en: "Working Holiday Tokyo: Kevyn, mechanical engineer at Amplitude Laser, 1 year in Japan.",
@@ -416,7 +416,7 @@ export const articles: Article[] = [
     featured: false,
     tag: "Mobbeal",
     readTime: "5 min",
-    publishedAt: "2026-05-06",
+    publishedAt: "2026-04-05",
     title: {
       fr: "VIE Tokyo : Grégorie, dev fullstack chez OneID, le meilleur des deux mondes.",
       en: "VIE Tokyo: Grégorie, fullstack dev at OneID, the best of both worlds.",
@@ -477,7 +477,7 @@ export const articles: Article[] = [
     featured: false,
     tag: "Mobbeal",
     readTime: "6 min",
-    publishedAt: "2026-05-06",
+    publishedAt: "2026-04-20",
     title: {
       fr: "Où vivre à Tokyo ? Mon top 5 (subjectif, assumé), par Sébastien Lonjon.",
       en: "Where to live in Tokyo? My top 5 (subjective, no apologies), by Sébastien Lonjon.",
@@ -506,7 +506,7 @@ export const articles: Article[] = [
     featured: false,
     tag: "Mobbeal",
     readTime: "4 min",
-    publishedAt: "2026-05-06",
+    publishedAt: "2026-04-12",
     title: {
       fr: "Mon top ramen à Tokyo : 4 adresses qui m'ont remis à ma place.",
       en: "My top ramen in Tokyo: 4 spots that put me back in my place.",
@@ -537,9 +537,14 @@ export function getFeaturedArticles(): Article[] {
 }
 
 export function getAllArticles(): Article[] {
-  return [...articles].sort((a, b) =>
-    a.publishedAt < b.publishedAt ? 1 : -1,
-  );
+  // Tri composite : featured d'abord (les pillars d'expertise tech remontent),
+  // puis par date desc (récents en haut). Évite l'effet "wall of Mobbeal" en
+  // remontant systématiquement les articles structurants Agents IA / GreenOps
+  // / Tech Radar avant les témoignages Mobbeal Tokyo récents.
+  return [...articles].sort((a, b) => {
+    if (a.featured !== b.featured) return a.featured ? -1 : 1;
+    return a.publishedAt < b.publishedAt ? 1 : -1;
+  });
 }
 
 /** Pick localized field with fallback to FR */
