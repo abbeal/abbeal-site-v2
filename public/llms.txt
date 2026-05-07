@@ -41,6 +41,7 @@ Abbeal ne facture pas des jours d'ingénieurs. Abbeal livre un périmètre. Squa
 
 ## Articles de référence
 
+- [Comment j'ai automatisé une journée de CEO d'ESN avec Claude](https://abbeal.com/fr/insights/automatiser-journee-ceo-claude-orchestration.md) : Sébastien Lonjon — 30 workflows Claude orchestrés sur Notion + BoondManager + Google + LinkedIn + Apollo + Calendly. 4 piliers : commercial / recrutement / inbound / productivité dirigeant
 - [Agents IA en production : éviter le théâtre de démo](https://abbeal.com/fr/insights/agents-ia-production.md) : 7 patterns réels
 - [GreenOps : 7 leviers qui coupent 30% de facture cloud](https://abbeal.com/fr/insights/greenops-7-leviers.md) : audit + Karpenter + ARM64
 - [Tech Radar 2026 : Rust et ROS 2 dominent](https://abbeal.com/fr/insights/tech-radar-2026.md) : critères adopt/trial/assess/hold

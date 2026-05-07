@@ -526,6 +526,38 @@ export const articles: Article[] = [
       "fr-ca": ARTICLE_BODIES["top-ramen-tokyo-afuri-tamotsu-menya-kokoro"]?.["fr-ca"],
     },
   },
+  // Article 19 — Automatiser une journee de CEO d'ESN avec Claude (par Sebastien Lonjon)
+  // Article positioning + sales : Sebastien partage la stack Claude + 30
+  // workflows orchestres pour automatiser commercial / recrutement / inbound /
+  // productivite personnelle. CTA Calendly audit 30 min gratuites a la fin.
+  // Featured: true pour pousser sur /insights top (objectif inbound prospects
+  // CEO/COO qui veulent industrialiser leur stack). Tag "IA" pour matcher la
+  // niche AI orchestration / agents en production.
+  {
+    slug: "automatiser-journee-ceo-claude-orchestration",
+    featured: true,
+    tag: "IA",
+    readTime: "7 min",
+    publishedAt: "2026-05-07",
+    title: {
+      fr: "Comment j'ai automatisé une journée de CEO d'ESN avec Claude (et ce que vous pouvez en tirer).",
+      en: "How I automated a tech consulting CEO's day with Claude (and what you can learn from it).",
+      ja: "ClaudeでESNのCEOの1日を自動化した方法（そしてあなたがそこから得られるもの）。",
+      "fr-ca": "Comment j'ai automatisé une journée de CEO de firme tech avec Claude (et ce que vous pouvez en tirer).",
+    },
+    excerpt: {
+      fr: "30 workflows orchestrés sur Notion + BoondManager + Google Workspace + LinkedIn + Apollo + Calendly + Tactiq, sans nouveau SaaS. 4 piliers : commercial multicanal anti-doublon, recrutement 48h, inbound SEO/LinkedIn/citations IA, productivité dirigeant. Zéro lead perdu en 6 mois, 15 min/jour vs 3-4h avant.",
+      en: "30 workflows orchestrated on Notion + BoondManager + Google Workspace + LinkedIn + Apollo + Calendly + Tactiq, no new SaaS. 4 pillars: multichannel anti-duplicate sales, 48h recruitment, inbound SEO/LinkedIn/AI citations, founder productivity. Zero lost leads in 6 months, 15 min/day vs 3-4h before.",
+      ja: "Notion + BoondManager + Google Workspace + LinkedIn + Apollo + Calendly + Tactiqで30のワークフローをオーケストレーション、新しいSaaSなし。4つの柱：マルチチャネル重複防止セールス、48時間採用、インバウンドSEO/LinkedIn/AI引用、創業者の生産性。6ヶ月で失われたリードゼロ、以前の3〜4時間に対して1日15分。",
+      "fr-ca": "30 workflows orchestrés sur Notion + BoondManager + Google Workspace + LinkedIn + Apollo + Calendly + Tactiq, sans nouveau SaaS. 4 piliers : commercial multicanal anti-doublon, recrutement 48h, inbound SEO/LinkedIn/citations IA, productivité dirigeant. Zéro lead perdu en 6 mois, 15 min/jour vs 3-4h avant.",
+    },
+    body: {
+      fr: ARTICLE_BODIES["automatiser-journee-ceo-claude-orchestration"]?.fr ?? [],
+      en: ARTICLE_BODIES["automatiser-journee-ceo-claude-orchestration"]?.en,
+      ja: ARTICLE_BODIES["automatiser-journee-ceo-claude-orchestration"]?.ja,
+      "fr-ca": ARTICLE_BODIES["automatiser-journee-ceo-claude-orchestration"]?.["fr-ca"],
+    },
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {

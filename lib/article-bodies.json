@@ -6151,5 +6151,847 @@
         "label": "Prendre rendez-vous avec Sébastien — 30 min, sans engagement"
       }
     ]
+  },
+  "automatiser-journee-ceo-claude-orchestration": {
+    "fr": [
+      {
+        "type": "p",
+        "content": "Par Sébastien Lonjon, CEO Abbeal — Paris · Montréal · Tokyo."
+      },
+      {
+        "type": "h2",
+        "content": "Le constat de départ"
+      },
+      {
+        "type": "p",
+        "content": "Diriger une ESN tech en 2026, c'est gérer en parallèle trois métiers qui ne s'arrêtent jamais :"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Un pipeline commercial qui demande des relances multicanales propres et des briefings client à jour.",
+          "Un moteur de recrutement qui doit produire des shortlists qualifiées en moins de 48h.",
+          "Une présence inbound (LinkedIn, SEO, contenu) qui ne peut pas dépendre d'une bonne semaine."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Et au milieu de tout ça, l'agenda d'un CEO. 30 à 40 meetings par semaine, 200 mails entrants par jour, deux profils LinkedIn actifs, du WhatsApp, du Slack, du Line, du Calendly, des transcripts de visio à classer."
+      },
+      {
+        "type": "p",
+        "content": "À un moment, soit on recrute trois assistants, soit on industrialise. On a choisi d'industrialiser."
+      },
+      {
+        "type": "h2",
+        "content": "La stack qu'on orchestre"
+      },
+      {
+        "type": "p",
+        "content": "Rien de magique côté outils. Ce sont les briques que beaucoup d'entreprises ont déjà :"
+      },
+      {
+        "type": "p",
+        "content": "Notion comme source de vérité unique · BoondManager pour le CRM staffing · Google Workspace (Gmail, Calendar, Drive) · Slack pour la coordination interne · LinkedIn (via Unipile API) pour le messaging · Apollo.io pour le sourcing B2B · Calendly pour le booking · Tactiq pour les transcripts."
+      },
+      {
+        "type": "p",
+        "content": "Ce qui change, c'est la couche d'orchestration au-dessus. Chez nous, c'est un assistant Claude personnalisé, qui exécute une trentaine de workflows dédiés et prend des décisions sur des règles métier qu'on a documentées."
+      },
+      {
+        "type": "p",
+        "content": "Pas de SaaS supplémentaire. Pas d'abonnement à un nième outil. On a connecté ce qu'on avait déjà."
+      },
+      {
+        "type": "h2",
+        "content": "Pilier 1 — Commercial : la relance multicanale qui ne lâche jamais un lead"
+      },
+      {
+        "type": "p",
+        "content": "Le bug classique d'une ESN, c'est le lead qui meurt entre deux canaux. Un prospect répond sur LinkedIn, on bascule en email, on oublie de relancer parce que ça change de boîte de réception."
+      },
+      {
+        "type": "p",
+        "content": "Ce qu'on a automatisé :"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Un scan 4 fois par jour de Gmail, LinkedIn (deux profils), WhatsApp et Calendar pour détecter qui n'a pas eu de réponse depuis trop longtemps.",
+          "Une séquence T0–T4 automatique avec des relances rédigées dans la voix de la maison, dans le bon thread Gmail (pas un nouveau mail orphelin), sur le bon profil LinkedIn.",
+          "Un anti-doublon cross-canal : avant tout envoi, vérification que rien d'équivalent n'est déjà parti dans les 30 derniers jours, sur n'importe quel canal.",
+          "Un backfill CRM temps réel : chaque interaction est tracée dans BoondManager et dans un Tracker Notion centralisé."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Résultat concret : zéro lead perdu, et la rédaction des relances ne consomme plus le temps du dirigeant."
+      },
+      {
+        "type": "h2",
+        "content": "Pilier 2 — Recrutement : du besoin client à la shortlist qualifiée"
+      },
+      {
+        "type": "p",
+        "content": "Quand un client envoie un descriptif de poste, le délai pour répondre est devenu une variable concurrentielle. La plupart des ESN mettent 5 à 10 jours pour produire un dossier propre. On vise 24 à 48h."
+      },
+      {
+        "type": "p",
+        "content": "Ce qui tourne pour nous chaque jour :"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Lecture automatique de la fiche de poste et création du besoin dans BoondManager (société + contact + descriptif).",
+          "Sourcing 3 canaux (vivier interne Boond + recherche LinkedIn + Apollo) avec un pré-check d'engagement candidat par candidat.",
+          "Un scoring double axe : Client-fit (adéquation à la mission) et Abbeal-fit (alignement valeurs), pour produire un TOP 10 ranké sans biais.",
+          "Génération du dossier de compétences au format Abbeal, anonymisé, avec le logo et la mise en page corporate, en quelques minutes au lieu de 90.",
+          "Auto-préparation des entretiens : la veille du call, fiche candidat enrichie (LinkedIn, historique Gmail, transcripts précédents) prête sur la fiche Boond."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Résultat : moins de zappage pour les équipes, plus de profils qualifiés pour le client, des entretiens où on arrive préparé."
+      },
+      {
+        "type": "h2",
+        "content": "Pilier 3 — Inbound : SEO, LinkedIn, citations IA"
+      },
+      {
+        "type": "p",
+        "content": "L'inbound, c'est ce qui paie quand le marché tousse. Et c'est ce que la plupart des CEOs laissent tomber par manque de bande passante."
+      },
+      {
+        "type": "p",
+        "content": "Notre routine inbound automatisée :"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Audit hebdomadaire de la cohérence du messaging entre le site, LinkedIn, Notion, Medium, Google My Business des trois villes, et les pages tierces.",
+          "Suivi SEO sur 20 mots-clés (FR/EN/JP) avec Core Web Vitals, schema.org et backlinks.",
+          "Suivi des citations LLM : ChatGPT, Perplexity, Claude, Gemini sur 6 prompts standardisés. Parce qu'en 2026, être cité par les IA vaut autant qu'être bien classé sur Google.",
+          "Soumission GSC quotidienne de 10 URLs prioritaires pour accélérer l'indexation des nouvelles pages.",
+          "Génération et publication LinkedIn automatique avec visuels graphiques natifs, sur le profil personnel et la page entreprise, avec respect strict du tone of voice et de la palette graphique."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Résultat : une présence régulière, un site qui se référence, et des leads inbound qui arrivent sans qu'on les ait chassés."
+      },
+      {
+        "type": "h2",
+        "content": "Pilier 4 — Productivité personnelle du dirigeant"
+      },
+      {
+        "type": "p",
+        "content": "C'est la partie qu'on oublie souvent. Avant de gagner du temps en mode équipe, il faut sauver les heures du CEO."
+      },
+      {
+        "type": "p",
+        "content": "Ce qui tourne sur ma propre journée :"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Triage hebdomadaire du Calendar : vendredi matin, scan de tous les RDV de la semaine suivante, verdict KEEP/REPORT/CANCEL/DELEGUE par event, avec contexte cross-source (LinkedIn, Boond, Gmail, Tactiq).",
+          "Lecture de la todo Apple Notes + croisement avec Gmail et LinkedIn pour vérifier ce qui est déjà fait avant de me suggérer des priorités.",
+          "Drafts mail rédigés à la voix, dans la bonne langue, avec la signature HTML correcte et le bon lien Calendly selon le contexte.",
+          "Recap quotidien à 20h : tout ce qui s'est passé sur Gmail, LinkedIn, Calendar, Tactiq et Boond, consolidé en un rapport unique."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Mon rôle a changé : je ne fais plus l'exécution, je fais la décision et l'arbitrage."
+      },
+      {
+        "type": "h2",
+        "content": "Ce que ça donne en chiffres"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "30 workflows automatisés orchestrés sur la même infrastructure.",
+          "4 scans par jour de tous les canaux.",
+          "Zéro lead perdu entre canaux depuis 6 mois.",
+          "24 à 48h pour produire un dossier candidat qualifié.",
+          "15 minutes par jour pour valider ce qui part, contre 3 à 4h auparavant."
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "La méthode qu'on applique"
+      },
+      {
+        "type": "p",
+        "content": "On ne vend pas un outil. On ne pousse pas un SaaS de plus. Ce qu'on fait, c'est cartographier votre stack existante et identifier les 5 frictions qui mangent le plus de temps de votre équipe."
+      },
+      {
+        "type": "p",
+        "content": "La plupart du temps, vous avez déjà 80 % de ce qu'il faut. Il manque la couche d'orchestration et les règles métier documentées."
+      },
+      {
+        "type": "p",
+        "content": "C'est exactement ce qu'on a appris à faire pour nous, et ce qu'on transpose maintenant chez nos clients."
+      },
+      {
+        "type": "h2",
+        "content": "Et vous, où vous en êtes ?"
+      },
+      {
+        "type": "p",
+        "content": "Si vous lisez cet article jusqu'ici, vous avez probablement déjà ce constat en tête. Trop de canaux, trop de meetings, trop de leads qui passent à la trappe, et pas le temps de regarder votre SEO ou votre LinkedIn de la semaine."
+      },
+      {
+        "type": "p",
+        "content": "Faisons un audit ensemble."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "30 minutes, gratuites, sans suite obligatoire. On regarde votre stack actuelle, on identifie les 3 frictions les plus rentables à automatiser, et on vous donne les premiers jalons d'implémentation. Vous repartez avec une roadmap concrète, même si on ne travaille pas ensemble derrière."
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/csjx-jhz-5yw/your-company-x-abbeal",
+        "label": "Réserver l'audit — 30 min gratuites"
+      }
+    ],
+    "en": [
+      {
+        "type": "p",
+        "content": "By Sébastien Lonjon, CEO Abbeal — Paris · Montréal · Tokyo."
+      },
+      {
+        "type": "h2",
+        "content": "The starting point"
+      },
+      {
+        "type": "p",
+        "content": "Running a tech consulting firm in 2026 means juggling three jobs that never stop:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "A sales pipeline that needs clean multichannel follow-ups and up-to-date client briefs.",
+          "A recruitment engine that must produce qualified shortlists in under 48h.",
+          "An inbound presence (LinkedIn, SEO, content) that cannot rely on a good week."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "And in the middle of all that, a CEO's calendar. 30 to 40 meetings a week, 200 inbound emails a day, two active LinkedIn profiles, WhatsApp, Slack, Line, Calendly, video transcripts to file."
+      },
+      {
+        "type": "p",
+        "content": "At some point, you either hire three assistants, or you industrialise. We chose to industrialise."
+      },
+      {
+        "type": "h2",
+        "content": "The stack we orchestrate"
+      },
+      {
+        "type": "p",
+        "content": "Nothing magical on the tools side. These are the building blocks many companies already have:"
+      },
+      {
+        "type": "p",
+        "content": "Notion as the single source of truth · BoondManager for staffing CRM · Google Workspace (Gmail, Calendar, Drive) · Slack for internal coordination · LinkedIn (via Unipile API) for messaging · Apollo.io for B2B sourcing · Calendly for booking · Tactiq for transcripts."
+      },
+      {
+        "type": "p",
+        "content": "What changes is the orchestration layer on top. For us, that's a custom Claude assistant that runs about thirty dedicated workflows and makes decisions based on documented business rules."
+      },
+      {
+        "type": "p",
+        "content": "No additional SaaS. No subscription to yet another tool. We connected what we already had."
+      },
+      {
+        "type": "h2",
+        "content": "Pillar 1 — Sales: the multichannel follow-up that never drops a lead"
+      },
+      {
+        "type": "p",
+        "content": "The classic bug for a consulting firm is the lead that dies between channels. A prospect replies on LinkedIn, you switch to email, you forget to follow up because the inbox changes."
+      },
+      {
+        "type": "p",
+        "content": "What we automated:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "A 4-times-a-day scan of Gmail, LinkedIn (two profiles), WhatsApp and Calendar to detect who hasn't had a reply in too long.",
+          "An automatic T0–T4 sequence with follow-ups written in the house voice, in the right Gmail thread (not a new orphan email), on the right LinkedIn profile.",
+          "A cross-channel anti-duplicate: before any send, check that nothing equivalent has gone out in the last 30 days, on any channel.",
+          "Real-time CRM backfill: every interaction is tracked in BoondManager and in a centralised Notion Tracker."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Concrete result: zero lost leads, and writing follow-ups no longer consumes the founder's time."
+      },
+      {
+        "type": "h2",
+        "content": "Pillar 2 — Recruitment: from client need to qualified shortlist"
+      },
+      {
+        "type": "p",
+        "content": "When a client sends a job description, the time to respond has become a competitive variable. Most consulting firms take 5 to 10 days to produce a clean dossier. We aim for 24 to 48h."
+      },
+      {
+        "type": "p",
+        "content": "What runs daily for us:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Automatic reading of the job description and creation of the need in BoondManager (company + contact + description).",
+          "3-channel sourcing (internal Boond pool + LinkedIn search + Apollo) with a candidate-by-candidate engagement pre-check.",
+          "A double-axis scoring: Client-fit (mission match) and Abbeal-fit (values alignment), to produce a ranked TOP 10 without bias.",
+          "Skills dossier generation in Abbeal format, anonymised, with the logo and corporate layout, in minutes instead of 90.",
+          "Auto-prep for interviews: the day before the call, an enriched candidate sheet (LinkedIn, Gmail history, prior transcripts) is ready on the Boond record."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Result: less context-switching for the teams, more qualified profiles for the client, interviews where we arrive prepared."
+      },
+      {
+        "type": "h2",
+        "content": "Pillar 3 — Inbound: SEO, LinkedIn, AI citations"
+      },
+      {
+        "type": "p",
+        "content": "Inbound is what pays when the market wobbles. And it's what most CEOs drop for lack of bandwidth."
+      },
+      {
+        "type": "p",
+        "content": "Our automated inbound routine:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Weekly audit of messaging consistency between the site, LinkedIn, Notion, Medium, Google My Business in three cities, and third-party pages.",
+          "SEO tracking on 20 keywords (FR/EN/JP) with Core Web Vitals, schema.org and backlinks.",
+          "LLM citation tracking: ChatGPT, Perplexity, Claude, Gemini on 6 standardised prompts. Because in 2026, being cited by the AIs is worth as much as ranking well on Google.",
+          "Daily GSC submission of 10 priority URLs to speed up indexation of new pages.",
+          "Automatic LinkedIn generation and publishing with native graphic visuals, on the personal profile and the company page, with strict respect for tone of voice and graphic palette."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Result: a regular presence, a site that ranks, and inbound leads that arrive without us hunting them."
+      },
+      {
+        "type": "h2",
+        "content": "Pillar 4 — Personal productivity for the founder"
+      },
+      {
+        "type": "p",
+        "content": "This is the part people often forget. Before saving team time, you need to save the CEO's hours."
+      },
+      {
+        "type": "p",
+        "content": "What runs on my own day:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Weekly Calendar triage: Friday morning, scan of all next week's appointments, KEEP/REPORT/CANCEL/DELEGATE verdict per event, with cross-source context (LinkedIn, Boond, Gmail, Tactiq).",
+          "Reading the Apple Notes todo + cross-referencing with Gmail and LinkedIn to check what's already done before suggesting priorities.",
+          "Mail drafts written in voice, in the right language, with the correct HTML signature and the right Calendly link by context.",
+          "Daily 8pm recap: everything that happened on Gmail, LinkedIn, Calendar, Tactiq and Boond, consolidated into a single report."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "My role has changed: I no longer do execution, I do decision and arbitration."
+      },
+      {
+        "type": "h2",
+        "content": "What it looks like in numbers"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "30 automated workflows orchestrated on the same infrastructure.",
+          "4 scans per day across all channels.",
+          "Zero lost leads between channels in 6 months.",
+          "24 to 48h to produce a qualified candidate dossier.",
+          "15 minutes per day to validate what goes out, vs 3 to 4h before."
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "The method we apply"
+      },
+      {
+        "type": "p",
+        "content": "We don't sell a tool. We don't push yet another SaaS. What we do is map your existing stack and identify the 5 frictions that eat the most of your team's time."
+      },
+      {
+        "type": "p",
+        "content": "Most of the time, you already have 80% of what's needed. What's missing is the orchestration layer and the documented business rules."
+      },
+      {
+        "type": "p",
+        "content": "That's exactly what we learned to do for ourselves, and what we now transpose with our clients."
+      },
+      {
+        "type": "h2",
+        "content": "And you, where are you at?"
+      },
+      {
+        "type": "p",
+        "content": "If you read this article this far, you probably have this realisation in mind already. Too many channels, too many meetings, too many leads slipping through, and no time to look at your SEO or your LinkedIn this week."
+      },
+      {
+        "type": "p",
+        "content": "Let's audit together."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "30 minutes, free, no obligation to follow up. We look at your current stack, identify the 3 frictions most worth automating, and give you the first implementation milestones. You leave with a concrete roadmap, even if we don't end up working together."
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/csjx-jhz-5yw/your-company-x-abbeal",
+        "label": "Book the audit — 30 free minutes"
+      }
+    ],
+    "ja": [
+      {
+        "type": "p",
+        "content": "Sébastien Lonjon、Abbeal CEO — パリ・モントリオール・東京。"
+      },
+      {
+        "type": "h2",
+        "content": "出発点"
+      },
+      {
+        "type": "p",
+        "content": "2026年にテックESNを率いるということは、止まることのない3つの仕事を並行して管理することです："
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "クリーンなマルチチャネルフォローアップと最新のクライアントブリーフを必要とする商業パイプライン。",
+          "48時間以内にクオリファイされたショートリストを生み出さなければならない採用エンジン。",
+          "良い週に頼ることのできないインバウンド存在感（LinkedIn、SEO、コンテンツ）。"
+        ]
+      },
+      {
+        "type": "p",
+        "content": "そしてそれら全ての真ん中に、CEOのアジェンダ。週に30から40のミーティング、1日200の受信メール、2つのアクティブなLinkedInプロフィール、WhatsApp、Slack、Line、Calendly、整理すべきビデオ通話のトランスクリプト。"
+      },
+      {
+        "type": "p",
+        "content": "ある時点で、3人のアシスタントを採用するか、産業化するか。私たちは産業化を選びました。"
+      },
+      {
+        "type": "h2",
+        "content": "オーケストレーションするスタック"
+      },
+      {
+        "type": "p",
+        "content": "ツール側に魔法はありません。多くの企業がすでに持っているビルディングブロックです："
+      },
+      {
+        "type": "p",
+        "content": "Notion（唯一の真実の源として）· BoondManager（スタッフィングCRM用）· Google Workspace（Gmail、カレンダー、ドライブ）· Slack（社内調整用）· LinkedIn（Unipile API経由でメッセージング）· Apollo.io（B2Bソーシング用）· Calendly（予約用）· Tactiq（トランスクリプト用）。"
+      },
+      {
+        "type": "p",
+        "content": "変わるのは、その上のオーケストレーション層です。私たちの場合、それは約30の専用ワークフローを実行し、文書化されたビジネスルールに基づいて意思決定を行うカスタムClaudeアシスタントです。"
+      },
+      {
+        "type": "p",
+        "content": "追加のSaaSはありません。さらなるツールへのサブスクリプションもありません。すでにあるものを接続しただけです。"
+      },
+      {
+        "type": "h2",
+        "content": "柱1 — 商業：リードを決して取りこぼさないマルチチャネルフォローアップ"
+      },
+      {
+        "type": "p",
+        "content": "ESNの典型的なバグは、チャネル間で死ぬリードです。プロスペクトがLinkedInで返信し、メールに切り替え、受信トレイが変わったためフォローアップを忘れる。"
+      },
+      {
+        "type": "p",
+        "content": "私たちが自動化したこと："
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Gmail、LinkedIn（2つのプロフィール）、WhatsApp、カレンダーを1日4回スキャンし、長期間返答がない人を検出。",
+          "T0〜T4の自動シーケンス、ハウスのトーンでフォローアップを記述、正しいGmailスレッド内（孤立した新規メールではなく）、正しいLinkedInプロフィール上。",
+          "クロスチャネル重複防止：送信前に、過去30日以内にどのチャネルでも同等のものが送信されていないことを確認。",
+          "リアルタイムCRMバックフィル：すべてのインタラクションがBoondManagerと中央集約されたNotionトラッカーに記録。"
+        ]
+      },
+      {
+        "type": "p",
+        "content": "具体的な結果：失われたリードゼロ、フォローアップの作成が経営者の時間を消費しなくなった。"
+      },
+      {
+        "type": "h2",
+        "content": "柱2 — 採用：クライアントニーズからクオリファイされたショートリストへ"
+      },
+      {
+        "type": "p",
+        "content": "クライアントが職務記述書を送ってきた時、応答までの時間は競争変数となりました。ほとんどのESNはクリーンなドシエ作成に5〜10日かかります。私たちは24〜48時間を目指します。"
+      },
+      {
+        "type": "p",
+        "content": "毎日私たちのために回っていること："
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "職務記述書の自動読み取りとBoondManagerでのニーズ作成（会社+連絡先+記述）。",
+          "3チャネルソーシング（Boond社内プール+LinkedIn検索+Apollo）、候補者ごとのエンゲージメント事前チェック付き。",
+          "二軸スコアリング：Client-fit（ミッション適合度）とAbbeal-fit（価値観整合）、バイアスなしのランク付けTOP 10を生成。",
+          "Abbealフォーマットのスキルドシエ生成、匿名化、ロゴと企業レイアウト付き、90分ではなく数分で。",
+          "面接の自動準備：通話前日、強化された候補者シート（LinkedIn、Gmail履歴、過去のトランスクリプト）がBoondレコード上に準備される。"
+        ]
+      },
+      {
+        "type": "p",
+        "content": "結果：チームのコンテキストスイッチが減少、クライアントへのクオリファイドプロファイルが増加、準備された状態で面接に臨む。"
+      },
+      {
+        "type": "h2",
+        "content": "柱3 — インバウンド：SEO、LinkedIn、AI引用"
+      },
+      {
+        "type": "p",
+        "content": "インバウンドは市場が揺れる時に支払うものです。そして、ほとんどのCEOがバンド幅不足で諦めるものです。"
+      },
+      {
+        "type": "p",
+        "content": "私たちの自動化されたインバウンドルーチン："
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "サイト、LinkedIn、Notion、Medium、3都市のGoogle My Business、サードパーティページ間のメッセージング一貫性の週次監査。",
+          "20キーワード（FR/EN/JP）のSEO追跡、Core Web Vitals、schema.org、バックリンク付き。",
+          "LLM引用追跡：6つの標準化されたプロンプト上のChatGPT、Perplexity、Claude、Gemini。なぜなら2026年、AIに引用されることはGoogleで上位ランクされることと同じ価値があるから。",
+          "新しいページのインデックス化を加速するための10の優先URLの日次GSC送信。",
+          "個人プロフィールと会社ページでのネイティブグラフィックビジュアル付き自動LinkedIn生成と公開、トーンオブボイスとグラフィックパレットを厳格に尊重。"
+        ]
+      },
+      {
+        "type": "p",
+        "content": "結果：定期的な存在感、ランクするサイト、追いかけることなく到来するインバウンドリード。"
+      },
+      {
+        "type": "h2",
+        "content": "柱4 — 経営者の個人的生産性"
+      },
+      {
+        "type": "p",
+        "content": "これはよく忘れられる部分です。チームの時間を節約する前に、CEOの時間を救う必要があります。"
+      },
+      {
+        "type": "p",
+        "content": "私自身の1日に回っていること："
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "週次カレンダートリアージ：金曜の朝、翌週のすべてのアポイントメントをスキャン、イベントごとにKEEP/REPORT/CANCEL/DELEGATEの判定、クロスソース文脈付き（LinkedIn、Boond、Gmail、Tactiq）。",
+          "Apple NotesのTodoリーディング+優先順位を提案する前にすでに完了しているものを確認するためのGmailとLinkedInとのクロスリファレンス。",
+          "声で書かれたメールドラフト、適切な言語、正しいHTMLシグネチャ、文脈に応じた正しいCalendlyリンク付き。",
+          "20時の日次レキャップ：Gmail、LinkedIn、カレンダー、Tactiq、Boondで起こったすべてのことを単一のレポートに統合。"
+        ]
+      },
+      {
+        "type": "p",
+        "content": "私の役割は変わりました：もう実行はせず、意思決定と仲裁を行います。"
+      },
+      {
+        "type": "h2",
+        "content": "数字で見るとこんな感じ"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "同じインフラ上でオーケストレーションされた30の自動化ワークフロー。",
+          "全チャネルで1日4回のスキャン。",
+          "6ヶ月間チャネル間で失われたリードゼロ。",
+          "クオリファイされた候補者ドシエの作成に24〜48時間。",
+          "送信されるものを検証するのに1日15分、以前の3〜4時間と比較して。"
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "私たちが適用する方法"
+      },
+      {
+        "type": "p",
+        "content": "ツールを売っているのではありません。さらなるSaaSをプッシュしているのでもありません。私たちが行うのは、既存のスタックをマッピングし、チームの時間を最も食い尽くす5つの摩擦を特定することです。"
+      },
+      {
+        "type": "p",
+        "content": "ほとんどの場合、必要なものの80%をすでに持っています。欠けているのはオーケストレーション層と文書化されたビジネスルールです。"
+      },
+      {
+        "type": "p",
+        "content": "それは私たちが自分たち自身のために学んだことであり、今クライアントで実行していることです。"
+      },
+      {
+        "type": "h2",
+        "content": "あなたはどこにいますか？"
+      },
+      {
+        "type": "p",
+        "content": "この記事をここまで読んでいるなら、おそらくすでにこの認識を持っているでしょう。チャネルが多すぎ、ミーティングが多すぎ、すり抜けるリードが多すぎ、SEOやLinkedInを今週見る時間がない。"
+      },
+      {
+        "type": "p",
+        "content": "一緒に監査しましょう。"
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "30分、無料、フォローアップの義務なし。現在のスタックを見て、自動化する価値が最も高い3つの摩擦を特定し、最初の実装マイルストーンを提供します。一緒に働かないことになっても、具体的なロードマップを持って帰れます。"
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/csjx-jhz-5yw/your-company-x-abbeal",
+        "label": "監査を予約 — 30分無料"
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "p",
+        "content": "Par Sébastien Lonjon, CEO Abbeal — Paris · Montréal · Tokyo."
+      },
+      {
+        "type": "h2",
+        "content": "Le constat de départ"
+      },
+      {
+        "type": "p",
+        "content": "Diriger une firme tech en 2026, c'est gérer en parallèle trois métiers qui ne s'arrêtent jamais :"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Un pipeline commercial qui demande des relances multicanales propres et des briefings client à jour.",
+          "Un moteur de recrutement qui doit produire des shortlists qualifiées en moins de 48h.",
+          "Une présence inbound (LinkedIn, SEO, contenu) qui ne peut pas dépendre d'une bonne semaine."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Et au milieu de tout ça, l'agenda d'un CEO. 30 à 40 rencontres par semaine, 200 courriels entrants par jour, deux profils LinkedIn actifs, du WhatsApp, du Slack, du Line, du Calendly, des transcripts de visio à classer."
+      },
+      {
+        "type": "p",
+        "content": "À un moment, soit on embauche trois adjoints, soit on industrialise. On a choisi d'industrialiser."
+      },
+      {
+        "type": "h2",
+        "content": "La pile qu'on orchestre"
+      },
+      {
+        "type": "p",
+        "content": "Rien de magique côté outils. Ce sont les briques que beaucoup d'entreprises ont déjà :"
+      },
+      {
+        "type": "p",
+        "content": "Notion comme source de vérité unique · BoondManager pour le CRM staffing · Google Workspace (Gmail, Calendar, Drive) · Slack pour la coordination interne · LinkedIn (via Unipile API) pour la messagerie · Apollo.io pour le sourcing B2B · Calendly pour la prise de rendez-vous · Tactiq pour les transcripts."
+      },
+      {
+        "type": "p",
+        "content": "Ce qui change, c'est la couche d'orchestration au-dessus. Chez nous, c'est un assistant Claude personnalisé, qui exécute une trentaine de workflows dédiés et prend des décisions sur des règles d'affaires qu'on a documentées."
+      },
+      {
+        "type": "p",
+        "content": "Pas de SaaS supplémentaire. Pas d'abonnement à un nième outil. On a connecté ce qu'on avait déjà."
+      },
+      {
+        "type": "h2",
+        "content": "Pilier 1 — Commercial : la relance multicanale qui ne lâche jamais un lead"
+      },
+      {
+        "type": "p",
+        "content": "Le bug classique d'une firme conseil, c'est le lead qui meurt entre deux canaux. Un prospect répond sur LinkedIn, on bascule en courriel, on oublie de relancer parce que ça change de boîte de réception."
+      },
+      {
+        "type": "p",
+        "content": "Ce qu'on a automatisé :"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Un scan 4 fois par jour de Gmail, LinkedIn (deux profils), WhatsApp et Calendar pour détecter qui n'a pas eu de réponse depuis trop longtemps.",
+          "Une séquence T0–T4 automatique avec des relances rédigées dans la voix de la maison, dans le bon fil Gmail (pas un nouveau courriel orphelin), sur le bon profil LinkedIn.",
+          "Un anti-doublon cross-canal : avant tout envoi, vérification que rien d'équivalent n'est déjà parti dans les 30 derniers jours, sur n'importe quel canal.",
+          "Un backfill CRM en temps réel : chaque interaction est tracée dans BoondManager et dans un Tracker Notion centralisé."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Résultat concret : zéro lead perdu, et la rédaction des relances ne consomme plus le temps du dirigeant."
+      },
+      {
+        "type": "h2",
+        "content": "Pilier 2 — Recrutement : du besoin client à la shortlist qualifiée"
+      },
+      {
+        "type": "p",
+        "content": "Quand un client envoie un descriptif de poste, le délai pour répondre est devenu une variable concurrentielle. La plupart des firmes mettent 5 à 10 jours pour produire un dossier propre. On vise 24 à 48h."
+      },
+      {
+        "type": "p",
+        "content": "Ce qui tourne pour nous chaque jour :"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Lecture automatique de la fiche de poste et création du besoin dans BoondManager (entreprise + contact + descriptif).",
+          "Sourcing 3 canaux (vivier interne Boond + recherche LinkedIn + Apollo) avec un pré-check d'engagement candidat par candidat.",
+          "Un scoring double axe : Client-fit (adéquation au mandat) et Abbeal-fit (alignement valeurs), pour produire un TOP 10 ranké sans biais.",
+          "Génération du dossier de compétences au format Abbeal, anonymisé, avec le logo et la mise en page corporative, en quelques minutes au lieu de 90.",
+          "Auto-préparation des entretiens : la veille de l'appel, fiche candidat enrichie (LinkedIn, historique Gmail, transcripts précédents) prête sur la fiche Boond."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Résultat : moins de zappage pour les équipes, plus de profils qualifiés pour le client, des entretiens où on arrive préparé."
+      },
+      {
+        "type": "h2",
+        "content": "Pilier 3 — Inbound : SEO, LinkedIn, citations IA"
+      },
+      {
+        "type": "p",
+        "content": "L'inbound, c'est ce qui paie quand le marché tousse. Et c'est ce que la plupart des CEO laissent tomber par manque de bande passante."
+      },
+      {
+        "type": "p",
+        "content": "Notre routine inbound automatisée :"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Audit hebdomadaire de la cohérence du messaging entre le site, LinkedIn, Notion, Medium, Google My Business des trois villes, et les pages tierces.",
+          "Suivi SEO sur 20 mots-clés (FR/EN/JP) avec Core Web Vitals, schema.org et liens entrants.",
+          "Suivi des citations LLM : ChatGPT, Perplexity, Claude, Gemini sur 6 prompts standardisés. Parce qu'en 2026, être cité par les IA vaut autant qu'être bien classé sur Google.",
+          "Soumission GSC quotidienne de 10 URL prioritaires pour accélérer l'indexation des nouvelles pages.",
+          "Génération et publication LinkedIn automatique avec visuels graphiques natifs, sur le profil personnel et la page entreprise, avec respect strict du tone of voice et de la palette graphique."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Résultat : une présence régulière, un site qui se référence, et des leads inbound qui arrivent sans qu'on les ait chassés."
+      },
+      {
+        "type": "h2",
+        "content": "Pilier 4 — Productivité personnelle du dirigeant"
+      },
+      {
+        "type": "p",
+        "content": "C'est la partie qu'on oublie souvent. Avant de gagner du temps en mode équipe, il faut sauver les heures du CEO."
+      },
+      {
+        "type": "p",
+        "content": "Ce qui tourne sur ma propre journée :"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Triage hebdomadaire du Calendar : vendredi matin, scan de toutes les rencontres de la semaine suivante, verdict KEEP/REPORT/CANCEL/DELEGUE par event, avec contexte cross-source (LinkedIn, Boond, Gmail, Tactiq).",
+          "Lecture de la todo Apple Notes + croisement avec Gmail et LinkedIn pour vérifier ce qui est déjà fait avant de me suggérer des priorités.",
+          "Drafts courriel rédigés à la voix, dans la bonne langue, avec la signature HTML correcte et le bon lien Calendly selon le contexte.",
+          "Récap quotidien à 20h : tout ce qui s'est passé sur Gmail, LinkedIn, Calendar, Tactiq et Boond, consolidé en un rapport unique."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Mon rôle a changé : je ne fais plus l'exécution, je fais la décision et l'arbitrage."
+      },
+      {
+        "type": "h2",
+        "content": "Ce que ça donne en chiffres"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "30 workflows automatisés orchestrés sur la même infrastructure.",
+          "4 scans par jour de tous les canaux.",
+          "Zéro lead perdu entre canaux depuis 6 mois.",
+          "24 à 48h pour produire un dossier candidat qualifié.",
+          "15 minutes par jour pour valider ce qui part, contre 3 à 4h auparavant."
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "La méthode qu'on applique"
+      },
+      {
+        "type": "p",
+        "content": "On ne vend pas un outil. On ne pousse pas un SaaS de plus. Ce qu'on fait, c'est cartographier votre pile existante et identifier les 5 frictions qui mangent le plus de temps de votre équipe."
+      },
+      {
+        "type": "p",
+        "content": "La plupart du temps, vous avez déjà 80 % de ce qu'il faut. Il manque la couche d'orchestration et les règles d'affaires documentées."
+      },
+      {
+        "type": "p",
+        "content": "C'est exactement ce qu'on a appris à faire pour nous, et ce qu'on transpose maintenant chez nos clients."
+      },
+      {
+        "type": "h2",
+        "content": "Et vous, où vous en êtes ?"
+      },
+      {
+        "type": "p",
+        "content": "Si vous lisez cet article jusqu'ici, vous avez probablement déjà ce constat en tête. Trop de canaux, trop de rencontres, trop de leads qui passent à la trappe, et pas le temps de regarder votre SEO ou votre LinkedIn de la semaine."
+      },
+      {
+        "type": "p",
+        "content": "Faisons un audit ensemble."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "30 minutes, gratuites, sans suite obligatoire. On regarde votre pile actuelle, on identifie les 3 frictions les plus rentables à automatiser, et on vous donne les premiers jalons d'implémentation. Vous repartez avec une feuille de route concrète, même si on ne travaille pas ensemble derrière."
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/csjx-jhz-5yw/your-company-x-abbeal",
+        "label": "Réserver l'audit — 30 min gratuites"
+      }
+    ]
   }
 }
