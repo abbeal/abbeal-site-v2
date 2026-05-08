@@ -15,7 +15,7 @@ import { Moments } from "@/components/sections/Moments";
 import { Insights } from "@/components/sections/Insights";
 import { CareersTeaser } from "@/components/sections/CareersTeaser";
 import { CTAFinal } from "@/components/sections/CTAFinal";
-import { getFeaturedArticles, pick } from "@/lib/articles";
+import { getHomeFeaturedArticles, pick } from "@/lib/articles";
 import { getHomeFeaturedCases } from "@/lib/cases";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 
@@ -49,7 +49,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
   const radarDeepLinkLabel =
     dict.techRadarHome?.deepLinkLabel ?? "See full edition";
 
-  const featuredInsights = getFeaturedArticles().map((a) => ({
+  const featuredInsights = getHomeFeaturedArticles().map((a) => ({
     slug: a.slug,
     tag: a.tag,
     readTime: a.readTime,

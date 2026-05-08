@@ -52,7 +52,19 @@ type Translatable<T> = { fr: T } & Partial<Record<Exclude<Locale, "fr">, T>>;
 
 export type Article = {
   slug: string;
-  featured: boolean; // top 3 shown on home
+  /** True = remonté en haut de /insights listing (tri featured DESC, date DESC).
+   *  Différent de `featuredOnHome` car la home a un slot limité (3 cards
+   *  visibles) et tout `featured` ne mérite pas forcément ce slot scarce.
+   */
+  featured: boolean;
+  /** True = inclus dans le bloc Insights de la homepage (3 cards). Si non
+   *  défini : fallback sur `featured`. Permet de désactiver un article du
+   *  slot home tout en le gardant en haut de /insights.
+   *  Ex : "automatiser-journee-ceo-claude-orchestration" est featured pour
+   *  /insights mais featuredOnHome=false pour ne pas surcharger la home
+   *  (qui doit garder 3 cards = Agents IA + GreenOps + Tech Radar).
+   */
+  featuredOnHome?: boolean;
   tag: string;
   readTime: string;
   publishedAt: string; // ISO date
@@ -536,6 +548,11 @@ export const articles: Article[] = [
   {
     slug: "automatiser-journee-ceo-claude-orchestration",
     featured: true,
+    // Garde le slot #1 sur /insights listing (featured DESC), mais sort
+    // du bloc Insights de la homepage qui doit rester limité a 3 cards
+    // (Agents IA + GreenOps + Tech Radar). Évite l'overflow visuel "4
+    // cards a la place de 3" demandé par Sebastien.
+    featuredOnHome: false,
     tag: "IA",
     readTime: "7 min",
     publishedAt: "2026-05-07",
@@ -566,6 +583,18 @@ export function getArticle(slug: string): Article | undefined {
 
 export function getFeaturedArticles(): Article[] {
   return articles.filter((a) => a.featured);
+}
+
+/**
+ * Articles à pousser dans le bloc Insights de la homepage (slot scarce, 3 cards).
+ * Filtre sur `featuredOnHome` avec fallback sur `featured` si non défini —
+ * permet de désactiver un article du slot home (set false explicitement) tout
+ * en le gardant en haut de /insights listing.
+ *
+ * Cohérent avec getHomeFeaturedCases() côté cases.
+ */
+export function getHomeFeaturedArticles(): Article[] {
+  return articles.filter((a) => a.featuredOnHome ?? a.featured);
 }
 
 export function getAllArticles(): Article[] {
