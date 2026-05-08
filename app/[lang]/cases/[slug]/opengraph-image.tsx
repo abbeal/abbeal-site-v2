@@ -87,8 +87,12 @@ export default async function CaseOG({
                 <img
                   src={clientLogoUrl}
                   alt={`${c?.clientLogo ?? ""} logo`}
+                  // satori (@vercel/og) requires explicit width AND height
+                  // on <img> — sinon: "Image size cannot be determined".
+                  // Largeur cible = 180px (cf maxWidth précédent).
+                  width={180}
                   height={42}
-                  style={{ height: "42px", maxWidth: "180px", objectFit: "contain" }}
+                  style={{ width: "180px", height: "42px", objectFit: "contain" }}
                 />
                 {clientLogoSecondaryUrl && (
                   <>
@@ -108,8 +112,10 @@ export default async function CaseOG({
                     <img
                       src={clientLogoSecondaryUrl}
                       alt={`${c?.clientLogoSecondary ?? ""} logo`}
+                      // satori requires explicit width + height (idem ci-dessus).
+                      width={150}
                       height={42}
-                      style={{ height: "42px", maxWidth: "150px", objectFit: "contain" }}
+                      style={{ width: "150px", height: "42px", objectFit: "contain" }}
                     />
                   </>
                 )}

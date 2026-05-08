@@ -9,14 +9,29 @@ type Theme = "light" | "dark";
 
 function readCookieTheme(): Theme | null {
   if (typeof document === "undefined") return null;
-  const match = document.cookie.match(/(?:^|;\s*)theme=(dark|light)/);
-  return (match?.[1] as Theme | undefined) ?? null;
+  // SecurityError: document.cookie throws dans un iframe sandboxed sans
+  // 'allow-same-origin' (cas observé : preview Sentry, GTM iframes, web
+  // crawlers headless qui isolent le doc). Fail-soft → fallback aux
+  // prefers-color-scheme dans le caller.
+  try {
+    const match = document.cookie.match(/(?:^|;\s*)theme=(dark|light)/);
+    return (match?.[1] as Theme | undefined) ?? null;
+  } catch {
+    return null;
+  }
 }
 
 function applyTheme(theme: Theme) {
   if (typeof document === "undefined") return;
   document.documentElement.classList.toggle("dark", theme === "dark");
-  document.cookie = `${COOKIE}=${theme}; max-age=${COOKIE_MAX_AGE}; path=/; samesite=lax`;
+  // Idem : try/catch autour de l'écriture cookie pour les contextes
+  // sandboxed. La classe sur <html> reste appliquée — le seul effet
+  // dégradé est que le choix ne persiste pas après reload.
+  try {
+    document.cookie = `${COOKIE}=${theme}; max-age=${COOKIE_MAX_AGE}; path=/; samesite=lax`;
+  } catch {
+    // No-op — cookie write blocked in sandboxed context.
+  }
 }
 
 /**
