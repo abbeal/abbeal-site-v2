@@ -125,7 +125,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
       url: SITE,
       foundingDate: "2015",
       // TODO_VERIFY · Vianney peut confirmer le headcount exact 2026.
-      numberOfEmployees: { "@type": "QuantitativeValue", value: "30+" },
+      numberOfEmployees: { "@type": "QuantitativeValue", value: "100+" },
       founders: d.leaders.map((l) => ({ "@type": "Person", name: l.name })),
       sameAs: [
         "https://www.linkedin.com/company/abbeal",

@@ -121,7 +121,7 @@ export default async function RootLayout({
         sameAs: "https://www.linkedin.com/in/vianney-blanquart/",
       },
     ],
-    numberOfEmployees: { "@type": "QuantitativeValue", value: "50+" },
+    numberOfEmployees: { "@type": "QuantitativeValue", value: "100+" },
     areaServed: [
       { "@type": "Country", name: "France" },
       { "@type": "Country", name: "Canada" },
