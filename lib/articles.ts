@@ -328,14 +328,16 @@ export const articles: Article[] = [
     readTime: "7 min",
     publishedAt: "2026-04-28",
     title: {
-      fr: "Agents IA dans les banques françaises : 7 leçons côté production.",
+      fr: "Agents IA dans les banques françaises : 7 patterns côté production.",
       en: "AI agents in production: 7 patterns French banks taught us.",
       ja: "本番のAIエージェント：フランスの銀行から学んだ7つのパターン。",
+      "fr-ca": "Agents IA dans les banques françaises : 7 patrons côté production.",
     },
     excerpt: {
-      fr: "Article publié en anglais. Synthèse FR ci-dessous, version complète en EN.",
+      fr: "Notes de terrain BNP / Société Générale / assureur top 3 français. Ce qui change quand ton agent tourne contre des cores COBOL, des logs d'audit ACPR et un budget p99 de 4 ms.",
       en: "Field notes from BNP, SocGen and a top-3 French insurer. What changes when your agent runs against COBOL cores, ACPR audit logs and a 4 ms p99 budget.",
       ja: "BNP、SocGen、フランス大手保険会社からのフィールドノート。COBOLコア、ACPR監査ログ、4ms p99予算に対してエージェントが動作する場合の変更点。",
+      "fr-ca": "Notes de terrain BNP / Société Générale / assureur top 3 français. Ce qui change quand ton agent tourne contre des noyaux COBOL, des journaux d'audit ACPR et un budget p99 de 4 ms.",
     },
     body: {
       fr: ARTICLE_BODIES["ai-agents-french-banks"]?.fr ?? [],

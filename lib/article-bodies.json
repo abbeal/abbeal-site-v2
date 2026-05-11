@@ -3383,11 +3383,72 @@
     "fr": [
       {
         "type": "p",
-        "content": "Cet article est publié en anglais — angle BNP / Société Générale / assureur top 3 français pour le marché anglo (Tokyo, Montréal, NY). Il complète notre playbook FR généraliste sur les agents en production avec sept patterns spécifiques au monde bancaire français : COBOL cores, audits ACPR, p99 4 ms, fallback chains qui résistent à un retrait Anthropic Europe."
+        "content": "La plupart des articles « agents IA en production » que tu lis sur Hacker News sortent d'une perspective tech US : stack greenfield, data lake moderne, culture engineering à la Stripe. La réalité dans les salles des marchés européennes est différente. Les cores sont en COBOL. Le journal d'audit est imposé par l'ACPR. Le budget p99 est de 4 millisecondes parce que la salle des marchés ne négocie pas. Après deux ans à livrer des agents IA chez BNP Paribas, Société Générale et un assureur top 3 français, voici sept patterns qui marchent — et que les démos habituelles ratent."
+      },
+      {
+        "type": "h2",
+        "content": "1. Le mainframe n'est pas ton ennemi"
       },
       {
         "type": "p",
-        "content": "Si tu veux la version complète, lis-la en EN ci-dessous (~7 min). Pour la version FR généraliste, va sur l'article \"Agents IA en production : éviter le théâtre de démo\"."
+        "content": "Tous les decks de consulting commencent par « on commence par moderniser le legacy ». La banque dit non — ce mainframe traite 800 millions de transactions par jour avec 5×9 de disponibilité, et tu n'y touches pas. Le pattern qui passe en prod : traiter le mainframe comme un nœud du graphe. Wrapper les programmes COBOL dans des adaptateurs MQ Series, les exposer à l'agent comme des outils déterministes. L'agent n'écrit jamais dans le core ; il lit, raisonne, rédige, et un humain valide. On a déployé ce pattern à la SocGen pour un assistant de pré-screening crédit. Le time-to-decision est passé de 11 minutes à 90 secondes. Mainframe intact. Auditeurs contents."
+      },
+      {
+        "type": "h2",
+        "content": "2. Le journal d'audit ACPR n'est pas une feature, c'est la colonne vertébrale"
+      },
+      {
+        "type": "p",
+        "content": "Les banques françaises répondent à l'ACPR (Autorité de contrôle prudentiel et de résolution). Chaque décision modèle doit être reproductible, chaque prompt versionné, chaque output explicable à un inspecteur humain dans cinq ans. Ta suite d'évals ne peut pas vivre dans une page Notion. Construis le journal d'audit en premier : chaque appel agent écrit un événement structuré avec hash du prompt, version du modèle, documents récupérés, output, statut d'override humain. On utilise une table Postgres write-only partitionnée par mois, répliquée vers S3 Glacier. L'ACPR débarque, tu leur tends un endpoint SQL et un document d'explication. On l'a fait deux fois en prod et ça a transformé des inspections de six mois en revues de deux jours."
+      },
+      {
+        "type": "h2",
+        "content": "3. Les chaînes de fallback supposent que ton modèle principal est banni en Europe demain matin"
+      },
+      {
+        "type": "p",
+        "content": "Le pattern est connu mais le profil de risque banking européen le rend non-négociable. Anthropic peut perdre son histoire de data residency EU du jour au lendemain ; OpenAI rate-limite à 40k tokens/min un vendredi matin où ta salle des marchés a besoin de réponses ; Mistral est conforme localement mais plus light sur le tool use. On câble trois providers en cascade derrière une interface partagée — Claude Sonnet d'abord, GPT-4o ensuite, Mistral Large en troisième — plus circuit breaker, retry budget et plafond de coût par provider. Quand Anthropic a hoqueté pendant 90 minutes en février, l'assistant compliance de BNP a continué à répondre à 92 % de la qualité normale, sur Mistral. L'équipe a appris l'incident dans notre weekly ops review."
+      },
+      {
+        "type": "h2",
+        "content": "4. Le RAG sur Confluence c'est du théâtre. Le RAG sur Filenet c'est le vrai boulot"
+      },
+      {
+        "type": "p",
+        "content": "Les banques ont 30 ans de documents réglementaires dans IBM Filenet, EMC Documentum, des clusters SharePoint on-prem avec des ACL Active Directory que personne ne maîtrise complètement. Le premier travail n'est pas la vector search — c'est un indexer permission-aware qui respecte le Bank Secrecy Act, le RGPD et le cloisonnement interne. On utilise un pipeline two-tier : extraction et chunking dans un container sandboxé qui ne voit jamais internet, puis indexation dans un vector store tenant-scoped avec row-level security. Stripe et Anthropic ont écrit d'excellents posts sur l'architecture RAG ; la taxe banking européenne en plus, c'est la couche access-control, et elle est plus lourde que le ML."
+      },
+      {
+        "type": "h2",
+        "content": "5. Mets l'humain dans la boucle, sur le budget de latence, à dessein"
+      },
+      {
+        "type": "p",
+        "content": "Le pattern américain : l'agent agit, on log tout, on audite plus tard. Le pattern banking français : l'agent rédige, l'humain valide, l'agent agit. Le coût : une seconde de latence en plus. Le bénéfice : un régulateur qui te laisse passer en prod. Chez un assureur on a instrumenté l'étape d'approbation humaine elle-même : à quelle fréquence l'humain override l'agent ? Sur quels types de documents ? Quelle distribution de time-to-approval ? Après trois mois on savait quelles décisions agent auto-approuver (84 % des clauses contractuelles avec confidence > 0,95) et lesquelles garder derrière une porte humaine pour toujours (tout ce qui touche à la souscription assurance vie). Le ratio se déplace par use case, pas selon un seuil global."
+      },
+      {
+        "type": "h2",
+        "content": "6. L'attribution des coûts est un outil de vente, pas un outil financier"
+      },
+      {
+        "type": "p",
+        "content": "Si tu ne sais pas répondre « combien cet agent a-t-il coûté à la division retail le trimestre dernier » mardi matin, le CFO tue le projet avant Q4. On logge chaque appel LLM avec tenant_id, business_unit, feature_id, prompt_hash, input_tokens, output_tokens et coût USD calculé. Agrégé chaque nuit dans une table de chargeback que le contrôleur pull dans le tableur de planification financière. La conversation passe de « l'IA c'est trop cher » à « le retail a dépensé 18 k€ le mois dernier pour un agent qui a closé 420 k€ de contrats additionnels ». Cette conversation, c'est ce qui fait survivre un projet au prochain cycle budgétaire."
+      },
+      {
+        "type": "h2",
+        "content": "7. Les preview environments façon Vercel sauvent ta roadmap"
+      },
+      {
+        "type": "p",
+        "content": "Les banques livrent lentement parce que chaque release passe par des CAB (change advisory boards) qui se réunissent le mardi. Emprunte le pattern preview-deployments de Vercel : chaque PR génère une stack agent complètement isolée avec données synthétiques et shadow traffic. Les stakeholders cliquent un lien, testent sur leur téléphone, laissent des commentaires. Au moment où tu arrives au CAB, tu as une preuve vidéo d'utilisateurs métier qui approuvent. On a coupé le cycle de release SocGen de six semaines à dix jours avec ce seul pattern, sans compromis compliance. Le CAB se réunit toujours le mardi. Ils ont juste moins à argumenter."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Tu pilotes une initiative IA dans une banque française ou européenne et tu veux un walk-through 30 min sur comment ces patterns passent en prod ? On fait ces calls chaque semaine depuis les bureaux de Tokyo et Paris. Pas de deck, juste des diagrammes d'architecture issus de déploiements prod réels."
+      },
+      {
+        "type": "p",
+        "content": "Ces sept patterns sont ce qui survit au contact avec la réalité banking française. Aucun n'est révolutionnaire ; tous sont absents du playbook agent IA standard à la sauce San Francisco. Si tu traites le contexte européen comme une feature contrainte plutôt qu'une friction, tu livres."
       }
     ],
     "en": [
@@ -3464,21 +3525,143 @@
     "ja": [
       {
         "type": "p",
-        "content": "この記事は英語で公開されています — BNP、Société Générale、フランスの大手保険会社トップ3の角度から、英語圏市場（東京、モントリオール、ニューヨーク）向けに執筆。フランス銀行業界に特有の7つのパターンを通じて、本番環境のエージェントに関する我々の汎用FRプレイブックを補完します：COBOLコア、ACPR監査、p99 4ms、Anthropic Europe撤退に耐えるフォールバックチェーン。"
+        "content": "Hacker Newsで読む「本番のAIエージェント」記事のほとんどは、米国テック企業の視点で書かれています：グリーンフィールドのスタック、モダンなデータレイク、Stripeのようなエンジニアリング文化。欧州銀行のフロアでの現実は異なります。コアはCOBOL。監査証跡はACPRが義務付け。トレーディングデスクは交渉しないため、p99予算は4ミリ秒。BNP Paribas、Société Générale、フランス大手保険会社トップ3でAIエージェントを2年間出荷した後、機能する7つのパターンと、通常のデモが見逃すものをご紹介します。"
+      },
+      {
+        "type": "h2",
+        "content": "1. メインフレームは敵ではない"
       },
       {
         "type": "p",
-        "content": "完全版は英語で公開中：上の言語切替で英語版へ。"
+        "content": "コンサルのデッキはすべて「まずレガシーを近代化する」から始まります。銀行はノーと言います — そのメインフレームは1日8億トランザクションを99.999%の可用性で処理しており、触らせません。本番に出るパターン：メインフレームをグラフのノードとして扱う。COBOLプログラムをMQ Seriesアダプタでラップし、エージェントに決定論的ツールとして公開。エージェントはコアに書き込まず、読み、推論し、ドラフトし、人間が承認する。SocGenでクレジット事前審査アシスタント向けにこのパターンをデプロイ。意思決定までの時間が11分から90秒に短縮。メインフレームは無傷。監査人も満足。"
+      },
+      {
+        "type": "h2",
+        "content": "2. ACPR監査証跡は機能ではなく、背骨である"
+      },
+      {
+        "type": "p",
+        "content": "フランスの銀行はACPR（健全性監督・破綻処理機構）に答えます。すべてのモデル決定は再現可能で、すべてのプロンプトはバージョン管理され、すべてのアウトプットは5年後の人間の検査官に説明可能でなければなりません。Evalスイートをnotionページに置くことはできません。監査証跡を最初に構築：各エージェント呼び出しが、プロンプトハッシュ、モデルバージョン、取得ドキュメント、アウトプット、人間オーバーライドステータスを含む構造化イベントを書き込む。月別にパーティション化されたwrite-onlyのPostgresテーブルを使用、S3 Glacierに複製。ACPRが来たら、SQLエンドポイントと説明ドキュメントを渡す。本番で2回実施し、6ヶ月の検査が2日のレビューに変わりました。"
+      },
+      {
+        "type": "h2",
+        "content": "3. フォールバックチェーンは、明日プライマリモデルが欧州で禁止されることを想定する"
+      },
+      {
+        "type": "p",
+        "content": "パターンはよく知られていますが、欧州銀行のリスクプロファイルはこれを譲れないものにします。AnthropicはEUのデータレジデンシーを一夜にして失う可能性があります。OpenAIは金曜日の朝、トレーディングフロアが回答を必要としているときに毎分40kトークンでレート制限されます。Mistralはローカルで準拠していますが、ツール使用がより軽い。共有インターフェース背後に3つのプロバイダーをカスケードで配線 — Claude Sonnetを最初、GPT-4oを2番目、Mistral Largeを3番目 — プラスサーキットブレーカー、リトライ予算、プロバイダー別コスト上限。2月にAnthropicが90分間ぐらついたとき、BNPのコンプライアンスアシスタントはMistralで通常品質の92%で回答を続けました。チームはweekly ops reviewでインシデントを知りました。"
+      },
+      {
+        "type": "h2",
+        "content": "4. Confluence上のRAGは劇場。Filenet上のRAGが本物の仕事"
+      },
+      {
+        "type": "p",
+        "content": "銀行はIBM Filenet、EMC Documentum、誰も完全に把握していないActive Directory ACLを持つオンプレSharePointクラスターに30年分の規制文書を持っています。最初の仕事はベクトル検索ではなく、Bank Secrecy Act、GDPR、内部の区画化を尊重するパーミッション対応インデクサーです。2層パイプラインを使用：インターネットを見ないサンドボックス化されたコンテナで抽出とチャンキング、次にrow-level securityを持つテナントスコープのベクトルストアにインデックス化。StripeとAnthropicはRAGアーキテクチャに関する優れた投稿を書いています。欧州銀行の上乗せ税金はアクセス制御層であり、MLよりも重い。"
+      },
+      {
+        "type": "h2",
+        "content": "5. ヒューマンインザループを、レイテンシ予算上に、意図的に置く"
+      },
+      {
+        "type": "p",
+        "content": "アメリカのパターン：エージェントが行動し、すべてをログし、後で監査。フランス銀行のパターン：エージェントがドラフトし、人間が承認し、エージェントが行動。コストは1秒の追加レイテンシ。ベネフィットは出荷を許す規制当局。ある保険会社で人間承認ステップ自体を計装：人間がエージェントをオーバーライドする頻度は？どのドキュメントタイプで？承認までの時間分布は？3ヶ月後、自動承認するエージェント決定（信頼度 > 0.95の契約条項の84%）と、永遠に人間ゲート背後に保持するもの（生命保険引受に触れるもの）が分かりました。比率はユースケースごとに変わり、グローバル閾値ではありません。"
+      },
+      {
+        "type": "h2",
+        "content": "6. コスト帰属はセールスツールであり、ファイナンスツールではない"
+      },
+      {
+        "type": "p",
+        "content": "「このエージェントは前四半期にリテール部門にいくら掛かったか」を火曜の朝までに答えられない場合、CFOはQ4前にプロジェクトを殺します。各LLM呼び出しを、tenant_id、business_unit、feature_id、prompt_hash、input_tokens、output_tokens、計算されたUSDコストでログ。コントローラーが財務計画ワークブックに引き込むチャージバックテーブルに毎晩集計。会話が「AIは高すぎる」から「リテールは先月18k€を費やし、420k€の追加契約をクローズしたエージェントを得た」に変わります。その会話が、プロジェクトを次の予算サイクルで生き残らせるものです。"
+      },
+      {
+        "type": "h2",
+        "content": "7. Vercelスタイルのプレビュー環境がロードマップを救う"
+      },
+      {
+        "type": "p",
+        "content": "銀行は遅く出荷します。各リリースが火曜日に開かれるCAB（change advisory boards）を通るためです。Vercelのプレビューデプロイメントパターンを借りる：各PRが合成データとシャドウトラフィックで完全に分離されたエージェントスタックを生成。ステークホルダーはリンクをクリックし、電話でテストし、コメントを残す。CABに到達する頃には、ビジネスユーザーが承認するビデオ証拠を持っています。このパターンだけでSocGenのリリースサイクルを6週間から10日に短縮、コンプライアンス妥協なし。CABはまだ火曜日に会議します。議論することが少なくなっただけ。"
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "フランスまたは欧州の銀行内でAIイニシアチブを運営し、これらのパターンが本番に出る方法の30分のウォークスルーが欲しい場合、東京とパリのオフィスから毎週そのコールを行います。デッキなし、実際の本番デプロイメントからのアーキテクチャ図のみ。"
+      },
+      {
+        "type": "p",
+        "content": "これら7つのパターンは、フランス銀行の現実との接触で生き残るものです。どれも革命的ではありません。すべて、標準的なサンフランシスコ風AIエージェントプレイブックには欠けています。欧州のコンテキストを摩擦ではなく機能制約として扱えば、出荷できます。"
       }
     ],
     "fr-ca": [
       {
         "type": "p",
-        "content": "Cet article est publié en anglais — angle BNP / Société Générale / assureur top 3 français pour le marché anglo (Tokyo, Montréal, NY). Il complète notre playbook FR généraliste sur les agents en production avec sept patterns spécifiques au monde bancaire français : COBOL cores, audits BSIF, p99 4 ms, fallback chains qui résistent à un retrait Anthropic Europe."
+        "content": "La plupart des articles « agents IA en production » que tu lis sur Hacker News sortent d'une perspective techno US : stack greenfield, lac de données moderne, culture d'ingénierie à la Stripe. La réalité dans les salles des marchés européennes est différente. Les noyaux sont en COBOL. Le journal d'audit est imposé par l'ACPR. Le budget p99 est de 4 millisecondes parce que la salle des marchés ne négocie pas. Après deux ans à livrer des agents IA chez BNP Paribas, Société Générale et un assureur top 3 français, voici sept patrons qui fonctionnent — et que les démos habituelles ratent."
+      },
+      {
+        "type": "h2",
+        "content": "1. Le mainframe n'est pas ton ennemi"
       },
       {
         "type": "p",
-        "content": "Si tu veux la version complète, lis-la en EN ci-dessous (~7 min). Pour la version FR généraliste, va sur l'article \"Agents IA en production : éviter le théâtre de démo\"."
+        "content": "Tous les decks de consultation commencent par « on commence par moderniser le legacy ». La banque dit non — ce mainframe traite 800 millions de transactions par jour avec 5×9 de disponibilité, et tu n'y touches pas. Le patron qui passe en prod : traiter le mainframe comme un nœud du graphe. Encapsuler les programmes COBOL dans des adaptateurs MQ Series, les exposer à l'agent comme des outils déterministes. L'agent n'écrit jamais dans le noyau ; il lit, raisonne, rédige, et un humain valide. On a déployé ce patron à la SocGen pour un assistant de pré-screening crédit. Le délai de décision est passé de 11 minutes à 90 secondes. Mainframe intact. Auditeurs contents."
+      },
+      {
+        "type": "h2",
+        "content": "2. Le journal d'audit ACPR n'est pas une fonctionnalité, c'est la colonne vertébrale"
+      },
+      {
+        "type": "p",
+        "content": "Les banques françaises répondent à l'ACPR (Autorité de contrôle prudentiel et de résolution). Chaque décision modèle doit être reproductible, chaque prompt versionné, chaque sortie explicable à un inspecteur humain dans cinq ans. Ta suite d'évaluations ne peut pas vivre dans une page Notion. Construis le journal d'audit en premier : chaque appel agent écrit un événement structuré avec hachage du prompt, version du modèle, documents récupérés, sortie, statut de surclassement humain. On utilise une table Postgres write-only partitionnée par mois, répliquée vers S3 Glacier. L'ACPR débarque, tu leur tends un endpoint SQL et un document d'explication. On l'a fait deux fois en prod et ça a transformé des inspections de six mois en revues de deux jours."
+      },
+      {
+        "type": "h2",
+        "content": "3. Les chaînes de repli supposent que ton modèle principal est banni en Europe demain matin"
+      },
+      {
+        "type": "p",
+        "content": "Le patron est connu mais le profil de risque bancaire européen le rend non négociable. Anthropic peut perdre son histoire de résidence des données UE du jour au lendemain ; OpenAI rate-limite à 40k jetons/min un vendredi matin où ta salle des marchés a besoin de réponses ; Mistral est conforme localement mais plus léger sur l'utilisation d'outils. On câble trois fournisseurs en cascade derrière une interface partagée — Claude Sonnet d'abord, GPT-4o ensuite, Mistral Large en troisième — plus disjoncteur, budget de réessai et plafond de coût par fournisseur. Quand Anthropic a hoqueté pendant 90 minutes en février, l'assistant conformité de BNP a continué à répondre à 92 % de la qualité normale, sur Mistral. L'équipe a appris l'incident dans notre revue ops hebdomadaire."
+      },
+      {
+        "type": "h2",
+        "content": "4. Le RAG sur Confluence c'est du théâtre. Le RAG sur Filenet c'est le vrai boulot"
+      },
+      {
+        "type": "p",
+        "content": "Les banques ont 30 ans de documents réglementaires dans IBM Filenet, EMC Documentum, des grappes SharePoint sur place avec des ACL Active Directory que personne ne maîtrise complètement. Le premier travail n'est pas la recherche vectorielle — c'est un indexeur conscient des permissions qui respecte le Bank Secrecy Act, le RGPD et le cloisonnement interne. On utilise une pipeline à deux niveaux : extraction et chunking dans un conteneur isolé qui ne voit jamais internet, puis indexation dans un magasin vectoriel à portée locataire avec sécurité au niveau des lignes. Stripe et Anthropic ont écrit d'excellents articles sur l'architecture RAG ; la taxe bancaire européenne en plus, c'est la couche de contrôle d'accès, et elle est plus lourde que le ML."
+      },
+      {
+        "type": "h2",
+        "content": "5. Mets l'humain dans la boucle, sur le budget de latence, à dessein"
+      },
+      {
+        "type": "p",
+        "content": "Le patron américain : l'agent agit, on log tout, on audite plus tard. Le patron bancaire français : l'agent rédige, l'humain valide, l'agent agit. Le coût : une seconde de latence en plus. Le bénéfice : un régulateur qui te laisse passer en prod. Chez un assureur on a instrumenté l'étape d'approbation humaine elle-même : à quelle fréquence l'humain surclasse l'agent ? Sur quels types de documents ? Quelle distribution de délai d'approbation ? Après trois mois on savait quelles décisions agent auto-approuver (84 % des clauses contractuelles avec confiance > 0,95) et lesquelles garder derrière une porte humaine pour toujours (tout ce qui touche à la souscription d'assurance vie). Le ratio se déplace par cas d'usage, pas selon un seuil global."
+      },
+      {
+        "type": "h2",
+        "content": "6. L'attribution des coûts est un outil de vente, pas un outil financier"
+      },
+      {
+        "type": "p",
+        "content": "Si tu ne sais pas répondre « combien cet agent a-t-il coûté à la division retail le trimestre dernier » mardi matin, le directeur financier tue le projet avant Q4. On enregistre chaque appel LLM avec tenant_id, business_unit, feature_id, prompt_hash, input_tokens, output_tokens et coût USD calculé. Agrégé chaque nuit dans une table de refacturation que le contrôleur tire dans le tableur de planification financière. La conversation passe de « l'IA c'est trop cher » à « le retail a dépensé 18 k€ le mois dernier pour un agent qui a clos 420 k€ de contrats additionnels ». Cette conversation, c'est ce qui fait survivre un projet au prochain cycle budgétaire."
+      },
+      {
+        "type": "h2",
+        "content": "7. Les environnements de prévisualisation façon Vercel sauvent ta feuille de route"
+      },
+      {
+        "type": "p",
+        "content": "Les banques livrent lentement parce que chaque mise en production passe par des CAB (change advisory boards) qui se réunissent le mardi. Emprunte le patron de prévisualisations de déploiement de Vercel : chaque PR génère une pile agent complètement isolée avec données synthétiques et trafic fantôme. Les parties prenantes cliquent un lien, testent sur leur téléphone, laissent des commentaires. Au moment où tu arrives au CAB, tu as une preuve vidéo d'utilisateurs d'affaires qui approuvent. On a coupé le cycle de mise en production SocGen de six semaines à dix jours avec ce seul patron, sans compromis sur la conformité. Le CAB se réunit toujours le mardi. Ils ont juste moins à argumenter."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Tu pilotes une initiative IA dans une banque française ou européenne et tu veux un walk-through 30 min sur comment ces patrons passent en prod ? On fait ces appels chaque semaine depuis les bureaux de Tokyo et Paris. Pas de deck, juste des diagrammes d'architecture issus de déploiements en prod réels."
+      },
+      {
+        "type": "p",
+        "content": "Ces sept patrons sont ce qui survit au contact avec la réalité bancaire française. Aucun n'est révolutionnaire ; tous sont absents du playbook agent IA standard à la sauce San Francisco. Si tu traites le contexte européen comme une contrainte de fonctionnalité plutôt qu'une friction, tu livres."
       }
     ]
   },
