@@ -114,6 +114,64 @@ export default async function LandingPage({
 
   const crumbs = breadcrumbs(locale, [[h1, `/${slug}`]]);
 
+  // Schema.org additionnels opt-in (LocalBusiness, EmploymentAgency).
+  // Activés si lib/landing-pages.ts > LandingPage.extraSchema est défini.
+  const extra = page.extraSchema;
+  const localBusinessLd = extra?.localBusiness
+    ? {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": `${SITE}/${locale}/${slug}#localbusiness`,
+        name: extra.localBusiness.name,
+        url: `${SITE}/${locale}/${slug}`,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: extra.localBusiness.streetAddress,
+          addressLocality: extra.localBusiness.addressLocality,
+          postalCode: extra.localBusiness.postalCode,
+          addressCountry: extra.localBusiness.addressCountry,
+        },
+        ...(extra.localBusiness.geo && {
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: extra.localBusiness.geo.latitude,
+            longitude: extra.localBusiness.geo.longitude,
+          },
+        }),
+        ...(extra.localBusiness.telephone && {
+          telephone: extra.localBusiness.telephone,
+        }),
+        parentOrganization: {
+          "@type": "Organization",
+          "@id": `${SITE}#organization`,
+          name: "Abbeal",
+          url: SITE,
+        },
+      }
+    : null;
+  const employmentAgencyLd = extra?.employmentAgency
+    ? {
+        "@context": "https://schema.org",
+        "@type": "EmploymentAgency",
+        "@id": `${SITE}/${locale}/${slug}#employmentagency`,
+        name: extra.employmentAgency.name,
+        url: `${SITE}/${locale}/${slug}`,
+        ...(extra.employmentAgency.description && {
+          description: extra.employmentAgency.description,
+        }),
+        areaServed: extra.employmentAgency.areaServed.map((iso) => ({
+          "@type": "Country",
+          name: iso,
+        })),
+        parentOrganization: {
+          "@type": "Organization",
+          "@id": `${SITE}#organization`,
+          name: "Abbeal",
+          url: SITE,
+        },
+      }
+    : null;
+
   // Related cases (cases nommés/anonymisés liés à la thématique).
   const relatedCases = page.relatedCaseSlugs
     .map((s) => getCase(s))
@@ -170,6 +228,18 @@ export default async function LandingPage({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
+      {localBusinessLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessLd) }}
+        />
+      )}
+      {employmentAgencyLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(employmentAgencyLd) }}
         />
       )}
 

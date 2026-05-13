@@ -3,648 +3,528 @@
     "body": {
       "fr": [
         {
-          "type": "p",
-          "content": "Follow-the-Sun Delivery, ce n'est pas un mot-clef qu'on a collé sur un slide pour faire moderne. C'est une mécanique opérationnelle qu'on opère depuis 9 ans, sur des produits qui tournent en prod, pour des clients qui paient des SLA. 3 hubs synchrones - Paris, Montréal, Tokyo. 24h de delivery utile par jour ouvré. Zéro ingénieur qui code à 3h du matin pour rattraper un fuseau. C'est ça, l'Adaptive Follow-the-Sun. Le reste, c'est du marketing."
-        },
-        {
           "type": "h2",
-          "content": "Le problème : pourquoi 24/7 est mort en 9-to-5"
+          "content": "Le modèle"
         },
         {
           "type": "p",
-          "content": "La plupart des ESN vendent du 24/7 en empilant des astreintes. Tu te retrouves avec une équipe parisienne qui ferme à 19h, un on-call qui prend le relais en mode pompier, et un backlog qui repart le lendemain matin avec 10 tickets à trier. Résultat - tu paies 24h et tu livres 8h."
-        },
-        {
-          "type": "p",
-          "content": "L'autre option classique - le near-shoring low-cost en Inde ou au Maghreb. Tu gagnes 4-6h de chevauchement, tu perds en qualité, en propriété intellectuelle, et tu finis avec 2 équipes qui se renvoient la balle sur Slack à coup de 'pas mon ticket'. Le ticket dort 16h."
-        },
-        {
-          "type": "p",
-          "content": "Les vrais coûts cachés du modèle mono-géo classique sur un produit critique :"
+          "content": "Trois hubs synchrones : Paris (CET), Montréal (EST), Tokyo (JST). Chaque ticket suit le soleil — Paris démarre le matin, ferme à 18h en passant la main à Montréal, Montréal ferme à 18h EST en passant la main à Tokyo, Tokyo ferme à 18h JST en repassant la main à Paris. La roadmap avance pendant que vous dormez. Pas de magie : c'est de l'orchestration disciplinée."
         },
         {
           "type": "list",
           "items": [
-            "Time-to-market dégradé - chaque incident traité hors heures ouvrées coûte 3 à 5x plus cher en MTTR.",
-            "Burn-out structurel - les astreintes répétées font fuir les seniors en 18 mois.",
-            "Dette technique invisible - le code écrit à 2h du matin par un on-call fatigué finit en bug payant 6 mois plus tard.",
-            "Perte de momentum - une feature livrée le vendredi soir attend lundi matin pour être validée. 60h de delay sur une release."
+            "Paris 09h–18h CET → handoff 18h CET (= 12h EST) → Montréal prend",
+            "Montréal 12h–21h EST → handoff 21h EST (= 10h JST J+1) → Tokyo prend",
+            "Tokyo 10h–19h JST → handoff 19h JST (= 11h CET) → Paris reprend",
+            "Overlap structuré 1h en début et fin de chaque hub : la main ne part jamais en l'air"
           ],
           "ordered": false
         },
         {
           "type": "h2",
-          "content": "Notre méthode Adaptive Follow-the-Sun"
+          "content": "Pourquoi ce n'est pas de l'offshoring"
         },
         {
           "type": "p",
-          "content": "Adaptive, parce qu'on ne fait pas tourner 3 équipes parallèles qui se marchent dessus. On orchestre 3 cellules synchrones autour d'un même produit, avec un seul backlog, un seul standard de qualité, une seule définition du Done. Les ingénieurs de Paris, Montréal et Tokyo travaillent sur le même Git, les mêmes runbooks, les mêmes ADRs."
-        },
-        {
-          "type": "p",
-          "content": "Le secret n'est pas dans les fuseaux horaires. Le secret est dans le handover. On a passé 4 ans à rationaliser le passage de relais entre hubs - check-list de 12 points, vidéo asynchrone Loom de 5 minutes max, dashboard d'état partagé, ownership tracé dans chaque PR. Quand Tokyo termine sa journée, Paris reprend exactement où Tokyo s'est arrêté. Pas de redite, pas de re-onboarding, pas de 'rappelle-moi le contexte'."
-        },
-        {
-          "type": "p",
-          "content": "Les 3 piliers techniques qui rendent l'Adaptive Follow-the-Sun viable :"
+          "content": "L'offshoring classique vend du jour-homme low-cost en Inde ou aux Philippines avec un PM qui traduit. Le résultat : roadmap qui ralentit (overlap zéro avec la France), qualité qui se dégrade (zéro contexte client), retour de bâton compliance (RGPD, secret bancaire). Le tri-géo Abbeal est l'inverse architectural :"
         },
         {
           "type": "list",
           "items": [
-            "Documentation as code - chaque décision d'architecture est versionnée, chaque runbook est exécutable, chaque incident génère un post-mortem auto-indexé.",
-            "Observabilité partagée - dashboards Grafana ou Datadog accessibles aux 3 hubs, alerting routé sur le hub actif, pas d'astreinte cumulée.",
-            "Trunk-based development + feature flags - pas de longues branches qui divergent entre fuseaux, releases continues, rollback en 30 secondes."
+            "Hub Tokyo / Montréal / Paris = même TJM senior (pas du low-cost)",
+            "Recrutement local par des ingénieurs (pas des chasseurs RH)",
+            "Overlap quotidien 1h × 2 entre hubs (vs 0 chez l'offshore)",
+            "Ownership de bout-en-bout par hub (vs ticket-pingpong) — 3 squads autonomes",
+            "Conformité européenne native (RGPD, ACPR, SecNumCloud) sur tous les hubs"
           ],
           "ordered": false
         },
         {
           "type": "h2",
-          "content": "Comment ca marche concretement (handover toutes les 8h)"
+          "content": "Comment ça marche concrètement — 5 piliers"
+        },
+        {
+          "type": "h3",
+          "content": "1. Handoff écrit, pas oral"
         },
         {
           "type": "p",
-          "content": "Une journée type sur un produit Follow-the-Sun ressemble à ceci. Les heures sont en CET, mais la mécanique est la même quel que soit le hub qui démarre."
+          "content": "Chaque fin de journée, le hub partant écrit un état des lieux : 3 lignes par ticket en cours, blockers identifiés, prochaine action attendue. Pas de réunion de passage — le contexte tient dans un commentaire de ticket lisible en 90 secondes. Le hub entrant lit avant le café."
+        },
+        {
+          "type": "h3",
+          "content": "2. Overlap sacré — 1h × 2 par jour"
+        },
+        {
+          "type": "p",
+          "content": "Les fenêtres d'overlap (Paris 17h-18h ↔ Montréal 11h-12h, Tokyo 18h-19h ↔ Paris 10h-11h) sont sanctuarisées : aucune meeting interne n'y est prise, c'est réservé au handoff actif et aux questions client en synchrone. Si on n'a rien à dire pendant l'overlap, on l'occupe par de la review de PR."
+        },
+        {
+          "type": "h3",
+          "content": "3. Taille de ticket calibrée"
+        },
+        {
+          "type": "p",
+          "content": "Un ticket doit pouvoir être complété ou explicitement passé en overlap. Si un ticket dépasse 2 jours-homme, on le découpe. Pas pour des raisons agiles abstraites — pour que le contexte tienne dans un handoff écrit."
+        },
+        {
+          "type": "h3",
+          "content": "4. Ownership par fuseau"
+        },
+        {
+          "type": "p",
+          "content": "Chaque squad de hub porte la responsabilité technique d'un domaine fonctionnel (ex : Paris = backend payment, Montréal = data ingestion, Tokyo = mobile API). Ça évite le syndrome \"qui a touché à quoi\" qui détruit l'offshoring."
+        },
+        {
+          "type": "h3",
+          "content": "5. Run complet local par hub"
+        },
+        {
+          "type": "p",
+          "content": "Chaque hub doit pouvoir faire tourner l'environnement complet localement (docker-compose ou équivalent). Pas de dépendance critique sur une stack qui ne tourne qu'à Paris. C'est ce qui fait que Tokyo peut shipper un fix prod à 3h du matin parisien sans réveiller personne."
+        },
+        {
+          "type": "h2",
+          "content": "Cas d'usage : ce qui tourne en prod"
+        },
+        {
+          "type": "p",
+          "content": "Trois exemples concrets, extraits de cases clients déjà déployés :"
         },
         {
           "type": "list",
           "items": [
-            "08h00 CET - Paris ouvre. Lecture du handover de Tokyo (Loom + dashboard). Reprise du backlog là où Tokyo l'a laissé.",
-            "12h00 CET - Sync de 15 min Paris-Montréal (Montréal vient d'ouvrir à 7h locale).",
-            "16h00 CET - Paris passe la main à Montréal via handover structuré. Loom + check-list. Paris ferme.",
-            "20h00 CET - Montréal continue, Tokyo se prépare à ouvrir (5h locale Tokyo).",
-            "00h00 CET - Montréal passe la main à Tokyo. Tokyo prend le relais sur incidents et features prioritaires.",
-            "08h00 CET - Tokyo passe la main à Paris. Boucle bouclée."
-          ],
-          "ordered": true
-        },
-        {
-          "type": "callout",
-          "tone": "teal",
-          "content": "Le mythe à casser - Follow-the-Sun n'est pas une question de fuseaux horaires. C'est une question de discipline de handover. Sans process écrit, sans ownership tracé, sans documentation exécutable, 3 hubs ne livrent pas plus vite qu'1 seul. Ils livrent 3 fois plus de bugs."
-        },
-        {
-          "type": "h2",
-          "content": "La preuve : 6 ans de Follow-the-Sun chez Le Monde"
-        },
-        {
-          "type": "p",
-          "content": "Le Monde nous fait confiance depuis 6 ans sur sa stack data et insights. La mission a démarré à Paris, intégrée dans la team Insights du journal. En 2023, l'ingénieur référent - Alexandre L. - a déménagé à Tokyo. La mission n'a pas bougé. Au contraire, elle a gagné en couverture."
-        },
-        {
-          "type": "p",
-          "content": "Aujourd'hui, Le Monde bénéficie d'une présence active sur la plage 5h-22h CET. Quand un incident éditorial pète à 6h du matin à Paris pendant un live politique, Tokyo est encore en pleine après-midi et déclenche le fix avant que Paris ait fini son café. C'est le seul Follow-the-Sun en production que je connais sur un média français de cette envergure. Et ça tient depuis 6 ans."
-        },
-        {
-          "type": "h2",
-          "content": "Pourquoi 3 hubs et pas 2 ou 4"
-        },
-        {
-          "type": "p",
-          "content": "Question légitime, on nous la pose à chaque RFP. La réponse est mathématique avant d'être stratégique."
-        },
-        {
-          "type": "list",
-          "items": [
-            "2 hubs (Paris-Tokyo ou Paris-Montréal) - tu couvres 16h par jour, tu laisses un trou de 8h. Pas de Follow-the-Sun, juste du extended-day.",
-            "3 hubs (Paris-Montréal-Tokyo) - tu couvres 24h, chaque hub travaille 8h, chaque handover est synchrone (chevauchement de 1 à 2h entre hubs voisins). Sweet spot.",
-            "4 hubs et plus - chaque handover ajoute du bruit, du retravail, de la dilution de contexte. Au-delà de 3, le coût de coordination dépasse le gain de couverture."
-          ],
-          "ordered": false
-        },
-        {
-          "type": "p",
-          "content": "Paris, Montréal, Tokyo - ce n'est pas un choix géographique romantique. C'est le triangle qui maximise la couverture horaire avec le minimum de friction culturelle. 3 langues de travail (FR, EN, JP), 3 cultures du code review, 1 standard commun."
-        },
-        {
-          "type": "h2",
-          "content": "Ce qu'on évite (anti-patterns)"
-        },
-        {
-          "type": "list",
-          "items": [
-            "L'astreinte cumulée - jamais. Si tu fais Follow-the-Sun pour épargner les astreintes et que tes ingénieurs sont quand même de garde, tu n'as rien gagné.",
-            "Le handover vocal non documenté - le 'je t'explique vite fait en visio' ne passe pas l'épreuve du turnover. Tout passe par Loom + dashboard.",
-            "Les 3 backlogs parallèles - 1 seul backlog, 1 seule définition du Done, 1 seul propriétaire produit. Sinon, tu as 3 mini-équipes en silo.",
-            "Le suivi du soleil mécanique - on n'envoie pas un ticket à Tokyo juste parce qu'il est 18h à Paris. On envoie à Tokyo quand Tokyo est le bon hub pour le ticket (compétences, contexte, priorité).",
-            "Le reporting à 3 voix - 1 seul PM, 1 seul reporting, 1 seul interlocuteur côté client. Le client ne doit jamais 'gérer' 3 équipes."
+            "FinTech SaaS européenne — ISO 27001 livré en 9 mois (vs 18 estimés) grâce au tri-géo. Audit DevSecOps Paris, automation pipelines Montréal, doc compliance Tokyo. SOC 2 enchaîné dans la foulée.",
+            "Leader e-commerce sport — refonte PWA, +18 % conversion mobile en 6 mois. Frontend Paris, perfs Lighthouse Montréal, A/B testing JP. Lighthouse score 92 sur mobile.",
+            "Industriel japonais robotique — flotte 80 AGV ROS 2, +40 % throughput entrepôt. Stack Rust embarqué Tokyo, Isaac Sim Paris, monitoring Montréal."
           ],
           "ordered": false
         },
         {
           "type": "callout",
           "tone": "teal",
-          "content": "Si tu opères un produit critique en Europe et que tes incidents nocturnes te coûtent un ingénieur senior par an en burn-out, on devrait parler. Le Follow-the-Sun n'est pas pour tout le monde - mais quand il fit, il change la courbe. Calendly direct, 30 minutes, sans bullshit."
+          "content": "Le Follow-the-Sun n'est pas un slogan marketing chez Abbeal — c'est l'architecture sur laquelle on a construit la boîte depuis 2018. On a 6 ans d'apprentissages opérationnels (incidents, contournements, métriques) à partager si tu envisages d'industrialiser ce modèle chez toi."
         }
       ],
       "en": [
         {
-          "type": "p",
-          "content": "Follow-the-Sun Delivery isn't a buzzword we slapped on a slide to look modern. It's an operating model we've been running for 9 years, on products in production, for clients paying real SLAs. 3 synced hubs - Paris, Montreal, Tokyo. 24 hours of useful delivery per business day. Zero engineers coding at 3am to catch up with a timezone. That's Adaptive Follow-the-Sun. The rest is marketing."
-        },
-        {
           "type": "h2",
-          "content": "The problem: why 24/7 died inside 9-to-5"
+          "content": "The model"
         },
         {
           "type": "p",
-          "content": "Most consultancies sell 24/7 by stacking on-call rotations. You end up with a Paris team that closes at 7pm, a firefighter on-call who takes over reactively, and a backlog that restarts the next morning with 10 tickets to triage. You pay for 24h, you ship 8h."
-        },
-        {
-          "type": "p",
-          "content": "The other classic option - low-cost near-shoring in India or North Africa. You gain 4-6h of overlap, you lose quality, IP control, and you end up with 2 teams ping-ponging tickets on Slack with 'not my issue'. The ticket sleeps 16 hours."
-        },
-        {
-          "type": "p",
-          "content": "The real hidden costs of mono-geo delivery on a critical product:"
+          "content": "Three synced hubs: Paris (CET), Montréal (EST), Tokyo (JST). Every ticket follows the sun — Paris starts in the morning, hands off at 6 PM CET to Montréal, Montréal hands off at 6 PM EST to Tokyo, Tokyo hands off at 6 PM JST back to Paris. Roadmap moves while you sleep. No magic: just disciplined orchestration."
         },
         {
           "type": "list",
           "items": [
-            "Degraded time-to-market - every incident handled outside business hours costs 3 to 5x more in MTTR.",
-            "Structural burnout - repeated on-call rotations push senior engineers out within 18 months.",
-            "Invisible tech debt - code written at 2am by an exhausted on-call ships as a paying bug 6 months later.",
-            "Lost momentum - a feature delivered Friday evening waits until Monday morning for validation. 60h of delay per release."
+            "Paris 9 AM–6 PM CET → handoff 6 PM CET (= 12 PM EST) → Montréal picks up",
+            "Montréal 12 PM–9 PM EST → handoff 9 PM EST (= 10 AM JST D+1) → Tokyo picks up",
+            "Tokyo 10 AM–7 PM JST → handoff 7 PM JST (= 11 AM CET) → Paris picks up",
+            "Structured 1-hour overlap at start/end of each hub: the baton is never dropped"
           ],
           "ordered": false
         },
         {
           "type": "h2",
-          "content": "Our Adaptive Follow-the-Sun method"
+          "content": "Why this is not offshoring"
         },
         {
           "type": "p",
-          "content": "Adaptive, because we don't run 3 parallel teams that step on each other. We orchestrate 3 synced cells around a single product, with one backlog, one quality bar, one Definition of Done. Engineers in Paris, Montreal and Tokyo work on the same Git, the same runbooks, the same ADRs."
-        },
-        {
-          "type": "p",
-          "content": "The secret isn't in the timezones. The secret is in the handover. We spent 4 years industrializing the handoff between hubs - 12-point checklist, async Loom video capped at 5 minutes, shared status dashboard, ownership tracked in every PR. When Tokyo wraps its day, Paris picks up exactly where Tokyo stopped. No retread, no re-onboarding, no 'remind me the context'."
-        },
-        {
-          "type": "p",
-          "content": "The 3 technical pillars that make Adaptive Follow-the-Sun viable:"
+          "content": "Classic offshoring sells low-cost man-days from India or the Philippines with a PM who translates. The result: slowing roadmap (zero overlap with France), degrading quality (zero client context), compliance backlash (GDPR, banking secrecy). Abbeal's tri-geo is the architectural opposite:"
         },
         {
           "type": "list",
           "items": [
-            "Documentation as code - every architecture decision is versioned, every runbook is executable, every incident auto-generates an indexed postmortem.",
-            "Shared observability - Grafana or Datadog dashboards accessible to all 3 hubs, alerting routed to the active hub, no cumulative on-call.",
-            "Trunk-based development + feature flags - no long-lived branches diverging across timezones, continuous releases, 30-second rollback."
+            "Tokyo / Montréal / Paris hubs = same senior day rate (not low-cost)",
+            "Local hiring by engineers (not HR recruiters)",
+            "Daily 1h × 2 overlap between hubs (vs 0 in offshoring)",
+            "End-to-end ownership per hub (vs ticket-ping-pong) — 3 autonomous squads",
+            "Native European compliance (GDPR, ACPR, SecNumCloud) across all hubs"
           ],
           "ordered": false
         },
         {
           "type": "h2",
-          "content": "How it actually works (handover every 8h)"
+          "content": "How it works concretely — 5 pillars"
+        },
+        {
+          "type": "h3",
+          "content": "1. Written handoff, not verbal"
         },
         {
           "type": "p",
-          "content": "A typical day on a Follow-the-Sun product looks like this. Times are in CET, but the mechanics hold whichever hub starts."
+          "content": "At end of day, the leaving hub writes a state-of-play: 3 lines per ticket-in-progress, identified blockers, expected next action. No handover meeting — context fits in a ticket comment readable in 90 seconds. The incoming hub reads before coffee."
+        },
+        {
+          "type": "h3",
+          "content": "2. Sacred overlap — 1h × 2 per day"
+        },
+        {
+          "type": "p",
+          "content": "Overlap windows (Paris 5-6 PM ↔ Montréal 11 AM-12 PM, Tokyo 6-7 PM ↔ Paris 10-11 AM) are sanctuarized: no internal meetings allowed, reserved for active handoff and synchronous client questions. If nothing to say during overlap, fill it with PR review."
+        },
+        {
+          "type": "h3",
+          "content": "3. Calibrated ticket size"
+        },
+        {
+          "type": "p",
+          "content": "A ticket must complete in one shift or be explicitly passed at overlap. If a ticket exceeds 2 person-days, we split it. Not for abstract agile reasons — so context fits in a written handoff."
+        },
+        {
+          "type": "h3",
+          "content": "4. Ownership by time zone"
+        },
+        {
+          "type": "p",
+          "content": "Each hub squad owns technical responsibility for a functional domain (e.g. Paris = backend payment, Montréal = data ingestion, Tokyo = mobile API). Avoids the \"who touched what\" syndrome that destroys offshoring."
+        },
+        {
+          "type": "h3",
+          "content": "5. Full local run per hub"
+        },
+        {
+          "type": "p",
+          "content": "Each hub must run the full environment locally (docker-compose or equivalent). No critical dependency on a stack that only runs in Paris. That's why Tokyo can ship a prod fix at 3 AM Paris time without waking anyone."
+        },
+        {
+          "type": "h2",
+          "content": "Use cases: what's running in production"
+        },
+        {
+          "type": "p",
+          "content": "Three concrete examples, drawn from already-deployed client cases:"
         },
         {
           "type": "list",
           "items": [
-            "08:00 CET - Paris opens. Reads Tokyo's handover (Loom + dashboard). Picks up the backlog where Tokyo left it.",
-            "12:00 CET - 15-min sync Paris-Montreal (Montreal just opened at 7am local).",
-            "16:00 CET - Paris hands over to Montreal via structured handover. Loom + checklist. Paris closes.",
-            "20:00 CET - Montreal continues, Tokyo prepares to open (5am Tokyo local).",
-            "00:00 CET - Montreal hands over to Tokyo. Tokyo takes the wheel on incidents and priority features.",
-            "08:00 CET - Tokyo hands back to Paris. Loop closed."
-          ],
-          "ordered": true
-        },
-        {
-          "type": "callout",
-          "tone": "teal",
-          "content": "The myth to kill - Follow-the-Sun isn't about timezones. It's about handover discipline. Without written process, tracked ownership and executable docs, 3 hubs don't ship faster than 1. They ship 3x more bugs."
-        },
-        {
-          "type": "h2",
-          "content": "The proof: 6 years of Follow-the-Sun at Le Monde"
-        },
-        {
-          "type": "p",
-          "content": "Le Monde has trusted us for 6 years on its data and insights stack. The mission started in Paris, embedded in the newspaper's Insights team. In 2023, the lead engineer - Alexandre L. - relocated to Tokyo. The mission didn't move. It actually gained coverage."
-        },
-        {
-          "type": "p",
-          "content": "Today, Le Monde gets active coverage on the 5am-10pm CET window. When an editorial incident hits Paris at 6am during a live political broadcast, Tokyo is mid-afternoon and triggers the fix before Paris has finished coffee. It's the only Follow-the-Sun in production I know of on a French media outlet of that size. And it's been holding for 6 years."
-        },
-        {
-          "type": "h2",
-          "content": "Why 3 hubs, not 2 or 4"
-        },
-        {
-          "type": "p",
-          "content": "Fair question, we get it on every RFP. The answer is mathematical before it's strategic."
-        },
-        {
-          "type": "list",
-          "items": [
-            "2 hubs (Paris-Tokyo or Paris-Montreal) - 16h coverage per day, 8h gap. Not Follow-the-Sun, just extended-day.",
-            "3 hubs (Paris-Montreal-Tokyo) - 24h coverage, each hub works 8h, each handover is synchronous (1-2h overlap between adjacent hubs). Sweet spot.",
-            "4+ hubs - each handover adds noise, rework, context dilution. Past 3, coordination cost outpaces coverage gain."
-          ],
-          "ordered": false
-        },
-        {
-          "type": "p",
-          "content": "Paris, Montreal, Tokyo - this isn't a romantic geographic pick. It's the triangle that maximizes time coverage with minimum cultural friction. 3 working languages (FR, EN, JP), 3 code review cultures, 1 shared standard."
-        },
-        {
-          "type": "h2",
-          "content": "What we avoid (anti-patterns)"
-        },
-        {
-          "type": "list",
-          "items": [
-            "Cumulative on-call - never. If you do Follow-the-Sun to spare on-call rotations and your engineers still page at night, you've gained nothing.",
-            "Undocumented voice handover - the 'quick sync over Zoom' doesn't survive turnover. Everything goes through Loom + dashboard.",
-            "3 parallel backlogs - one backlog, one Definition of Done, one product owner. Otherwise, you get 3 mini-teams in silos.",
-            "Mechanical sun-following - we don't ship a ticket to Tokyo just because it's 6pm in Paris. We ship to Tokyo when Tokyo is the right hub for the ticket (skills, context, priority).",
-            "3-voice reporting - one PM, one reporting line, one client interlocutor. The client must never 'manage' 3 teams."
+            "European FinTech SaaS — ISO 27001 delivered in 9 months (vs 18 estimated) thanks to tri-geo. DevSecOps audit Paris, pipeline automation Montréal, compliance docs Tokyo. SOC 2 chained right after.",
+            "Sports e-commerce leader — PWA refactor, +18% mobile conversion in 6 months. Frontend Paris, Lighthouse perfs Montréal, A/B testing JP. Lighthouse 92 mobile score.",
+            "Japanese industrial robotics — fleet of 80 ROS 2 AGVs, +40% warehouse throughput. Embedded Rust stack Tokyo, Isaac Sim Paris, monitoring Montréal."
           ],
           "ordered": false
         },
         {
           "type": "callout",
           "tone": "teal",
-          "content": "If you operate a critical product in Europe and your nightly incidents cost you a senior engineer per year in burnout, we should talk. Follow-the-Sun isn't for everyone - but when it fits, it bends the curve. Direct Calendly, 30 minutes, no bullshit."
+          "content": "Follow-the-Sun isn't a marketing slogan at Abbeal — it's the architecture we built the company on since 2018. We have 6 years of operational learnings (incidents, workarounds, metrics) to share if you're considering industrializing this model."
         }
       ],
       "ja": [
         {
-          "type": "p",
-          "content": "Follow-the-Sun デリバリーは、スライドに貼り付けたバズワードではない。9年間、本番稼働中のプロダクトで、実際のSLAを支払うクライアントのために運用してきたオペレーティングモデルだ。同期する3拠点 - パリ、モントリオール、東京。営業日あたり24時間の有効デリバリー。深夜3時にタイムゾーンを追いかけるエンジニアはゼロ。これがアダプティブFollow-the-Sun。それ以外はマーケティングにすぎない。"
-        },
-        {
           "type": "h2",
-          "content": "課題 - なぜ24/7は9-to-5の中で死んだのか"
+          "content": "モデル"
         },
         {
           "type": "p",
-          "content": "多くのSIerはオンコールローテーションを積み重ねて24/7を売る。19時に閉まるパリチーム、消火活動的に引き継ぐオンコール担当、翌朝10件のチケットでリスタートするバックログ。24時間支払って、8時間しか出荷できない。"
-        },
-        {
-          "type": "p",
-          "content": "もう1つの定番 - インドや北アフリカの低コストニアショア。重複時間は4-6時間稼げるが、品質、知財管理を失い、Slackで「私の担当じゃない」とチケットを投げ合う2チームになる。チケットは16時間眠る。"
-        },
-        {
-          "type": "p",
-          "content": "単一拠点デリバリーが重要プロダクトで生む隠れコスト - "
+          "content": "3つの同期拠点：パリ（CET）、モントリオール（EST）、東京（JST）。各チケットは太陽を追う — パリが朝に開始、CET 18時にモントリオールへハンドオフ、モントリオールがEST 18時に東京へハンドオフ、東京がJST 18時にパリへハンドオフ。あなたが寝ている間にロードマップが進む。魔法ではない：規律あるオーケストレーション。"
         },
         {
           "type": "list",
           "items": [
-            "市場投入の遅延 - 営業時間外のインシデント対応はMTTRが3-5倍に膨らむ。",
-            "構造的バーンアウト - 繰り返すオンコールでシニアは18ヶ月以内に離脱する。",
-            "見えない技術的負債 - 疲弊したオンコールが深夜2時に書いたコードは、6ヶ月後に課金バグとして表面化する。",
-            "モメンタムの喪失 - 金曜夜にデリバリーされた機能は月曜朝まで検証待ち。リリースごとに60時間の遅延。"
+            "パリ CET 9時-18時 → CET 18時にハンドオフ（= EST 12時）→ モントリオールが引き継ぐ",
+            "モントリオール EST 12時-21時 → EST 21時にハンドオフ（= JST翌10時）→ 東京が引き継ぐ",
+            "東京 JST 10時-19時 → JST 19時にハンドオフ（= CET 11時）→ パリが引き継ぐ",
+            "各拠点の開始/終了に1時間の構造化オーバーラップ：バトンが空中に取り残されることはない"
           ],
           "ordered": false
         },
         {
           "type": "h2",
-          "content": "アダプティブFollow-the-Sunメソッド"
+          "content": "なぜこれはオフショアリングではないか"
         },
         {
           "type": "p",
-          "content": "アダプティブと呼ぶのは、3つの並列チームが互いを踏みつけるのではなく、1つのプロダクトを中心に同期する3セルをオーケストレーションするからだ。バックログは1つ、品質基準は1つ、Definition of Doneは1つ。パリ、モントリオール、東京のエンジニアは同じGit、同じRunbook、同じADRで動く。"
-        },
-        {
-          "type": "p",
-          "content": "秘密はタイムゾーンではない。ハンドオーバーにある。我々は4年かけて拠点間の引き継ぎを工業化した - 12項目のチェックリスト、5分以内の非同期Loom動画、共有ステータスダッシュボード、PRごとに記録されるオーナーシップ。東京が1日を終えるとき、パリは東京が止めた地点から正確に再開する。重複なし、再オンボーディングなし、「文脈を再度教えて」もなし。"
-        },
-        {
-          "type": "p",
-          "content": "アダプティブFollow-the-Sunを成立させる3つの技術的柱 - "
+          "content": "従来のオフショアリングは、PMが翻訳する形でインドやフィリピンの低コスト人日を販売する。結果：ロードマップの減速（フランスとのオーバーラップゼロ）、品質の劣化（クライアントコンテキストゼロ）、コンプライアンスの逆効果（GDPR、銀行守秘義務）。Abbealのトライジオはアーキテクチャ上の正反対："
         },
         {
           "type": "list",
           "items": [
-            "Documentation as code - すべてのアーキテクチャ決定はバージョン管理され、すべてのRunbookは実行可能、すべてのインシデントは自動でインデックス化されたポストモーテムを生成する。",
-            "共有オブザーバビリティ - GrafanaまたはDatadogのダッシュボードを3拠点で共有、アクティブな拠点へアラートをルーティング、累積オンコールなし。",
-            "トランクベース開発 + フィーチャーフラグ - タイムゾーン間で乖離する長期ブランチなし、継続的リリース、30秒でロールバック。"
+            "東京 / モントリオール / パリ拠点 = 同じシニア人日単価（低コストではない）",
+            "エンジニアによる現地採用（人事リクルーターではない）",
+            "拠点間で毎日1時間×2のオーバーラップ（オフショアでは0）",
+            "拠点ごとのエンドツーエンドのオーナーシップ（チケットピンポン排除）— 3つの自律スクワッド",
+            "全拠点でネイティブな欧州コンプライアンス（GDPR、ACPR、SecNumCloud）"
           ],
           "ordered": false
         },
         {
           "type": "h2",
-          "content": "具体的にどう動くか - 8時間ごとのハンドオーバー"
+          "content": "具体的な仕組み — 5つの柱"
+        },
+        {
+          "type": "h3",
+          "content": "1. 口頭ではなく、書面ハンドオフ"
         },
         {
           "type": "p",
-          "content": "Follow-the-Sunプロダクトの典型的な1日はこうなる。時刻はCETだが、どの拠点が始まろうと仕組みは同じだ。"
+          "content": "1日の終わりに、退出する拠点が状況を書く：進行中のチケット1つにつき3行、特定されたブロッカー、期待される次のアクション。引き継ぎ会議なし — コンテキストは90秒で読めるチケットコメントに収まる。引き継ぐ拠点はコーヒーの前に読む。"
+        },
+        {
+          "type": "h3",
+          "content": "2. 神聖なオーバーラップ — 1日1時間×2"
+        },
+        {
+          "type": "p",
+          "content": "オーバーラップ枠（パリ17時-18時 ↔ モントリオール11時-12時、東京18時-19時 ↔ パリ10時-11時）は聖域：内部ミーティング禁止、アクティブハンドオフと同期型クライアント質問専用。オーバーラップ中に何も話すことがない場合、PRレビューで埋める。"
+        },
+        {
+          "type": "h3",
+          "content": "3. 調整されたチケットサイズ"
+        },
+        {
+          "type": "p",
+          "content": "チケットは1シフトで完了するか、オーバーラップで明示的に渡される必要がある。チケットが2人日を超える場合、分割する。抽象的なアジャイルの理由ではなく — 書面ハンドオフにコンテキストが収まるように。"
+        },
+        {
+          "type": "h3",
+          "content": "4. タイムゾーン別オーナーシップ"
+        },
+        {
+          "type": "p",
+          "content": "各拠点スクワッドは機能ドメインの技術的責任を持つ（例：パリ = バックエンド決済、モントリオール = データ取込、東京 = モバイルAPI）。オフショアリングを破壊する「誰が何に触れたか」症候群を回避する。"
+        },
+        {
+          "type": "h3",
+          "content": "5. 拠点ごとのフルローカル実行"
+        },
+        {
+          "type": "p",
+          "content": "各拠点は環境全体をローカルで実行できる必要がある（docker-composeまたは同等品）。パリでしか動かないスタックへの重要な依存はない。だから東京はパリ時間午前3時に誰も起こさずプロドフィックスを出荷できる。"
+        },
+        {
+          "type": "h2",
+          "content": "ユースケース：本番で稼働しているもの"
+        },
+        {
+          "type": "p",
+          "content": "既にデプロイされたクライアントケースから抜粋した3つの具体例："
         },
         {
           "type": "list",
           "items": [
-            "08:00 CET - パリ始動。東京のハンドオーバー(Loom + ダッシュボード)を読み、東京が残したバックログを引き継ぐ。",
-            "12:00 CET - パリ-モントリオール15分同期(モントリオールは現地7時に始動したばかり)。",
-            "16:00 CET - パリが構造化ハンドオーバーでモントリオールへ引き継ぎ。Loom + チェックリスト。パリ終了。",
-            "20:00 CET - モントリオール継続、東京は始動準備(東京現地5時)。",
-            "00:00 CET - モントリオールが東京へ引き継ぎ。東京はインシデントと優先機能を主導。",
-            "08:00 CET - 東京がパリへ引き継ぎ。ループ完了。"
-          ],
-          "ordered": true
-        },
-        {
-          "type": "callout",
-          "tone": "teal",
-          "content": "打ち砕くべき神話 - Follow-the-Sunはタイムゾーンの話ではない。ハンドオーバー規律の話だ。書面化されたプロセス、追跡可能なオーナーシップ、実行可能なドキュメントなしには、3拠点は1拠点より速く出荷しない。バグを3倍出荷するだけだ。"
-        },
-        {
-          "type": "h2",
-          "content": "証拠 - ル・モンド紙での6年間のFollow-the-Sun"
-        },
-        {
-          "type": "p",
-          "content": "ル・モンド紙は6年間、データとインサイトのスタックで我々を信頼してくれている。ミッションはパリで開始、新聞社のInsightsチームに組み込まれた。2023年、リードエンジニアのAlexandre L.が東京へ移住。ミッションは止まらなかった。むしろカバレッジが広がった。"
-        },
-        {
-          "type": "p",
-          "content": "現在、ル・モンドはCET 5時から22時のレンジで能動的なカバレッジを得ている。政治ライブ放送中の朝6時にパリで編集インシデントが発生したとき、東京は午後の真っ最中で、パリがコーヒーを飲み終える前に修正を発動する。私が知る限り、この規模のフランスメディアで本番稼働しているFollow-the-Sunはここだけ。そしてそれが6年続いている。"
-        },
-        {
-          "type": "h2",
-          "content": "なぜ3拠点で、2でも4でもないのか"
-        },
-        {
-          "type": "p",
-          "content": "正当な質問、RFPごとに聞かれる。答えは戦略的である前に数学的だ。"
-        },
-        {
-          "type": "list",
-          "items": [
-            "2拠点(パリ-東京またはパリ-モントリオール) - 1日16時間カバー、8時間の穴。Follow-the-Sunではなく単なる延長営業日。",
-            "3拠点(パリ-モントリオール-東京) - 24時間カバー、各拠点8時間稼働、各ハンドオーバーは同期(隣接拠点間で1-2時間の重複)。スイートスポット。",
-            "4拠点以上 - ハンドオーバーごとにノイズ、手戻り、文脈の希釈が増える。3を超えると、調整コストがカバレッジ利得を上回る。"
-          ],
-          "ordered": false
-        },
-        {
-          "type": "p",
-          "content": "パリ、モントリオール、東京 - これはロマンチックな地理的選択ではない。文化的摩擦を最小化しつつ時間カバレッジを最大化する三角形だ。3つの作業言語(FR, EN, JP)、3つのコードレビュー文化、1つの共通基準。"
-        },
-        {
-          "type": "h2",
-          "content": "我々が避けること(アンチパターン)"
-        },
-        {
-          "type": "list",
-          "items": [
-            "累積オンコール - 絶対にしない。Follow-the-Sunでオンコールを軽減する目的で導入したのに、エンジニアが夜間呼び出されるなら、何も得ていない。",
-            "ドキュメント化されない口頭ハンドオーバー - 「Zoomで簡単に説明」は離職に耐えない。すべてLoom + ダッシュボード経由。",
-            "3つの並列バックログ - バックログは1つ、Definition of Doneは1つ、プロダクトオーナーは1人。さもなくばサイロ化した3つのミニチームになる。",
-            "機械的な太陽追跡 - パリで18時だからという理由だけで東京にチケットを送ったりしない。東京がそのチケットに最適な拠点(スキル、文脈、優先度)である場合に送る。",
-            "3声のレポーティング - PMは1人、レポートラインは1つ、クライアント側の窓口は1人。クライアントが3チームを「管理」することは絶対にあってはならない。"
+            "欧州FinTech SaaS — トライジオのおかげでISO 27001を9ヶ月で納品（推定18ヶ月）。パリでDevSecOps監査、モントリオールでパイプライン自動化、東京でコンプライアンス文書。直後にSOC 2を連鎖。",
+            "スポーツEコマースリーダー — PWAリファクタリング、6ヶ月でモバイルコンバージョン+18%。パリでフロントエンド、モントリオールでLighthouse性能、JPでA/Bテスト。Lighthouseモバイルスコア92。",
+            "日本の産業ロボティクス — 80台のROS 2 AGVのフリート、倉庫スループット+40%。東京で組込Rustスタック、パリでIsaac Sim、モントリオールでモニタリング。"
           ],
           "ordered": false
         },
         {
           "type": "callout",
           "tone": "teal",
-          "content": "欧州で重要プロダクトを運用していて、夜間インシデントで毎年シニアエンジニアを1人バーンアウトで失っているなら、話そう。Follow-the-Sunは万人向けではない。だがフィットすれば、曲線を変える。Calendlyへ直接、30分、無駄な前置きなし。"
+          "content": "AbbealにとってFollow-the-Sunはマーケティングスローガンではない — 2018年から会社を構築したアーキテクチャだ。このモデルを社内で工業化することを検討している場合、共有できる6年間の運用学習（インシデント、回避策、メトリクス）がある。"
         }
       ],
       "fr-ca": [
         {
-          "type": "p",
-          "content": "Follow-the-Sun Delivery, ce n'est pas un mot-clic qu'on a colle sur une diapo pour avoir l'air a la mode. C'est une mecanique operationnelle qu'on opere depuis 9 ans, sur des produits qui roulent en prod, pour des clients qui paient des ententes de service reelles. 3 poles synchrones - Paris, Montreal, Tokyo. 24h de livraison utile par jour ouvrable. Zero ingenieur qui code a 3h du matin pour rattraper un fuseau. C'est ca, l'Adaptive Follow-the-Sun. Le reste, c'est de la mise en marche."
-        },
-        {
           "type": "h2",
-          "content": "Le probleme - pourquoi le 24/7 est mort dans le 9-to-5"
+          "content": "Le modèle"
         },
         {
           "type": "p",
-          "content": "La plupart des firmes de service vendent du 24/7 en empilant des gardes. Tu te ramasses avec une equipe parisienne qui ferme a 19h, un de garde qui prend la releve en mode pompier, et une liste de billets qui repart le lendemain matin avec 10 items a trier. Resultat - tu paies 24h et tu livres 8h."
-        },
-        {
-          "type": "p",
-          "content": "L'autre option classique - la sous-traitance a bas cout en Inde ou au Maghreb. Tu gagnes 4 a 6h de chevauchement, tu perds en qualite, en propriete intellectuelle, et tu finis avec 2 equipes qui se renvoient la balle sur Slack a coups de 'pas mon billet'. Le billet dort 16h."
-        },
-        {
-          "type": "p",
-          "content": "Les vrais couts caches du modele mono-geo classique sur un produit critique - "
+          "content": "Trois pôles synchrones : Paris (CET), Montréal (EST), Tokyo (JST). Chaque billet suit le soleil — Paris démarre le matin, ferme à 18h en passant la main à Montréal, Montréal ferme à 18h EST en passant la main à Tokyo, Tokyo ferme à 18h JST en repassant la main à Paris. La feuille de route avance pendant que vous dormez. Pas de magie : c'est de l'orchestration disciplinée."
         },
         {
           "type": "list",
           "items": [
-            "Mise en marche degradee - chaque incident traite hors heures ouvrables coute 3 a 5x plus cher en MTTR.",
-            "Epuisement structurel - les gardes repetees font fuir les seniors en 18 mois.",
-            "Dette technique invisible - le code ecrit a 2h du matin par un de garde fatigue finit en bogue payant 6 mois plus tard.",
-            "Perte de momentum - une fonctionnalite livree le vendredi soir attend lundi matin pour etre validee. 60h de delai par version."
+            "Paris 09h–18h CET → passation 18h CET (= 12h EST) → Montréal prend",
+            "Montréal 12h–21h EST → passation 21h EST (= 10h JST J+1) → Tokyo prend",
+            "Tokyo 10h–19h JST → passation 19h JST (= 11h CET) → Paris reprend",
+            "Chevauchement structuré 1h en début et fin de chaque pôle : la main ne part jamais en l'air"
           ],
           "ordered": false
         },
         {
           "type": "h2",
-          "content": "Notre methode Adaptive Follow-the-Sun"
+          "content": "Pourquoi ce n'est pas de la délocalisation"
         },
         {
           "type": "p",
-          "content": "Adaptive, parce qu'on ne fait pas rouler 3 equipes paralleles qui se pilent sur les pieds. On orchestre 3 cellules synchrones autour d'un meme produit, avec une seule liste de travail, un seul standard de qualite, une seule definition du Done. Les ingenieurs de Paris, Montreal et Tokyo travaillent sur le meme Git, les memes carnets de bord, les memes ADR."
-        },
-        {
-          "type": "p",
-          "content": "Le secret n'est pas dans les fuseaux horaires. Le secret est dans la passation. On a passe 4 ans a rationaliser le passage de relais entre poles - liste de verification de 12 points, video asynchrone Loom de 5 minutes maximum, tableau de bord d'etat partage, propriete tracee dans chaque PR. Quand Tokyo termine sa journee, Paris reprend exactement ou Tokyo s'est arrete. Pas de redite, pas de re-integration, pas de 'rappelle-moi le contexte'."
-        },
-        {
-          "type": "p",
-          "content": "Les 3 piliers techniques qui rendent l'Adaptive Follow-the-Sun viable - "
+          "content": "La délocalisation classique vend du jour-personne à bas coût en Inde ou aux Philippines avec un gestionnaire de projet qui traduit. Le résultat : feuille de route qui ralentit (chevauchement zéro avec la France), qualité qui se dégrade (zéro contexte client), retour de bâton conformité (RGPD, secret bancaire). Le tri-pôle Abbeal est l'inverse architectural :"
         },
         {
           "type": "list",
           "items": [
-            "Documentation comme du code - chaque decision d'architecture est versionnee, chaque carnet de bord est executable, chaque incident genere un post-mortem auto-indexe.",
-            "Observabilite partagee - tableaux de bord Grafana ou Datadog accessibles aux 3 poles, alertes acheminees vers le pole actif, pas de garde cumulee.",
-            "Developpement trunk-based + drapeaux de fonctionnalite - pas de longues branches qui divergent entre fuseaux, livraisons continues, retour arriere en 30 secondes."
+            "Pôles Tokyo / Montréal / Paris = même TJM senior (pas du bas coût)",
+            "Recrutement local par des ingénieurs (pas des chasseurs RH)",
+            "Chevauchement quotidien 1h × 2 entre pôles (vs 0 en délocalisation)",
+            "Imputabilité de bout-en-bout par pôle (vs ping-pong de billets) — 3 squads autonomes",
+            "Conformité européenne native (RGPD, ACPR, SecNumCloud) sur tous les pôles, plus Loi 25 côté Montréal"
           ],
           "ordered": false
         },
         {
           "type": "h2",
-          "content": "Comment ca marche concretement (passation aux 8h)"
+          "content": "Comment ça fonctionne concrètement — 5 piliers"
+        },
+        {
+          "type": "h3",
+          "content": "1. Passation écrite, pas orale"
         },
         {
           "type": "p",
-          "content": "Une journee type sur un produit Follow-the-Sun ressemble a ceci. Les heures sont en CET, mais la mecanique est la meme peu importe quel pole demarre."
+          "content": "Chaque fin de journée, le pôle partant écrit un état des lieux : 3 lignes par billet en cours, blocages identifiés, prochaine action attendue. Pas de réunion de passage — le contexte tient dans un commentaire de billet lisible en 90 secondes. Le pôle entrant lit avant le café."
+        },
+        {
+          "type": "h3",
+          "content": "2. Chevauchement sacré — 1h × 2 par jour"
+        },
+        {
+          "type": "p",
+          "content": "Les fenêtres de chevauchement (Paris 17h-18h ↔ Montréal 11h-12h, Tokyo 18h-19h ↔ Paris 10h-11h) sont sanctuarisées : aucune réunion interne ne s'y prend, réservé à la passation active et aux questions client en synchrone. Si on n'a rien à dire pendant le chevauchement, on l'occupe par de la révision de PR."
+        },
+        {
+          "type": "h3",
+          "content": "3. Taille de billet calibrée"
+        },
+        {
+          "type": "p",
+          "content": "Un billet doit pouvoir être complété ou explicitement passé en chevauchement. Si un billet dépasse 2 jours-personne, on le découpe. Pas pour des raisons agiles abstraites — pour que le contexte tienne dans une passation écrite."
+        },
+        {
+          "type": "h3",
+          "content": "4. Imputabilité par fuseau"
+        },
+        {
+          "type": "p",
+          "content": "Chaque squad de pôle porte la responsabilité technique d'un domaine fonctionnel (ex : Paris = backend paiement, Montréal = ingestion de données, Tokyo = API mobile). Ça évite le syndrome \"qui a touché à quoi\" qui détruit la délocalisation."
+        },
+        {
+          "type": "h3",
+          "content": "5. Exécution complète locale par pôle"
+        },
+        {
+          "type": "p",
+          "content": "Chaque pôle doit pouvoir faire tourner l'environnement complet localement (docker-compose ou équivalent). Pas de dépendance critique sur une pile qui ne tourne qu'à Paris. C'est ce qui fait que Tokyo peut livrer un correctif prod à 3h du matin parisien sans réveiller personne."
+        },
+        {
+          "type": "h2",
+          "content": "Cas d'usage : ce qui tourne en production"
+        },
+        {
+          "type": "p",
+          "content": "Trois exemples concrets, extraits de cas clients déjà déployés :"
         },
         {
           "type": "list",
           "items": [
-            "08h00 CET - Paris ouvre. Lecture de la passation de Tokyo (Loom + tableau de bord). Reprise de la liste de travail la ou Tokyo l'a laissee.",
-            "12h00 CET - Synchro de 15 min Paris-Montreal (Montreal vient d'ouvrir a 7h locale).",
-            "16h00 CET - Paris passe le flambeau a Montreal via passation structuree. Loom + liste de verification. Paris ferme.",
-            "20h00 CET - Montreal continue, Tokyo se prepare a ouvrir (5h locale Tokyo).",
-            "00h00 CET - Montreal passe le flambeau a Tokyo. Tokyo prend le relais sur incidents et fonctionnalites prioritaires.",
-            "08h00 CET - Tokyo passe le flambeau a Paris. Boucle bouclee."
-          ],
-          "ordered": true
-        },
-        {
-          "type": "callout",
-          "tone": "teal",
-          "content": "Le mythe a casser - le Follow-the-Sun n'est pas une question de fuseaux horaires. C'est une question de discipline de passation. Sans processus ecrit, sans propriete tracee, sans documentation executable, 3 poles ne livrent pas plus vite qu'un seul. Ils livrent 3 fois plus de bogues."
-        },
-        {
-          "type": "h2",
-          "content": "La preuve - 6 ans de Follow-the-Sun chez Le Monde"
-        },
-        {
-          "type": "p",
-          "content": "Le Monde nous fait confiance depuis 6 ans sur sa pile data et insights. La mission a demarre a Paris, integree dans l'equipe Insights du journal. En 2023, l'ingenieur referent - Alexandre L. - a demenage a Tokyo. La mission n'a pas bouge. Au contraire, elle a gagne en couverture."
-        },
-        {
-          "type": "p",
-          "content": "Aujourd'hui, Le Monde beneficie d'une presence active sur la plage 5h-22h CET. Quand un incident editorial pete a 6h du matin a Paris pendant un direct politique, Tokyo est encore en plein apres-midi et declenche le correctif avant que Paris ait fini son cafe. C'est le seul Follow-the-Sun en prod que je connais sur un media francais de cette envergure. Et ca tient depuis 6 ans."
-        },
-        {
-          "type": "h2",
-          "content": "Pourquoi 3 poles et pas 2 ou 4"
-        },
-        {
-          "type": "p",
-          "content": "Question legitime, on nous la pose a chaque appel d'offres. La reponse est mathematique avant d'etre strategique."
-        },
-        {
-          "type": "list",
-          "items": [
-            "2 poles (Paris-Tokyo ou Paris-Montreal) - tu couvres 16h par jour, tu laisses un trou de 8h. Pas de Follow-the-Sun, juste de la journee allongee.",
-            "3 poles (Paris-Montreal-Tokyo) - tu couvres 24h, chaque pole travaille 8h, chaque passation est synchrone (chevauchement de 1 a 2h entre poles voisins). Le sweet spot.",
-            "4 poles et plus - chaque passation ajoute du bruit, du retravail, de la dilution de contexte. Au-dela de 3, le cout de coordination depasse le gain de couverture."
-          ],
-          "ordered": false
-        },
-        {
-          "type": "p",
-          "content": "Paris, Montreal, Tokyo - ce n'est pas un choix geographique romantique. C'est le triangle qui maximise la couverture horaire avec le minimum de friction culturelle. 3 langues de travail (FR, EN, JP), 3 cultures de revue de code, 1 standard commun."
-        },
-        {
-          "type": "h2",
-          "content": "Ce qu'on evite (anti-patrons)"
-        },
-        {
-          "type": "list",
-          "items": [
-            "La garde cumulee - jamais. Si tu fais du Follow-the-Sun pour epargner les gardes et que tes ingenieurs sont quand meme appeles la nuit, tu n'as rien gagne.",
-            "La passation vocale non documentee - le 'je t'explique vite fait en visio' ne passe pas l'epreuve du roulement de personnel. Tout passe par Loom + tableau de bord.",
-            "Les 3 listes de travail paralleles - 1 seule liste, 1 seule definition du Done, 1 seul proprietaire produit. Sinon, tu as 3 mini-equipes en silo.",
-            "Le suivi du soleil mecanique - on n'envoie pas un billet a Tokyo juste parce qu'il est 18h a Paris. On envoie a Tokyo quand Tokyo est le bon pole pour le billet (competences, contexte, priorite).",
-            "La reddition de comptes a 3 voix - 1 seul charge de projet, 1 seule reddition, 1 seul interlocuteur cote client. Le client ne doit jamais 'gerer' 3 equipes."
+            "FinTech SaaS européenne — ISO 27001 livré en 9 mois (vs 18 estimés) grâce au tri-pôle. Audit DevSecOps Paris, automatisation pipelines Montréal, doc conformité Tokyo. SOC 2 enchaîné dans la foulée.",
+            "Leader commerce électronique sport — refonte PWA, +18 % conversion mobile en 6 mois. Frontal Paris, performances Lighthouse Montréal, A/B testing JP. Score Lighthouse 92 sur mobile.",
+            "Industriel japonais robotique — flotte 80 AGV ROS 2, +40 % de débit en entrepôt. Pile Rust embarqué Tokyo, Isaac Sim Paris, monitorage Montréal."
           ],
           "ordered": false
         },
         {
           "type": "callout",
           "tone": "teal",
-          "content": "Si tu operes un produit critique en Europe et que tes incidents nocturnes te coutent un ingenieur senior par annee en epuisement, on devrait se parler. Le Follow-the-Sun n'est pas pour tout le monde - mais quand ca cliche, ca change la courbe. Calendly direct, 30 minutes, sans bullshit."
+          "content": "Le Follow-the-Sun n'est pas un slogan marketing chez Abbeal — c'est l'architecture sur laquelle on a construit la compagnie depuis 2018. On a 6 ans d'apprentissages opérationnels (incidents, contournements, métriques) à partager si tu envisages d'industrialiser ce modèle chez vous."
         }
       ]
     },
     "faq": {
       "fr": [
         {
-          "q": "Comment garantir la qualite quand 3 equipes touchent au meme code ?",
-          "a": "En appliquant trunk-based development + feature flags + 1 seul Definition of Done partage. Chaque PR est revue par un ingenieur d'un autre hub avant merge - revue croisee Paris-Montreal, Montreal-Tokyo, Tokyo-Paris. Les conflits Git sont rares (branches courtes, releases continues), et chaque incident genere un post-mortem partage aux 3 hubs. Resultat mesure sur nos missions - le taux de defauts en prod est inferieur a celui d'une equipe mono-geo equivalente, parce que le code est revu par 3 cultures d'ingenierie differentes."
+          "q": "Combien de temps pour démarrer un engagement Follow-the-Sun ?",
+          "a": "Le premier sprint synchrone démarre sous 2 semaines après la signature, le temps de calibrer les overlaps, brancher les outils (Slack, GitHub, Jira/Linear) et faire le 1er pairing inter-hub. La 1ère valeur livrée tombe en semaine 3."
         },
         {
-          "q": "Quel est le surcout d'une equipe tri-geo vs mono-geo ?",
-          "a": "Sur le TJM facial, comptez +15 a +25% par rapport a une equipe parisienne pure. Sur le TCO reel (incidents + burn-out + retravail + delais), c'est -30 a -40% sur 12 mois. La difference vient du MTTR divise par 3 sur les incidents nocturnes, de la suppression des astreintes coutuses, et du time-to-market accelere. On peut chiffrer precisement sur ton cas - 30 minutes de Calendly suffisent."
+          "q": "Comment se gère la qualité quand 3 équipes touchent au même code ?",
+          "a": "Une seule trunk, ownership de domaines fonctionnels stricts par hub (pas de zone partagée éditable par 3 hubs), code review obligatoire entre hubs en overlap window. CI/CD avec quality gates identiques sur les 3 hubs. Aucun hub ne merge sans validation cross-hub."
         },
         {
-          "q": "Les fuseaux horaires, c'est pas un cauchemar pour la coordination ?",
-          "a": "Si tu coordonnes mal, oui. Si tu coordonnes bien, non. Le piege c'est de vouloir tout synchroniser - reunions tri-hub a 8h Paris / 15h Tokyo / 2h Montreal, ca tue tout le monde. Notre regle - 1 seule reunion synchrone tri-hub par semaine (45 min), tout le reste asynchrone via Loom + Notion + dashboard. Les standups quotidiens sont par hub, le suivi global est ecrit. Resultat - moins de reunions qu'une equipe mono-geo, paradoxalement."
+          "q": "Quel onboarding côté client ?",
+          "a": "Une session de 2h avec ton équipe pour calibrer les fenêtres d'overlap qui marchent pour vous (souvent : votre équipe rejoint le créneau Paris-Montréal le matin, et Paris-Tokyo le soir). Puis un kick-off technique sur la stack et les conventions."
         },
         {
-          "q": "Vous operez sur quelles stacks tech ?",
-          "a": "Web et Mobile (React, Next.js, Vue, Swift, Kotlin, React Native), Data et IA (Python, Databricks, Snowflake, dbt, MLflow, LangChain, LlamaIndex), Cloud et Fiabilite (AWS, GCP, Azure, Kubernetes, Terraform, Datadog, Grafana), Embarque et Robotique (C/C++, Rust, ROS, FreeRTOS). Le Follow-the-Sun marche sur n'importe quelle stack du moment que la documentation est versionnee et l'observabilite est partagee. On adapte au contexte client, pas l'inverse."
+          "q": "Comment se gèrent les escalades urgentes hors fenêtres ?",
+          "a": "Un on-call rotatif inter-hub couvre les 24h. Pour les incidents prod critiques, le hub actif au moment de la détection traite, escalade au tech lead du hub propriétaire si nécessaire. Le SLA est garanti hub-by-hub, pas par individu."
         },
         {
-          "q": "Comment commencer une mission Follow-the-Sun ?",
-          "a": "On ne commence jamais a 3 hubs d'un coup, c'est une connerie. La sequence eprouvee - Mois 1-2, on demarre mono-hub (Paris generalement), on industrialise la documentation et l'observabilite. Mois 3, on ajoute Montreal ou Tokyo selon ta priorite (couverture US-Asie). Mois 4-6, on bascule sur 3 hubs synchrones avec handover formalise. Le premier handover entre 2 hubs casse 80% des sceptiques internes. Calendly direct - calendly.com/d/csr7-3vm-vhw/meeting-abbeal."
+          "q": "Quel SLA proposez-vous ?",
+          "a": "SLA standard : réponse < 1h en heures ouvrées de l'un des 3 hubs (= couverture 24/5), résolution P1 sous 4h. Variantes négociables : 24/7 strict avec on-call dédié, ou 24/5 + astreinte week-end."
         },
         {
-          "q": "Et si mon produit n'est pas critique 24/7, ca vaut le coup ?",
-          "a": "Honnetement - non. Le Follow-the-Sun a un sens si tu as au moins l'un de ces 3 marqueurs - audience internationale (US + Europe + Asie), incidents nocturnes recurrents qui couttent cher, ou time-to-market qui est ton avantage competitif. Si tu fais un SaaS B2B FR avec 9-18h de trafic utile, reste mono-geo, on te dira la verite avant de signer. Notre interet long terme, c'est que tu ne gaspilles pas ton budget."
+          "q": "Quel ROI typique observé chez vos clients ?",
+          "a": "Le KPI le plus reproductible : –40 % de cycle time entre commit et prod (mesuré sur 12 engagements). Sur les missions au forfait, on observe –30 % de coût total comparé à un dispositif mono-hub à effectif équivalent (overlap moins coûteux qu'on le pense, multitasking évité)."
         }
       ],
       "en": [
         {
-          "q": "How do you guarantee quality when 3 teams touch the same code?",
-          "a": "Trunk-based development + feature flags + one shared Definition of Done. Every PR gets reviewed by an engineer from another hub before merge - cross-review Paris-Montreal, Montreal-Tokyo, Tokyo-Paris. Git conflicts are rare (short branches, continuous releases), and every incident generates a postmortem shared across the 3 hubs. Measured on our missions - production defect rate sits lower than an equivalent mono-geo team, because code gets reviewed by 3 different engineering cultures."
+          "q": "How long to start a Follow-the-Sun engagement?",
+          "a": "First synchronous sprint kicks off within 2 weeks of signing — time to calibrate overlaps, wire up tools (Slack, GitHub, Jira/Linear), do the first inter-hub pairing. First value delivered week 3."
         },
         {
-          "q": "What's the cost premium of a tri-geo team vs mono-geo?",
-          "a": "On day-rate alone, expect +15 to +25% vs a pure Paris team. On real TCO (incidents + burnout + rework + delays), it's -30 to -40% over 12 months. The delta comes from MTTR divided by 3 on nightly incidents, eliminated on-call costs, and accelerated time-to-market. We can model it precisely on your case - 30 min of Calendly is enough."
+          "q": "How is quality managed when 3 teams touch the same code?",
+          "a": "Single trunk, strict functional-domain ownership per hub (no shared zone editable by 3 hubs), mandatory code review between hubs in overlap window. CI/CD with identical quality gates across the 3 hubs. No hub merges without cross-hub validation."
         },
         {
-          "q": "Aren't timezones a coordination nightmare?",
-          "a": "If you coordinate badly, yes. If you coordinate well, no. The trap is wanting to sync everything - tri-hub meetings at 8am Paris / 3pm Tokyo / 2am Montreal kill everyone. Our rule - 1 synchronous tri-hub meeting per week (45 min), everything else async via Loom + Notion + dashboard. Daily standups are per-hub, global tracking is written. Result - paradoxically fewer meetings than a mono-geo team."
+          "q": "What does client onboarding look like?",
+          "a": "A 2-hour session with your team to calibrate the overlap windows that work for you (often: your team joins the Paris-Montréal slot in the morning, and Paris-Tokyo in the evening). Then a technical kick-off on stack and conventions."
         },
         {
-          "q": "What tech stacks do you operate on?",
-          "a": "Web and Mobile (React, Next.js, Vue, Swift, Kotlin, React Native), Data and AI (Python, Databricks, Snowflake, dbt, MLflow, LangChain, LlamaIndex), Cloud and Reliability (AWS, GCP, Azure, Kubernetes, Terraform, Datadog, Grafana), Embedded and Robotics (C/C++, Rust, ROS, FreeRTOS). Follow-the-Sun works on any stack as long as documentation is versioned and observability is shared. We adapt to the client context, not the other way around."
+          "q": "How are urgent escalations handled outside windows?",
+          "a": "A rotating inter-hub on-call covers the 24h. For critical prod incidents, the hub active at detection time handles, escalates to the owning hub's tech lead if needed. SLA is guaranteed hub-by-hub, not by individual."
         },
         {
-          "q": "How do you start a Follow-the-Sun mission?",
-          "a": "You never start at 3 hubs at once, that's amateur hour. The proven sequence - Month 1-2, we start mono-hub (usually Paris), industrializing docs and observability. Month 3, we add Montreal or Tokyo depending on your priority (US or Asia coverage). Month 4-6, we switch to 3 synced hubs with formalized handover. The first handover between 2 hubs converts 80% of internal skeptics. Direct Calendly - calendly.com/d/csr7-3vm-vhw/meeting-abbeal."
+          "q": "What SLA do you offer?",
+          "a": "Standard SLA: response < 1h in business hours of any of the 3 hubs (= 24/5 coverage), P1 resolution within 4h. Negotiable variants: strict 24/7 with dedicated on-call, or 24/5 + weekend on-call."
         },
         {
-          "q": "What if my product isn't critical 24/7, is it worth it?",
-          "a": "Honestly - no. Follow-the-Sun makes sense if you have at least one of these 3 markers - international audience (US + Europe + Asia), recurring nightly incidents that cost real money, or time-to-market as your competitive edge. If you run a French B2B SaaS with 9-6pm useful traffic, stay mono-geo, we'll tell you the truth before signing. Our long-term interest is that you don't waste your budget."
+          "q": "What typical ROI do you observe in client engagements?",
+          "a": "Most reproducible KPI: –40% cycle time from commit to prod (measured across 12 engagements). On fixed-price missions, we observe –30% total cost vs an equivalent-headcount mono-hub setup (overlap less expensive than expected, multitasking avoided)."
         }
       ],
       "ja": [
         {
-          "q": "3チームが同じコードを触るとき、どう品質を保証するのか?",
-          "a": "トランクベース開発 + フィーチャーフラグ + 共有された1つのDefinition of Done。各PRはマージ前に別拠点のエンジニアがレビュー - パリ-モントリオール、モントリオール-東京、東京-パリのクロスレビュー。Gitコンフリクトは稀(短いブランチ、継続的リリース)、各インシデントは3拠点で共有されるポストモーテムを生成する。我々のミッションで測定された結果 - 同等の単一拠点チームより本番障害率が低い。3つの異なるエンジニアリング文化がコードをレビューするからだ。"
+          "q": "Follow-the-Sunエンゲージメントを開始するのにどのくらいかかりますか？",
+          "a": "最初の同期スプリントは契約後2週間以内に開始 — オーバーラップを調整し、ツール（Slack、GitHub、Jira/Linear）を接続し、最初の拠点間ペアリングを行う時間。最初の価値提供は週3。"
         },
         {
-          "q": "単一拠点と比べた3拠点チームの追加コストは?",
-          "a": "表面的な日次レートでは、純粋なパリチームに対して+15-25%。実際のTCO(インシデント + バーンアウト + 手戻り + 遅延)では、12ヶ月で-30-40%。差分は、夜間インシデントのMTTRが3分の1になること、コストのかかるオンコールの撤廃、市場投入の加速から生まれる。あなたのケースで正確にモデル化できる - 30分のCalendlyで十分だ。"
+          "q": "3つのチームが同じコードに触れるとき、品質はどう管理されますか？",
+          "a": "単一トランク、拠点ごとの厳格な機能ドメインオーナーシップ（3拠点が編集可能な共有ゾーンなし）、オーバーラップ枠での拠点間コードレビュー必須。3拠点で同一の品質ゲートを持つCI/CD。拠点間検証なしにマージする拠点はない。"
         },
         {
-          "q": "タイムゾーンは調整の悪夢ではないのか?",
-          "a": "調整が下手ならイエス。調整がうまければノー。罠は全部を同期させようとすること - パリ8時/東京15時/モントリオール2時の3拠点会議は全員を殺す。我々のルール - 同期的な3拠点会議は週1回(45分)、それ以外はすべて非同期(Loom + Notion + ダッシュボード)。日次スタンドアップは拠点別、全体トラッキングは文書化。結果 - 逆説的に、単一拠点チームより会議が少ない。"
+          "q": "クライアントオンボーディングはどんな感じですか？",
+          "a": "あなたのチームに合うオーバーラップ枠を調整するための2時間セッション（多くの場合：あなたのチームは朝のパリ-モントリオール枠、夕方のパリ-東京枠に参加）。次にスタックと規約に関する技術キックオフ。"
         },
         {
-          "q": "どのような技術スタックで運用しているか?",
-          "a": "WebとモバイルReact, Next.js, Vue, Swift, Kotlin, React Native)、データとAI(Python, Databricks, Snowflake, dbt, MLflow, LangChain, LlamaIndex)、クラウドと信頼性(AWS, GCP, Azure, Kubernetes, Terraform, Datadog, Grafana)、組み込みとロボティクス(C/C++, Rust, ROS, FreeRTOS)。ドキュメントがバージョン管理され、オブザーバビリティが共有されている限り、Follow-the-Sunはどのスタックでも動く。我々がクライアントの文脈に適応する、その逆ではない。"
+          "q": "緊急エスカレーションは枠外でどう処理されますか？",
+          "a": "ローテーション拠点間オンコールが24時間カバー。クリティカル本番インシデントの場合、検出時にアクティブな拠点が処理し、必要に応じて所有拠点のテックリードにエスカレーション。SLAは個人ではなく拠点ごとに保証。"
         },
         {
-          "q": "Follow-the-Sunミッションをどう始めるか?",
-          "a": "いきなり3拠点で始めるのは素人仕事。実証されたシーケンス - 1-2ヶ月目、単一拠点(通常パリ)で開始、ドキュメントとオブザーバビリティを工業化。3ヶ月目、優先度(米国カバレッジかアジアカバレッジか)に応じてモントリオールまたは東京を追加。4-6ヶ月目、形式化されたハンドオーバーで3拠点同期に切り替え。2拠点間の最初のハンドオーバーが社内懐疑派の80%を改宗させる。Calendly直リンク - calendly.com/d/csr7-3vm-vhw/meeting-abbeal。"
+          "q": "どのSLAを提供しますか？",
+          "a": "標準SLA：3拠点いずれかの営業時間内で1時間未満の応答（= 24/5カバレッジ）、P1解決4時間以内。交渉可能なバリエーション：専用オンコール付き厳格24/7、または24/5+週末オンコール。"
         },
         {
-          "q": "私のプロダクトは24/7クリティカルではないが、それでも価値はあるか?",
-          "a": "正直に言うと - ノー。Follow-the-Sunは次の3つのマーカーのうち少なくとも1つがある場合に意味を持つ - 国際的なオーディエンス(米国 + 欧州 + アジア)、本当のお金がかかる夜間の繰り返しインシデント、または競争優位としての市場投入速度。9時から18時の有効トラフィックの日本国内向けB2B SaaSなら、単一拠点に留まれ。契約前に真実を伝える。我々の長期的な利益は、あなたが予算を無駄にしないことだ。"
+          "q": "クライアントエンゲージメントで観察される典型的なROIは？",
+          "a": "最も再現可能なKPI：コミットから本番までのサイクルタイム-40%（12エンゲージメントで測定）。固定価格ミッションでは、同等人員のモノ拠点セットアップ対比-30%の総コストを観察（オーバーラップは予想ほど高価ではない、マルチタスク回避）。"
         }
       ],
       "fr-ca": [
         {
-          "q": "Comment garantir la qualite quand 3 equipes touchent au meme code ?",
-          "a": "En appliquant le developpement trunk-based + drapeaux de fonctionnalite + 1 seule Definition of Done partagee. Chaque PR est revisee par un ingenieur d'un autre pole avant fusion - revision croisee Paris-Montreal, Montreal-Tokyo, Tokyo-Paris. Les conflits Git sont rares (branches courtes, livraisons continues), et chaque incident genere un post-mortem partage aux 3 poles. Resultat mesure sur nos missions - le taux de defauts en prod est inferieur a celui d'une equipe mono-geo equivalente, parce que le code est revu par 3 cultures d'ingenierie differentes."
+          "q": "Combien de temps pour démarrer un mandat Follow-the-Sun ?",
+          "a": "Le premier sprint synchrone démarre sous 2 semaines après la signature, le temps de calibrer les chevauchements, brancher les outils (Slack, GitHub, Jira/Linear) et faire le 1er pairage inter-pôles. La 1ère valeur livrée tombe en semaine 3."
         },
         {
-          "q": "Quel est le surcout d'une equipe tri-geo vs mono-geo ?",
-          "a": "Sur le taux journalier facial, comptez +15 a +25% par rapport a une equipe parisienne pure. Sur le cout total reel (incidents + epuisement + retravail + delais), c'est -30 a -40% sur 12 mois. La difference vient du MTTR divise par 3 sur les incidents nocturnes, de la suppression des gardes couteuses, et de la mise en marche acceleree. On peut chiffrer precisement sur ton cas - 30 minutes de Calendly suffisent."
+          "q": "Comment se gère la qualité quand 3 équipes touchent au même code ?",
+          "a": "Une seule trunk, imputabilité de domaines fonctionnels stricte par pôle (pas de zone partagée éditable par 3 pôles), révision de code obligatoire entre pôles en fenêtre de chevauchement. CI/CD avec quality gates identiques sur les 3 pôles. Aucun pôle ne fusionne sans validation cross-pôle."
         },
         {
-          "q": "Les fuseaux horaires, c'est pas un cauchemar pour la coordination ?",
-          "a": "Si tu coordonnes mal, oui. Si tu coordonnes bien, non. Le piege c'est de vouloir tout synchroniser - rencontres tri-poles a 8h Paris / 15h Tokyo / 2h Montreal, ca tue tout le monde. Notre regle - 1 seule rencontre synchrone tri-pole par semaine (45 min), tout le reste asynchrone via Loom + Notion + tableau de bord. Les melees quotidiennes sont par pole, le suivi global est ecrit. Resultat - moins de rencontres qu'une equipe mono-geo, paradoxalement."
+          "q": "Quel onboarding côté client ?",
+          "a": "Une session de 2h avec ton équipe pour calibrer les fenêtres de chevauchement qui marchent pour vous (souvent : votre équipe rejoint le créneau Paris-Montréal le matin, et Paris-Tokyo le soir). Puis un kick-off technique sur la pile et les conventions."
         },
         {
-          "q": "Vous operez sur quelles piles tech ?",
-          "a": "Web et mobile (React, Next.js, Vue, Swift, Kotlin, React Native), donnees et IA (Python, Databricks, Snowflake, dbt, MLflow, LangChain, LlamaIndex), infonuagique et fiabilite (AWS, GCP, Azure, Kubernetes, Terraform, Datadog, Grafana), embarque et robotique (C/C++, Rust, ROS, FreeRTOS). Le Follow-the-Sun marche sur n'importe quelle pile du moment que la documentation est versionnee et l'observabilite est partagee. On s'adapte au contexte client, pas l'inverse."
+          "q": "Comment se gèrent les escalades urgentes hors fenêtres ?",
+          "a": "Un on-call rotatif inter-pôles couvre les 24h. Pour les incidents prod critiques, le pôle actif au moment de la détection traite, escalade au tech lead du pôle propriétaire si nécessaire. Le SLA est garanti pôle-par-pôle, pas par individu."
         },
         {
-          "q": "Comment commencer une mission Follow-the-Sun ?",
-          "a": "On ne commence jamais a 3 poles d'un coup, c'est de l'amateurisme. La sequence eprouvee - Mois 1-2, on demarre mono-pole (Paris generalement), on industrialise la documentation et l'observabilite. Mois 3, on ajoute Montreal ou Tokyo selon ta priorite (couverture US ou Asie). Mois 4-6, on bascule sur 3 poles synchrones avec passation formalisee. La premiere passation entre 2 poles convertit 80% des sceptiques internes. Calendly direct - calendly.com/d/csr7-3vm-vhw/meeting-abbeal."
+          "q": "Quel SLA proposez-vous ?",
+          "a": "SLA standard : réponse < 1h en heures ouvrées de l'un des 3 pôles (= couverture 24/5), résolution P1 sous 4h. Variantes négociables : 24/7 strict avec on-call dédié, ou 24/5 + astreinte fin de semaine."
         },
         {
-          "q": "Et si mon produit n'est pas critique 24/7, ca vaut la peine ?",
-          "a": "Honnetement - non. Le Follow-the-Sun a du sens si tu as au moins un de ces 3 marqueurs - auditoire international (US + Europe + Asie), incidents nocturnes recurrents qui coutent cher, ou mise en marche qui est ton avantage concurrentiel. Si tu fais un SaaS B2B francophone avec 9h-18h de trafic utile, reste mono-pole, on va te dire la verite avant de signer. Notre interet long terme, c'est que tu ne gaspilles pas ton budget."
+          "q": "Quel ROI typique observé chez vos clients ?",
+          "a": "Le KPI le plus reproductible : –40 % de temps de cycle entre commit et production (mesuré sur 12 mandats). Sur les missions au forfait, on observe –30 % de coût total comparé à un dispositif mono-pôle à effectif équivalent (chevauchement moins coûteux qu'on le pense, multitâche évité)."
         }
       ]
     }

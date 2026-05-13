@@ -39,6 +39,36 @@ type BodiesMap = Record<
 >;
 const BODIES = bodies as BodiesMap;
 
+/** Schema.org additional types — opt-in per page selon le contexte SEO.
+ *  La page route émet automatiquement Service + FAQPage + BreadcrumbList ;
+ *  ces flags ajoutent des types secondaires ciblés (LocalBusiness pour la
+ *  page hub Tokyo, EmploymentAgency pour la page recrutement intl). */
+export type ExtraSchema = {
+  /** LocalBusiness (sub-type ProfessionalService) — utile pour les pages
+   *  qui mentionnent une adresse physique opérée par Abbeal. Ex : page
+   *  "ESN tri-géo Japon" déclare le bureau Higashi-Azabu Minato-ku. */
+  localBusiness?: {
+    name: string;
+    streetAddress: string;
+    addressLocality: string;
+    postalCode: string;
+    addressCountry: string;
+    /** Coordonnées GPS pour Google Maps Knowledge Panel. */
+    geo?: { latitude: number; longitude: number };
+    telephone?: string;
+  };
+  /** EmploymentAgency — utile pour les pages dont le service est le
+   *  recrutement permanent (vs staffing). Ex : page "Recrutement tech
+   *  international FR/CA/JP". */
+  employmentAgency?: {
+    name: string;
+    /** Lieux où l'agence opère. ISO country codes "FR" / "CA" / "JP". */
+    areaServed: string[];
+    /** Description courte du service de recrutement. */
+    description?: string;
+  };
+};
+
 export type LandingPage = {
   slug: string;
   /** Mots-clés cibles SEO non-branded (info éditoriale, pas affiché). */
@@ -57,7 +87,23 @@ export type LandingPage = {
   body: Translatable<ArticleBlock[]>;
   /** FAQ structurée — rendue en HTML + Schema.org FAQPage JSON-LD. */
   faq: Translatable<FAQ[]>;
+  /** Schemas Schema.org additionnels (LocalBusiness, EmploymentAgency).
+   *  Les schemas de base (Service, FAQPage, BreadcrumbList) sont émis
+   *  automatiquement par le route handler. */
+  extraSchema?: ExtraSchema;
 };
+
+/** Adresse Tokyo office Abbeal — utilisée par LocalBusiness sur la page
+ *  esn-tri-geo-japon. PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku.
+ *  Coordonnées GPS validées Google Maps (35.66°N, 139.74°E ± 50m). */
+const TOKYO_OFFICE = {
+  name: "Abbeal Tokyo — Hub Engineering Japon",
+  streetAddress: "PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku",
+  addressLocality: "Tokyo",
+  postalCode: "106-0044",
+  addressCountry: "JP",
+  geo: { latitude: 35.660661, longitude: 139.741075 },
+} as const;
 
 export const landingPages: LandingPage[] = [
   // ========================================================================
@@ -82,22 +128,22 @@ export const landingPages: LandingPage[] = [
       "fr-ca": "// MÉTHODE",
     },
     h1: {
-      fr: "Follow-the-Sun Delivery — 3 hubs synchrones livrent 24/7 sans burn-out.",
-      en: "Follow-the-Sun Delivery — 3 synced hubs ship 24/7 without burning out.",
-      ja: "Follow-the-Sun デリバリー — 3拠点同期で24/7納品、燃え尽きなし。",
-      "fr-ca": "Follow-the-Sun Delivery — 3 pôles synchrones livrent 24/7 sans épuisement.",
+      fr: "Follow-the-sun delivery : vos roadmaps avancent pendant que vous dormez.",
+      en: "Follow-the-Sun Software Delivery: 24/7 Engineering Across 3 Hubs.",
+      ja: "フォロー・ザ・サン開発：あなたが寝ている間にロードマップが進む。",
+      "fr-ca": "Follow-the-sun delivery : vos feuilles de route avancent pendant que vous dormez.",
     },
     subtitle: {
-      fr: "Comment Abbeal opère vraiment le delivery 24/7 sur Paris, Montréal et Tokyo. Pas un slogan : une méthode chiffrée, testée sur 6 ans de mission active chez Le Monde, et reproductible chez vous.",
-      en: "How Abbeal actually runs 24/7 delivery across Paris, Montréal and Tokyo. Not a slogan: a measurable method, battle-tested on a 6-year ongoing engagement at Le Monde, reproducible at your scale.",
-      ja: "Abbealがパリ・モントリオール・東京で24/7デリバリーを実際にどう運用しているか。スローガンではなく、ル・モンドの6年間継続中のエンゲージメントで実証済みの定量的な方法論、貴社規模で再現可能。",
-      "fr-ca": "Comment Abbeal opère vraiment la livraison 24/7 sur Paris, Montréal et Tokyo. Pas un slogan : une méthode chiffrée, testée sur 6 ans de mandat actif au Monde, reproductible chez vous.",
+      fr: "Comment Abbeal opère vraiment 24/7 entre Paris, Montréal et Tokyo. Handoffs structurés, overlap maîtrisé, zéro dette technique. Un modèle tri-géo qui transforme les fuseaux horaires en avantage compétitif, pas en cauchemar opérationnel.",
+      en: "How Abbeal actually runs 24/7 across Paris, Montréal and Tokyo. Structured handoffs, mastered overlap, zero technical debt. A tri-geo model that turns time zones into a competitive edge, not an operational nightmare.",
+      ja: "Abbealがパリ・モントリオール・東京の3拠点で運営する24/7開発モデル。構造化されたハンドオフ、計算された重なり、技術的負債ゼロ。タイムゾーンを競争優位に変える、運用の悪夢ではなく。",
+      "fr-ca": "Comment Abbeal opère vraiment 24/7 entre Paris, Montréal et Tokyo. Passations structurées, chevauchement maîtrisé, zéro dette technique. Un modèle tri-pôle qui transforme les fuseaux horaires en avantage compétitif, pas en cauchemar opérationnel.",
     },
     metaDescription: {
-      fr: "Follow-the-Sun delivery : 3 hubs synchrones (Paris · Montréal · Tokyo) qui livrent 24/7 sans burn-out. Méthode Abbeal, chiffrée, testée 6 ans en prod.",
-      en: "Follow-the-Sun delivery: 3 synced hubs (Paris · Montréal · Tokyo) shipping 24/7 without burnout. Abbeal's measurable method, battle-tested for 6 years in production.",
-      ja: "Follow-the-Sun デリバリー：3つの同期拠点（パリ・モントリオール・東京）が24/7納品、燃え尽きなし。Abbealの定量的方法論、6年間の本番実績。",
-      "fr-ca": "Follow-the-Sun delivery : 3 pôles synchrones (Paris · Montréal · Tokyo) qui livrent 24/7 sans épuisement. Méthode Abbeal, chiffrée, testée 6 ans en production.",
+      fr: "Comment Abbeal opère 24/7 entre Paris, Montréal et Tokyo. Handoffs structurés, overlap maîtrisé, zéro dette. Un modèle tri-géo qui transforme les fuseaux en avantage compétitif.",
+      en: "How Abbeal runs 24/7 across Paris, Montréal and Tokyo. Structured handoffs, mastered overlap, no debt. A tri-geo model that turns time zones into a competitive edge.",
+      ja: "Abbealがパリ・モントリオール・東京の3拠点で運営する24/7開発モデル。構造化されたハンドオフ、計算された重なり、技術的負債ゼロ。タイムゾーンを競争優位に変える。",
+      "fr-ca": "Comment Abbeal opère 24/7 entre Paris, Montréal et Tokyo. Passations structurées, chevauchement maîtrisé, zéro dette. Un modèle tri-pôle qui transforme les fuseaux en avantage compétitif.",
     },
     body: {
       fr: BODIES["follow-the-sun-delivery"]?.body?.fr ?? [],
