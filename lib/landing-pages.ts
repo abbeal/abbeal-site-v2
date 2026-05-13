@@ -372,6 +372,67 @@ export const landingPages: LandingPage[] = [
       localBusiness: TOKYO_OFFICE,
     },
   },
+  // ========================================================================
+  // 6. recrutement-tech-international — Page signature W20 QW#5
+  //    Cible "recrutement tech international" + "international tech hiring".
+  //    Schema additionnel : EmploymentAgency (areaServed FR/CA/JP).
+  // ========================================================================
+  {
+    slug: "recrutement-tech-international",
+    keywords: [
+      "recrutement tech international",
+      "international tech recruitment",
+      "cabinet recrutement tech multi-pays",
+      "international engineering hiring",
+      "tech recruitment France Canada Japan",
+      "senior tech hiring 3 countries",
+    ],
+    relatedCaseSlugs: ["paraito", "neobrain-pwc-skillbot", "thegreenbow"],
+    relatedArticleSlug: "mobbeal-playbook-garde-ton-job",
+    tape: {
+      fr: "// RECRUTEMENT",
+      en: "// RECRUITMENT",
+      ja: "// 採用",
+      "fr-ca": "// RECRUTEMENT",
+    },
+    h1: {
+      fr: "Recruter des seniors tech sur 3 pays. Le bon profil, pas le rapide.",
+      en: "Hire senior tech across 3 countries. The right fit, not the fast hire.",
+      ja: "3カ国でシニアテックを採用。早い採用ではなく、適切なフィット。",
+      "fr-ca": "Recruter des seniors techno sur 3 pays. Le bon profil, pas le rapide.",
+    },
+    subtitle: {
+      fr: "Sourcing senior dans 3 pays (France, Canada, Japon). Top 1 % validé par des ingés Abbeal (pas par des RH), process court (5 étapes max), garantie 6 mois. Mobbeal pour la mobilité internationale incluse. Cabinet de recrutement tech multi-pays opéré par une ESN tri-géo.",
+      en: "Senior sourcing across 3 countries (France, Canada, Japan). Top 1% validated by Abbeal engineers (not HR recruiters), short process (5 steps max), 6-month guarantee. Mobbeal for international mobility included. Tech recruitment firm operated by a tri-geo engineering company.",
+      ja: "3カ国（フランス、カナダ、日本）でのシニアソーシング。Abbealのエンジニアによって検証されたトップ1%（人事リクルーターではない）、短いプロセス（最大5ステップ）、6ヶ月保証。国際モビリティのためのMobbeal含む。三拠点エンジニアリング会社が運営するテック採用エージェンシー。",
+      "fr-ca": "Recherche de seniors dans 3 pays (France, Canada, Japon). Top 1 % validé par des ingés Abbeal (pas par des RH), processus court (5 étapes max), garantie 6 mois. Mobbeal pour la mobilité internationale incluse. Cabinet de recrutement techno multi-pays opéré par une compagnie d'ingénierie tri-pôle.",
+    },
+    metaDescription: {
+      fr: "Sourcing senior dans 3 pays. Top 1 % validé par des ingés Abbeal, process court (5 étapes max), Mobbeal pour la mobilité internationale. Cabinet de recrutement tech multi-pays par ESN tri-géo.",
+      en: "Senior sourcing across 3 countries. Top 1% validated by Abbeal engineers, short process (5 steps max), Mobbeal for international mobility. Tech recruitment firm by tri-geo engineering company.",
+      ja: "3カ国でのシニアソーシング。Abbealのエンジニアによって検証されたトップ1%、短いプロセス（最大5ステップ）、国際モビリティのためのMobbeal。三拠点エンジニアリング会社による多国籍テック採用エージェンシー。",
+      "fr-ca": "Recherche de seniors dans 3 pays. Top 1 % validé par des ingés Abbeal, processus court (5 étapes max), Mobbeal pour la mobilité internationale. Cabinet de recrutement techno multi-pays par compagnie d'ingénierie tri-pôle.",
+    },
+    body: {
+      fr: BODIES["recrutement-tech-international"]?.body?.fr ?? [],
+      en: BODIES["recrutement-tech-international"]?.body?.en,
+      ja: BODIES["recrutement-tech-international"]?.body?.ja,
+      "fr-ca": BODIES["recrutement-tech-international"]?.body?.["fr-ca"],
+    },
+    faq: {
+      fr: BODIES["recrutement-tech-international"]?.faq?.fr ?? [],
+      en: BODIES["recrutement-tech-international"]?.faq?.en,
+      ja: BODIES["recrutement-tech-international"]?.faq?.ja,
+      "fr-ca": BODIES["recrutement-tech-international"]?.faq?.["fr-ca"],
+    },
+    extraSchema: {
+      employmentAgency: {
+        name: "Abbeal Tech Recruitment — France · Canada · Japan",
+        areaServed: ["FR", "CA", "JP"],
+        description: "Senior tech recruitment firm with offices in Paris, Montréal and Tokyo. Engineer-led sourcing, 5-step max process, 6-month guarantee, Mobbeal international relocation programme included.",
+      },
+    },
+  },
 ];
 
 export function getLandingPage(slug: string): LandingPage | undefined {

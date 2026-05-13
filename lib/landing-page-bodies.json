@@ -2936,5 +2936,499 @@
         }
       ]
     }
+  },
+  "recrutement-tech-international": {
+    "body": {
+      "fr": [
+        {
+          "type": "h2",
+          "content": "Notre différenciateur : recrutement par ingés, pas par RH"
+        },
+        {
+          "type": "p",
+          "content": "Toutes les ESN ont des « chasseurs de têtes ». Toutes les agences de recrutement ont des « consultants RH ». Quasi aucune entité du marché tech français n'a des ingénieurs en activité qui pilotent le recrutement. C'est pourtant ce qu'on fait depuis 2015 : nos ingés seniors actifs (CTO, Lead, Architecte) font le sourcing, la pré-qualif technique et le scoring. Pas par dogme — par pragmatisme : un ingé sait reconnaître un autre ingé en 30 minutes, un chasseur RH non-tech met 3 entretiens et passe à côté 60 % du temps. La conséquence : nos shortlists arrivent en 48h max (vs 5-10 jours industrie), nos taux de transformation entretien client → offre signée tournent à 35 % (vs ~15 % marché)."
+        },
+        {
+          "type": "h2",
+          "content": "Les 3 marchés qu'on couvre"
+        },
+        {
+          "type": "h3",
+          "content": "France — Paris + grandes métropoles"
+        },
+        {
+          "type": "p",
+          "content": "Bureau Paris 54 Rue Greneta 75002 depuis 2015. Sourcing direct sur LinkedIn FR, AfterHours, Welcome to the Jungle, Hellowork. Vivier de 8000+ profils tech qualifiés au cours des 10 ans. Spécialités fortes : Senior Fullstack, AI Engineer, Cloud / DevOps, CTO de start-up, Lead Data, Tech Lead Embarqué. Couverture régionale : Paris (60 %), Lyon/Toulouse/Bordeaux (25 %), reste (15 %)."
+        },
+        {
+          "type": "h3",
+          "content": "Canada — Montréal et grandes villes"
+        },
+        {
+          "type": "p",
+          "content": "Bureau Montréal 4388 Rue Saint-Denis H2J 2L1 depuis 2023. Sourcing direct sur LinkedIn CA, Jobboom, Workopolis, plus le bouche-à-oreille de la communauté tech québécoise (où on est connus depuis 2018 via nos missions chez Cogeco, Logient, et la franco-mobilité Mobbeal). Spécialités : Senior Fullstack, AI / ML Engineer, Data Engineer, DevOps SRE, CTO de scale-up québécoise. Couverture : Montréal (75 %), Toronto (15 %), Vancouver (10 %)."
+        },
+        {
+          "type": "h3",
+          "content": "Japon — Tokyo principalement"
+        },
+        {
+          "type": "p",
+          "content": "Bureau Tokyo 1-23-5 Higashi-Azabu Minato-ku 106-0044 depuis 2018. Marché tech japonais largement fermé aux étrangers — il faut une présence physique JP et des ingés bilingues JP/EN. Sourcing direct sur LinkedIn JP, Bizreach, Wantedly. Spécialités : Senior Software Engineer bilingue JP/EN, Embedded / Robotics (proximité Toyota / Fanuc / Yaskawa / SoftBank), AI Engineer JP-fluent. Couverture : Tokyo (90 %), Osaka / Kyoto / Yokohama (10 %)."
+        },
+        {
+          "type": "h2",
+          "content": "Notre process tech court en 5 étapes max"
+        },
+        {
+          "type": "list",
+          "items": [
+            "1. Brief technique avec ton CTO ou Tech Lead (45 min). Ingé Abbeal écoute, pose des questions tech précises, repart avec un scoring grid client-fit calibré sur tes contraintes (stack, séniorité, fuseau, budget).",
+            "2. Sourcing actif sur 3 canaux (LinkedIn local, vivier interne, plateformes spécialisées du marché cible). 24-48h pour produire une shortlist de 5 profils maximum, déjà pré-qualifiés techniquement par nous.",
+            "3. Tu reçois les 5 profils + 5 mini-rapports de pré-qualif tech (forces, faiblesses, contexte motivationnel du candidat). Tu sélectionnes ceux que tu veux rencontrer.",
+            "4. Entretien client (1-2 rounds max recommandés). On organise les créneaux Calendly, on transcrit (Tactiq), on debrief avec toi sur chaque candidat en synchrone.",
+            "5. Offre + closing. On t'aide sur la négociation salariale (benchmark marché), sur le contre-offer management, sur les clauses spécifiques (clause de non-concurrence, transfert de RTT, etc.). Closing en 48h après l'offre verbale."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "h2",
+          "content": "Mobbeal : la mobilité internationale comme argument"
+        },
+        {
+          "type": "p",
+          "content": "Tu cherches un profil senior qui n'existe pas localement ? On peut le sourcer dans un autre pays. Notre programme Mobbeal a déjà installé 50+ ingés à l'international (France → Tokyo, France → Montréal, Montréal → Paris). Visa de travail, logement, école pour la famille, ouverture compte bancaire, accompagnement administratif — c'est inclus dans le forfait pour un candidat senior accepté. Coût additionnel zéro pour toi. C'est ce différenciateur qui nous a permis de placer 1 AI Engineer France → Montréal chez Paraito en 2 semaines de closing alors que le marché québécois est exsangue sur l'IA."
+        },
+        {
+          "type": "h2",
+          "content": "Profils que nous trouvons fréquemment"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Senior Fullstack — Next.js / React / TypeScript / Node / Go. Le profil le plus demandé sur les 3 marchés. Délai moyen : 6-8 semaines.",
+            "AI / ML Engineer — Python, PyTorch, LangChain, RAG, agents LLM en prod. Très tendu sur les 3 pays, surtout au Canada où le marché paye plus que les ESN n'ont l'habitude. Délai 8-10 semaines.",
+            "Cloud / DevOps / SRE — Kubernetes, Terraform, AWS / GCP / Azure, observabilité. Tendance Karpenter / ARM64 / GreenOps recherchée. Délai 6-8 semaines.",
+            "Embedded / Robotics — Rust, C++, ROS 2. Très spécifique, surtout demandé côté Tokyo (industriels JP). Délai 10-12 semaines (rareté du profil bilingue).",
+            "CTO / VP Engineering — de start-up à scale-up Série B. On en place 3-4 par an sur les 3 marchés combinés. Délai 12-16 semaines (processus exécutif).",
+            "Tech Lead / Engineering Manager — relais entre exécutif et engineering. Profil intermédiaire, demande forte côté France et Canada. Délai 6-8 semaines.",
+            "Experts niche — Data Engineer Snowflake, Mobile iOS senior, Backend Rust, Security DevSecOps. Sur demande, délai variable selon le marché."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Ils ont recruté avec nous"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Paraito (Montréal, AI legaltech) — 3 hires permanents en 6 semaines : 2 AI Engineers + 1 Lead Platform, dont 1 mobilité France → Montréal via Mobbeal. Sur un marché québécois en tension IA.",
+            "TheGreenBow (Paris, cybersécurité) — Reprise en urgence Console VPN : squad de 3 experts (front senior + back Go + DevSecOps) mobilisée en quelques semaines pour sauver le delivery client.",
+            "Neobrain × PwC (Paris, agentic IA RH) — SkillBot dans Microsoft Teams pour 35 000+ collaborateurs PwC USA. Recrutement complémentaire de l'équipe d'ingés produit côté Neobrain."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Tu as besoin de pourvoir un poste senior tech dans les 8 semaines (FR / CA / JP) avec garantie 6 mois ? On peut te montrer une shortlist en 48h. Pas d'engagement de signature : on te montre les profils, tu décides ensuite."
+        }
+      ],
+      "en": [
+        {
+          "type": "h2",
+          "content": "Our differentiator: recruitment by engineers, not HR"
+        },
+        {
+          "type": "p",
+          "content": "Every consulting firm has « headhunters ». Every recruitment agency has « HR consultants ». Almost no entity on the French tech market has practicing engineers running the recruitment. Yet that's what we've done since 2015: our senior active engineers (CTO, Lead, Architect) do the sourcing, technical pre-qualification, and scoring. Not by dogma — by pragmatism: an engineer recognizes another engineer in 30 minutes, a non-tech HR recruiter takes 3 interviews and misses 60% of the time. The consequence: our shortlists arrive in 48h max (vs 5-10 days industry), our client interview → signed offer conversion rates hover around 35% (vs ~15% market)."
+        },
+        {
+          "type": "h2",
+          "content": "The 3 markets we cover"
+        },
+        {
+          "type": "h3",
+          "content": "France — Paris + major cities"
+        },
+        {
+          "type": "p",
+          "content": "Paris office at 54 Rue Greneta 75002 since 2015. Direct sourcing on LinkedIn FR, AfterHours, Welcome to the Jungle, Hellowork. Talent pool of 8000+ qualified tech profiles over 10 years. Strong specialties: Senior Fullstack, AI Engineer, Cloud / DevOps, startup CTO, Lead Data, Embedded Tech Lead. Regional coverage: Paris (60%), Lyon/Toulouse/Bordeaux (25%), rest (15%)."
+        },
+        {
+          "type": "h3",
+          "content": "Canada — Montréal and major cities"
+        },
+        {
+          "type": "p",
+          "content": "Montréal office at 4388 Rue Saint-Denis H2J 2L1 since 2023. Direct sourcing on LinkedIn CA, Jobboom, Workopolis, plus word-of-mouth from the Quebec tech community (where we've been known since 2018 via our engagements at Cogeco, Logient, and Mobbeal franco-mobility). Specialties: Senior Fullstack, AI / ML Engineer, Data Engineer, DevOps SRE, Quebec scale-up CTO. Coverage: Montréal (75%), Toronto (15%), Vancouver (10%)."
+        },
+        {
+          "type": "h3",
+          "content": "Japan — Tokyo primarily"
+        },
+        {
+          "type": "p",
+          "content": "Tokyo office at 1-23-5 Higashi-Azabu Minato-ku 106-0044 since 2018. Japanese tech market largely closed to foreigners — requires physical JP presence and JP/EN bilingual engineers. Direct sourcing on LinkedIn JP, Bizreach, Wantedly. Specialties: Senior Software Engineer JP/EN bilingual, Embedded / Robotics (proximity to Toyota / Fanuc / Yaskawa / SoftBank), JP-fluent AI Engineer. Coverage: Tokyo (90%), Osaka / Kyoto / Yokohama (10%)."
+        },
+        {
+          "type": "h2",
+          "content": "Our short technical process in 5 steps max"
+        },
+        {
+          "type": "list",
+          "items": [
+            "1. Technical brief with your CTO or Tech Lead (45 min). Abbeal engineer listens, asks precise technical questions, leaves with a client-fit scoring grid calibrated on your constraints (stack, seniority, timezone, budget).",
+            "2. Active sourcing on 3 channels (local LinkedIn, internal pool, target-market specialized platforms). 24-48h to produce a shortlist of maximum 5 profiles, already technically pre-qualified by us.",
+            "3. You receive the 5 profiles + 5 mini tech pre-qualification reports (strengths, weaknesses, candidate motivational context). You select who you want to meet.",
+            "4. Client interview (1-2 rounds max recommended). We organize Calendly slots, transcribe (Tactiq), debrief with you on each candidate synchronously.",
+            "5. Offer + closing. We help on salary negotiation (market benchmark), counter-offer management, specific clauses (non-compete, RTT transfer, etc.). Closing within 48h after verbal offer."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "h2",
+          "content": "Mobbeal: international mobility as an argument"
+        },
+        {
+          "type": "p",
+          "content": "Looking for a senior profile that doesn't exist locally? We can source in another country. Our Mobbeal programme has already relocated 50+ engineers internationally (France → Tokyo, France → Montréal, Montréal → Paris). Work visa, housing, family schooling, bank account opening, administrative support — included in the placement fee for an accepted senior candidate. Zero additional cost for you. That differentiator let us place 1 AI Engineer France → Montréal at Paraito with 2-week closing while the Quebec AI market is bone-dry."
+        },
+        {
+          "type": "h2",
+          "content": "Profiles we frequently find"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Senior Fullstack — Next.js / React / TypeScript / Node / Go. Most in-demand profile across the 3 markets. Average lead time: 6-8 weeks.",
+            "AI / ML Engineer — Python, PyTorch, LangChain, RAG, LLM agents in prod. Very tight on all 3 countries, especially Canada where the market pays more than consulting firms are used to. Lead time 8-10 weeks.",
+            "Cloud / DevOps / SRE — Kubernetes, Terraform, AWS / GCP / Azure, observability. Karpenter / ARM64 / GreenOps trend sought. Lead time 6-8 weeks.",
+            "Embedded / Robotics — Rust, C++, ROS 2. Very specific, mainly demanded in Tokyo (JP industrials). Lead time 10-12 weeks (bilingual profile scarcity).",
+            "CTO / VP Engineering — from startup to Series B scale-up. We place 3-4 per year across the 3 combined markets. Lead time 12-16 weeks (executive process).",
+            "Tech Lead / Engineering Manager — relay between executive and engineering. Mid-level profile, strong demand in France and Canada. Lead time 6-8 weeks.",
+            "Niche experts — Snowflake Data Engineer, senior iOS Mobile, Rust Backend, DevSecOps Security. On demand, variable lead time per market."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "They recruited with us"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Paraito (Montréal, AI legaltech) — 3 permanent hires in 6 weeks: 2 AI Engineers + 1 Lead Platform, including 1 France → Montréal mobility via Mobbeal. On a tight Quebec AI market.",
+            "TheGreenBow (Paris, cybersecurity) — Emergency takeover of VPN Console: squad of 3 experts (senior front + Go back + DevSecOps) mobilized in a few weeks to save client delivery.",
+            "Neobrain × PwC (Paris, HR agentic AI) — SkillBot in Microsoft Teams for 35,000+ PwC USA collaborators. Complementary product engineering team hiring on Neobrain side."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Need to fill a senior tech position within 8 weeks (FR / CA / JP) with 6-month guarantee? We can show you a shortlist in 48h. No signing commitment: we show you profiles, you decide afterwards."
+        }
+      ],
+      "ja": [
+        {
+          "type": "h2",
+          "content": "私たちの差別化要因：人事ではなく、エンジニアによる採用"
+        },
+        {
+          "type": "p",
+          "content": "全てのコンサルティング会社には「ヘッドハンター」がいる。全ての採用エージェンシーには「人事コンサルタント」がいる。フランステック市場のほぼどのエンティティも、現役エンジニアが採用を主導していない。しかし、それが2015年から私たちがしてきたこと：シニアアクティブエンジニア（CTO、リード、アーキテクト）がソーシング、技術的事前資格、スコアリングを行う。教義によるものではなく、実用主義によって：エンジニアは30分で他のエンジニアを認識し、非技術系の人事リクルーターは3回の面接で60%の確率で見逃す。結果：ショートリストは最大48時間で到着（業界の5-10日に対して）、クライアント面接→署名済みオファーの変換率は約35%（市場の約15%対比）。"
+        },
+        {
+          "type": "h2",
+          "content": "私たちがカバーする3つの市場"
+        },
+        {
+          "type": "h3",
+          "content": "フランス — パリ + 主要都市"
+        },
+        {
+          "type": "p",
+          "content": "2015年からパリオフィス（54 Rue Greneta 75002）。LinkedIn FR、AfterHours、Welcome to the Jungle、Helloworkでの直接ソーシング。10年間で8000以上の有資格テックプロフィールのプール。強い専門分野：シニアフルスタック、AIエンジニア、Cloud / DevOps、スタートアップCTO、リードデータ、組込テックリード。地域カバレッジ：パリ（60%）、リヨン/トゥールーズ/ボルドー（25%）、その他（15%）。"
+        },
+        {
+          "type": "h3",
+          "content": "カナダ — モントリオールと主要都市"
+        },
+        {
+          "type": "p",
+          "content": "2023年からモントリオールオフィス（4388 Rue Saint-Denis H2J 2L1）。LinkedIn CA、Jobboom、Workopolisでの直接ソーシング、加えてケベックテックコミュニティの口コミ（2018年からCogeco、Logient、Mobbealフランコモビリティでの私たちのエンゲージメントを通じて知られている）。専門分野：シニアフルスタック、AI / MLエンジニア、データエンジニア、DevOps SRE、ケベックスケールアップCTO。カバレッジ：モントリオール（75%）、トロント（15%）、バンクーバー（10%）。"
+        },
+        {
+          "type": "h3",
+          "content": "日本 — 主に東京"
+        },
+        {
+          "type": "p",
+          "content": "2018年から東京オフィス（1-23-5 麻布十番 港区 106-0044）。日本のテック市場は外国人にはほぼ閉鎖的 — 物理的なJPプレゼンスとJP/ENバイリンガルエンジニアが必要。LinkedIn JP、ビズリーチ、Wantedlyでの直接ソーシング。専門分野：シニアソフトウェアエンジニアJP/ENバイリンガル、組込 / ロボティクス（トヨタ / ファナック / 安川電機 / ソフトバンクへの近接性）、JP流暢AIエンジニア。カバレッジ：東京（90%）、大阪 / 京都 / 横浜（10%）。"
+        },
+        {
+          "type": "h2",
+          "content": "最大5ステップの短い技術プロセス"
+        },
+        {
+          "type": "list",
+          "items": [
+            "1. CTOまたはテックリードとの技術ブリーフ（45分）。Abbealエンジニアが聞き、正確な技術的質問をし、制約（スタック、シニア度、タイムゾーン、予算）に合わせて調整されたクライアントフィットスコアリンググリッドを持ち帰る。",
+            "2. 3つのチャネル（ローカルLinkedIn、内部プール、ターゲット市場の専門プラットフォーム）でのアクティブソーシング。最大5プロフィールのショートリストを24-48時間で作成、すでに技術的に事前資格付与済み。",
+            "3. 5プロフィール + 5つのミニテック事前資格レポート（強み、弱み、候補者のモチベーション文脈）を受け取る。会いたい人を選ぶ。",
+            "4. クライアント面接（最大1-2ラウンド推奨）。Calendlyスロットを整理し、書き起こし（Tactiq）、各候補者についてあなたと同期的にデブリーフ。",
+            "5. オファー + クロージング。給与交渉（市場ベンチマーク）、カウンターオファー管理、特定条項（競業避止、RTT移転など）について支援。口頭オファー後48時間以内にクロージング。"
+          ],
+          "ordered": true
+        },
+        {
+          "type": "h2",
+          "content": "Mobbeal：議論としての国際的なモビリティ"
+        },
+        {
+          "type": "p",
+          "content": "ローカルには存在しないシニアプロフィールを探している？別の国でソーシングできる。私たちのMobbealプログラムはすでに50以上のエンジニアを国際的に再配置した（フランス → 東京、フランス → モントリオール、モントリオール → パリ）。労働ビザ、住居、家族の学校、銀行口座開設、行政サポート — 受け入れられたシニア候補者の配置料金に含まれる。あなたにとっての追加コストはゼロ。その差別化要因により、ケベックのAI市場が枯渇している中、パライトで2週間のクロージングでフランス → モントリオールに1人のAIエンジニアを配置できた。"
+        },
+        {
+          "type": "h2",
+          "content": "私たちが頻繁に見つけるプロフィール"
+        },
+        {
+          "type": "list",
+          "items": [
+            "シニアフルスタック — Next.js / React / TypeScript / Node / Go。3市場で最も需要のあるプロフィール。平均リードタイム：6-8週間。",
+            "AI / MLエンジニア — Python、PyTorch、LangChain、RAG、本番LLMエージェント。3カ国全てで非常にタイト、特にカナダでは市場がコンサルティング会社が慣れているよりも多く支払う。リードタイム8-10週間。",
+            "Cloud / DevOps / SRE — Kubernetes、Terraform、AWS / GCP / Azure、可観測性。Karpenter / ARM64 / GreenOpsトレンドが求められる。リードタイム6-8週間。",
+            "組込 / ロボティクス — Rust、C++、ROS 2。非常に具体的、主に東京で需要（JP産業）。リードタイム10-12週間（バイリンガルプロフィールの希少性）。",
+            "CTO / VPエンジニアリング — スタートアップからシリーズBスケールアップまで。3つの組み合わせ市場で年間3-4人を配置。リードタイム12-16週間（エグゼクティブプロセス）。",
+            "テックリード / エンジニアリングマネージャー — エグゼクティブとエンジニアリングの中継。中堅プロフィール、フランスとカナダで強い需要。リードタイム6-8週間。",
+            "ニッチエキスパート — Snowflakeデータエンジニア、シニアiOSモバイル、Rustバックエンド、DevSecOpsセキュリティ。需要に応じて、市場ごとに可変リードタイム。"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "彼らは私たちと採用した"
+        },
+        {
+          "type": "list",
+          "items": [
+            "パライト（モントリオール、AIリーガルテック）— 6週間で3人の正社員採用：AIエンジニア2人 + リードプラットフォーム1人、Mobbeal経由でフランス → モントリオールのモビリティ1人を含む。逼迫したケベックAI市場で。",
+            "TheGreenBow（パリ、サイバーセキュリティ）— VPNコンソールの緊急引き継ぎ：3人の専門家のスクワッド（シニアフロント + Goバック + DevSecOps）を数週間で動員、クライアント納品を救う。",
+            "Neobrain × PwC（パリ、HR エージェント型AI）— 35,000人以上のPwC USAコラボレーター向けのMicrosoft Teams内SkillBot。Neobrain側で補完的なプロダクトエンジニアリングチーム採用。"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "6ヶ月保証付きで8週間以内（FR / CA / JP）にシニアテック職をfillする必要がある？48時間でショートリストを表示できる。署名のコミットメントなし：プロフィールを表示し、あなたが後で決定する。"
+        }
+      ],
+      "fr-ca": [
+        {
+          "type": "h2",
+          "content": "Notre différenciateur : recrutement par ingés, pas par RH"
+        },
+        {
+          "type": "p",
+          "content": "Toutes les cies de conseil ont des « chasseurs de têtes ». Toutes les agences de recrutement ont des « consultants RH ». Quasi aucune entité du marché techno français n'a des ingénieurs en activité qui pilotent le recrutement. C'est pourtant ce qu'on fait depuis 2015 : nos ingés seniors actifs (CTO, Lead, Architecte) font la recherche, la pré-qualif technique et le scoring. Pas par dogme — par pragmatisme : un ingé sait reconnaître un autre ingé en 30 minutes, un chasseur RH non-techno met 3 entrevues et passe à côté 60 % du temps. La conséquence : nos listes courtes arrivent en 48h max (vs 5-10 jours industrie), nos taux de transformation entrevue client → offre signée tournent à 35 % (vs ~15 % marché)."
+        },
+        {
+          "type": "h2",
+          "content": "Les 3 marchés qu'on couvre"
+        },
+        {
+          "type": "h3",
+          "content": "France — Paris + grandes villes"
+        },
+        {
+          "type": "p",
+          "content": "Bureau Paris 54 Rue Greneta 75002 depuis 2015. Recherche directe sur LinkedIn FR, AfterHours, Welcome to the Jungle, Hellowork. Bassin de 8000+ profils techno qualifiés au cours des 10 ans. Spécialités fortes : Senior Fullstack, AI Engineer, Cloud / DevOps, CTO de jeune entreprise, Lead Data, Tech Lead Embarqué. Couverture régionale : Paris (60 %), Lyon/Toulouse/Bordeaux (25 %), reste (15 %)."
+        },
+        {
+          "type": "h3",
+          "content": "Canada — Montréal et grandes villes"
+        },
+        {
+          "type": "p",
+          "content": "Bureau Montréal 4388 Rue Saint-Denis H2J 2L1 depuis 2023. Recherche directe sur LinkedIn CA, Jobboom, Workopolis, plus le bouche-à-oreille de la communauté techno québécoise (où on est connus depuis 2018 via nos mandats chez Cogeco, Logient, et la franco-mobilité Mobbeal). Spécialités : Senior Fullstack, AI / ML Engineer, Data Engineer, DevOps SRE, CTO de scale-up québécoise. Couverture : Montréal (75 %), Toronto (15 %), Vancouver (10 %)."
+        },
+        {
+          "type": "h3",
+          "content": "Japon — Tokyo principalement"
+        },
+        {
+          "type": "p",
+          "content": "Bureau Tokyo 1-23-5 Higashi-Azabu Minato-ku 106-0044 depuis 2018. Marché techno japonais largement fermé aux étrangers — il faut une présence physique JP et des ingés bilingues JP/EN. Recherche directe sur LinkedIn JP, Bizreach, Wantedly. Spécialités : Senior Software Engineer bilingue JP/EN, Embedded / Robotics (proximité Toyota / Fanuc / Yaskawa / SoftBank), AI Engineer JP-fluent. Couverture : Tokyo (90 %), Osaka / Kyoto / Yokohama (10 %)."
+        },
+        {
+          "type": "h2",
+          "content": "Notre processus techno court en 5 étapes max"
+        },
+        {
+          "type": "list",
+          "items": [
+            "1. Brief technique avec ton CTO ou Tech Lead (45 min). Ingé Abbeal écoute, pose des questions techno précises, repart avec une grille de scoring client-fit calibrée sur tes contraintes (pile, séniorité, fuseau, budget).",
+            "2. Recherche active sur 3 canaux (LinkedIn local, bassin interne, plateformes spécialisées du marché cible). 24-48h pour produire une liste courte de 5 profils maximum, déjà pré-qualifiés techniquement par nous.",
+            "3. Tu reçois les 5 profils + 5 mini-rapports de pré-qualif techno (forces, faiblesses, contexte motivationnel du candidat). Tu sélectionnes ceux que tu veux rencontrer.",
+            "4. Entrevue client (1-2 rondes max recommandées). On organise les créneaux Calendly, on transcrit (Tactiq), on debrief avec toi sur chaque candidat en synchrone.",
+            "5. Offre + closing. On t'aide sur la négociation salariale (référence marché), sur la gestion de la contre-offre, sur les clauses spécifiques (clause de non-concurrence, transfert de RTT, etc.). Closing en 48h après l'offre verbale."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "h2",
+          "content": "Mobbeal : la mobilité internationale comme argument"
+        },
+        {
+          "type": "p",
+          "content": "Tu cherches un profil senior qui n'existe pas localement ? On peut le rechercher dans un autre pays. Notre programme Mobbeal a déjà installé 50+ ingés à l'international (France → Tokyo, France → Montréal, Montréal → Paris). Visa de travail, logement, école pour la famille, ouverture compte bancaire, accompagnement administratif — c'est inclus dans le forfait pour un candidat senior accepté. Coût additionnel zéro pour toi. C'est ce différenciateur qui nous a permis de placer 1 AI Engineer France → Montréal chez Paraito en 2 semaines de closing alors que le marché québécois est exsangue sur l'IA."
+        },
+        {
+          "type": "h2",
+          "content": "Profils que nous trouvons fréquemment"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Senior Fullstack — Next.js / React / TypeScript / Node / Go. Le profil le plus demandé sur les 3 marchés. Délai moyen : 6-8 semaines.",
+            "AI / ML Engineer — Python, PyTorch, LangChain, RAG, agents LLM en production. Très tendu sur les 3 pays, surtout au Canada où le marché paye plus que les cies de conseil n'ont l'habitude. Délai 8-10 semaines.",
+            "Cloud / DevOps / SRE — Kubernetes, Terraform, AWS / GCP / Azure, observabilité. Tendance Karpenter / ARM64 / GreenOps recherchée. Délai 6-8 semaines.",
+            "Embedded / Robotics — Rust, C++, ROS 2. Très spécifique, surtout demandé côté Tokyo (industriels JP). Délai 10-12 semaines (rareté du profil bilingue).",
+            "CTO / VP Engineering — de jeune entreprise à scale-up Série B. On en place 3-4 par an sur les 3 marchés combinés. Délai 12-16 semaines (processus exécutif).",
+            "Tech Lead / Engineering Manager — relais entre exécutif et engineering. Profil intermédiaire, demande forte côté France et Canada. Délai 6-8 semaines.",
+            "Experts niche — Data Engineer Snowflake, Mobile iOS senior, Backend Rust, Security DevSecOps. Sur demande, délai variable selon le marché."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Ils ont recruté avec nous"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Paraito (Montréal, AI legaltech) — 3 hires permanents en 6 semaines : 2 AI Engineers + 1 Lead Platform, dont 1 mobilité France → Montréal via Mobbeal. Sur un marché québécois en tension IA.",
+            "TheGreenBow (Paris, cybersécurité) — Reprise en urgence Console VPN : squad de 3 experts (front senior + back Go + DevSecOps) mobilisée en quelques semaines pour sauver la livraison client.",
+            "Neobrain × PwC (Paris, agentic IA RH) — SkillBot dans Microsoft Teams pour 35 000+ collaborateurs PwC USA. Recrutement complémentaire de l'équipe d'ingés produit côté Neobrain."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Tu as besoin de pourvoir un poste senior techno dans les 8 semaines (FR / CA / JP) avec garantie 6 mois ? On peut te montrer une liste courte en 48h. Pas d'engagement de signature : on te montre les profils, tu décides ensuite."
+        }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "q": "Quel est votre modèle de pricing ?",
+          "a": "Frais de placement classique au pourcentage du salaire annuel brut (15-20 % selon séniorité et difficulté). Aucun frais en amont, aucun frais pour les profils qu'on présente et que tu refuses. Tu ne payes que si tu signes un contrat avec un candidat qu'on a sourcé. Garantie de remplacement gratuit pendant 6 mois (3 mois standard marché)."
+        },
+        {
+          "q": "Quelle garantie en cas de départ rapide du candidat ?",
+          "a": "Garantie de remplacement gratuit pendant 6 mois : si le candidat démissionne ou est licencié dans les 6 mois, on remplace sans frais additionnels. Au-delà de 6 mois, on remplace au tarif d'un nouveau recrutement. C'est rare : notre taux de turnover à 12 mois est de 4 % (vs ~15 % marché)."
+        },
+        {
+          "q": "Quels délais moyens entre brief et signature de l'offre ?",
+          "a": "Shortlist en 48h. Entretiens client en semaine 2-3. Offre + closing en semaine 4-6 pour un profil mid-senior, 8-12 semaines pour un exécutif (CTO, VP Engineering). Les profils très niches (Rust embarqué bilingue JP, AI Engineer LangChain prod) peuvent prendre 10-14 semaines."
+        },
+        {
+          "q": "Quelles géographies couvrez-vous vraiment ?",
+          "a": "France (bureau Paris depuis 2015, vivier 8000+ profils), Canada (bureau Montréal depuis 2023, focus Québec + Toronto + Vancouver), Japon (bureau Tokyo Higashi-Azabu depuis 2018). Pas USA, pas UK, pas Allemagne, pas Singapour — on préfère être très bon sur 3 marchés que mauvais sur 8."
+        },
+        {
+          "q": "Quelles technos / stacks vous maîtrisez ?",
+          "a": "Toutes les stacks où on a des ingés en mission ou en intercontrat : Software (Go, Rust, TypeScript, Next.js, Python, Java/Kotlin), IA/Data (RAG hybride, agents multi-tools, Mistral/Claude/OpenAI, Databricks, dbt, Snowflake, Qdrant), Robotique (ROS 2, Isaac Sim, Rust embarqué), Infra (Kubernetes + Karpenter, Terraform). Si la stack n'est pas couverte, on te le dit honnêtement."
+        },
+        {
+          "q": "Comment se passe le process côté candidat ?",
+          "a": "1er call avec un ingé Abbeal (30-45 min, technique + contextuel motivation). Si fit : présentation au client en moyenne sous 48h. Suivi rapproché jusqu'à la signature (briefing avant chaque entretien, accompagnement négociation salariale, gestion contre-offer, accompagnement Mobbeal si mobilité internationale). Notre NPS candidat est de 72 (mesuré sur 200+ placements)."
+        }
+      ],
+      "en": [
+        {
+          "q": "What is your pricing model?",
+          "a": "Classic placement fee as a percentage of gross annual salary (15-20% depending on seniority and difficulty). No upfront fee, no fee for profiles we present and you decline. You only pay if you sign a contract with a candidate we sourced. Free replacement guarantee for 6 months (vs 3 months standard market)."
+        },
+        {
+          "q": "What guarantee in case of fast candidate departure?",
+          "a": "Free replacement guarantee for 6 months: if the candidate resigns or is fired within 6 months, we replace at no additional cost. Beyond 6 months, we replace at standard new-recruitment rate. It's rare: our 12-month turnover rate is 4% (vs ~15% market)."
+        },
+        {
+          "q": "What are the average lead times between brief and offer signing?",
+          "a": "Shortlist in 48h. Client interviews in week 2-3. Offer + closing in week 4-6 for mid-senior profile, 8-12 weeks for an executive (CTO, VP Engineering). Very niche profiles (bilingual JP embedded Rust, LangChain AI Engineer in prod) can take 10-14 weeks."
+        },
+        {
+          "q": "Which geographies do you really cover?",
+          "a": "France (Paris office since 2015, 8000+ profile pool), Canada (Montréal office since 2023, focus Quebec + Toronto + Vancouver), Japan (Tokyo Higashi-Azabu office since 2018). No USA, UK, Germany, or Singapore — we prefer being very good on 3 markets than bad on 8."
+        },
+        {
+          "q": "Which tech stacks do you master?",
+          "a": "All stacks where we have engineers on mission or in intermission: Software (Go, Rust, TypeScript, Next.js, Python, Java/Kotlin), AI/Data (hybrid RAG, multi-tool agents, Mistral/Claude/OpenAI, Databricks, dbt, Snowflake, Qdrant), Robotics (ROS 2, Isaac Sim, embedded Rust), Infra (Kubernetes + Karpenter, Terraform). If the stack isn't covered, we tell you honestly."
+        },
+        {
+          "q": "How does the process go for the candidate?",
+          "a": "1st call with an Abbeal engineer (30-45 min, technical + contextual motivation). If fit: presentation to client on average within 48h. Close follow-up until signing (briefing before each interview, salary negotiation support, counter-offer management, Mobbeal support if international mobility). Our candidate NPS is 72 (measured on 200+ placements)."
+        }
+      ],
+      "ja": [
+        {
+          "q": "あなたの価格モデルは何ですか？",
+          "a": "総年俸の一定割合での古典的な配置料金（シニア度と難易度に応じて15-20%）。前払い料金なし、私たちが提示し拒否したプロフィールに対する料金なし。私たちがソーシングした候補者と契約に署名した場合のみ支払う。6ヶ月間の無料リプレースメント保証（市場標準3ヶ月対比）。"
+        },
+        {
+          "q": "候補者の早期離職の場合の保証は何ですか？",
+          "a": "6ヶ月間の無料リプレースメント保証：候補者が6ヶ月以内に辞任または解雇された場合、追加費用なしでリプレースする。6ヶ月を超えて、新規採用標準料金でリプレースする。これは稀：12ヶ月の離職率は4%（市場の約15%対比）。"
+        },
+        {
+          "q": "ブリーフとオファー署名の間の平均リードタイムは何ですか？",
+          "a": "48時間でショートリスト。週2-3でクライアント面接。中堅シニアプロフィールで週4-6でオファー + クロージング、エグゼクティブ（CTO、VPエンジニアリング）で8-12週間。非常にニッチなプロフィール（バイリンガルJP組込Rust、本番のLangChain AIエンジニア）は10-14週間かかる場合がある。"
+        },
+        {
+          "q": "実際にどの地域をカバーしますか？",
+          "a": "フランス（2015年からパリオフィス、8000以上のプロフィールプール）、カナダ（2023年からモントリオールオフィス、ケベック + トロント + バンクーバーに焦点）、日本（2018年から東京麻布十番オフィス）。米国、英国、ドイツ、シンガポールはなし — 8市場でひどくなるよりも3市場で非常に良いことを好む。"
+        },
+        {
+          "q": "どの技術スタックを習得していますか？",
+          "a": "ミッション中またはインターミッション中のエンジニアがいる全てのスタック：ソフトウェア（Go、Rust、TypeScript、Next.js、Python、Java/Kotlin）、AI/データ（ハイブリッドRAG、マルチツールエージェント、Mistral/Claude/OpenAI、Databricks、dbt、Snowflake、Qdrant）、ロボティクス（ROS 2、Isaac Sim、組込Rust）、インフラ（Kubernetes + Karpenter、Terraform）。スタックがカバーされていない場合、正直に伝える。"
+        },
+        {
+          "q": "候補者側のプロセスはどうなりますか？",
+          "a": "Abbealエンジニアとの初回コール（30-45分、技術的 + 文脈的モチベーション）。フィットすれば：平均48時間以内にクライアントへ提示。署名まで密接なフォローアップ（各面接前のブリーフィング、給与交渉サポート、カウンターオファー管理、国際モビリティの場合のMobbealサポート）。候補者NPSは72（200以上の配置で測定）。"
+        }
+      ],
+      "fr-ca": [
+        {
+          "q": "Quel est votre modèle de pricing ?",
+          "a": "Frais de placement classique au pourcentage du salaire annuel brut (15-20 % selon séniorité et difficulté). Aucun frais en amont, aucun frais pour les profils qu'on présente et que tu refuses. Tu ne payes que si tu signes un contrat avec un candidat qu'on a recherché. Garantie de remplacement gratuit pendant 6 mois (3 mois standard marché)."
+        },
+        {
+          "q": "Quelle garantie en cas de départ rapide du candidat ?",
+          "a": "Garantie de remplacement gratuit pendant 6 mois : si le candidat démissionne ou est licencié dans les 6 mois, on remplace sans frais additionnels. Au-delà de 6 mois, on remplace au tarif d'un nouveau recrutement. C'est rare : notre taux de roulement à 12 mois est de 4 % (vs ~15 % marché)."
+        },
+        {
+          "q": "Quels délais moyens entre brief et signature de l'offre ?",
+          "a": "Liste courte en 48h. Entrevues client en semaine 2-3. Offre + closing en semaine 4-6 pour un profil intermédiaire-senior, 8-12 semaines pour un exécutif (CTO, VP Engineering). Les profils très niches (Rust embarqué bilingue JP, AI Engineer LangChain prod) peuvent prendre 10-14 semaines."
+        },
+        {
+          "q": "Quelles géographies couvrez-vous vraiment ?",
+          "a": "France (bureau Paris depuis 2015, bassin 8000+ profils), Canada (bureau Montréal depuis 2023, focus Québec + Toronto + Vancouver), Japon (bureau Tokyo Higashi-Azabu depuis 2018). Pas USA, pas UK, pas Allemagne, pas Singapour — on préfère être très bon sur 3 marchés que mauvais sur 8."
+        },
+        {
+          "q": "Quelles piles / technos vous maîtrisez ?",
+          "a": "Toutes les piles où on a des ingés en mandat ou en intercontrat : Software (Go, Rust, TypeScript, Next.js, Python, Java/Kotlin), IA/Données (RAG hybride, agents multi-tools, Mistral/Claude/OpenAI, Databricks, dbt, Snowflake, Qdrant), Robotique (ROS 2, Isaac Sim, Rust embarqué), Infra (Kubernetes + Karpenter, Terraform). Si la pile n'est pas couverte, on te le dit honnêtement."
+        },
+        {
+          "q": "Comment se passe le processus côté candidat ?",
+          "a": "1er call avec un ingé Abbeal (30-45 min, technique + contextuel motivation). Si fit : présentation au client en moyenne sous 48h. Suivi rapproché jusqu'à la signature (briefing avant chaque entrevue, accompagnement négociation salariale, gestion contre-offre, accompagnement Mobbeal si mobilité internationale). Notre NPS candidat est de 72 (mesuré sur 200+ placements)."
+        }
+      ]
+    }
   }
 }
