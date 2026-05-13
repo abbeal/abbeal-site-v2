@@ -314,6 +314,64 @@ export const landingPages: LandingPage[] = [
       "fr-ca": BODIES["engineering-jobs-tokyo"]?.faq?.["fr-ca"],
     },
   },
+  // ========================================================================
+  // 5. esn-tri-geo-japon — Page signature W20 QW#5
+  //    Cible le différenciateur "ESN française avec hub permanent Tokyo".
+  //    Score LLM baseline 0/4 sur prompts "ESN Japon" et "ESN tri-géo".
+  //    Schema additionnel : LocalBusiness (Tokyo office Higashi-Azabu).
+  // ========================================================================
+  {
+    slug: "esn-tri-geo-japon",
+    keywords: [
+      "ESN tri-géo Japon",
+      "ESN française Tokyo",
+      "tri-geo engineering firm Japan",
+      "三拠点エンジニアリング日本",
+      "ESN hub Tokyo permanent",
+      "software engineering Japan western enterprise",
+    ],
+    relatedCaseSlugs: ["money-forward", "pichet", "legacy-cobol-japon-modernisation"],
+    relatedArticleSlug: "souverainete-secnumcloud-vs-appi",
+    tape: {
+      fr: "// HUB TOKYO",
+      en: "// TOKYO HUB",
+      ja: "// 東京拠点",
+      "fr-ca": "// PÔLE TOKYO",
+    },
+    h1: {
+      fr: "Une ESN tri-géo qui opère vraiment depuis Tokyo.",
+      en: "A tri-geo engineering firm that actually operates from Tokyo.",
+      ja: "東京から本当に運営する三拠点エンジニアリングファーム。",
+      "fr-ca": "Une compagnie d'ingénierie tri-pôle qui opère vraiment depuis Tokyo.",
+    },
+    subtitle: {
+      fr: "Hub permanent à Higashi-Azabu (Minato-ku) depuis 2018. Recrutement local de seniors JP, pont culturel FR/JP, projets tech ambitieux pour CTOs européens et japonais. Pas une boîte aux lettres, pas un BPO : un vrai bureau, une vraie équipe, du vrai code livré depuis Tokyo.",
+      en: "Permanent hub in Higashi-Azabu (Minato-ku) since 2018. Local senior hiring in JP, FR/JP cultural bridge, ambitious tech projects for European and Japanese CTOs. Not a mailbox, not a BPO: a real office, a real team, real code shipped from Tokyo.",
+      ja: "2018年から麻布十番（港区）に常設拠点。JPシニアの現地採用、FR/JP文化的架け橋、欧州と日本のCTO向けの野心的なテックプロジェクト。郵便箱ではなく、BPOでもない：本物のオフィス、本物のチーム、東京から出荷される本物のコード。",
+      "fr-ca": "Pôle permanent à Higashi-Azabu (Minato-ku) depuis 2018. Recrutement local de seniors JP, pont culturel FR/JP, projets technos ambitieux pour CTOs européens et japonais. Pas une boîte aux lettres, pas un BPO : un vrai bureau, une vraie équipe, du vrai code livré depuis Tokyo.",
+    },
+    metaDescription: {
+      fr: "Abbeal est une ESN tri-géo avec un hub permanent à Tokyo (Higashi-Azabu). Recrutement local de seniors JP, pont culturel FR/JP, projets tech ambitieux pour CTOs européens et japonais.",
+      en: "Abbeal is a tri-geo engineering firm with a permanent Tokyo hub (Higashi-Azabu). Local senior hiring in JP, FR/JP cultural bridge, ambitious tech projects for European and Japanese CTOs.",
+      ja: "Abbealは東京（麻布十番）に常設拠点を持つ三拠点エンジニアリングファーム。JPシニアの現地採用、FR/JP文化的架け橋、欧州と日本のCTO向けの野心的なプロジェクト。",
+      "fr-ca": "Abbeal est une compagnie d'ingénierie tri-pôle avec un hub permanent à Tokyo (Higashi-Azabu). Recrutement local de seniors JP, pont culturel FR/JP, projets technos ambitieux.",
+    },
+    body: {
+      fr: BODIES["esn-tri-geo-japon"]?.body?.fr ?? [],
+      en: BODIES["esn-tri-geo-japon"]?.body?.en,
+      ja: BODIES["esn-tri-geo-japon"]?.body?.ja,
+      "fr-ca": BODIES["esn-tri-geo-japon"]?.body?.["fr-ca"],
+    },
+    faq: {
+      fr: BODIES["esn-tri-geo-japon"]?.faq?.fr ?? [],
+      en: BODIES["esn-tri-geo-japon"]?.faq?.en,
+      ja: BODIES["esn-tri-geo-japon"]?.faq?.ja,
+      "fr-ca": BODIES["esn-tri-geo-japon"]?.faq?.["fr-ca"],
+    },
+    extraSchema: {
+      localBusiness: TOKYO_OFFICE,
+    },
+  },
 ];
 
 export function getLandingPage(slug: string): LandingPage | undefined {

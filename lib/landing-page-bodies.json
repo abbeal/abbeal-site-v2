@@ -2502,5 +2502,439 @@
         }
       ]
     }
+  },
+  "esn-tri-geo-japon": {
+    "body": {
+      "fr": [
+        {
+          "type": "h2",
+          "content": "Pourquoi un hub Tokyo permanent change la donne"
+        },
+        {
+          "type": "p",
+          "content": "Une boîte aux lettres à Tokyo, beaucoup d'ESN française en ont. Un BPO sous-traité localement, encore plus. Mais un vrai bureau opéré par des engagés Abbeal seniors, qui font tourner du code en prod chaque jour pour des clients japonais ET européens, c'est rare. Depuis 2018, Abbeal opère depuis Higashi-Azabu (Minato-ku) : on signe les contrats en yen, on facture en yen, on déclare en JPY au Japon. C'est l'inverse du modèle « consultant français parachuté 3 mois ». Le hub Tokyo donne accès à : un marché tech japonais largement fermé aux étrangers (60 % des entreprises tech JP refusent de bosser sans interlocuteur sur place), un pont culturel et linguistique opéré par des ingés bilingues JP/EN/FR, et un avantage horaire 8h sur l'Europe pour le Follow-the-Sun delivery."
+        },
+        {
+          "type": "h2",
+          "content": "Ce qu'on fait depuis Tokyo"
+        },
+        {
+          "type": "h3",
+          "content": "Recrutement local de seniors japonais"
+        },
+        {
+          "type": "p",
+          "content": "Sourcing direct sur le marché japonais (LinkedIn JP, Bizreach, Wantedly), validation technique en japonais ET en anglais, scoring double axe (technique + alignement valeurs). On ne « place » pas — on intègre dans nos équipes, ou on accompagne le client dans son recrutement local permanent quand c'est pertinent."
+        },
+        {
+          "type": "h3",
+          "content": "Projets clients depuis Tokyo"
+        },
+        {
+          "type": "p",
+          "content": "Equipes embarquées chez Money Forward (data backbone d'une nouvelle banque digitale, Databricks + AWS Tokyo), Cartier (LLM privé fine-tuné sur infra Cartier, projet 4,5 ans en cours), Pichet (AI Vision sur plans immobiliers, Next.js 16 + Claude Vision + Snowflake), Le Monde (équipe Insights opérée depuis Tokyo 6 ans). Plus des engagements en robotique industrielle JP (cf cas usine 80 AGV ROS 2)."
+        },
+        {
+          "type": "h3",
+          "content": "Pont vers Paris et Montréal"
+        },
+        {
+          "type": "p",
+          "content": "Pour les clients européens qui veulent une présence Japon sans monter leur propre filiale : Abbeal Tokyo sert d'interface complète. Recrutement local de Japonais, signature de contrats en jurisdiction japonaise, gestion compliance APPI, transfert de connaissance vers les équipes europe. C'est l'option « hub Tokyo plug-and-play » qui évite à un CTO européen de passer 18 mois à monter un bureau sur place."
+        },
+        {
+          "type": "h2",
+          "content": "Stack : ce qui se développe depuis Tokyo"
+        },
+        {
+          "type": "p",
+          "content": "Le hub Tokyo s'est spécialisé sur 3 lignes tech, sans exclure le reste :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Robotique embarquée et IA-edge : Rust + ROS 2 + Isaac Sim. Cas typique : flotte AGV en entrepôt, AMR autonome, computer vision sur ligne de production. Avantage Tokyo : proximité avec les industriels JP (Toyota, Fanuc, Yaskawa, SoftBank Robotics).",
+            "IA-first software : agents LLM en production, RAG sur corpus japonais (caractère intensif vs latin), pipelines de fine-tuning sur GPU AWS Tokyo. Conformité APPI (équivalent RGPD JP) native.",
+            "Software industriel critique : back-end haute disponibilité, intégrations ERP japonais (SAP JP, Oracle JP, Glovia), modernisation legacy COBOL/mainframe (cas client banque japonaise 4M lignes en 14 mois)."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Cas pratiques en prod"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Money Forward — Joint venture FinTech leader japonais × grand groupe bancaire. Stack Databricks + Delta Lake + dbt + AWS Tokyo + Unity Catalog. Equipe pilotée depuis Tokyo, opérations 24/7 via Follow-the-Sun.",
+            "Pichet Japan — AI Vision sur plans immobiliers, déploiement Next.js 16 + Sanity + Claude Vision + pgvector + Snowflake + Vercel. Use case visuellement impressionnant qui repose sur un fine-tuning local.",
+            "Modernisation COBOL banque japonaise — 4M de lignes COBOL migrées en 14 mois via multi-agents IA (Archéologue, Architecte, Nettoyeur). Cas étude différenciante, méthodologie unique."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "L'équipe Abbeal Tokyo"
+        },
+        {
+          "type": "p",
+          "content": "Sébastien Lonjon (CEO) est installé à Tokyo depuis 2024. Marie Nuellas, Alexandre Lim et l'équipe Mobbeal sont basés en permanence à Higashi-Azabu. Les engagés en mission chez nos clients tokyoïtes (Money Forward, Le Monde, Pichet, etc.) gravitent autour du bureau pour les rituels d'équipe. JLPT N2+ pour les ingés au contact client japonais, FR/EN bilingues pour les autres. Présence physique à Tokyo, pas une équipe distribuée full-remote."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Tu envisages d'opérer un projet tech au Japon, ou de monter ton propre hub Tokyo dans 24 mois ? Le bureau Abbeal Higashi-Azabu peut servir de point d'entrée ou de pont. Sébastien fait ces appels 30 min chaque semaine depuis Tokyo. Pas de deck, juste l'expérience de 8 ans d'opération au Japon."
+        }
+      ],
+      "en": [
+        {
+          "type": "h2",
+          "content": "Why a permanent Tokyo hub changes the game"
+        },
+        {
+          "type": "p",
+          "content": "A Tokyo mailbox, many French consulting firms have. A locally-subcontracted BPO, even more. But a real office operated by senior Abbeal engineers who ship code to production daily for both Japanese AND European clients — that's rare. Since 2018, Abbeal operates from Higashi-Azabu (Minato-ku): we sign contracts in yen, invoice in yen, declare in JPY in Japan. Opposite model from the « French consultant parachuted in for 3 months ». The Tokyo hub provides: access to a Japanese tech market largely closed to foreigners (60% of JP tech companies refuse to work without an on-site contact), a cultural and linguistic bridge run by bilingual JP/EN/FR engineers, and an 8-hour timezone advantage over Europe for Follow-the-Sun delivery."
+        },
+        {
+          "type": "h2",
+          "content": "What we do from Tokyo"
+        },
+        {
+          "type": "h3",
+          "content": "Local hiring of Japanese seniors"
+        },
+        {
+          "type": "p",
+          "content": "Direct sourcing on JP market (LinkedIn JP, Bizreach, Wantedly), technical validation in Japanese AND English, dual-axis scoring (technical + values alignment). We don't « place » — we integrate into our teams, or support the client's permanent local hiring when relevant."
+        },
+        {
+          "type": "h3",
+          "content": "Client projects from Tokyo"
+        },
+        {
+          "type": "p",
+          "content": "Embedded teams at Money Forward (data backbone for new digital bank, Databricks + AWS Tokyo), Cartier (private LLM fine-tuned on Cartier infra, ongoing 4.5-year engagement), Pichet (AI Vision on real-estate floor plans, Next.js 16 + Claude Vision + Snowflake), Le Monde (Insights team operated from Tokyo for 6 years). Plus industrial robotics JP engagements (cf 80 AGV ROS 2 warehouse case)."
+        },
+        {
+          "type": "h3",
+          "content": "Bridge to Paris and Montréal"
+        },
+        {
+          "type": "p",
+          "content": "For European clients wanting a Japan presence without setting up their own subsidiary: Abbeal Tokyo serves as a complete interface. Local hiring of Japanese, contract signing in Japanese jurisdiction, APPI compliance management, knowledge transfer to European teams. The « plug-and-play Tokyo hub » option that saves a European CTO 18 months of setting up an office."
+        },
+        {
+          "type": "h2",
+          "content": "Stack: what gets built from Tokyo"
+        },
+        {
+          "type": "p",
+          "content": "The Tokyo hub specializes in 3 tech lines, without excluding the rest:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Embedded robotics and edge AI: Rust + ROS 2 + Isaac Sim. Typical case: warehouse AGV fleet, autonomous AMRs, computer vision on production lines. Tokyo advantage: proximity to JP industrials (Toyota, Fanuc, Yaskawa, SoftBank Robotics).",
+            "AI-first software: LLM agents in production, RAG over Japanese corpora (character-intensive vs Latin), fine-tuning pipelines on AWS Tokyo GPUs. Native APPI compliance (Japanese GDPR equivalent).",
+            "Critical industrial software: high-availability back-ends, Japanese ERP integrations (SAP JP, Oracle JP, Glovia), legacy COBOL/mainframe modernization (Japanese bank client case: 4M lines in 14 months)."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Practical cases in production"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Money Forward — FinTech joint venture, Japanese leader × major banking group. Stack Databricks + Delta Lake + dbt + AWS Tokyo + Unity Catalog. Team led from Tokyo, 24/7 operations via Follow-the-Sun.",
+            "Pichet Japan — AI Vision on real-estate floor plans, Next.js 16 + Sanity + Claude Vision + pgvector + Snowflake + Vercel. Visually impressive use case backed by local fine-tuning.",
+            "Japanese bank COBOL modernization — 4M lines of COBOL migrated in 14 months via multi-agent AI (Archeologist, Architect, Cleaner). Differentiating case study, unique methodology."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "The Abbeal Tokyo team"
+        },
+        {
+          "type": "p",
+          "content": "Sébastien Lonjon (CEO) has been based in Tokyo since 2024. Marie Nuellas, Alexandre Lim and the Mobbeal team are permanently based in Higashi-Azabu. Engineers on mission at our Tokyo clients (Money Forward, Le Monde, Pichet, etc.) gravitate around the office for team rituals. JLPT N2+ for engineers in contact with Japanese clients, FR/EN bilingual for the rest. Physical Tokyo presence, not a full-remote distributed team."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Considering operating a tech project in Japan, or setting up your own Tokyo hub within 24 months? The Abbeal Higashi-Azabu office can serve as entry point or bridge. Sébastien does 30-min calls every week from Tokyo. No deck, just 8 years of Japan operations experience."
+        }
+      ],
+      "ja": [
+        {
+          "type": "h2",
+          "content": "なぜ東京の常設拠点が状況を変えるか"
+        },
+        {
+          "type": "p",
+          "content": "東京の郵便ボックスを持つフランスのコンサルティング会社は多い。現地外注のBPOはさらに多い。しかし、日本とヨーロッパのクライアントの両方に毎日コードを本番出荷するシニアAbbealエンジニアによって運営される本物のオフィスは稀だ。2018年から、Abbealは麻布十番（港区）から運営：円で契約を結び、円で請求書を発行し、日本でJPYで申告する。「3ヶ月パラシュート派遣されたフランスのコンサルタント」モデルの正反対。東京拠点が提供するもの：外国人にほぼ閉ざされた日本のテック市場へのアクセス（JP テック企業の60%は現地担当者なしでの取引を拒否）、JP/EN/FRのバイリンガルエンジニアによる文化的・言語的架け橋、Follow-the-Sun配信のための欧州との8時間時差優位性。"
+        },
+        {
+          "type": "h2",
+          "content": "東京から私たちが行うこと"
+        },
+        {
+          "type": "h3",
+          "content": "日本人シニアの現地採用"
+        },
+        {
+          "type": "p",
+          "content": "日本市場での直接ソーシング（LinkedIn JP、ビズリーチ、Wantedly）、日本語と英語の両方での技術検証、ダブル軸スコアリング（技術 + 価値観の一致）。「派遣」しない — 私たちのチームに統合するか、関連する場合はクライアントの永続的な現地採用をサポートする。"
+        },
+        {
+          "type": "h3",
+          "content": "東京からのクライアントプロジェクト"
+        },
+        {
+          "type": "p",
+          "content": "マネーフォワード（新しいデジタルバンクのデータバックボーン、Databricks + AWS東京）、カルティエ（カルティエインフラ上でファインチューニングされたプライベートLLM、進行中4.5年間のエンゲージメント）、Pichet（不動産間取り図上のAIビジョン、Next.js 16 + Claude Vision + Snowflake）、ル・モンド（東京から6年間運営されるInsightsチーム）に組み込みチーム。さらに日本の産業用ロボティクスエンゲージメント（80 AGV ROS 2倉庫ケース参照）。"
+        },
+        {
+          "type": "h3",
+          "content": "パリとモントリオールへの架け橋"
+        },
+        {
+          "type": "p",
+          "content": "自社の子会社を設立せずに日本でのプレゼンスを望む欧州クライアント向け：Abbeal Tokyoは完全なインターフェースとして機能する。日本人の現地採用、日本の法管轄での契約署名、APPIコンプライアンス管理、欧州チームへの知識移転。欧州のCTOがオフィスを設立するのに18ヶ月かかることを節約する「プラグアンドプレイ東京拠点」オプション。"
+        },
+        {
+          "type": "h2",
+          "content": "スタック：東京から開発されるもの"
+        },
+        {
+          "type": "p",
+          "content": "東京拠点は、残りを除外することなく、3つのテックラインに特化している："
+        },
+        {
+          "type": "list",
+          "items": [
+            "組込ロボティクスとエッジAI：Rust + ROS 2 + Isaac Sim。典型的なケース：倉庫AGVフリート、自律AMR、製造ライン上のコンピュータビジョン。東京の利点：JP産業界との近接性（トヨタ、ファナック、安川電機、ソフトバンクロボティクス）。",
+            "AIファーストソフトウェア：本番環境のLLMエージェント、日本語コーパスでのRAG（ラテン文字に対して文字集約的）、AWS東京GPUでのファインチューニングパイプライン。APPI（日本版GDPR）ネイティブ対応。",
+            "重要産業用ソフトウェア：高可用性バックエンド、日本のERP統合（SAP JP、Oracle JP、Glovia）、レガシーCOBOL/メインフレーム近代化（日本の銀行クライアントケース：14ヶ月で400万行）。"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "本番の実用ケース"
+        },
+        {
+          "type": "list",
+          "items": [
+            "マネーフォワード — FinTechジョイントベンチャー、日本のリーダー × 大手銀行グループ。スタック Databricks + Delta Lake + dbt + AWS東京 + Unity Catalog。東京から主導されるチーム、Follow-the-Sunを介した24/7オペレーション。",
+            "Pichet Japan — 不動産間取り図上のAIビジョン、Next.js 16 + Sanity + Claude Vision + pgvector + Snowflake + Vercel。現地ファインチューニングに支えられた視覚的に印象的なユースケース。",
+            "日本の銀行COBOL近代化 — マルチエージェントAI（考古学者、建築家、清掃人）を介して14ヶ月で400万行のCOBOLを移行。差別化されたケーススタディ、独自の方法論。"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Abbeal東京チーム"
+        },
+        {
+          "type": "p",
+          "content": "Sébastien Lonjon（CEO）は2024年から東京を拠点。マリー・ヌエラス、アレクサンドル・リム、Mobbealチームは麻布十番に常駐。東京のクライアント（マネーフォワード、ル・モンド、Pichetなど）でミッション中のエンジニアは、チーム儀式のためにオフィスを中心に活動する。日本のクライアントと接触するエンジニアはJLPT N2+、その他はFR/ENバイリンガル。物理的な東京プレゼンス、完全リモート分散チームではない。"
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "日本でのテックプロジェクトの運営、または24ヶ月以内に独自の東京拠点を設立することを検討している？Abbeal麻布十番オフィスは、エントリーポイントまたは架け橋として機能できる。Sébastienは毎週東京から30分のコールを行う。デッキはなく、8年間の日本オペレーション経験のみ。"
+        }
+      ],
+      "fr-ca": [
+        {
+          "type": "h2",
+          "content": "Pourquoi un pôle Tokyo permanent change la donne"
+        },
+        {
+          "type": "p",
+          "content": "Une boîte aux lettres à Tokyo, beaucoup de cabinets de consultation française en ont. Un BPO sous-traité localement, encore plus. Mais un vrai bureau opéré par des engagés Abbeal seniors, qui font tourner du code en production chaque jour pour des clients japonais ET européens, c'est rare. Depuis 2018, Abbeal opère depuis Higashi-Azabu (Minato-ku) : on signe les contrats en yen, on facture en yen, on déclare en JPY au Japon. C'est l'inverse du modèle « consultant français parachuté 3 mois ». Le pôle Tokyo donne accès à : un marché techno japonais largement fermé aux étrangers (60 % des entreprises tech JP refusent de bosser sans interlocuteur sur place), un pont culturel et linguistique opéré par des ingés bilingues JP/EN/FR, et un avantage horaire 8h sur l'Europe pour la livraison Follow-the-Sun."
+        },
+        {
+          "type": "h2",
+          "content": "Ce qu'on fait depuis Tokyo"
+        },
+        {
+          "type": "h3",
+          "content": "Recrutement local de seniors japonais"
+        },
+        {
+          "type": "p",
+          "content": "Recherche directe sur le marché japonais (LinkedIn JP, Bizreach, Wantedly), validation technique en japonais ET en anglais, scoring double axe (technique + alignement valeurs). On ne « place » pas — on intègre dans nos équipes, ou on accompagne le client dans son recrutement local permanent quand c'est pertinent."
+        },
+        {
+          "type": "h3",
+          "content": "Mandats clients depuis Tokyo"
+        },
+        {
+          "type": "p",
+          "content": "Équipes embarquées chez Money Forward (data backbone d'une nouvelle banque numérique, Databricks + AWS Tokyo), Cartier (LLM privé affiné sur infra Cartier, mandat 4,5 ans en cours), Pichet (AI Vision sur plans immobiliers, Next.js 16 + Claude Vision + Snowflake), Le Monde (équipe Insights opérée depuis Tokyo 6 ans). Plus des engagements en robotique industrielle JP (cf cas usine 80 AGV ROS 2)."
+        },
+        {
+          "type": "h3",
+          "content": "Pont vers Paris et Montréal"
+        },
+        {
+          "type": "p",
+          "content": "Pour les clients européens qui veulent une présence Japon sans monter leur propre filiale : Abbeal Tokyo sert d'interface complète. Recrutement local de Japonais, signature de contrats en juridiction japonaise, gestion conformité APPI, transfert de connaissance vers les équipes Europe. C'est l'option « pôle Tokyo plug-and-play » qui évite à un CTO européen de passer 18 mois à monter un bureau sur place."
+        },
+        {
+          "type": "h2",
+          "content": "Stack : ce qui se développe depuis Tokyo"
+        },
+        {
+          "type": "p",
+          "content": "Le pôle Tokyo s'est spécialisé sur 3 lignes techno, sans exclure le reste :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Robotique embarquée et IA edge : Rust + ROS 2 + Isaac Sim. Cas typique : flotte AGV en entrepôt, AMR autonome, vision par ordinateur sur ligne de production. Avantage Tokyo : proximité avec les industriels JP (Toyota, Fanuc, Yaskawa, SoftBank Robotics).",
+            "IA-first software : agents LLM en production, RAG sur corpus japonais (caractère intensif vs latin), pipelines de fine-tuning sur GPU AWS Tokyo. Conformité APPI (équivalent Loi 25 / RGPD japonais) native.",
+            "Software industriel critique : back-ends haute disponibilité, intégrations ERP japonais (SAP JP, Oracle JP, Glovia), modernisation legacy COBOL/mainframe (cas client banque japonaise 4M lignes en 14 mois)."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Cas pratiques en production"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Money Forward — Coentreprise FinTech leader japonais × grand groupe bancaire. Pile Databricks + Delta Lake + dbt + AWS Tokyo + Unity Catalog. Équipe pilotée depuis Tokyo, opérations 24/7 via Follow-the-Sun.",
+            "Pichet Japan — AI Vision sur plans immobiliers, déploiement Next.js 16 + Sanity + Claude Vision + pgvector + Snowflake + Vercel. Cas d'usage visuellement impressionnant qui repose sur un fine-tuning local.",
+            "Modernisation COBOL banque japonaise — 4M de lignes COBOL migrées en 14 mois via multi-agents IA (Archéologue, Architecte, Nettoyeur). Cas d'étude différencié, méthodologie unique."
+          ],
+          "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "L'équipe Abbeal Tokyo"
+        },
+        {
+          "type": "p",
+          "content": "Sébastien Lonjon (CEO) est installé à Tokyo depuis 2024. Marie Nuellas, Alexandre Lim et l'équipe Mobbeal sont basés en permanence à Higashi-Azabu. Les engagés en mission chez nos clients tokyoïtes (Money Forward, Le Monde, Pichet, etc.) gravitent autour du bureau pour les rituels d'équipe. JLPT N2+ pour les ingés au contact client japonais, FR/EN bilingues pour les autres. Présence physique à Tokyo, pas une équipe distribuée tout à distance."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Tu envisages d'opérer un mandat techno au Japon, ou de monter ton propre pôle Tokyo dans 24 mois ? Le bureau Abbeal Higashi-Azabu peut servir de point d'entrée ou de pont. Sébastien fait ces appels 30 min chaque semaine depuis Tokyo. Pas de deck, juste l'expérience de 8 ans d'opération au Japon."
+        }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "q": "Comment recrutez-vous des seniors japonais ?",
+          "a": "Sourcing direct sur LinkedIn JP, Bizreach et Wantedly. Validation technique par nos ingés japonais bilingues (JLPT N1 / N2 + anglais business). Scoring double axe : technique + alignement valeurs. Pas de chasseur RH non-tech. Délai moyen : 6-8 semaines pour un profil senior tech, garantie 6 mois remplacement gratuit."
+        },
+        {
+          "q": "Comment se gère la communication FR/JP quand le client est européen ?",
+          "a": "L'interface principale est en anglais ou français (selon préférence client). Nos ingés bilingues servent de pont actif quand il faut interagir avec des fournisseurs JP, des autorités JP, ou des équipes JP côté client. Tactiq + transcripts auto traduits pour les meetings hybrides. Pas de perte d'information entre les rives."
+        },
+        {
+          "q": "Comment se fait le suivi projet depuis l'Europe ?",
+          "a": "Hebdo client en synchrone (visio 1h, fenêtre Tokyo soir = Paris matin), reporting structuré le vendredi, Slack continu. Le 24/7 Follow-the-Sun joue à notre avantage : tu as un délivrable ou un ticket résolu chaque matin parisien sans avoir veillé. Backfill CRM temps réel sur BoondManager."
+        },
+        {
+          "q": "Faut-il prévoir des déplacements à Tokyo ?",
+          "a": "Optionnels. La majorité de nos clients européens viennent 2-3 jours par an pour les kick-off importants et les revues stratégiques. On gère l'accueil sur place (réservation hôtel, organisation des sessions, ponts client japonais). Si tu ne viens pas, le projet tourne quand même."
+        },
+        {
+          "q": "Quel cadre juridique pour les missions à Tokyo ?",
+          "a": "Contrat opéré depuis l'entité Abbeal Japan KK (Kabushiki Kaisha) immatriculée au Japon. Facturation en yen (JPY) ou en euros selon préférence client. Conformité APPI native (équivalent RGPD japonais). Si le client a besoin d'un contrat sous droit français/québécois en plus, on peut le faire via l'entité Abbeal SAS Paris."
+        },
+        {
+          "q": "Quelles langues opérez-vous ?",
+          "a": "Japonais natif (équipe Tokyo), français natif (siège Paris), anglais business niveau C1+ partout. Documentation projet en anglais par défaut (lingua franca des équipes tri-géo), avec sections JP pour les livrables qui resteront opérés par une équipe japonaise. Possibilité de produire des livrables 100% en japonais sur demande explicite."
+        }
+      ],
+      "en": [
+        {
+          "q": "How do you recruit Japanese seniors?",
+          "a": "Direct sourcing on LinkedIn JP, Bizreach and Wantedly. Technical validation by our bilingual Japanese engineers (JLPT N1/N2 + business English). Dual-axis scoring: technical + values alignment. No non-tech HR recruiter. Average lead time: 6-8 weeks for a senior tech profile, 6-month free replacement guarantee."
+        },
+        {
+          "q": "How is FR/JP communication handled when the client is European?",
+          "a": "Main interface in English or French (per client preference). Our bilingual engineers act as active bridge when interacting with JP suppliers, JP authorities, or JP client-side teams. Tactiq + auto-translated transcripts for hybrid meetings. No information loss across shores."
+        },
+        {
+          "q": "How is project tracking done from Europe?",
+          "a": "Weekly client sync (1h video, Tokyo evening = Paris morning window), structured Friday reporting, continuous Slack. The 24/7 Follow-the-Sun works in our favor: you get a deliverable or resolved ticket every Paris morning without staying up. Real-time CRM backfill on BoondManager."
+        },
+        {
+          "q": "Are travels to Tokyo required?",
+          "a": "Optional. Most of our European clients come 2-3 days a year for major kick-offs and strategic reviews. We handle on-site logistics (hotel booking, session organization, Japanese client bridges). If you don't come, the project still runs."
+        },
+        {
+          "q": "What legal framework for Tokyo missions?",
+          "a": "Contracts operated from the Abbeal Japan KK entity (Kabushiki Kaisha) registered in Japan. Invoicing in yen (JPY) or euros per client preference. Native APPI compliance (Japanese GDPR equivalent). If the client needs an additional French/Quebec-law contract, we can do it via Abbeal SAS Paris."
+        },
+        {
+          "q": "What languages do you operate in?",
+          "a": "Native Japanese (Tokyo team), native French (Paris HQ), business English at C1+ level everywhere. Project documentation in English by default (tri-geo team lingua franca), with JP sections for deliverables that will remain operated by a Japanese team. Possibility to produce 100% Japanese deliverables on explicit request."
+        }
+      ],
+      "ja": [
+        {
+          "q": "日本人シニアをどのように採用していますか？",
+          "a": "LinkedIn JP、ビズリーチ、Wantedlyでの直接ソーシング。バイリンガル日本人エンジニア（JLPT N1/N2 + ビジネス英語）による技術検証。ダブル軸スコアリング：技術 + 価値観の一致。非技術系の人事リクルーターなし。平均リードタイム：シニアテックプロフィールで6-8週間、6ヶ月の無料リプレースメント保証。"
+        },
+        {
+          "q": "クライアントが欧州の場合、FR/JPコミュニケーションはどう処理されますか？",
+          "a": "メインインターフェースは英語またはフランス語（クライアントの好みに応じて）。私たちのバイリンガルエンジニアは、JPサプライヤー、JP当局、またはJPクライアント側チームとのやり取りが必要な場合、アクティブな架け橋として機能する。ハイブリッドミーティング用にTactiq + 自動翻訳トランスクリプト。両岸間で情報損失なし。"
+        },
+        {
+          "q": "欧州からのプロジェクト追跡はどう行われますか？",
+          "a": "クライアントとの週次同期（1時間ビデオ、東京の夜 = パリの朝の枠）、金曜日の構造化レポート、継続的なSlack。24/7 Follow-the-Sunは私たちに有利に働く：起きずに毎パリの朝、納品物または解決済みチケットを得る。BoondManagerでのリアルタイムCRMバックフィル。"
+        },
+        {
+          "q": "東京への出張は必要ですか？",
+          "a": "オプション。欧州クライアントの大多数は、主要なキックオフと戦略レビューのために年間2-3日来る。現地ロジスティクス（ホテル予約、セッション組織、日本のクライアント架け橋）を処理する。来ない場合でも、プロジェクトは引き続き実行される。"
+        },
+        {
+          "q": "東京ミッションのための法的枠組みは？",
+          "a": "日本で登録されたAbbeal Japan KK（株式会社）エンティティから運営される契約。クライアントの好みに応じて円（JPY）またはユーロでの請求。APPIネイティブコンプライアンス（日本のGDPR相当）。クライアントが追加でフランス/ケベック法契約を必要とする場合、Abbeal SASパリを介して可能。"
+        },
+        {
+          "q": "どの言語で運営していますか？",
+          "a": "ネイティブ日本語（東京チーム）、ネイティブフランス語（パリ本社）、ビジネス英語C1+レベルがあらゆる場所で。プロジェクトドキュメントはデフォルトで英語（トライジオチームの共通語）、日本のチームによって運営され続ける納品物にはJPセクションあり。明示的な要求に応じて100%日本語の納品物を作成する可能性。"
+        }
+      ],
+      "fr-ca": [
+        {
+          "q": "Comment recrutez-vous des seniors japonais ?",
+          "a": "Recherche directe sur LinkedIn JP, Bizreach et Wantedly. Validation technique par nos ingés japonais bilingues (JLPT N1 / N2 + anglais d'affaires). Scoring double axe : technique + alignement valeurs. Pas de chasseur RH non techno. Délai moyen : 6-8 semaines pour un profil senior techno, garantie 6 mois de remplacement gratuit."
+        },
+        {
+          "q": "Comment se gère la communication FR/JP quand le client est européen ?",
+          "a": "L'interface principale est en anglais ou français (selon préférence client). Nos ingés bilingues servent de pont actif quand il faut interagir avec des fournisseurs JP, des autorités JP, ou des équipes JP côté client. Tactiq + transcriptions auto traduites pour les rencontres hybrides. Pas de perte d'information entre les rives."
+        },
+        {
+          "q": "Comment se fait le suivi de mandat depuis l'Europe ?",
+          "a": "Hebdo client en synchrone (visio 1h, fenêtre Tokyo soir = Paris matin), reporting structuré le vendredi, Slack continu. Le 24/7 Follow-the-Sun joue à notre avantage : tu as un livrable ou un billet résolu chaque matin parisien sans avoir veillé. Backfill CRM temps réel sur BoondManager."
+        },
+        {
+          "q": "Faut-il prévoir des déplacements à Tokyo ?",
+          "a": "Optionnels. La majorité de nos clients européens viennent 2-3 jours par an pour les kick-off importants et les revues stratégiques. On gère l'accueil sur place (réservation hôtel, organisation des sessions, ponts client japonais). Si tu ne viens pas, le mandat tourne quand même."
+        },
+        {
+          "q": "Quel cadre juridique pour les mandats à Tokyo ?",
+          "a": "Contrat opéré depuis l'entité Abbeal Japan KK (Kabushiki Kaisha) immatriculée au Japon. Facturation en yen (JPY) ou en euros selon préférence client. Conformité APPI native (équivalent Loi 25 / RGPD japonais). Si le client a besoin d'un contrat sous droit français/québécois en plus, on peut le faire via l'entité Abbeal SAS Paris."
+        },
+        {
+          "q": "Quelles langues opérez-vous ?",
+          "a": "Japonais natif (équipe Tokyo), français natif (siège Paris), anglais d'affaires niveau C1+ partout. Documentation de mandat en anglais par défaut (lingua franca des équipes tri-pôle), avec sections JP pour les livrables qui resteront opérés par une équipe japonaise. Possibilité de produire des livrables 100 % en japonais sur demande explicite."
+        }
+      ]
+    }
   }
 }
