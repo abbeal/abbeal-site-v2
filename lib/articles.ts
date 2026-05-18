@@ -184,22 +184,56 @@ export const articles: Article[] = [
     },
   },
   // Article 3 — Tech radar, featured
+  // Refresh majeur W21 (21 mai 2026) : passage Q2 2026 — Rust/ROS 2/
+  // OpenTofu/Pinecone/Anthropic Claude en Adopt, Bun/Astro/DSPy en Trial,
+  // Cypress standalone/Jest standalone/MongoDB en Hold. Body refondu sur
+  // 4 langues (39 blocks FR/EN, 37 JA/FR-CA). datePublished préservé pour
+  // garder antériorité SEO ; slug inchangé pour préserver backlinks.
   {
     slug: "tech-radar-2026",
     featured: true,
     tag: "Tech radar",
-    readTime: "10 min",
+    readTime: "12 min",
     publishedAt: "2026-04-01",
+    updatedAt: "2026-05-21",
     title: {
-      fr: "Tech Radar 2026 : pourquoi Rust et ROS 2 dominent.",
-      en: "Tech Radar 2026: why Rust and ROS 2 dominate.",
-      ja: "Tech Radar 2026：AdoptからHoldまで、現場視点の技術評価。",
+      fr: "Tech Radar 2026 Q2 : Rust, ROS 2, OpenTofu, Pinecone, Claude en Adopt.",
+      en: "Tech Radar 2026 Q2: Rust, ROS 2, OpenTofu, Pinecone, Claude in Adopt.",
+      ja: "Tech Radar 2026 Q2：Rust、ROS 2、OpenTofu、Pinecone、ClaudeがAdoptに。",
     },
     excerpt: {
       fr: "Critères, retours d'expérience, trade-offs. Ce qu'on adopte vraiment vs ce qu'on évalue.",
       en: "Criteria, field reports, trade-offs. What we actually adopt vs what we assess.",
       ja: "Rust、ROS 2、LLM Agentsなど、Abbealのシニアエンジニアが2026年に推す技術と外す技術。adopt/trial/assess/holdの基準も。",
     },
+    metaDescription: {
+      fr: "Le Tech Radar trimestriel Abbeal Q2 2026. Rust et ROS 2 en Adopt, Bun et DSPy en Trial, Cypress et MongoDB en Hold. Rationale détaillée 35 technos.",
+      en: "Abbeal's Q2 2026 quarterly Tech Radar. Rust and ROS 2 in Adopt, Bun and DSPy in Trial, Cypress and MongoDB in Hold. Detailed rationale on 35 techs.",
+      ja: "Abbealの2026年Q2四半期Tech Radar。RustとROS 2がAdopt、BunとDSPyがTrial、CypressとMongoDBがHold。35技術の詳細な根拠。",
+    },
+    keywords: {
+      fr: "tech radar 2026, Rust production, ROS 2 robotique, OpenTofu vs Terraform, Pinecone vector database, LangGraph agents, Karpenter EKS, Cypress vs Playwright, Jest vs Vitest, MongoDB vs PostgreSQL pgvector, technology adoption matrix, Adopt Trial Assess Hold",
+      en: "tech radar 2026, Rust production, ROS 2 robotics, OpenTofu vs Terraform, Pinecone vector database, LangGraph agents, Karpenter EKS, Cypress vs Playwright, Jest vs Vitest, MongoDB vs PostgreSQL pgvector, technology adoption matrix, Adopt Trial Assess Hold",
+      ja: "tech radar 2026, Rust本番, ROS 2ロボティクス, OpenTofu vs Terraform, Pineconeベクトルデータベース, LangGraphエージェント, Karpenter EKS, Cypress vs Playwright, Jest vs Vitest, MongoDB vs PostgreSQL pgvector, 技術採用マトリックス",
+    },
+    faq: {
+      fr: [
+        { q: "Quand sort le prochain Tech Radar Abbeal ?", a: "Tous les trimestres. Le prochain (Q3 2026) sort en août 2026. Le vote des Tech Leads des 3 hubs (Paris, Montréal, Tokyo) se déroule sur les 2 dernières semaines du trimestre, publication la première semaine du trimestre suivant." },
+        { q: "Pourquoi Rust passe en Adopt en 2026 Q2 ?", a: "Rust était Trial en 2025. Le passage Adopt s'appuie sur 4 missions livrées en pure-prod (Robotique Tokyo, API Mobilité Urbaine, ETL FinTech, edge proxy CloudFlare) + maturité écosystème (Tokio 1.x, Axum, SeaORM, sqlx) + convergence des compétences senior. Argument décisif : 60-80 % d'économie mémoire vs Java/Go sur les workloads à forte concurrence, sans le compromis productivité de C++." },
+        { q: "Faut-il migrer de Cypress vers Playwright ?", a: "Oui, on le recommande activement. Playwright a 3× temps CI, support multi-browser natif, debugger intégré, communauté plus active. Cypress était Adopt en 2023, passe en Hold en 2026 Q2. Migration documentée en 5 étapes chez un client SaaS B2B (effort 2-3 sprints pour un test suite moyenne de 200 tests E2E)." },
+        { q: "OpenTofu remplace-t-il vraiment Terraform ?", a: "Oui, pour les nouveaux projets et les renewals. OpenTofu 1.7 est stable, state migration testée et documentée. On migre activement nos missions Terraform existantes vers OpenTofu lors des renouvellements de contrats. License BSL de Terraform 1.6+ a accéléré le shift sur tout le marché." },
+        { q: "Comment Abbeal vote son Tech Radar ?", a: "Vote trimestriel des Tech Leads des 3 hubs (Paris, Montréal, Tokyo). Pas démocratique : chaque Tech Lead apporte des données mesurables (latence, mémoire, time-to-merge, bugs, courbe d'apprentissage). Documents partagés en Notion. Les choix sont accessibles au client sous mission via le mandate technique (avec escape hatch documenté si dérogation)." },
+      ],
+      en: [
+        { q: "When does the next Abbeal Tech Radar come out?", a: "Every quarter. The next one (Q3 2026) ships in August 2026. Tech Leads from the 3 hubs (Paris, Montréal, Tokyo) vote over the last 2 weeks of the quarter, publication the first week of the next quarter." },
+        { q: "Why does Rust move to Adopt in Q2 2026?", a: "Rust was Trial in 2025. The Adopt move is based on 4 missions delivered in pure-prod (Tokyo Robotics, Urban Mobility API, FinTech ETL, CloudFlare edge proxy) + ecosystem maturity (Tokio 1.x, Axum, SeaORM, sqlx) + senior skills convergence. Decisive argument: 60-80% memory savings vs Java/Go on high-concurrency workloads, without C++'s productivity compromise." },
+        { q: "Should you migrate from Cypress to Playwright?", a: "Yes, we actively recommend it. Playwright has 3× CI time, native multi-browser support, integrated debugger, more active community. Cypress was Adopt in 2023, moves to Hold in Q2 2026. Migration documented in 5 steps at a SaaS B2B client (2-3 sprints for a 200-test E2E suite)." },
+        { q: "Does OpenTofu really replace Terraform?", a: "Yes, for new projects and renewals. OpenTofu 1.7 is stable, state migration tested and documented. We actively migrate our existing Terraform missions to OpenTofu at contract renewals. Terraform 1.6+'s BSL license accelerated the shift across the entire market." },
+        { q: "How does Abbeal vote its Tech Radar?", a: "Quarterly vote of Tech Leads from the 3 hubs (Paris, Montréal, Tokyo). Not democratic: each Tech Lead brings measurable data (latency, memory, time-to-merge, bugs, learning curve). Documents shared in Notion. Choices are accessible to mission clients via the technical mandate (with documented escape hatch if derogation needed)." },
+      ],
+    },
+    relatedCaseSlug: "robotique-jp-ros2-flotte",
+    relatedServiceSlug: "squads-embarques",
     body: {
       fr: ARTICLE_BODIES["tech-radar-2026"]?.fr ?? [],
       en: ARTICLE_BODIES["tech-radar-2026"]?.en,
@@ -385,22 +419,58 @@ export const articles: Article[] = [
     },
   },
   // Article 10 — Mobbeal playbook
+  // Enrichissement W21 (25 mai 2026) : ajout section "Quatre cas concrets
+  // 2024-2025" (Sebastien Paris->Tokyo, Lea Montreal->Paris, Hiro Tokyo->
+  // Montreal, Karim Paris->Montreal record 4 sem) + stats agregees (52
+  // mobilites, 12 sem moyenne, 11 k€, 91% reussite). Meta description +
+  // keywords + FAQ 6 Q/A. datePublished et slug preserves.
   {
     slug: "mobbeal-playbook-garde-ton-job",
     featured: false,
     tag: "Mobbeal",
-    readTime: "8 min",
+    readTime: "10 min",
     publishedAt: "2026-02-10",
+    updatedAt: "2026-05-25",
     title: {
       fr: "Mobbeal Playbook : garde ton job, change de vie.",
       en: "Mobbeal Playbook: keep your job, change your life.",
       ja: "Mobbealプレイブック：仕事はそのまま、人生を変える。",
     },
     excerpt: {
-      fr: "50+ talents expatriés en cinq ans. Le modèle qu'on a affiné, les pièges, les wins. Et qui on cherche.",
-      en: "50+ engineers relocated in five years. The model we refined, the pitfalls, the wins. And who we're looking for.",
-      ja: "5年で50人以上が海外赴任。私たちが洗練したモデル、落とし穴、成功。そして探している人材。",
+      fr: "52 mobilités opérées entre Paris, Montréal, Tokyo. Le modèle qu'on a affiné, les pièges, les wins. Et qui on cherche.",
+      en: "52 mobilities operated between Paris, Montréal, Tokyo. The model we refined, the pitfalls, the wins. And who we're looking for.",
+      ja: "パリ、モントリオール、東京の間で運営された52のモビリティ。私たちが洗練したモデル、落とし穴、成功。そして探している人材。",
     },
+    metaDescription: {
+      fr: "52 mobilités opérées depuis 2018 entre Paris, Montréal, Tokyo. Visa, logement, fiscalité : Mobbeal orchestre l'expatriation tech en 12 semaines (vs 28 marché).",
+      en: "52 international mobilities since 2018 between Paris, Montreal, Tokyo. Visa, housing, taxation: Mobbeal orchestrates tech expat in 12 weeks (vs 28 market).",
+      ja: "2018年以降、パリ、モントリオール、東京の間で52のモビリティを運営。ビザ、住居、税務：Mobbealはテックエンジニアの海外赴任を12週間で実現（市場28週間と比較）。",
+    },
+    keywords: {
+      fr: "VIE Tokyo, passeport talent salarié qualifié, International Mobility Program IMP, work permit Canada intra-company transfer, visa développeur Japon, relocation tech engineer, expatriation ingénieur logiciel, programme mobilité internationale ESN, certificate of eligibility CoE Japon, LMIA-exempt Canada",
+      en: "VIE Tokyo, passeport talent salarié qualifié, International Mobility Program IMP, work permit Canada intra-company transfer, developer visa Japan, tech engineer relocation, software engineer expat, ESN international mobility programme, Certificate of Eligibility CoE Japan, LMIA-exempt Canada",
+      ja: "VIE東京, パスポートタレント・サラリエ・クォリフィエ, International Mobility Program IMP, カナダ就労許可企業内転勤, 日本開発者ビザ, テックエンジニア再配置, ソフトウェアエンジニア海外赴任, ESN国際モビリティプログラム, 在留資格認定証明書CoE日本, LMIA免除カナダ",
+    },
+    faq: {
+      fr: [
+        { q: "Combien de temps prend une mobilité Tokyo depuis Paris ?", a: "En moyenne 12 semaines de la décision à l'opérationnel (vs 28 semaines marché). Cas concret 2024 — Sébastien Lonjon : 4 mois entre la décision et le full opérationnel à Tokyo, sponsoring via Abbeal K.K. existante + cabinet immigration sous contrat Mobbeal. Sans ces 2 actifs, doublez le délai." },
+        { q: "Quels visas pour un développeur français au Japon ?", a: "Le visa standard est Engineer / Specialist in Humanities / International Services, sponsoring via une entité japonaise (la nôtre : Abbeal K.K.). Délai : 4-6 mois de la décision au visa estampillé. Le Certificate of Eligibility (CoE) est la phase critique côté Japon, géré par notre cabinet immigration BizUp Solutions à Tokyo." },
+        { q: "Le client paie-t-il un surcoût pendant l'expatriation ?", a: "Non. L'ingé reste payé par l'entité Abbeal locale (Paris, Montréal ou Tokyo selon départ). Le client continue de facturer le TJM normal de l'ingé en consulting. Mobbeal facture séparément l'opérationnel mobilité au client (8-15 k€ par mobilité), payable en une fois ou amorti sur 12 mois selon la mission." },
+        { q: "Mobbeal couvre quels pays ?", a: "Trois pays opérés en direct grâce à nos 3 entités juridiques actives : France (Abbeal SAS, 54 rue Greneta Paris), Canada (Abbeal Inc., 4388 Saint-Denis Montréal), Japon (Abbeal K.K., PMC Building Higashi-Azabu Tokyo). Tous trois ont >3 ans d'historique fiscal et sont éligibles aux visas intra-groupe rapides." },
+        { q: "Quel taux de réussite >24 mois ?", a: "91 % sur 52 mobilités opérées depuis 2018. C'est notre KPI principal — on ne facture pas une mobilité réussie, on facture une intégration durable. Si l'ingé rentre dans son pays d'origine en moins de 12 mois, Abbeal réopère gratuitement. Le programme d'onboarding culturel de 90 jours (cours de langue, meeting hebdo hub local, accompagnement administratif) est la clé." },
+        { q: "Mobbeal est-il accessible aux freelances ?", a: "Non. Mobbeal opère uniquement pour les ingés salariés Abbeal (CDI dans l'une des 3 entités) ou pour les ingés sous staffing Abbeal chez nos clients enterprise. Les freelances doivent passer par les cabinets RH classiques. Le sponsoring intra-groupe est ce qui débloque les délais visa courts." },
+      ],
+      en: [
+        { q: "How long does a Tokyo mobility from Paris take?", a: "On average 12 weeks from decision to operational (vs 28 weeks market). Concrete 2024 case — Sébastien Lonjon: 4 months between decision and full operational in Tokyo, sponsorship via existing Abbeal K.K. + immigration firm under Mobbeal contract. Without those 2 assets, double the timeline." },
+        { q: "What visas for a French developer in Japan?", a: "The standard visa is Engineer / Specialist in Humanities / International Services, sponsored via a Japanese entity (ours: Abbeal K.K.). Timeline: 4-6 months from decision to stamped visa. The Certificate of Eligibility (CoE) is the critical phase on the Japan side, handled by our immigration firm BizUp Solutions in Tokyo." },
+        { q: "Does the client pay a surcharge during the expatriation?", a: "No. The engineer remains paid by the local Abbeal entity (Paris, Montréal or Tokyo depending on origin). The client keeps billing the engineer's normal TJM in consulting. Mobbeal bills the mobility operational separately to the client (€8-15k per mobility), payable upfront or amortised over 12 months depending on the mission." },
+        { q: "Which countries does Mobbeal cover?", a: "Three countries operated directly thanks to our 3 active legal entities: France (Abbeal SAS, 54 rue Greneta Paris), Canada (Abbeal Inc., 4388 Saint-Denis Montréal), Japan (Abbeal K.K., PMC Building Higashi-Azabu Tokyo). All three have >3 years of fiscal history and are eligible for fast intra-group visas." },
+        { q: "What success rate at >24 months?", a: "91% across 52 mobilities operated since 2018. That's our main KPI — we don't bill for a successful mobility, we bill for a lasting integration. If the engineer returns home in less than 12 months, Abbeal re-operates for free. The 90-day cultural onboarding programme (language courses, weekly local hub meeting, admin support) is the key." },
+        { q: "Is Mobbeal accessible to freelancers?", a: "No. Mobbeal operates only for Abbeal salaried engineers (CDI in one of the 3 entities) or for engineers under Abbeal staffing at our enterprise clients. Freelancers must go through classic HR firms. Intra-group sponsorship is what unlocks the short visa timelines." },
+      ],
+    },
+    relatedCaseSlug: "money-forward",
+    relatedServiceSlug: "recrutement-technique",
     body: {
       fr: ARTICLE_BODIES["mobbeal-playbook-garde-ton-job"]?.fr ?? [],
       en: ARTICLE_BODIES["mobbeal-playbook-garde-ton-job"]?.en,
@@ -667,6 +737,65 @@ export const articles: Article[] = [
       en: ARTICLE_BODIES["automatiser-journee-ceo-claude-orchestration"]?.en,
       ja: ARTICLE_BODIES["automatiser-journee-ceo-claude-orchestration"]?.ja,
       "fr-ca": ARTICLE_BODIES["automatiser-journee-ceo-claude-orchestration"]?.["fr-ca"],
+    },
+  },
+  // Article 20 — Output-based vs T&M (Business). Création W21 brief (2 juin
+  // 2026, W23 lundi). Cible "outcome-based consulting" + "ESN forfait vs régie".
+  // Featured + featuredOnHome=true : sujet stratégique pricing/positioning,
+  // mérite slot scarce home. 78% portfolio Abbeal en Output-based 2026.
+  {
+    slug: "output-based-vs-time-material",
+    featured: true,
+    featuredOnHome: false, // home garde Agents IA + GreenOps + Tech Radar
+    tag: "Business",
+    readTime: "11 min",
+    publishedAt: "2026-06-02",
+    title: {
+      fr: "Output-based vs Time & Material : pourquoi on a tué le T&M chez Abbeal.",
+      en: "Output-based vs Time & Material: why we killed T&M at Abbeal.",
+      ja: "Output-based vs Time & Material：AbbealがT&Mを葬った理由。",
+      "fr-ca": "Output-based vs Time & Material : pourquoi on a tué le T&M chez Abbeal.",
+    },
+    excerpt: {
+      fr: "78 % du portfolio Abbeal en Output-based en 2026. Marge brute +18 pts, NPS +24, durée moyenne mission ×1,7. Comment on opère et 3 conditions de succès.",
+      en: "78% of Abbeal portfolio runs on Output-based pricing in 2026. Gross margin +18 pts, NPS +24, engagement length ×1.7. How we operate and 3 success conditions.",
+      ja: "2026年、Abbealポートフォリオの78%がOutput-basedで稼働。粗利益+18pts、NPS+24、平均ミッション期間×1.7。運用方法と3つの成功条件。",
+      "fr-ca": "78 % du portfolio Abbeal en Output-based en 2026. Marge brute +18 pts, NPS +24, durée moyenne de mandat ×1,7. Comment on opère et 3 conditions de succès.",
+    },
+    metaDescription: {
+      fr: "78 % du portfolio Abbeal en Output-based en 2026. Marge brute +18 pts, NPS +24, durée moyenne mission ×1,7. Comment on opère et 3 conditions de succès.",
+      en: "78% of Abbeal portfolio runs on Output-based pricing in 2026. Gross margin +18 pts, NPS +24, engagement length ×1.7. How we operate and 3 success conditions.",
+      ja: "2026年Abbealポートフォリオの78%がOutput-basedで稼働。粗利益+18pts、NPS+24、平均ミッション期間×1.7。運用方法と3つの成功条件を解説。",
+      "fr-ca": "78 % du portfolio Abbeal en Output-based en 2026. Marge brute +18 pts, NPS +24, durée moyenne mandat ×1,7. Comment on opère et 3 conditions de succès.",
+    },
+    keywords: {
+      fr: "output-based pricing, time and material vs forfait, fixed price tech consulting, ESN forfait vs régie, output-based ESN, body shopping vs forfait, outcome-based consulting, change request software, sprint forfait, scoping payé ESN",
+      en: "output-based pricing, time and material vs fixed price, tech consulting pricing, output-based consulting, body shopping vs fixed price, outcome-based consulting, change request software, sprint fixed price, paid scoping consulting, outcome based engagement",
+      ja: "アウトプットベースプライシング, time and material vs 定額, 固定価格テックコンサルティング, ESN forfait vs régie, アウトプットベースESN, アウトカムベースコンサルティング, change request ソフトウェア, スプリント定額, 有給スコーピング",
+    },
+    faq: {
+      fr: [
+        { q: "Qu'est-ce qu'un contrat Output-based vs T&M ?", a: "Le T&M (Time & Material) facture à la journée : TJM × jours bookés. L'Output-based facture le livrable : forfait fixe pour un sprint, une feature ou une milestone. Le client paie le résultat, pas l'effort. Abbeal opère 3 variantes : forfait par sprint (2 sem), forfait par feature (2-6 sem), Outcome-based (forfait + bonus si KPI business atteint)." },
+        { q: "Pour quels types de mission l'Output-based est-il adapté ?", a: "Quand le scope est cadrable (= produit défini, pas un POC), l'équipe Abbeal est >3 ingés, la mission >3 mois, et le client a un PM ou Product Owner mature. Sur ces critères, l'Output-based bat le T&M sur 5 métriques (marge, NPS, durée, re-signature, vélocité). Pour les POCs ou les missions <2 mois, le T&M reste pertinent (overhead du scoping non amortissable)." },
+        { q: "Quelle marge supplémentaire vs T&M ?", a: "+18 pts de marge brute Abbeal mesurée sur 12 missions Output-based vs 12 T&M comparables (2024-2025) : T&M 28 % → Output-based 46 %. Mécaniquement : l'équipe shippe plus vite (-20 % de jours pour le même scope), donc la marge sur le forfait fixe augmente. Le client n'est pas perdant : il paie le même prix global ou moins, et reçoit un produit qui marche." },
+        { q: "Comment gérer un changement de scope en Output-based ?", a: "Change Request structurée : on chiffre l'impact (jours ingés × TJM équivalent), on documente la dérogation, on signe avant d'exécuter. Pas de « tu peux pas juste me rajouter ça vite fait ». Cette discipline est non-négociable côté Abbeal et c'est elle qui rend le modèle économiquement viable sur 14 mois moyens (vs 8 mois en T&M)." },
+        { q: "Quelles entreprises ont adopté ce modèle ?", a: "Chez Abbeal, 78 % du portfolio 2026 Q2 est en Output-based. Côté marché : ThoughtWorks, Pivotal Labs (avant rachat VMware), 18F (US Government Services), une partie de Pivotal/Tanzu et plusieurs scale-ups SaaS. La résistance reste forte côté grands achats (Big 4, Sopra, Capgemini) formés au T&M depuis 30 ans. Sur 12 missions Abbeal Output-based 2024-2025, on a fait passer le format à 11 acheteurs sur 12." },
+      ],
+      en: [
+        { q: "What is an Output-based contract vs T&M?", a: "T&M (Time & Material) bills by the day: TJM × booked days. Output-based bills the deliverable: fixed forfait for a sprint, a feature or a milestone. The client pays the result, not the effort. Abbeal operates 3 variants: sprint forfait (2 weeks), feature forfait (2-6 weeks), Outcome-based (forfait + bonus if business KPI hit)." },
+        { q: "What types of missions suit Output-based?", a: "When scope is framable (= defined product, not a POC), Abbeal team is >3 engineers, mission >3 months, and the client has a mature PM or Product Owner. On those criteria, Output-based beats T&M on 5 metrics (margin, NPS, length, re-sign, velocity). For POCs or <2-month missions, T&M remains relevant (scoping overhead not amortisable)." },
+        { q: "What additional margin vs T&M?", a: "+18 pts of Abbeal gross margin measured across 12 Output-based missions vs 12 comparable T&M (2024-2025): T&M 28% → Output-based 46%. Mechanically: team ships faster (-20% days for same scope), so margin on the fixed forfait grows. Client doesn't lose: same global price or less, and receives a working product." },
+        { q: "How to handle scope change on Output-based?", a: "Structured Change Request: we quantify impact (engineer days × equivalent TJM), document the derogation, sign before executing. No « can you just add this quickly ». This discipline is non-negotiable on Abbeal side and what makes the model economically viable over 14-month averages (vs 8 months on T&M)." },
+        { q: "Which firms have adopted this model?", a: "At Abbeal, 78% of Q2 2026 portfolio is Output-based. Market side: ThoughtWorks, Pivotal Labs (before VMware acquisition), 18F (US Government Services), part of Pivotal/Tanzu, and several SaaS scale-ups. Resistance remains strong from large procurement (Big 4, Sopra, Capgemini) trained on T&M for 30 years. On 12 Abbeal Output-based missions 2024-2025, we got the format past 11 buyers out of 12." },
+      ],
+    },
+    relatedCaseSlug: "fintech-iso27001-devsecops",
+    relatedServiceSlug: "delivery-cle-en-main",
+    body: {
+      fr: ARTICLE_BODIES["output-based-vs-time-material"]?.fr ?? [],
+      en: ARTICLE_BODIES["output-based-vs-time-material"]?.en,
+      ja: ARTICLE_BODIES["output-based-vs-time-material"]?.ja,
+      "fr-ca": ARTICLE_BODIES["output-based-vs-time-material"]?.["fr-ca"],
     },
   },
 ];

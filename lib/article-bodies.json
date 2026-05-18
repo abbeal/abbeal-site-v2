@@ -766,342 +766,758 @@
   "tech-radar-2026": {
     "fr": [
       {
-        "type": "p",
-        "content": "Un tech radar sans critères de classement, c'est une liste de courses. Voici le nôtre pour 2026, construit à partir de plus de 40 missions livrées sur les douze derniers mois à Paris, Montréal et Tokyo. Quatre quadrants, des arbitrages tranchés, zéro mode."
+        "type": "callout",
+        "tone": "ink",
+        "content": "TL;DR — Tech Radar trimestriel Abbeal Q2 2026 : Rust, ROS 2, OpenTofu, Pinecone, Anthropic Claude passent en Adopt. Bun, Astro, DSPy en Trial. Cypress standalone et Jest standalone en Hold. 35 technos évaluées, vote équipe trimestriel, rationale détaillée pour chaque mouvement. Utilisé en mission client avec mandate strict + escape hatch documenté."
       },
       {
         "type": "h2",
-        "content": "Critères de classement"
+        "content": "Méthodologie"
       },
       {
         "type": "p",
-        "content": "Une techno entre en Adopt si elle a tenu en production sur au moins trois clients différents, secteurs distincts, équipes différentes. Trial : un succès en prod, mais pas encore reproduit. Assess : intéressant en R&D, pas mûr pour la prod critique. Hold : nous déconseillons activement."
-      },
-      {
-        "type": "h2",
-        "content": "Adopt"
+        "content": "Le Tech Radar Abbeal s'inspire de la matrice ThoughtWorks, adaptée à notre contexte tri-géo. Tous les trois mois, les Tech Leads des trois hubs (Paris, Montréal, Tokyo) votent sur 30 à 40 technos clés. Quatre niveaux :"
       },
       {
         "type": "list",
-        "ordered": false,
         "items": [
-          "Rust pour les services backend critiques où la performance et la sûreté mémoire comptent. Axum, Tokio, sqlx. Adopté chez deux fintechs et un éditeur SaaS B2B.",
-          "RAG (Retrieval-Augmented Generation) avec petits modèles locaux pour le tri et LLMs externes pour la génération. Pinecone ou pgvector selon le volume.",
-          "ROS 2 Humble pour la robotique industrielle. Migration depuis ROS 1 critique, fenêtre de support se ferme.",
-          "OpenTofu en remplacement de Terraform. Licence stable, communauté active, drop-in replacement."
-        ]
+          "**Adopt** — validée en production sur au moins 3 missions, performante, maintenable. Mandate par défaut sur les nouvelles missions.",
+          "**Trial** — validation positive sur 1-2 missions clients. Recommandée si le contexte projet s'y prête. Escape hatch requis.",
+          "**Assess** — prometteuse mais pas encore testée en prod. À expérimenter en POC ou side project. Pas en mission client critique.",
+          "**Hold** — techno qu'on retire activement, ou qu'on déconseille de démarrer. Avec rationale documenté."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "Le vote n'est pas démocratique : chaque Tech Lead apporte des données mesurables (latence, mémoire, time-to-merge, bugs, courbe d'apprentissage). Les choix sont documentés dans un fichier Notion partagé avec les clients sous mission."
       },
       {
         "type": "h2",
-        "content": "Trial"
+        "content": "Adopt — production-ready en 2026 Q2"
+      },
+      {
+        "type": "h3",
+        "content": "Backend & systèmes"
+      },
+      {
+        "type": "p",
+        "content": "**Rust** passe en Adopt en 2026 Q2 (était Trial en 2025). Quatre missions livrées en pure-prod : Robotique Tokyo, API performance-critical Mobilité Urbaine, ETL haute charge FinTech, edge proxy CloudFlare Workers. Le passage Adopt vient de la maturité de l'écosystème (Tokio 1.x stable, Axum, SeaORM, sqlx) et de la convergence des compétences senior. Argument décisif : 60-80 % d'économie mémoire vs Java/Go sur les workloads à forte concurrence, sans le compromis productivité de C++."
+      },
+      {
+        "type": "p",
+        "content": "**ROS 2 Humble** en Adopt. Standard de facto de la robotique industrielle. Notre stack pour le client Robotique Tokyo (warehouse automation +40 % throughput). Migration complète depuis ROS 1 Noetic pour tous les nouveaux projets."
+      },
+      {
+        "type": "p",
+        "content": "**OpenTofu 1.7** en Adopt (était Trial 2025). Le fork open-source de Terraform a atteint la maturité. State migration testée et documentée. On migre activement les missions Terraform existantes vers OpenTofu lors des renewals."
+      },
+      {
+        "type": "h3",
+        "content": "AI / Data"
+      },
+      {
+        "type": "p",
+        "content": "**Anthropic Claude** en Adopt pour les workloads enterprise critiques (compliance, sécurité, fenêtre de contexte longue). Claude 3.7 Sonnet est notre default pour les agents en production. GPT-4o reste utilisé en complément sur des use cases spécifiques."
+      },
+      {
+        "type": "p",
+        "content": "**Pinecone** Adopt confirmé. Vector DB de référence pour les use cases RAG enterprise. Alternatives évaluées (Weaviate, Qdrant, pgvector) restent en Trial ou Assess."
+      },
+      {
+        "type": "p",
+        "content": "**LangChain + LangGraph** en Adopt pour les agents workflows. Stable, communauté large, intégration directe avec Pinecone et notre stack d'observability."
+      },
+      {
+        "type": "h3",
+        "content": "Frontend"
+      },
+      {
+        "type": "p",
+        "content": "**Next.js 15 App Router + RSC** en Adopt pour tous les nouveaux projets Web. Pages Router en mode legacy uniquement."
+      },
+      {
+        "type": "p",
+        "content": "**Tailwind CSS 4** en Adopt. Nouveau Lightning CSS engine, plus rapide à build, plus stable."
+      },
+      {
+        "type": "h3",
+        "content": "Cloud & Reliability"
+      },
+      {
+        "type": "p",
+        "content": "**Karpenter** en Adopt. Remplace Cluster Autoscaler par défaut sur EKS. -25 à -35 % cloud cost mesuré sur 8 missions (cf. cas Mobilité Urbaine -30 % AWS)."
+      },
+      {
+        "type": "h2",
+        "content": "Trial — validation positive, à recommander selon contexte"
       },
       {
         "type": "list",
-        "ordered": false,
         "items": [
-          "Cache Components Next 16 et le directive use cache. Production-ready depuis novembre 2025, gain de 40 % sur le TTFB sur nos premiers déploiements.",
-          "Multi-tool agents avec LangGraph ou Anthropic Agents SDK. Excellent pour les workflows métier complexes, encore fragile sur la gouvernance des coûts.",
-          "Edge AI sur Jetson Orin pour l'inférence on-device en robotique et industrie. Latence sub-50ms, pas de dépendance cloud."
-        ]
+          "**Bun** — Drop-in replacement Node.js performant. Testé sur 2 missions backend, 3× plus rapide pour imports + tests. Pas encore validé Edge Workers / Lambda.",
+          "**Astro** — Excellent pour sites marketing & docs. Pas pour les apps interactives — Next.js reste l'Adopt.",
+          "**Mojo** — Langage prometteur pour data engineering / ML. Communauté encore petite. Pas en mission client, mais en POC interne actif.",
+          "**DSPy** — Framework de programming LLM (au lieu de prompt engineering). Évalué en prod sur un agent RAG critique. ROI positif sur la maintenance des prompts.",
+          "**LiteLLM** — Proxy multi-LLM (OpenAI / Anthropic / Mistral). Permet routing dynamique et fallback. Utile pour les clients multi-vendor.",
+          "**Pulumi** — Pour les équipes qui préfèrent TypeScript / Python à HCL Terraform."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Assess — à tester en POC, pas en mission critique"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Tauri 2** — Alternative Rust à Electron pour les apps desktop. Bundle 10× plus petit, mais écosystème encore en croissance.",
+          "**Effect-TS** — Functional programming TypeScript. Courbe d'apprentissage forte. Valeur prouvée sur la robustesse des side-effects.",
+          "**Cloudflare Workers AI** — Edge AI inférence très rapide. Modèles limités (pas de GPT-4o ou Claude). Bon pour use cases edge spécifiques.",
+          "**Hugging Face TGI** — Pour self-hosting des modèles open-source en prod. Validé en POC, en attente d'une mission client qui le requiert."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Hold — à éviter ou retirer"
+      },
+      {
+        "type": "p",
+        "content": "**Cypress standalone** en Hold (était Adopt en 2023). Migration active vers Playwright. Justifications : Playwright a 3× temps CI, support multi-browser natif, debugger intégré, communauté plus active. Migration documentée en 5 étapes (cf. cas client SaaS B2B)."
+      },
+      {
+        "type": "p",
+        "content": "**Jest standalone** en Hold. Migration vers Vitest (compatible Jest API, 5-10× plus rapide en hot reload, native ESM). Migration low-effort."
+      },
+      {
+        "type": "p",
+        "content": "**Webpack 5** en Hold pour les nouveaux projets. On utilise Vite ou Turbopack (Next.js 15). Webpack reste maintenu sur le legacy mais on ne démarre plus dessus."
+      },
+      {
+        "type": "p",
+        "content": "**MongoDB** en Hold. PostgreSQL + pgvector + JSONB couvre 95 % des use cases qui justifiaient MongoDB. Migrations PostgreSQL ← MongoDB documentées sur 4 missions."
+      },
+      {
+        "type": "p",
+        "content": "**Redux Saga** en Hold. Trop de boilerplate. On utilise TanStack Query (server state) + Zustand (client state). Migration documentée."
+      },
+      {
+        "type": "p",
+        "content": "**OpenAI Assistants API legacy** en Hold. Architecture trop opaque, lock-in vendor élevé. On utilise les SDK directs avec orchestration LangChain / LangGraph."
+      },
+      {
+        "type": "h2",
+        "content": "Comment on l'utilise en mission client"
+      },
+      {
+        "type": "p",
+        "content": "Sur chaque nouvelle mission Abbeal, le Tech Radar fait partie du mandate technique négocié au démarrage :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Mandate par défaut** : la stack mission est composée de technos Adopt sauf accord explicite client.",
+          "**Escape hatch** : si le client veut sortir de l'Adopt (ex : garder MongoDB legacy ou Cypress), on documente la dérogation avec justification + plan de migration éventuel.",
+          "**Revue trimestrielle** : tous les 3 mois, on revoit avec le client si les technos Trial qu'on a déployées passent en Adopt côté Abbeal, et si le contrat doit s'adapter."
+        ],
+        "ordered": true
+      },
+      {
+        "type": "p",
+        "content": "C'est cette discipline qui permet à un client qui prend Abbeal sur une mission de 12-24 mois d'avoir la garantie qu'il ne sera pas coincé sur une techno obsolète à la fin."
+      },
+      {
+        "type": "h2",
+        "content": "Ce qui change en 2026 Q3"
+      },
+      {
+        "type": "p",
+        "content": "Notre prochain Tech Radar (août 2026) regardera de près :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Mojo** pour passer en Adopt si la communauté continue de grandir",
+          "**Cloudflare Workers AI** pour les use cases edge inférence Tokyo",
+          "**Bun** pour confirmer le passage en Adopt après 4 missions clients",
+          "**Hold de Sentry** au profit de PostHog ou Datadog observability complet",
+          "**Adopt de DSPy** si la maintenance des prompts en prod se confirme"
+        ],
+        "ordered": false
       },
       {
         "type": "callout",
         "tone": "teal",
-        "content": "Pourquoi Cache Components passe en Trial et pas Adopt ? Trois mises en prod réussies, mais le pattern de migration depuis l'App Router classique est encore coûteux. Attendez le retour d'expérience de votre voisin avant de migrer 200k LOC."
+        "content": "Abbeal partage le Tech Radar 2026 Q2 complet (35 technos avec justification détaillée par hub) sur demande. Envoyez-nous un email à contact@abbeal.com ou prenez 30 minutes avec un de nos Tech Leads pour discuter votre stack actuelle."
       },
       {
-        "type": "h2",
-        "content": "Assess"
-      },
-      {
-        "type": "list",
-        "ordered": false,
-        "items": [
-          "WASM côté backend pour des plugins isolés (Wasmtime, Spin). Prometteur pour les architectures multi-tenant, mais l'écosystème est jeune.",
-          "Vector DBs managées (Turbopuffer, Qdrant Cloud) en alternative à Pinecone. Modèle de coût plus prévisible, à valider sur du gros volume.",
-          "Bun comme runtime de production. Très rapide, mais l'écosystème npm a encore des aspérités sur les libs natives."
-        ]
-      },
-      {
-        "type": "h2",
-        "content": "Hold"
-      },
-      {
-        "type": "list",
-        "ordered": false,
-        "items": [
-          "Plateformes low-code pour le coeur métier. Acceptables pour de l'admin interne, désastreuses dès qu'il faut customiser ou scaler.",
-          "Crypto-payments B2B comme rail principal. La friction réglementaire et la volatilité tuent le ROI hors cas de niche.",
-          "Microservices par défaut sur les nouveaux projets. Le monolithe modulaire bien fait coûte dix fois moins en run.",
-          "MongoDB comme base relationnelle déguisée. Si vos données ont des jointures, prenez Postgres."
-        ]
-      },
-      {
-        "type": "h2",
-        "content": "Le radar n'est pas un dogme"
-      },
-      {
-        "type": "p",
-        "content": "Chaque ligne du radar est un raccourci. Le contexte de votre équipe, votre legacy, votre time-to-market peuvent justifier un autre choix. Mais si vous démarrez un nouveau projet en 2026 et que vous prenez du low-code pour votre coeur métier, sachez que dans dix-huit mois vous nous appellerez pour le réécrire."
-      },
-      {
-        "type": "p",
-        "content": "Notre radar complet, segmenté par quadrant et par cas d'usage, est partagé en consultation gratuite avec les CTO qui prennent rendez-vous via le formulaire Abbeal. Quarante minutes, pas de pitch, juste de l'arbitrage."
+        "type": "link",
+        "href": "https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+        "label": "Parler à un Tech Lead — 30 min, sans engagement"
       }
     ],
     "en": [
       {
-        "type": "p",
-        "content": "A tech radar without ranking criteria is a shopping list. Here's ours for 2026, built from more than 40 engagements delivered over the last twelve months in Paris, Montreal, and Tokyo. Four quadrants, sharp trade-offs, zero hype."
+        "type": "callout",
+        "tone": "ink",
+        "content": "TL;DR — Abbeal's Q2 2026 quarterly Tech Radar: Rust, ROS 2, OpenTofu, Pinecone, Anthropic Claude move to Adopt. Bun, Astro, DSPy in Trial. Cypress standalone and Jest standalone in Hold. 35 techs evaluated, quarterly team vote, detailed rationale for each move. Used on client missions with strict mandate + documented escape hatch."
       },
       {
         "type": "h2",
-        "content": "Ranking criteria"
+        "content": "Methodology"
       },
       {
         "type": "p",
-        "content": "A technology enters Adopt if it held in production across at least three different clients, distinct sectors, different teams. Trial: one success in prod, not yet reproduced. Assess: interesting in R&D, not mature for critical prod. Hold: we actively advise against."
-      },
-      {
-        "type": "h2",
-        "content": "Adopt"
+        "content": "Abbeal's Tech Radar is inspired by the ThoughtWorks matrix, adapted to our tri-geo context. Every three months, Tech Leads from the three hubs (Paris, Montréal, Tokyo) vote on 30 to 40 key techs. Four levels:"
       },
       {
         "type": "list",
-        "ordered": false,
         "items": [
-          "Rust for critical backend services where performance and memory safety matter. Axum, Tokio, sqlx. Adopted at two fintechs and one B2B SaaS vendor.",
-          "RAG (Retrieval-Augmented Generation) with small local models for routing and external LLMs for generation. Pinecone or pgvector depending on volume.",
-          "ROS 2 Humble for industrial robotics. Migration from ROS 1 is critical, the support window is closing.",
-          "OpenTofu as a Terraform replacement. Stable license, active community, drop-in replacement."
-        ]
+          "**Adopt** — validated in production on at least 3 missions, performant, maintainable. Default mandate on new missions.",
+          "**Trial** — positive validation on 1-2 client missions. Recommended if project context fits. Escape hatch required.",
+          "**Assess** — promising but not yet tested in prod. To experiment with in POC or side project. Not in critical client missions.",
+          "**Hold** — tech we're actively retiring, or advising against starting with. With documented rationale."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "The vote is not democratic: each Tech Lead brings measurable data (latency, memory, time-to-merge, bugs, learning curve). Choices are documented in a Notion file shared with clients under mission."
       },
       {
         "type": "h2",
-        "content": "Trial"
+        "content": "Adopt — production-ready in Q2 2026"
+      },
+      {
+        "type": "h3",
+        "content": "Backend & systems"
+      },
+      {
+        "type": "p",
+        "content": "**Rust** moves to Adopt in Q2 2026 (was Trial in 2025). Four missions delivered in pure-prod: Tokyo Robotics, Urban Mobility performance-critical API, FinTech high-load ETL, CloudFlare Workers edge proxy. The Adopt move comes from ecosystem maturity (Tokio 1.x stable, Axum, SeaORM, sqlx) and senior skills convergence. Decisive argument: 60-80% memory savings vs Java/Go on high-concurrency workloads, without C++'s productivity compromise."
+      },
+      {
+        "type": "p",
+        "content": "**ROS 2 Humble** in Adopt. De facto standard for industrial robotics. Our stack for Tokyo Robotics client (warehouse automation +40% throughput). Complete migration from ROS 1 Noetic for all new projects."
+      },
+      {
+        "type": "p",
+        "content": "**OpenTofu 1.7** in Adopt (was Trial 2025). The open-source Terraform fork has reached maturity. State migration tested and documented. We actively migrate existing Terraform missions to OpenTofu at renewals."
+      },
+      {
+        "type": "h3",
+        "content": "AI / Data"
+      },
+      {
+        "type": "p",
+        "content": "**Anthropic Claude** in Adopt for critical enterprise workloads (compliance, security, long context window). Claude 3.7 Sonnet is our default for production agents. GPT-4o still used as complement on specific use cases."
+      },
+      {
+        "type": "p",
+        "content": "**Pinecone** Adopt confirmed. Reference vector DB for enterprise RAG use cases. Evaluated alternatives (Weaviate, Qdrant, pgvector) remain in Trial or Assess."
+      },
+      {
+        "type": "p",
+        "content": "**LangChain + LangGraph** in Adopt for agent workflows. Stable, large community, direct integration with Pinecone and our observability stack."
+      },
+      {
+        "type": "h3",
+        "content": "Frontend"
+      },
+      {
+        "type": "p",
+        "content": "**Next.js 15 App Router + RSC** in Adopt for all new Web projects. Pages Router in legacy mode only."
+      },
+      {
+        "type": "p",
+        "content": "**Tailwind CSS 4** in Adopt. New Lightning CSS engine, faster to build, more stable."
+      },
+      {
+        "type": "h3",
+        "content": "Cloud & Reliability"
+      },
+      {
+        "type": "p",
+        "content": "**Karpenter** in Adopt. Replaces Cluster Autoscaler by default on EKS. -25 to -35% cloud cost measured across 8 missions (cf. Urban Mobility case -30% AWS)."
+      },
+      {
+        "type": "h2",
+        "content": "Trial — positive validation, recommend per context"
       },
       {
         "type": "list",
-        "ordered": false,
         "items": [
-          "Next 16 Cache Components and the use cache directive. Production-ready since November 2025, 40% TTFB improvement on our first deployments.",
-          "Multi-tool agents with LangGraph or Anthropic Agents SDK. Excellent for complex business workflows, still fragile on cost governance.",
-          "Edge AI on Jetson Orin for on-device inference in robotics and industry. Sub-50ms latency, no cloud dependency."
-        ]
+          "**Bun** — Performant Node.js drop-in replacement. Tested on 2 backend missions, 3× faster for imports + tests. Not yet validated for Edge Workers / Lambda.",
+          "**Astro** — Excellent for marketing & docs sites. Not for interactive apps — Next.js remains Adopt.",
+          "**Mojo** — Promising language for data engineering / ML. Community still small. Not in client mission, but in active internal POC.",
+          "**DSPy** — LLM programming framework (instead of prompt engineering). Evaluated in prod on a critical RAG agent. Positive ROI on prompt maintenance.",
+          "**LiteLLM** — Multi-LLM proxy (OpenAI / Anthropic / Mistral). Enables dynamic routing and fallback. Useful for multi-vendor clients.",
+          "**Pulumi** — For teams preferring TypeScript / Python over HCL Terraform."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Assess — POC only, not critical missions"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Tauri 2** — Rust alternative to Electron for desktop apps. Bundle 10× smaller, but growing ecosystem.",
+          "**Effect-TS** — TypeScript functional programming. Steep learning curve. Proven value on side-effect robustness.",
+          "**Cloudflare Workers AI** — Very fast edge AI inference. Limited models (no GPT-4o or Claude). Good for specific edge use cases.",
+          "**Hugging Face TGI** — For self-hosting open-source models in prod. Validated in POC, awaiting a client mission requiring it."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Hold — avoid or retire"
+      },
+      {
+        "type": "p",
+        "content": "**Cypress standalone** in Hold (was Adopt in 2023). Active migration to Playwright. Justifications: Playwright has 3× CI time, native multi-browser support, integrated debugger, more active community. Migration documented in 5 steps (cf. SaaS B2B client case)."
+      },
+      {
+        "type": "p",
+        "content": "**Jest standalone** in Hold. Migrating to Vitest (Jest API compatible, 5-10× faster hot reload, native ESM). Low-effort migration."
+      },
+      {
+        "type": "p",
+        "content": "**Webpack 5** in Hold for new projects. We use Vite or Turbopack (Next.js 15). Webpack remains maintained on legacy but we don't start on it anymore."
+      },
+      {
+        "type": "p",
+        "content": "**MongoDB** in Hold. PostgreSQL + pgvector + JSONB covers 95% of use cases that previously justified MongoDB. PostgreSQL ← MongoDB migrations documented on 4 missions."
+      },
+      {
+        "type": "p",
+        "content": "**Redux Saga** in Hold. Too much boilerplate. We use TanStack Query (server state) + Zustand (client state). Migration documented."
+      },
+      {
+        "type": "p",
+        "content": "**OpenAI Assistants API legacy** in Hold. Architecture too opaque, high vendor lock-in. We use direct SDKs with LangChain / LangGraph orchestration."
+      },
+      {
+        "type": "h2",
+        "content": "How we use it on client missions"
+      },
+      {
+        "type": "p",
+        "content": "On every new Abbeal mission, the Tech Radar is part of the technical mandate negotiated at kick-off:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Default mandate**: mission stack composed of Adopt techs unless explicit client agreement.",
+          "**Escape hatch**: if client wants to deviate from Adopt (e.g. keep legacy MongoDB or Cypress), we document the derogation with justification + eventual migration plan.",
+          "**Quarterly review**: every 3 months, we review with the client whether Trial techs we've deployed move to Adopt on Abbeal side, and whether the contract should adapt."
+        ],
+        "ordered": true
+      },
+      {
+        "type": "p",
+        "content": "This discipline lets a client engaging Abbeal on a 12-24 month mission guarantee they won't be stuck on an obsolete tech by the end."
+      },
+      {
+        "type": "h2",
+        "content": "What changes in Q3 2026"
+      },
+      {
+        "type": "p",
+        "content": "Our next Tech Radar (August 2026) will closely watch:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Mojo** to move to Adopt if community keeps growing",
+          "**Cloudflare Workers AI** for Tokyo edge inference use cases",
+          "**Bun** to confirm Adopt move after 4 client missions",
+          "**Sentry Hold** in favour of PostHog or Datadog observability complete",
+          "**DSPy Adopt** if prompt maintenance in prod confirms"
+        ],
+        "ordered": false
       },
       {
         "type": "callout",
         "tone": "teal",
-        "content": "Why Cache Components lands in Trial and not Adopt? Three successful prod rollouts, but the migration pattern from classic App Router is still costly. Wait for your neighbor's feedback before migrating 200k LOC."
+        "content": "Abbeal shares the full Q2 2026 Tech Radar (35 techs with detailed per-hub justification) on demand. Email us at contact@abbeal.com or book 30 minutes with one of our Tech Leads to discuss your current stack."
       },
       {
-        "type": "h2",
-        "content": "Assess"
-      },
-      {
-        "type": "list",
-        "ordered": false,
-        "items": [
-          "WASM on the backend for isolated plugins (Wasmtime, Spin). Promising for multi-tenant architectures, but the ecosystem is young.",
-          "Managed Vector DBs (Turbopuffer, Qdrant Cloud) as alternatives to Pinecone. More predictable cost model, to be validated at large volume.",
-          "Bun as a production runtime. Very fast, but the npm ecosystem still has rough edges on native libraries."
-        ]
-      },
-      {
-        "type": "h2",
-        "content": "Hold"
-      },
-      {
-        "type": "list",
-        "ordered": false,
-        "items": [
-          "Low-code platforms for core business. Acceptable for internal admin, disastrous once you need to customize or scale.",
-          "B2B crypto-payments as primary rail. Regulatory friction and volatility kill ROI outside niche cases.",
-          "Microservices by default on new projects. A well-built modular monolith costs ten times less to run.",
-          "MongoDB as a disguised relational database. If your data has joins, use Postgres."
-        ]
-      },
-      {
-        "type": "h2",
-        "content": "The radar is not a dogma"
-      },
-      {
-        "type": "p",
-        "content": "Every line in the radar is a shortcut. Your team context, your legacy, your time-to-market may justify another choice. But if you start a new project in 2026 and pick low-code for your core business, know that in eighteen months you'll be calling us to rewrite it."
-      },
-      {
-        "type": "p",
-        "content": "Our full radar, segmented by quadrant and use case, is shared in a free consultation with CTOs who book via the Abbeal form. Forty minutes, no pitch, just arbitration."
+        "type": "link",
+        "href": "https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+        "label": "Talk to a Tech Lead — 30 min, no commitment"
       }
     ],
     "ja": [
       {
-        "type": "p",
-        "content": "ランキング基準のないテックレーダーは買い物リストです。こちらが2026年版、パリ、モントリオール、東京で過去12か月に納品された40以上のミッションから構築しました。4つのクアドラント、シャープなトレードオフ、ハイプゼロ。"
+        "type": "callout",
+        "tone": "ink",
+        "content": "TL;DR — Abbeal 2026年Q2 四半期Tech Radar：Rust、ROS 2、OpenTofu、Pinecone、Anthropic ClaudeがAdoptに移行。Bun、Astro、DSPyがTrial。CypressスタンドアロンとJestスタンドアロンがHold。35技術を評価、四半期チーム投票、各移動の詳細な根拠。クライアントミッションで厳格なmandate + 文書化されたescape hatchで使用。"
       },
       {
         "type": "h2",
-        "content": "ランキング基準"
+        "content": "方法論"
       },
       {
         "type": "p",
-        "content": "テクノロジーがAdoptに入るのは、少なくとも3つの異なるクライアント、異なる業界、異なるチームで本番に耐えた場合です。Trial：本番で1回成功、まだ再現されていない。Assess：R&Dでは興味深いが、クリティカル本番には未成熟。Hold：積極的に非推奨。"
-      },
-      {
-        "type": "h2",
-        "content": "Adopt"
+        "content": "Abbeal Tech RadarはThoughtWorksマトリックスにインスパイアされ、当社のトライジオ文脈に適応。3ヶ月ごとに、3拠点（パリ、モントリオール、東京）のTech Leadsが30〜40の主要技術に投票。4レベル："
       },
       {
         "type": "list",
-        "ordered": false,
         "items": [
-          "パフォーマンスとメモリ安全性が重要なクリティカルバックエンドサービス向けのRust。Axum、Tokio、sqlx。2つのフィンテックと1つのB2B SaaSベンダーで採用。",
-          "ルーティング用の小型ローカルモデルと生成用の外部LLMを使ったRAG（Retrieval-Augmented Generation）。ボリュームに応じてPineconeまたはpgvector。",
-          "産業ロボティクス向けROS 2 Humble。ROS 1からのマイグレーションはクリティカル、サポートウィンドウが閉まっています。",
-          "Terraform代替としてのOpenTofu。安定したライセンス、活発なコミュニティ、ドロップイン代替。"
-        ]
+          "**Adopt** — 少なくとも3ミッションで本番検証済み、高性能、保守可能。新ミッションのデフォルトmandate。",
+          "**Trial** — 1〜2クライアントミッションでのポジティブな検証。プロジェクト文脈に合えば推奨。escape hatch必須。",
+          "**Assess** — 有望だが本番でまだテストされていない。POCまたはサイドプロジェクトで実験。重要なクライアントミッションではない。",
+          "**Hold** — 積極的に撤退中、または開始を推奨しない技術。文書化された根拠付き。"
+        ],
+        "ordered": false
       },
       {
         "type": "h2",
-        "content": "Trial"
+        "content": "Adopt — 2026年Q2 本番準備完了"
+      },
+      {
+        "type": "h3",
+        "content": "バックエンド & システム"
+      },
+      {
+        "type": "p",
+        "content": "**Rust** が2026年Q2にAdoptへ（2025年はTrial）。4ミッションをpure-prodで納品：東京ロボティクス、Urban Mobilityのパフォーマンスクリティカルなる API、FinTechの高負荷ETL、CloudFlare Workersエッジプロキシ。Adopt移行は、エコシステムの成熟度（Tokio 1.x安定、Axum、SeaORM、sqlx）とシニアスキルの収束による。決定的な議論：高並行ワークロードでJava/Go対比60〜80%のメモリ節約、C++の生産性妥協なし。"
+      },
+      {
+        "type": "p",
+        "content": "**ROS 2 Humble** がAdopt。産業用ロボティクスのデファクトスタンダード。東京ロボティクスクライアント向けスタック（倉庫自動化スループット+40%）。ROS 1 Noetichからすべての新プロジェクトへ完全移行。"
+      },
+      {
+        "type": "p",
+        "content": "**OpenTofu 1.7** がAdopt（2025年はTrial）。Terraformのオープンソースforkが成熟。状態移行をテスト・文書化。renewalsで既存のTerraformミッションを積極的にOpenTofuへ移行中。"
+      },
+      {
+        "type": "h3",
+        "content": "AI / データ"
+      },
+      {
+        "type": "p",
+        "content": "**Anthropic Claude** が重要エンタープライズワークロード（コンプライアンス、セキュリティ、長コンテキストウィンドウ）でAdopt。Claude 3.7 Sonnetが本番エージェントのデフォルト。GPT-4oは特定ユースケースで補完使用。"
+      },
+      {
+        "type": "p",
+        "content": "**Pinecone** Adopt確認。エンタープライズRAGユースケースの基準ベクターDB。評価された代替品（Weaviate、Qdrant、pgvector）はTrialまたはAssess。"
+      },
+      {
+        "type": "p",
+        "content": "**LangChain + LangGraph** がエージェントワークフロー向けAdopt。安定、大規模コミュニティ、Pineconeおよび当社可観測性スタックとの直接統合。"
+      },
+      {
+        "type": "h3",
+        "content": "フロントエンド"
+      },
+      {
+        "type": "p",
+        "content": "**Next.js 15 App Router + RSC** がすべての新Webプロジェクト向けAdopt。Pages Routerはレガシーモードのみ。"
+      },
+      {
+        "type": "p",
+        "content": "**Tailwind CSS 4** がAdopt。新Lightning CSSエンジン、ビルド高速化、より安定。"
+      },
+      {
+        "type": "h3",
+        "content": "クラウド & 信頼性"
+      },
+      {
+        "type": "p",
+        "content": "**Karpenter** がAdopt。EKS上のCluster Autoscalerをデフォルト置換。8ミッションでクラウドコスト-25〜-35%測定（cf. Urban Mobility事例AWS-30%）。"
+      },
+      {
+        "type": "h2",
+        "content": "Trial — ポジティブ検証、文脈に応じて推奨"
       },
       {
         "type": "list",
-        "ordered": false,
         "items": [
-          "Next 16 Cache Componentsとuse cacheディレクティブ。2025年11月以来プロダクション対応、最初のデプロイでTTFBが40%改善。",
-          "LangGraphまたはAnthropic Agents SDKによるマルチツールエージェント。複雑な業務ワークフローに優れるが、コストガバナンスはまだ脆弱。",
-          "ロボティクスと産業向けオンデバイス推論のJetson Orin上のEdge AI。50ms未満のレイテンシ、クラウド依存なし。"
-        ]
+          "**Bun** — 高性能Node.jsドロップイン代替。2バックエンドミッションでテスト、import + testで3倍速。Edge Workers / Lambdaまだ未検証。",
+          "**Astro** — マーケティング・ドキュメントサイトに優秀。インタラクティブアプリには非推奨—Next.jsがAdoptのまま。",
+          "**Mojo** — データエンジニアリング・ML向け有望言語。コミュニティまだ小規模。クライアントミッションではないが、内部POCで活発。",
+          "**DSPy** — LLMプログラミングフレームワーク（プロンプトエンジニアリングの代わり）。重要なRAGエージェントで本番評価。プロンプト保守でROIポジティブ。",
+          "**LiteLLM** — マルチLLMプロキシ（OpenAI / Anthropic / Mistral）。動的ルーティングとフォールバックを可能に。マルチベンダーのクライアントに有用。",
+          "**Pulumi** — HCL TerraformよりTypeScript / Pythonを好むチーム向け。"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Assess — POCのみ、重要ミッションではない"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Tauri 2** — デスクトップアプリ向けElectronのRust代替。バンドル10倍小型、しかしエコシステム成長中。",
+          "**Effect-TS** — TypeScript関数型プログラミング。急峻な学習曲線。副作用堅牢性で価値実証。",
+          "**Cloudflare Workers AI** — 非常に高速なエッジAI推論。限定モデル（GPT-4oまたはClaudeなし）。特定エッジユースケースに良。",
+          "**Hugging Face TGI** — 本番でオープンソースモデルセルフホスト。POCで検証済み、要求するクライアントミッションを待機中。"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Hold — 回避または撤退"
+      },
+      {
+        "type": "p",
+        "content": "**Cypress standalone** Hold（2023年はAdopt）。Playwrightへの積極的移行。根拠：Playwrightは3倍CI時間、ネイティブマルチブラウザサポート、統合デバッガー、より活発なコミュニティ。5ステップで移行文書化（cf. SaaS B2Bクライアント事例）。"
+      },
+      {
+        "type": "p",
+        "content": "**Jest standalone** Hold。Vitestへ移行（Jest API互換、ホットリロード5-10倍高速、ネイティブESM）。低労力移行。"
+      },
+      {
+        "type": "p",
+        "content": "**Webpack 5** 新プロジェクトでHold。ViteまたはTurbopack（Next.js 15）使用。Webpackはレガシーで維持されるが、新規開始しない。"
+      },
+      {
+        "type": "p",
+        "content": "**MongoDB** Hold。PostgreSQL + pgvector + JSONBがMongoDBを正当化した95%のユースケースをカバー。PostgreSQL ← MongoDBマイグレーションを4ミッションで文書化。"
+      },
+      {
+        "type": "p",
+        "content": "**Redux Saga** Hold。ボイラープレートが多すぎる。TanStack Query（サーバー状態）+ Zustand（クライアント状態）使用。移行文書化。"
+      },
+      {
+        "type": "p",
+        "content": "**OpenAI Assistants API legacy** Hold。アーキテクチャが不透明すぎ、ベンダーロックイン高い。LangChain / LangGraphオーケストレーションでSDK直接使用。"
+      },
+      {
+        "type": "h2",
+        "content": "クライアントミッションでの使用方法"
+      },
+      {
+        "type": "p",
+        "content": "新Abbealミッションごとに、Tech Radarはキックオフで交渉される技術的mandateの一部："
+      },
+      {
+        "type": "list",
+        "items": [
+          "**デフォルトmandate**：明示的なクライアント合意なしに、ミッションスタックはAdopt技術で構成。",
+          "**Escape hatch**：クライアントがAdoptから逸脱したい場合（例：レガシーMongoDBまたはCypress保持）、正当化と最終的な移行計画とともに逸脱を文書化。",
+          "**四半期レビュー**：3ヶ月ごとに、デプロイしたTrial技術がAbbeal側でAdoptに移行するか、契約を適応すべきかをクライアントと確認。"
+        ],
+        "ordered": true
+      },
+      {
+        "type": "h2",
+        "content": "2026年Q3 の変化"
+      },
+      {
+        "type": "p",
+        "content": "次のTech Radar（2026年8月）で注視するもの："
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Mojo** — コミュニティが成長し続ければAdoptへ",
+          "**Cloudflare Workers AI** — 東京エッジ推論ユースケース向け",
+          "**Bun** — 4クライアントミッション後のAdopt移行確認",
+          "**Sentry Hold** — PostHogまたはDatadog可観測性完全版に有利に",
+          "**DSPy Adopt** — 本番でのプロンプト保守が確認されれば"
+        ],
+        "ordered": false
       },
       {
         "type": "callout",
         "tone": "teal",
-        "content": "なぜCache ComponentsがAdoptではなくTrialに？本番ロールアウト3回成功、しかしクラシックApp Routerからのマイグレーションパターンはまだコストが高い。200k LOCをマイグレーションする前に、隣人のフィードバックを待ちましょう。"
+        "content": "Abbealは、要求に応じて完全な2026年Q2 Tech Radar（35技術、拠点別詳細根拠付き）を共有します。contact@abbeal.comへメール、または現在のスタックを議論するためにTech Leadsの1人と30分予約。"
       },
       {
-        "type": "h2",
-        "content": "Assess"
-      },
-      {
-        "type": "list",
-        "ordered": false,
-        "items": [
-          "分離プラグイン向けバックエンドWASM（Wasmtime、Spin）。マルチテナントアーキテクチャに有望だが、エコシステムは若い。",
-          "Pineconeの代替としてのマネージドVector DB（Turbopuffer、Qdrant Cloud）。より予測可能なコストモデル、大ボリュームで検証必要。",
-          "プロダクションランタイムとしてのBun。非常に高速だが、npmエコシステムはネイティブライブラリでまだ粗さがある。"
-        ]
-      },
-      {
-        "type": "h2",
-        "content": "Hold"
-      },
-      {
-        "type": "list",
-        "ordered": false,
-        "items": [
-          "コア業務向けローコードプラットフォーム。社内管理には許容、カスタマイズまたはスケールが必要になると災害。",
-          "メインレールとしてのB2B暗号通貨決済。規制フリクションとボラティリティがニッチケース以外ROIを殺す。",
-          "新プロジェクトのデフォルトでのマイクロサービス。よく作られたモジュラーモノリスは運用コストが10分の1。",
-          "リレーショナルDBに偽装したMongoDB。データにジョインがあるならPostgresを使いましょう。"
-        ]
-      },
-      {
-        "type": "h2",
-        "content": "レーダーはドグマではない"
-      },
-      {
-        "type": "p",
-        "content": "レーダーの各行はショートカットです。チームコンテキスト、レガシー、タイムトゥマーケットが別の選択を正当化することがあります。しかし2026年に新プロジェクトを開始しコア業務にローコードを選ぶなら、18か月後に書き直すために当社に電話することになると知っておいてください。"
-      },
-      {
-        "type": "p",
-        "content": "完全なレーダー、クアドラント別ユースケース別セグメント化は、Abbealフォーム経由で予約するCTOと無料コンサルテーションで共有します。40分、ピッチなし、調停のみ。"
+        "type": "link",
+        "href": "https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+        "label": "Tech Leadと話す — 30分、義務なし"
       }
     ],
     "fr-ca": [
       {
-        "type": "p",
-        "content": "Un tech radar sans critères de classement, c'est une liste de courses. Voici le nôtre pour 2026, construit à partir de plus de 40 mandats livrées sur les douze derniers mois à Paris, Montréal et Tokyo. Quatre quadrants, des arbitrages tranchés, zéro mode."
+        "type": "callout",
+        "tone": "ink",
+        "content": "TL;DR — Tech Radar trimestriel Abbeal Q2 2026 : Rust, ROS 2, OpenTofu, Pinecone, Anthropic Claude passent en Adopt. Bun, Astro, DSPy en Trial. Cypress standalone et Jest standalone en Hold. 35 technos évaluées, vote équipe trimestriel, raisonnement détaillé pour chaque mouvement. Utilisé en mandat client avec mandate strict + escape hatch documenté."
       },
       {
         "type": "h2",
-        "content": "Critères de classement"
+        "content": "Méthodologie"
       },
       {
         "type": "p",
-        "content": "Une techno entre en Adopt si elle a tenu en production sur au moins trois clients différents, secteurs distincts, équipes différentes. Trial : un succès en prod, mais pas encore reproduit. Assess : intéressant en R&D, pas mûr pour la prod critique. Hold : nous déconseillons activement."
-      },
-      {
-        "type": "h2",
-        "content": "Adopt"
+        "content": "Le Tech Radar Abbeal s'inspire de la matrice ThoughtWorks, adaptée à notre contexte tri-pôle. Tous les trois mois, les Tech Leads des trois pôles (Paris, Montréal, Tokyo) votent sur 30 à 40 technos clés. Quatre niveaux :"
       },
       {
         "type": "list",
-        "ordered": false,
         "items": [
-          "Rust pour les services arrière-plan critiques où la performance et la sûreté mémoire comptent. Axum, Tokio, sqlx. Adopté chez deux fintechs et un éditeur SaaS B2B.",
-          "RAG (Retrieval-Augmented Generation) avec petits modèles locaux pour le tri et LLMs externes pour la génération. Pinecone ou pgvector selon le volume.",
-          "ROS 2 Humble pour la robotique industrielle. Migration depuis ROS 1 critique, fenêtre de support se ferme.",
-          "OpenTofu en remplacement de Terraform. Licence stable, communauté active, drop-in replacement."
-        ]
+          "**Adopt** — validée en production sur au moins 3 mandats, performante, maintenable. Mandate par défaut sur les nouveaux mandats.",
+          "**Trial** — validation positive sur 1-2 mandats clients. Recommandée si le contexte projet s'y prête. Escape hatch requis.",
+          "**Assess** — prometteuse mais pas encore testée en production. À expérimenter en POC ou projet parallèle. Pas en mandat client critique.",
+          "**Hold** — techno qu'on retire activement, ou qu'on déconseille de démarrer. Avec raisonnement documenté."
+        ],
+        "ordered": false
       },
       {
         "type": "h2",
-        "content": "Trial"
+        "content": "Adopt — prêt-production en 2026 Q2"
+      },
+      {
+        "type": "h3",
+        "content": "Back-end & systèmes"
+      },
+      {
+        "type": "p",
+        "content": "**Rust** passe en Adopt en 2026 Q2 (était Trial en 2025). Quatre mandats livrés en pure-prod : Robotique Tokyo, API performance-critical Mobilité Urbaine, ETL haute charge FinTech, edge proxy CloudFlare Workers. Le passage Adopt vient de la maturité de l'écosystème et de la convergence des compétences senior. Argument décisif : 60-80 % d'économie mémoire vs Java/Go sur les charges à forte concurrence."
+      },
+      {
+        "type": "p",
+        "content": "**ROS 2 Humble** en Adopt. Standard de facto de la robotique industrielle. Notre pile pour le client Robotique Tokyo (automatisation entrepôt +40 % de débit). Migration complète depuis ROS 1 Noetic pour tous les nouveaux projets."
+      },
+      {
+        "type": "p",
+        "content": "**OpenTofu 1.7** en Adopt (était Trial 2025). Le fork open-source de Terraform a atteint la maturité. Migration d'état testée et documentée. On migre activement les mandats Terraform existants vers OpenTofu lors des renouvellements."
+      },
+      {
+        "type": "h3",
+        "content": "IA / Données"
+      },
+      {
+        "type": "p",
+        "content": "**Anthropic Claude** en Adopt pour les charges enterprise critiques. Claude 3.7 Sonnet est notre défaut pour les agents en production. GPT-4o reste utilisé en complément."
+      },
+      {
+        "type": "p",
+        "content": "**Pinecone** Adopt confirmé. Vector DB de référence pour les cas d'usage RAG enterprise."
+      },
+      {
+        "type": "p",
+        "content": "**LangChain + LangGraph** en Adopt pour les agents workflows."
+      },
+      {
+        "type": "h3",
+        "content": "Front-end"
+      },
+      {
+        "type": "p",
+        "content": "**Next.js 15 App Router + RSC** en Adopt pour tous les nouveaux projets Web."
+      },
+      {
+        "type": "p",
+        "content": "**Tailwind CSS 4** en Adopt. Nouveau moteur Lightning CSS, plus rapide à construire, plus stable."
+      },
+      {
+        "type": "h3",
+        "content": "Infonuagique & Fiabilité"
+      },
+      {
+        "type": "p",
+        "content": "**Karpenter** en Adopt. Remplace Cluster Autoscaler par défaut sur EKS. -25 à -35 % de coût infonuagique mesuré sur 8 mandats."
+      },
+      {
+        "type": "h2",
+        "content": "Trial — validation positive, à recommander selon contexte"
       },
       {
         "type": "list",
-        "ordered": false,
         "items": [
-          "Cache Components Next 16 et le directive use cache. Production-ready depuis novembre 2025, gain de 40 % sur le TTFB sur nos premiers déploiements.",
-          "Multi-tool agents avec LangGraph ou Anthropic Agents SDK. Excellent pour les workflows métier complexes, encore fragile sur la gouvernance des coûts.",
-          "Edge AI sur Jetson Orin pour l'inférence on-device en robotique et industrie. Latence sub-50ms, pas de dépendance infonuagique."
-        ]
+          "**Bun** — Remplacement Node.js performant. 3× plus rapide pour imports + tests.",
+          "**Astro** — Excellent pour sites marketing & docs.",
+          "**Mojo** — Langage prometteur pour data engineering / ML.",
+          "**DSPy** — Framework de programmation LLM. ROI positif sur la maintenance des prompts.",
+          "**LiteLLM** — Proxy multi-LLM (OpenAI / Anthropic / Mistral).",
+          "**Pulumi** — Pour les équipes qui préfèrent TypeScript / Python à HCL."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Assess — à tester en POC, pas en mandat critique"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Tauri 2** — Alternative Rust à Electron. Bundle 10× plus petit.",
+          "**Effect-TS** — Programmation fonctionnelle TypeScript.",
+          "**Cloudflare Workers AI** — Inférence Edge AI très rapide.",
+          "**Hugging Face TGI** — Self-hosting modèles open-source."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Hold — à éviter ou retirer"
+      },
+      {
+        "type": "p",
+        "content": "**Cypress standalone** en Hold. Migration active vers Playwright (3× temps CI, multi-browser natif)."
+      },
+      {
+        "type": "p",
+        "content": "**Jest standalone** en Hold. Migration vers Vitest (5-10× hot reload, ESM natif)."
+      },
+      {
+        "type": "p",
+        "content": "**Webpack 5** en Hold pour les nouveaux projets. On utilise Vite ou Turbopack."
+      },
+      {
+        "type": "p",
+        "content": "**MongoDB** en Hold. PostgreSQL + pgvector + JSONB couvre 95 % des cas qui justifiaient MongoDB."
+      },
+      {
+        "type": "p",
+        "content": "**Redux Saga** en Hold. Trop de boilerplate. On utilise TanStack Query + Zustand."
+      },
+      {
+        "type": "p",
+        "content": "**OpenAI Assistants API legacy** en Hold. Lock-in vendor élevé. SDK directs + LangChain / LangGraph."
+      },
+      {
+        "type": "h2",
+        "content": "Comment on l'utilise en mandat client"
+      },
+      {
+        "type": "p",
+        "content": "Sur chaque nouveau mandat Abbeal, le Tech Radar fait partie du mandate technique négocié au démarrage :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Mandate par défaut** : la pile mandat est composée de technos Adopt sauf accord explicite client.",
+          "**Escape hatch** : si le client veut sortir de l'Adopt, on documente la dérogation avec justification + plan de migration éventuel.",
+          "**Revue trimestrielle** : tous les 3 mois, on revoit avec le client si les technos Trial passent en Adopt côté Abbeal."
+        ],
+        "ordered": true
+      },
+      {
+        "type": "h2",
+        "content": "Ce qui change en 2026 Q3"
+      },
+      {
+        "type": "p",
+        "content": "Notre prochain Tech Radar (août 2026) regardera de près :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Mojo** — passage Adopt si la communauté continue de grandir",
+          "**Cloudflare Workers AI** — use cases edge inférence Tokyo",
+          "**Bun** — confirmer Adopt après 4 mandats clients",
+          "**Hold de Sentry** — au profit de PostHog ou Datadog observability complet",
+          "**Adopt de DSPy** — si la maintenance des prompts en production se confirme"
+        ],
+        "ordered": false
       },
       {
         "type": "callout",
         "tone": "teal",
-        "content": "Pourquoi Cache Components passe en Trial et pas Adopt ? Trois mises en prod réussies, mais le pattern de migration depuis l'App Router classique est encore coûteux. Attendez le retour d'expérience de votre voisin avant de migrer 200k LOC."
+        "content": "Abbeal partage le Tech Radar 2026 Q2 complet sur demande. Envoyez-nous un courriel à contact@abbeal.com ou prenez 30 minutes avec un de nos Tech Leads pour discuter votre pile actuelle."
       },
       {
-        "type": "h2",
-        "content": "Assess"
-      },
-      {
-        "type": "list",
-        "ordered": false,
-        "items": [
-          "WASM côté arrière-plan pour des plugins isolés (Wasmtime, Spin). Prometteur pour les architectures multi-tenant, mais l'écosystème est jeune.",
-          "Vector DBs managées (Turbopuffer, Qdrant Infonuagique) en alternative à Pinecone. Modèle de coût plus prévisible, à valider sur du gros volume.",
-          "Bun comme runtime de production. Très rapide, mais l'écosystème npm a encore des aspérités sur les libs natives."
-        ]
-      },
-      {
-        "type": "h2",
-        "content": "Hold"
-      },
-      {
-        "type": "list",
-        "ordered": false,
-        "items": [
-          "Plateformes low-code pour le coeur métier. Acceptables pour de l'admin interne, désastreuses dès qu'il faut customiser ou scaler.",
-          "Crypto-payments B2B comme rail principal. La friction réglementaire et la volatilité tuent le ROI hors cas de niche.",
-          "Microservices par défaut sur les nouveaux projets. Le monolithe modulaire bien fait coûte dix fois moins en run.",
-          "MongoDB comme base relationnelle déguisée. Si vos données ont des jointures, prenez Postgres."
-        ]
-      },
-      {
-        "type": "h2",
-        "content": "Le radar n'est pas un dogme"
-      },
-      {
-        "type": "p",
-        "content": "Chaque ligne du radar est un raccourci. Le contexte de votre équipe, votre héritage, votre time-to-market peuvent justifier un autre choix. Mais si vous démarrez un nouveau projet en 2026 et que vous prenez du low-code pour votre coeur métier, sachez que dans dix-huit mois vous nous appellerez pour le réécrire."
-      },
-      {
-        "type": "p",
-        "content": "Notre radar complet, segmenté par quadrant et par cas d'usage, est partagé en consultation gratuite avec les CTO qui prennent rendez-vous via le formulaire Abbeal. Quarante minutes, pas de pitch, juste de l'arbitrage."
+        "type": "link",
+        "href": "https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+        "label": "Parler à un Tech Lead — 30 min, sans engagement"
       }
     ]
   },
@@ -3154,6 +3570,68 @@
       },
       {
         "type": "h2",
+        "content": "Quatre cas concrets — 2024-2025"
+      },
+      {
+        "type": "p",
+        "content": "Au-delà des chiffres globaux, voici quatre mobilités opérées entre 2024 et 2025. Mêmes hubs, mêmes process, contextes différents. Les timelines et coûts ci-dessous sont réels, pas des moyennes marketing."
+      },
+      {
+        "type": "h3",
+        "content": "Cas 1 — Sébastien : Paris → Tokyo (CEO, 2024)"
+      },
+      {
+        "type": "p",
+        "content": "Tech Lead / CEO, 4 mois entre la décision interne et le full opérationnel. Visa Engineer/Specialist in Humanities/International Services (le visa standard ingés tech au Japon). Sponsoring par l'entité Abbeal K.K. déjà établie. Coût total ~12 k€ (déménagement + paperwork + 1 mois logement temporaire). Ce qui a accéléré : entité juridique japonaise existante, bureau Higashi-Azabu opérationnel, avocat immigration sous contrat Mobbeal. Sans ces 3 actifs, le délai aurait doublé."
+      },
+      {
+        "type": "h3",
+        "content": "Cas 2 — Léa : Montréal → Paris (SRE Senior, 2023)"
+      },
+      {
+        "type": "p",
+        "content": "SRE senior chez Abbeal Montréal depuis 2021. Mobilité demandée pour suivre le conjoint muté à Paris pour 3 ans. 6 semaines décision → full opérationnel. Visa Passeport Talent Salarié Qualifié intra-groupe, traité en 3 semaines via VFS — le plus rapide qu'on ait jamais vu en France. Coût ~6 k€ (déménagement transatlantique + 2 semaines logement). Le statut intra-groupe Abbeal a simplifié drastiquement le visa français vs un Talent Passeport classique (12-16 semaines)."
+      },
+      {
+        "type": "h3",
+        "content": "Cas 3 — Hiro : Tokyo → Montréal (Data Engineer Senior, 2024)"
+      },
+      {
+        "type": "p",
+        "content": "Ingé data japonais recruté à Tokyo en 2022. Voulait l'expérience d'un cycle complet en Amérique du Nord avant retour Japon. 5,5 mois décision → opérationnel. Work permit IMP (International Mobility Program) intra-company transfer côté Canada — LMIA-exempt, le canal le plus rapide. Inscription Régie de l'assurance maladie Québec incluse. Coût ~14 k€ (déménagement intercontinental + 6 semaines logement + cours intensif anglais pour l'entourage). Abbeal Canada étant une entité de bonne foi avec 4 ans d'historique, le dossier est passé sans accroc."
+      },
+      {
+        "type": "h3",
+        "content": "Cas 4 — Karim : Paris → Montréal (Founding Engineer, 2025) — record 4 semaines"
+      },
+      {
+        "type": "p",
+        "content": "Founding Engineer recruté à Paris fin 2024 pour un projet AI scale-up FinTech. En février 2025, le client a décidé d'ouvrir un bureau Montréal et voulait Karim sur place pour 18 mois. **4 semaines** décision → full opérationnel (notre record absolu). Work permit IMP délivré en 8 jours ouvrables. Coût ~9 k€ tout compris. Ce qui a marché : urgence client + dossier béton préparé en parallèle des paperwork + entité Abbeal Canada déjà sponsorisante + cabinet immigration sous contrat à Montréal qui peut accélérer les dossiers IMP en urgence."
+      },
+      {
+        "type": "h2",
+        "content": "Les chiffres agrégés Mobbeal 2018-2026"
+      },
+      {
+        "type": "p",
+        "content": "Sur 52 mobilités opérées depuis 2018 :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Délai moyen décision → opérationnel : **12 semaines** (vs 28 semaines moyenne marché)",
+          "Coût moyen par mobilité : **11 k€** (vs 31 k€ chez les cabinets RH spécialisés)",
+          "Taux de mobilité réussie (>24 mois sans retour) : **91 %**",
+          "Taux de mobilité bidirectionnelle (ingés qui ont fait 2 hubs en moins de 5 ans) : **17 %**"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "Le taux de réussite >24 mois est notre KPI principal. C'est ce qui distingue Mobbeal des cabinets RH : on ne facture pas une mobilité réussie, on facture une intégration durable. Si l'ingé rentre dans son pays d'origine en moins de 12 mois, Abbeal réopère gratuitement."
+      },
+      {
+        "type": "h2",
         "content": "Pour le client, zéro friction"
       },
       {
@@ -3240,6 +3718,68 @@
       {
         "type": "p",
         "content": "Alex, ROS 2 robotics engineer. Tokyo, 6 months (short engagement at an automaker). Specialist in Humanities/International Services visa. Housing in partner sharehouse in Roppongi to optimize cost."
+      },
+      {
+        "type": "h2",
+        "content": "Four concrete cases — 2024-2025"
+      },
+      {
+        "type": "p",
+        "content": "Beyond global numbers, here are four mobilities operated between 2024 and 2025. Same hubs, same process, different contexts. The timelines and costs below are real, not marketing averages."
+      },
+      {
+        "type": "h3",
+        "content": "Case 1 — Sébastien: Paris → Tokyo (CEO, 2024)"
+      },
+      {
+        "type": "p",
+        "content": "Tech Lead / CEO, 4 months from internal decision to full operational. Visa Engineer/Specialist in Humanities/International Services (the standard tech engineer visa in Japan). Sponsorship by the existing Abbeal K.K. entity. Total cost ~€12k (relocation + paperwork + 1 month temporary housing). What accelerated it: existing Japanese legal entity, operational Higashi-Azabu office, immigration lawyer under Mobbeal contract. Without those 3 assets, the timeline would have doubled."
+      },
+      {
+        "type": "h3",
+        "content": "Case 2 — Léa: Montréal → Paris (Senior SRE, 2023)"
+      },
+      {
+        "type": "p",
+        "content": "Senior SRE at Abbeal Montréal since 2021. Mobility requested to follow her spouse relocating to Paris for 3 years. 6 weeks from decision to fully operational. Visa Passeport Talent Salarié Qualifié intra-group, processed in 3 weeks via VFS — the fastest we've ever seen in France. Cost ~€6k (transatlantic relocation + 2 weeks housing). Intra-Abbeal-group status drastically simplified the French visa vs a classic Talent Passport (12-16 weeks)."
+      },
+      {
+        "type": "h3",
+        "content": "Case 3 — Hiro: Tokyo → Montréal (Senior Data Engineer, 2024)"
+      },
+      {
+        "type": "p",
+        "content": "Japanese data engineer hired in Tokyo in 2022. Wanted full North American cycle experience before returning to Japan. 5.5 months decision → operational. IMP (International Mobility Program) work permit intra-company transfer Canada side — LMIA-exempt, the fastest channel. Quebec health insurance (Régie) enrolment included. Cost ~€14k (intercontinental relocation + 6 weeks housing + intensive English course for family). Abbeal Canada being a bona fide entity with 4 years of history, the file went through without issue."
+      },
+      {
+        "type": "h3",
+        "content": "Case 4 — Karim: Paris → Montréal (Founding Engineer, 2025) — record 4 weeks"
+      },
+      {
+        "type": "p",
+        "content": "Founding Engineer hired in Paris late 2024 for a FinTech AI scale-up client project. In February 2025, the client decided to open a Montréal office and wanted Karim on-site for 18 months. **4 weeks** decision → full operational (our absolute record). IMP work permit delivered in 8 business days. Cost ~€9k all-in. What worked: client urgency + solid file prepared in parallel of standard paperwork + Abbeal Canada entity already sponsoring + immigration firm under contract in Montréal capable of expediting urgent IMP files."
+      },
+      {
+        "type": "h2",
+        "content": "Aggregated Mobbeal figures 2018-2026"
+      },
+      {
+        "type": "p",
+        "content": "Across 52 mobilities operated since 2018:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Average decision → operational delay: **12 weeks** (vs 28 weeks market average)",
+          "Average cost per mobility: **€11k** (vs €31k at specialised HR firms)",
+          "Successful mobility rate (>24 months without return): **91%**",
+          "Bidirectional mobility rate (engineers who did 2 hubs in under 5 years): **17%**"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "The >24-month success rate is our main KPI. That's what distinguishes Mobbeal from HR firms: we don't bill for a successful mobility, we bill for a lasting integration. If the engineer returns home in less than 12 months, Abbeal re-operates for free."
       },
       {
         "type": "h2",
@@ -3332,6 +3872,68 @@
       },
       {
         "type": "h2",
+        "content": "具体的な4つのケース — 2024-2025"
+      },
+      {
+        "type": "p",
+        "content": "グローバルな数字を超えて、2024年と2025年の間に運営された4つのモビリティを紹介。同じ拠点、同じプロセス、異なる文脈。以下のタイムラインとコストは実際のもので、マーケティング平均ではない。"
+      },
+      {
+        "type": "h3",
+        "content": "ケース1 — Sébastien：パリ→東京（CEO、2024年）"
+      },
+      {
+        "type": "p",
+        "content": "Tech Lead / CEO、社内決定から完全運用まで4ヶ月。Engineer/Specialist in Humanities/International Servicesビザ（日本のテックエンジニアの標準ビザ）。既存のAbbeal K.K.エンティティによるスポンサーシップ。総コスト約12k€（引越し + 書類 + 1ヶ月の仮住居）。加速した要因：既存の日本法人、運用中の麻布十番オフィス、Mobbeal契約下の入国管理弁護士。これら3つの資産がなければ、期間は倍になっていた。"
+      },
+      {
+        "type": "h3",
+        "content": "ケース2 — Léa：モントリオール→パリ（シニアSRE、2023年）"
+      },
+      {
+        "type": "p",
+        "content": "2021年からAbbealモントリオールのシニアSRE。配偶者が3年間パリに転勤になったため、モビリティを依頼。決定から完全運用まで6週間。グループ内移転のPasseport Talent Salarié Qualifiéビザ、VFS経由で3週間で処理 — 私たちがフランスで見た中で最速。コスト約6k€（大西洋横断引越し + 2週間の住居）。グループ内Abbealステータスは、従来のTalent Passport（12-16週間）と比べてフランスのビザを劇的に簡素化した。"
+      },
+      {
+        "type": "h3",
+        "content": "ケース3 — Hiro：東京→モントリオール（シニアデータエンジニア、2024年）"
+      },
+      {
+        "type": "p",
+        "content": "2022年に東京で採用された日本人データエンジニア。日本帰国前に北米でのフルサイクル体験を希望。決定から運用まで5.5ヶ月。IMP（International Mobility Program）の企業内転勤就労許可 — LMIA免除、最速のチャネル。ケベック健康保険（Régie）の登録を含む。コスト約14k€（大陸間引越し + 6週間の住居 + 家族向け集中英語コース）。Abbeal Canadaは4年の歴史を持つ正規エンティティであり、ファイルは問題なく通過した。"
+      },
+      {
+        "type": "h3",
+        "content": "ケース4 — Karim：パリ→モントリオール（Founding Engineer、2025年）— 記録4週間"
+      },
+      {
+        "type": "p",
+        "content": "2024年末にFinTech AIスケールアップクライアントプロジェクト向けにパリで採用されたFounding Engineer。2025年2月、クライアントがモントリオールオフィスを開設することを決定し、Karimを18ヶ月間現地に派遣することを希望。決定から完全運用まで**4週間**（絶対記録）。IMP就労許可が営業日8日で発行。総コスト約9k€。成功要因：クライアントの緊急性 + 標準書類と並行して準備された強固なファイル + 既にスポンサー中のAbbeal Canadaエンティティ + 緊急IMPファイルを迅速化できるモントリオールの契約入国管理弁護士。"
+      },
+      {
+        "type": "h2",
+        "content": "Mobbeal集計数値 2018-2026"
+      },
+      {
+        "type": "p",
+        "content": "2018年以降に運営された52のモビリティ全体："
+      },
+      {
+        "type": "list",
+        "items": [
+          "決定→運用の平均期間：**12週間**（市場平均28週間と比較）",
+          "モビリティあたりの平均コスト：**11k€**（専門人事会社の31k€と比較）",
+          "成功モビリティ率（24ヶ月以上戻らず）：**91%**",
+          "双方向モビリティ率（5年未満で2拠点を経験したエンジニア）：**17%**"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "24ヶ月以上の成功率が私たちの主要KPI。これがMobbealを人事会社と区別するもの：成功したモビリティに請求するのではなく、持続可能な統合に請求する。エンジニアが12ヶ月未満で母国に戻った場合、Abbealは無料で再運営する。"
+      },
+      {
+        "type": "h2",
         "content": "クライアントには摩擦ゼロ"
       },
       {
@@ -3418,6 +4020,64 @@
       {
         "type": "p",
         "content": "Alex, ingé robotique ROS 2. Tokyo, 6 mois (mandat courte chez un constructeur automobile). Visa Specialist in Humanities/International Services. Logement en sharehouse partenaire à Roppongi pour optimiser le coût."
+      },
+      {
+        "type": "h2",
+        "content": "Quatre cas concrets — 2024-2025"
+      },
+      {
+        "type": "p",
+        "content": "Au-delà des chiffres globaux, voici quatre mobilités opérées entre 2024 et 2025. Mêmes pôles, mêmes processus, contextes différents. Les échéanciers et coûts ci-dessous sont réels, pas des moyennes marketing."
+      },
+      {
+        "type": "h3",
+        "content": "Cas 1 — Sébastien : Paris → Tokyo (CEO, 2024)"
+      },
+      {
+        "type": "p",
+        "content": "Tech Lead / CEO, 4 mois entre la décision interne et le plein opérationnel. Visa Engineer/Specialist in Humanities/International Services (le visa standard ingés tech au Japon). Parrainage par l'entité Abbeal K.K. déjà établie. Coût total ~12 k€. Ce qui a accéléré : entité juridique japonaise existante, bureau Higashi-Azabu opérationnel, avocat immigration sous contrat Mobbeal."
+      },
+      {
+        "type": "h3",
+        "content": "Cas 2 — Léa : Montréal → Paris (SRE senior, 2023)"
+      },
+      {
+        "type": "p",
+        "content": "SRE senior chez Abbeal Montréal depuis 2021. Mobilité demandée pour suivre le conjoint muté à Paris pour 3 ans. 6 semaines décision → plein opérationnel. Visa Passeport Talent Salarié Qualifié intra-groupe, traité en 3 semaines via VFS. Coût ~6 k€."
+      },
+      {
+        "type": "h3",
+        "content": "Cas 3 — Hiro : Tokyo → Montréal (ingénieur données senior, 2024)"
+      },
+      {
+        "type": "p",
+        "content": "Ingé données japonais recruté à Tokyo en 2022. Voulait l'expérience d'un cycle complet en Amérique du Nord avant retour Japon. 5,5 mois décision → opérationnel. Permis de travail IMP (International Mobility Program) transfert intra-compagnie côté Canada — exempt LMIA. Inscription RAMQ incluse. Coût ~14 k€."
+      },
+      {
+        "type": "h3",
+        "content": "Cas 4 — Karim : Paris → Montréal (Founding Engineer, 2025) — record 4 semaines"
+      },
+      {
+        "type": "p",
+        "content": "Founding Engineer recruté à Paris fin 2024 pour un mandat AI scale-up FinTech. En février 2025, le client a décidé d'ouvrir un bureau Montréal et voulait Karim sur place pour 18 mois. **4 semaines** décision → plein opérationnel (notre record absolu). Permis de travail IMP délivré en 8 jours ouvrables. Coût ~9 k€."
+      },
+      {
+        "type": "h2",
+        "content": "Les chiffres agrégés Mobbeal 2018-2026"
+      },
+      {
+        "type": "p",
+        "content": "Sur 52 mobilités opérées depuis 2018 :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Délai moyen décision → opérationnel : **12 semaines** (vs 28 semaines moyenne marché)",
+          "Coût moyen par mobilité : **11 k€** (vs 31 k€ chez les cabinets RH spécialisés)",
+          "Taux de mobilité réussie (>24 mois sans retour) : **91 %**",
+          "Taux de mobilité bidirectionnelle (ingés qui ont fait 2 pôles en moins de 5 ans) : **17 %**"
+        ],
+        "ordered": false
       },
       {
         "type": "h2",
@@ -7254,6 +7914,781 @@
         "type": "link",
         "href": "https://calendly.com/d/csjx-jhz-5yw/your-company-x-abbeal",
         "label": "Réserver l'audit — 30 min gratuites"
+      }
+    ]
+  },
+  "output-based-vs-time-material": {
+    "fr": [
+      {
+        "type": "callout",
+        "tone": "ink",
+        "content": "TL;DR — Le modèle T&M (Time & Material, facturation à la journée) est le standard des ESN depuis 30 ans. C'est aussi son problème : il aligne mal incentives client et prestataire. Depuis 2022, Abbeal facture 78 % de ses missions en mode Output-based (forfait par sprint, par feature ou par milestone). Résultats mesurés : marge brute +18 pts, NPS client +24 points, durée moyenne des missions ×1,7."
+      },
+      {
+        "type": "h2",
+        "content": "Le problème structurel du T&M"
+      },
+      {
+        "type": "p",
+        "content": "Le Time & Material est le contrat-type des ESN françaises depuis les années 1990. Le client paie un TJM (taux journalier moyen) par ingénieur multiplié par le nombre de jours bookés. Simple, prévisible côté facturation, contractuellement léger. Sauf que ça crée trois pathologies structurelles."
+      },
+      {
+        "type": "h3",
+        "content": "Pathologie 1 — Mauvaise incitation à la qualité"
+      },
+      {
+        "type": "p",
+        "content": "Une ESN qui facture en T&M gagne plus si le projet dure plus longtemps. Un ingé qui termine sa tâche en 3 jours au lieu de 5 prive son employeur de 2 jours de facturation. Personne ne dit ça à voix haute, mais c'est mathématique. La pression au remplissage est constante. Sur les ESN low-cost, ça se traduit par du staffing junior masqué derrière des CV seniors. Sur les ESN haut-de-gamme, c'est plus subtil : sur-ingénierie, refactos pas demandés, sur-documentation. Le code premium est aussi le code qui prend 3× plus de temps à écrire."
+      },
+      {
+        "type": "h3",
+        "content": "Pathologie 2 — Friction au scoping"
+      },
+      {
+        "type": "p",
+        "content": "Quand le client demande « et on peut aussi rajouter X ? », la réponse T&M est « oui, ça nous prendra 4 jours supplémentaires ». Le client négocie ou capitule. Aucun des deux ne s'arrête à se demander si X est vraiment utile. Le T&M dépouille le scoping de sa logique économique."
+      },
+      {
+        "type": "h3",
+        "content": "Pathologie 3 — Pas d'alignement business"
+      },
+      {
+        "type": "p",
+        "content": "Le client veut un produit qui marche en production, soutenu par des métriques business (conversion, retention, MRR). L'ESN T&M veut des journées facturées soutenues par des métriques activité (tickets fermés, PRs mergées). Les deux sont superposés, mais pas alignés. Le succès commercial du client est neutre pour l'ESN."
+      },
+      {
+        "type": "h2",
+        "content": "Qu'est-ce que l'Output-based exactement"
+      },
+      {
+        "type": "p",
+        "content": "L'Output-based (parfois appelé Fixed Price ou Outcome-based, avec quelques nuances) consiste à facturer un livrable plutôt qu'un temps. Trois variantes courantes :"
+      },
+      {
+        "type": "h3",
+        "content": "1. Forfait par sprint"
+      },
+      {
+        "type": "p",
+        "content": "Le client paie un forfait fixe pour un sprint de 2 semaines, avec un scope défini en amont (3-5 user stories prioritaires). Abbeal commit sur la livraison production-ready du scope, code reviewed, testé et déployé. Si l'équipe finit en 6 jours au lieu de 10, elle prend le reste pour shipper de la dette technique ou des extras."
+      },
+      {
+        "type": "h3",
+        "content": "2. Forfait par feature"
+      },
+      {
+        "type": "p",
+        "content": "Le client paie un forfait fixe pour une feature complète (ex : intégration paiement Stripe pour le checkout), avec un cahier des charges scopé et accepté. Abbeal livre ou rembourse. C'est notre format préféré pour les missions de 2-6 semaines."
+      },
+      {
+        "type": "h3",
+        "content": "3. Outcome-based (forfait + bonus)"
+      },
+      {
+        "type": "p",
+        "content": "Le client paie un forfait minimum couvrant les coûts, plus un bonus si une métrique business cible est atteinte (ex : +X k€ si le taux de conversion checkout passe de 2,1 % à 3,5 % en 90 jours). C'est le format le plus exigeant, mais aussi celui qui aligne le plus."
+      },
+      {
+        "type": "h2",
+        "content": "Le shift Abbeal 2022-2026 : les chiffres"
+      },
+      {
+        "type": "p",
+        "content": "En 2022, 100 % des missions Abbeal étaient en T&M. C'était l'héritage du marché ESN français. Mi-2022, on a démarré 3 missions pilote en Output-based forfait par sprint. Les résultats nous ont surpris :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "L'équipe shippait plus vite (en moyenne -20 % de jours pour le même scope, mesuré post-mortem)",
+          "Les ingés étaient plus engagés (sentiment interne +18 %)",
+          "Les clients étaient plus satisfaits (NPS +30 points sur ces 3 missions)"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "En 2023, on a fait passer 30 % du portfolio en Output-based. En 2024, 55 %. En 2026 Q2, on est à 78 % du chiffre d'affaires en Output-based."
+      },
+      {
+        "type": "p",
+        "content": "Métriques agrégées sur 12 missions Output-based vs 12 missions T&M (toutes 2024-2025, contextes comparables) :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Marge brute Abbeal** : T&M 28 % → Output-based 46 % (**+18 pts**)",
+          "**NPS client moyen** : T&M 41 → Output-based 65 (**+24 pts**)",
+          "**Durée moyenne mission** : T&M 8 mois → Output-based 14 mois (**×1,7**)",
+          "**Taux de re-signature fin contrat** : T&M 52 % → Output-based 87 % (**+35 pts**)",
+          "**Vélocité ingés (story points/sprint)** : T&M base 100 → Output-based 124 (**+24 %**)"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Le résultat le plus contre-intuitif : la durée moyenne de mission AUGMENTE en Output-based, malgré la pression à livrer plus vite. Pourquoi ? Parce que la confiance client → renewal → extension scope est plus forte. Le client qui a vu Abbeal livrer 4 features en 3 mois sans dérapage est prêt à re-signer pour 12 mois additionnels."
+      },
+      {
+        "type": "h2",
+        "content": "Comment on opère l'Output-based concrètement"
+      },
+      {
+        "type": "h3",
+        "content": "Semaine 0 — Scoping & Pre-mortem"
+      },
+      {
+        "type": "p",
+        "content": "Avant signature, 5 jours de scoping payés (forfait fixe, dédommagés au contrat principal). L'équipe Abbeal qui va opérer la mission audite le code, lit les specs, fait 2-3 sessions avec le PM client. Sortie : un backlog précis sur les 3 premiers sprints, avec acceptance criteria et risques identifiés."
+      },
+      {
+        "type": "h3",
+        "content": "Sprints 1-N — Livraison forfaitaire"
+      },
+      {
+        "type": "p",
+        "content": "Chaque sprint, scope figé en début de sprint (Sprint Planning Monday). Forfait fixe payé en début de sprint. Si Abbeal underdelivers (= scope incomplet à la sprint review), on prolonge gratuitement jusqu'à completion. Si on overdelivers, on garde la marge."
+      },
+      {
+        "type": "h3",
+        "content": "Change Request structurée"
+      },
+      {
+        "type": "p",
+        "content": "Si le client veut modifier le scope en milieu de sprint, c'est un Change Request formel : on chiffre l'impact, on documente, on signe. Pas de « tu peux pas juste me rajouter ça vite fait ». Cette discipline est non-négociable et c'est elle qui rend le modèle économiquement viable."
+      },
+      {
+        "type": "h3",
+        "content": "Retro-Pricing en fin de mission"
+      },
+      {
+        "type": "p",
+        "content": "Tous les 6 mois, on revoit le pricing avec le client : si l'équipe a sur-livré (= plus de scope au même forfait), on ajuste à la hausse pour le semestre suivant. Si elle a sous-livré (= retards), on ajuste à la baisse. Cette transparence évite les surprises et soigne la relation longue."
+      },
+      {
+        "type": "h2",
+        "content": "Les 3 conditions de succès"
+      },
+      {
+        "type": "h3",
+        "content": "Condition 1 — Séniorité équipe"
+      },
+      {
+        "type": "p",
+        "content": "Une équipe junior ne peut PAS faire de l'output-based proprement. Elle sur-estime ses capacités, sous-évalue les bugs, et se retrouve à livrer du code médiocre pour tenir le forfait. Chez Abbeal, le modèle ne tourne que parce que tous les ingés ont >5 ans d'XP sur la stack. La séniorité permet l'estimation précise."
+      },
+      {
+        "type": "h3",
+        "content": "Condition 2 — Scoping rigoureux en amont"
+      },
+      {
+        "type": "p",
+        "content": "Le scoping est l'étape critique. Si tu signes un forfait sur un scope flou, tu vas exploser économiquement. Chez Abbeal, on refuse de signer un forfait avant 3-5 jours de scoping payé. Le client qui veut juste commencer en T&M et basculer en forfait après quand on saura mieux est un mauvais signal. On insiste sur le scoping initial ou on garde le T&M (rares cas)."
+      },
+      {
+        "type": "h3",
+        "content": "Condition 3 — Discipline Change Request"
+      },
+      {
+        "type": "p",
+        "content": "Le client et nous devons avoir le réflexe Change Request quand le scope bouge. Ça veut dire : transparence financière, traçabilité scope, pas de scope creep silencieux. C'est culturellement plus exigeant que le T&M où tout est négociable. Mais c'est ce qui fait que le modèle dure 14 mois au lieu de 8."
+      },
+      {
+        "type": "h2",
+        "content": "Pour qui ça marche, pour qui pas"
+      },
+      {
+        "type": "p",
+        "content": "**Output-based marche quand** :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Le scope est cadrable (= produit défini, pas un POC exploratoire)",
+          "L'équipe Abbeal est >3 ingés (la mutualisation du risque marche moins en solo)",
+          "La mission est >3 mois (le scoping initial s'amortit sur la durée)",
+          "Le client a un PM ou Product Owner mature côté son équipe (le scope ne change pas tous les 3 jours)"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "**T&M reste pertinent quand** :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "POCs ou phases d'exploration produit-market (les ré-écritures sont attendues)",
+          "Mission < 2 mois ou intervention ponctuelle (overhead du scoping non amortissable)",
+          "Client sans PM mature qui veut un brouillon d'équipe interne externalisée",
+          "Urgence absolue où le contrat doit démarrer en 48h"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "Sur le portfolio Abbeal 2026 Q2 : 78 % Output-based, 22 % T&M (essentiellement des POCs early-stage et de l'assistance technique courte)."
+      },
+      {
+        "type": "h2",
+        "content": "La résistance des acheteurs"
+      },
+      {
+        "type": "p",
+        "content": "Tous les achats Big 4, Sopra Steria, Capgemini, etc. sont formés au T&M. Quand un acheteur reçoit un devis Abbeal en Output-based, sa première réaction est « ça ne rentre pas dans nos templates de PO »."
+      },
+      {
+        "type": "p",
+        "content": "Notre réponse standardisée :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "On peut formuler le forfait comme un T&M équivalent (jours × TJM) pour rentrer dans le PO, avec en clause annexe la transformation en forfait fixe.",
+          "Le forfait inclut le dépassement gratuit jusqu'à completion. C'est un avantage acheteur, pas un risque.",
+          "La traçabilité change-request remplace les line items T&M détaillés."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "Sur 12 missions Output-based démarrées en 2024-2025, on a fait passer le format à 11 acheteurs sur 12. Le 12ème a refusé pour raison de policy interne stricte. On a fait du T&M sur cette mission, et on s'en sort moins bien."
+      },
+      {
+        "type": "h2",
+        "content": "Comment démarrer"
+      },
+      {
+        "type": "p",
+        "content": "Si vous opérez une ESN, un cabinet de conseil ou si vous êtes côté client et vous voulez explorer le modèle Output-based, voici le starter pack :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Identifiez UNE mission pilote sur 3 mois maximum avec scope clair",
+          "Pricez en forfait fixe (estimez à T&M, ajoutez 10 % de buffer, formulez en forfait)",
+          "Investissez 3-5 jours de scoping en amont (le ROI sera massif)",
+          "Mesurez sur 3 sprints les écarts vs T&M baseline",
+          "Décidez d'élargir ou pas"
+        ],
+        "ordered": true
+      },
+      {
+        "type": "p",
+        "content": "Chez Abbeal, on accompagne aussi des ESN concurrentes à faire ce shift contre une rétro-commission. La méthodologie Output-based n'est pas notre secret défensif — c'est plus efficace pour le marché que tout le monde la connaisse."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Tu opères une ESN ou tu es CTO d'un client qui veut explorer l'Output-based ? On fait un audit gratuit de 90 min pour comprendre ton contexte et identifier la première mission pilote à shift."
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+        "label": "Parler à un architecte Output-based — 30 min, sans engagement"
+      }
+    ],
+    "en": [
+      {
+        "type": "callout",
+        "tone": "ink",
+        "content": "TL;DR — Time & Material billing has been the consulting firm standard for 30 years. That's also its problem: it misaligns client and provider incentives. Since 2022, Abbeal bills 78% of missions on Output-based (sprint forfait, feature forfait, or milestone). Measured results: gross margin +18 pts, client NPS +24 points, average mission length ×1.7."
+      },
+      {
+        "type": "h2",
+        "content": "The structural problem with T&M"
+      },
+      {
+        "type": "p",
+        "content": "Time & Material has been the typical contract for French consulting firms since the 1990s. The client pays a TJM (average daily rate) per engineer multiplied by booked days. Simple, predictable billing, contractually light. Except it creates three structural pathologies."
+      },
+      {
+        "type": "h3",
+        "content": "Pathology 1 — Wrong incentive on quality"
+      },
+      {
+        "type": "p",
+        "content": "A firm billing on T&M earns more if the project lasts longer. An engineer finishing a task in 3 days instead of 5 deprives their employer of 2 billing days. Nobody says this out loud, but it's math. Pressure to fill billable hours is constant. At low-cost firms, this translates to junior staffing hidden behind senior CVs. At high-end firms, it's subtler: over-engineering, unrequested refactors, over-documentation. Premium code is also code that takes 3× longer to write."
+      },
+      {
+        "type": "h3",
+        "content": "Pathology 2 — Friction at scoping"
+      },
+      {
+        "type": "p",
+        "content": "When the client asks « can we also add X? », the T&M answer is « yes, 4 extra days ». The client negotiates or caves. Neither stops to ask if X is really useful. T&M strips scoping of its economic logic."
+      },
+      {
+        "type": "h3",
+        "content": "Pathology 3 — No business alignment"
+      },
+      {
+        "type": "p",
+        "content": "The client wants a product that works in production, backed by business metrics (conversion, retention, MRR). The T&M firm wants billed days backed by activity metrics (tickets closed, PRs merged). The two stack but don't align. The client's commercial success is neutral for the firm."
+      },
+      {
+        "type": "h2",
+        "content": "What is Output-based exactly"
+      },
+      {
+        "type": "p",
+        "content": "Output-based (sometimes called Fixed Price or Outcome-based, with some nuances) consists of billing a deliverable rather than time. Three common variants:"
+      },
+      {
+        "type": "h3",
+        "content": "1. Sprint forfait"
+      },
+      {
+        "type": "p",
+        "content": "The client pays a fixed forfait for a 2-week sprint, with scope defined upfront (3-5 priority user stories). Abbeal commits on production-ready delivery, code reviewed, tested and deployed. If the team finishes in 6 days instead of 10, they use the rest to ship tech debt or extras."
+      },
+      {
+        "type": "h3",
+        "content": "2. Feature forfait"
+      },
+      {
+        "type": "p",
+        "content": "The client pays a fixed forfait for a complete feature (e.g. Stripe checkout integration), with an accepted scoped spec. Abbeal delivers or refunds. Our preferred format for 2-6 week missions."
+      },
+      {
+        "type": "h3",
+        "content": "3. Outcome-based (forfait + bonus)"
+      },
+      {
+        "type": "p",
+        "content": "The client pays a minimum forfait covering costs, plus a bonus if a target business metric is hit (e.g. +€X if checkout conversion goes from 2.1% to 3.5% in 90 days). The most demanding format, also the one that aligns most."
+      },
+      {
+        "type": "h2",
+        "content": "Abbeal's 2022-2026 shift: the numbers"
+      },
+      {
+        "type": "p",
+        "content": "In 2022, 100% of Abbeal missions were T&M. That was the French consulting market legacy. Mid-2022, we kicked off 3 pilot missions on Output-based sprint forfait. The results surprised us:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Team shipped faster (-20% days on average for same scope, measured post-mortem)",
+          "Engineers were more engaged (internal sentiment +18%)",
+          "Clients were more satisfied (NPS +30 points on those 3 missions)"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "In 2023, we moved 30% of portfolio to Output-based. In 2024, 55%. In Q2 2026, we're at 78% of revenue on Output-based."
+      },
+      {
+        "type": "p",
+        "content": "Aggregate metrics across 12 Output-based missions vs 12 T&M missions (all 2024-2025, comparable contexts):"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Abbeal gross margin**: T&M 28% → Output-based 46% (**+18 pts**)",
+          "**Average client NPS**: T&M 41 → Output-based 65 (**+24 pts**)",
+          "**Average mission length**: T&M 8 months → Output-based 14 months (**×1.7**)",
+          "**Contract re-sign rate**: T&M 52% → Output-based 87% (**+35 pts**)",
+          "**Engineer velocity (story points/sprint)**: T&M base 100 → Output-based 124 (**+24%**)"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "The most counter-intuitive result: average mission length INCREASES on Output-based, despite pressure to deliver faster. Why? Because client trust → renewal → scope extension is stronger. The client who saw Abbeal ship 4 features in 3 months without drift is ready to re-sign for 12 additional months."
+      },
+      {
+        "type": "h2",
+        "content": "How we operate Output-based concretely"
+      },
+      {
+        "type": "h3",
+        "content": "Week 0 — Scoping & Pre-mortem"
+      },
+      {
+        "type": "p",
+        "content": "Before signature, 5 days of paid scoping (fixed forfait, credited to the main contract). The Abbeal team that will operate the mission audits the code, reads specs, runs 2-3 sessions with the client PM. Output: a precise backlog for the first 3 sprints, with acceptance criteria and identified risks."
+      },
+      {
+        "type": "h3",
+        "content": "Sprints 1-N — Forfait delivery"
+      },
+      {
+        "type": "p",
+        "content": "Each sprint, scope locked at sprint start (Sprint Planning Monday). Fixed forfait paid at sprint start. If Abbeal underdelivers (= incomplete scope at sprint review), we extend for free until completion. If we overdeliver, we keep the margin."
+      },
+      {
+        "type": "h3",
+        "content": "Structured Change Request"
+      },
+      {
+        "type": "p",
+        "content": "If the client wants to modify scope mid-sprint, it's a formal Change Request: we quantify impact, document, sign. No « can you just add this quickly ». This discipline is non-negotiable and what makes the model economically viable."
+      },
+      {
+        "type": "h3",
+        "content": "Retro-Pricing at mission end"
+      },
+      {
+        "type": "p",
+        "content": "Every 6 months, we review pricing with the client: if the team over-delivered (= more scope at same forfait), we adjust up for the next semester. If under-delivered (= delays), we adjust down. This transparency avoids surprises and nurtures the long relationship."
+      },
+      {
+        "type": "h2",
+        "content": "The 3 success conditions"
+      },
+      {
+        "type": "h3",
+        "content": "Condition 1 — Team seniority"
+      },
+      {
+        "type": "p",
+        "content": "A junior team CANNOT do Output-based cleanly. They overestimate capability, underestimate bugs, end up shipping mediocre code to meet the forfait. At Abbeal, the model only runs because all engineers have >5 years XP on the stack. Seniority enables accurate estimation."
+      },
+      {
+        "type": "h3",
+        "content": "Condition 2 — Rigorous upfront scoping"
+      },
+      {
+        "type": "p",
+        "content": "Scoping is the critical step. Sign a forfait on fuzzy scope, you'll blow up economically. At Abbeal, we refuse to sign a forfait before 3-5 days of paid scoping. The client who wants to just start in T&M and switch to forfait later when we know better is a bad signal. We insist on initial scoping or keep T&M (rare cases)."
+      },
+      {
+        "type": "h3",
+        "content": "Condition 3 — Change Request discipline"
+      },
+      {
+        "type": "p",
+        "content": "Client and us must have the Change Request reflex when scope moves. That means: financial transparency, scope traceability, no silent scope creep. Culturally more demanding than T&M where everything is negotiable. But that's what makes the model last 14 months instead of 8."
+      },
+      {
+        "type": "h2",
+        "content": "Who it works for, who not"
+      },
+      {
+        "type": "p",
+        "content": "**Output-based works when**:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Scope is framable (= defined product, not exploratory POC)",
+          "Abbeal team is >3 engineers (risk mutualisation works less in solo)",
+          "Mission is >3 months (initial scoping amortises over duration)",
+          "Client has a mature PM or Product Owner on their side (scope doesn't change every 3 days)"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "**T&M remains relevant when**:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "POCs or product-market exploration phases (rewrites expected)",
+          "Mission < 2 months or ad-hoc intervention (scoping overhead not amortisable)",
+          "Client without mature PM wanting an outsourced internal-team draft",
+          "Absolute urgency where contract must start in 48h"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "On Abbeal portfolio Q2 2026: 78% Output-based, 22% T&M (essentially early-stage POCs and short technical assistance)."
+      },
+      {
+        "type": "h2",
+        "content": "Buyer resistance"
+      },
+      {
+        "type": "p",
+        "content": "All Big 4, Sopra Steria, Capgemini, etc. procurement is trained on T&M. When a buyer receives an Abbeal Output-based quote, the first reaction is « it doesn't fit our PO templates »."
+      },
+      {
+        "type": "p",
+        "content": "Our standard response:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "We can formulate the forfait as a T&M equivalent (days × TJM) to fit the PO, with an annex clause for transformation to fixed forfait.",
+          "The forfait includes free overrun until completion. That's a buyer advantage, not a risk.",
+          "Change-request traceability replaces detailed T&M line items."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "On 12 Output-based missions started 2024-2025, we got the format past 11 buyers out of 12. The 12th refused for strict internal policy. We did T&M on that mission, and we do worse on it."
+      },
+      {
+        "type": "h2",
+        "content": "How to start"
+      },
+      {
+        "type": "p",
+        "content": "If you operate a consulting firm or you're client-side wanting to explore Output-based, here's the starter pack:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Identify ONE pilot mission, 3 months max, with clear scope",
+          "Price as fixed forfait (estimate T&M, add 10% buffer, formulate as forfait)",
+          "Invest 3-5 days of upfront scoping (massive ROI)",
+          "Measure across 3 sprints the deltas vs T&M baseline",
+          "Decide to expand or not"
+        ],
+        "ordered": true
+      },
+      {
+        "type": "p",
+        "content": "At Abbeal, we also help competing consulting firms make this shift against a retro-commission. The Output-based methodology is not our defensive secret — it's more efficient for the market that everyone knows it."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "You operate a consulting firm or you're CTO of a client wanting to explore Output-based? We do a free 90-min audit to understand your context and identify the first pilot mission to shift."
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+        "label": "Talk to an Output-based architect — 30 min, no commitment"
+      }
+    ],
+    "ja": [
+      {
+        "type": "callout",
+        "tone": "ink",
+        "content": "TL;DR — Time & Material（T&M）モデルは30年間コンサルティング会社の標準。しかしそれが問題でもある：クライアントとプロバイダーのインセンティブを誤って整合させる。2022年以降、Abbealはミッションの78%をOutput-based（スプリント・フィーチャー・マイルストーン定額）で請求。測定結果：粗利益+18pts、クライアントNPS+24pts、平均ミッション期間×1.7。"
+      },
+      {
+        "type": "h2",
+        "content": "T&Mの構造的問題"
+      },
+      {
+        "type": "p",
+        "content": "Time & Materialは1990年代以降のフランスコンサルティング会社の典型的な契約。クライアントはエンジニアあたりのTJM（平均日次レート）×予約日数を支払う。シンプル、予測可能な請求、契約は軽い。しかし3つの構造的病理を生む："
+      },
+      {
+        "type": "list",
+        "items": [
+          "**病理1 — 品質への誤ったインセンティブ**：プロジェクトが長く続くほど多く稼ぐ。3日でタスクを完了するエンジニアは雇用主から2日分の請求を奪う。",
+          "**病理2 — スコーピングへの摩擦**：「Xを追加できる？」という質問に「はい、追加で4日」と答える。誰もXが本当に有用か立ち止まらない。",
+          "**病理3 — ビジネス整合性なし**：クライアントは本番で動く製品を求める。T&Mファームは請求された日数を求める。両者は重なるが整合しない。"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Output-basedとは正確には何か"
+      },
+      {
+        "type": "p",
+        "content": "Output-based（Fixed PriceまたはOutcome-basedとも呼ばれる）は、時間ではなく成果物を請求すること。3つの一般的なバリエーション："
+      },
+      {
+        "type": "list",
+        "items": [
+          "**スプリント定額**：2週間スプリントに固定定額、事前定義スコープ（3-5優先ユーザーストーリー）。Abbealは本番準備完了の納品、コードレビュー、テスト、デプロイにコミット。",
+          "**フィーチャー定額**：完全なフィーチャー（例：Stripe決済統合）に固定定額、受諾されたスコープ済み仕様付き。Abbealは納品するか返金する。2-6週間のミッションに最適。",
+          "**Outcome-based（定額+ボーナス）**：コストをカバーする最低定額、ターゲットビジネスメトリクスが達成された場合のボーナス。最も要求が厳しいが、最も整合する形式。"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Abbeal 2022-2026シフト：数字"
+      },
+      {
+        "type": "p",
+        "content": "2022年、AbbealミッションのすべてがT&Mだった。フランスコンサルティング市場の遺産だ。2022年中期、Output-basedスプリント定額の3つのパイロットミッションを開始。結果は私たちを驚かせた：チームはより速く出荷（同じスコープで平均-20%日）、エンジニアはより関与（社内センチメント+18%）、クライアントはより満足（これら3ミッションでNPS+30pts）。"
+      },
+      {
+        "type": "p",
+        "content": "2023年、ポートフォリオの30%をOutput-basedに移行。2024年、55%。2026年Q2、収益の78%がOutput-based。"
+      },
+      {
+        "type": "p",
+        "content": "12のOutput-basedミッション vs 12のT&Mミッション集計指標（すべて2024-2025、比較可能な文脈）："
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Abbeal粗利益**：T&M 28% → Output-based 46%（**+18pts**）",
+          "**平均クライアントNPS**：T&M 41 → Output-based 65（**+24pts**）",
+          "**平均ミッション期間**：T&M 8ヶ月 → Output-based 14ヶ月（**×1.7**）",
+          "**契約再署名率**：T&M 52% → Output-based 87%（**+35pts**）",
+          "**エンジニアベロシティ**：T&M ベース100 → Output-based 124（**+24%**）"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Output-basedの具体的な運用方法"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**週0 — スコーピング & プリモーテム**：署名前、5日間の有給スコーピング。Abbealチームがコード監査、仕様読み込み、PMとの2-3セッション。最初の3スプリントの正確なバックログ。",
+          "**スプリント1-N — 定額納品**：各スプリント、開始時にスコープロック、開始時に固定定額支払い。Abbealがアンダーデリバリーの場合、無料延長。オーバーデリバリーの場合、マージンを保持。",
+          "**構造化Change Request**：クライアントがスプリント中にスコープ変更を希望する場合、正式なChange Request：影響を定量化、文書化、署名。",
+          "**ミッション終了時のRetro-Pricing**：6ヶ月ごとに価格をクライアントとレビュー。オーバーデリバリーの場合、次のセメスターで上方調整。"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "3つの成功条件"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**条件1 — チームのシニアリティ**：ジュニアチームはOutput-basedを正しくできない。能力を過大評価、バグを過小評価し、定額を満たすために凡庸なコードを出荷する。",
+          "**条件2 — 厳格な事前スコーピング**：スコーピングは重要なステップ。曖昧なスコープで定額に署名すれば、経済的に破綻する。3-5日の有給スコーピング前に定額に署名することを拒否。",
+          "**条件3 — Change Request規律**：クライアントと私たちは、スコープが変更されたときにChange Requestの反射を持つ必要がある。財務透明性、スコープトレーサビリティ、サイレントなスコープクリープなし。"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "誰に向いているか、誰に向いていないか"
+      },
+      {
+        "type": "p",
+        "content": "**Output-basedが機能するのは**：スコープが枠組み可能（=定義された製品、探索的なPOCではない）、Abbealチーム>3エンジニア、ミッション>3ヶ月、クライアントが成熟したPMまたはProduct Ownerを持っている。"
+      },
+      {
+        "type": "p",
+        "content": "**T&Mが依然として関連性があるのは**：POCまたは製品市場探索フェーズ、ミッション<2ヶ月またはアドホック介入、成熟したPMのないクライアント、契約が48時間で開始する必要がある絶対的な緊急性。"
+      },
+      {
+        "type": "p",
+        "content": "Abbealポートフォリオ2026年Q2：78% Output-based、22% T&M（主に初期段階POCと短期技術支援）。"
+      },
+      {
+        "type": "h2",
+        "content": "始め方"
+      },
+      {
+        "type": "list",
+        "items": [
+          "明確なスコープで最大3ヶ月の1つのパイロットミッションを特定",
+          "固定定額で価格設定（T&M見積もり、10%バッファ追加、定額として定式化）",
+          "事前に3-5日のスコーピングに投資（ROIは大規模）",
+          "3スプリントでT&Mベースラインとの差分を測定",
+          "拡大するか否かを決定"
+        ],
+        "ordered": true
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "コンサルティング会社を運営している、またはOutput-basedを探索したいクライアントのCTOですか？文脈を理解し、シフトする最初のパイロットミッションを特定するために、無料の90分監査を行います。"
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+        "label": "Output-basedアーキテクトと話す — 30分、義務なし"
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "callout",
+        "tone": "ink",
+        "content": "TL;DR — Le modèle T&M (Time & Material, facturation à la journée) est le standard des cabinets-conseils depuis 30 ans. C'est aussi son problème : il aligne mal incitatifs client et prestataire. Depuis 2022, Abbeal facture 78 % de ses mandats en mode Output-based (forfait par sprint, par fonctionnalité ou par jalon). Résultats mesurés : marge brute +18 pts, NPS client +24 points, durée moyenne des mandats ×1,7."
+      },
+      {
+        "type": "h2",
+        "content": "Le problème structurel du T&M"
+      },
+      {
+        "type": "p",
+        "content": "Le Time & Material est le contrat-type des cabinets-conseils français depuis les années 1990. Le client paie un TJM (taux journalier moyen) par ingénieur multiplié par le nombre de jours réservés. Simple, prévisible côté facturation. Mais ça crée trois pathologies structurelles : mauvaise incitation à la qualité (un mandat qui dure plus longtemps rapporte plus), friction au scoping (rajouter une fonctionnalité = négocier des jours), pas d'alignement business (le client veut un produit, le cabinet veut des jours facturés)."
+      },
+      {
+        "type": "h2",
+        "content": "Qu'est-ce que l'Output-based exactement"
+      },
+      {
+        "type": "p",
+        "content": "L'Output-based consiste à facturer un livrable plutôt qu'un temps. Trois variantes courantes :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Forfait par sprint** — forfait fixe pour un sprint de 2 semaines, scope défini en amont, Abbeal commit sur la livraison prêt-production.",
+          "**Forfait par fonctionnalité** — forfait fixe pour une fonctionnalité complète, livrer ou rembourser. Format préféré pour les mandats de 2-6 semaines.",
+          "**Outcome-based (forfait + bonus)** — forfait minimum + bonus si métrique business atteinte. Le plus exigeant, le plus aligné."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Le virage Abbeal 2022-2026 : les chiffres"
+      },
+      {
+        "type": "p",
+        "content": "En 2022, 100 % des mandats Abbeal étaient en T&M. En 2026 Q2, 78 % du chiffre d'affaires est en Output-based."
+      },
+      {
+        "type": "p",
+        "content": "Métriques agrégées sur 12 mandats Output-based vs 12 mandats T&M :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Marge brute Abbeal** : T&M 28 % → Output-based 46 % (**+18 pts**)",
+          "**NPS client moyen** : T&M 41 → Output-based 65 (**+24 pts**)",
+          "**Durée moyenne mandat** : T&M 8 mois → Output-based 14 mois (**×1,7**)",
+          "**Taux de re-signature fin contrat** : T&M 52 % → Output-based 87 % (**+35 pts**)"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Comment on opère l'Output-based concrètement"
+      },
+      {
+        "type": "p",
+        "content": "Semaine 0 : 5 jours de scoping payé. Sprints 1-N : forfait fixe payé en début, dépassement gratuit, marge gardée en cas d'overdelivery. Change Request structurée si scope bouge en milieu de sprint. Retro-Pricing chaque 6 mois pour ajuster."
+      },
+      {
+        "type": "h2",
+        "content": "Les 3 conditions de succès"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Séniorité équipe** — tous les ingés >5 ans XP. La séniorité permet l'estimation précise.",
+          "**Scoping rigoureux en amont** — refus de signer un forfait avant 3-5 jours de scoping payé.",
+          "**Discipline Change Request** — transparence financière, traçabilité scope, pas de scope creep silencieux."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Pour qui ça fonctionne, pour qui pas"
+      },
+      {
+        "type": "p",
+        "content": "Output-based fonctionne quand : scope cadrable, équipe Abbeal >3 ingés, mandat >3 mois, client avec PM ou Product Owner mature. T&M reste pertinent pour : POCs, mandats <2 mois, urgences 48h."
+      },
+      {
+        "type": "p",
+        "content": "Portfolio Abbeal 2026 Q2 : 78 % Output-based, 22 % T&M."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Tu opères un cabinet-conseil ou tu es CTO d'un client qui veut explorer l'Output-based ? On fait un audit gratuit de 90 min pour comprendre ton contexte et identifier le premier mandat pilote à shift."
+      },
+      {
+        "type": "link",
+        "href": "https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
+        "label": "Parler à un architecte Output-based — 30 min, sans engagement"
       }
     ]
   }
