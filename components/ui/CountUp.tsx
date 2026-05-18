@@ -42,10 +42,17 @@ function AnimatedNumber({
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.2 });
   const reduce = useReducedMotion();
-  const [n, setN] = useState(reduce ? value : 0);
+  // SSR render la valeur cible (pas 0). Important pour SEO + LLM citations
+  // qui n'executent pas le JS : sans ca, les crawlers voyaient "0+ clients"
+  // au lieu de "150+ clients". Audit W20 quick win #2 (18 mai 2026).
+  const [n, setN] = useState(value);
 
   useEffect(() => {
     if (!inView || reduce) return;
+    // Reset a 0 puis animation classique au scroll. La brieve transition
+    // 150 -> 0 -> 150 est imperceptible vu que l element n est pas
+    // visible avant le scroll trigger (useInView garantit ca).
+    setN(0);
     const controls = animate(0, value, {
       duration,
       ease: [0.16, 1, 0.3, 1],

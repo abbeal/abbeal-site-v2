@@ -54,7 +54,7 @@
     "tape": "// 02 · Proof",
     "items": [
       {
-        "value": "100+",
+        "value": "150+",
         "label": "Companies shipped with"
       },
       {
@@ -1024,7 +1024,7 @@
       {
         "year": "2026",
         "city": "Tri-geo",
-        "event": "100+ clients shipped with, 50+ engineers relocated through Mobbeal, 24/7 Follow-the-Sun operational across the three hubs."
+        "event": "150+ clients shipped with, 50+ engineers relocated through Mobbeal, 24/7 Follow-the-Sun operational across the three hubs."
       }
     ],
     "leadersTape": "// Leadership",
@@ -1089,7 +1089,7 @@
     "statsTitle": "Scale, not noise.",
     "stats": [
       {
-        "value": "100+",
+        "value": "150+",
         "label": "Companies shipped with"
       },
       {
