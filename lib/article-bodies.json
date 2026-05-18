@@ -7176,5 +7176,773 @@
         "label": "Réserver l'audit — 30 min gratuites"
       }
     ]
+  },
+  "css-for-javascript-developers-josh-comeau-retour-alex-lim": {
+    "fr": [
+      {
+        "type": "callout",
+        "tone": "ink",
+        "content": "Par Alexandre Lim — Senior Software Engineer Abbeal, Hub Asie · Tokyo. Notes initialement publiées sur Notion en mai 2026."
+      },
+      {
+        "type": "p",
+        "content": "Si tu écris du JavaScript tous les jours mais que tu as toujours l'impression que ton CSS est un mélange de tâtonnement et de Stack Overflow, ce post est pour toi. J'ai suivi CSS for JavaScript Developers de Josh Comeau il y a quelques années. Le verdict tient en une ligne : c'est le cours qui m'a fait passer de « ça marche, je sais pas pourquoi » à « j'ai un modèle mental clair, je sais quoi changer »."
+      },
+      {
+        "type": "h2",
+        "content": "Ce qu'est le cours, en 2 minutes"
+      },
+      {
+        "type": "p",
+        "content": "CSS for JavaScript Developers est un cours en ligne pensé pour les devs JS qui veulent enfin maîtriser le CSS au lieu de le subir. Le format est progressif, modulaire, avec des exercices interactifs. Le tier premium ajoute du contenu bonus (un module animations très solide, entre autres). La promesse de Josh : « CSS peut être fun ». Ça paraît marketing. Je confirme que ça l'est."
+      },
+      {
+        "type": "h2",
+        "content": "Mon contexte avant le cours"
+      },
+      {
+        "type": "p",
+        "content": "J'ai fait du back-end et du front-end selon les besoins clients pendant plusieurs années, avant de me spécialiser front-end (React principalement). Je lisais déjà les articles de Josh sur son blog — toujours de qualité, toujours profonds techniquement, avec des animations CSS pour expliquer des concepts CSS. Quand il a annoncé le cours, j'ai sauté dessus."
+      },
+      {
+        "type": "h2",
+        "content": "Est-ce que ça en valait la peine ?"
+      },
+      {
+        "type": "p",
+        "content": "Oui, franchement. Les modules sont bien rythmés — jamais le sentiment d'être noyé sous des concepts à digérer. Tu sors de chaque section avec un modèle mental concret que tu peux appliquer le lendemain en mission. Le CSS commence à « avoir du sens » : tu comprends pourquoi telle propriété se comporte de telle façon, pas juste comment l'utiliser."
+      },
+      {
+        "type": "p",
+        "content": "Effet collatéral que je n'avais pas vu venir : j'ai pu enseigner ce que j'apprenais à des collègues. Et tu serais surpris du peu que la plupart des devs frontends connaissent vraiment du CSS — flexbox/grid à peu près, mais le modèle de cascade, les units, les contextes d'empilement, c'est souvent flou. Le cours te donne le vocabulaire pour expliquer ces choses simplement."
+      },
+      {
+        "type": "p",
+        "content": "Aujourd'hui quand je tombe sur un challenge CSS un peu vicieux, je retourne dans les leçons de Josh. Pas par paresse — parce qu'il explique les fondamentaux pour que tu comprennes ce qui se passe sous le capot. C'est de l'investissement qui paye sur plusieurs années."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Si on me demande « par où commencer pour me sentir solide en CSS », c'est ma réponse depuis 2022. L'investissement temps + argent en vaut la peine pour n'importe quel dev JS qui touche au front."
+      },
+      {
+        "type": "h2",
+        "content": "Pour aller plus loin"
+      },
+      {
+        "type": "p",
+        "content": "La landing page du cours est ici : css-for-js.dev. Josh y détaille les modules, le pricing par tier, et propose des extraits gratuits si tu veux te faire ton propre avis avant d'investir."
+      },
+      {
+        "type": "link",
+        "href": "https://css-for-js.dev/",
+        "label": "Voir la page du cours sur css-for-js.dev"
+      },
+      {
+        "type": "p",
+        "content": "Mes notes complètes sont aussi disponibles sur la page Notion qui a inspiré ce post."
+      },
+      {
+        "type": "link",
+        "href": "https://www.notion.so/alexandrelim/CSS-for-JavaScript-Developers-by-Josh-Comeau-362de92671888078bd67c541c2e9454a",
+        "label": "Lire les notes originales sur Notion"
+      }
+    ],
+    "en": [
+      {
+        "type": "callout",
+        "tone": "ink",
+        "content": "By Alexandre Lim — Senior Software Engineer at Abbeal, Asia Hub · Tokyo. Notes originally published on Notion in May 2026."
+      },
+      {
+        "type": "p",
+        "content": "If you write JavaScript every day but always feel like your CSS is a mix of trial-and-error and Stack Overflow, this post is for you. I took CSS for JavaScript Developers by Josh Comeau a few years ago. The verdict fits in one line: it's the course that took me from « it works, I don't know why » to « I have a clear mental model, I know what to change »."
+      },
+      {
+        "type": "h2",
+        "content": "What the course is, in 2 minutes"
+      },
+      {
+        "type": "p",
+        "content": "CSS for JavaScript Developers is an online course designed for JS devs who want to finally master CSS instead of suffering through it. The format is progressive, modular, with interactive exercises. The premium tier adds bonus content (a very solid animations module, among others). Josh's promise: « CSS can be fun. » Sounds like marketing copy. I confirm it actually is."
+      },
+      {
+        "type": "h2",
+        "content": "My context before the course"
+      },
+      {
+        "type": "p",
+        "content": "I did back-end and front-end depending on client needs for several years, before specializing in front-end (mostly React). I was already reading Josh's articles on his blog — always high quality, always technically deep, with CSS animations to explain CSS concepts. When he announced the course, I jumped on it."
+      },
+      {
+        "type": "h2",
+        "content": "Was it worth it?"
+      },
+      {
+        "type": "p",
+        "content": "Honestly, yes. The modules are well-paced — never the feeling of drowning under concepts to digest. You leave each section with a concrete mental model you can apply the next day on a project. CSS starts to « make sense »: you understand why a property behaves the way it does, not just how to use it."
+      },
+      {
+        "type": "p",
+        "content": "Collateral effect I didn't see coming: I was able to teach what I was learning to colleagues. And you'd be surprised how little most frontend devs really know about CSS — flexbox/grid roughly, but the cascade model, units, stacking contexts, it's often hazy. The course gives you the vocabulary to explain these things simply."
+      },
+      {
+        "type": "p",
+        "content": "Today when I hit a slightly tricky CSS challenge, I go back to Josh's lessons. Not out of laziness — because he explains the fundamentals so you understand what's happening under the hood. It's the kind of investment that pays off over multiple years."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "If someone asks me « where do I start to feel solid in CSS », this has been my answer since 2022. The time + money investment is worth it for any JS dev who touches the front."
+      },
+      {
+        "type": "h2",
+        "content": "To go further"
+      },
+      {
+        "type": "p",
+        "content": "The course landing page is here: css-for-js.dev. Josh details the modules, pricing per tier, and offers free excerpts if you want to form your own opinion before investing."
+      },
+      {
+        "type": "link",
+        "href": "https://css-for-js.dev/",
+        "label": "See the course on css-for-js.dev"
+      },
+      {
+        "type": "p",
+        "content": "My full notes are also available on the Notion page that inspired this post."
+      },
+      {
+        "type": "link",
+        "href": "https://www.notion.so/alexandrelim/CSS-for-JavaScript-Developers-by-Josh-Comeau-362de92671888078bd67c541c2e9454a",
+        "label": "Read the original notes on Notion"
+      }
+    ],
+    "ja": [
+      {
+        "type": "callout",
+        "tone": "ink",
+        "content": "アレクサンドル・リムによる執筆 — Abbealシニアソフトウェアエンジニア、アジア拠点・東京。2026年5月にNotionで最初に公開されたノート。"
+      },
+      {
+        "type": "p",
+        "content": "毎日JavaScriptを書いているが、CSSは試行錯誤とStack Overflowの混合のように感じている場合、この投稿はあなたのためのものです。数年前にJosh ComeauのCSS for JavaScript Developersを受講しました。判定は1行で収まります：「動くけど、なぜか分からない」から「明確なメンタルモデルがあり、何を変えるべきか分かる」に移行させてくれたコースです。"
+      },
+      {
+        "type": "h2",
+        "content": "コースの内容、2分で"
+      },
+      {
+        "type": "p",
+        "content": "CSS for JavaScript Developersは、CSSを苦しまずに最終的にマスターしたいJS開発者向けに設計されたオンラインコースです。フォーマットは段階的、モジュール式、インタラクティブな演習付き。プレミアムティアでは追加のボーナスコンテンツ（特に非常に充実したアニメーションモジュール）が加わります。Joshの約束：「CSSは楽しい」。マーケティングコピーのように聞こえます。実際にそうであることを確認します。"
+      },
+      {
+        "type": "h2",
+        "content": "コース受講前の私の状況"
+      },
+      {
+        "type": "p",
+        "content": "数年間、クライアントのニーズに応じてバックエンドとフロントエンドの両方を行い、その後フロントエンド（主にReact）に特化しました。すでにJoshのブログ記事を読んでいました — 常に高品質で、常に技術的に深く、CSSコンセプトを説明するためのCSSアニメーション付き。彼がコースを発表したとき、すぐに飛びつきました。"
+      },
+      {
+        "type": "h2",
+        "content": "受講する価値はあったか？"
+      },
+      {
+        "type": "p",
+        "content": "正直、はい。モジュールはペース配分が良く — 概念を消化しきれないという感覚はありません。各セクション後、翌日プロジェクトで適用できる具体的なメンタルモデルを持って退出します。CSSが「意味を持ち」始めます：プロパティの振る舞い方を理解する、使い方だけでなく。"
+      },
+      {
+        "type": "p",
+        "content": "予想外の副次効果：学んだことを同僚に教えることができました。そして、ほとんどのフロントエンド開発者がCSSについて実際にいかに少ししか知らないか驚くでしょう — flexbox/gridはざっくり、しかしカスケードモデル、ユニット、スタッキングコンテキストは曖昧なことが多い。このコースは、これらをシンプルに説明する語彙を提供します。"
+      },
+      {
+        "type": "p",
+        "content": "今日、少し厄介なCSSの課題にぶつかると、Joshのレッスンに戻ります。怠惰だからではなく — 彼が裏で何が起こっているかを理解できるように基礎を説明しているから。複数年にわたって報われる投資です。"
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "「CSSで自信を持つために何から始めるべきか」と聞かれたら、2022年以来これが私の答えです。時間とお金の投資は、フロントに触れるあらゆるJS開発者にとって価値があります。"
+      },
+      {
+        "type": "h2",
+        "content": "さらに進むには"
+      },
+      {
+        "type": "p",
+        "content": "コースのランディングページはこちら：css-for-js.dev。Joshはモジュール、ティアごとの価格を詳述し、投資前に独自の意見を形成したい場合は無料の抜粋を提供しています。"
+      },
+      {
+        "type": "link",
+        "href": "https://css-for-js.dev/",
+        "label": "css-for-js.devでコースを見る"
+      },
+      {
+        "type": "p",
+        "content": "私の完全なノートは、この投稿のインスピレーションとなったNotionページでも利用できます。"
+      },
+      {
+        "type": "link",
+        "href": "https://www.notion.so/alexandrelim/CSS-for-JavaScript-Developers-by-Josh-Comeau-362de92671888078bd67c541c2e9454a",
+        "label": "Notionで元のノートを読む"
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "callout",
+        "tone": "ink",
+        "content": "Par Alexandre Lim — Ingénieur logiciel senior Abbeal, Pôle Asie · Tokyo. Notes initialement publiées sur Notion en mai 2026."
+      },
+      {
+        "type": "p",
+        "content": "Si tu écris du JavaScript tous les jours mais que tu as toujours l'impression que ton CSS est un mélange de tâtonnement et de Stack Overflow, ce billet est pour toi. J'ai suivi CSS for JavaScript Developers de Josh Comeau il y a quelques années. Le verdict tient en une ligne : c'est le cours qui m'a fait passer de « ça marche, je sais pas pourquoi » à « j'ai un modèle mental clair, je sais quoi changer »."
+      },
+      {
+        "type": "h2",
+        "content": "Ce qu'est le cours, en 2 minutes"
+      },
+      {
+        "type": "p",
+        "content": "CSS for JavaScript Developers est un cours en ligne pensé pour les devs JS qui veulent enfin maîtriser le CSS au lieu de le subir. Le format est progressif, modulaire, avec des exercices interactifs. Le palier premium ajoute du contenu bonus (un module animations très solide, entre autres). La promesse de Josh : « CSS peut être amusant ». Ça paraît marketing. Je confirme que ça l'est."
+      },
+      {
+        "type": "h2",
+        "content": "Mon contexte avant le cours"
+      },
+      {
+        "type": "p",
+        "content": "J'ai fait du back-end et du front-end selon les besoins clients pendant plusieurs années, avant de me spécialiser front-end (React principalement). Je lisais déjà les articles de Josh sur son blogue — toujours de qualité, toujours profonds techniquement, avec des animations CSS pour expliquer des concepts CSS. Quand il a annoncé le cours, j'ai sauté dessus."
+      },
+      {
+        "type": "h2",
+        "content": "Est-ce que ça en valait la peine ?"
+      },
+      {
+        "type": "p",
+        "content": "Oui, franchement. Les modules sont bien rythmés — jamais le sentiment d'être noyé sous des concepts à digérer. Tu sors de chaque section avec un modèle mental concret que tu peux appliquer le lendemain en mandat. Le CSS commence à « avoir du sens » : tu comprends pourquoi telle propriété se comporte de telle façon, pas juste comment l'utiliser."
+      },
+      {
+        "type": "p",
+        "content": "Effet collatéral que je n'avais pas vu venir : j'ai pu enseigner ce que j'apprenais à des collègues. Et tu serais surpris du peu que la plupart des devs frontend connaissent vraiment du CSS — flexbox/grid à peu près, mais le modèle de cascade, les units, les contextes d'empilement, c'est souvent flou. Le cours te donne le vocabulaire pour expliquer ces choses simplement."
+      },
+      {
+        "type": "p",
+        "content": "Aujourd'hui quand je tombe sur un défi CSS un peu vicieux, je retourne dans les leçons de Josh. Pas par paresse — parce qu'il explique les fondamentaux pour que tu comprennes ce qui se passe sous le capot. C'est de l'investissement qui paye sur plusieurs années."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Si on me demande « par où commencer pour me sentir solide en CSS », c'est ma réponse depuis 2022. L'investissement temps + argent en vaut la peine pour n'importe quel dev JS qui touche au front."
+      },
+      {
+        "type": "h2",
+        "content": "Pour aller plus loin"
+      },
+      {
+        "type": "p",
+        "content": "La page d'accueil du cours est ici : css-for-js.dev. Josh y détaille les modules, les tarifs par palier, et propose des extraits gratuits si tu veux te faire ta propre idée avant d'investir."
+      },
+      {
+        "type": "link",
+        "href": "https://css-for-js.dev/",
+        "label": "Voir la page du cours sur css-for-js.dev"
+      },
+      {
+        "type": "p",
+        "content": "Mes notes complètes sont aussi disponibles sur la page Notion qui a inspiré ce billet."
+      },
+      {
+        "type": "link",
+        "href": "https://www.notion.so/alexandrelim/CSS-for-JavaScript-Developers-by-Josh-Comeau-362de92671888078bd67c541c2e9454a",
+        "label": "Lire les notes originales sur Notion"
+      }
+    ]
+  },
+  "mythos-ia-cybersecurite-priorites-production-stephane-robin": {
+    "fr": [
+      {
+        "type": "callout",
+        "tone": "ink",
+        "content": "Par Stéphane Robin — Senior Engineer Abbeal, Hub Amériques · Montréal. Article initialement publié sur Medium en mai 2026."
+      },
+      {
+        "type": "p",
+        "content": "L'annonce de Claude Mythos Preview par Anthropic a fait l'effet d'un onde de choc dans les équipes sécurité. Pas dans la presse grand public — dans nos canaux Slack internes, chez les CISO, chez les architectes sécurité qui suivent les évolutions IA. Ce post tire les leçons concrètes de ce qu'on a observé chez un client services financiers à Montréal dans les semaines qui ont suivi."
+      },
+      {
+        "type": "h2",
+        "content": "Ce que Mythos change vraiment"
+      },
+      {
+        "type": "p",
+        "content": "Pour résumer en trois lignes : Mythos est capable de découvrir de manière autonome des vulnérabilités zero-day, y compris des failles dormantes depuis des années dans des codebases legacy. Il peut générer des exploits fonctionnels sans intervention humaine significative. Et surtout, il démocratise l'attaque : un non-spécialiste sécurité peut désormais identifier et exploiter des failles critiques qui demandaient hier une équipe red team complète."
+      },
+      {
+        "type": "p",
+        "content": "L'accès est restreint via le programme Project Glasswing d'Anthropic — limité à un consortium d'infrastructures critiques pour du patching préventif. Mais le signal est clair : la classe d'attaquant capable de générer des exploits a basculé."
+      },
+      {
+        "type": "h2",
+        "content": "L'impact direct sur la priorisation sécurité"
+      },
+      {
+        "type": "p",
+        "content": "Avant Mythos : l'évaluation du risque CVE se faisait selon la difficulté d'exploitation. Une CVE à CVSS faible pouvait rester dans le backlog plusieurs mois sans drame, parce que l'effort d'exploitation côté attaquant n'en valait pas la peine."
+      },
+      {
+        "type": "p",
+        "content": "Après Mythos : l'exploitation automatisée à grande échelle transforme toutes les CVE en priorités potentielles, y compris la dette technique dormante. Une lib avec une vulnérabilité « modérée » connue depuis 2 ans devient soudainement urgente — parce qu'à l'échelle, ces failles modérées deviennent un terrain de chasse pour des outils automatisés."
+      },
+      {
+        "type": "h2",
+        "content": "Ce qu'on a fait côté client"
+      },
+      {
+        "type": "p",
+        "content": "Au moment où l'info a circulé en interne (et c'est allé vite), on a déclenché trois actions concrètes avec le CTO du client :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Revue systématique de toutes les APIs exposées et de leurs dépendances. On a re-scanné en profondeur, pas juste un coup d'œil au tableau de bord Snyk.",
+          "Reclassification des vulnérabilités sous un nouveau modèle de risque qui intègre la facilité d'exploitation par un agent IA. Les CVE « faibles » sont remontées dans le backlog immédiat.",
+          "SLA imposé : tout patch sécurité doit passer en production sous deux semaines, exécutif et CTO inclus dans la chaîne d'approbation pour accélérer."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "Concrètement, trois chantiers se sont accélérés : migration Spring Boot 2.x → 3.x/4.x, mise à jour ciblée de dépendances Java, migration Java 17 → 21+ (on a différé Java 25 pour des soucis de compatibilité côté libs internes). Coût direct : deux semaines de retard sur les livrables fonctionnels — qu'on a assumé."
+      },
+      {
+        "type": "h2",
+        "content": "Le vrai enseignement sur la dette technique"
+      },
+      {
+        "type": "p",
+        "content": "L'enseignement structurant n'est pas « il faut patcher plus vite ». C'est : le risque associé à la dette technique ne peut plus être évalué indépendamment de l'évolution du paysage de menace. Une dette « documentée et maîtrisée » est devenue insuffisante. Les organisations avec une hygiène technique faible exposent maintenant un risque systémique nouveau."
+      },
+      {
+        "type": "p",
+        "content": "À l'inverse, les équipes qui maintiennent une stack saine — versions à jour, libs traçables, pipelines de patch courts — ont la capacité de répondre rapidement quand le contexte de menace change brutalement. Cette capacité de réponse devient un actif business, pas juste un nice-to-have d'ingénierie."
+      },
+      {
+        "type": "h2",
+        "content": "Implications côté Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "On en tire trois conséquences pour la manière dont on accompagne nos clients :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "La dette technique est un risque business, pas seulement technique. Quand on chiffre un audit de modernisation, on chiffre maintenant aussi le coût d'opportunité d'une réponse lente à un événement type Mythos.",
+          "Les équipes matures avec des stacks saines réagissent plus vite. La maturité technique se monétise au moment où ça compte — c'est-à-dire au moment d'un événement de marché.",
+          "La modernisation de stack est passée de « nice-to-have » à nécessité stratégique sur les secteurs régulés (finance, santé, infrastructure critique)."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Recommandations actionnables"
+      },
+      {
+        "type": "p",
+        "content": "Si tu pilotes une plateforme tech en 2026, voici les 4 actions qu'on recommande concrètement :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Auditer ton backlog CVE en appliquant un critère « risque d'exploitation IA » — pas juste le score CVSS classique.",
+          "Cartographier ta dette technique par composant (versions Spring Boot, Java, libs critiques) et identifier les versions à risque structurel.",
+          "Mettre en place un pipeline de mise à jour continue pour éviter les fenêtres d'exposition longues.",
+          "Imposer un SLA maximum de deux semaines pour la mise en production des patches sécurité critiques."
+        ],
+        "ordered": true
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "L'émergence d'outils d'exploitation automatisée comme Mythos oblige à recadrer la dette technique comme un risque business avec un horizon temporel court. Les organisations qui prennent ce virage maintenant auront une réponse plus rapide à la prochaine déflagration. Celles qui le repoussent paieront le délai au moment où elles le pourront le moins."
+      },
+      {
+        "type": "h2",
+        "content": "Lire la version originale"
+      },
+      {
+        "type": "p",
+        "content": "Cet article s'inspire de ma publication originale sur Medium, qui contient quelques détails additionnels sur l'environnement client (anonymisé)."
+      },
+      {
+        "type": "link",
+        "href": "https://medium.com/@electron.libre/quand-lia-redéfinit-la-cybersécurité-comment-mythos-a-changé-nos-priorités-en-production-e18ceb736c6b",
+        "label": "Lire la version originale sur Medium"
+      }
+    ],
+    "en": [
+      {
+        "type": "callout",
+        "tone": "ink",
+        "content": "By Stéphane Robin — Senior Engineer at Abbeal, Americas Hub · Montréal. Originally published on Medium in May 2026."
+      },
+      {
+        "type": "p",
+        "content": "Anthropic's announcement of Claude Mythos Preview hit security teams like a shockwave. Not in mainstream press — in our internal Slack channels, with CISOs, with security architects who track AI evolutions closely. This post draws concrete lessons from what we observed at a financial services client in Montréal in the weeks that followed."
+      },
+      {
+        "type": "h2",
+        "content": "What Mythos really changes"
+      },
+      {
+        "type": "p",
+        "content": "To summarize in three lines: Mythos can autonomously discover zero-day vulnerabilities, including flaws dormant for years in legacy codebases. It can generate functional exploits without meaningful human intervention. And critically, it democratizes attack: a non-security specialist can now identify and exploit critical flaws that yesterday required a full red team."
+      },
+      {
+        "type": "p",
+        "content": "Access is restricted via Anthropic's Project Glasswing — limited to a consortium of critical infrastructure operators for preventive patching. But the signal is clear: the attacker class capable of generating exploits has shifted."
+      },
+      {
+        "type": "h2",
+        "content": "Direct impact on security prioritization"
+      },
+      {
+        "type": "p",
+        "content": "Before Mythos: CVE risk assessment was based on exploitation difficulty. A low-CVSS CVE could sit in the backlog for months without drama, because the attacker effort wasn't worth it."
+      },
+      {
+        "type": "p",
+        "content": "After Mythos: automated exploitation at scale turns every CVE into a potential priority, including dormant technical debt. A library with a « moderate » known vulnerability from 2 years ago suddenly becomes urgent — because at scale, these moderate flaws become a hunting ground for automated tools."
+      },
+      {
+        "type": "h2",
+        "content": "What we did on the client side"
+      },
+      {
+        "type": "p",
+        "content": "When the info circulated internally (and it moved fast), we triggered three concrete actions with the client's CTO:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Systematic review of all exposed APIs and their dependencies. We re-scanned in depth, not just a glance at the Snyk dashboard.",
+          "Reclassification of vulnerabilities under a new risk model integrating AI-agent exploitability. « Weak » CVEs moved up to the immediate backlog.",
+          "SLA imposed: any security patch must reach production within two weeks, executive and CTO included in the approval chain to accelerate."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "Concretely, three streams accelerated: Spring Boot 2.x → 3.x/4.x migration, targeted Java dependency updates, Java 17 → 21+ migration (we deferred Java 25 due to internal library compatibility issues). Direct cost: two weeks of delay on functional deliverables — which we accepted."
+      },
+      {
+        "type": "h2",
+        "content": "The real lesson on technical debt"
+      },
+      {
+        "type": "p",
+        "content": "The structuring lesson isn't « patch faster ». It's: the risk associated with technical debt can no longer be assessed independently from evolving threat landscapes. « Documented and managed » debt became insufficient. Organizations with weak technical hygiene now expose a new systemic risk."
+      },
+      {
+        "type": "p",
+        "content": "Conversely, teams maintaining a healthy stack — current versions, traceable libraries, short patch pipelines — have the capacity to respond quickly when the threat context shifts abruptly. That response capacity becomes a business asset, not just an engineering nice-to-have."
+      },
+      {
+        "type": "h2",
+        "content": "Implications for Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "We draw three consequences for how we support our clients:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Technical debt is business risk, not just technical. When we quote a modernization audit, we now also quote the opportunity cost of a slow response to a Mythos-class event.",
+          "Mature teams with healthy stacks respond faster. Technical maturity monetizes at the moment it matters — that is, at the moment of a market event.",
+          "Stack modernization shifted from « nice-to-have » to strategic necessity in regulated sectors (finance, healthcare, critical infrastructure)."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Actionable recommendations"
+      },
+      {
+        "type": "p",
+        "content": "If you run a tech platform in 2026, here are the 4 actions we concretely recommend:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Audit your CVE backlog applying an « AI exploitability risk » criterion — not just the classic CVSS score.",
+          "Map your technical debt by component (Spring Boot versions, Java, critical libs) and identify structurally at-risk versions.",
+          "Implement a continuous update pipeline to avoid long exposure windows.",
+          "Enforce a 2-week max SLA for production deployment of critical security patches."
+        ],
+        "ordered": true
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "The emergence of autonomous exploitation tools like Mythos forces us to reframe technical debt as business risk with a short time horizon. Organizations that take this turn now will have a faster response to the next blast. Those who defer will pay the delay when they can least afford it."
+      },
+      {
+        "type": "h2",
+        "content": "Read the original"
+      },
+      {
+        "type": "p",
+        "content": "This article builds on my original publication on Medium, which includes some additional detail on the client environment (anonymized)."
+      },
+      {
+        "type": "link",
+        "href": "https://medium.com/@electron.libre/quand-lia-redéfinit-la-cybersécurité-comment-mythos-a-changé-nos-priorités-en-production-e18ceb736c6b",
+        "label": "Read the original on Medium"
+      }
+    ],
+    "ja": [
+      {
+        "type": "callout",
+        "tone": "ink",
+        "content": "ステファン・ロビンによる執筆 — Abbealシニアエンジニア、アメリカ拠点・モントリオール。2026年5月にMediumで最初に公開。"
+      },
+      {
+        "type": "p",
+        "content": "AnthropicによるClaude Mythos Previewの発表は、セキュリティチームに衝撃波のように響きました。主流メディアではなく、社内Slackチャンネル、CISO、AIの進化を密に追うセキュリティアーキテクトの間で。この投稿は、その後数週間にモントリオールの金融サービスクライアントで観察したことから具体的な教訓を引き出します。"
+      },
+      {
+        "type": "h2",
+        "content": "Mythosが実際に変えるもの"
+      },
+      {
+        "type": "p",
+        "content": "3行で要約：Mythosはレガシーコードベースに何年も眠っている欠陥を含むゼロデイ脆弱性を自律的に発見できます。意味のある人間の介入なしに機能する攻撃コードを生成できます。そして決定的に、攻撃を民主化します：セキュリティの専門家でない人でも、昨日まで完全なレッドチームを必要としていた重大な欠陥を特定し悪用できます。"
+      },
+      {
+        "type": "p",
+        "content": "アクセスはAnthropicのProject Glasswingを通じて制限 — 重要インフラ事業者のコンソーシアムに限定された予防的パッチング向け。しかしシグナルは明確：攻撃コード生成が可能な攻撃者層が変わった。"
+      },
+      {
+        "type": "h2",
+        "content": "セキュリティ優先順位への直接的影響"
+      },
+      {
+        "type": "p",
+        "content": "Mythos以前：CVEリスク評価は悪用の難易度に基づいていました。低CVSSのCVEはバックログに数ヶ月間ドラマなく残ることがあり、攻撃者の労力に見合わなかったためです。"
+      },
+      {
+        "type": "p",
+        "content": "Mythos以後：大規模な自動悪用は、休眠中の技術的負債を含む、すべてのCVEを潜在的な優先事項に変えます。2年前の「中程度」既知の脆弱性を持つライブラリが突然緊急になります — なぜなら大規模に、これらの中程度の欠陥が自動化ツールの狩り場になるからです。"
+      },
+      {
+        "type": "h2",
+        "content": "クライアント側で行ったこと"
+      },
+      {
+        "type": "p",
+        "content": "情報が社内に流れた時（そして急速に流れた）、クライアントのCTOと3つの具体的なアクションをトリガーしました："
+      },
+      {
+        "type": "list",
+        "items": [
+          "公開された全APIとその依存関係の体系的レビュー。Snykダッシュボードを一目見るだけでなく、深く再スキャン。",
+          "AIエージェントの悪用可能性を統合した新しいリスクモデルでの脆弱性の再分類。「弱い」CVEを即時バックログに移動。",
+          "SLAを義務付け：すべてのセキュリティパッチは2週間以内に本番環境に到達し、エグゼクティブとCTOを承認チェーンに含めて加速。"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "具体的には、3つの作業ストリームが加速：Spring Boot 2.x → 3.x/4.xへの移行、Java依存関係の対象更新、Java 17 → 21+への移行（内部ライブラリの互換性問題によりJava 25は延期）。直接コスト：機能納品物に2週間の遅延 — これを受け入れました。"
+      },
+      {
+        "type": "h2",
+        "content": "技術的負債に関する真の教訓"
+      },
+      {
+        "type": "p",
+        "content": "構造的な教訓は「より速くパッチする」ではありません。それは：技術的負債に関連するリスクは、進化する脅威の状況から独立して評価できなくなりました。「文書化され管理された」負債では不十分になりました。技術的衛生が弱い組織は、新しいシステミックリスクを露呈します。"
+      },
+      {
+        "type": "p",
+        "content": "逆に、健全なスタックを維持するチーム — 最新バージョン、追跡可能なライブラリ、短いパッチパイプライン — は、脅威の文脈が急激に変化したときに迅速に対応する能力を持ちます。その対応能力は、エンジニアリングのnice-to-haveではなく、ビジネス資産になります。"
+      },
+      {
+        "type": "h2",
+        "content": "Abbeal側の意味合い"
+      },
+      {
+        "type": "p",
+        "content": "クライアントをどのようにサポートするかについて、3つの結論を導き出します："
+      },
+      {
+        "type": "list",
+        "items": [
+          "技術的負債はビジネスリスクであり、単なる技術リスクではない。近代化監査を見積もる際、Mythos級イベントへの遅い対応の機会費用も見積もるようになった。",
+          "健全なスタックを持つ成熟したチームはより速く反応する。技術的成熟は重要な瞬間 — つまり市場イベントの瞬間 — に収益化される。",
+          "スタックのモダナイゼーションは「nice-to-have」から、規制されたセクター（金融、ヘルスケア、重要インフラ）における戦略的必要性へと移行。"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "実行可能な推奨事項"
+      },
+      {
+        "type": "p",
+        "content": "2026年にテックプラットフォームを運営しているなら、具体的に推奨する4つのアクション："
+      },
+      {
+        "type": "list",
+        "items": [
+          "古典的なCVSSスコアだけでなく、「AI悪用可能性リスク」基準を適用してCVEバックログを監査する。",
+          "コンポーネント別（Spring Bootバージョン、Java、重要ライブラリ）に技術的負債をマッピングし、構造的にリスクのあるバージョンを特定する。",
+          "長い露出ウィンドウを避けるため、継続的更新パイプラインを実装する。",
+          "重要セキュリティパッチの本番展開に最大2週間のSLAを義務付ける。"
+        ],
+        "ordered": true
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Mythosのような自律的悪用ツールの出現により、技術的負債を短い時間軸を持つビジネスリスクとして再構築する必要が生じます。今この転換を行う組織は、次の爆発により速く対応できます。先送りする組織は、最も余裕がないときに遅延の代償を払うことになります。"
+      },
+      {
+        "type": "h2",
+        "content": "オリジナル版を読む"
+      },
+      {
+        "type": "p",
+        "content": "この記事は、クライアント環境（匿名化）に関する追加の詳細を含むMediumの私のオリジナル投稿に基づいています。"
+      },
+      {
+        "type": "link",
+        "href": "https://medium.com/@electron.libre/quand-lia-redéfinit-la-cybersécurité-comment-mythos-a-changé-nos-priorités-en-production-e18ceb736c6b",
+        "label": "Mediumでオリジナル版を読む"
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "callout",
+        "tone": "ink",
+        "content": "Par Stéphane Robin — Ingénieur logiciel senior Abbeal, Pôle Amériques · Montréal. Article initialement publié sur Medium en mai 2026."
+      },
+      {
+        "type": "p",
+        "content": "L'annonce de Claude Mythos Preview par Anthropic a fait l'effet d'une onde de choc dans les équipes sécurité. Pas dans la presse grand public — dans nos canaux Slack internes, chez les CISO, chez les architectes sécurité qui suivent les évolutions IA. Ce billet tire les leçons concrètes de ce qu'on a observé chez un client services financiers à Montréal dans les semaines qui ont suivi."
+      },
+      {
+        "type": "h2",
+        "content": "Ce que Mythos change vraiment"
+      },
+      {
+        "type": "p",
+        "content": "Pour résumer en trois lignes : Mythos est capable de découvrir de manière autonome des vulnérabilités zero-day, y compris des failles dormantes depuis des années dans des bases de code legacy. Il peut générer des exploits fonctionnels sans intervention humaine significative. Et surtout, il démocratise l'attaque : un non-spécialiste sécurité peut désormais identifier et exploiter des failles critiques qui demandaient hier une équipe red team complète."
+      },
+      {
+        "type": "p",
+        "content": "L'accès est restreint via le programme Project Glasswing d'Anthropic — limité à un consortium d'infrastructures critiques pour du patching préventif. Mais le signal est clair : la classe d'attaquant capable de générer des exploits a basculé."
+      },
+      {
+        "type": "h2",
+        "content": "L'impact direct sur la priorisation sécurité"
+      },
+      {
+        "type": "p",
+        "content": "Avant Mythos : l'évaluation du risque CVE se faisait selon la difficulté d'exploitation. Une CVE à CVSS faible pouvait rester dans la liste à faire plusieurs mois sans drame, parce que l'effort d'exploitation côté attaquant n'en valait pas la peine."
+      },
+      {
+        "type": "p",
+        "content": "Après Mythos : l'exploitation automatisée à grande échelle transforme toutes les CVE en priorités potentielles, y compris la dette technique dormante. Une lib avec une vulnérabilité « modérée » connue depuis 2 ans devient soudainement urgente — parce qu'à l'échelle, ces failles modérées deviennent un terrain de chasse pour des outils automatisés."
+      },
+      {
+        "type": "h2",
+        "content": "Ce qu'on a fait côté client"
+      },
+      {
+        "type": "p",
+        "content": "Au moment où l'info a circulé en interne (et c'est allé vite), on a déclenché trois actions concrètes avec le CTO du client :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Revue systématique de toutes les APIs exposées et de leurs dépendances. On a re-scanné en profondeur, pas juste un coup d'œil au tableau de bord Snyk.",
+          "Reclassification des vulnérabilités sous un nouveau modèle de risque qui intègre la facilité d'exploitation par un agent IA. Les CVE « faibles » sont remontées dans la liste à faire immédiate.",
+          "SLA imposé : tout correctif sécurité doit passer en production sous deux semaines, exécutif et CTO inclus dans la chaîne d'approbation pour accélérer."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "p",
+        "content": "Concrètement, trois chantiers se sont accélérés : migration Spring Boot 2.x → 3.x/4.x, mise à jour ciblée de dépendances Java, migration Java 17 → 21+ (on a différé Java 25 pour des soucis de compatibilité côté libs internes). Coût direct : deux semaines de retard sur les livrables fonctionnels — qu'on a assumé."
+      },
+      {
+        "type": "h2",
+        "content": "Le vrai enseignement sur la dette technique"
+      },
+      {
+        "type": "p",
+        "content": "L'enseignement structurant n'est pas « il faut corriger plus vite ». C'est : le risque associé à la dette technique ne peut plus être évalué indépendamment de l'évolution du paysage de menace. Une dette « documentée et maîtrisée » est devenue insuffisante. Les organisations avec une hygiène technique faible exposent maintenant un risque systémique nouveau."
+      },
+      {
+        "type": "p",
+        "content": "À l'inverse, les équipes qui maintiennent une pile saine — versions à jour, libs traçables, pipelines de correctif courts — ont la capacité de répondre rapidement quand le contexte de menace change brutalement. Cette capacité de réponse devient un actif d'affaires, pas juste un nice-to-have d'ingénierie."
+      },
+      {
+        "type": "h2",
+        "content": "Implications côté Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "On en tire trois conséquences pour la manière dont on accompagne nos clients :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "La dette technique est un risque d'affaires, pas seulement technique. Quand on chiffre un audit de modernisation, on chiffre maintenant aussi le coût d'opportunité d'une réponse lente à un événement type Mythos.",
+          "Les équipes matures avec des piles saines réagissent plus vite. La maturité technique se monétise au moment où ça compte — c'est-à-dire au moment d'un événement de marché.",
+          "La modernisation de pile est passée de « nice-to-have » à nécessité stratégique sur les secteurs régulés (finance, santé, infrastructure critique)."
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Recommandations actionnables"
+      },
+      {
+        "type": "p",
+        "content": "Si tu pilotes une plateforme techno en 2026, voici les 4 actions qu'on recommande concrètement :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Auditer ta liste de CVE en appliquant un critère « risque d'exploitation IA » — pas juste le score CVSS classique.",
+          "Cartographier ta dette technique par composant (versions Spring Boot, Java, libs critiques) et identifier les versions à risque structurel.",
+          "Mettre en place une pipeline de mise à jour continue pour éviter les fenêtres d'exposition longues.",
+          "Imposer une SLA maximum de deux semaines pour la mise en production des correctifs sécurité critiques."
+        ],
+        "ordered": true
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "L'émergence d'outils d'exploitation automatisée comme Mythos oblige à recadrer la dette technique comme un risque d'affaires avec un horizon temporel court. Les organisations qui prennent ce virage maintenant auront une réponse plus rapide à la prochaine déflagration. Celles qui le repoussent paieront le délai au moment où elles le pourront le moins."
+      },
+      {
+        "type": "h2",
+        "content": "Lire la version originale"
+      },
+      {
+        "type": "p",
+        "content": "Ce billet s'inspire de ma publication originale sur Medium, qui contient quelques détails additionnels sur l'environnement client (anonymisé)."
+      },
+      {
+        "type": "link",
+        "href": "https://medium.com/@electron.libre/quand-lia-redéfinit-la-cybersécurité-comment-mythos-a-changé-nos-priorités-en-production-e18ceb736c6b",
+        "label": "Lire la version originale sur Medium"
+      }
+    ]
   }
 }

@@ -577,6 +577,67 @@ export const articles: Article[] = [
       "fr-ca": ARTICLE_BODIES["automatiser-journee-ceo-claude-orchestration"]?.["fr-ca"],
     },
   },
+  // Article 20 — Alex Lim (Senior SE Tokyo) : retour cours CSS Josh Comeau.
+  // Article guest, byline auteur en tete du body, publication initiale sur
+  // Notion. SEO longtail "CSS for JavaScript Developers review" + humanise
+  // la marque (point de vue ingenieur senior nomme).
+  // ATTRIBUTION : lien Notion source + landing css-for-js.dev.
+  {
+    slug: "css-for-javascript-developers-josh-comeau-retour-alex-lim",
+    featured: false,
+    tag: "Engineering",
+    readTime: "4 min",
+    publishedAt: "2026-05-18",
+    title: {
+      fr: "CSS for JavaScript Developers (Josh Comeau) : retour d'un Senior Engineer Tokyo.",
+      en: "CSS for JavaScript Developers (Josh Comeau): a Tokyo Senior Engineer's review.",
+      ja: "CSS for JavaScript Developers（Josh Comeau）：東京シニアエンジニアのレビュー。",
+      "fr-ca": "CSS for JavaScript Developers (Josh Comeau) : retour d'un ingénieur logiciel senior à Tokyo.",
+    },
+    excerpt: {
+      fr: "Alexandre Lim (Senior Software Engineer Abbeal Tokyo) partage son retour sur le cours CSS for JavaScript Developers de Josh Comeau. Pourquoi le cours fait passer d'un CSS « ça marche, je sais pas pourquoi » à un modèle mental clair, et pourquoi il le recommande sans hésitation depuis 2022.",
+      en: "Alexandre Lim (Senior Software Engineer Abbeal Tokyo) shares his take on Josh Comeau's CSS for JavaScript Developers. Why the course moves you from « it works, I don't know why » to a clear mental model, and why he's been recommending it without hesitation since 2022.",
+      ja: "アレクサンドル・リム（Abbeal東京シニアソフトウェアエンジニア）が、Josh ComeauのCSS for JavaScript Developersコースへの感想を共有。なぜこのコースが「動くけど、なぜか分からない」から明確なメンタルモデルへの移行を可能にし、2022年以来彼が躊躇なく推薦している理由。",
+      "fr-ca": "Alexandre Lim (Ingénieur logiciel senior Abbeal Tokyo) partage son retour sur le cours CSS for JavaScript Developers de Josh Comeau. Pourquoi le cours fait passer d'un CSS « ça marche, je sais pas pourquoi » à un modèle mental clair, et pourquoi il le recommande sans hésitation depuis 2022.",
+    },
+    body: {
+      fr: ARTICLE_BODIES["css-for-javascript-developers-josh-comeau-retour-alex-lim"]?.fr ?? [],
+      en: ARTICLE_BODIES["css-for-javascript-developers-josh-comeau-retour-alex-lim"]?.en,
+      ja: ARTICLE_BODIES["css-for-javascript-developers-josh-comeau-retour-alex-lim"]?.ja,
+      "fr-ca": ARTICLE_BODIES["css-for-javascript-developers-josh-comeau-retour-alex-lim"]?.["fr-ca"],
+    },
+  },
+  // Article 21 — Stephane Robin (Senior Engineer Montreal) : Mythos vs dette
+  // technique. Article guest, byline auteur en tete du body, publication
+  // initiale sur Medium (@electron.libre). SEO ciblee sur "IA + cybersecurite
+  // + dette technique" — angle differenciant Abbeal Montreal sur les services
+  // financiers regules.
+  // ATTRIBUTION : lien Medium original (electron.libre).
+  {
+    slug: "mythos-ia-cybersecurite-priorites-production-stephane-robin",
+    featured: false,
+    tag: "AI",
+    readTime: "7 min",
+    publishedAt: "2026-05-18",
+    title: {
+      fr: "Quand l'IA redéfinit la cybersécurité : comment Mythos a changé nos priorités en production.",
+      en: "When AI redefines cybersecurity: how Mythos changed our production priorities.",
+      ja: "AIがサイバーセキュリティを再定義するとき：Mythosが本番優先順位をどう変えたか。",
+      "fr-ca": "Quand l'IA redéfinit la cybersécurité : comment Mythos a changé nos priorités en production.",
+    },
+    excerpt: {
+      fr: "Stéphane Robin (Senior Engineer Abbeal Montréal) explique pourquoi Claude Mythos Preview a renversé l'évaluation du risque CVE chez nos clients services financiers. Comment on a re-priorisé un backlog complet en 2 semaines et ce que ça change pour la gestion de la dette technique en 2026.",
+      en: "Stéphane Robin (Senior Engineer Abbeal Montréal) explains why Claude Mythos Preview overturned CVE risk assessment at our financial services clients. How we re-prioritized a full backlog in 2 weeks and what it changes for managing technical debt in 2026.",
+      ja: "ステファン・ロビン（Abbealモントリオールシニアエンジニア）が、Claude Mythos Previewがなぜ金融サービスクライアントでのCVEリスク評価を覆したかを説明。フルバックログを2週間で再優先順位付けした方法と、2026年の技術的負債管理にとってそれが何を変えるか。",
+      "fr-ca": "Stéphane Robin (Ingénieur logiciel senior Abbeal Montréal) explique pourquoi Claude Mythos Preview a renversé l'évaluation du risque CVE chez nos clients services financiers. Comment on a repriorisé une liste à faire complète en 2 semaines et ce que ça change pour la gestion de la dette technique en 2026.",
+    },
+    body: {
+      fr: ARTICLE_BODIES["mythos-ia-cybersecurite-priorites-production-stephane-robin"]?.fr ?? [],
+      en: ARTICLE_BODIES["mythos-ia-cybersecurite-priorites-production-stephane-robin"]?.en,
+      ja: ARTICLE_BODIES["mythos-ia-cybersecurite-priorites-production-stephane-robin"]?.ja,
+      "fr-ca": ARTICLE_BODIES["mythos-ia-cybersecurite-priorites-production-stephane-robin"]?.["fr-ca"],
+    },
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
