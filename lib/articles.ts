@@ -68,8 +68,34 @@ export type Article = {
   tag: string;
   readTime: string;
   publishedAt: string; // ISO date
+  /** ISO date du dernier refresh éditorial. Si défini ≠ publishedAt :
+   *  - JSON-LD BlogPosting.dateModified utilise cette valeur
+   *  - UI rend "Publié le X · Mis à jour le Y" en pied de header
+   *  - Signal de fraîcheur SEO + LLM crawlers. */
+  updatedAt?: string;
   title: Translatable<string>;
   excerpt: Translatable<string>;
+  /** Meta description SEO étendue (140-160 chars idéal vs excerpt qui
+   *  peut être plus court). Si défini, remplace excerpt dans
+   *  <meta name="description"> et openGraph.description. Le excerpt
+   *  reste utilisé pour la card listing (rester concis). */
+  metaDescription?: Translatable<string>;
+  /** Mots-clés SEO ciblés (Schema.org keywords). Si défini, remplace
+   *  le simple `tag` dans BlogPosting.keywords. */
+  keywords?: Translatable<string>;
+  /** FAQ structurée — rendue en Schema.org FAQPage JSON-LD pour
+   *  éligibilité Rich Results Google + extraction LLM (ChatGPT,
+   *  Perplexity, Claude). Optionnellement rendue en UI en fin
+   *  d'article. */
+  faq?: Translatable<{ q: string; a: string }[]>;
+  /** Slug d'un case study à promouvoir en lien interne enrichi. Permet
+   *  un internal linking ≥5 (3 articles related + 1 case + 1 service)
+   *  vs 3 articles seulement avant. */
+  relatedCaseSlug?: string;
+  /** Slug d'un service Abbeal à promouvoir (squads-embarques,
+   *  recrutement-technique, delivery-cle-en-main). Idem internal
+   *  linking enrichi. */
+  relatedServiceSlug?: string;
   body: Translatable<ArticleBlock[]>;
 };
 
@@ -77,12 +103,17 @@ export type Resolved<T> = T extends Translatable<infer U> ? U : never;
 
 export const articles: Article[] = [
   // Article 1 — IA, featured
+  // Refresh W21 quick win SEO (19 mai 2026) : meta description étendue
+  // (140-160 chars cible), keywords explicites, FAQ schema 5 Q/A, body
+  // enrichi avec compléments ciblés (LiteLLM, accuracy 64→91, LangGraph,
+  // tools list, Llama 3.3 70B). datePublished préservé.
   {
     slug: "agents-ia-production",
     featured: true,
     tag: "IA",
-    readTime: "8 min",
+    readTime: "9 min",
     publishedAt: "2026-04-12",
+    updatedAt: "2026-05-19",
     title: {
       fr: "Agents IA en production : éviter le théâtre de démo.",
       en: "7 patterns for AI agents in production (no demo theater).",
@@ -93,6 +124,34 @@ export const articles: Article[] = [
       en: "Real-world patterns from RAG, agents and MLOps deployments. Senior teams shipping AI from POC to prod across Paris, Montréal, Tokyo.",
       ja: "信頼性、コスト、セキュリティ、評価。クライアントで実際に使う7つのパターン。",
     },
+    metaDescription: {
+      fr: "7 patterns LLM production : retrieval, evals CI, agents garde-fous, observability, cost routing multi-LLM. Stack Claude + Pinecone + LangGraph + LiteLLM.",
+      en: "7 LLM production patterns: retrieval, CI evals, agent guardrails, AI observability, multi-LLM cost routing. Stack Claude + Pinecone + LangGraph + LiteLLM.",
+      ja: "7つのLLM本番パターン：retrieval、CI evals、エージェント・ガードレール、AI可観測性、マルチLLMコストルーティング。Claude + Pinecone + LangGraph + LiteLLM。",
+    },
+    keywords: {
+      fr: "LLM production deployment, agents IA production, RAG enterprise, retrieval augmented generation, LangGraph workflow, Pinecone vector database, Claude 3.7 Sonnet enterprise, LiteLLM routing, LLM observability Langfuse, LLM evals CI promptfoo, AI cost optimization, multi-LLM routing, privacy by design AI, on-prem LLM Llama vLLM",
+      en: "LLM production deployment, AI agents production, RAG enterprise, retrieval augmented generation, LangGraph workflow, Pinecone vector database, Claude 3.7 Sonnet enterprise, LiteLLM routing, LLM observability Langfuse, LLM evals CI promptfoo, AI cost optimization, multi-LLM routing, privacy by design AI, on-prem LLM Llama vLLM",
+      ja: "LLM production deployment, AIエージェント本番, RAGエンタープライズ, LangGraphワークフロー, Pineconeベクトルデータベース, Claude 3.7 Sonnet, LiteLLM, LLM可観測性, LLM evals CI, AIコスト最適化, マルチLLMルーティング, プライバシー・バイ・デザイン, オンプレLLM Llama vLLM",
+    },
+    faq: {
+      fr: [
+        { q: "Pourquoi 90 % des projets AI ne passent pas en prod ?", a: "Trois causes dominantes : (1) accuracy non-mesurée en continu (pas d'evals CI, le modèle régresse silencieusement), (2) absence de cost guards (un agent qui boucle peut coûter 10 k€ en une nuit), (3) sécurité/compliance non-baked-in (GDPR, secret bancaire, leak prompt-injection). Les 7 patterns adressent ces trois gaps." },
+        { q: "Quels outils pour les evals LLM en CI ?", a: "Promptfoo + Langfuse forment la base solide : Promptfoo pour les tests dataset-vs-judge dans la pipeline GitHub Actions, Langfuse pour le tracking continu en production. LangSmith est l'alternative SaaS one-stop si tu es déjà chez LangChain. Helicone pour l'observability multi-provider léger." },
+        { q: "Comment limiter le coût d'un agent LLM en prod ?", a: "Pattern 5 (Cost guards) : LiteLLM en routing layer pour switcher dynamiquement Claude Haiku (cheap) ↔ Sonnet (medium) ↔ Opus (premium) selon la complexité de la requête. Sur un projet Customer Support, on a divisé le coût LLM par 3.4 en 6 semaines sans dégrader la qualité." },
+        { q: "Quel vector database choisir en 2026 ?", a: "Pinecone reste notre default pour les workloads >10M vecteurs avec SLA stricts. PostgreSQL + pgvector pour les workloads <1M où on bénéficie déjà de Postgres en prod (95% des cas chez nos clients FinTech). Qdrant si on a besoin d'un déploiement self-hosted GPU avec filtres complexes." },
+        { q: "Comment garantir la privacy AI face au GDPR / APPI ?", a: "Pattern 7 (Privacy by design) : LLM self-hosted via vLLM ou Modal pour les use cases sensibles (santé, banking, JP APPI), avec Llama 3.3 70B comme fallback ouvert. Anonymisation prompt-side via Microsoft Presidio. Pas d'envoi de PII à OpenAI/Anthropic sans contrat enterprise + DPA signé." },
+      ],
+      en: [
+        { q: "Why do 90% of AI projects fail to reach production?", a: "Three dominant causes: (1) unmeasured accuracy (no CI evals, the model silently regresses), (2) absence of cost guards (a looping agent can burn €10k overnight), (3) security/compliance not baked-in (GDPR, banking secrecy, prompt-injection leaks). The 7 patterns address those three gaps." },
+        { q: "What tools for LLM evals in CI?", a: "Promptfoo + Langfuse form a solid base: Promptfoo for dataset-vs-judge tests in the GitHub Actions pipeline, Langfuse for continuous production tracking. LangSmith is the SaaS one-stop alternative if you're already on LangChain. Helicone for lightweight multi-provider observability." },
+        { q: "How to limit a production LLM agent's cost?", a: "Pattern 5 (Cost guards): LiteLLM as routing layer to dynamically switch Claude Haiku (cheap) ↔ Sonnet (medium) ↔ Opus (premium) by request complexity. On a Customer Support project, we divided LLM cost by 3.4× in 6 weeks without quality degradation." },
+        { q: "Which vector database to choose in 2026?", a: "Pinecone remains our default for >10M-vector workloads with strict SLAs. PostgreSQL + pgvector for <1M workloads where Postgres is already in prod (95% of cases at our FinTech clients). Qdrant if self-hosted GPU deployment with complex filters is needed." },
+        { q: "How to guarantee AI privacy facing GDPR / APPI?", a: "Pattern 7 (Privacy by design): self-hosted LLM via vLLM or Modal for sensitive use cases (health, banking, JP APPI), with Llama 3.3 70B as open fallback. Prompt-side anonymisation via Microsoft Presidio. No PII sent to OpenAI/Anthropic without enterprise contract + signed DPA." },
+      ],
+    },
+    relatedCaseSlug: "bnp",
+    relatedServiceSlug: "delivery-cle-en-main",
     body: {
       fr: ARTICLE_BODIES["agents-ia-production"]?.fr ?? [],
       en: ARTICLE_BODIES["agents-ia-production"]?.en,
@@ -149,12 +208,17 @@ export const articles: Article[] = [
     },
   },
   // Article 4 — Follow-the-Sun
+  // Refresh W21 quick win SEO (19 mai 2026) : meta description étendue,
+  // keywords explicites (tri-geo, async-first, follow-the-sun handoff),
+  // FAQ schema 5 Q/A. Pas de modif slug ni H1 (préserve backlinks et
+  // identité éditoriale). datePublished préservé.
   {
     slug: "follow-the-sun-sans-bruler-equipes",
     featured: false,
     tag: "Engineering",
     readTime: "7 min",
     publishedAt: "2026-03-25",
+    updatedAt: "2026-05-19",
     title: {
       fr: "Follow-the-Sun : 24/7 sans brûler les équipes.",
       en: "Follow-the-Sun: 24/7 without burning teams out.",
@@ -165,6 +229,34 @@ export const articles: Article[] = [
       en: "Three time zones, three teams, a roadmap that moves while you sleep. How we actually operate it.",
       ja: "3つのタイムゾーン、3つのチーム、あなたが寝ている間に進むロードマップ。私たちの実際の運用。",
     },
+    metaDescription: {
+      fr: "Adaptive Follow-the-Sun Abbeal : 3 hubs Paris-Montréal-Tokyo synchronisés. Lead time -44 %, attrition <6 %, NPS interne 72. Anti-patterns à éviter.",
+      en: "Abbeal Adaptive Follow-the-Sun: 3 synchronized hubs Paris-Montreal-Tokyo. Lead time -44%, attrition <6%, internal NPS 72. Anti-patterns to avoid.",
+      ja: "Abbeal Adaptive Follow-the-Sun：パリ・モントリオール・東京の3拠点同期。リードタイム-44%、離職率<6%、社内NPS 72。回避すべきアンチパターン。",
+    },
+    keywords: {
+      fr: "tri-geo delivery, global engineering team, distributed teams 24/7, async-first delivery, follow-the-sun software, time zone coverage engineering, follow-the-sun handoff, Paris Montréal Tokyo engineering, async daily stand-up, RFC markdown engineering, tri-geographical software delivery",
+      en: "tri-geo delivery, global engineering team, distributed teams 24/7, async-first delivery, follow-the-sun software, time zone coverage engineering, follow-the-sun handoff, Paris Montreal Tokyo engineering, async daily stand-up, RFC markdown engineering, tri-geographical software delivery",
+      ja: "トライジオ・デリバリー, グローバル・エンジニアリングチーム, 24/7分散チーム, 非同期ファースト・デリバリー, follow-the-sunソフトウェア, タイムゾーン・カバレッジ, follow-the-sunハンドオフ, パリ・モントリオール・東京エンジニアリング, 非同期デイリースタンドアップ, RFCマークダウン",
+    },
+    faq: {
+      fr: [
+        { q: "Qu'est-ce que le Follow-the-Sun delivery ?", a: "Un modèle où 3 équipes situées sur 3 fuseaux horaires complémentaires (Paris CET, Montréal EST, Tokyo JST) se passent la roadmap en relais. Quand Paris ferme à 18h CET, Montréal prend la main. Quand Montréal ferme à 21h EST, Tokyo enchaîne. Quand Tokyo ferme à 19h JST, Paris reprend. Couverture 24/5 sans astreinte nocturne." },
+        { q: "Combien de temps d'overlap entre hubs nécessaire ?", a: "1 heure × 2 par jour sanctuarisée (Paris 17h-18h ↔ Montréal 11h-12h, Tokyo 18h-19h ↔ Paris 10h-11h). Aucune meeting interne ni autre interruption pendant ces fenêtres — réservées exclusivement au handoff actif et aux questions client en synchrone." },
+        { q: "Comment éviter le burn-out sur le Follow-the-Sun ?", a: "Trois règles non-négociables : (1) ownership de domaines fonctionnels stricts par hub (pas de zone partagée éditable par 3 hubs), (2) tickets calibrés pour finir dans un shift ou être explicitement passés, (3) on-call rotatif sur l'on-call de production, jamais sur le travail de jour. Résultat mesuré : attrition <6 %, NPS interne 72." },
+        { q: "Pour quels projets le Follow-the-Sun est-il adapté ?", a: "Idéal pour : 24/5 SLA stricts (financial, gaming, e-commerce mondial), runs critiques production sans astreinte nocturne, projets lourds avec lead time qui doit baisser drastiquement (-44 % observé sur 12 missions Abbeal). Peu adapté à : missions de moins de 6 semaines (coût onboarding tri-hub trop élevé), missions mono-équipe <5 personnes (overlap non rentable)." },
+        { q: "Quels outils pour l'async-first delivery ?", a: "Notion ou Confluence pour les RFC markdown (un handoff = un RFC mis à jour). Slack en thread-first (pas de DM, pas de canal sans archives). Linear ou Jira avec convention stricte sur le statut et l'assignee. Tactiq ou Otter pour transcrire les rares meetings sync. GitHub PR review obligatoire entre hubs en overlap window." },
+      ],
+      en: [
+        { q: "What is Follow-the-Sun delivery?", a: "A model where 3 teams across 3 complementary time zones (Paris CET, Montréal EST, Tokyo JST) hand off the roadmap relay-style. When Paris closes at 6 PM CET, Montréal picks up. When Montréal closes at 9 PM EST, Tokyo continues. When Tokyo closes at 7 PM JST, Paris resumes. 24/5 coverage without night on-call." },
+        { q: "How much overlap between hubs is needed?", a: "1 hour × 2 per day sanctuarised (Paris 5-6 PM ↔ Montréal 11 AM-12 PM, Tokyo 6-7 PM ↔ Paris 10-11 AM). No internal meeting or other interruption during these windows — exclusively reserved for active handoff and synchronous client questions." },
+        { q: "How to avoid burn-out on Follow-the-Sun?", a: "Three non-negotiable rules: (1) strict functional-domain ownership per hub (no shared zone editable by 3 hubs), (2) tickets calibrated to complete in one shift or be explicitly passed, (3) rotating on-call on production on-call only, never on day work. Measured result: attrition <6%, internal NPS 72." },
+        { q: "What projects suit Follow-the-Sun?", a: "Ideal for: strict 24/5 SLAs (financial, gaming, global e-commerce), critical production runs without night on-call, heavy projects where lead time must drop drastically (-44% observed across 12 Abbeal engagements). Less suited to: missions under 6 weeks (tri-hub onboarding cost too high), single-team missions <5 people (overlap unprofitable)." },
+        { q: "What tools for async-first delivery?", a: "Notion or Confluence for RFC markdown (one handoff = one updated RFC). Slack thread-first (no DMs, no channel without archives). Linear or Jira with strict status and assignee convention. Tactiq or Otter to transcribe rare sync meetings. Mandatory GitHub PR review between hubs in overlap window." },
+      ],
+    },
+    relatedCaseSlug: "le-monde",
+    relatedServiceSlug: "delivery-cle-en-main",
     body: {
       fr: ARTICLE_BODIES["follow-the-sun-sans-bruler-equipes"]?.fr ?? [],
       en: ARTICLE_BODIES["follow-the-sun-sans-bruler-equipes"]?.en,

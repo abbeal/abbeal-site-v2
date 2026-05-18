@@ -15,7 +15,7 @@
       },
       {
         "type": "p",
-        "content": "Aucune ligne de prompt ne part en prod sans suite d'évals. Constituez un golden dataset de 200 à 500 exemples annotés, puis automatisez la mesure : exactness, faithfulness, latence, coût par requête. Tout PR qui dégrade un axe est bloqué en CI. Sans cette discipline, vous pilotez à l'aveugle."
+        "content": "Aucune ligne de prompt ne part en prod sans suite d'évals. Constituez un golden dataset de 200 à 500 exemples annotés, puis automatisez la mesure : exactness, faithfulness, latence, coût par requête. Tout PR qui dégrade un axe est bloqué en CI. Sans cette discipline, vous pilotez à l'aveugle. Cas concret 2026 : sur un projet RAG FinTech, on est passé de 64 % à 91 % d'accuracy en 6 sprints — sans changer de LLM, juste en industrialisant les evals et le tuning retrieval."
       },
       {
         "type": "callout",
@@ -28,7 +28,7 @@
       },
       {
         "type": "p",
-        "content": "Un agent multi-tools peut générer 40 appels LLM pour une seule requête utilisateur. Sans télémétrie fine, votre marge fond. Loggez le coût de chaque span dans Datadog ou Honeycomb. Attribuez par customer_id et par feature. C'est la condition pour facturer ou rationner."
+        "content": "Un agent multi-tools peut générer 40 appels LLM pour une seule requête utilisateur. Sans télémétrie fine, votre marge fond. Loggez le coût de chaque span dans Datadog ou Honeycomb. Attribuez par customer_id et par feature. C'est la condition pour facturer ou rationner. LiteLLM s'est imposé chez nous comme routing layer : il bascule dynamiquement Haiku ↔ Sonnet ↔ Opus selon la complexité de la requête. Sur un projet Customer Support, on a divisé le coût LLM par 3,4 en 6 semaines sans dégrader la qualité — uniquement par cost routing."
       },
       {
         "type": "code",
@@ -83,6 +83,26 @@
       {
         "type": "p",
         "content": "Ces sept patterns ne sont pas négociables. Ils transforment un PoC séduisant en système qui tient à 99.9 % et qui scale sans incinérer votre runway. Si vous voulez sortir du PoC theatre et industrialiser vos agents, parlons-en."
+      },
+      {
+        "type": "h2",
+        "content": "Stack agents IA 2026 — ce qu'on utilise vraiment"
+      },
+      {
+        "type": "p",
+        "content": "Au-delà des patterns, voici la pile d'outils sur laquelle on construit en mai 2026 chez nos clients. Tout est éprouvé en prod sur au moins 3 missions, pas du POC."
+      },
+      {
+        "type": "list",
+        "items": [
+          "**LLM providers** : Anthropic Claude 3.7 Sonnet (default), OpenAI GPT-4o (fallback), Llama 3.3 70B self-hosted via vLLM ou Modal pour les workloads sensibles (santé, banking, APPI Japon).",
+          "**Orchestration agents** : LangGraph — machine à états explicite (nodes + edges) plutôt qu'un agent free-form qui décide tout seul. Bien plus debuggable + reproductible.",
+          "**Evals CI** : Promptfoo dans la pipeline GitHub Actions (tests dataset-vs-judge). Langfuse pour le tracking continu en production. LangSmith si on est déjà chez LangChain.",
+          "**Observability** : Langfuse + Helicone pour le multi-provider léger, Datadog LLM Observability pour les missions Enterprise.",
+          "**Vector store** : Pinecone pour les workloads >10M vecteurs avec SLA stricts. PostgreSQL + pgvector pour les <1M où Postgres tourne déjà en prod (95 % des cas FinTech).",
+          "**Routing & cost** : LiteLLM comme couche d'abstraction multi-LLM (provider switching + cost capping par requête)."
+        ],
+        "ordered": false
       }
     ],
     "en": [
@@ -100,7 +120,7 @@
       },
       {
         "type": "p",
-        "content": "Not a single line of prompt ships to prod without an eval suite. Build a golden dataset of 200 to 500 labeled examples, then automate measurement: exactness, faithfulness, latency, cost per request. Any PR that degrades an axis is blocked in CI. Without this discipline, you're flying blind."
+        "content": "Not a single line of prompt ships to prod without an eval suite. Build a golden dataset of 200 to 500 labeled examples, then automate measurement: exactness, faithfulness, latency, cost per request. Any PR that degrades an axis is blocked in CI. Without this discipline, you're flying blind. Concrete 2026 case: on a FinTech RAG project, we moved accuracy from 64% to 91% over 6 sprints — without switching LLM, just by industrialising evals and tuning retrieval."
       },
       {
         "type": "callout",
@@ -113,7 +133,7 @@
       },
       {
         "type": "p",
-        "content": "A multi-tool agent can fire 40 LLM calls for a single user query. Without fine-grained telemetry, your margin melts. Log the cost of each span in Datadog or Honeycomb. Attribute by customer_id and by feature. That's the prerequisite to bill or rate-limit."
+        "content": "A multi-tool agent can fire 40 LLM calls for a single user query. Without fine-grained telemetry, your margin melts. Log the cost of each span in Datadog or Honeycomb. Attribute by customer_id and by feature. That's the prerequisite to bill or rate-limit. LiteLLM has become our routing layer of choice: it dynamically switches Haiku ↔ Sonnet ↔ Opus by request complexity. On a Customer Support project, we cut LLM cost by 3.4× in 6 weeks without quality degradation — purely through cost routing."
       },
       {
         "type": "code",
@@ -168,6 +188,26 @@
       {
         "type": "p",
         "content": "These seven patterns are non-negotiable. They turn a seductive PoC into a system that holds at 99.9% and scales without incinerating your runway. If you want to leave PoC theatre and industrialize your agents, let's talk."
+      },
+      {
+        "type": "h2",
+        "content": "2026 AI agents stack — what we actually use"
+      },
+      {
+        "type": "p",
+        "content": "Beyond patterns, here's the toolchain we build on with clients as of May 2026. Everything is battle-tested across at least 3 production missions, no POC."
+      },
+      {
+        "type": "list",
+        "items": [
+          "**LLM providers**: Anthropic Claude 3.7 Sonnet (default), OpenAI GPT-4o (fallback), Llama 3.3 70B self-hosted via vLLM or Modal for sensitive workloads (health, banking, JP APPI).",
+          "**Agent orchestration**: LangGraph — explicit state machine (nodes + edges) rather than a free-form agent deciding everything alone. Much more debuggable + reproducible.",
+          "**CI evals**: Promptfoo in the GitHub Actions pipeline (dataset-vs-judge tests). Langfuse for continuous production tracking. LangSmith if already on LangChain.",
+          "**Observability**: Langfuse + Helicone for lightweight multi-provider, Datadog LLM Observability for Enterprise missions.",
+          "**Vector store**: Pinecone for >10M-vector workloads with strict SLAs. PostgreSQL + pgvector for <1M when Postgres is already in prod (95% of FinTech cases).",
+          "**Routing & cost**: LiteLLM as multi-LLM abstraction layer (provider switching + per-request cost capping)."
+        ],
+        "ordered": false
       }
     ],
     "ja": [
@@ -185,7 +225,7 @@
       },
       {
         "type": "p",
-        "content": "Evalスイートなしに、プロンプトの1行も本番に出してはいけません。200から500件のラベル付き例でゴールデンデータセットを構築し、測定を自動化します：exactness、faithfulness、レイテンシ、リクエスト単価。いずれかの軸を劣化させるPRはCIでブロックします。この規律なしでは、盲目で操縦することになります。"
+        "content": "Evalスイートなしに、プロンプトの1行も本番に出してはいけません。200から500件のラベル付き例でゴールデンデータセットを構築し、測定を自動化します：exactness、faithfulness、レイテンシ、リクエスト単価。いずれかの軸を劣化させるPRはCIでブロックします。この規律なしでは、盲目で操縦することになります。 2026年の具体例：FinTech RAGプロジェクトで、LLMを変更せずに、evalsの工業化とretrievalのチューニングだけで、6スプリントで精度を64%から91%に向上させた。"
       },
       {
         "type": "callout",
@@ -198,7 +238,7 @@
       },
       {
         "type": "p",
-        "content": "マルチツールエージェントは、1つのユーザーリクエストに対して40回のLLMコールを発生させることがあります。詳細なテレメトリなしでは、マージンが溶けます。各スパンのコストをDatadogまたはHoneycombにログ出力します。customer_idと機能別に割り当てます。これが課金や制限の前提条件です。"
+        "content": "マルチツールエージェントは、1つのユーザーリクエストに対して40回のLLMコールを発生させることがあります。詳細なテレメトリなしでは、マージンが溶けます。各スパンのコストをDatadogまたはHoneycombにログ出力します。customer_idと機能別に割り当てます。これが課金や制限の前提条件です。 LiteLLMは弊社のルーティングレイヤーとして定着：リクエストの複雑度に応じてHaiku ↔ Sonnet ↔ Opusを動的に切り替える。Customer Supportプロジェクトでは、品質を損なうことなく、コストルーティングのみで6週間でLLMコストを3.4倍削減した。"
       },
       {
         "type": "code",
@@ -253,6 +293,26 @@
       {
         "type": "p",
         "content": "これら7つのパターンは交渉の余地がありません。魅力的なPoCを、99.9%で耐え、ランウェイを焼き尽くさずにスケールするシステムに変えます。PoCシアターを抜け出しエージェントを工業化したい方、お話ししましょう。"
+      },
+      {
+        "type": "h2",
+        "content": "2026年AIエージェント・スタック — 実際に使うもの"
+      },
+      {
+        "type": "p",
+        "content": "パターンを超えて、2026年5月時点でクライアントと構築しているツールチェーン。すべて少なくとも3つの本番ミッションで実証済み、POCではない。"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**LLMプロバイダー**：Anthropic Claude 3.7 Sonnet（デフォルト）、OpenAI GPT-4o（フォールバック）、機密ワークロード（医療、銀行、JP APPI）向けにvLLMまたはModalでセルフホストするLlama 3.3 70B。",
+          "**エージェント・オーケストレーション**：LangGraph — 自由形式エージェントではなく、明示的なステートマシン（ノード+エッジ）。デバッグ可能性と再現性が大幅に向上。",
+          "**CI evals**：GitHub Actionsパイプライン内のPromptfoo（dataset-vs-judgeテスト）。本番継続トラッキングにLangfuse。LangChain使用の場合はLangSmith。",
+          "**可観測性**：軽量マルチプロバイダー向けにLangfuse + Helicone、エンタープライズ・ミッション向けにDatadog LLM Observability。",
+          "**ベクトルストア**：>10M ベクトル・厳格SLA向けにPinecone。Postgresが既に本番にある<1Mケース向けにPostgreSQL + pgvector（FinTechケースの95%）。",
+          "**ルーティング&コスト**：マルチLLM抽象化レイヤーとしてLiteLLM（プロバイダー切り替え + リクエスト単位のコストキャップ）。"
+        ],
+        "ordered": false
       }
     ],
     "fr-ca": [
@@ -270,7 +330,7 @@
       },
       {
         "type": "p",
-        "content": "Aucune ligne de prompt ne part en prod sans suite d'évals. Constituez un golden dataset de 200 à 500 exemples annotés, puis automatisez la mesure : exactness, faithfulness, latence, coût par requête. Tout PR qui dégrade un axe est bloqué en CI. Sans cette discipline, vous pilotez à l'aveugle."
+        "content": "Aucune ligne de prompt ne part en prod sans suite d'évals. Constituez un golden dataset de 200 à 500 exemples annotés, puis automatisez la mesure : exactness, faithfulness, latence, coût par requête. Tout PR qui dégrade un axe est bloqué en CI. Sans cette discipline, vous pilotez à l'aveugle. Cas concret 2026 : sur un mandat RAG FinTech, on est passé de 64 % à 91 % d'exactitude en 6 sprints — sans changer de LLM, juste en industrialisant les evals et le réglage retrieval."
       },
       {
         "type": "callout",
@@ -283,7 +343,7 @@
       },
       {
         "type": "p",
-        "content": "Un agent multi-tools peut générer 40 appels LLM pour une seule requête utilisateur. Sans télémétrie fine, votre marge fond. Loggez le coût de chaque span dans Datadog ou Honeycomb. Attribuez par customer_id et par feature. C'est la condition pour facturer ou rationner."
+        "content": "Un agent multi-tools peut générer 40 appels LLM pour une seule requête utilisateur. Sans télémétrie fine, votre marge fond. Loggez le coût de chaque span dans Datadog ou Honeycomb. Attribuez par customer_id et par feature. C'est la condition pour facturer ou rationner. LiteLLM s'est imposé chez nous comme couche de routage : il bascule dynamiquement Haiku ↔ Sonnet ↔ Opus selon la complexité de la requête. Sur un mandat Customer Support, on a divisé le coût LLM par 3,4 en 6 semaines sans dégrader la qualité — uniquement par routage de coût."
       },
       {
         "type": "code",
@@ -338,6 +398,26 @@
       {
         "type": "p",
         "content": "Ces sept patterns ne sont pas négociables. Ils transforment un PoC séduisant en système qui tient à 99.9 % et qui scale sans incinérer votre runway. Si vous voulez sortir du PoC theatre et industrialiser vos agents, parlons-en."
+      },
+      {
+        "type": "h2",
+        "content": "Pile agents IA 2026 — ce qu'on utilise vraiment"
+      },
+      {
+        "type": "p",
+        "content": "Au-delà des patterns, voici la pile d'outils sur laquelle on construit en mai 2026 chez nos clients. Tout est éprouvé en production sur au moins 3 mandats, pas du POC."
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Fournisseurs LLM** : Anthropic Claude 3.7 Sonnet (défaut), OpenAI GPT-4o (fallback), Llama 3.3 70B auto-hébergé via vLLM ou Modal pour les charges sensibles (santé, services bancaires, APPI Japon).",
+          "**Orchestration agents** : LangGraph — machine à états explicite (nœuds + arêtes) plutôt qu'un agent libre qui décide tout seul. Bien plus déboguable + reproductible.",
+          "**Evals CI** : Promptfoo dans la pipeline GitHub Actions (tests dataset-vs-juge). Langfuse pour le suivi continu en production. LangSmith si on est déjà chez LangChain.",
+          "**Observabilité** : Langfuse + Helicone pour le multi-fournisseur léger, Datadog LLM Observability pour les mandats Enterprise.",
+          "**Magasin vectoriel** : Pinecone pour les charges >10M vecteurs avec SLA stricts. PostgreSQL + pgvector pour les <1M où Postgres tourne déjà en production (95 % des cas FinTech).",
+          "**Routage & coût** : LiteLLM comme couche d'abstraction multi-LLM (commutation fournisseur + plafonnement coût par requête)."
+        ],
+        "ordered": false
       }
     ]
   },
