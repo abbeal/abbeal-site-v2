@@ -120,6 +120,10 @@ export function Hero({
             >
               {d.hero.h1Top}
             </motion.span>
+            {/* Espace insecable visuel + parsable bot/copy : sans ce noeud
+                texte, les 2 spans block se collent dans le DOM serialise
+                ("trouver.On l'a fondee.") — audit W20 quick win #4. */}
+            {" "}
             <motion.span
               {...h1Line(0.22)}
               className="block italic gradient-brand-text pb-[0.05em]"
