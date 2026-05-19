@@ -1,0 +1,4 @@
+# Placeholder folder for Alex's HD screenshots from CSS for JavaScript Developers article.
+# Alex will send the visuals by mail — drop them here as JPG/PNG (named e.g. screenshot-01.jpg)
+# and reference them via {"type": "image", "src": "/insights/css-josh-comeau/<filename>"} in
+# the body blocks once verbatim content is pasted in lib/article-bodies.json.
