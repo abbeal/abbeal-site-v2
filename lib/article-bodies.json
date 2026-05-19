@@ -8718,6 +8718,54 @@
         "content": "By Alexandre Lim — Senior Software Engineer at Abbeal, Asia Hub · Tokyo. 3 years in Japan, specialized in Next.js / React. LinkedIn: linkedin.com/in/alexandre-lim"
       },
       {
+        "type": "h2",
+        "content": "What is CSS for JavaScript Developers?"
+      },
+      {
+        "type": "p",
+        "content": "CSS for JavaScript Developers, as its name suggests, is an online course about CSS specifically aimed at JS Developers. It's a one-time purchase with unlimited access to the lessons."
+      },
+      {
+        "type": "p",
+        "content": "The promise is simple: CSS can be fun."
+      },
+      {
+        "type": "p",
+        "content": "There can be up to 10 modules and exclusive bonus content depending on the chosen package. The content is a mix of articles, videos, and some exercises. Each module ends with a workshop, an excellent way to practice what you have learned and even go beyond."
+      },
+      {
+        "type": "h2",
+        "content": "Why did I take the course?"
+      },
+      {
+        "type": "p",
+        "content": "I did back-end and front-end depending on my client's needs before being hooked on the front-end with libraries like React. I never took the time to really learn CSS and build strong fundamentals. I mostly used CSS but did not truly understand it. Part of the CSS code I wrote felt like magic. Then I read some high-quality articles from Josh about CSS. When he announced his course, I was really excited. His marketing message was skillfully crafted. I felt like it was tailored to my needs. Having done the Marketing Seminar from Seth Godin, I was aware of the quality of his marketing. Josh's teaching method worked well for me, so I decided to trust his promise. I bought early access to his course."
+      },
+      {
+        "type": "h2",
+        "content": "Did Josh deliver on his promise?"
+      },
+      {
+        "type": "p",
+        "content": "A big YES! It was really the course I needed. The modules are well defined and not overwhelming. The content is top quality, and there is tons of stuff to learn with fun practice."
+      },
+      {
+        "type": "p",
+        "content": "CSS will begin to make sense, and you'll enjoy solving CSS problems. That's what happened to me, and it helped me a lot when I started working for a new client. I began by doing maintenance tickets that mainly focused on CSS. But with my new understanding of CSS, I could detect and solve the underlying problem. I could avoid just applying a temporary fix that often leads to more technical debt in the long term. A good example is dealing with z-index before it grows into a nightmare."
+      },
+      {
+        "type": "p",
+        "content": "I was also able to teach what I'd learned, and you'll be surprised by how little developers really know about CSS at a deeper level."
+      },
+      {
+        "type": "p",
+        "content": "Now, whenever I face a challenge, I return to Josh's lessons because he teaches the fundamentals for solving more complex problems. The investment in money and time was worth it. If talking about CSS learning, I always recommend Josh's course. But you will have to make time for it. It's not a leisure walk. In my case, I blocked one hour each night and worked on it more on weekends. I really enjoyed the lessons. I even go back to some lessons every now and then. It's not just something you buy and throw after finishing it. It will stick with you and help you in your CSS journey."
+      },
+      {
+        "type": "p",
+        "content": "To know more about the program and do your own research, there's nothing better than his landing page."
+      },
+      {
         "type": "callout",
         "tone": "teal",
         "content": "The original article was written in English by Alexandre Lim on his personal Notion. The verbatim version — with zero AI rewriting — is being prepared for publication on abbeal.com. In the meantime, read the full article directly on Alex's Notion."
@@ -8772,6 +8820,172 @@
         "type": "callout",
         "tone": "ink",
         "content": "Par Stéphane Robin — Senior Engineer chez Abbeal, Pôle Amériques · Montréal. Spécialisé services financiers réglementés, modernisation legacy, sécurité Java/Spring Boot."
+      },
+      {
+        "type": "p",
+        "content": "La dette technique n’a jamais été un sujet anodin. Mais avec l’arrivée de Mythos, elle est devenue une urgence."
+      },
+      {
+        "type": "p",
+        "content": "Il y a quelques semaines, l’annonce du modèle Claude Mythos Preview d’Anthropic a provoqué une onde de choc dans les équipes de sécurité des grandes organisations. Pas uniquement parce que le modèle est techniquement impressionnant — mais parce qu’il a fondamentalement changé le calcul du risque CVE."
+      },
+      {
+        "type": "p",
+        "content": "Sur le terrain, chez un de nos clients dans le secteur financier, acteur majeur de la place de Montréal, nous avons vécu ce basculement en temps réel. Voici ce que nous avons appris."
+      },
+      {
+        "type": "h2",
+        "content": "Le Défi : quand des vulnérabilités “mineures” deviennent critiques."
+      },
+      {
+        "type": "h2",
+        "content": "Qu’est-ce que Mythos, concrètement ?"
+      },
+      {
+        "type": "p",
+        "content": "Claude Mythos est un modèle de grande envergure développé par Anthropic, capable d’identifier et d’exploiter des vulnérabilités de sécurité de manière autonome, à une échelle et une vitesse inédites. Parmi ses capacités documentées :"
+      },
+      {
+        "type": "p",
+        "content": "Découverte autonome de zero-days : le modèle a identifié des failles dormantes depuis des décennies — dont un bug vieux de 27 ans dans OpenBSD et une vulnérabilité de 16 ans dans FFmpeg."
+      },
+      {
+        "type": "p",
+        "content": "Génération d’exploits fonctionnels : sans intervention humaine significative, Mythos transforme une CVE en vecteur d’attaque opérationnel."
+      },
+      {
+        "type": "p",
+        "content": "Démocratisation de l’attaque : un ingénieur sans formation en sécurité peut, avec Mythos, identifier et exploiter des failles critiques dans des systèmes complexes."
+      },
+      {
+        "type": "p",
+        "content": "Anthropic a restreint l’accès au modèle via le “Projet Glasswing”, le réservant à un consortium d’organisations d’ infrastructure critique pour permettre des correctifs préventifs. Mais la réalité du terrain est sans appel : la menace existe, elle est documentée, et les équipes sécurité des grandes organisations en ont pleinement conscience."
+      },
+      {
+        "type": "h2",
+        "content": "Ce que ça change pour les équipes sécurité"
+      },
+      {
+        "type": "p",
+        "content": "Avant Mythos, le classement des CVE reposait sur une évaluation du risque d’exploitation : une vulnérabilité cotée CVSS 5.0, difficile à exploiter manuellement, pouvait raisonnablement rester dans le backlog plusieurs mois."
+      },
+      {
+        "type": "p",
+        "content": "Avec Mythos, ce raisonnement s’effondre."
+      },
+      {
+        "type": "p",
+        "content": "Un modèle capable d’automatiser la découverte et l’exploitation à grande échelle transforme toute CVE en priorité potentielle — y compris celles qui dormaient dans la dette technique depuis des années, jugées trop complexes à exploiter pour mériter une action immédiate."
+      },
+      {
+        "type": "h2",
+        "content": "La réponse sur le terrain : ce qui se passe chez notre client"
+      },
+      {
+        "type": "h2",
+        "content": "Un réalignement total des priorités"
+      },
+      {
+        "type": "p",
+        "content": "L’équipe sécurité de notre client a déclenché une revue systématique de l’ensemble des API et composants exposés. L’objectif : identifier toutes les CVE ouvertes liées à des composants en dette technique et les requalifier à l’aune du risque Mythos. Le résultat a été immédiat : des vulnérabilités classées “faibles” ou “à traiter dans le prochain cycle” sont remontées en tête de backlog. Les équipes de développement ont reçu des demandes de correctifs avec une contrainte claire — deux semaines pour passer en production."
+      },
+      {
+        "type": "h2",
+        "content": "Les chantiers en cours"
+      },
+      {
+        "type": "p",
+        "content": "Les principales actions engagées :"
+      },
+      {
+        "type": "p",
+        "content": "Migration Spring Boot 2.x → 3.x (voire 4.x) : un passage non trivial, qui implique des adaptations d’API, de configuration de sécurité et de compatibilité des dépendances."
+      },
+      {
+        "type": "p",
+        "content": "Montées de version ciblées : chaque bibliothèque associée à une CVE active fait l’objet d’une mise à jour vers la version “safe” la plus récente compatible. Migration Java 17 → 21 (minimum) : les applications encore bloquées sur Java 17 sont concernées en priorité. Java 25, bien que disponible, pose encore des problèmes de compatibilité sur certains composants dont le cycle de release est plus lent — sa généralisation est reportée."
+      },
+      {
+        "type": "h2",
+        "content": "Un shift de planning inévitable"
+      },
+      {
+        "type": "p",
+        "content": "Ces chantiers ne s’ajoutent pas au planning existant — ils le déplacent. Un décalage d’au moins deux semaines est attendu sur les livrables fonctionnels prévus. C’est un coût réel, assumé, et surtout justifié."
+      },
+      {
+        "type": "h2",
+        "content": "Ce que cette situation révèle sur la gestion de la dette technique"
+      },
+      {
+        "type": "h2",
+        "content": "La dette contenue n’est plus suffisante"
+      },
+      {
+        "type": "p",
+        "content": "Notre client avait une dette technique gérée, documentée, et globalement maîtrisée. Elle n’était pas ignorée — elle était priorisée dans un contexte de risque raisonnable. Mythos a redéfini ce contexte."
+      },
+      {
+        "type": "p",
+        "content": "Ce cas illustre une réalité plus large : la gestion de la dette technique ne peut plus être évaluée indépendamment de l’évolution du paysage des menaces. Une CVE que vous avez accepté de reporter hier peut devenir votre plus grande exposition demain, si les outils d’exploitation évoluent."
+      },
+      {
+        "type": "h2",
+        "content": "Les organisations moins rigoureuses sont en bien plus mauvaise posture"
+      },
+      {
+        "type": "p",
+        "content": "Ce que nous observons chez notre client — une organisation qui avait déjà une culture de la qualité logicielle — donne une idée de ce que traversent des structures moins attentives à leur hygiène technique. La combinaison de dette non documentée, de versions obsolètes et de CVE jamais traitées représente, dans ce nouveau contexte, un risque systémique."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi ce sujet nous importe chez Abbeal ?"
+      },
+      {
+        "type": "p",
+        "content": "Chez Abbeal, nous intervenons précisément sur ces enjeux : architecture logicielle, qualité de code, modernisation de stack et accompagnement des équipes dans la gestion de leur dette technique."
+      },
+      {
+        "type": "p",
+        "content": "Ce que cette expérience nous confirme : La dette technique est un risque métier, pas seulement un risque technique. Elle se mesure en fenêtres d’exposition, pas uniquement en vélocité de développement."
+      },
+      {
+        "type": "p",
+        "content": "Les équipes qui traitent sérieusement leur stack sont mieux équipées pour répondre à ce type de crise. Deux semaines de sprint sécurité, c’est gérable quand les fondations sont saines."
+      },
+      {
+        "type": "p",
+        "content": "L’expertise en modernisation de stack est plus stratégique que jamais. Spring Boot 3.x, Java 21, mise à jour de dépendances — ce ne sont pas des chantiers “nice to have”. Ce sont des prérequis à la résilience."
+      },
+      {
+        "type": "p",
+        "content": "Si vous travaillez sur ces sujets — en tant que client à la recherche d’un partenaire technique, ou en tant qu’ingénieur cherchant à rejoindre une équipe qui traite ces enjeux sérieusement — nous serions heureux d’en discuter."
+      },
+      {
+        "type": "h2",
+        "content": "Prochaines étapes"
+      },
+      {
+        "type": "p",
+        "content": "Quelques actions concrètes si vous voulez anticiper ce type de situation dans votre organisation :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Auditez votre CVE backlog à l’aune du risque d’exploitation par IA, pas seulement par humain.",
+          "Cartographiez vos composants en dette : versions de Spring Boot, Java, bibliothèques critiques.",
+          "Mettez en place un pipeline de montée de version continue pour éviter les accumulations qui créent des fenêtres d’exposition larges.",
+          "Challengez vos SLA de correctifs : deux semaines de délai de mise en prod pour un patch de sécurité, c’est désormais le standard minimum dans les organisations matures."
+        ],
+        "ordered": true
+      },
+      {
+        "type": "p",
+        "content": "Cet article est basé sur un retour d’expérience terrain. Les détails sensibles ont été généralisés pour respecter la confidentialité de notre client."
+      },
+      {
+        "type": "p",
+        "content": "Abbeal accompagne les équipes de développement dans la modernisation de leur stack, la réduction de la dette technique et la mise en place de pratiques d’ingénierie durables."
       },
       {
         "type": "callout",
