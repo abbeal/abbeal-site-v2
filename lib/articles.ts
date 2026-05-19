@@ -854,6 +854,7 @@ export const articles: Article[] = [
       ja: ARTICLE_BODIES["css-for-javascript-developers-josh-comeau-retour-alex-lim"]?.ja,
       "fr-ca": ARTICLE_BODIES["css-for-javascript-developers-josh-comeau-retour-alex-lim"]?.["fr-ca"],
     },
+  },
   // Article 21 — Stephane Robin (Senior Engineer Montreal) : Mythos vs dette
   // technique. Article guest, byline auteur en tete du body, publication
   // initiale sur Medium (@electron.libre). SEO ciblee sur "IA + cybersecurite
@@ -912,6 +913,7 @@ export const articles: Article[] = [
       ja: ARTICLE_BODIES["mythos-ia-cybersecurite-priorites-production-stephane-robin"]?.ja,
       "fr-ca": ARTICLE_BODIES["mythos-ia-cybersecurite-priorites-production-stephane-robin"]?.["fr-ca"],
     },
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
