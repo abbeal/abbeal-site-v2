@@ -8773,6 +8773,12 @@
       {
         "type": "p",
         "content": "To know more about the program and do your own research, there's nothing better than his [landing page](https://css-for-js.dev/)."
+      },
+      {
+        "type": "image",
+        "src": "/insights/css-josh-comeau/css-for-js-certificate.png",
+        "alt": "Course completed — CSS for JavaScript Developers by Josh Comeau",
+        "caption": "Course completed — CSS for JavaScript Developers by Josh Comeau"
       }
     ],
     "ja": [
