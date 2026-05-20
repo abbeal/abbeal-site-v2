@@ -22,6 +22,11 @@ export type ArticleBlock =
   | { type: "h2"; content: string }
   | { type: "h3"; content: string }
   | { type: "p"; content: string }
+  /** Byline auteur — affichée en tête de body pour les articles guest
+   *  (Alex, Stéphane, futurs auteurs externes). Rendu en typo propre sans
+   *  encart, avec lien LinkedIn cliquable + icône. `role` = titre + lieu +
+   *  pitch court. Réutilisable tel quel pour tout nouvel auteur guest. */
+  | { type: "byline"; name: string; role: string; linkedinUrl?: string }
   | { type: "list"; items: string[]; ordered?: boolean }
   | { type: "quote"; content: string; author?: string }
   | { type: "code"; lang?: string; content: string }

@@ -311,9 +311,14 @@ def patch_bodies(slug: str, locale: str, new_body_blocks: list[dict]) -> None:
         sys.exit(f"ERROR: locale '{locale}' absente pour slug '{slug}'")
 
     existing = bodies[slug][locale]
-    # Byline = block 0 si callout tone=ink, sinon vide
+    # Byline = block 0 si type "byline" (nouveau format) OU callout tone=ink
+    # (ancien format placeholder). On preserve les deux pour rester compatible
+    # avec les articles deja migres vers le bloc byline dedie.
     byline_block = None
-    if existing and existing[0].get("type") == "callout" and existing[0].get("tone") == "ink":
+    if existing and (
+        existing[0].get("type") == "byline"
+        or (existing[0].get("type") == "callout" and existing[0].get("tone") == "ink")
+    ):
         byline_block = existing[0]
 
     # Footer = derniers blocks (callout notice teal + link canonical) si presents

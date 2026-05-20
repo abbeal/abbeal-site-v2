@@ -1,9 +1,48 @@
 "use client";
 
 import { motion } from "motion/react";
+import type { ReactNode } from "react";
 import type { ArticleBlock } from "@/lib/articles";
 
 const ease = [0.16, 1, 0.3, 1] as const;
+
+/**
+ * renderInline — parse les liens markdown inline `[label](url)` dans le texte
+ * d'un bloc et les rend en <a> cliquables. Rétro-compatible : un texte sans
+ * `[..](..)` est renvoyé inchangé, donc aucun risque pour les ~60 articles
+ * existants qui n'utilisent que du texte brut.
+ *
+ * - URL externe (http/https) → target="_blank" rel="noopener"
+ * - URL interne (commence par /) → navigation même onglet
+ *
+ * Utilisé dans les blocs `p` et les items de `list`. Sert au lien inline
+ * "landing page" de l'article CSS d'Alex (brief W21 correction #4).
+ */
+function renderInline(text: string): ReactNode {
+  const re = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts: ReactNode[] = [];
+  let last = 0;
+  let key = 0;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) parts.push(text.slice(last, m.index));
+    const [, label, href] = m;
+    const external = /^https?:\/\//.test(href);
+    parts.push(
+      <a
+        key={key++}
+        href={href}
+        {...(external ? { target: "_blank", rel: "noopener" } : {})}
+        className="text-[var(--color-brand-teal)] underline underline-offset-2 decoration-[var(--color-brand-teal)]/40 hover:decoration-[var(--color-brand-teal)] transition-colors"
+      >
+        {label}
+      </a>,
+    );
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts.length === 0 ? text : parts;
+}
 
 export function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
   return (
@@ -50,15 +89,50 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
           {...fadeIn}
           className="text-[17px] leading-[1.65] text-[var(--color-ink)]"
         >
-          {block.content}
+          {renderInline(block.content)}
         </motion.p>
+      );
+
+    case "byline":
+      return (
+        <motion.div
+          {...fadeIn}
+          className="not-prose -mt-1 mb-2 border-l-2 border-[var(--color-brand-teal)] pl-4"
+        >
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span className="text-[15px] font-semibold text-[var(--color-ink)]">
+              {block.name}
+            </span>
+            {block.linkedinUrl && (
+              <a
+                href={block.linkedinUrl}
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-1.5 text-[13px] text-[var(--color-brand-teal)] hover:underline"
+              >
+                <svg
+                  aria-hidden
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-[15px] w-[15px]"
+                >
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68 1.69 1.69 0 0 0-1.68-1.69 1.69 1.69 0 0 0-1.69 1.69 1.69 1.69 0 0 0 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z" />
+                </svg>
+                LinkedIn
+              </a>
+            )}
+          </div>
+          <p className="mt-1 text-[14px] leading-relaxed text-[var(--color-ink-soft)]">
+            {block.role}
+          </p>
+        </motion.div>
       );
 
     case "list":
       return block.ordered ? (
         <motion.ol {...fadeIn} className="list-decimal pl-6 space-y-2 text-[17px] leading-[1.65] text-[var(--color-ink)] marker:text-[var(--color-brand-teal)] marker:font-mono">
           {block.items.map((item, i) => (
-            <li key={i}>{item}</li>
+            <li key={i}>{renderInline(item)}</li>
           ))}
         </motion.ol>
       ) : (
@@ -66,7 +140,7 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
           {block.items.map((item, i) => (
             <li key={i} className="flex gap-3 items-start">
               <span aria-hidden className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[var(--color-brand-teal)] shrink-0" />
-              <span>{item}</span>
+              <span>{renderInline(item)}</span>
             </li>
           ))}
         </motion.ul>

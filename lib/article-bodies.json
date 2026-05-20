@@ -8713,9 +8713,10 @@
     ],
     "en": [
       {
-        "type": "callout",
-        "tone": "ink",
-        "content": "By Alexandre Lim — Senior Software Engineer at Abbeal, Asia Hub · Tokyo. 3 years in Japan, specialized in Next.js / React. LinkedIn: linkedin.com/in/alexandre-lim"
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "Senior Software Engineer at Abbeal, Asia Hub · Tokyo. 3 years in Japan, specialized in Next.js / React.",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
       },
       {
         "type": "h2",
@@ -8739,7 +8740,11 @@
       },
       {
         "type": "p",
-        "content": "I did back-end and front-end depending on my client's needs before being hooked on the front-end with libraries like React. I never took the time to really learn CSS and build strong fundamentals. I mostly used CSS but did not truly understand it. Part of the CSS code I wrote felt like magic. Then I read some high-quality articles from Josh about CSS. When he announced his course, I was really excited. His marketing message was skillfully crafted. I felt like it was tailored to my needs. Having done the Marketing Seminar from Seth Godin, I was aware of the quality of his marketing. Josh's teaching method worked well for me, so I decided to trust his promise. I bought early access to his course."
+        "content": "I did back-end and front-end depending on my client's needs before being hooked on the front-end with libraries like React. I never took the time to really learn CSS and build strong fundamentals. I mostly used CSS but did not truly understand it. Part of the CSS code I wrote felt like magic."
+      },
+      {
+        "type": "p",
+        "content": "Then I read some high-quality articles from Josh about CSS. When he announced his course, I was really excited. His marketing message was skillfully crafted. I felt like it was tailored to my needs. Having done the Marketing Seminar from Seth Godin, I was aware of the quality of his marketing. Josh's teaching method worked well for me, so I decided to trust his promise. I bought early access to his course."
       },
       {
         "type": "h2",
@@ -8759,22 +8764,15 @@
       },
       {
         "type": "p",
-        "content": "Now, whenever I face a challenge, I return to Josh's lessons because he teaches the fundamentals for solving more complex problems. The investment in money and time was worth it. If talking about CSS learning, I always recommend Josh's course. But you will have to make time for it. It's not a leisure walk. In my case, I blocked one hour each night and worked on it more on weekends. I really enjoyed the lessons. I even go back to some lessons every now and then. It's not just something you buy and throw after finishing it. It will stick with you and help you in your CSS journey."
+        "content": "Now, whenever I face a challenge, I return to Josh's lessons because he teaches the fundamentals for solving more complex problems."
       },
       {
         "type": "p",
-        "content": "To know more about the program and do your own research, there's nothing better than his landing page."
+        "content": "The investment in money and time was worth it. If talking about CSS learning, I always recommend Josh's course. But you will have to make time for it. It's not a leisure walk. In my case, I blocked one hour each night and worked on it more on weekends. I really enjoyed the lessons. I even go back to some lessons every now and then. It's not just something you buy and throw after finishing it. It will stick with you and help you in your CSS journey."
       },
       {
-        "type": "callout",
-        "tone": "teal",
-        "content": "The original article was written in English by Alexandre Lim on his personal Notion. The verbatim version — with zero AI rewriting — is being prepared for publication on abbeal.com. In the meantime, read the full article directly on Alex's Notion."
-      },
-      {
-        "type": "link",
-        "href": "https://www.notion.so/alexandrelim/Abbeal-Blog-Articles-360de926718880b9863dc99893931d80",
-        "label": "Read the original on Alexandre Lim's Notion",
-        "external": true
+        "type": "p",
+        "content": "To know more about the program and do your own research, there's nothing better than his [landing page](https://css-for-js.dev/)."
       }
     ],
     "ja": [
