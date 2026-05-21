@@ -9167,56 +9167,537 @@
     ],
     "en": [
       {
-        "type": "callout",
-        "tone": "ink",
-        "content": "By Stéphane Robin — Senior Engineer at Abbeal, Americas Hub · Montréal. Specialised in regulated financial services, legacy modernisation, Java/Spring Boot security."
+        "type": "byline",
+        "name": "Stéphane Robin",
+        "role": "Senior Engineer at Abbeal, Americas Hub · Montreal. Specialized in regulated financial services, legacy modernization, and Java/Spring Boot security.",
+        "linkedinUrl": "https://www.linkedin.com/in/st%C3%A9phane-robin-dev-backend-java/",
+        "photo": "/insights/mythos-stephane/stephane-robin.jpg"
+      },
+      {
+        "type": "p",
+        "content": "Technical debt has never been a trivial subject. But with the arrival of Mythos, it has become an emergency."
+      },
+      {
+        "type": "p",
+        "content": "A few weeks ago, Anthropic’s announcement of the Claude Mythos Preview model sent a shockwave through the security teams of large organizations. Not only because the model is technically impressive — but because it has fundamentally changed the CVE risk calculation."
+      },
+      {
+        "type": "p",
+        "content": "On the ground, at one of our clients in the financial sector — a major player in the Montreal market — we experienced this shift in real time. Here is what we learned."
+      },
+      {
+        "type": "h2",
+        "content": "The Challenge: when “minor” vulnerabilities become critical."
+      },
+      {
+        "type": "h2",
+        "content": "What is Mythos, concretely?"
+      },
+      {
+        "type": "p",
+        "content": "Claude Mythos is a large-scale model developed by Anthropic, capable of identifying and exploiting security vulnerabilities autonomously, at an unprecedented scale and speed. Among its documented capabilities:"
+      },
+      {
+        "type": "p",
+        "content": "Autonomous zero-day discovery: the model identified flaws that had lain dormant for decades — including a 27-year-old bug in OpenBSD and a 16-year-old vulnerability in FFmpeg."
+      },
+      {
+        "type": "p",
+        "content": "Functional exploit generation: without significant human intervention, Mythos turns a CVE into an operational attack vector."
+      },
+      {
+        "type": "p",
+        "content": "Democratization of attack: with Mythos, an engineer with no security training can identify and exploit critical flaws in complex systems."
+      },
+      {
+        "type": "p",
+        "content": "Anthropic restricted access to the model through “Project Glasswing”, reserving it for a consortium of critical-infrastructure organizations to enable preventive patching. But the reality on the ground is unequivocal: the threat exists, it is documented, and the security teams of large organizations are fully aware of it."
+      },
+      {
+        "type": "h2",
+        "content": "What this changes for security teams"
+      },
+      {
+        "type": "p",
+        "content": "Before Mythos, CVE prioritization rested on an assessment of exploitation risk: a vulnerability rated CVSS 5.0, hard to exploit manually, could reasonably stay in the backlog for several months."
+      },
+      {
+        "type": "p",
+        "content": "With Mythos, that reasoning collapses."
+      },
+      {
+        "type": "p",
+        "content": "A model capable of automating discovery and exploitation at scale turns every CVE into a potential priority — including those that had been sitting in technical debt for years, deemed too complex to exploit to warrant immediate action."
+      },
+      {
+        "type": "h2",
+        "content": "The response on the ground: what is happening at our client"
+      },
+      {
+        "type": "h2",
+        "content": "A complete realignment of priorities"
+      },
+      {
+        "type": "p",
+        "content": "Our client’s security team launched a systematic review of all exposed APIs and components. The goal: identify every open CVE tied to components carrying technical debt and re-qualify them in light of the Mythos risk. The result was immediate: vulnerabilities classified as “low” or “to be handled in the next cycle” rose to the top of the backlog. Development teams received patch requests with a clear constraint — two weeks to ship to production."
+      },
+      {
+        "type": "h2",
+        "content": "The work underway"
+      },
+      {
+        "type": "p",
+        "content": "The main actions launched:"
+      },
+      {
+        "type": "p",
+        "content": "Spring Boot 2.x → 3.x (even 4.x) migration: a non-trivial move, involving adaptations to APIs, security configuration, and dependency compatibility."
+      },
+      {
+        "type": "p",
+        "content": "Targeted version upgrades: every library tied to an active CVE is updated to the most recent compatible “safe” version. Java 17 → 21 migration (minimum): applications still stuck on Java 17 are the priority. Java 25, though available, still raises compatibility issues on certain components whose release cycle is slower — its broader rollout is postponed."
+      },
+      {
+        "type": "h2",
+        "content": "An unavoidable schedule shift"
+      },
+      {
+        "type": "p",
+        "content": "These efforts do not add to the existing schedule — they shift it. A delay of at least two weeks is expected on the planned functional deliverables. It is a real cost, an accepted one, and above all a justified one."
+      },
+      {
+        "type": "h2",
+        "content": "What this situation reveals about managing technical debt"
+      },
+      {
+        "type": "h2",
+        "content": "Contained debt is no longer enough"
+      },
+      {
+        "type": "p",
+        "content": "Our client had technical debt that was managed, documented, and broadly under control. It was not ignored — it was prioritized within a context of reasonable risk. Mythos redefined that context."
+      },
+      {
+        "type": "p",
+        "content": "This case illustrates a broader reality: managing technical debt can no longer be assessed independently of how the threat landscape evolves. A CVE you agreed to defer yesterday can become your greatest exposure tomorrow, if exploitation tools advance."
+      },
+      {
+        "type": "h2",
+        "content": "Less rigorous organizations are in a far worse position"
+      },
+      {
+        "type": "p",
+        "content": "What we observe at our client — an organization that already had a culture of software quality — gives a sense of what less attentive structures are going through with their technical hygiene. The combination of undocumented debt, obsolete versions, and CVEs that were never addressed represents, in this new context, a systemic risk."
+      },
+      {
+        "type": "h2",
+        "content": "Why this topic matters to us at Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "At Abbeal, we work precisely on these challenges: software architecture, code quality, stack modernization, and supporting teams in managing their technical debt."
+      },
+      {
+        "type": "p",
+        "content": "What this experience confirms for us: technical debt is a business risk, not only a technical one. It is measured in exposure windows, not only in development velocity."
+      },
+      {
+        "type": "p",
+        "content": "Teams that take their stack seriously are better equipped to respond to this kind of crisis. A two-week security sprint is manageable when the foundations are sound."
+      },
+      {
+        "type": "p",
+        "content": "Stack-modernization expertise is more strategic than ever. Spring Boot 3.x, Java 21, dependency updates — these are not “nice to have” projects. They are prerequisites for resilience."
+      },
+      {
+        "type": "p",
+        "content": "If you work on these topics — whether as a client looking for a technical partner, or as an engineer looking to join a team that takes these challenges seriously — we would be glad to talk."
+      },
+      {
+        "type": "h2",
+        "content": "Next steps"
+      },
+      {
+        "type": "p",
+        "content": "A few concrete actions if you want to anticipate this kind of situation in your organization:"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "Audit your CVE backlog in light of AI-driven exploitation risk, not only human-driven.",
+          "Map your components carrying debt: Spring Boot and Java versions, critical libraries.",
+          "Set up a continuous version-upgrade pipeline to avoid the accumulations that create wide exposure windows.",
+          "Challenge your patch SLAs: two weeks to ship a security patch to production is now the minimum standard in mature organizations."
+        ]
+      },
+      {
+        "type": "p",
+        "content": "This article is based on a field experience report. Sensitive details have been generalized to respect our client’s confidentiality."
+      },
+      {
+        "type": "p",
+        "content": "Abbeal supports development teams in modernizing their stack, reducing technical debt, and establishing sustainable engineering practices."
       },
       {
         "type": "callout",
-        "tone": "teal",
-        "content": "The original article was published in French by Stéphane Robin on Medium. The verbatim version — with zero AI rewriting — is being prepared as the canonical version on abbeal.com. In the meantime, read the full article on Medium."
-      },
-      {
-        "type": "link",
-        "href": "https://medium.com/@electron.libre/quand-lia-red%C3%A9finit-la-cybers%C3%A9curit%C3%A9-comment-mythos-a-chang%C3%A9-nos-priorit%C3%A9s-en-production-e18ceb736c6b",
-        "label": "Read the original on Medium",
-        "external": true
+        "tone": "default",
+        "content": "Originally published in French. Translation assisted by AI for clarity. [Read the original →](/fr/insights/mythos-ia-cybersecurite-priorites-production-stephane-robin)"
       }
     ],
     "ja": [
       {
-        "type": "callout",
-        "tone": "ink",
-        "content": "ステファン・ロビン — Abbealシニアエンジニア、アメリカ拠点・モントリオール。規制金融サービス、レガシー近代化、Java/Spring Bootセキュリティを専門とする。"
+        "type": "byline",
+        "name": "Stéphane Robin",
+        "role": "Abbeal シニアエンジニア、アメリカ・ハブ／モントリオール。規制対象の金融サービス、レガシーのモダナイゼーション、Java/Spring Boot のセキュリティを専門とする。",
+        "linkedinUrl": "https://www.linkedin.com/in/st%C3%A9phane-robin-dev-backend-java/",
+        "photo": "/insights/mythos-stephane/stephane-robin.jpg"
+      },
+      {
+        "type": "p",
+        "content": "技術的負債は、これまで一度も軽い話題であったことはない。しかし Mythos の登場により、それは喫緊の課題となった。"
+      },
+      {
+        "type": "p",
+        "content": "数週間前、Anthropic による Claude Mythos Preview モデルの発表は、大規模組織のセキュリティチームに衝撃を与えた。モデルが技術的に印象的だからというだけではない。CVE のリスク計算を根本から変えてしまったからだ。"
+      },
+      {
+        "type": "p",
+        "content": "現場では、金融セクターのある顧客 — モントリオール市場の主要プレイヤー — のもとで、私たちはこの転換をリアルタイムで経験した。ここでは、そこから学んだことを共有する。"
+      },
+      {
+        "type": "h2",
+        "content": "課題：「軽微な」脆弱性が致命的になるとき"
+      },
+      {
+        "type": "h2",
+        "content": "Mythos とは、具体的に何か"
+      },
+      {
+        "type": "p",
+        "content": "Claude Mythos は Anthropic が開発した大規模モデルであり、セキュリティ脆弱性を自律的に、かつ前例のない規模とスピードで特定・悪用できる。文書化されている能力には、次のものがある。"
+      },
+      {
+        "type": "p",
+        "content": "ゼロデイの自律的発見：このモデルは、数十年にわたり眠っていた欠陥を特定した — その中には OpenBSD の27年前のバグや、FFmpeg の16年前の脆弱性が含まれる。"
+      },
+      {
+        "type": "p",
+        "content": "実用的なエクスプロイトの生成：人間による大きな介入なしに、Mythos は CVE を運用可能な攻撃ベクトルへと変える。"
+      },
+      {
+        "type": "p",
+        "content": "攻撃の民主化：セキュリティの専門教育を受けていないエンジニアでも、Mythos を使えば、複雑なシステムの致命的な欠陥を特定し悪用できてしまう。"
+      },
+      {
+        "type": "p",
+        "content": "Anthropic は「Project Glasswing」を通じてこのモデルへのアクセスを制限し、予防的なパッチ適用を可能にするため、重要インフラ組織のコンソーシアムに限定している。しかし現場の現実は明白だ。脅威は存在し、文書化されており、大規模組織のセキュリティチームはそれを十分に認識している。"
+      },
+      {
+        "type": "h2",
+        "content": "セキュリティチームにとって何が変わるのか"
+      },
+      {
+        "type": "p",
+        "content": "Mythos 以前、CVE の優先順位付けは悪用リスクの評価に基づいていた。CVSS 5.0 と評価され、手動では悪用が難しい脆弱性は、数か月のあいだバックログに留まっていても合理的だった。"
+      },
+      {
+        "type": "p",
+        "content": "Mythos によって、その論理は崩れ去る。"
+      },
+      {
+        "type": "p",
+        "content": "発見と悪用を大規模に自動化できるモデルは、あらゆる CVE を潜在的な優先事項へと変えてしまう — 悪用が複雑すぎて即時対応に値しないと判断され、何年も技術的負債の中で眠っていたものも含めて。"
+      },
+      {
+        "type": "h2",
+        "content": "現場の対応：顧客のもとで起きていること"
+      },
+      {
+        "type": "h2",
+        "content": "優先順位の全面的な再編成"
+      },
+      {
+        "type": "p",
+        "content": "顧客のセキュリティチームは、公開されているすべての API とコンポーネントの体系的なレビューに着手した。目的は、技術的負債を抱えるコンポーネントに紐づくすべての未対応 CVE を特定し、Mythos のリスクに照らして再評価することだ。結果はすぐに表れた。「低」あるいは「次のサイクルで対応」と分類されていた脆弱性が、バックログの先頭へと浮上した。開発チームは、明確な制約とともにパッチ対応の要請を受け取った — 本番投入まで二週間、というものだ。"
+      },
+      {
+        "type": "h2",
+        "content": "進行中の取り組み"
+      },
+      {
+        "type": "p",
+        "content": "着手された主な施策は次のとおりだ。"
+      },
+      {
+        "type": "p",
+        "content": "Spring Boot 2.x → 3.x（さらには 4.x）への移行：API、セキュリティ設定、依存関係の互換性の調整を伴う、簡単ではない移行。"
+      },
+      {
+        "type": "p",
+        "content": "対象を絞ったバージョンアップ：アクティブな CVE に紐づく各ライブラリは、互換性のある最新の「safe」バージョンへ更新される。Java 17 → 21 への移行（最低ライン）：いまだ Java 17 に留まっているアプリケーションが最優先となる。Java 25 は利用可能ではあるものの、リリースサイクルがより遅い一部のコンポーネントで依然として互換性の問題があり — その全面展開は先送りされている。"
+      },
+      {
+        "type": "h2",
+        "content": "避けられないスケジュールのずれ"
+      },
+      {
+        "type": "p",
+        "content": "これらの取り組みは既存のスケジュールに上乗せされるのではない — スケジュールそのものをずらす。予定されていた機能面の成果物には、少なくとも二週間の遅延が見込まれる。それは現実のコストであり、受け入れられたものであり、そして何より正当化されるコストだ。"
+      },
+      {
+        "type": "h2",
+        "content": "この状況が技術的負債の管理について明らかにすること"
+      },
+      {
+        "type": "h2",
+        "content": "封じ込められた負債では、もはや十分ではない"
+      },
+      {
+        "type": "p",
+        "content": "顧客は、管理され、文書化され、おおむね統制された技術的負債を抱えていた。それは無視されていたのではない — 合理的なリスクの文脈の中で優先順位づけされていた。Mythos はその文脈を再定義した。"
+      },
+      {
+        "type": "p",
+        "content": "このケースは、より広い現実を物語っている。技術的負債の管理は、もはや脅威環境の変化と切り離して評価することはできない。昨日あなたが先送りを受け入れた CVE は、悪用ツールが進化すれば、明日あなたの最大の露出点になり得る。"
+      },
+      {
+        "type": "h2",
+        "content": "厳格さに欠ける組織は、はるかに厳しい状況にある"
+      },
+      {
+        "type": "p",
+        "content": "すでにソフトウェア品質の文化を持っていた組織である顧客のもとで私たちが観察していることは、技術的な衛生にあまり注意を払ってこなかった組織が何を経験しているかを示している。文書化されていない負債、陳腐化したバージョン、一度も対処されてこなかった CVE の組み合わせは、この新しい文脈において、システミックなリスクとなる。"
+      },
+      {
+        "type": "h2",
+        "content": "なぜこのテーマが Abbeal にとって重要なのか"
+      },
+      {
+        "type": "p",
+        "content": "Abbeal では、まさにこうした課題に取り組んでいる。ソフトウェアアーキテクチャ、コード品質、スタックのモダナイゼーション、そしてチームによる技術的負債の管理の支援だ。"
+      },
+      {
+        "type": "p",
+        "content": "この経験が私たちに確信させること。技術的負債は事業上のリスクであり、技術的なリスクであるだけではない。それは露出ウィンドウで測られるものであり、開発のベロシティだけで測られるものではない。"
+      },
+      {
+        "type": "p",
+        "content": "自社のスタックに真剣に向き合うチームは、この種の危機によりよく備えられている。二週間のセキュリティスプリントは、土台が健全であれば対応可能だ。"
+      },
+      {
+        "type": "p",
+        "content": "スタックのモダナイゼーションの専門性は、かつてないほど戦略的になっている。Spring Boot 3.x、Java 21、依存関係の更新 — これらは「あれば良い」程度の取り組みではない。レジリエンスのための前提条件だ。"
+      },
+      {
+        "type": "p",
+        "content": "もしあなたがこうしたテーマに取り組んでいるなら — 技術パートナーを探している顧客として、あるいはこうした課題に真剣に向き合うチームへの参加を考えているエンジニアとして — 私たちは喜んでお話ししたい。"
+      },
+      {
+        "type": "h2",
+        "content": "次のステップ"
+      },
+      {
+        "type": "p",
+        "content": "自社の組織でこの種の状況に先んじて備えたいなら、いくつかの具体的なアクションがある。"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "自社の CVE バックログを、人間による悪用リスクだけでなく、AI による悪用リスクに照らして監査する。",
+          "負債を抱えるコンポーネントを可視化する：Spring Boot や Java のバージョン、重要なライブラリ。",
+          "広い露出ウィンドウを生む蓄積を避けるため、継続的なバージョンアップのパイプラインを整備する。",
+          "パッチの SLA を見直す：セキュリティパッチの本番投入まで二週間というのは、いまや成熟した組織における最低限の標準だ。"
+        ]
+      },
+      {
+        "type": "p",
+        "content": "この記事は現場での経験報告に基づいている。顧客の機密性を尊重するため、機微な詳細は一般化されている。"
+      },
+      {
+        "type": "p",
+        "content": "Abbeal は、開発チームによるスタックのモダナイゼーション、技術的負債の削減、そして持続可能なエンジニアリング実践の確立を支援している。"
       },
       {
         "type": "callout",
-        "tone": "teal",
-        "content": "オリジナル記事は、ステファン・ロビンがMediumでフランス語で公開。AI書き換えなしの逐語版が、正規版としてabbeal.comで公開準備中。それまでの間、Mediumで全文をお読みください。"
-      },
-      {
-        "type": "link",
-        "href": "https://medium.com/@electron.libre/quand-lia-red%C3%A9finit-la-cybers%C3%A9curit%C3%A9-comment-mythos-a-chang%C3%A9-nos-priorit%C3%A9s-en-production-e18ceb736c6b",
-        "label": "Read the original on Medium",
-        "external": true
+        "tone": "default",
+        "content": "Originally published in French. Translation assisted by AI for clarity. [Read the original →](/fr/insights/mythos-ia-cybersecurite-priorites-production-stephane-robin)"
       }
     ],
     "fr-ca": [
       {
-        "type": "callout",
-        "tone": "ink",
-        "content": "Par Stéphane Robin — Senior Engineer chez Abbeal, Pôle Amériques · Montréal. Spécialisé services financiers réglementés, modernisation legacy, sécurité Java/Spring Boot."
+        "type": "byline",
+        "name": "Stéphane Robin",
+        "role": "Senior Engineer chez Abbeal, Pôle Amériques · Montréal. Spécialisé services financiers réglementés, modernisation legacy, sécurité Java/Spring Boot.",
+        "linkedinUrl": "https://www.linkedin.com/in/st%C3%A9phane-robin-dev-backend-java/",
+        "photo": "/insights/mythos-stephane/stephane-robin.jpg"
       },
       {
-        "type": "callout",
-        "tone": "teal",
-        "content": "L'article original a été publié en français par Stéphane Robin sur Medium. La version intégrale — sans aucune reformulation IA — est en cours de mise en ligne sur abbeal.com en tant que version canonique. En attendant, lis l'article complet sur Medium."
+        "type": "p",
+        "content": "La dette technique n’a jamais été un sujet anodin. Mais avec l’arrivée de Mythos, elle est devenue une urgence."
       },
       {
-        "type": "link",
-        "href": "https://medium.com/@electron.libre/quand-lia-red%C3%A9finit-la-cybers%C3%A9curit%C3%A9-comment-mythos-a-chang%C3%A9-nos-priorit%C3%A9s-en-production-e18ceb736c6b",
-        "label": "Read the original on Medium",
-        "external": true
+        "type": "p",
+        "content": "Il y a quelques semaines, l’annonce du modèle Claude Mythos Preview d’Anthropic a provoqué une onde de choc dans les équipes de sécurité des grandes organisations. Pas uniquement parce que le modèle est techniquement impressionnant — mais parce qu’il a fondamentalement changé le calcul du risque CVE."
+      },
+      {
+        "type": "p",
+        "content": "Sur le terrain, chez un de nos clients dans le secteur financier, acteur majeur de la place de Montréal, nous avons vécu ce basculement en temps réel. Voici ce que nous avons appris."
+      },
+      {
+        "type": "h2",
+        "content": "Le Défi : quand des vulnérabilités “mineures” deviennent critiques."
+      },
+      {
+        "type": "h2",
+        "content": "Qu’est-ce que Mythos, concrètement ?"
+      },
+      {
+        "type": "p",
+        "content": "Claude Mythos est un modèle de grande envergure développé par Anthropic, capable d’identifier et d’exploiter des vulnérabilités de sécurité de manière autonome, à une échelle et une vitesse inédites. Parmi ses capacités documentées :"
+      },
+      {
+        "type": "p",
+        "content": "Découverte autonome de zero-days : le modèle a identifié des failles dormantes depuis des décennies — dont un bug vieux de 27 ans dans OpenBSD et une vulnérabilité de 16 ans dans FFmpeg."
+      },
+      {
+        "type": "p",
+        "content": "Génération d’exploits fonctionnels : sans intervention humaine significative, Mythos transforme une CVE en vecteur d’attaque opérationnel."
+      },
+      {
+        "type": "p",
+        "content": "Démocratisation de l’attaque : un ingénieur sans formation en sécurité peut, avec Mythos, identifier et exploiter des failles critiques dans des systèmes complexes."
+      },
+      {
+        "type": "p",
+        "content": "Anthropic a restreint l’accès au modèle via le “Projet Glasswing”, le réservant à un consortium d’organisations d’ infrastructure critique pour permettre des correctifs préventifs. Mais la réalité du terrain est sans appel : la menace existe, elle est documentée, et les équipes sécurité des grandes organisations en ont pleinement conscience."
+      },
+      {
+        "type": "h2",
+        "content": "Ce que ça change pour les équipes sécurité"
+      },
+      {
+        "type": "p",
+        "content": "Avant Mythos, le classement des CVE reposait sur une évaluation du risque d’exploitation : une vulnérabilité cotée CVSS 5.0, difficile à exploiter manuellement, pouvait raisonnablement rester dans le backlog plusieurs mois."
+      },
+      {
+        "type": "p",
+        "content": "Avec Mythos, ce raisonnement s’effondre."
+      },
+      {
+        "type": "p",
+        "content": "Un modèle capable d’automatiser la découverte et l’exploitation à grande échelle transforme toute CVE en priorité potentielle — y compris celles qui dormaient dans la dette technique depuis des années, jugées trop complexes à exploiter pour mériter une action immédiate."
+      },
+      {
+        "type": "h2",
+        "content": "La réponse sur le terrain : ce qui se passe chez notre client"
+      },
+      {
+        "type": "h2",
+        "content": "Un réalignement total des priorités"
+      },
+      {
+        "type": "p",
+        "content": "L’équipe sécurité de notre client a déclenché une revue systématique de l’ensemble des API et composants exposés. L’objectif : identifier toutes les CVE ouvertes liées à des composants en dette technique et les requalifier à l’aune du risque Mythos. Le résultat a été immédiat : des vulnérabilités classées “faibles” ou “à traiter dans le prochain cycle” sont remontées en tête de backlog. Les équipes de développement ont reçu des demandes de correctifs avec une contrainte claire — deux semaines pour passer en production."
+      },
+      {
+        "type": "h2",
+        "content": "Les chantiers en cours"
+      },
+      {
+        "type": "p",
+        "content": "Les principales actions engagées :"
+      },
+      {
+        "type": "p",
+        "content": "Migration Spring Boot 2.x → 3.x (voire 4.x) : un passage non trivial, qui implique des adaptations d’API, de configuration de sécurité et de compatibilité des dépendances."
+      },
+      {
+        "type": "p",
+        "content": "Montées de version ciblées : chaque bibliothèque associée à une CVE active fait l’objet d’une mise à jour vers la version “safe” la plus récente compatible. Migration Java 17 → 21 (minimum) : les applications encore bloquées sur Java 17 sont concernées en priorité. Java 25, bien que disponible, pose encore des problèmes de compatibilité sur certains composants dont le cycle de release est plus lent — sa généralisation est reportée."
+      },
+      {
+        "type": "h2",
+        "content": "Un shift de planning inévitable"
+      },
+      {
+        "type": "p",
+        "content": "Ces chantiers ne s’ajoutent pas au planning existant — ils le déplacent. Un décalage d’au moins deux semaines est attendu sur les livrables fonctionnels prévus. C’est un coût réel, assumé, et surtout justifié."
+      },
+      {
+        "type": "h2",
+        "content": "Ce que cette situation révèle sur la gestion de la dette technique"
+      },
+      {
+        "type": "h2",
+        "content": "La dette contenue n’est plus suffisante"
+      },
+      {
+        "type": "p",
+        "content": "Notre client avait une dette technique gérée, documentée, et globalement maîtrisée. Elle n’était pas ignorée — elle était priorisée dans un contexte de risque raisonnable. Mythos a redéfini ce contexte."
+      },
+      {
+        "type": "p",
+        "content": "Ce cas illustre une réalité plus large : la gestion de la dette technique ne peut plus être évaluée indépendamment de l’évolution du paysage des menaces. Une CVE que vous avez accepté de reporter hier peut devenir votre plus grande exposition demain, si les outils d’exploitation évoluent."
+      },
+      {
+        "type": "h2",
+        "content": "Les organisations moins rigoureuses sont en bien plus mauvaise posture"
+      },
+      {
+        "type": "p",
+        "content": "Ce que nous observons chez notre client — une organisation qui avait déjà une culture de la qualité logicielle — donne une idée de ce que traversent des structures moins attentives à leur hygiène technique. La combinaison de dette non documentée, de versions obsolètes et de CVE jamais traitées représente, dans ce nouveau contexte, un risque systémique."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi ce sujet nous importe chez Abbeal ?"
+      },
+      {
+        "type": "p",
+        "content": "Chez Abbeal, nous intervenons précisément sur ces enjeux : architecture logicielle, qualité de code, modernisation de stack et accompagnement des équipes dans la gestion de leur dette technique."
+      },
+      {
+        "type": "p",
+        "content": "Ce que cette expérience nous confirme : La dette technique est un risque métier, pas seulement un risque technique. Elle se mesure en fenêtres d’exposition, pas uniquement en vélocité de développement."
+      },
+      {
+        "type": "p",
+        "content": "Les équipes qui traitent sérieusement leur stack sont mieux équipées pour répondre à ce type de crise. Deux semaines de sprint sécurité, c’est gérable quand les fondations sont saines."
+      },
+      {
+        "type": "p",
+        "content": "L’expertise en modernisation de stack est plus stratégique que jamais. Spring Boot 3.x, Java 21, mise à jour de dépendances — ce ne sont pas des chantiers “nice to have”. Ce sont des prérequis à la résilience."
+      },
+      {
+        "type": "p",
+        "content": "Si vous travaillez sur ces sujets — en tant que client à la recherche d’un partenaire technique, ou en tant qu’ingénieur cherchant à rejoindre une équipe qui traite ces enjeux sérieusement — nous serions heureux d’en discuter."
+      },
+      {
+        "type": "h2",
+        "content": "Prochaines étapes"
+      },
+      {
+        "type": "p",
+        "content": "Quelques actions concrètes si vous voulez anticiper ce type de situation dans votre organisation :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Auditez votre CVE backlog à l’aune du risque d’exploitation par IA, pas seulement par humain.",
+          "Cartographiez vos composants en dette : versions de Spring Boot, Java, bibliothèques critiques.",
+          "Mettez en place un pipeline de montée de version continue pour éviter les accumulations qui créent des fenêtres d’exposition larges.",
+          "Challengez vos SLA de correctifs : deux semaines de délai de mise en prod pour un patch de sécurité, c’est désormais le standard minimum dans les organisations matures."
+        ],
+        "ordered": true
+      },
+      {
+        "type": "p",
+        "content": "Cet article est basé sur un retour d’expérience terrain. Les détails sensibles ont été généralisés pour respecter la confidentialité de notre client."
+      },
+      {
+        "type": "p",
+        "content": "Abbeal accompagne les équipes de développement dans la modernisation de leur stack, la réduction de la dette technique et la mise en place de pratiques d’ingénierie durables."
       }
     ]
   }
