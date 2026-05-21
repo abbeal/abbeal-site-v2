@@ -25,8 +25,16 @@ export type ArticleBlock =
   /** Byline auteur — affichée en tête de body pour les articles guest
    *  (Alex, Stéphane, futurs auteurs externes). Rendu en typo propre sans
    *  encart, avec lien LinkedIn cliquable + icône. `role` = titre + lieu +
-   *  pitch court. Réutilisable tel quel pour tout nouvel auteur guest. */
-  | { type: "byline"; name: string; role: string; linkedinUrl?: string }
+   *  pitch court. `photo` = chemin absolu sous /public vers le portrait de
+   *  l'auteur (optionnel — si absent, accent bordure teal à la place).
+   *  Réutilisable tel quel pour tout nouvel auteur guest. */
+  | {
+      type: "byline";
+      name: string;
+      role: string;
+      linkedinUrl?: string;
+      photo?: string;
+    }
   | { type: "list"; items: string[]; ordered?: boolean }
   | { type: "quote"; content: string; author?: string }
   | { type: "code"; lang?: string; content: string }

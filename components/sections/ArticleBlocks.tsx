@@ -97,34 +97,53 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
       return (
         <motion.div
           {...fadeIn}
-          className="not-prose -mt-1 mb-2 border-l-2 border-[var(--color-brand-teal)] pl-4"
+          className="not-prose -mt-1 mb-2 flex items-start gap-4"
         >
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span className="text-[15px] font-semibold text-[var(--color-ink)]">
-              {block.name}
-            </span>
-            {block.linkedinUrl && (
-              <a
-                href={block.linkedinUrl}
-                target="_blank"
-                rel="noopener"
-                className="inline-flex items-center gap-1.5 text-[13px] text-[var(--color-brand-teal)] hover:underline"
-              >
-                <svg
-                  aria-hidden
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-[15px] w-[15px]"
+          {block.photo && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={block.photo}
+              alt={block.name}
+              className="h-14 w-14 rounded-full object-cover border border-[var(--color-border)] shrink-0"
+              loading="lazy"
+            />
+          )}
+          {/* Sans photo : accent bordure teal à gauche (ex : Alex). Avec
+              photo : l'avatar fait l'ancrage visuel, pas de bordure. */}
+          <div
+            className={
+              block.photo
+                ? "min-w-0"
+                : "border-l-2 border-[var(--color-brand-teal)] pl-4"
+            }
+          >
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+              <span className="text-[15px] font-semibold text-[var(--color-ink)]">
+                {block.name}
+              </span>
+              {block.linkedinUrl && (
+                <a
+                  href={block.linkedinUrl}
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex items-center gap-1.5 text-[13px] text-[var(--color-brand-teal)] hover:underline"
                 >
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68 1.69 1.69 0 0 0-1.68-1.69 1.69 1.69 0 0 0-1.69 1.69 1.69 1.69 0 0 0 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z" />
-                </svg>
-                LinkedIn
-              </a>
-            )}
+                  <svg
+                    aria-hidden
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-[15px] w-[15px]"
+                  >
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68 1.69 1.69 0 0 0-1.68-1.69 1.69 1.69 0 0 0-1.69 1.69 1.69 1.69 0 0 0 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z" />
+                  </svg>
+                  LinkedIn
+                </a>
+              )}
+            </div>
+            <p className="mt-1 text-[14px] leading-relaxed text-[var(--color-ink-soft)]">
+              {block.role}
+            </p>
           </div>
-          <p className="mt-1 text-[14px] leading-relaxed text-[var(--color-ink-soft)]">
-            {block.role}
-          </p>
         </motion.div>
       );
 

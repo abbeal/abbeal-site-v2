@@ -8821,9 +8821,10 @@
   "mythos-ia-cybersecurite-priorites-production-stephane-robin": {
     "fr": [
       {
-        "type": "callout",
-        "tone": "ink",
-        "content": "Par Stéphane Robin — Senior Engineer chez Abbeal, Pôle Amériques · Montréal. Spécialisé services financiers réglementés, modernisation legacy, sécurité Java/Spring Boot."
+        "type": "byline",
+        "name": "Stéphane Robin",
+        "role": "Senior Engineer chez Abbeal, Pôle Amériques · Montréal. Spécialisé services financiers réglementés, modernisation legacy, sécurité Java/Spring Boot.",
+        "linkedinUrl": "https://www.linkedin.com/in/st%C3%A9phane-robin-dev-backend-java/"
       },
       {
         "type": "p",
