@@ -816,19 +816,19 @@ export const articles: Article[] = [
     updatedAt: "2026-05-19",
     title: {
       fr: "CSS for JavaScript Developers — Retour honnête après 4 ans en production.",
-      en: "CSS for JavaScript Developers — Honest Feedback After 4 Years in Production.",
+      en: "CSS for JavaScript Developers: Honest Feedback After 4+ Years in Production",
       ja: "CSS for JavaScript Developers — 本番4年後の率直なフィードバック。",
       "fr-ca": "CSS for JavaScript Developers — Retour honnête après 4 ans en production.",
     },
     excerpt: {
       fr: "Alexandre Lim partage 4 ans de leçons CSS en production après avoir suivi le cours « CSS for JS Developers » de Josh Comeau. Retour honnête, orienté code.",
-      en: "Senior engineer Alexandre Lim shares 4 years of production CSS lessons after taking Josh Comeau's 'CSS for JS Developers' course. Honest, code-first feedback.",
+      en: "Josh Comeau's CSS for JS Developers course reviewed by senior engineer Alexandre Lim, with 8+ years of experience and 4+ years applying knowledge from the course in production for clients. An honest, practical take.",
       ja: "シニアエンジニアのアレクサンドル・リムが、Josh Comeauの「CSS for JS Developers」を受講後、本番環境での4年間のCSSの教訓を共有。率直で、コードファーストのフィードバック。",
       "fr-ca": "Alexandre Lim partage 4 ans de leçons CSS en production après avoir suivi le cours « CSS for JS Developers » de Josh Comeau. Retour honnête, orienté code.",
     },
     metaDescription: {
       fr: "Senior engineer Alexandre Lim partage 4 ans de leçons CSS en production après le cours « CSS for JS Developers » de Josh Comeau. Retour honnête, orienté code.",
-      en: "Senior engineer Alexandre Lim shares 4 years of production CSS lessons after taking Josh Comeau's 'CSS for JS Developers' course. Honest, code-first feedback.",
+      en: "Senior engineer Alexandre Lim shares 4+ years of production CSS lessons after taking Josh Comeau's 'CSS for JS Developers' course. Honest, code-first feedback.",
       ja: "シニアエンジニアのアレクサンドル・リムが、Josh Comeauの「CSS for JS Developers」受講後、本番4年間のCSSの教訓を共有。率直で、コードファーストのフィードバック。",
       "fr-ca": "Senior engineer Alexandre Lim partage 4 ans de leçons CSS en production après le cours « CSS for JS Developers » de Josh Comeau. Retour honnête, orienté code.",
     },
