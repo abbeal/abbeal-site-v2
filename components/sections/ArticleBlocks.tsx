@@ -194,7 +194,7 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
           {...fadeIn}
           className={`my-8 px-6 py-5 ${tones[tone]} text-[15px] leading-relaxed`}
         >
-          <p>{block.content}</p>
+          <p>{renderInline(block.content)}</p>
         </motion.aside>
       );
     }

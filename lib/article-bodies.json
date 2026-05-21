@@ -8695,20 +8695,77 @@
   "css-for-javascript-developers-josh-comeau-retour-alex-lim": {
     "fr": [
       {
-        "type": "callout",
-        "tone": "ink",
-        "content": "Par Alexandre Lim — Senior Software Engineer chez Abbeal, Hub Asie · Tokyo. 3 ans au Japon, spécialisé Next.js / React. LinkedIn : linkedin.com/in/alexandre-lim"
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "Senior Software Engineer chez Abbeal, Hub Asie · Tokyo. 3 ans au Japon, spécialisé Next.js / React.",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
+      },
+      {
+        "type": "h2",
+        "content": "Qu’est-ce que CSS for JavaScript Developers ?"
+      },
+      {
+        "type": "p",
+        "content": "CSS for JavaScript Developers, comme son nom l’indique, est un cours en ligne sur le CSS spécifiquement destiné aux développeurs JS. C’est un achat unique, avec un accès illimité aux leçons."
+      },
+      {
+        "type": "p",
+        "content": "La promesse est simple : le CSS peut être amusant."
+      },
+      {
+        "type": "p",
+        "content": "Le cours peut compter jusqu’à 10 modules et du contenu bonus exclusif selon la formule choisie. Le contenu mêle articles, vidéos et quelques exercices. Chaque module se termine par un workshop, une excellente façon de mettre en pratique ce qu’on a appris, et même d’aller plus loin."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi j’ai suivi ce cours ?"
+      },
+      {
+        "type": "p",
+        "content": "J’ai fait du back-end et du front-end selon les besoins de mes clients, avant d’accrocher au front-end avec des bibliothèques comme React. Je n’ai jamais pris le temps d’apprendre vraiment le CSS et de me bâtir des fondations solides. J’utilisais le CSS, sans vraiment le comprendre. Une partie du code CSS que j’écrivais tenait de la magie."
+      },
+      {
+        "type": "p",
+        "content": "Puis j’ai lu plusieurs articles de grande qualité de Josh sur le CSS. Quand il a annoncé son cours, j’étais vraiment enthousiaste. Son message marketing était habilement construit. J’avais l’impression qu’il était taillé pour mes besoins. Ayant suivi le Marketing Seminar de Seth Godin, je mesurais la qualité de son marketing. La méthode pédagogique de Josh fonctionnait bien pour moi, alors j’ai décidé de faire confiance à sa promesse. J’ai acheté l’accès anticipé à son cours."
+      },
+      {
+        "type": "h2",
+        "content": "Josh a-t-il tenu sa promesse ?"
+      },
+      {
+        "type": "p",
+        "content": "Un grand OUI ! C’était vraiment le cours dont j’avais besoin. Les modules sont bien définis et jamais écrasants. Le contenu est de très haute qualité, et il y a énormément à apprendre, avec une pratique ludique."
+      },
+      {
+        "type": "p",
+        "content": "Le CSS va commencer à prendre du sens, et tu prendras plaisir à résoudre des problèmes de CSS. C’est ce qui m’est arrivé, et ça m’a beaucoup aidé quand j’ai commencé à travailler pour un nouveau client. J’ai débuté par des tickets de maintenance centrés surtout sur le CSS. Mais avec ma nouvelle compréhension du CSS, je pouvais détecter et résoudre le problème de fond. Je pouvais éviter le simple correctif temporaire, qui mène souvent à plus de dette technique sur le long terme. Un bon exemple : gérer le z-index avant qu’il ne devienne un cauchemar."
+      },
+      {
+        "type": "p",
+        "content": "J’ai aussi pu transmettre ce que j’avais appris, et tu serais surpris de voir à quel point les développeurs connaissent peu le CSS en profondeur."
+      },
+      {
+        "type": "p",
+        "content": "Aujourd’hui, dès que je fais face à un défi, je reviens aux leçons de Josh, parce qu’il enseigne les fondamentaux qui permettent de résoudre des problèmes plus complexes."
+      },
+      {
+        "type": "p",
+        "content": "L’investissement en argent et en temps en valait la peine. Quand on parle d’apprentissage du CSS, je recommande toujours le cours de Josh. Mais il faudra y consacrer du temps. Ce n’est pas une promenade de santé. Dans mon cas, je bloquais une heure chaque soir, et j’y travaillais davantage le week-end. J’ai vraiment apprécié les leçons. Il m’arrive encore d’y revenir de temps en temps. Ce n’est pas quelque chose qu’on achète et qu’on jette une fois terminé. Ça reste avec toi et t’accompagne dans ton parcours CSS."
+      },
+      {
+        "type": "p",
+        "content": "Pour en savoir plus sur le programme et faire tes propres recherches, rien de mieux que sa [landing page](https://css-for-js.dev/)."
+      },
+      {
+        "type": "image",
+        "src": "/insights/css-josh-comeau/css-for-js-certificate.png",
+        "alt": "Cours terminé — CSS for JavaScript Developers par Josh Comeau",
+        "caption": "Cours terminé — CSS for JavaScript Developers par Josh Comeau"
       },
       {
         "type": "callout",
-        "tone": "teal",
-        "content": "L'article original a été rédigé en anglais par Alexandre Lim sur sa Notion personnelle. La version verbatim — sans aucune reformulation IA — est en cours de mise en ligne sur abbeal.com. En attendant, lis l'article complet directement sur la Notion d'Alex."
-      },
-      {
-        "type": "link",
-        "href": "https://www.notion.so/alexandrelim/Abbeal-Blog-Articles-360de926718880b9863dc99893931d80",
-        "label": "Read the original on Alexandre Lim's Notion",
-        "external": true
+        "tone": "default",
+        "content": "Originally published in English. Translation assisted by AI for clarity. [Read the original →](/en/insights/css-for-javascript-developers-josh-comeau-retour-alex-lim)"
       }
     ],
     "en": [
@@ -8783,38 +8840,152 @@
     ],
     "ja": [
       {
-        "type": "callout",
-        "tone": "ink",
-        "content": "アレクサンドル・リム — Abbealシニアソフトウェアエンジニア、アジア拠点・東京。日本3年、Next.js / Reactを専門とする。LinkedIn：linkedin.com/in/alexandre-lim"
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "Abbeal シニアソフトウェアエンジニア、アジアハブ・東京。日本在住3年、Next.js / React を専門とする。",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
+      },
+      {
+        "type": "h2",
+        "content": "CSS for JavaScript Developers とは？"
+      },
+      {
+        "type": "p",
+        "content": "CSS for JavaScript Developers は、その名のとおり、JS 開発者に向けて CSS を扱うオンラインコースです。一度購入すれば、レッスンに無制限でアクセスできます。"
+      },
+      {
+        "type": "p",
+        "content": "約束はシンプルです。CSS は楽しくなり得る、ということ。"
+      },
+      {
+        "type": "p",
+        "content": "選んだプランによって、最大10個までのモジュールと限定ボーナスコンテンツが用意されています。コンテンツは記事・動画・いくつかの演習の組み合わせです。各モジュールの最後にはワークショップがあり、学んだことを実践し、さらにその先へ進むための優れた機会になります。"
+      },
+      {
+        "type": "h2",
+        "content": "なぜこのコースを受講したのか"
+      },
+      {
+        "type": "p",
+        "content": "私はクライアントのニーズに応じてバックエンドとフロントエンドの両方を手がけ、その後 React のようなライブラリでフロントエンドにのめり込みました。CSS をきちんと学び、しっかりとした基礎を築く時間を取ったことは一度もありませんでした。CSS を使ってはいても、本当に理解してはいなかったのです。自分が書く CSS コードの一部は、まるで魔法のように感じられました。"
+      },
+      {
+        "type": "p",
+        "content": "その後、CSS に関する Josh の質の高い記事をいくつか読みました。彼がコースを発表したとき、私は本当にわくわくしました。彼のマーケティングメッセージは巧みに練られていました。まるで自分のニーズに合わせて作られたように感じました。Seth Godin の Marketing Seminar を受けていたので、彼のマーケティングの質の高さは分かっていました。Josh の教え方は私に合っていたので、彼の約束を信じることにしました。私はコースの先行アクセスを購入しました。"
+      },
+      {
+        "type": "h2",
+        "content": "Josh は約束を果たしたか？"
+      },
+      {
+        "type": "p",
+        "content": "大きな YES です！まさに私に必要だったコースでした。モジュールはよく定義されていて、消化しきれないほどではありません。コンテンツは最高品質で、楽しい演習とともに学べることが山ほどあります。"
+      },
+      {
+        "type": "p",
+        "content": "CSS が腑に落ちはじめ、CSS の問題を解くことが楽しくなります。私の場合がまさにそうで、新しいクライアントの仕事を始めたときに大いに役立ちました。最初は主に CSS に関わる保守チケットから取り組みました。しかし新たに身につけた CSS の理解によって、根本的な問題を見つけて解決できるようになりました。長期的にさらなる技術的負債を生みがちな、その場しのぎの修正を避けられたのです。良い例が、悪夢に育つ前に z-index に対処することです。"
+      },
+      {
+        "type": "p",
+        "content": "学んだことを人に教えることもできました。開発者が CSS を深いレベルでいかに知らないか、きっと驚くはずです。"
+      },
+      {
+        "type": "p",
+        "content": "今では、課題にぶつかるたびに Josh のレッスンに立ち返ります。より複雑な問題を解くための基礎を、彼が教えてくれるからです。"
+      },
+      {
+        "type": "p",
+        "content": "お金と時間の投資には、その価値がありました。CSS の学習について話すときは、いつも Josh のコースをすすめています。ただし、そのための時間を確保する必要があります。気軽な散歩ではありません。私の場合は毎晩1時間を確保し、週末はさらに多くの時間をあてました。レッスンは本当に楽しめました。今でも時折、いくつかのレッスンに戻ることがあります。買って、終えたら捨てるようなものではありません。ずっと自分に残り、CSS の歩みを支えてくれます。"
+      },
+      {
+        "type": "p",
+        "content": "プログラムについてもっと知り、自分で調べてみたいなら、彼の [ランディングページ](https://css-for-js.dev/) に勝るものはありません。"
+      },
+      {
+        "type": "image",
+        "src": "/insights/css-josh-comeau/css-for-js-certificate.png",
+        "alt": "受講修了 — CSS for JavaScript Developers by Josh Comeau",
+        "caption": "受講修了 — CSS for JavaScript Developers by Josh Comeau"
       },
       {
         "type": "callout",
-        "tone": "teal",
-        "content": "オリジナル記事は、アレクサンドル・リムが個人のNotionで英語で執筆。AI書き換えなしの逐語版がabbeal.comで公開準備中。それまでの間、Alexの Notionで全文をお読みください。"
-      },
-      {
-        "type": "link",
-        "href": "https://www.notion.so/alexandrelim/Abbeal-Blog-Articles-360de926718880b9863dc99893931d80",
-        "label": "Read the original on Alexandre Lim's Notion",
-        "external": true
+        "tone": "default",
+        "content": "Originally published in English. Translation assisted by AI for clarity. [Read the original →](/en/insights/css-for-javascript-developers-josh-comeau-retour-alex-lim)"
       }
     ],
     "fr-ca": [
       {
-        "type": "callout",
-        "tone": "ink",
-        "content": "Par Alexandre Lim — Senior Software Engineer chez Abbeal, Pôle Asie · Tokyo. 3 ans au Japon, spécialisé Next.js / React. LinkedIn : linkedin.com/in/alexandre-lim"
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "Senior Software Engineer chez Abbeal, Hub Asie · Tokyo. 3 ans au Japon, spécialisé Next.js / React.",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
+      },
+      {
+        "type": "h2",
+        "content": "Qu’est-ce que CSS for JavaScript Developers ?"
+      },
+      {
+        "type": "p",
+        "content": "CSS for JavaScript Developers, comme son nom l’indique, est un cours en ligne sur le CSS spécifiquement destiné aux développeurs JS. C’est un achat unique, avec un accès illimité aux leçons."
+      },
+      {
+        "type": "p",
+        "content": "La promesse est simple : le CSS peut être amusant."
+      },
+      {
+        "type": "p",
+        "content": "Le cours peut compter jusqu’à 10 modules et du contenu bonus exclusif selon la formule choisie. Le contenu mêle articles, vidéos et quelques exercices. Chaque module se termine par un workshop, une excellente façon de mettre en pratique ce qu’on a appris, et même d’aller plus loin."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi j’ai suivi ce cours ?"
+      },
+      {
+        "type": "p",
+        "content": "J’ai fait du back-end et du front-end selon les besoins de mes clients, avant d’accrocher au front-end avec des bibliothèques comme React. Je n’ai jamais pris le temps d’apprendre vraiment le CSS et de me bâtir des fondations solides. J’utilisais le CSS, sans vraiment le comprendre. Une partie du code CSS que j’écrivais tenait de la magie."
+      },
+      {
+        "type": "p",
+        "content": "Puis j’ai lu plusieurs articles de grande qualité de Josh sur le CSS. Quand il a annoncé son cours, j’étais vraiment enthousiaste. Son message marketing était habilement construit. J’avais l’impression qu’il était taillé pour mes besoins. Ayant suivi le Marketing Seminar de Seth Godin, je mesurais la qualité de son marketing. La méthode pédagogique de Josh fonctionnait bien pour moi, alors j’ai décidé de faire confiance à sa promesse. J’ai acheté l’accès anticipé à son cours."
+      },
+      {
+        "type": "h2",
+        "content": "Josh a-t-il tenu sa promesse ?"
+      },
+      {
+        "type": "p",
+        "content": "Un grand OUI ! C’était vraiment le cours dont j’avais besoin. Les modules sont bien définis et jamais écrasants. Le contenu est de très haute qualité, et il y a énormément à apprendre, avec une pratique ludique."
+      },
+      {
+        "type": "p",
+        "content": "Le CSS va commencer à prendre du sens, et tu prendras plaisir à résoudre des problèmes de CSS. C’est ce qui m’est arrivé, et ça m’a beaucoup aidé quand j’ai commencé à travailler pour un nouveau client. J’ai débuté par des tickets de maintenance centrés surtout sur le CSS. Mais avec ma nouvelle compréhension du CSS, je pouvais détecter et résoudre le problème de fond. Je pouvais éviter le simple correctif temporaire, qui mène souvent à plus de dette technique sur le long terme. Un bon exemple : gérer le z-index avant qu’il ne devienne un cauchemar."
+      },
+      {
+        "type": "p",
+        "content": "J’ai aussi pu transmettre ce que j’avais appris, et tu serais surpris de voir à quel point les développeurs connaissent peu le CSS en profondeur."
+      },
+      {
+        "type": "p",
+        "content": "Aujourd’hui, dès que je fais face à un défi, je reviens aux leçons de Josh, parce qu’il enseigne les fondamentaux qui permettent de résoudre des problèmes plus complexes."
+      },
+      {
+        "type": "p",
+        "content": "L’investissement en argent et en temps en valait la peine. Quand on parle d’apprentissage du CSS, je recommande toujours le cours de Josh. Mais il faudra y consacrer du temps. Ce n’est pas une promenade de santé. Dans mon cas, je bloquais une heure chaque soir, et j’y travaillais davantage le week-end. J’ai vraiment apprécié les leçons. Il m’arrive encore d’y revenir de temps en temps. Ce n’est pas quelque chose qu’on achète et qu’on jette une fois terminé. Ça reste avec toi et t’accompagne dans ton parcours CSS."
+      },
+      {
+        "type": "p",
+        "content": "Pour en savoir plus sur le programme et faire tes propres recherches, rien de mieux que sa [landing page](https://css-for-js.dev/)."
+      },
+      {
+        "type": "image",
+        "src": "/insights/css-josh-comeau/css-for-js-certificate.png",
+        "alt": "Cours terminé — CSS for JavaScript Developers par Josh Comeau",
+        "caption": "Cours terminé — CSS for JavaScript Developers par Josh Comeau"
       },
       {
         "type": "callout",
-        "tone": "teal",
-        "content": "L'article original a été rédigé en anglais par Alexandre Lim sur sa Notion personnelle. La version intégrale — sans aucune reformulation IA — est en cours de mise en ligne sur abbeal.com. En attendant, lis l'article complet directement sur la Notion d'Alex."
-      },
-      {
-        "type": "link",
-        "href": "https://www.notion.so/alexandrelim/Abbeal-Blog-Articles-360de926718880b9863dc99893931d80",
-        "label": "Read the original on Alexandre Lim's Notion",
-        "external": true
+        "tone": "default",
+        "content": "Originally published in English. Translation assisted by AI for clarity. [Read the original →](/en/insights/css-for-javascript-developers-josh-comeau-retour-alex-lim)"
       }
     ]
   },
@@ -8824,7 +8995,8 @@
         "type": "byline",
         "name": "Stéphane Robin",
         "role": "Senior Engineer chez Abbeal, Pôle Amériques · Montréal. Spécialisé services financiers réglementés, modernisation legacy, sécurité Java/Spring Boot.",
-        "linkedinUrl": "https://www.linkedin.com/in/st%C3%A9phane-robin-dev-backend-java/"
+        "linkedinUrl": "https://www.linkedin.com/in/st%C3%A9phane-robin-dev-backend-java/",
+        "photo": "/insights/mythos-stephane/stephane-robin.jpg"
       },
       {
         "type": "p",
@@ -8991,17 +9163,6 @@
       {
         "type": "p",
         "content": "Abbeal accompagne les équipes de développement dans la modernisation de leur stack, la réduction de la dette technique et la mise en place de pratiques d’ingénierie durables."
-      },
-      {
-        "type": "callout",
-        "tone": "teal",
-        "content": "L'article original a été publié en français par Stéphane Robin sur Medium. La version verbatim — sans aucune reformulation IA — est en cours de mise en ligne sur abbeal.com en tant que version canonique. En attendant, lis l'article complet sur Medium."
-      },
-      {
-        "type": "link",
-        "href": "https://medium.com/@electron.libre/quand-lia-red%C3%A9finit-la-cybers%C3%A9curit%C3%A9-comment-mythos-a-chang%C3%A9-nos-priorit%C3%A9s-en-production-e18ceb736c6b",
-        "label": "Read the original on Medium",
-        "external": true
       }
     ],
     "en": [
