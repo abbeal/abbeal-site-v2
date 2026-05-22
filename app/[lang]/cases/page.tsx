@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary } from "../dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { getAllCases } from "@/lib/cases";
 import { pick } from "@/lib/articles";
@@ -20,10 +20,13 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const dict = (await getDictionary(lang as Locale)) as Dict;
+  const title = `${dict.casesIndex.h1} · Abbeal Cases`;
+  const description = dict.casesIndex.subtitle;
   return {
-    title: `${dict.casesIndex.h1} · Abbeal Cases`,
-    description: dict.casesIndex.subtitle,
+    title,
+    description,
     alternates: pageAlternates(lang as Locale, "/cases"),
+    ...pageOpenGraph(lang as Locale, { title, description, path: "/cases" }),
   };
 }
 

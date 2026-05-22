@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "../dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 
 type Partner = { name: string; role: string; url: string };
@@ -26,10 +26,13 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const dict = (await getDictionary(lang as Locale)) as Dict;
+  const title = dict.partners.meta.title;
+  const description = dict.partners.meta.description;
   return {
-    title: dict.partners.meta.title,
-    description: dict.partners.meta.description,
+    title,
+    description,
     alternates: pageAlternates(lang as Locale, "/partners"),
+    ...pageOpenGraph(lang as Locale, { title, description, path: "/partners" }),
   };
 }
 

@@ -64,3 +64,60 @@ export function pageAlternates(
     },
   };
 }
+
+const OG_IMAGE = `${SITE}/brand/og-image.png`;
+
+/**
+ * SEO helper — génère `openGraph` + `twitter` avec un titre spécifique
+ * à la page.
+ *
+ * Pourquoi ce helper existe :
+ * Next.js REMPLACE le bloc `openGraph` entier quand une page le redéclare
+ * (pas de merge profond avec le layout). Une page qui veut seulement
+ * corriger son `og:title` ne peut donc pas faire `openGraph: { title }` —
+ * elle perdrait l'image OG, le siteName, etc. hérités du layout.
+ *
+ * Sans ce helper, les pages internes qui overrident `title` mais pas
+ * `openGraph` héritaient du `og:title` du layout (= tagline de la home),
+ * d'où un `og:title` faux sur careers, services, about… (audit SEO W21).
+ *
+ * Chaque page passe son `title`/`description` (les mêmes que les champs
+ * `title`/`description` de sa metadata) + son `path` (sans préfixe de
+ * locale, identique à celui passé à `pageAlternates`).
+ *
+ * Usage dans un `generateMetadata` de page :
+ *   return {
+ *     title,
+ *     description,
+ *     alternates: pageAlternates(locale, "/careers"),
+ *     ...pageOpenGraph(locale, { title, description, path: "/careers" }),
+ *   };
+ */
+export function pageOpenGraph(
+  locale: Locale | string,
+  opts: { title: string; description: string; path: string },
+): Pick<Metadata, "openGraph" | "twitter"> {
+  const cleanPath =
+    opts.path === "" || opts.path === "/"
+      ? ""
+      : opts.path.startsWith("/")
+        ? opts.path
+        : `/${opts.path}`;
+  return {
+    openGraph: {
+      title: opts.title,
+      description: opts.description,
+      url: `${SITE}/${locale}${cleanPath}`,
+      type: "website",
+      siteName: "Abbeal",
+      locale,
+      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Abbeal" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: opts.title,
+      description: opts.description,
+      images: [OG_IMAGE],
+    },
+  };
+}

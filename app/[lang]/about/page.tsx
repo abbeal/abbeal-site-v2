@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary } from "../dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { CountUp } from "@/components/ui/CountUp";
 
@@ -53,10 +53,13 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const dict = (await getDictionary(lang as Locale)) as Dict;
+  const title = dict.about.meta.title;
+  const description = dict.about.meta.description;
   return {
-    title: dict.about.meta.title,
-    description: dict.about.meta.description,
+    title,
+    description,
     alternates: pageAlternates(lang as Locale, "/about"),
+    ...pageOpenGraph(lang as Locale, { title, description, path: "/about" }),
   };
 }
 

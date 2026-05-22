@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "../dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 
 type Dict = {
@@ -26,11 +26,14 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const dict = (await getDictionary(lang as Locale)) as Dict;
+  const title = `${dict.legal.cgu.h1} · Abbeal`;
+  const description = dict.legal.cgu.metaDescription;
   return {
-    title: `${dict.legal.cgu.h1} · Abbeal`,
-    description: dict.legal.cgu.metaDescription,
+    title,
+    description,
     robots: { index: true },
     alternates: pageAlternates(lang as Locale, "/cgu"),
+    ...pageOpenGraph(lang as Locale, { title, description, path: "/cgu" }),
   };
 }
 

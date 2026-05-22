@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary } from "../dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { getAllArticles, pick } from "@/lib/articles";
 
@@ -18,10 +18,13 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const dict = (await getDictionary(lang as Locale)) as Dict;
+  const title = `${dict.insightsIndex.h1} · Abbeal Insights`;
+  const description = dict.insightsIndex.subtitle;
   return {
-    title: `${dict.insightsIndex.h1} · Abbeal Insights`,
-    description: dict.insightsIndex.subtitle,
+    title,
+    description,
     alternates: pageAlternates(lang as Locale, "/insights"),
+    ...pageOpenGraph(lang as Locale, { title, description, path: "/insights" }),
   };
 }
 

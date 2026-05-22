@@ -16,7 +16,7 @@ import { getCase } from "@/lib/cases";
 import { getArticle } from "@/lib/articles";
 import { pick } from "@/lib/articles";
 import { breadcrumbs } from "@/lib/breadcrumbs";
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 
 export async function generateStaticParams() {
   return locales.flatMap((lang) =>
@@ -33,10 +33,13 @@ export async function generateMetadata({
   if (!e) return { title: "Terme introuvable · Abbeal Glossaire" };
   const locale = lang as Locale;
   const loc = localizeGlossaryEntry(e, locale);
+  const title = `${loc.term} · Glossaire Abbeal`;
+  const description = loc.short;
   return {
-    title: `${loc.term} · Glossaire Abbeal`,
-    description: loc.short,
+    title,
+    description,
     alternates: pageAlternates(locale, `/glossaire/${slug}`),
+    ...pageOpenGraph(locale, { title, description, path: `/glossaire/${slug}` }),
   };
 }
 

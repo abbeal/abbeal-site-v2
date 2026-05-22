@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { hasLocale, type Locale } from "@/lib/i18n";
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { TECH_RADAR_EDITIONS, getCurrentEdition } from "@/lib/tech-radar";
 
@@ -53,10 +53,13 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const t = T[lang as Locale];
+  const title = `${t.h1} · Abbeal`;
+  const description = t.intro;
   return {
-    title: `${t.h1} · Abbeal`,
-    description: t.intro,
+    title,
+    description,
     alternates: pageAlternates(lang as Locale, "/insights/tech-radar"),
+    ...pageOpenGraph(lang as Locale, { title, description, path: "/insights/tech-radar" }),
   };
 }
 

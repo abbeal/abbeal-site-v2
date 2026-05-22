@@ -5,7 +5,7 @@ import { hasLocale, locales, type Locale } from "@/lib/i18n";
 import { services, getService } from "@/lib/services";
 import { pick } from "@/lib/articles";
 import { getCase } from "@/lib/cases";
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 
 export async function generateStaticParams() {
@@ -22,10 +22,13 @@ export async function generateMetadata({
   const s = getService(slug);
   if (!s) return { title: "Service introuvable · Abbeal" };
   const locale = lang as Locale;
+  const title = `${pick(s.title, locale)} · Abbeal`;
+  const description = pick(s.hookline, locale);
   return {
-    title: `${pick(s.title, locale)} · Abbeal`,
-    description: pick(s.hookline, locale),
+    title,
+    description,
     alternates: pageAlternates(locale, `/services/${slug}`),
+    ...pageOpenGraph(locale, { title, description, path: `/services/${slug}` }),
   };
 }
 

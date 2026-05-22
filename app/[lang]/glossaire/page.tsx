@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { hasLocale, type Locale } from "@/lib/i18n";
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import {
   glossary,
@@ -57,10 +57,13 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const m = META[lang as Locale];
+  const title = m.title;
+  const description = m.description;
   return {
-    title: m.title,
-    description: m.description,
+    title,
+    description,
     alternates: pageAlternates(lang as Locale, "/glossaire"),
+    ...pageOpenGraph(lang as Locale, { title, description, path: "/glossaire" }),
   };
 }
 

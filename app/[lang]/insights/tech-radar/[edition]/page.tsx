@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary } from "../../../dictionaries";
 import { hasLocale, locales, type Locale } from "@/lib/i18n";
-import { pageAlternates } from "@/lib/seo";
+import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { TECH_RADAR_EDITIONS, getEdition } from "@/lib/tech-radar";
 import { TechRadar } from "@/components/sections/TechRadar";
@@ -67,10 +67,13 @@ export async function generateMetadata({
   if (!e) return { title: "Tech Radar — Édition introuvable · Abbeal" };
   const locale = lang as Locale;
   const t = T[locale];
+  const title = `${e.title} · Abbeal Insights`;
+  const description = t.summary(11);
   return {
-    title: `${e.title} · Abbeal Insights`,
-    description: t.summary(11),
+    title,
+    description,
     alternates: pageAlternates(locale, `/insights/tech-radar/${e.slug}`),
+    ...pageOpenGraph(locale, { title, description, path: `/insights/tech-radar/${e.slug}` }),
   };
 }
 
