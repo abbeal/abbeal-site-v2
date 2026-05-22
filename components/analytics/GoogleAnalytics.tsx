@@ -26,7 +26,12 @@ import Script from "next/script";
  * NEXT_PUBLIC_GA_ID — the component renders nothing.
  */
 export function GoogleAnalytics({ gaId }: { gaId: string }) {
-  if (!gaId) return null;
+  // .trim() défensif : la var d'env NEXT_PUBLIC_GA_ID a été polluée par un
+  // saut de ligne final ("G-XXXX\n"), ce qui produisait un measurement ID
+  // invalide → GA4 ne collectait rien ("collecte non active"). Le trim rend
+  // l'init résiliente à tout espace parasite dans l'env var. Audit W21 T0.
+  const id = gaId.trim();
+  if (!id) return null;
 
   return (
     <>
@@ -49,7 +54,7 @@ gtag('consent', 'default', {
   wait_for_update: 500
 });
 gtag('js', new Date());
-gtag('config', '${gaId}', {
+gtag('config', '${id}', {
   anonymize_ip: true,
   send_page_view: true
 });
@@ -57,7 +62,7 @@ gtag('config', '${gaId}', {
         }}
       />
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
         strategy="afterInteractive"
         async
       />
