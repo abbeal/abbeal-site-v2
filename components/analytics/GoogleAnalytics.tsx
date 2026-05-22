@@ -9,12 +9,13 @@ import Script from "next/script";
  *   user consent we must NOT set tracking cookies.
  * - "Consent Mode v2" tells gtag to load (so it's wired) but to skip
  *   storage/measurement until consent is granted via gtag('consent',
- *   'update', { ... }). Today no consent banner is wired, so no data
- *   flows through — that's the trade-off we're explicitly accepting
- *   to stay legally clean.
- * - When a consent banner is added, just call gtag('consent', 'update',
- *   { analytics_storage: 'granted', ad_storage: 'granted' }) on accept
- *   and data starts flowing without any other change required.
+ *   'update', { ... }).
+ * - Consent flow: the cookie banner (CookieBanner / CookiePreferencesForm)
+ *   writes the `abbeal-consent` cookie and calls applyToGtag() on click.
+ *   For a RETURNING visitor whose cookie already exists, the banner never
+ *   reopens — so this init script re-reads the cookie below and replays
+ *   the stored consent itself. Without that, every page load reset the
+ *   visitor to 'denied' regardless of their earlier choice (audit W21).
  *
  * Loading strategy:
  * - `afterInteractive` (Next.js default for Script) keeps gtag.js out of
@@ -53,6 +54,26 @@ gtag('consent', 'default', {
   security_storage: 'granted',
   wait_for_update: 500
 });
+// Re-applique le consentement deja stocke (cookie abbeal-consent) des
+// l'init. Sans ca, un visiteur qui a accepte lors d'une visite precedente
+// repart en 'denied' a chaque chargement : la banniere n'appelle
+// applyToGtag que sur clic, jamais pour un cookie deja present. On lit le
+// cookie ici, dans le meme script, juste apres le consent default ->
+// ordre garanti, pas de course avec la banniere (audit W21 T0).
+try {
+  var __ck = document.cookie.split('; ').find(function(c){return c.indexOf('abbeal-consent=')===0;});
+  if (__ck) {
+    var __p = JSON.parse(decodeURIComponent(__ck.slice('abbeal-consent='.length))).prefs;
+    if (__p) gtag('consent', 'update', {
+      analytics_storage: __p.analytics ? 'granted' : 'denied',
+      ad_storage: __p.ad ? 'granted' : 'denied',
+      ad_user_data: __p.ad ? 'granted' : 'denied',
+      ad_personalization: __p.ad ? 'granted' : 'denied',
+      functionality_storage: __p.functional ? 'granted' : 'denied',
+      personalization_storage: __p.functional ? 'granted' : 'denied'
+    });
+  }
+} catch (e) {}
 gtag('js', new Date());
 gtag('config', '${id}', {
   anonymize_ip: true,
