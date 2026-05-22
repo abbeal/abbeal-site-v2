@@ -15,7 +15,7 @@ import { pageAlternates } from "@/lib/seo";
  *
  * Routes statiques existantes (about, cases, insights, services, careers,
  * contact, mobbeal, partners, glossaire, cgu, confidentialite,
- * mentions-legales, preferences-cookies, carrieres) ont précédence sur
+ * mentions-legales, preferences-cookies) ont précédence sur
  * ce [slug] dynamique (Next.js routing priority : statique > dynamique).
  *
  * Pages générées : 4 landings × 4 langues = 16 routes statiques.

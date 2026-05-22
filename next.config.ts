@@ -4,6 +4,15 @@ import { withSentryConfig } from "@sentry/nextjs";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      // /{locale}/carrieres → /{locale}/careers : ancien alias FR de la page
+      // carrières. Contenu identique, canonical pointait déjà vers /careers —
+      // on remplace la page dupliquée servie en 200 par une 301 propre, ce qui
+      // ferme 4 URLs orphelines (1 par locale). Audit SEO W21 QW2.
+      {
+        source: "/:lang(fr|en|ja|fr-ca)/carrieres",
+        destination: "/:lang/careers",
+        permanent: true,
+      },
       // Anciennes URLs Heroku/WordPress → routes Next 16 i18n
       // permanent: true → 308 (préserve méthode HTTP, équivalent SEO d'un 301)
       { source: "/hire", destination: "/fr/careers", permanent: true },
