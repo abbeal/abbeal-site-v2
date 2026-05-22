@@ -10,6 +10,10 @@ type Dict = {
   nav: { careers: string };
   careers: {
     tape: string;
+    /** Titre SEO dédié — découplé du H1 de marque. Le <title> doit porter
+     *  des mots-clés (emploi tech, senior, géos) ; le H1 garde la voix de
+     *  marque. Fallback sur h1 si absent. */
+    seoTitle?: string;
     h1: string;
     subtitle: string;
     applyTo: string;
@@ -43,7 +47,7 @@ export async function generateMetadata({
   if (!hasLocale(lang)) return {};
   const dict = (await getDictionary(lang as Locale)) as Dict;
   return {
-    title: `${dict.careers.h1} · Abbeal`,
+    title: `${dict.careers.seoTitle ?? dict.careers.h1} · Abbeal`,
     description: dict.careers.subtitle,
     alternates: pageAlternates(lang as Locale, "/careers"),
   };
