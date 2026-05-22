@@ -9973,5 +9973,563 @@
         "content": "Originally published in English. Translation assisted by AI for clarity. [Read the original →](/en/insights/kwik-reading-jim-kwik-retour-alex-lim)"
       }
     ]
+  },
+  "montreal-hub-tech-pont-europe-amerique": {
+    "fr": [
+      {
+        "type": "h2",
+        "content": "Pourquoi Montréal"
+      },
+      {
+        "type": "p",
+        "content": "On nous pose souvent la question pour Tokyo. Rarement pour Montréal. C’est une erreur de lecture du modèle."
+      },
+      {
+        "type": "p",
+        "content": "Montréal n’est pas un bureau de représentation. C’est le hub qui rend le Follow-the-Sun complet. Sans maillon nord-américain, on a deux fuseaux qui se parlent. Avec Montréal, on a une chaîne continue : quand Paris ferme, Montréal est en milieu d’après-midi. Quand Montréal ferme, Tokyo ouvre."
+      },
+      {
+        "type": "h2",
+        "content": "Le pont horaire, concrètement"
+      },
+      {
+        "type": "p",
+        "content": "Une équipe à Montréal partage la matinée avec Paris et l’après-midi avec la côte ouest américaine. Pour un client européen avec des utilisateurs en Amérique du Nord, c’est l’emplacement qui couvre les deux marchés sans astreinte de nuit."
+      },
+      {
+        "type": "p",
+        "content": "Ce n’est pas théorique. Un grand opérateur télécom canadien, c’est une centaine de personnes côté Abbeal sur une migration Vue 2 vers Vue 3. Une grande banque de la place de Montréal, c’est une application mobile cloud-native passée le million de téléchargements. Un câblo-opérateur nord-américain est lui aussi accompagné depuis Montréal. Ces projets tournent parce que les équipes sont sur place, pas parce qu’on a sous-traité à distance."
+      },
+      {
+        "type": "h2",
+        "content": "Bilingue, et ça compte"
+      },
+      {
+        "type": "p",
+        "content": "Montréal travaille en français et en anglais sans friction. Pour un client français qui veut adresser le marché nord-américain, l’équipe n’a pas à changer de langue de travail. Pour un client anglophone, même chose dans l’autre sens. Peu de villes offrent ça avec un vrai vivier d’ingénieurs seniors."
+      },
+      {
+        "type": "h2",
+        "content": "Loi 25 : la conformité n’est pas une option"
+      },
+      {
+        "type": "p",
+        "content": "Depuis 2024, la Loi 25 encadre les renseignements personnels au Québec, avec des exigences proches du RGPD. Un produit qui touche des utilisateurs québécois doit s’y conformer. On a livré une mise en conformité FinTech sous Loi 25 en six semaines. Avoir une équipe sur place qui connaît le cadre évite de découvrir le problème en production."
+      },
+      {
+        "type": "h2",
+        "content": "Pour qui"
+      },
+      {
+        "type": "p",
+        "content": "Un hub à Montréal a du sens si vous visez le marché nord-américain, si vous avez des utilisateurs des deux côtés de l’Atlantique, ou si vous voulez du nearshore avec un vrai recouvrement horaire plutôt qu’un offshore décalé de douze heures."
+      }
+    ],
+    "en": [
+      {
+        "type": "h2",
+        "content": "Pourquoi Montréal"
+      },
+      {
+        "type": "p",
+        "content": "On nous pose souvent la question pour Tokyo. Rarement pour Montréal. C’est une erreur de lecture du modèle."
+      },
+      {
+        "type": "p",
+        "content": "Montréal n’est pas un bureau de représentation. C’est le hub qui rend le Follow-the-Sun complet. Sans maillon nord-américain, on a deux fuseaux qui se parlent. Avec Montréal, on a une chaîne continue : quand Paris ferme, Montréal est en milieu d’après-midi. Quand Montréal ferme, Tokyo ouvre."
+      },
+      {
+        "type": "h2",
+        "content": "Le pont horaire, concrètement"
+      },
+      {
+        "type": "p",
+        "content": "Une équipe à Montréal partage la matinée avec Paris et l’après-midi avec la côte ouest américaine. Pour un client européen avec des utilisateurs en Amérique du Nord, c’est l’emplacement qui couvre les deux marchés sans astreinte de nuit."
+      },
+      {
+        "type": "p",
+        "content": "Ce n’est pas théorique. Un grand opérateur télécom canadien, c’est une centaine de personnes côté Abbeal sur une migration Vue 2 vers Vue 3. Une grande banque de la place de Montréal, c’est une application mobile cloud-native passée le million de téléchargements. Un câblo-opérateur nord-américain est lui aussi accompagné depuis Montréal. Ces projets tournent parce que les équipes sont sur place, pas parce qu’on a sous-traité à distance."
+      },
+      {
+        "type": "h2",
+        "content": "Bilingue, et ça compte"
+      },
+      {
+        "type": "p",
+        "content": "Montréal travaille en français et en anglais sans friction. Pour un client français qui veut adresser le marché nord-américain, l’équipe n’a pas à changer de langue de travail. Pour un client anglophone, même chose dans l’autre sens. Peu de villes offrent ça avec un vrai vivier d’ingénieurs seniors."
+      },
+      {
+        "type": "h2",
+        "content": "Loi 25 : la conformité n’est pas une option"
+      },
+      {
+        "type": "p",
+        "content": "Depuis 2024, la Loi 25 encadre les renseignements personnels au Québec, avec des exigences proches du RGPD. Un produit qui touche des utilisateurs québécois doit s’y conformer. On a livré une mise en conformité FinTech sous Loi 25 en six semaines. Avoir une équipe sur place qui connaît le cadre évite de découvrir le problème en production."
+      },
+      {
+        "type": "h2",
+        "content": "Pour qui"
+      },
+      {
+        "type": "p",
+        "content": "Un hub à Montréal a du sens si vous visez le marché nord-américain, si vous avez des utilisateurs des deux côtés de l’Atlantique, ou si vous voulez du nearshore avec un vrai recouvrement horaire plutôt qu’un offshore décalé de douze heures."
+      }
+    ],
+    "ja": [
+      {
+        "type": "h2",
+        "content": "Pourquoi Montréal"
+      },
+      {
+        "type": "p",
+        "content": "On nous pose souvent la question pour Tokyo. Rarement pour Montréal. C’est une erreur de lecture du modèle."
+      },
+      {
+        "type": "p",
+        "content": "Montréal n’est pas un bureau de représentation. C’est le hub qui rend le Follow-the-Sun complet. Sans maillon nord-américain, on a deux fuseaux qui se parlent. Avec Montréal, on a une chaîne continue : quand Paris ferme, Montréal est en milieu d’après-midi. Quand Montréal ferme, Tokyo ouvre."
+      },
+      {
+        "type": "h2",
+        "content": "Le pont horaire, concrètement"
+      },
+      {
+        "type": "p",
+        "content": "Une équipe à Montréal partage la matinée avec Paris et l’après-midi avec la côte ouest américaine. Pour un client européen avec des utilisateurs en Amérique du Nord, c’est l’emplacement qui couvre les deux marchés sans astreinte de nuit."
+      },
+      {
+        "type": "p",
+        "content": "Ce n’est pas théorique. Un grand opérateur télécom canadien, c’est une centaine de personnes côté Abbeal sur une migration Vue 2 vers Vue 3. Une grande banque de la place de Montréal, c’est une application mobile cloud-native passée le million de téléchargements. Un câblo-opérateur nord-américain est lui aussi accompagné depuis Montréal. Ces projets tournent parce que les équipes sont sur place, pas parce qu’on a sous-traité à distance."
+      },
+      {
+        "type": "h2",
+        "content": "Bilingue, et ça compte"
+      },
+      {
+        "type": "p",
+        "content": "Montréal travaille en français et en anglais sans friction. Pour un client français qui veut adresser le marché nord-américain, l’équipe n’a pas à changer de langue de travail. Pour un client anglophone, même chose dans l’autre sens. Peu de villes offrent ça avec un vrai vivier d’ingénieurs seniors."
+      },
+      {
+        "type": "h2",
+        "content": "Loi 25 : la conformité n’est pas une option"
+      },
+      {
+        "type": "p",
+        "content": "Depuis 2024, la Loi 25 encadre les renseignements personnels au Québec, avec des exigences proches du RGPD. Un produit qui touche des utilisateurs québécois doit s’y conformer. On a livré une mise en conformité FinTech sous Loi 25 en six semaines. Avoir une équipe sur place qui connaît le cadre évite de découvrir le problème en production."
+      },
+      {
+        "type": "h2",
+        "content": "Pour qui"
+      },
+      {
+        "type": "p",
+        "content": "Un hub à Montréal a du sens si vous visez le marché nord-américain, si vous avez des utilisateurs des deux côtés de l’Atlantique, ou si vous voulez du nearshore avec un vrai recouvrement horaire plutôt qu’un offshore décalé de douze heures."
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "h2",
+        "content": "Pourquoi Montréal"
+      },
+      {
+        "type": "p",
+        "content": "On nous pose souvent la question pour Tokyo. Rarement pour Montréal. C’est une erreur de lecture du modèle."
+      },
+      {
+        "type": "p",
+        "content": "Montréal n’est pas un bureau de représentation. C’est le hub qui rend le Follow-the-Sun complet. Sans maillon nord-américain, on a deux fuseaux qui se parlent. Avec Montréal, on a une chaîne continue : quand Paris ferme, Montréal est en milieu d’après-midi. Quand Montréal ferme, Tokyo ouvre."
+      },
+      {
+        "type": "h2",
+        "content": "Le pont horaire, concrètement"
+      },
+      {
+        "type": "p",
+        "content": "Une équipe à Montréal partage la matinée avec Paris et l’après-midi avec la côte ouest américaine. Pour un client européen avec des utilisateurs en Amérique du Nord, c’est l’emplacement qui couvre les deux marchés sans astreinte de nuit."
+      },
+      {
+        "type": "p",
+        "content": "Ce n’est pas théorique. Un grand opérateur télécom canadien, c’est une centaine de personnes côté Abbeal sur une migration Vue 2 vers Vue 3. Une grande banque de la place de Montréal, c’est une application mobile cloud-native passée le million de téléchargements. Un câblo-opérateur nord-américain est lui aussi accompagné depuis Montréal. Ces projets tournent parce que les équipes sont sur place, pas parce qu’on a sous-traité à distance."
+      },
+      {
+        "type": "h2",
+        "content": "Bilingue, et ça compte"
+      },
+      {
+        "type": "p",
+        "content": "Montréal travaille en français et en anglais sans friction. Pour un client français qui veut adresser le marché nord-américain, l’équipe n’a pas à changer de langue de travail. Pour un client anglophone, même chose dans l’autre sens. Peu de villes offrent ça avec un vrai vivier d’ingénieurs seniors."
+      },
+      {
+        "type": "h2",
+        "content": "Loi 25 : la conformité n’est pas une option"
+      },
+      {
+        "type": "p",
+        "content": "Depuis 2024, la Loi 25 encadre les renseignements personnels au Québec, avec des exigences proches du RGPD. Un produit qui touche des utilisateurs québécois doit s’y conformer. On a livré une mise en conformité FinTech sous Loi 25 en six semaines. Avoir une équipe sur place qui connaît le cadre évite de découvrir le problème en production."
+      },
+      {
+        "type": "h2",
+        "content": "Pour qui"
+      },
+      {
+        "type": "p",
+        "content": "Un hub à Montréal a du sens si vous visez le marché nord-américain, si vous avez des utilisateurs des deux côtés de l’Atlantique, ou si vous voulez du nearshore avec un vrai recouvrement horaire plutôt qu’un offshore décalé de douze heures."
+      }
+    ]
+  },
+  "choisir-partenaire-tech-japon-guide": {
+    "fr": [
+      {
+        "type": "h2",
+        "content": "Trois modèles, trois compromis"
+      },
+      {
+        "type": "p",
+        "content": "Quand une entreprise occidentale veut faire développer un produit au Japon, elle a en général trois options."
+      },
+      {
+        "type": "p",
+        "content": "L’ESN locale japonaise connaît le marché, mais travaille souvent en japonais, avec des process et une culture projet qui peuvent surprendre une équipe occidentale. L’offshore lointain (Inde, Europe de l’Est) est compétitif sur le coût, mais le décalage horaire avec Tokyo est brutal et le lien avec le marché japonais est inexistant. Le studio tri-géo combine une présence à Tokyo et des hubs synchronisés ailleurs : c’est le modèle d’Abbeal, et il a aussi ses limites — il faut un projet qui justifie le recouvrement horaire."
+      },
+      {
+        "type": "p",
+        "content": "Aucun n’est « le meilleur ». Le bon choix dépend de votre projet."
+      },
+      {
+        "type": "h2",
+        "content": "Six questions à poser avant de signer"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "Qui code, vraiment ? Demandez les profils nominatifs et leur séniorité. Un partenaire sérieux les montre.",
+          "Quelle langue de travail ? Si votre équipe ne parle pas japonais, vérifiez le niveau réel d’anglais, pas la promesse commerciale.",
+          "Quel recouvrement horaire avec vos équipes ? Mettez un chiffre dessus. Trois à quatre heures par jour change tout par rapport à zéro.",
+          "Qui porte le contrat et la conformité ? Au Japon, l’entité légale qui contracte compte. Vérifiez qu’elle existe.",
+          "Qu’est-ce qui se passe après le POC ? Le vrai travail commence à la mise en production : monitoring, reprise, run.",
+          "Peut-on parler à un client référent ? Si non, c’est un signal."
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "Les red flags"
+      },
+      {
+        "type": "p",
+        "content": "Un partenaire qui ne montre pas ses ingénieurs. Un « oui » à toutes les questions sans nuance. Une démo brillante sans discussion de l’exploitation. Un devis qui ne distingue pas build et run. Un interlocuteur commercial qui n’a jamais vu le code."
+      },
+      {
+        "type": "h2",
+        "content": "Où se situe Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "On opère un hub à Tokyo depuis 2018, avec des ingénieurs seniors bilingues. On porte le contrat via Abbeal KK, l’entité japonaise. On a livré pour Money Forward, Cartier, Le Monde, entre autres. Le modèle tri-géo a du sens si vous voulez une présence locale à Tokyo sans renoncer au lien avec vos équipes européennes ou nord-américaines. Il en a moins si votre projet est purement local et tient sur un fuseau unique. On vous le dira."
+      }
+    ],
+    "en": [
+      {
+        "type": "h2",
+        "content": "Trois modèles, trois compromis"
+      },
+      {
+        "type": "p",
+        "content": "Quand une entreprise occidentale veut faire développer un produit au Japon, elle a en général trois options."
+      },
+      {
+        "type": "p",
+        "content": "L’ESN locale japonaise connaît le marché, mais travaille souvent en japonais, avec des process et une culture projet qui peuvent surprendre une équipe occidentale. L’offshore lointain (Inde, Europe de l’Est) est compétitif sur le coût, mais le décalage horaire avec Tokyo est brutal et le lien avec le marché japonais est inexistant. Le studio tri-géo combine une présence à Tokyo et des hubs synchronisés ailleurs : c’est le modèle d’Abbeal, et il a aussi ses limites — il faut un projet qui justifie le recouvrement horaire."
+      },
+      {
+        "type": "p",
+        "content": "Aucun n’est « le meilleur ». Le bon choix dépend de votre projet."
+      },
+      {
+        "type": "h2",
+        "content": "Six questions à poser avant de signer"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "Qui code, vraiment ? Demandez les profils nominatifs et leur séniorité. Un partenaire sérieux les montre.",
+          "Quelle langue de travail ? Si votre équipe ne parle pas japonais, vérifiez le niveau réel d’anglais, pas la promesse commerciale.",
+          "Quel recouvrement horaire avec vos équipes ? Mettez un chiffre dessus. Trois à quatre heures par jour change tout par rapport à zéro.",
+          "Qui porte le contrat et la conformité ? Au Japon, l’entité légale qui contracte compte. Vérifiez qu’elle existe.",
+          "Qu’est-ce qui se passe après le POC ? Le vrai travail commence à la mise en production : monitoring, reprise, run.",
+          "Peut-on parler à un client référent ? Si non, c’est un signal."
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "Les red flags"
+      },
+      {
+        "type": "p",
+        "content": "Un partenaire qui ne montre pas ses ingénieurs. Un « oui » à toutes les questions sans nuance. Une démo brillante sans discussion de l’exploitation. Un devis qui ne distingue pas build et run. Un interlocuteur commercial qui n’a jamais vu le code."
+      },
+      {
+        "type": "h2",
+        "content": "Où se situe Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "On opère un hub à Tokyo depuis 2018, avec des ingénieurs seniors bilingues. On porte le contrat via Abbeal KK, l’entité japonaise. On a livré pour Money Forward, Cartier, Le Monde, entre autres. Le modèle tri-géo a du sens si vous voulez une présence locale à Tokyo sans renoncer au lien avec vos équipes européennes ou nord-américaines. Il en a moins si votre projet est purement local et tient sur un fuseau unique. On vous le dira."
+      }
+    ],
+    "ja": [
+      {
+        "type": "h2",
+        "content": "Trois modèles, trois compromis"
+      },
+      {
+        "type": "p",
+        "content": "Quand une entreprise occidentale veut faire développer un produit au Japon, elle a en général trois options."
+      },
+      {
+        "type": "p",
+        "content": "L’ESN locale japonaise connaît le marché, mais travaille souvent en japonais, avec des process et une culture projet qui peuvent surprendre une équipe occidentale. L’offshore lointain (Inde, Europe de l’Est) est compétitif sur le coût, mais le décalage horaire avec Tokyo est brutal et le lien avec le marché japonais est inexistant. Le studio tri-géo combine une présence à Tokyo et des hubs synchronisés ailleurs : c’est le modèle d’Abbeal, et il a aussi ses limites — il faut un projet qui justifie le recouvrement horaire."
+      },
+      {
+        "type": "p",
+        "content": "Aucun n’est « le meilleur ». Le bon choix dépend de votre projet."
+      },
+      {
+        "type": "h2",
+        "content": "Six questions à poser avant de signer"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "Qui code, vraiment ? Demandez les profils nominatifs et leur séniorité. Un partenaire sérieux les montre.",
+          "Quelle langue de travail ? Si votre équipe ne parle pas japonais, vérifiez le niveau réel d’anglais, pas la promesse commerciale.",
+          "Quel recouvrement horaire avec vos équipes ? Mettez un chiffre dessus. Trois à quatre heures par jour change tout par rapport à zéro.",
+          "Qui porte le contrat et la conformité ? Au Japon, l’entité légale qui contracte compte. Vérifiez qu’elle existe.",
+          "Qu’est-ce qui se passe après le POC ? Le vrai travail commence à la mise en production : monitoring, reprise, run.",
+          "Peut-on parler à un client référent ? Si non, c’est un signal."
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "Les red flags"
+      },
+      {
+        "type": "p",
+        "content": "Un partenaire qui ne montre pas ses ingénieurs. Un « oui » à toutes les questions sans nuance. Une démo brillante sans discussion de l’exploitation. Un devis qui ne distingue pas build et run. Un interlocuteur commercial qui n’a jamais vu le code."
+      },
+      {
+        "type": "h2",
+        "content": "Où se situe Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "On opère un hub à Tokyo depuis 2018, avec des ingénieurs seniors bilingues. On porte le contrat via Abbeal KK, l’entité japonaise. On a livré pour Money Forward, Cartier, Le Monde, entre autres. Le modèle tri-géo a du sens si vous voulez une présence locale à Tokyo sans renoncer au lien avec vos équipes européennes ou nord-américaines. Il en a moins si votre projet est purement local et tient sur un fuseau unique. On vous le dira."
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "h2",
+        "content": "Trois modèles, trois compromis"
+      },
+      {
+        "type": "p",
+        "content": "Quand une entreprise occidentale veut faire développer un produit au Japon, elle a en général trois options."
+      },
+      {
+        "type": "p",
+        "content": "L’ESN locale japonaise connaît le marché, mais travaille souvent en japonais, avec des process et une culture projet qui peuvent surprendre une équipe occidentale. L’offshore lointain (Inde, Europe de l’Est) est compétitif sur le coût, mais le décalage horaire avec Tokyo est brutal et le lien avec le marché japonais est inexistant. Le studio tri-géo combine une présence à Tokyo et des hubs synchronisés ailleurs : c’est le modèle d’Abbeal, et il a aussi ses limites — il faut un projet qui justifie le recouvrement horaire."
+      },
+      {
+        "type": "p",
+        "content": "Aucun n’est « le meilleur ». Le bon choix dépend de votre projet."
+      },
+      {
+        "type": "h2",
+        "content": "Six questions à poser avant de signer"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "Qui code, vraiment ? Demandez les profils nominatifs et leur séniorité. Un partenaire sérieux les montre.",
+          "Quelle langue de travail ? Si votre équipe ne parle pas japonais, vérifiez le niveau réel d’anglais, pas la promesse commerciale.",
+          "Quel recouvrement horaire avec vos équipes ? Mettez un chiffre dessus. Trois à quatre heures par jour change tout par rapport à zéro.",
+          "Qui porte le contrat et la conformité ? Au Japon, l’entité légale qui contracte compte. Vérifiez qu’elle existe.",
+          "Qu’est-ce qui se passe après le POC ? Le vrai travail commence à la mise en production : monitoring, reprise, run.",
+          "Peut-on parler à un client référent ? Si non, c’est un signal."
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "Les red flags"
+      },
+      {
+        "type": "p",
+        "content": "Un partenaire qui ne montre pas ses ingénieurs. Un « oui » à toutes les questions sans nuance. Une démo brillante sans discussion de l’exploitation. Un devis qui ne distingue pas build et run. Un interlocuteur commercial qui n’a jamais vu le code."
+      },
+      {
+        "type": "h2",
+        "content": "Où se situe Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "On opère un hub à Tokyo depuis 2018, avec des ingénieurs seniors bilingues. On porte le contrat via Abbeal KK, l’entité japonaise. On a livré pour Money Forward, Cartier, Le Monde, entre autres. Le modèle tri-géo a du sens si vous voulez une présence locale à Tokyo sans renoncer au lien avec vos équipes européennes ou nord-américaines. Il en a moins si votre projet est purement local et tient sur un fuseau unique. On vous le dira."
+      }
+    ]
+  },
+  "ros2-production-flotte-robots-lecons": {
+    "fr": [
+      {
+        "type": "h2",
+        "content": "Le contexte"
+      },
+      {
+        "type": "p",
+        "content": "La robotique est une de nos quatre expertises, au même titre que le web, la data et le cloud. On en parle moins parce qu’elle se voit moins. Pourtant, c’est là que le code rencontre le monde physique, et où une erreur ne se règle pas par un rollback."
+      },
+      {
+        "type": "p",
+        "content": "Sur un projet de navigation autonome pour une flotte de robots industriels (hub Tokyo, ROS 2 et vision), on a tiré des leçons qui valent au-delà de ce projet précis."
+      },
+      {
+        "type": "h2",
+        "content": "Six leçons de terrain"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "ROS 2 n’est pas ROS 1 avec un numéro en plus. Le passage au DDS pour la communication change la donne sur la fiabilité et la configuration réseau. Le sous-estimer coûte cher.",
+          "Le temps réel se conçoit, il ne se rattrape pas. Les contraintes temps réel doivent guider l’architecture dès le premier jour. On ne « rend pas temps réel » un système conçu sans.",
+          "La simulation n’est pas la réalité. Un comportement validé en simulation échoue sur le terrain pour des raisons triviales : lumière, poussière, sol irrégulier. Le test physique reste irremplaçable.",
+          "La flotte n’est pas un robot multiplié. Coordonner plusieurs robots introduit des problèmes propres : conflits de trajectoire, partage de zone, reprise après panne d’une unité.",
+          "L’observabilité s’applique aussi aux robots. On veut savoir ce qu’a « vu » et « décidé » un robot à un instant donné. Sans logs exploitables, le debug devient une enquête.",
+          "Edge et cloud, chacun son rôle. La décision critique reste sur l’edge, proche du capteur. Le cloud sert à l’analyse, l’entraînement, la supervision. Mélanger les deux crée de la latence là où il ne faut pas."
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "Les anti-patterns"
+      },
+      {
+        "type": "p",
+        "content": "Concevoir sans contrainte temps réel et l’ajouter ensuite. Tout valider en simulation. Traiter une flotte comme un robot isolé. Mettre la décision critique dans le cloud. On les a tous croisés, parfois chez nous avant de corriger."
+      }
+    ],
+    "en": [
+      {
+        "type": "h2",
+        "content": "Le contexte"
+      },
+      {
+        "type": "p",
+        "content": "La robotique est une de nos quatre expertises, au même titre que le web, la data et le cloud. On en parle moins parce qu’elle se voit moins. Pourtant, c’est là que le code rencontre le monde physique, et où une erreur ne se règle pas par un rollback."
+      },
+      {
+        "type": "p",
+        "content": "Sur un projet de navigation autonome pour une flotte de robots industriels (hub Tokyo, ROS 2 et vision), on a tiré des leçons qui valent au-delà de ce projet précis."
+      },
+      {
+        "type": "h2",
+        "content": "Six leçons de terrain"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "ROS 2 n’est pas ROS 1 avec un numéro en plus. Le passage au DDS pour la communication change la donne sur la fiabilité et la configuration réseau. Le sous-estimer coûte cher.",
+          "Le temps réel se conçoit, il ne se rattrape pas. Les contraintes temps réel doivent guider l’architecture dès le premier jour. On ne « rend pas temps réel » un système conçu sans.",
+          "La simulation n’est pas la réalité. Un comportement validé en simulation échoue sur le terrain pour des raisons triviales : lumière, poussière, sol irrégulier. Le test physique reste irremplaçable.",
+          "La flotte n’est pas un robot multiplié. Coordonner plusieurs robots introduit des problèmes propres : conflits de trajectoire, partage de zone, reprise après panne d’une unité.",
+          "L’observabilité s’applique aussi aux robots. On veut savoir ce qu’a « vu » et « décidé » un robot à un instant donné. Sans logs exploitables, le debug devient une enquête.",
+          "Edge et cloud, chacun son rôle. La décision critique reste sur l’edge, proche du capteur. Le cloud sert à l’analyse, l’entraînement, la supervision. Mélanger les deux crée de la latence là où il ne faut pas."
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "Les anti-patterns"
+      },
+      {
+        "type": "p",
+        "content": "Concevoir sans contrainte temps réel et l’ajouter ensuite. Tout valider en simulation. Traiter une flotte comme un robot isolé. Mettre la décision critique dans le cloud. On les a tous croisés, parfois chez nous avant de corriger."
+      }
+    ],
+    "ja": [
+      {
+        "type": "h2",
+        "content": "Le contexte"
+      },
+      {
+        "type": "p",
+        "content": "La robotique est une de nos quatre expertises, au même titre que le web, la data et le cloud. On en parle moins parce qu’elle se voit moins. Pourtant, c’est là que le code rencontre le monde physique, et où une erreur ne se règle pas par un rollback."
+      },
+      {
+        "type": "p",
+        "content": "Sur un projet de navigation autonome pour une flotte de robots industriels (hub Tokyo, ROS 2 et vision), on a tiré des leçons qui valent au-delà de ce projet précis."
+      },
+      {
+        "type": "h2",
+        "content": "Six leçons de terrain"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "ROS 2 n’est pas ROS 1 avec un numéro en plus. Le passage au DDS pour la communication change la donne sur la fiabilité et la configuration réseau. Le sous-estimer coûte cher.",
+          "Le temps réel se conçoit, il ne se rattrape pas. Les contraintes temps réel doivent guider l’architecture dès le premier jour. On ne « rend pas temps réel » un système conçu sans.",
+          "La simulation n’est pas la réalité. Un comportement validé en simulation échoue sur le terrain pour des raisons triviales : lumière, poussière, sol irrégulier. Le test physique reste irremplaçable.",
+          "La flotte n’est pas un robot multiplié. Coordonner plusieurs robots introduit des problèmes propres : conflits de trajectoire, partage de zone, reprise après panne d’une unité.",
+          "L’observabilité s’applique aussi aux robots. On veut savoir ce qu’a « vu » et « décidé » un robot à un instant donné. Sans logs exploitables, le debug devient une enquête.",
+          "Edge et cloud, chacun son rôle. La décision critique reste sur l’edge, proche du capteur. Le cloud sert à l’analyse, l’entraînement, la supervision. Mélanger les deux crée de la latence là où il ne faut pas."
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "Les anti-patterns"
+      },
+      {
+        "type": "p",
+        "content": "Concevoir sans contrainte temps réel et l’ajouter ensuite. Tout valider en simulation. Traiter une flotte comme un robot isolé. Mettre la décision critique dans le cloud. On les a tous croisés, parfois chez nous avant de corriger."
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "h2",
+        "content": "Le contexte"
+      },
+      {
+        "type": "p",
+        "content": "La robotique est une de nos quatre expertises, au même titre que le web, la data et le cloud. On en parle moins parce qu’elle se voit moins. Pourtant, c’est là que le code rencontre le monde physique, et où une erreur ne se règle pas par un rollback."
+      },
+      {
+        "type": "p",
+        "content": "Sur un projet de navigation autonome pour une flotte de robots industriels (hub Tokyo, ROS 2 et vision), on a tiré des leçons qui valent au-delà de ce projet précis."
+      },
+      {
+        "type": "h2",
+        "content": "Six leçons de terrain"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "ROS 2 n’est pas ROS 1 avec un numéro en plus. Le passage au DDS pour la communication change la donne sur la fiabilité et la configuration réseau. Le sous-estimer coûte cher.",
+          "Le temps réel se conçoit, il ne se rattrape pas. Les contraintes temps réel doivent guider l’architecture dès le premier jour. On ne « rend pas temps réel » un système conçu sans.",
+          "La simulation n’est pas la réalité. Un comportement validé en simulation échoue sur le terrain pour des raisons triviales : lumière, poussière, sol irrégulier. Le test physique reste irremplaçable.",
+          "La flotte n’est pas un robot multiplié. Coordonner plusieurs robots introduit des problèmes propres : conflits de trajectoire, partage de zone, reprise après panne d’une unité.",
+          "L’observabilité s’applique aussi aux robots. On veut savoir ce qu’a « vu » et « décidé » un robot à un instant donné. Sans logs exploitables, le debug devient une enquête.",
+          "Edge et cloud, chacun son rôle. La décision critique reste sur l’edge, proche du capteur. Le cloud sert à l’analyse, l’entraînement, la supervision. Mélanger les deux crée de la latence là où il ne faut pas."
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "Les anti-patterns"
+      },
+      {
+        "type": "p",
+        "content": "Concevoir sans contrainte temps réel et l’ajouter ensuite. Tout valider en simulation. Traiter une flotte comme un robot isolé. Mettre la décision critique dans le cloud. On les a tous croisés, parfois chez nous avant de corriger."
+      }
+    ]
   }
 }

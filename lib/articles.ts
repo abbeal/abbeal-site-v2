@@ -979,6 +979,88 @@ export const articles: Article[] = [
       "fr-ca": ARTICLE_BODIES["kwik-reading-jim-kwik-retour-alex-lim"]?.["fr-ca"],
     },
   },
+  // Article 23 — Montréal hub. Insight W21 : combler le trou de contenu
+  // sur le hub Montréal (aucun contenu dédié alors que c'est un des 3 hubs).
+  // Clients anonymisés (validé Sébastien). FR canonique, traductions à venir.
+  {
+    slug: "montreal-hub-tech-pont-europe-amerique",
+    featured: false,
+    tag: "Business",
+    readTime: "4 min",
+    publishedAt: "2026-05-22",
+    title: {
+      fr: "Montréal : le hub qui relie l'Europe et l'Amérique du Nord",
+    },
+    excerpt: {
+      fr: "Montréal n'est pas un bureau de représentation : c'est le maillon nord-américain qui rend le Follow-the-Sun complet. Pont horaire, équipes bilingues, conformité Loi 25.",
+    },
+    metaDescription: {
+      fr: "Pourquoi Abbeal opère un hub à Montréal : pont horaire avec l'Europe, équipes bilingues, conformité Loi 25. Le maillon nord-américain du modèle tri-géo.",
+    },
+    keywords: {
+      fr: "ESN tech Montréal, hub tech Montréal, nearshore Amérique du Nord, partenaire tech nearshore, Follow-the-Sun, Loi 25, conformité Québec, développement logiciel Montréal",
+    },
+    body: {
+      fr: ARTICLE_BODIES["montreal-hub-tech-pont-europe-amerique"]?.fr ?? [],
+      en: ARTICLE_BODIES["montreal-hub-tech-pont-europe-amerique"]?.en,
+      ja: ARTICLE_BODIES["montreal-hub-tech-pont-europe-amerique"]?.ja,
+      "fr-ca": ARTICLE_BODIES["montreal-hub-tech-pont-europe-amerique"]?.["fr-ca"],
+    },
+  },
+  // Article 24 — Guide de décision : choisir un partenaire tech au Japon.
+  // Format guide d'achat (trou identifié W21 : les LLM citent ce format).
+  {
+    slug: "choisir-partenaire-tech-japon-guide",
+    featured: false,
+    tag: "Business",
+    readTime: "5 min",
+    publishedAt: "2026-05-22",
+    title: {
+      fr: "Choisir un partenaire d'ingénierie pour un projet tech au Japon",
+    },
+    excerpt: {
+      fr: "Trois modèles pour faire développer un produit au Japon, six questions à poser avant de signer, les red flags. Le guide de décision pour choisir un partenaire d'ingénierie à Tokyo.",
+    },
+    metaDescription: {
+      fr: "Trois modèles pour faire développer un produit au Japon, six questions à poser, les red flags. Le guide de décision pour choisir un partenaire d'ingénierie à Tokyo.",
+    },
+    keywords: {
+      fr: "ESN tech Tokyo, développer un produit tech au Japon, tech consulting Tokyo, partenaire ingénierie Japon, studio tech Tokyo, choisir une ESN Japon",
+    },
+    body: {
+      fr: ARTICLE_BODIES["choisir-partenaire-tech-japon-guide"]?.fr ?? [],
+      en: ARTICLE_BODIES["choisir-partenaire-tech-japon-guide"]?.en,
+      ja: ARTICLE_BODIES["choisir-partenaire-tech-japon-guide"]?.ja,
+      "fr-ca": ARTICLE_BODIES["choisir-partenaire-tech-japon-guide"]?.["fr-ca"],
+    },
+  },
+  // Article 25 — ROS 2 en production. Insight W21 : robotique = une des 4
+  // expertises mais zéro article de fond jusqu'ici.
+  {
+    slug: "ros2-production-flotte-robots-lecons",
+    featured: false,
+    tag: "Robotique",
+    readTime: "4 min",
+    publishedAt: "2026-05-22",
+    title: {
+      fr: "ROS 2 en production : ce qu'une flotte de robots nous a appris",
+    },
+    excerpt: {
+      fr: "Six leçons de terrain sur ROS 2 en production : navigation autonome, vision, contraintes temps réel sur une flotte de robots industriels. Retour d'expérience du hub Tokyo.",
+    },
+    metaDescription: {
+      fr: "Six leçons de terrain sur ROS 2 en production : navigation autonome, vision, contraintes temps réel sur une flotte de robots industriels. Retour d'expérience du hub Tokyo.",
+    },
+    keywords: {
+      fr: "ROS 2 production, robotique industrielle, squad embarqué, navigation autonome, flotte de robots, temps réel, edge computing, ROS 2 DDS",
+    },
+    body: {
+      fr: ARTICLE_BODIES["ros2-production-flotte-robots-lecons"]?.fr ?? [],
+      en: ARTICLE_BODIES["ros2-production-flotte-robots-lecons"]?.en,
+      ja: ARTICLE_BODIES["ros2-production-flotte-robots-lecons"]?.ja,
+      "fr-ca": ARTICLE_BODIES["ros2-production-flotte-robots-lecons"]?.["fr-ca"],
+    },
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
