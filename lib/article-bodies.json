@@ -9700,5 +9700,278 @@
         "content": "Abbeal accompagne les équipes de développement dans la modernisation de leur stack, la réduction de la dette technique et la mise en place de pratiques d’ingénierie durables."
       }
     ]
+  },
+  "kwik-reading-jim-kwik-retour-alex-lim": {
+    "en": [
+      {
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "Senior Software Engineer at Abbeal, Asia Hub · Tokyo. 3 years in Japan, specialized in Next.js / React.",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
+      },
+      {
+        "type": "h2",
+        "content": "What is Kwik Reading?"
+      },
+      {
+        "type": "p",
+        "content": "Kwik Reading is an online course by Jim Kwik that helps people read faster while maintaining great focus and retaining information. Most people learn to read when they're young, and then it's considered done. Kwik Reading picks up from there and guides you to the next level."
+      },
+      {
+        "type": "p",
+        "content": "The promise is simple: improve the four key elements of reading: speed, focus, comprehension, and retention."
+      },
+      {
+        "type": "p",
+        "content": "Reading is a skill, and like any other skill, you can improve and become better at it. You can deliberately train your reading by using specific techniques."
+      },
+      {
+        "type": "p",
+        "content": "The course is set to be done in 21 days. You watch videos and then practice by reading a book of your choice. It's progressive and very well done."
+      },
+      {
+        "type": "h2",
+        "content": "Why did I take the course?"
+      },
+      {
+        "type": "p",
+        "content": "At first, I didn't know there were techniques to read faster. I didn't view reading as a skill that could be improved. But one day, I had an introduction course on reading more quickly by Jim Kwik as part of my subscription to Impact Theory University. It was so well done that I decided to buy Kwik Reading. I'm mostly interested in reading non-fiction books, and I was convinced this course would help me get more out of what I read."
+      },
+      {
+        "type": "h2",
+        "content": "Did Kwik Reading deliver on its promise?"
+      },
+      {
+        "type": "p",
+        "content": "Absolutely! Not only did I read faster, but I also learned to focus better and retain information more easily. Since finishing the course, I have never stopped reading. With some training, it's even possible to read a book per week. Reading faster also means spending less time to get the same amount of knowledge, and time is one of the few things we cannot get back."
+      },
+      {
+        "type": "p",
+        "content": "It's possibly one of my best investments because it turned reading into a consistent habit."
+      },
+      {
+        "type": "h2",
+        "content": "Does speed reading kill the joy of reading?"
+      },
+      {
+        "type": "p",
+        "content": "In my case, it had the opposite effect. I enjoyed reading even more. But you don't need to speed-read everything. You get to choose where to apply the skill, and it particularly shines on non-fiction."
+      },
+      {
+        "type": "p",
+        "content": "For non-fiction specifically, speed reading unlocks a more flexible approach. You can skim and extract only what is relevant to you. You can put down a book that isn't delivering value without feeling guilty about it. And applying ~10-20% of a book into concrete action will push you further than finishing it entirely and doing nothing afterward."
+      },
+      {
+        "type": "p",
+        "content": "Reading is just the first step in accumulating knowledge. Knowledge is only potential power. The goal is not to read more for its own sake. It's to act on what you read, in a way that benefits you and the people around you."
+      }
+    ],
+    "fr": [
+      {
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "Senior Software Engineer chez Abbeal, Hub Asie · Tokyo. 3 ans au Japon, spécialisé Next.js / React.",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
+      },
+      {
+        "type": "h2",
+        "content": "Qu’est-ce que Kwik Reading ?"
+      },
+      {
+        "type": "p",
+        "content": "Kwik Reading est un cours en ligne de Jim Kwik qui aide à lire plus vite tout en gardant une grande concentration et en retenant l’information. La plupart des gens apprennent à lire quand ils sont jeunes, et on considère ensuite que c’est acquis. Kwik Reading reprend à partir de là et te guide vers le niveau supérieur."
+      },
+      {
+        "type": "p",
+        "content": "La promesse est simple : améliorer les quatre éléments clés de la lecture : la vitesse, la concentration, la compréhension et la rétention."
+      },
+      {
+        "type": "p",
+        "content": "La lecture est une compétence et, comme toute compétence, on peut la travailler et progresser. Tu peux entraîner ta lecture de manière délibérée, à l’aide de techniques précises."
+      },
+      {
+        "type": "p",
+        "content": "Le cours est conçu pour être suivi en 21 jours. Tu regardes des vidéos, puis tu pratiques en lisant un livre de ton choix. C’est progressif et très bien fait."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi j’ai suivi ce cours ?"
+      },
+      {
+        "type": "p",
+        "content": "Au début, je ne savais pas qu’il existait des techniques pour lire plus vite. Je ne voyais pas la lecture comme une compétence qu’on pouvait améliorer. Mais un jour, j’ai suivi un cours d’introduction à la lecture rapide par Jim Kwik, dans le cadre de mon abonnement à Impact Theory University. C’était tellement bien fait que j’ai décidé d’acheter Kwik Reading. Je m’intéresse surtout aux livres de non-fiction, et j’étais convaincu que ce cours m’aiderait à tirer davantage de ce que je lis."
+      },
+      {
+        "type": "h2",
+        "content": "Kwik Reading a-t-il tenu sa promesse ?"
+      },
+      {
+        "type": "p",
+        "content": "Absolument ! Non seulement je lisais plus vite, mais j’ai aussi appris à mieux me concentrer et à retenir l’information plus facilement. Depuis la fin du cours, je n’ai jamais arrêté de lire. Avec un peu d’entraînement, il est même possible de lire un livre par semaine. Lire plus vite, c’est aussi passer moins de temps pour acquérir la même quantité de connaissances — et le temps fait partie des rares choses qu’on ne peut pas récupérer."
+      },
+      {
+        "type": "p",
+        "content": "C’est sans doute l’un de mes meilleurs investissements, parce qu’il a transformé la lecture en une habitude régulière."
+      },
+      {
+        "type": "h2",
+        "content": "La lecture rapide tue-t-elle le plaisir de lire ?"
+      },
+      {
+        "type": "p",
+        "content": "Dans mon cas, ça a eu l’effet inverse. J’ai pris encore plus de plaisir à lire. Mais tu n’as pas besoin de tout lire en lecture rapide. C’est à toi de choisir où appliquer cette compétence, et elle brille particulièrement sur la non-fiction."
+      },
+      {
+        "type": "p",
+        "content": "Pour la non-fiction en particulier, la lecture rapide ouvre une approche plus souple. Tu peux survoler et n’extraire que ce qui t’est utile. Tu peux poser un livre qui n’apporte pas de valeur sans culpabiliser. Et appliquer concrètement 10-20 % d’un livre te fera avancer plus loin que de le terminer entièrement pour ne rien en faire ensuite."
+      },
+      {
+        "type": "p",
+        "content": "La lecture n’est que la première étape de l’accumulation de connaissances. La connaissance n’est qu’un pouvoir potentiel. L’objectif n’est pas de lire plus pour lire plus. C’est d’agir sur ce qu’on lit, d’une manière qui te soit bénéfique, à toi et à ton entourage."
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "Originally published in English. Translation assisted by AI for clarity. [Read the original →](/en/insights/kwik-reading-jim-kwik-retour-alex-lim)"
+      }
+    ],
+    "ja": [
+      {
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "Abbeal シニアソフトウェアエンジニア、アジアハブ・東京。日本在住3年、Next.js / React を専門とする。",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
+      },
+      {
+        "type": "h2",
+        "content": "Kwik Reading とは？"
+      },
+      {
+        "type": "p",
+        "content": "Kwik Reading は Jim Kwik によるオンラインコースで、高い集中力を保ち、情報を記憶しながら、より速く読めるようになることを助けてくれる。多くの人は若いころに読み方を学び、それで習得は完了したものと見なす。Kwik Reading はそこから引き継ぎ、次のレベルへと導いてくれる。"
+      },
+      {
+        "type": "p",
+        "content": "約束はシンプルだ。読書の4つの重要な要素 — 速度、集中力、理解、そして記憶 — を高めること。"
+      },
+      {
+        "type": "p",
+        "content": "読書はスキルであり、ほかのどんなスキルとも同じように、改善し、上達させることができる。具体的なテクニックを使って、意識的に読書を鍛えることができる。"
+      },
+      {
+        "type": "p",
+        "content": "このコースは21日間で取り組むよう設計されている。動画を見て、それから自分の選んだ本を読んで実践する。段階的で、とてもよくできている。"
+      },
+      {
+        "type": "h2",
+        "content": "なぜこのコースを受講したのか"
+      },
+      {
+        "type": "p",
+        "content": "最初は、より速く読むためのテクニックがあることを知らなかった。読書を、改善できるスキルとは見ていなかった。しかしある日、Impact Theory University の購読の一環として、Jim Kwik による速読の入門コースを受けた。それがあまりによくできていたので、Kwik Reading を購入することにした。私は主にノンフィクションの本を読むことに興味があり、このコースが読んだ内容からより多くを得る助けになると確信していた。"
+      },
+      {
+        "type": "h2",
+        "content": "Kwik Reading は約束を果たしたか？"
+      },
+      {
+        "type": "p",
+        "content": "間違いなく果たした！より速く読めるようになっただけでなく、より集中し、情報をより容易に記憶することも学んだ。コースを終えてから、私は読書をやめたことがない。少し訓練すれば、週に一冊読むことさえ可能だ。より速く読むということは、同じ量の知識を得るのにより少ない時間で済むということでもある。そして時間は、取り戻せない数少ないものの一つだ。"
+      },
+      {
+        "type": "p",
+        "content": "それはおそらく私の最良の投資の一つだ。読書を継続的な習慣に変えてくれたからだ。"
+      },
+      {
+        "type": "h2",
+        "content": "速読は読書の楽しみを奪うのか？"
+      },
+      {
+        "type": "p",
+        "content": "私の場合は、逆の効果があった。読書がさらに楽しくなった。とはいえ、すべてを速読する必要はない。このスキルをどこに適用するかは自分で選べるし、ノンフィクションで特に力を発揮する。"
+      },
+      {
+        "type": "p",
+        "content": "とりわけノンフィクションでは、速読はより柔軟なアプローチを可能にする。流し読みして、自分に関係のある部分だけを抜き出せる。価値をもたらさない本を、罪悪感なく置くこともできる。そして本の10〜20%ほどを具体的な行動に移すことは、一冊を最後まで読み切って、その後何もしないよりも、あなたをずっと先へ進めてくれる。"
+      },
+      {
+        "type": "p",
+        "content": "読書は、知識を蓄えるための最初の一歩にすぎない。知識は潜在的な力にすぎない。目的は、読むこと自体のためにより多く読むことではない。読んだことに基づいて、自分自身と周囲の人々のためになるかたちで行動することだ。"
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "Originally published in English. Translation assisted by AI for clarity. [Read the original →](/en/insights/kwik-reading-jim-kwik-retour-alex-lim)"
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "Senior Software Engineer chez Abbeal, Hub Asie · Tokyo. 3 ans au Japon, spécialisé Next.js / React.",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
+      },
+      {
+        "type": "h2",
+        "content": "Qu’est-ce que Kwik Reading ?"
+      },
+      {
+        "type": "p",
+        "content": "Kwik Reading est un cours en ligne de Jim Kwik qui aide à lire plus vite tout en gardant une grande concentration et en retenant l’information. La plupart des gens apprennent à lire quand ils sont jeunes, et on considère ensuite que c’est acquis. Kwik Reading reprend à partir de là et te guide vers le niveau supérieur."
+      },
+      {
+        "type": "p",
+        "content": "La promesse est simple : améliorer les quatre éléments clés de la lecture : la vitesse, la concentration, la compréhension et la rétention."
+      },
+      {
+        "type": "p",
+        "content": "La lecture est une compétence et, comme toute compétence, on peut la travailler et progresser. Tu peux entraîner ta lecture de manière délibérée, à l’aide de techniques précises."
+      },
+      {
+        "type": "p",
+        "content": "Le cours est conçu pour être suivi en 21 jours. Tu regardes des vidéos, puis tu pratiques en lisant un livre de ton choix. C’est progressif et très bien fait."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi j’ai suivi ce cours ?"
+      },
+      {
+        "type": "p",
+        "content": "Au début, je ne savais pas qu’il existait des techniques pour lire plus vite. Je ne voyais pas la lecture comme une compétence qu’on pouvait améliorer. Mais un jour, j’ai suivi un cours d’introduction à la lecture rapide par Jim Kwik, dans le cadre de mon abonnement à Impact Theory University. C’était tellement bien fait que j’ai décidé d’acheter Kwik Reading. Je m’intéresse surtout aux livres de non-fiction, et j’étais convaincu que ce cours m’aiderait à tirer davantage de ce que je lis."
+      },
+      {
+        "type": "h2",
+        "content": "Kwik Reading a-t-il tenu sa promesse ?"
+      },
+      {
+        "type": "p",
+        "content": "Absolument ! Non seulement je lisais plus vite, mais j’ai aussi appris à mieux me concentrer et à retenir l’information plus facilement. Depuis la fin du cours, je n’ai jamais arrêté de lire. Avec un peu d’entraînement, il est même possible de lire un livre par semaine. Lire plus vite, c’est aussi passer moins de temps pour acquérir la même quantité de connaissances — et le temps fait partie des rares choses qu’on ne peut pas récupérer."
+      },
+      {
+        "type": "p",
+        "content": "C’est sans doute l’un de mes meilleurs investissements, parce qu’il a transformé la lecture en une habitude régulière."
+      },
+      {
+        "type": "h2",
+        "content": "La lecture rapide tue-t-elle le plaisir de lire ?"
+      },
+      {
+        "type": "p",
+        "content": "Dans mon cas, ça a eu l’effet inverse. J’ai pris encore plus de plaisir à lire. Mais tu n’as pas besoin de tout lire en lecture rapide. C’est à toi de choisir où appliquer cette compétence, et elle brille particulièrement sur la non-fiction."
+      },
+      {
+        "type": "p",
+        "content": "Pour la non-fiction en particulier, la lecture rapide ouvre une approche plus souple. Tu peux survoler et n’extraire que ce qui t’est utile. Tu peux poser un livre qui n’apporte pas de valeur sans culpabiliser. Et appliquer concrètement 10-20 % d’un livre te fera avancer plus loin que de le terminer entièrement pour ne rien en faire ensuite."
+      },
+      {
+        "type": "p",
+        "content": "La lecture n’est que la première étape de l’accumulation de connaissances. La connaissance n’est qu’un pouvoir potentiel. L’objectif n’est pas de lire plus pour lire plus. C’est d’agir sur ce qu’on lit, d’une manière qui te soit bénéfique, à toi et à ton entourage."
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "Originally published in English. Translation assisted by AI for clarity. [Read the original →](/en/insights/kwik-reading-jim-kwik-retour-alex-lim)"
+      }
+    ]
   }
 }

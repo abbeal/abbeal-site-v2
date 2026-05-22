@@ -927,6 +927,58 @@ export const articles: Article[] = [
       "fr-ca": ARTICLE_BODIES["mythos-ia-cybersecurite-priorites-production-stephane-robin"]?.["fr-ca"],
     },
   },
+  // Article 22 — Kwik Reading (Jim Kwik), retour Alex Lim. 2e article guest
+  // d'Alex après « CSS for JavaScript Developers ». Course review, byline
+  // auteur en tête du body. Importé verbatim depuis le Notion d'Alex via
+  // scripts/pdf-to-article-blocks.py. EN canonique + traductions FR/JA/FR-CA.
+  {
+    slug: "kwik-reading-jim-kwik-retour-alex-lim",
+    featured: false,
+    tag: "Learning",
+    readTime: "4 min",
+    publishedAt: "2026-05-22",
+    title: {
+      fr: "Kwik Reading de Jim Kwik : un retour honnête",
+      en: "Kwik Reading by Jim Kwik: An Honest Review",
+      ja: "Jim Kwik の Kwik Reading — 率直なレビュー",
+      "fr-ca": "Kwik Reading de Jim Kwik : un retour honnête",
+    },
+    excerpt: {
+      fr: "Le senior engineer Alexandre Lim passe en revue Kwik Reading de Jim Kwik — le cours de 21 jours qui a transformé la lecture en une habitude plus rapide, plus nette et plus durable. Un retour honnête et concret.",
+      en: "Senior engineer Alexandre Lim reviews Jim Kwik's Kwik Reading — the 21-day course that turned reading into a faster, sharper, and more lasting habit. An honest, practical take.",
+      ja: "シニアエンジニアの Alexandre Lim が、Jim Kwik の Kwik Reading をレビュー。読書を、より速く、より鋭く、より定着する習慣へと変えた21日間のコース。率直で実践的な視点。",
+      "fr-ca": "Le senior engineer Alexandre Lim passe en revue Kwik Reading de Jim Kwik — le cours de 21 jours qui a transformé la lecture en une habitude plus rapide, plus nette et plus durable. Un retour honnête et concret.",
+    },
+    metaDescription: {
+      fr: "Le senior engineer Alexandre Lim livre un retour honnête sur le cours Kwik Reading de Jim Kwik : lecture rapide, concentration, rétention et habitude de lecture durable.",
+      en: "Senior engineer Alexandre Lim shares an honest review of Jim Kwik's Kwik Reading course: speed reading, focus, retention, and building a lasting reading habit.",
+      ja: "シニアエンジニアの Alexandre Lim が、Jim Kwik の Kwik Reading コースを率直にレビュー。速読、集中力、記憶、そして持続する読書習慣について。",
+      "fr-ca": "Le senior engineer Alexandre Lim livre un retour honnête sur le cours Kwik Reading de Jim Kwik : lecture rapide, concentration, rétention et habitude de lecture durable.",
+    },
+    keywords: {
+      fr: "Kwik Reading, Jim Kwik, lecture rapide, lire plus vite, compétence de lecture, concentration, compréhension, rétention, habitude de lecture, non-fiction, apprentissage",
+      en: "Kwik Reading, Jim Kwik, speed reading, reading faster, reading skill, focus, comprehension, retention, reading habit, non-fiction, learning",
+      ja: "Kwik Reading, Jim Kwik, 速読, 読書, 集中力, 理解, 記憶, 読書習慣, ノンフィクション, 学習",
+    },
+    faq: {
+      fr: [
+        { q: "Qu'est-ce que le cours Kwik Reading de Jim Kwik ?", a: "Un cours en ligne qui entraîne quatre éléments de la lecture — vitesse, concentration, compréhension et rétention — sur un programme progressif de 21 jours, mêlant vidéos et pratique sur un livre de ton choix." },
+        { q: "La lecture rapide nuit-elle à la compréhension ou au plaisir de lire ?", a: "Pas nécessairement. Appliquée de façon délibérée — surtout à la non-fiction — elle peut augmenter le plaisir de lire. C'est l'auteur qui choisit où utiliser cette compétence ; pas besoin de tout lire en lecture rapide." },
+        { q: "Le cours Kwik Reading en vaut-il la peine ?", a: "Pour quelqu'un qui lit régulièrement, surtout de la non-fiction, ça peut être l'un des meilleurs investissements : il installe une habitude de lecture régulière et permet d'extraire plus de connaissances en moins de temps." },
+      ],
+      en: [
+        { q: "What is Jim Kwik's Kwik Reading course?", a: "An online course that trains four elements of reading — speed, focus, comprehension, and retention — over a progressive 21-day program of videos plus practice on a book of your choice." },
+        { q: "Does speed reading hurt comprehension or the joy of reading?", a: "Not necessarily. Applied deliberately — especially to non-fiction — it can increase enjoyment. You choose where to use the skill; you don't have to speed-read everything." },
+        { q: "Is Kwik Reading worth it?", a: "For someone who reads regularly, especially non-fiction, it can be one of the better investments: it builds a consistent reading habit and lets you extract more knowledge in less time." },
+      ],
+    },
+    body: {
+      fr: ARTICLE_BODIES["kwik-reading-jim-kwik-retour-alex-lim"]?.fr ?? [],
+      en: ARTICLE_BODIES["kwik-reading-jim-kwik-retour-alex-lim"]?.en,
+      ja: ARTICLE_BODIES["kwik-reading-jim-kwik-retour-alex-lim"]?.ja,
+      "fr-ca": ARTICLE_BODIES["kwik-reading-jim-kwik-retour-alex-lim"]?.["fr-ca"],
+    },
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
