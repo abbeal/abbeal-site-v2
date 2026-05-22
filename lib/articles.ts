@@ -990,15 +990,26 @@ export const articles: Article[] = [
     publishedAt: "2026-05-22",
     title: {
       fr: "Montréal : le hub qui relie l'Europe et l'Amérique du Nord",
+      en: "Montréal: the hub linking Europe and North America",
+      ja: "モントリオール：欧州と北米をつなぐハブ",
+      "fr-ca": "Montréal : le hub qui relie l'Europe et l'Amérique du Nord",
     },
     excerpt: {
       fr: "Montréal n'est pas un bureau de représentation : c'est le maillon nord-américain qui rend le Follow-the-Sun complet. Pont horaire, équipes bilingues, conformité Loi 25.",
+      en: "Montréal is not a representative office: it's the North American link that completes Follow-the-Sun. Time-zone bridge, bilingual teams, Law 25 compliance.",
+      ja: "モントリオールは代表事務所ではない。Follow-the-Sun を完成させる北米の環だ。タイムゾーンの橋、バイリンガルのチーム、法律25への準拠。",
+      "fr-ca": "Montréal n'est pas un bureau de représentation : c'est le maillon nord-américain qui rend le Follow-the-Sun complet. Pont horaire, équipes bilingues, conformité Loi 25.",
     },
     metaDescription: {
       fr: "Pourquoi Abbeal opère un hub à Montréal : pont horaire avec l'Europe, équipes bilingues, conformité Loi 25. Le maillon nord-américain du modèle tri-géo.",
+      en: "Why Abbeal operates a hub in Montréal: time-zone bridge with Europe, bilingual teams, Law 25 compliance. The North American link of the tri-geo model.",
+      ja: "Abbeal がモントリオールにハブを構える理由：欧州とのタイムゾーンの橋、バイリンガルのチーム、法律25への準拠。トライジオモデルの北米の環。",
+      "fr-ca": "Pourquoi Abbeal opère un hub à Montréal : pont horaire avec l'Europe, équipes bilingues, conformité Loi 25. Le maillon nord-américain du modèle tri-géo.",
     },
     keywords: {
       fr: "ESN tech Montréal, hub tech Montréal, nearshore Amérique du Nord, partenaire tech nearshore, Follow-the-Sun, Loi 25, conformité Québec, développement logiciel Montréal",
+      en: "tech consulting Montréal, Montréal tech hub, nearshore North America, nearshore tech partner, Follow-the-Sun, Law 25, Québec compliance, software development Montréal",
+      ja: "モントリオール ITコンサルティング, ニアショア 北米, テックハブ モントリオール, Follow-the-Sun, 法律25, ケベック コンプライアンス",
     },
     body: {
       fr: ARTICLE_BODIES["montreal-hub-tech-pont-europe-amerique"]?.fr ?? [],
@@ -1017,15 +1028,26 @@ export const articles: Article[] = [
     publishedAt: "2026-05-22",
     title: {
       fr: "Choisir un partenaire d'ingénierie pour un projet tech au Japon",
+      en: "Choosing an engineering partner for a tech project in Japan",
+      ja: "日本のテックプロジェクトでエンジニアリングパートナーを選ぶには",
+      "fr-ca": "Choisir un partenaire d'ingénierie pour un projet tech au Japon",
     },
     excerpt: {
       fr: "Trois modèles pour faire développer un produit au Japon, six questions à poser avant de signer, les red flags. Le guide de décision pour choisir un partenaire d'ingénierie à Tokyo.",
+      en: "Three models for getting a product built in Japan, six questions to ask before signing, the red flags. The decision guide for choosing an engineering partner in Tokyo.",
+      ja: "日本で製品を開発させるための3つのモデル、契約前に問うべき6つの質問、レッドフラグ。東京でエンジニアリングパートナーを選ぶための意思決定ガイド。",
+      "fr-ca": "Trois modèles pour faire développer un produit au Japon, six questions à poser avant de signer, les red flags. Le guide de décision pour choisir un partenaire d'ingénierie à Tokyo.",
     },
     metaDescription: {
       fr: "Trois modèles pour faire développer un produit au Japon, six questions à poser, les red flags. Le guide de décision pour choisir un partenaire d'ingénierie à Tokyo.",
+      en: "Three models for getting a product built in Japan, six questions to ask, the red flags. The decision guide for choosing an engineering partner in Tokyo.",
+      ja: "日本で製品を開発させるための3つのモデル、問うべき6つの質問、レッドフラグ。東京でエンジニアリングパートナーを選ぶための意思決定ガイド。",
+      "fr-ca": "Trois modèles pour faire développer un produit au Japon, six questions à poser, les red flags. Le guide de décision pour choisir un partenaire d'ingénierie à Tokyo.",
     },
     keywords: {
       fr: "ESN tech Tokyo, développer un produit tech au Japon, tech consulting Tokyo, partenaire ingénierie Japon, studio tech Tokyo, choisir une ESN Japon",
+      en: "tech consulting Tokyo, develop a product in Japan, IT firm Tokyo, engineering partner Japan, tech studio Tokyo, choosing an IT partner in Japan",
+      ja: "東京 ITコンサルティング, 日本 製品開発, 開発パートナー 日本, 東京 テックスタジオ, ITベンダー選定 日本",
     },
     body: {
       fr: ARTICLE_BODIES["choisir-partenaire-tech-japon-guide"]?.fr ?? [],
@@ -1044,15 +1066,26 @@ export const articles: Article[] = [
     publishedAt: "2026-05-22",
     title: {
       fr: "ROS 2 en production : ce qu'une flotte de robots nous a appris",
+      en: "ROS 2 in production: what a robot fleet taught us",
+      ja: "本番環境の ROS 2：ロボットの群れが教えてくれたこと",
+      "fr-ca": "ROS 2 en production : ce qu'une flotte de robots nous a appris",
     },
     excerpt: {
       fr: "Six leçons de terrain sur ROS 2 en production : navigation autonome, vision, contraintes temps réel sur une flotte de robots industriels. Retour d'expérience du hub Tokyo.",
+      en: "Six lessons from the field on ROS 2 in production: autonomous navigation, vision, real-time constraints on a fleet of industrial robots. A field report from the Tokyo hub.",
+      ja: "本番環境の ROS 2 に関する現場からの6つの教訓：自律走行、ビジョン、産業用ロボットの群れにおけるリアルタイム制約。東京ハブからの現場レポート。",
+      "fr-ca": "Six leçons de terrain sur ROS 2 en production : navigation autonome, vision, contraintes temps réel sur une flotte de robots industriels. Retour d'expérience du hub Tokyo.",
     },
     metaDescription: {
       fr: "Six leçons de terrain sur ROS 2 en production : navigation autonome, vision, contraintes temps réel sur une flotte de robots industriels. Retour d'expérience du hub Tokyo.",
+      en: "Six lessons from the field on ROS 2 in production: autonomous navigation, vision, real-time constraints on a fleet of industrial robots. A field report from the Tokyo hub.",
+      ja: "本番環境の ROS 2 に関する現場からの6つの教訓：自律走行、ビジョン、産業用ロボットの群れにおけるリアルタイム制約。東京ハブからの現場レポート。",
+      "fr-ca": "Six leçons de terrain sur ROS 2 en production : navigation autonome, vision, contraintes temps réel sur une flotte de robots industriels. Retour d'expérience du hub Tokyo.",
     },
     keywords: {
       fr: "ROS 2 production, robotique industrielle, squad embarqué, navigation autonome, flotte de robots, temps réel, edge computing, ROS 2 DDS",
+      en: "ROS 2 production, industrial robotics, embedded squad, autonomous navigation, robot fleet, real-time, edge computing, ROS 2 DDS",
+      ja: "ROS 2 本番, 産業用ロボティクス, 組込みスクワッド, 自律走行, ロボット群, リアルタイム, エッジコンピューティング, ROS 2 DDS",
     },
     body: {
       fr: ARTICLE_BODIES["ros2-production-flotte-robots-lecons"]?.fr ?? [],
