@@ -10662,379 +10662,379 @@
     "fr": [
       {
         "type": "p",
-        "content": "If you've ever tried to assemble a senior engineering team that genuinely operates across Asia, Europe and North America, you know the math. Time zones don't overlap. Marketplaces hand you anonymous hourly rates. Recruiters in three different agencies sell you three different stacks. This is the playbook Abbeal uses to run that kind of team — and why the three-hub model (Paris · Montréal · Tokyo) is the unfair advantage we built for ourselves and our clients."
+        "content": "Si vous avez déjà essayé d'assembler une équipe d'ingénierie senior qui opère réellement à travers l'Asie, l'Europe et l'Amérique du Nord, vous connaissez le calcul. Les fuseaux horaires ne se chevauchent pas. Les marketplaces vous fournissent des taux horaires anonymes. Trois agences de recrutement dans trois pays différents vous vendent trois stacks différents. Voici le playbook qu'Abbeal utilise pour faire tourner ce genre d'équipe — et pourquoi le modèle à trois hubs (Paris · Montréal · Tokyo) est l'avantage structurel qu'on a construit pour nous-mêmes et pour nos clients."
       },
       {
         "type": "h2",
-        "content": "The problem with distributed engineering at scale"
+        "content": "Le problème de l'ingénierie distribuée à grande échelle"
       },
       {
         "type": "p",
-        "content": "Distributed engineering looks simple on paper. In practice, three things break it."
+        "content": "L'ingénierie distribuée a l'air simple sur le papier. En pratique, trois choses la cassent."
       },
       {
         "type": "list",
         "items": [
-          "Time-zone math. Asia opens when North America closes. Without a third pole, half the team waits on the other half. Standups become async statuses. Code review takes 24 hours. Incidents drag.",
-          "Anonymized talent. Marketplaces sell you \"a senior React engineer.\" You never meet the person until they're on your standup. The seniority claim is verified by a self-rated profile. Reliability is a coin flip.",
-          "Generalist recruitment. Recruiters in three different countries can't evaluate a senior backend candidate's actual judgment. They evaluate keywords."
+          "L'arithmétique des fuseaux horaires. L'Asie ouvre quand l'Amérique du Nord ferme. Sans un troisième pôle, la moitié de l'équipe attend l'autre moitié. Les standups deviennent des statuts async. La code review prend 24 heures. Les incidents traînent.",
+          "Le talent anonymisé. Les marketplaces vous vendent « un ingénieur React senior ». Vous ne rencontrez la personne que quand elle débarque sur votre standup. La séniorité revendiquée est vérifiée par un profil auto-noté. La fiabilité est un pile ou face.",
+          "Le recrutement généraliste. Des recruteurs dans trois pays différents ne peuvent pas évaluer le vrai jugement d'un candidat backend senior. Ils évaluent des mots-clés."
         ]
       },
       {
         "type": "h2",
-        "content": "Why senior, named engineers beat freelance marketplaces"
+        "content": "Pourquoi des ingénieurs seniors nommés battent les marketplaces freelance"
       },
       {
         "type": "p",
-        "content": "Marketplaces like Toptal, Turing, Arc.dev and We Work Remotely are useful for short, well-scoped freelance work. For a long-horizon engineering team, they fall short on three axes."
+        "content": "Les marketplaces comme Toptal, Turing, Arc.dev et We Work Remotely sont utiles pour des missions freelance courtes et bien cadrées. Pour une équipe d'ingénierie sur le long terme, elles échouent sur trois axes."
       },
       {
         "type": "list",
         "items": [
-          "Accountability. A marketplace contractor optimizes for their next gig. A named senior engineer hired into your stack optimizes for your codebase.",
-          "Continuity. Turnover on marketplaces is structural. Onboarding cost is paid by you, every time.",
-          "Senior judgment. The hard cases — incident response, architecture trade-offs, refactor vs. rewrite — need engineers who've made the mistakes already. Marketplaces don't filter for that."
+          "La responsabilité. Un contractor de marketplace optimise pour sa prochaine mission. Un ingénieur senior nommé, embauché dans votre stack, optimise pour votre codebase.",
+          "La continuité. Le turnover sur les marketplaces est structurel. Le coût d'onboarding, c'est vous qui le payez, à chaque fois.",
+          "Le jugement senior. Les cas durs — gestion d'incident, arbitrages d'architecture, refactor vs réécriture — ont besoin d'ingénieurs qui ont déjà fait les erreurs. Les marketplaces ne filtrent pas pour ça."
         ]
       },
       {
         "type": "p",
-        "content": "At Abbeal, every engineer staffed on a client team is named, profile-shared, and interview-validated by the client. No anonymous rate cards."
+        "content": "Chez Abbeal, chaque ingénieur staffé sur une équipe client est nommé, son profil est partagé, et il est validé en entretien par le client. Pas de tarifs anonymes."
       },
       {
         "type": "h2",
-        "content": "The three-hub model: Paris · Montréal · Tokyo"
+        "content": "Le modèle à trois hubs : Paris · Montréal · Tokyo"
       },
       {
         "type": "p",
-        "content": "Abbeal runs hubs in three cities chosen for their time-zone geometry, not their headcount cost."
+        "content": "Abbeal opère des hubs dans trois villes choisies pour leur géométrie horaire, pas pour leur coût salarial."
       },
       {
         "type": "list",
         "items": [
-          "Paris (HQ) — Europe. The largest hub, the seniority bench, the legal entity for European contracting.",
-          "Montréal — North America. Bilingual (French and English), Law 25 / GDPR-aligned, the bridge between European mornings and US West Coast afternoons.",
-          "Tokyo — Asia. Bilingual senior engineers, Abbeal KK as the Japanese legal entity, the entry point to Asian markets and the night-shift coverage no European hub can offer."
+          "Paris (siège) — Europe. Le plus grand hub, la profondeur de la séniorité, l'entité légale pour le contracting européen.",
+          "Montréal — Amérique du Nord. Bilingue (français et anglais), alignée Loi 25 / RGPD, le pont entre les matinées européennes et les après-midi de la côte ouest américaine.",
+          "Tokyo — Asie. Ingénieurs seniors bilingues, Abbeal KK comme entité légale japonaise, le point d'entrée des marchés asiatiques et la couverture des heures de nuit qu'aucun hub européen ne peut offrir."
         ]
       },
       {
         "type": "p",
-        "content": "This isn't \"we have an office there.\" Each hub has senior engineers on staff, a local legal entity, and full delivery capacity. A client team can be assembled across the three, or anchored in one with overflow in the others."
+        "content": "Ce n'est pas « on a un bureau là-bas ». Chaque hub a des ingénieurs seniors sur place, une entité légale locale, et une vraie capacité de delivery. Une équipe client peut être assemblée à travers les trois, ou ancrée dans un seul avec de l'overflow chez les autres."
       },
       {
         "type": "h2",
-        "content": "Follow-the-Sun in practice"
+        "content": "Follow-the-Sun en pratique"
       },
       {
         "type": "p",
-        "content": "Marketing decks love the term. In practice, real follow-the-sun needs three things."
+        "content": "Les decks marketing adorent le terme. En pratique, un vrai follow-the-sun a besoin de trois choses."
       },
       {
         "type": "list",
         "items": [
-          "Real overlap windows, not handoff dumps. A team across Paris, Montréal and Tokyo has about three hours overlap Paris–Montréal in the morning and three hours Montréal–Tokyo in the evening. Enough for synchronous decisions, never enough to require night shifts.",
-          "Async-first by default, sync when it matters. Decision logs, ADRs, written specs. Standups happen twice — once Asia–Europe, once Europe–Americas — same agenda.",
-          "Run-and-recover that follows the sun too. Production incidents at 3 a.m. Paris time get handled by the on-shift Montréal or Tokyo team in their working hours. Nobody gets paged out of bed."
+          "De vraies fenêtres de recouvrement, pas des handoff dumps. Une équipe entre Paris, Montréal et Tokyo a environ trois heures de recouvrement Paris–Montréal le matin, et trois heures Montréal–Tokyo le soir. Assez pour les décisions synchrones, jamais assez pour imposer des shifts de nuit.",
+          "L'async par défaut, le sync quand ça compte. Decision logs, ADRs, specs écrites. Les standups ont lieu deux fois — une Asie–Europe, une Europe–Amériques — même agenda.",
+          "Le run-and-recover qui suit le soleil aussi. Les incidents de prod à 3 h du matin heure de Paris sont gérés par l'équipe en shift à Montréal ou Tokyo, sur leurs heures de travail. Personne n'est réveillé en astreinte."
         ]
       },
       {
         "type": "h2",
-        "content": "How Abbeal sources senior engineers (engineer-led, not recruiter-led)"
+        "content": "Comment Abbeal source ses ingénieurs seniors (mené par des ingénieurs, pas par des recruteurs)"
       },
       {
         "type": "p",
-        "content": "The recruitment is done by engineers, not by recruiters. Concretely:"
+        "content": "Le recrutement est fait par des ingénieurs, pas par des recruteurs. Concrètement :"
       },
       {
         "type": "list",
         "items": [
-          "The technical interview is owned by a senior engineer from the relevant practice (web, AI, cloud, embedded).",
-          "A reference is taken with a previous senior peer — manager or peer-level, both count.",
-          "The candidate is rejected if the senior engineer wouldn't put them on their own team."
+          "L'entretien technique est tenu par un ingénieur senior de la practice concernée (web, IA, cloud, embarqué).",
+          "Une référence est prise auprès d'un pair senior précédent — manager ou pair, les deux comptent.",
+          "Le candidat est rejeté si l'ingénieur senior ne le mettrait pas dans sa propre équipe."
         ]
       },
       {
         "type": "p",
-        "content": "This is slow. About 1 candidate in 50 gets an offer. It's also why the team doesn't have a 30 % turnover problem."
+        "content": "C'est lent. Environ 1 candidat sur 50 reçoit une offre. C'est aussi pour ça que l'équipe n'a pas un problème de turnover à 30 %."
       },
       {
         "type": "h2",
-        "content": "Mobbeal — international mobility as a retention lever"
+        "content": "Mobbeal — la mobilité internationale comme levier de rétention"
       },
       {
         "type": "p",
-        "content": "Senior engineers leave for one of three reasons: boring work, bad team, or being stuck where they are. Mobbeal addresses the third one. Any Abbeal senior engineer can apply to move to another hub — Paris, Montréal or Tokyo — with Abbeal handling the visa, relocation and salary alignment for the destination market. More than 50 engineers have moved across hubs this way. The retention compounds: a senior who knows they can move in two years rarely leaves the company; they ride out the current project, then transfer."
+        "content": "Les ingénieurs seniors partent pour une de trois raisons : du boulot ennuyeux, une mauvaise équipe, ou être bloqué là où ils sont. Mobbeal s'occupe de la troisième. Tout ingénieur senior Abbeal peut postuler pour bouger vers un autre hub — Paris, Montréal ou Tokyo — Abbeal gérant le visa, la relocation et l'alignement salarial sur le marché de destination. Plus de 50 ingénieurs ont bougé entre les hubs par ce biais. La rétention se compose : un senior qui sait qu'il peut bouger dans deux ans quitte rarement la boîte ; il finit le projet en cours, puis transfère."
       },
       {
         "type": "h2",
-        "content": "The proof"
+        "content": "La preuve"
       },
       {
         "type": "p",
-        "content": "Three numbers that matter."
+        "content": "Trois chiffres qui comptent."
       },
       {
         "type": "list",
         "items": [
-          "150+ companies have run engineering work with Abbeal — from FinTech to industrial robotics, French / English / Japanese-speaking, from one-engineer assists to 100-person squads.",
-          "100+ senior engineers on the bench, named, with public profiles available on request.",
-          "50+ international moves via Mobbeal, all senior, all retained."
+          "150+ entreprises ont fait tourner du dev avec Abbeal — de la FinTech à la robotique industrielle, francophones / anglophones / japonophones, de l'appui d'un ingénieur unique à des squads de 100 personnes.",
+          "100+ ingénieurs seniors sur le banc, nommés, avec des profils publics disponibles sur demande.",
+          "50+ mobilités internationales via Mobbeal, toutes seniors, toutes retenues."
         ]
       },
       {
         "type": "p",
-        "content": "These are not vanity numbers. They're the scale at which the three-hub model actually compounds — below 50 engineers, follow-the-sun is theatre; above 50, it's a structural advantage you can sell."
+        "content": "Ce ne sont pas des chiffres de vanité. C'est l'échelle à partir de laquelle le modèle à trois hubs compose vraiment — en dessous de 50 ingénieurs, le follow-the-sun est du théâtre ; au-dessus de 50, c'est un avantage structurel qu'on peut vendre."
       }
     ],
     "ja": [
       {
         "type": "p",
-        "content": "If you've ever tried to assemble a senior engineering team that genuinely operates across Asia, Europe and North America, you know the math. Time zones don't overlap. Marketplaces hand you anonymous hourly rates. Recruiters in three different agencies sell you three different stacks. This is the playbook Abbeal uses to run that kind of team — and why the three-hub model (Paris · Montréal · Tokyo) is the unfair advantage we built for ourselves and our clients."
+        "content": "アジア、欧州、北米にまたがって本当に動くシニアエンジニアリングチームを組み立てようとしたことがあるなら、その計算はわかるはずだ。タイムゾーンは重ならない。マーケットプレイスは匿名の時間単価を渡してくる。3つの国の3つの別々の代理店が、3つの違うスタックを売ってくる。これは、Abbeal がそうしたチームを動かすために使っているプレイブックであり、なぜトライハブモデル（パリ・モントリオール・東京）が私たち自身と顧客のために構築した構造的な優位なのか、その理由だ。"
       },
       {
         "type": "h2",
-        "content": "The problem with distributed engineering at scale"
+        "content": "大規模な分散エンジニアリングの問題"
       },
       {
         "type": "p",
-        "content": "Distributed engineering looks simple on paper. In practice, three things break it."
+        "content": "分散エンジニアリングは紙の上では単純に見える。実際には、3つのものがそれを壊す。"
       },
       {
         "type": "list",
         "items": [
-          "Time-zone math. Asia opens when North America closes. Without a third pole, half the team waits on the other half. Standups become async statuses. Code review takes 24 hours. Incidents drag.",
-          "Anonymized talent. Marketplaces sell you \"a senior React engineer.\" You never meet the person until they're on your standup. The seniority claim is verified by a self-rated profile. Reliability is a coin flip.",
-          "Generalist recruitment. Recruiters in three different countries can't evaluate a senior backend candidate's actual judgment. They evaluate keywords."
+          "タイムゾーンの算数。北米が閉じるときにアジアが開く。第3の極がなければ、チームの半分が残り半分を待つ。スタンドアップは非同期のステータスになる。コードレビューに24時間かかる。インシデントは長引く。",
+          "匿名化された人材。マーケットプレイスは「シニアReactエンジニア」を売ってくる。その人物には、自分たちのスタンドアップに来るまで会えない。シニア性の主張は、自己評価のプロフィールで検証されている。信頼性はコイン投げだ。",
+          "ジェネラリストな採用。3つの異なる国にいる採用担当者は、シニアバックエンド候補者の本当の判断力を評価できない。彼らはキーワードを評価する。"
         ]
       },
       {
         "type": "h2",
-        "content": "Why senior, named engineers beat freelance marketplaces"
+        "content": "なぜ氏名つきのシニアエンジニアがフリーランスマーケットプレイスに勝るのか"
       },
       {
         "type": "p",
-        "content": "Marketplaces like Toptal, Turing, Arc.dev and We Work Remotely are useful for short, well-scoped freelance work. For a long-horizon engineering team, they fall short on three axes."
+        "content": "Toptal、Turing、Arc.dev、We Work Remotely のようなマーケットプレイスは、短期でスコープがはっきりしたフリーランス案件には有用だ。長期視点のエンジニアリングチームには、3つの軸で力不足になる。"
       },
       {
         "type": "list",
         "items": [
-          "Accountability. A marketplace contractor optimizes for their next gig. A named senior engineer hired into your stack optimizes for your codebase.",
-          "Continuity. Turnover on marketplaces is structural. Onboarding cost is paid by you, every time.",
-          "Senior judgment. The hard cases — incident response, architecture trade-offs, refactor vs. rewrite — need engineers who've made the mistakes already. Marketplaces don't filter for that."
+          "アカウンタビリティ。マーケットプレイスのコントラクターは次の案件のために最適化する。あなたのスタックに採用された氏名つきのシニアエンジニアは、あなたのコードベースのために最適化する。",
+          "継続性。マーケットプレイスでの離職は構造的なものだ。オンボーディングのコストは、毎回あなたが払うことになる。",
+          "シニアの判断力。難しいケース — インシデント対応、アーキテクチャのトレードオフ、リファクタかリライトか — は、すでに失敗を経験したエンジニアを必要とする。マーケットプレイスはそれをフィルタしない。"
         ]
       },
       {
         "type": "p",
-        "content": "At Abbeal, every engineer staffed on a client team is named, profile-shared, and interview-validated by the client. No anonymous rate cards."
+        "content": "Abbeal では、顧客チームにアサインされる各エンジニアは氏名つきで、プロフィールが共有され、顧客による面接で検証される。匿名の単価表はない。"
       },
       {
         "type": "h2",
-        "content": "The three-hub model: Paris · Montréal · Tokyo"
+        "content": "トライハブモデル：パリ・モントリオール・東京"
       },
       {
         "type": "p",
-        "content": "Abbeal runs hubs in three cities chosen for their time-zone geometry, not their headcount cost."
+        "content": "Abbeal はハブを3都市で運営しており、それらは人件費ではなくタイムゾーンの幾何学のために選ばれている。"
       },
       {
         "type": "list",
         "items": [
-          "Paris (HQ) — Europe. The largest hub, the seniority bench, the legal entity for European contracting.",
-          "Montréal — North America. Bilingual (French and English), Law 25 / GDPR-aligned, the bridge between European mornings and US West Coast afternoons.",
-          "Tokyo — Asia. Bilingual senior engineers, Abbeal KK as the Japanese legal entity, the entry point to Asian markets and the night-shift coverage no European hub can offer."
+          "パリ（本社）— 欧州。最大のハブ、シニアの層の厚さ、欧州での契約のための法人。",
+          "モントリオール — 北米。バイリンガル（フランス語と英語）、法律25 / GDPR 準拠、欧州の朝と米国西海岸の午後をつなぐ橋。",
+          "東京 — アジア。バイリンガルのシニアエンジニア、日本の法人としての Abbeal KK、アジア市場への入口、そして欧州ハブには提供できない夜間時間帯のカバー。"
         ]
       },
       {
         "type": "p",
-        "content": "This isn't \"we have an office there.\" Each hub has senior engineers on staff, a local legal entity, and full delivery capacity. A client team can be assembled across the three, or anchored in one with overflow in the others."
+        "content": "これは「そこにオフィスがあります」ではない。各ハブにはシニアエンジニアが在籍し、現地法人があり、本格的なデリバリー能力がある。顧客チームは3拠点にまたがって編成することも、1拠点に固定して他の拠点でオーバーフローさせることもできる。"
       },
       {
         "type": "h2",
-        "content": "Follow-the-Sun in practice"
+        "content": "Follow-the-Sun を実際にどう動かすか"
       },
       {
         "type": "p",
-        "content": "Marketing decks love the term. In practice, real follow-the-sun needs three things."
+        "content": "マーケティングのデックはこの用語を好む。実際の follow-the-sun には3つのものが必要だ。"
       },
       {
         "type": "list",
         "items": [
-          "Real overlap windows, not handoff dumps. A team across Paris, Montréal and Tokyo has about three hours overlap Paris–Montréal in the morning and three hours Montréal–Tokyo in the evening. Enough for synchronous decisions, never enough to require night shifts.",
-          "Async-first by default, sync when it matters. Decision logs, ADRs, written specs. Standups happen twice — once Asia–Europe, once Europe–Americas — same agenda.",
-          "Run-and-recover that follows the sun too. Production incidents at 3 a.m. Paris time get handled by the on-shift Montréal or Tokyo team in their working hours. Nobody gets paged out of bed."
+          "本当の重なりの時間帯。引き継ぎの投げ出しではなく。パリ、モントリオール、東京にまたがるチームには、朝にパリ・モントリオール間で約3時間、夕方にモントリオール・東京間で約3時間の重なりがある。同期的な判断には十分で、夜勤を強いるほどではない。",
+          "デフォルトは非同期、必要なときに同期。Decision logs、ADRs、書かれた仕様。スタンドアップは2回行われる — アジア・欧州で1回、欧州・アメリカ大陸で1回 — 同じアジェンダで。",
+          "Run-and-recover も太陽を追う。パリ時間の朝3時の本番インシデントは、シフト中のモントリオールまたは東京のチームが、自分たちの勤務時間内に対応する。誰もベッドから呼び出されない。"
         ]
       },
       {
         "type": "h2",
-        "content": "How Abbeal sources senior engineers (engineer-led, not recruiter-led)"
+        "content": "Abbeal はシニアエンジニアをどう採用するか（採用担当者ではなくエンジニア主導で）"
       },
       {
         "type": "p",
-        "content": "The recruitment is done by engineers, not by recruiters. Concretely:"
+        "content": "採用は、採用担当者ではなく、エンジニアによって行われる。具体的には："
       },
       {
         "type": "list",
         "items": [
-          "The technical interview is owned by a senior engineer from the relevant practice (web, AI, cloud, embedded).",
-          "A reference is taken with a previous senior peer — manager or peer-level, both count.",
-          "The candidate is rejected if the senior engineer wouldn't put them on their own team."
+          "技術面接は、該当する practice（Web、AI、クラウド、組み込み）のシニアエンジニアが担当する。",
+          "前職のシニアの同僚 — マネージャーでもピアでも、両方が対象 — からリファレンスを取る。",
+          "シニアエンジニアが自分のチームに入れたくない候補者は不合格になる。"
         ]
       },
       {
         "type": "p",
-        "content": "This is slow. About 1 candidate in 50 gets an offer. It's also why the team doesn't have a 30 % turnover problem."
+        "content": "これは遅い。約50人に1人の候補者がオファーを受け取る。チームに30%の離職率の問題がない理由でもある。"
       },
       {
         "type": "h2",
-        "content": "Mobbeal — international mobility as a retention lever"
+        "content": "Mobbeal — リテンションのてことしての国際モビリティ"
       },
       {
         "type": "p",
-        "content": "Senior engineers leave for one of three reasons: boring work, bad team, or being stuck where they are. Mobbeal addresses the third one. Any Abbeal senior engineer can apply to move to another hub — Paris, Montréal or Tokyo — with Abbeal handling the visa, relocation and salary alignment for the destination market. More than 50 engineers have moved across hubs this way. The retention compounds: a senior who knows they can move in two years rarely leaves the company; they ride out the current project, then transfer."
+        "content": "シニアエンジニアが辞める理由は3つのうちの1つだ：退屈な仕事、悪いチーム、あるいはいる場所に縛られていること。Mobbeal は3つ目に対処する。Abbeal のシニアエンジニアは誰でも、他のハブ — パリ、モントリオール、東京 — への異動を申請でき、Abbeal が目的地市場のビザ、引っ越し、給与調整を扱う。50人以上のエンジニアがこの方法でハブ間を移動してきた。リテンションは複利的に効く：2年以内に移動できることを知っているシニアは、めったに会社を辞めない。現在のプロジェクトを最後まで見届け、そして転勤する。"
       },
       {
         "type": "h2",
-        "content": "The proof"
+        "content": "その証拠"
       },
       {
         "type": "p",
-        "content": "Three numbers that matter."
+        "content": "重要な3つの数字。"
       },
       {
         "type": "list",
         "items": [
-          "150+ companies have run engineering work with Abbeal — from FinTech to industrial robotics, French / English / Japanese-speaking, from one-engineer assists to 100-person squads.",
-          "100+ senior engineers on the bench, named, with public profiles available on request.",
-          "50+ international moves via Mobbeal, all senior, all retained."
+          "150社以上が Abbeal と一緒にエンジニアリングを動かしてきた — フィンテックから産業用ロボティクスまで、フランス語 / 英語 / 日本語話者、エンジニア1名の支援から100人のスクワッドまで。",
+          "100人以上のシニアエンジニアがベンチにいる。氏名つきで、リクエストに応じて公開プロフィールが提供できる。",
+          "50回以上の国際的な異動が Mobbeal を通じて、すべてシニアで、すべて在籍維持。"
         ]
       },
       {
         "type": "p",
-        "content": "These are not vanity numbers. They're the scale at which the three-hub model actually compounds — below 50 engineers, follow-the-sun is theatre; above 50, it's a structural advantage you can sell."
+        "content": "これらは虚栄の数字ではない。トライハブモデルが本当に複利的に効き始めるスケールだ — エンジニア50人未満では follow-the-sun はパフォーマンスにすぎず、50人を超えると、それは売り物にできる構造的な優位になる。"
       }
     ],
     "fr-ca": [
       {
         "type": "p",
-        "content": "If you've ever tried to assemble a senior engineering team that genuinely operates across Asia, Europe and North America, you know the math. Time zones don't overlap. Marketplaces hand you anonymous hourly rates. Recruiters in three different agencies sell you three different stacks. This is the playbook Abbeal uses to run that kind of team — and why the three-hub model (Paris · Montréal · Tokyo) is the unfair advantage we built for ourselves and our clients."
+        "content": "Si vous avez déjà essayé d'assembler une équipe d'ingénierie senior qui opère réellement à travers l'Asie, l'Europe et l'Amérique du Nord, vous connaissez le calcul. Les fuseaux horaires ne se chevauchent pas. Les marketplaces vous fournissent des taux horaires anonymes. Trois agences de recrutement dans trois pays différents vous vendent trois stacks différents. Voici le playbook qu'Abbeal utilise pour faire tourner ce genre d'équipe — et pourquoi le modèle à trois hubs (Paris · Montréal · Tokyo) est l'avantage structurel qu'on a construit pour nous-mêmes et pour nos clients."
       },
       {
         "type": "h2",
-        "content": "The problem with distributed engineering at scale"
+        "content": "Le problème de l'ingénierie distribuée à grande échelle"
       },
       {
         "type": "p",
-        "content": "Distributed engineering looks simple on paper. In practice, three things break it."
+        "content": "L'ingénierie distribuée a l'air simple sur le papier. En pratique, trois choses la cassent."
       },
       {
         "type": "list",
         "items": [
-          "Time-zone math. Asia opens when North America closes. Without a third pole, half the team waits on the other half. Standups become async statuses. Code review takes 24 hours. Incidents drag.",
-          "Anonymized talent. Marketplaces sell you \"a senior React engineer.\" You never meet the person until they're on your standup. The seniority claim is verified by a self-rated profile. Reliability is a coin flip.",
-          "Generalist recruitment. Recruiters in three different countries can't evaluate a senior backend candidate's actual judgment. They evaluate keywords."
+          "L'arithmétique des fuseaux horaires. L'Asie ouvre quand l'Amérique du Nord ferme. Sans un troisième pôle, la moitié de l'équipe attend l'autre moitié. Les standups deviennent des statuts async. La code review prend 24 heures. Les incidents traînent.",
+          "Le talent anonymisé. Les marketplaces vous vendent « un ingénieur React senior ». Vous ne rencontrez la personne que quand elle débarque sur votre standup. La séniorité revendiquée est vérifiée par un profil auto-noté. La fiabilité est un pile ou face.",
+          "Le recrutement généraliste. Des recruteurs dans trois pays différents ne peuvent pas évaluer le vrai jugement d'un candidat backend senior. Ils évaluent des mots-clés."
         ]
       },
       {
         "type": "h2",
-        "content": "Why senior, named engineers beat freelance marketplaces"
+        "content": "Pourquoi des ingénieurs seniors nommés battent les marketplaces freelance"
       },
       {
         "type": "p",
-        "content": "Marketplaces like Toptal, Turing, Arc.dev and We Work Remotely are useful for short, well-scoped freelance work. For a long-horizon engineering team, they fall short on three axes."
+        "content": "Les marketplaces comme Toptal, Turing, Arc.dev et We Work Remotely sont utiles pour des missions freelance courtes et bien cadrées. Pour une équipe d'ingénierie sur le long terme, elles échouent sur trois axes."
       },
       {
         "type": "list",
         "items": [
-          "Accountability. A marketplace contractor optimizes for their next gig. A named senior engineer hired into your stack optimizes for your codebase.",
-          "Continuity. Turnover on marketplaces is structural. Onboarding cost is paid by you, every time.",
-          "Senior judgment. The hard cases — incident response, architecture trade-offs, refactor vs. rewrite — need engineers who've made the mistakes already. Marketplaces don't filter for that."
+          "La responsabilité. Un contractor de marketplace optimise pour sa prochaine mission. Un ingénieur senior nommé, embauché dans votre stack, optimise pour votre codebase.",
+          "La continuité. Le turnover sur les marketplaces est structurel. Le coût d'onboarding, c'est vous qui le payez, à chaque fois.",
+          "Le jugement senior. Les cas durs — gestion d'incident, arbitrages d'architecture, refactor vs réécriture — ont besoin d'ingénieurs qui ont déjà fait les erreurs. Les marketplaces ne filtrent pas pour ça."
         ]
       },
       {
         "type": "p",
-        "content": "At Abbeal, every engineer staffed on a client team is named, profile-shared, and interview-validated by the client. No anonymous rate cards."
+        "content": "Chez Abbeal, chaque ingénieur staffé sur une équipe client est nommé, son profil est partagé, et il est validé en entretien par le client. Pas de tarifs anonymes."
       },
       {
         "type": "h2",
-        "content": "The three-hub model: Paris · Montréal · Tokyo"
+        "content": "Le modèle à trois hubs : Paris · Montréal · Tokyo"
       },
       {
         "type": "p",
-        "content": "Abbeal runs hubs in three cities chosen for their time-zone geometry, not their headcount cost."
+        "content": "Abbeal opère des hubs dans trois villes choisies pour leur géométrie horaire, pas pour leur coût salarial."
       },
       {
         "type": "list",
         "items": [
-          "Paris (HQ) — Europe. The largest hub, the seniority bench, the legal entity for European contracting.",
-          "Montréal — North America. Bilingual (French and English), Law 25 / GDPR-aligned, the bridge between European mornings and US West Coast afternoons.",
-          "Tokyo — Asia. Bilingual senior engineers, Abbeal KK as the Japanese legal entity, the entry point to Asian markets and the night-shift coverage no European hub can offer."
+          "Paris (siège) — Europe. Le plus grand hub, la profondeur de la séniorité, l'entité légale pour le contracting européen.",
+          "Montréal — Amérique du Nord. Bilingue (français et anglais), alignée Loi 25 / RGPD, le pont entre les matinées européennes et les après-midi de la côte ouest américaine.",
+          "Tokyo — Asie. Ingénieurs seniors bilingues, Abbeal KK comme entité légale japonaise, le point d'entrée des marchés asiatiques et la couverture des heures de nuit qu'aucun hub européen ne peut offrir."
         ]
       },
       {
         "type": "p",
-        "content": "This isn't \"we have an office there.\" Each hub has senior engineers on staff, a local legal entity, and full delivery capacity. A client team can be assembled across the three, or anchored in one with overflow in the others."
+        "content": "Ce n'est pas « on a un bureau là-bas ». Chaque hub a des ingénieurs seniors sur place, une entité légale locale, et une vraie capacité de delivery. Une équipe client peut être assemblée à travers les trois, ou ancrée dans un seul avec de l'overflow chez les autres."
       },
       {
         "type": "h2",
-        "content": "Follow-the-Sun in practice"
+        "content": "Follow-the-Sun en pratique"
       },
       {
         "type": "p",
-        "content": "Marketing decks love the term. In practice, real follow-the-sun needs three things."
+        "content": "Les decks marketing adorent le terme. En pratique, un vrai follow-the-sun a besoin de trois choses."
       },
       {
         "type": "list",
         "items": [
-          "Real overlap windows, not handoff dumps. A team across Paris, Montréal and Tokyo has about three hours overlap Paris–Montréal in the morning and three hours Montréal–Tokyo in the evening. Enough for synchronous decisions, never enough to require night shifts.",
-          "Async-first by default, sync when it matters. Decision logs, ADRs, written specs. Standups happen twice — once Asia–Europe, once Europe–Americas — same agenda.",
-          "Run-and-recover that follows the sun too. Production incidents at 3 a.m. Paris time get handled by the on-shift Montréal or Tokyo team in their working hours. Nobody gets paged out of bed."
+          "De vraies fenêtres de recouvrement, pas des handoff dumps. Une équipe entre Paris, Montréal et Tokyo a environ trois heures de recouvrement Paris–Montréal le matin, et trois heures Montréal–Tokyo le soir. Assez pour les décisions synchrones, jamais assez pour imposer des shifts de nuit.",
+          "L'async par défaut, le sync quand ça compte. Decision logs, ADRs, specs écrites. Les standups ont lieu deux fois — une Asie–Europe, une Europe–Amériques — même agenda.",
+          "Le run-and-recover qui suit le soleil aussi. Les incidents de prod à 3 h du matin heure de Paris sont gérés par l'équipe en shift à Montréal ou Tokyo, sur leurs heures de travail. Personne n'est réveillé en astreinte."
         ]
       },
       {
         "type": "h2",
-        "content": "How Abbeal sources senior engineers (engineer-led, not recruiter-led)"
+        "content": "Comment Abbeal source ses ingénieurs seniors (mené par des ingénieurs, pas par des recruteurs)"
       },
       {
         "type": "p",
-        "content": "The recruitment is done by engineers, not by recruiters. Concretely:"
+        "content": "Le recrutement est fait par des ingénieurs, pas par des recruteurs. Concrètement :"
       },
       {
         "type": "list",
         "items": [
-          "The technical interview is owned by a senior engineer from the relevant practice (web, AI, cloud, embedded).",
-          "A reference is taken with a previous senior peer — manager or peer-level, both count.",
-          "The candidate is rejected if the senior engineer wouldn't put them on their own team."
+          "L'entretien technique est tenu par un ingénieur senior de la practice concernée (web, IA, cloud, embarqué).",
+          "Une référence est prise auprès d'un pair senior précédent — manager ou pair, les deux comptent.",
+          "Le candidat est rejeté si l'ingénieur senior ne le mettrait pas dans sa propre équipe."
         ]
       },
       {
         "type": "p",
-        "content": "This is slow. About 1 candidate in 50 gets an offer. It's also why the team doesn't have a 30 % turnover problem."
+        "content": "C'est lent. Environ 1 candidat sur 50 reçoit une offre. C'est aussi pour ça que l'équipe n'a pas un problème de turnover à 30 %."
       },
       {
         "type": "h2",
-        "content": "Mobbeal — international mobility as a retention lever"
+        "content": "Mobbeal — la mobilité internationale comme levier de rétention"
       },
       {
         "type": "p",
-        "content": "Senior engineers leave for one of three reasons: boring work, bad team, or being stuck where they are. Mobbeal addresses the third one. Any Abbeal senior engineer can apply to move to another hub — Paris, Montréal or Tokyo — with Abbeal handling the visa, relocation and salary alignment for the destination market. More than 50 engineers have moved across hubs this way. The retention compounds: a senior who knows they can move in two years rarely leaves the company; they ride out the current project, then transfer."
+        "content": "Les ingénieurs seniors partent pour une de trois raisons : du boulot ennuyeux, une mauvaise équipe, ou être bloqué là où ils sont. Mobbeal s'occupe de la troisième. Tout ingénieur senior Abbeal peut postuler pour bouger vers un autre hub — Paris, Montréal ou Tokyo — Abbeal gérant le visa, la relocation et l'alignement salarial sur le marché de destination. Plus de 50 ingénieurs ont bougé entre les hubs par ce biais. La rétention se compose : un senior qui sait qu'il peut bouger dans deux ans quitte rarement la boîte ; il finit le projet en cours, puis transfère."
       },
       {
         "type": "h2",
-        "content": "The proof"
+        "content": "La preuve"
       },
       {
         "type": "p",
-        "content": "Three numbers that matter."
+        "content": "Trois chiffres qui comptent."
       },
       {
         "type": "list",
         "items": [
-          "150+ companies have run engineering work with Abbeal — from FinTech to industrial robotics, French / English / Japanese-speaking, from one-engineer assists to 100-person squads.",
-          "100+ senior engineers on the bench, named, with public profiles available on request.",
-          "50+ international moves via Mobbeal, all senior, all retained."
+          "150+ entreprises ont fait tourner du dev avec Abbeal — de la FinTech à la robotique industrielle, francophones / anglophones / japonophones, de l'appui d'un ingénieur unique à des squads de 100 personnes.",
+          "100+ ingénieurs seniors sur le banc, nommés, avec des profils publics disponibles sur demande.",
+          "50+ mobilités internationales via Mobbeal, toutes seniors, toutes retenues."
         ]
       },
       {
         "type": "p",
-        "content": "These are not vanity numbers. They're the scale at which the three-hub model actually compounds — below 50 engineers, follow-the-sun is theatre; above 50, it's a structural advantage you can sell."
+        "content": "Ce ne sont pas des chiffres de vanité. C'est l'échelle à partir de laquelle le modèle à trois hubs compose vraiment — en dessous de 50 ingénieurs, le follow-the-sun est du théâtre ; au-dessus de 50, c'est un avantage structurel qu'on peut vendre."
       }
     ]
   }
