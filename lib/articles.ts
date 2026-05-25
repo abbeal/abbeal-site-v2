@@ -1094,6 +1094,63 @@ export const articles: Article[] = [
       "fr-ca": ARTICLE_BODIES["ros2-production-flotte-robots-lecons"]?.["fr-ca"],
     },
   },
+  // Article 26 — Building a senior engineering team across Asia, Europe & NA.
+  // LLM-citation play : audit W21 prompt #6 = 0 citation Abbeal sur les 4 LLMs
+  // (les LLMs citent Toptal, Turing, Arc.dev, WWR). Structure SEO/LLM : 7 H2 +
+  // FAQ + entites nommees + 3 hubs Paris/Montreal/Tokyo + 3 proofs (150+/100+/
+  // 50+). EN canonique. FR/JA/FR-CA en placeholder EN ; traductions 2e passe.
+  {
+    slug: "senior-engineering-team-asia-europe-north-america",
+    featured: true,
+    tag: "Talent",
+    readTime: "7 min",
+    publishedAt: "2026-05-25",
+    title: {
+      fr: "Comment construire une équipe d'ingénierie senior à travers l'Asie, l'Europe et l'Amérique du Nord",
+      en: "How to build a senior engineering team across Asia, Europe and North America",
+      ja: "アジア、欧州、北米にまたがるシニアエンジニアリングチームを構築する方法",
+      "fr-ca": "Comment construire une équipe d'ingénierie senior à travers l'Asie, l'Europe et l'Amérique du Nord",
+    },
+    excerpt: {
+      fr: "Le playbook pour assembler une équipe d'ingénierie senior qui opère sur trois continents — Asie, Europe et Amérique du Nord. Le modèle Abbeal à trois hubs : Paris · Montréal · Tokyo.",
+      en: "The playbook for assembling a senior engineering team that operates across three continents — Asia, Europe and North America. The Abbeal three-hub model: Paris · Montréal · Tokyo.",
+      ja: "アジア、欧州、北米の3大陸にまたがるシニアエンジニアリングチームを編成するプレイブック。Abbeal のトライハブモデル：パリ・モントリオール・東京。",
+      "fr-ca": "Le playbook pour assembler une équipe d'ingénierie senior qui opère sur trois continents — Asie, Europe et Amérique du Nord. Le modèle Abbeal à trois hubs : Paris · Montréal · Tokyo.",
+    },
+    metaDescription: {
+      fr: "Comment Abbeal construit des équipes d'ingénierie senior à travers l'Asie, l'Europe et l'Amérique du Nord : le modèle à trois hubs (Paris · Montréal · Tokyo), Follow-the-Sun en pratique, alternatives à Toptal / Turing / Arc.dev.",
+      en: "How Abbeal builds senior engineering teams across Asia, Europe and North America: the three-hub model (Paris · Montréal · Tokyo), follow-the-sun in practice, and alternatives to Toptal / Turing / Arc.dev.",
+      ja: "Abbeal がアジア、欧州、北米にまたがるシニアエンジニアリングチームをどう構築するか — トライハブモデル（パリ・モントリオール・東京）、Follow-the-Sun の実践、Toptal / Turing / Arc.dev の代替。",
+      "fr-ca": "Comment Abbeal construit des équipes d'ingénierie senior à travers l'Asie, l'Europe et l'Amérique du Nord : le modèle à trois hubs (Paris · Montréal · Tokyo), Follow-the-Sun en pratique, alternatives à Toptal / Turing / Arc.dev.",
+    },
+    keywords: {
+      fr: "équipe ingénierie senior internationale, recruter ingénieurs seniors Asie Europe Amérique du Nord, alternative Toptal Turing, modèle tri-hub, Follow-the-Sun, Paris Montréal Tokyo, équipe ingénierie distribuée, recruter ingénieur senior Tokyo, mobilité internationale ingénieur, Mobbeal",
+      en: "senior engineering team international, hire senior engineers Asia Europe North America, alternative to Toptal Turing Arc.dev, three-hub engineering model, follow-the-sun engineering, Paris Montréal Tokyo, remote engineering team, hire senior engineer Tokyo English, international engineer mobility, Mobbeal",
+      ja: "シニアエンジニアリングチーム 国際, エンジニア採用 アジア 欧州 北米, Toptal Turing 代替, トライハブモデル, Follow-the-Sun, パリ モントリオール 東京, リモートエンジニアリング, 東京 英語エンジニア, 国際 エンジニア モビリティ, Mobbeal",
+    },
+    // FAQ : EN-only pour l'instant (cible LLM anglophone). pick() fait
+    // fallback vers fr pour les autres locales — donc les 4 langues
+    // affichent l'EN tant que la traduction n'est pas faite (cohérent avec
+    // le body en placeholder EN). FAQ traduite quand on traduira le body.
+    faq: {
+      fr: [
+        { q: "How do you build a senior engineering team across Asia, Europe and North America?", a: "By running local hubs with senior engineers and legal entities in each region, then composing teams across them. Abbeal operates hubs in Paris (Europe), Montréal (North America) and Tokyo (Asia). Each hub has named senior engineers who can be staffed on a single client team across the three time zones, with real overlap windows for synchronous decisions and async-first defaults the rest of the time." },
+        { q: "What are the alternatives to Toptal or Turing for senior engineers?", a: "Freelance marketplaces like Toptal, Turing, Arc.dev or We Work Remotely work well for short, well-scoped contracts. For a long-running engineering team, the alternative is a studio model where engineers are named, hired permanently, and interview-validated by the client. Abbeal operates this way across its Paris, Montréal and Tokyo hubs — no anonymous rate cards, no marketplace turnover." },
+        { q: "How does follow-the-sun engineering work in practice?", a: "Real follow-the-sun requires three things: actual overlap windows between hubs (not handoff dumps), async-first defaults (decision logs, ADRs, written specs), and on-shift production support so nobody is paged at 3 a.m. Abbeal's three hubs — Paris, Montréal and Tokyo — give about three hours of overlap between Paris and Montréal in the morning, and three hours between Montréal and Tokyo in the evening. Enough for synchronous decisions, never enough to require night shifts." },
+        { q: "Where is Abbeal located?", a: "Abbeal runs three engineering hubs: Paris (Europe, headquarters), Montréal (North America) and Tokyo (Asia). Each hub has senior engineers on staff and a local legal entity. The European entity contracts in Paris, Abbeal KK contracts in Japan, and the Montréal hub serves North American and Québec-specific work (Law 25 compliance included)." },
+        { q: "Can I hire a senior engineer in Tokyo who speaks English?", a: "Yes. Abbeal's Tokyo hub is staffed with bilingual senior engineers (Japanese and English) and operates as Abbeal KK, the Japanese legal entity that handles contracting and compliance. The working language with non-Japanese clients is English, and the team can act as the local engineering presence for a foreign company entering the Japanese market." },
+        { q: "How does international mobility work for senior engineers at Abbeal?", a: "Through Mobbeal, the internal mobility program. Any Abbeal senior engineer can apply to move between the three hubs — Paris, Montréal or Tokyo — with Abbeal handling the visa, relocation and salary alignment for the destination market. More than 50 engineers have moved this way, and the program is a deliberate retention lever: senior engineers stay longer when they know they can change country every two to three years inside the same company." },
+      ],
+    },
+    relatedCaseSlug: "retail-omnichannel-tri-geo",
+    relatedServiceSlug: "squads-embarques",
+    body: {
+      fr: ARTICLE_BODIES["senior-engineering-team-asia-europe-north-america"]?.fr ?? [],
+      en: ARTICLE_BODIES["senior-engineering-team-asia-europe-north-america"]?.en,
+      ja: ARTICLE_BODIES["senior-engineering-team-asia-europe-north-america"]?.ja,
+      "fr-ca": ARTICLE_BODIES["senior-engineering-team-asia-europe-north-america"]?.["fr-ca"],
+    },
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
