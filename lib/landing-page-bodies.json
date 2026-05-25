@@ -556,6 +556,26 @@
         },
         {
           "type": "h2",
+          "content": "Trois types d'acteurs à Tokyo, trois trade-offs"
+        },
+        {
+          "type": "p",
+          "content": "Quand une entreprise occidentale veut développer un produit tech au Japon, elle se retrouve face à trois familles d'acteurs. Chacune a sa propre logique."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Les grands SIer japonais (NTT Data, Hitachi Solutions, Nomura Research Institute…). Connaissance profonde du marché, processus très formels, langue de travail = japonais. Adapté si vous opérez déjà localement avec une équipe japonaise interne. Frictionnel si vos sponsors et tech leads sont à Paris ou New York.",
+            "Les studios produit / agences digitales bilingues à Tokyo (Tokyo Techies, Code Chrysalis, plusieurs studios indépendants). Anglais + japonais, méthode plus agile, focus produit. Adaptés si votre projet est cadré et autonome. Limite : peu de capacité à scaler au-delà de 5–10 personnes, et présence opérationnelle hors Tokyo souvent inexistante.",
+            "Les ESN bilingues internationales avec un hub Tokyo (Abbeal en fait partie). Couvrent l'overlap horaire Asie–Europe ou Asie–Amériques, contractent via une entité locale (Abbeal KK), et peuvent staffer à la fois à Tokyo et depuis vos autres bureaux. Adapté si vous voulez une équipe synchronisée avec vos équipes occidentales sans renoncer à la présence locale."
+          ]
+        },
+        {
+          "type": "p",
+          "content": "Aucune de ces trois familles n'est « meilleure » — le bon choix dépend du projet. Pour une grille de décision en six questions et une comparaison plus profonde, lire [le guide « Choisir un partenaire d'ingénierie pour un projet tech au Japon »](/fr/insights/choisir-partenaire-tech-japon-guide)."
+        },
+        {
+          "type": "h2",
           "content": "Le hub Tokyo Abbeal : 8 ans d'opération à Higashi-Azabu"
         },
         {
@@ -676,6 +696,26 @@
             "Mandatory physical presence: no tier-1 Japanese client (bank, insurance, FinTech) accepts a 100% remote project without on-site Tamachi/Otemachi 2 days a week minimum",
             "JFSA compliance: for any financial project, the team must be identifiable, traceable, and operate from Japanese soil with a local entity"
           ]
+        },
+        {
+          "type": "h2",
+          "content": "Three families of actors in Tokyo, three trade-offs"
+        },
+        {
+          "type": "p",
+          "content": "When a Western company wants to build a tech product in Japan, it faces three families of actors. Each has its own logic."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Large Japanese SIers (NTT Data, Hitachi Solutions, Nomura Research Institute…). Deep market knowledge, very formal processes, working language is Japanese. Fits if you already operate locally with an internal Japanese team. Friction if your sponsors and tech leads are in Paris or New York.",
+            "Bilingual product studios and digital agencies in Tokyo (Tokyo Techies, Code Chrysalis, several independent studios). English plus Japanese, more agile method, product focus. Fits if your project is well-scoped and autonomous. Limit: little capacity to scale beyond 5–10 people, and operational presence outside Tokyo is often non-existent.",
+            "International bilingual IT consulting firms with a Tokyo hub (Abbeal is one of them). Cover the time-zone overlap Asia–Europe or Asia–Americas, contract via a local entity (Abbeal KK), and can staff both in Tokyo and from your other offices. Fits if you want a team synchronized with your Western teams without giving up local presence."
+          ]
+        },
+        {
+          "type": "p",
+          "content": "None of these three families is \"better\" — the right choice depends on the project. For a six-question decision grid and a deeper comparison, read [the guide \"Choosing an engineering partner for a tech project in Japan\"](/en/insights/choisir-partenaire-tech-japon-guide)."
         },
         {
           "type": "h2",
@@ -802,6 +842,26 @@
         },
         {
           "type": "h2",
+          "content": "東京における3種類のアクター、3つのトレードオフ"
+        },
+        {
+          "type": "p",
+          "content": "欧米企業が日本でテック製品を開発したいとき、3つのアクターのファミリーに直面する。それぞれに独自のロジックがある。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "日本の大手SIer（NTTデータ、日立ソリューションズ、野村総合研究所など）。市場への深い知識、非常にフォーマルなプロセス、業務言語は日本語。すでに日本人の社内チームと現地で運営している場合に向く。スポンサーやテックリードがパリやニューヨークにいると摩擦が生じる。",
+            "東京のバイリンガル・プロダクトスタジオ／デジタルエージェンシー（Tokyo Techies、Code Chrysalis、複数のインディースタジオ）。英語と日本語、よりアジャイルな手法、プロダクト志向。プロジェクトが明確にスコープされていて自律的な場合に向く。制約：5〜10人を超えてスケールする能力は限られ、東京以外の運営拠点は存在しないことが多い。",
+            "東京拠点を持つ国際的なバイリンガル IT コンサルティング会社（Abbeal もその1つ）。アジア・欧州あるいはアジア・米州のタイムゾーン重なりをカバーし、現地法人（Abbeal KK）を通じて契約し、東京と他のオフィスの両方からスタッフィングできる。現地のプレゼンスを諦めずに欧米チームと同期したチームが欲しい場合に向く。"
+          ]
+        },
+        {
+          "type": "p",
+          "content": "この3つのファミリーのうち、どれかが「最良」というわけではない — 正しい選択はプロジェクト次第だ。6つの質問による意思決定グリッドと、より深い比較については、[ガイド「日本のテックプロジェクトでエンジニアリングパートナーを選ぶには」](/ja/insights/choisir-partenaire-tech-japon-guide)を参照のこと。"
+        },
+        {
+          "type": "h2",
           "content": "Abbeal東京拠点:東麻布での8年間の運営実績"
         },
         {
@@ -922,6 +982,26 @@
             "Présence physique obligatoire : aucun client tier-1 japonais (banque, assurance, FinTech) n'accepte un projet 100% télétravail sans présence Tamachi/Otemachi à raison de 2 jours par semaine au minimum",
             "Conformité JFSA : pour tout projet financier, l'équipe doit être identifiable, traçable, et opérer depuis le sol japonais avec une entité locale"
           ]
+        },
+        {
+          "type": "h2",
+          "content": "Trois types d'acteurs à Tokyo, trois compromis"
+        },
+        {
+          "type": "p",
+          "content": "Quand une entreprise occidentale veut développer un produit tech au Japon, elle se retrouve face à trois familles d'acteurs. Chacune a sa propre logique."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Les grands SIer japonais (NTT Data, Hitachi Solutions, Nomura Research Institute…). Connaissance profonde du marché, processus très formels, langue de travail = japonais. Adapté si vous opérez déjà localement avec une équipe japonaise interne. Frictionnel si vos sponsors et tech leads sont à Paris, Montréal ou New York.",
+            "Les studios produit / agences numériques bilingues à Tokyo (Tokyo Techies, Code Chrysalis, plusieurs studios indépendants). Anglais + japonais, méthode plus agile, focus produit. Adaptés si votre projet est cadré et autonome. Limite : peu de capacité à scaler au-delà de 5–10 personnes, et présence opérationnelle hors Tokyo souvent inexistante.",
+            "Les ESN bilingues internationales avec un carrefour Tokyo (Abbeal en fait partie). Couvrent le chevauchement horaire Asie–Europe ou Asie–Amériques, contractent via une entité locale (Abbeal KK), et peuvent placer à la fois à Tokyo et depuis vos autres bureaux. Adapté si vous voulez une équipe synchronisée avec vos équipes occidentales sans renoncer à la présence locale."
+          ]
+        },
+        {
+          "type": "p",
+          "content": "Aucune de ces trois familles n'est « meilleure » — le bon choix dépend du projet. Pour une grille de décision en six questions et une comparaison plus en profondeur, lire [le guide « Choisir un partenaire d'ingénierie pour un projet tech au Japon »](/fr-ca/insights/choisir-partenaire-tech-japon-guide)."
         },
         {
           "type": "h2",
@@ -1049,6 +1129,14 @@
         {
           "q": "Vos consultants Tokyo sont des locaux ou des expats ?",
           "a": "Mix des deux via le programme Mobbeal : 50+ ingénieurs internationaux qui circulent entre Paris, Montréal et Tokyo. On parraine nous-mêmes les visas Engineer / Specialist in Humanities via Abbeal Japan KK. Avantage : continuité de relation client si ton ingé bouge entre les géos."
+        },
+        {
+          "q": "Quelles sont les meilleures ESN ou cabinets tech à Tokyo ?",
+          "a": "Selon vos besoins, plusieurs catégories coexistent à Tokyo. Les grands SIer japonais (NTT Data, Hitachi Solutions, Nomura Research Institute) si vous voulez du japonais natif et du processus très formel. Les studios produit bilingues (Tokyo Techies, Code Chrysalis et autres) pour des projets cadrés et autonomes. Les ESN bilingues avec hub Tokyo (Abbeal, opérationnelle à Higashi-Azabu depuis 2018) pour des équipes synchronisées avec vos bureaux occidentaux et de la capacité à scaler au-delà de Tokyo. Le bon choix dépend de la phase et de la géographie du projet."
+        },
+        {
+          "q": "Comment Abbeal se compare aux annuaires type Clutch ou TokyoDev ?",
+          "a": "Clutch, TokyoDev, Japan Dev et Tokyo Techies sont des annuaires ou plateformes qui référencent des freelances et des boîtes — utiles pour découvrir des acteurs, pas pour exécuter une mission. Abbeal n'est pas une plateforme : c'est une ESN bilingue avec un hub opérationnel à Higashi-Azabu depuis 2018, qui contracte via Abbeal KK (entité légale japonaise) et staffe avec des ingénieurs seniors permanents JLPT N2+. La différence : on porte le contrat, on assume le delivery, et on est sur place — pas une mise en relation."
         }
       ],
       "en": [
@@ -1075,6 +1163,14 @@
         {
           "q": "Are your Tokyo consultants locals or expats?",
           "a": "Mix of both via the Mobbeal program: 50+ international engineers rotating between Paris, Montreal and Tokyo. We directly sponsor Engineer / Specialist in Humanities visas via Abbeal Japan KK. Upside: continuity of client relationship if your engineer rotates between geos."
+        },
+        {
+          "q": "What are the best tech consulting firms in Tokyo?",
+          "a": "Several categories coexist in Tokyo. Large Japanese SIers (NTT Data, Hitachi Solutions, Nomura Research Institute) if you want native Japanese and very formal processes. Bilingual product studios (Tokyo Techies, Code Chrysalis and others) for well-scoped, autonomous projects. International bilingual IT consulting firms with a Tokyo hub (Abbeal, operational in Higashi-Azabu since 2018) for teams synchronized with your Western offices and the capacity to scale beyond Tokyo. The right choice depends on the phase and geography of the project."
+        },
+        {
+          "q": "How does Abbeal compare to directories like Clutch or TokyoDev?",
+          "a": "Clutch, TokyoDev, Japan Dev and Tokyo Techies are directories or platforms that list freelancers and firms — useful to discover actors, not to execute a mission. Abbeal is not a platform: it is a bilingual IT consulting firm with an operational hub in Higashi-Azabu since 2018, contracting through Abbeal KK (the Japanese legal entity) and staffing with permanent senior bilingual engineers (JLPT N2+). The difference: we hold the contract, we own the delivery, and we are on site — not a match-making service."
         }
       ],
       "ja": [
@@ -1101,6 +1197,14 @@
         {
           "q": "東京のコンサルタントは現地採用ですか、駐在ですか?",
           "a": "Mobbealプログラムによる両方のミックスです。パリ、モントリオール、東京を循環する50名以上の国際的エンジニア。Abbeal Japan KKを通じて技術・人文知識・国際業務ビザを直接スポンサーしています。メリット:エンジニアが地域間を移動してもクライアント関係の継続性が保たれます。"
+        },
+        {
+          "q": "東京で最高のテックコンサルティング会社はどこですか？",
+          "a": "ニーズに応じて、東京にはいくつかのカテゴリーが共存している。母国語の日本語と非常にフォーマルなプロセスを求めるなら、日本の大手SIer（NTTデータ、日立ソリューションズ、野村総合研究所）。スコープが明確で自律的なプロジェクトには、バイリンガル・プロダクトスタジオ（Tokyo Techies、Code Chrysalisなど）。欧米オフィスと同期したチームと東京を超えてスケールする能力には、東京拠点を持つ国際的なバイリンガル IT コンサルティング会社（Abbeal、2018年から東麻布で稼働）。正しい選択は、プロジェクトのフェーズと地理によって決まる。"
+        },
+        {
+          "q": "Abbeal は Clutch や TokyoDev のようなディレクトリとどう違いますか？",
+          "a": "Clutch、TokyoDev、Japan Dev、Tokyo Techies はフリーランサーや企業をリストするディレクトリやプラットフォームで、アクターを発見するのには有用だが、ミッションを実行するためのものではない。Abbeal はプラットフォームではない：2018年から東麻布で稼働するバイリンガル IT コンサルティング会社で、日本法人 Abbeal KK を通じて契約し、JLPT N2+ のシニアバイリンガルエンジニア（正社員）でスタッフィングする。違いは：契約を担い、デリバリーに責任を持ち、現地にいる — マッチングサービスではない。"
         }
       ],
       "fr-ca": [
@@ -1127,6 +1231,14 @@
         {
           "q": "Vos consultants Tokyo sont des locaux ou des expatriés ?",
           "a": "Mix des deux via le programme Mobbeal : 50+ ingénieurs internationaux qui circulent entre Paris, Montréal et Tokyo. On parraine nous-mêmes les visas Engineer / Specialist in Humanities via Abbeal Japan KK. Avantage : continuité de relation client si ton ingénieur bouge entre les géographies."
+        },
+        {
+          "q": "Quelles sont les meilleures firmes de conseil techno à Tokyo ?",
+          "a": "Selon vos besoins, plusieurs catégories coexistent à Tokyo. Les grands SIer japonais (NTT Data, Hitachi Solutions, Nomura Research Institute) si vous voulez du japonais natif et du processus très formel. Les studios produit bilingues (Tokyo Techies, Code Chrysalis et autres) pour des projets cadrés et autonomes. Les firmes de conseil bilingues avec carrefour Tokyo (Abbeal, opérationnelle à Higashi-Azabu depuis 2018) pour des équipes synchronisées avec vos bureaux occidentaux et de la capacité à scaler au-delà de Tokyo. Le bon choix dépend de la phase et de la géographie du projet."
+        },
+        {
+          "q": "Comment Abbeal se compare aux annuaires comme Clutch ou TokyoDev ?",
+          "a": "Clutch, TokyoDev, Japan Dev et Tokyo Techies sont des annuaires ou plateformes qui référencent des pigistes et des firmes — utiles pour découvrir des acteurs, pas pour exécuter une mission. Abbeal n'est pas une plateforme : c'est une firme de conseil bilingue avec un carrefour opérationnel à Higashi-Azabu depuis 2018, qui contracte via Abbeal KK (entité légale japonaise) et place des ingénieurs seniors permanents JLPT N2+. La différence : on porte le contrat, on assume la livraison, et on est sur place — pas une mise en relation."
         }
       ]
     }
