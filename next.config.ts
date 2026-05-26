@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import { withSentryConfig } from "@sentry/nextjs";
+import { withPayload } from "@payloadcms/next/withPayload";
 
 const nextConfig: NextConfig = {
   async redirects() {
@@ -47,7 +48,7 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withSentryConfig(nextConfig, {
+export default withPayload(withSentryConfig(nextConfig, {
   // Upload source maps to Sentry (only runs when SENTRY_AUTH_TOKEN is set)
   org: process.env.SENTRY_ORG,
   project: process.env.SENTRY_PROJECT,
@@ -69,4 +70,4 @@ export default withSentryConfig(nextConfig, {
 
   // Enables automatic instrumentation of Vercel Cron Monitors
   automaticVercelMonitors: false,
-});
+}));
