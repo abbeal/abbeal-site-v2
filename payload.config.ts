@@ -44,6 +44,17 @@ const Articles: CollectionConfig = {
     description:
       "Articles d'insights publies sur /insights. Localise en 4 langues. Champ body = blocks (h2/p/list/...).",
   },
+  // Access control (pattern CMS standard) :
+  // - read : public (les articles sont du contenu publie sur abbeal.com)
+  // - create/update/delete : auth requise (admin UI ou API Key Cowork)
+  // Sans ces regles, Payload defaut a "auth requise partout" -> casse les
+  // GET publics et empeche curl de tester.
+  access: {
+    read: () => true,
+    create: ({ req: { user } }) => Boolean(user),
+    update: ({ req: { user } }) => Boolean(user),
+    delete: ({ req: { user } }) => Boolean(user),
+  },
   fields: [
     // --- Identifiants & meta non-localisees ---
     {
