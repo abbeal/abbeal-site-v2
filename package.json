@@ -11,7 +11,12 @@
     "payload": "payload",
     "payload:importmap": "payload generate:importmap",
     "payload:types": "payload generate:types",
-    "migrate:articles": "tsx scripts/payload-migrate-articles.ts"
+    "migrate:articles": "tsx scripts/payload-migrate-articles.ts",
+    "migrate:cases": "tsx scripts/payload-migrate-cases.ts",
+    "migrate:landings": "tsx scripts/payload-migrate-landings.ts",
+    "migrate:glossary": "tsx scripts/payload-migrate-glossary.ts",
+    "migrate:tech-radar": "tsx scripts/payload-migrate-tech-radar.ts",
+    "migrate:all": "pnpm migrate:articles && pnpm migrate:cases && pnpm migrate:landings && pnpm migrate:glossary && pnpm migrate:tech-radar"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.8.3",
