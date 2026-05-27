@@ -3,6 +3,12 @@ import { withSentryConfig } from "@sentry/nextjs";
 import { withPayload } from "@payloadcms/next/withPayload";
 
 const nextConfig: NextConfig = {
+  // Autorise les acces dev via 127.0.0.1 (en plus de localhost). Sans ca,
+  // /_next/* est bloque CORS quand on tape 127.0.0.1:3000/admin -> bundles
+  // client jamais charges -> page blanche meme avec un GET /admin 200.
+  // Necessaire en local parce que "localhost" peut resoudre en IPv6 (::1)
+  // alors que Next listen souvent en IPv4 -> ERR_CONNECTION_REFUSED.
+  allowedDevOrigins: ["127.0.0.1"],
   async redirects() {
     return [
       // /{locale}/carrieres → /{locale}/careers : ancien alias FR de la page
