@@ -272,10 +272,16 @@ const Articles: CollectionConfig = {
 // ---------------------------------------------------------------------------
 const Users: CollectionConfig = {
   slug: "users",
-  auth: true, // active email/password + cookies + sessions Payload
+  auth: {
+    // email/password + cookies/sessions pour l'admin UI
+    // + API Keys pour les services externes (Cowork, scripts, integrations)
+    // Chaque user peut activer/regenerer son API Key depuis sa fiche /admin/collections/users/{id}
+    // Header HTTP : Authorization: users API-Key <key>
+    useAPIKey: true,
+  },
   admin: {
     useAsTitle: "email",
-    description: "Comptes admin du CMS Abbeal (auth Payload)",
+    description: "Comptes admin du CMS Abbeal (auth Payload + API Keys pour Cowork)",
   },
   fields: [
     // email + password sont auto-injectes par auth: true
