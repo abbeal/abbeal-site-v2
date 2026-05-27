@@ -266,17 +266,36 @@ const Articles: CollectionConfig = {
 };
 
 // ---------------------------------------------------------------------------
+// Collection Users — auth requis par Payload pour creer un admin.
+// Pas auto-creee : il faut la declarer explicitement et referencer son slug
+// dans admin.user.
+// ---------------------------------------------------------------------------
+const Users: CollectionConfig = {
+  slug: "users",
+  auth: true, // active email/password + cookies + sessions Payload
+  admin: {
+    useAsTitle: "email",
+    description: "Comptes admin du CMS Abbeal (auth Payload)",
+  },
+  fields: [
+    // email + password sont auto-injectes par auth: true
+    { name: "firstName", type: "text" },
+    { name: "lastName", type: "text" },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // Payload build config.
 // ---------------------------------------------------------------------------
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL ?? "http://localhost:3000",
   admin: {
-    user: "users", // collection auth par defaut Payload (auto-creee si absente)
+    user: Users.slug, // pointe vers la collection auth declaree ci-dessus
     meta: {
       titleSuffix: "— Abbeal CMS",
     },
   },
-  collections: [Articles],
+  collections: [Users, Articles],
   editor: lexicalEditor(),
   // i18n SITE : meme 4 locales que le front Next. defaultLocale=fr est la
   // langue canonique pour les articles Abbeal-natifs ; les articles guest
