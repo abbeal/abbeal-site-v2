@@ -28,6 +28,12 @@
 # vercel
 *.pem
 *.tsbuildinfo
+# Payload CMS — DB locale (SQLite) et types auto-generes
+payload.db
+payload.db-journal
+payload.db-shm
+payload.db-wal
+payload-types.ts
 .DS_Store
 .env*
 .idea/
