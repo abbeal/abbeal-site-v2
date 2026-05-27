@@ -1,5 +1,6 @@
-// Importmap minimal pour le PoC.
-// Genere automatiquement par `pnpm payload generate:importmap` une fois
-// qu'on ajoute des composants admin custom. Pour le PoC : aucun composant
-// custom => map vide.
-export const importMap = {};
+import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } from '@payloadcms/next/rsc'
+
+/** @type import('payload').ImportMap */
+export const importMap = {
+  "@payloadcms/next/rsc#CollectionCards": CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1
+}
