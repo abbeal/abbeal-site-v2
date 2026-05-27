@@ -578,7 +578,16 @@ export default buildConfig({
   },
   secret: process.env.PAYLOAD_SECRET ?? "DEV_ONLY_change_me_in_prod",
   typescript: { outputFile: path.resolve(dirname, "payload-types.ts") },
+  // DB : SQLite local en dev, Turso (libsql hosted) en preview/prod Vercel.
+  // Meme adapter, juste l'URL change (file:./payload.db vs libsql://xxx.turso.io).
+  // En Vercel : positionner DATABASE_URI + DATABASE_AUTH_TOKEN dans les env vars
+  // du projet (Settings -> Environment Variables -> tous environnements).
   db: sqliteAdapter({
-    client: { url: process.env.DATABASE_URI ?? "file:./payload.db" },
+    client: {
+      url: process.env.DATABASE_URI ?? "file:./payload.db",
+      ...(process.env.DATABASE_AUTH_TOKEN
+        ? { authToken: process.env.DATABASE_AUTH_TOKEN }
+        : {}),
+    },
   }),
 });
