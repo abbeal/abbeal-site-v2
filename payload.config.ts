@@ -34,6 +34,7 @@ import { fileURLToPath } from "node:url";
 import { buildConfig, type Block, type CollectionConfig } from "payload";
 import { sqliteAdapter } from "@payloadcms/db-sqlite";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
+import { resendAdapter } from "@payloadcms/email-resend";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -709,6 +710,29 @@ export default buildConfig({
     fallback: true,
   },
   secret: process.env.PAYLOAD_SECRET ?? "DEV_ONLY_change_me_in_prod",
+  // Email adapter Resend (Phase 2/3 W22 CMS).
+  // Utilise pour :
+  //   - forgotPassword (envoi du lien de reset password)
+  //   - invitation new user (declenche le forgotPassword en hook
+  //     afterChange — Phase 3 a venir)
+  //
+  // Env vars :
+  //   RESEND_API_KEY     : deja present (reutilise par /api/contact)
+  //   CMS_EMAIL_FROM     : optionnel, ex "Abbeal CMS <cms@abbeal.com>"
+  //                        Fallback : "Abbeal CMS <contact@abbeal.com>"
+  //                        (contact@abbeal.com est un sender Resend deja verifie)
+  //   CMS_EMAIL_NAME     : optionnel, fallback "Abbeal CMS"
+  //
+  // En dev local sans RESEND_API_KEY, Payload log les emails en console
+  // (cf. ConsoleAdapter fallback ci-dessous).
+  email: process.env.RESEND_API_KEY
+    ? resendAdapter({
+        defaultFromAddress:
+          process.env.CMS_EMAIL_FROM ?? "contact@abbeal.com",
+        defaultFromName: process.env.CMS_EMAIL_NAME ?? "Abbeal CMS",
+        apiKey: process.env.RESEND_API_KEY,
+      })
+    : undefined,
   typescript: { outputFile: path.resolve(dirname, "payload-types.ts") },
   // DB : SQLite local en dev, Turso (libsql hosted) en preview/prod Vercel.
   // Meme adapter @payloadcms/db-sqlite, juste l'URL change.
