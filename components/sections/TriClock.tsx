@@ -1,8 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, useReducedMotion } from "motion/react";
 import type { Locale } from "@/lib/i18n";
+
+/**
+ * Tri-horloges live Paris / Montreal / Tokyo dans le Hero home.
+ *
+ * Client component obligatoire (useEffect + setInterval pour le tick chaque
+ * seconde). Mais sans framer-motion : animations CSS pures (anim-fade-up
+ * dans globals.css) qui ne bloquent pas le main thread ni l'hydratation.
+ *
+ * SSR : "--:--:--" + "---" pour les valeurs date/heure jusqu'au mount.
+ * suppressHydrationWarning sur les noeuds time pour eviter le mismatch warning.
+ */
 
 export type ClockCity = {
   key: "paris" | "montreal" | "tokyo";
@@ -22,8 +32,6 @@ const INTL_LOCALE: Record<Locale, string> = {
   ja: "ja-JP",
   "fr-ca": "fr-CA",
 };
-
-const ease = [0.16, 1, 0.3, 1] as const;
 
 function formatTime(tz: string, now: Date) {
   return new Intl.DateTimeFormat("en-GB", {
@@ -80,7 +88,6 @@ export function TriClock({
   ariaLabel: string;
 }) {
   const [now, setNow] = useState<Date | null>(null);
-  const reduce = useReducedMotion();
 
   useEffect(() => {
     setNow(new Date());
@@ -90,18 +97,10 @@ export function TriClock({
 
   const intlLocale = INTL_LOCALE[locale];
 
-  const wrapperAnim = reduce
-    ? {}
-    : {
-        initial: { opacity: 0, y: 16 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.6, delay: 0.3, ease },
-      };
-
   return (
-    <motion.aside
-      {...wrapperAnim}
-      className="relative"
+    <aside
+      className="anim-fade-up relative"
+      style={{ animationDelay: "300ms" }}
       aria-label={ariaLabel}
     >
       <div className="relative border border-[var(--color-border)] bg-[var(--color-bg-paper)]/80 backdrop-blur-sm shadow-[0_1px_0_0_rgba(12,52,61,0.04),0_20px_40px_-24px_rgba(12,52,61,0.18)]">
@@ -129,23 +128,11 @@ export function TriClock({
             const offset = now ? formatOffset(tz, now) : "UTC";
             const working = now ? isWorking(tz, now) : false;
 
-            const rowAnim = reduce
-              ? {}
-              : {
-                  initial: { opacity: 0, x: 12 },
-                  animate: { opacity: 1, x: 0 },
-                  transition: {
-                    duration: 0.5,
-                    delay: 0.45 + i * 0.08,
-                    ease,
-                  },
-                };
-
             return (
-              <motion.li
+              <li
                 key={city.key}
-                {...rowAnim}
-                className="px-5 py-4"
+                className="anim-fade-up px-5 py-4"
+                style={{ animationDelay: `${450 + i * 80}ms` }}
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="min-w-0">
@@ -167,7 +154,7 @@ export function TriClock({
                       <span className="rounded-sm border border-[var(--color-border)] bg-[var(--color-bg-cream)] px-1.5 py-[1px] text-[9px] tabular-nums">
                         {offset}
                       </span>
-                      <span>{date}</span>
+                      <span suppressHydrationWarning>{date}</span>
                       <span
                         aria-hidden
                         className={
@@ -180,7 +167,7 @@ export function TriClock({
                     </p>
                   </div>
                 </div>
-              </motion.li>
+              </li>
             );
           })}
         </ul>
@@ -203,6 +190,6 @@ export function TriClock({
         />
         <circle cx="48" cy="48" r="10" stroke="currentColor" strokeWidth="1.5" />
       </svg>
-    </motion.aside>
+    </aside>
   );
 }

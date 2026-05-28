@@ -1,9 +1,23 @@
-"use client";
-
-import { motion, useReducedMotion } from "motion/react";
 import { ButtonLink } from "@/components/ui/Button";
 import { TriClock, type ClockCity } from "./TriClock";
 import type { Locale } from "@/lib/i18n";
+
+/**
+ * Hero home — server component pur (W22 CWV fix).
+ *
+ * Pourquoi pas "use client" :
+ *  - Le H1 est le LCP candidate sur mobile. Avant : Hero etait client +
+ *    motion v12 -> bundle JS lourd + hydratation bloque le paint -> LCP 5.6s
+ *    mobile. Apres : zero JS pour le shell Hero, HTML pur SSR, anim CSS pure.
+ *  - Cible Lighthouse mobile : score >= 90, LCP <= 2.5s.
+ *
+ * Animations : 100% CSS keyframes (anim-fade-up / anim-h1-line / anim-rule
+ * cf globals.css). GPU-accelerated, partent au paint, support reduced-motion
+ * automatique via media query globale.
+ *
+ * TriClock (horloges live Paris/Tokyo/Montreal) reste client car necessite
+ * useEffect/setInterval mais sans framer-motion (CSS anim aussi).
+ */
 
 type HeroDict = {
   hero: {
@@ -23,8 +37,6 @@ type HeroDict = {
   };
 };
 
-const ease = [0.16, 1, 0.3, 1] as const;
-
 export function Hero({
   locale,
   dict,
@@ -34,43 +46,10 @@ export function Hero({
 }) {
   const d = dict as unknown as HeroDict;
   const p = `/${locale}`;
-  const reduce = useReducedMotion();
-
-  const fade = (delay: number, y = 16) =>
-    reduce
-      ? {}
-      : {
-          initial: { opacity: 0, y },
-          animate: { opacity: 1, y: 0 },
-          transition: { duration: 0.6, delay, ease },
-        };
-
-  // CWV fix : le H1 est le LCP candidate. On NE LE MASQUE PLUS au render
-  // initial — il s'affiche immediatement (LCP < 1.5s vs 5.6s avant). On
-  // garde une legere anim de translate seulement, qui ne bloque pas le
-  // LCP measurement (Google mesure quand l'element devient visible, pas
-  // quand l'animation se termine).
-  // Si reduce-motion : pas d'anim du tout.
-  const h1Line = (delay: number) =>
-    reduce
-      ? {}
-      : {
-          initial: { y: 12 },
-          animate: { y: 0 },
-          transition: { duration: 0.75, delay, ease },
-        };
-
-  const ruleAnim = reduce
-    ? {}
-    : {
-        initial: { scaleX: 0, opacity: 0 },
-        animate: { scaleX: 1, opacity: 1 },
-        transition: { duration: 0.7, delay: 0.35, ease },
-      };
 
   return (
     <section className="relative overflow-hidden">
-      {/* Bauhaus background accents */}
+      {/* Bauhaus background accents — purement decoratifs, server-rendered. */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 -left-24 h-[380px] w-[380px] rounded-full bg-[var(--color-brand-teal)]/10 blur-3xl" />
         <svg
@@ -109,52 +88,58 @@ export function Hero({
 
       <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 gap-14 px-6 pt-16 pb-24 md:px-10 md:pt-24 md:pb-36 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-7 xl:col-span-8">
-          <motion.div {...fade(0, 10)}>
+          <div
+            className="anim-fade-up"
+            style={{ animationDelay: "0ms" }}
+          >
             <span className="tape-label">{d.hero.tape}</span>
-          </motion.div>
+          </div>
 
+          {/* H1 = LCP candidate. Server-rendered en HTML pur, animation CSS
+              uniquement sur translateY (opacity reste a 1 pour ne pas
+              retarder le LCP measurement). */}
           <h1 className="mt-8 font-sans font-semibold tracking-[-0.03em] text-[clamp(2.75rem,6.5vw,6rem)] leading-[1.02]">
-            <motion.span
-              {...h1Line(0.1)}
-              className="block text-[var(--color-ink)]"
+            <span
+              className="anim-h1-line block text-[var(--color-ink)]"
+              style={{ animationDelay: "100ms" }}
             >
               {d.hero.h1Top}
-            </motion.span>
+            </span>
             {/* Espace insecable visuel + parsable bot/copy : sans ce noeud
                 texte, les 2 spans block se collent dans le DOM serialise
                 ("trouver.On l'a fondee.") — audit W20 quick win #4. */}
             {" "}
-            <motion.span
-              {...h1Line(0.22)}
-              className="block italic gradient-brand-text pb-[0.05em]"
+            <span
+              className="anim-h1-line block italic gradient-brand-text pb-[0.05em]"
+              style={{ animationDelay: "220ms" }}
             >
               {d.hero.h1Bottom}
-            </motion.span>
+            </span>
           </h1>
 
-          <motion.span
-            {...ruleAnim}
+          <span
             aria-hidden
-            className="mt-8 block h-[2px] w-28 origin-left gradient-brand-bg"
+            className="anim-rule mt-8 block h-[2px] w-28 gradient-brand-bg"
+            style={{ animationDelay: "350ms" }}
           />
 
-          <motion.p
-            {...fade(0.45, 16)}
-            className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--color-ink-soft)] md:text-xl text-balance"
+          <p
+            className="anim-fade-up mt-6 max-w-3xl text-lg leading-relaxed text-[var(--color-ink-soft)] md:text-xl text-balance"
+            style={{ animationDelay: "450ms" }}
           >
             {d.hero.subtitle}
-          </motion.p>
+          </p>
 
-          <motion.p
-            {...fade(0.6, 8)}
-            className="mt-6 max-w-2xl font-mono text-sm tracking-tight text-[var(--color-ink-soft)] whitespace-pre-line text-balance"
+          <p
+            className="anim-fade-up mt-6 max-w-2xl font-mono text-sm tracking-tight text-[var(--color-ink-soft)] whitespace-pre-line text-balance"
+            style={{ animationDelay: "600ms" }}
           >
             {d.hero.proof}
-          </motion.p>
+          </p>
 
-          <motion.div
-            {...fade(0.75, 12)}
-            className="mt-10 flex flex-wrap items-center gap-4"
+          <div
+            className="anim-fade-up mt-10 flex flex-wrap items-center gap-4"
+            style={{ animationDelay: "750ms" }}
           >
             <ButtonLink href={`${p}/contact`} size="lg">
               {d.hero.ctaPrimary}
@@ -187,11 +172,14 @@ export function Hero({
                 <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
             </ButtonLink>
-          </motion.div>
+          </div>
 
           {/* Discreet link to cases — boosts internal nav for /cases without
               competing with the 3 main CTAs above. Arrow slides on hover. */}
-          <motion.div {...fade(0.9, 6)} className="mt-6">
+          <div
+            className="anim-fade-up mt-6"
+            style={{ animationDelay: "900ms" }}
+          >
             <a
               href={`${p}/cases`}
               className="group inline-flex items-center gap-1.5 font-mono text-sm text-[var(--color-ink-soft)] hover:text-[var(--color-brand-teal)] transition-colors"
@@ -206,7 +194,7 @@ export function Hero({
                 →
               </span>
             </a>
-          </motion.div>
+          </div>
         </div>
 
         <div className="flex items-center lg:col-span-5 xl:col-span-4">

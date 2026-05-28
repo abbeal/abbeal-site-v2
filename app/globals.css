@@ -209,6 +209,62 @@ html.dark .logo-mono:hover {
   opacity: 1;
 }
 
+/* CWV W22 — Hero fade-up animations en CSS pur (remplacent framer-motion).
+ * Pourquoi : framer-motion etait "use client" sur le Hero -> H1 (LCP candidate)
+ * attendait l'hydratation JS pour s'afficher dans son etat final. Sur mobile
+ * CPU faible, ca emmenait le LCP a 5.6s. CSS animations sont GPU-accelerated,
+ * partent au paint (pas a l'hydration), et permettent de garder le Hero
+ * 100% server-rendered. Cible : LCP < 2.5s mobile.
+ *
+ * Usage : <span className="anim-fade-up" style={{animationDelay: "100ms"}}>...
+ * H1 lines : utiliser anim-h1-line (translate only, opacity reste a 1 pour LCP)
+ */
+@keyframes anim-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-fade-up {
+  animation: anim-fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes anim-h1-line {
+  from {
+    transform: translateY(12px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* H1 lines = LCP candidate. Opacity reste a 1 a tout moment pour que Google
+ * LCP measure declenche au server paint, pas a l'animation end. */
+.anim-h1-line {
+  animation: anim-h1-line 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes anim-rule {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.anim-rule {
+  animation: anim-rule 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  transform-origin: left center;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -219,6 +275,12 @@ html.dark .logo-mono:hover {
   }
   .marquee-track,
   .marquee-track-reverse {
+    animation: none;
+  }
+  /* Hero fade-up : pas d'anim si reduced-motion (final state direct). */
+  .anim-fade-up,
+  .anim-h1-line,
+  .anim-rule {
     animation: none;
   }
 }
