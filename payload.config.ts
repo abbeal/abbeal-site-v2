@@ -179,13 +179,34 @@ const STANDARD_CONTENT_BLOCKS: Block[] = [
   },
 ];
 
-// Pattern d'access control reutilise par toutes les collections de contenu :
-// read public, write auth-requise. Pas applique aux Users (auth defaut Payload).
-const PUBLIC_READ_AUTH_WRITE = {
+// ---------------------------------------------------------------------------
+// Helpers d'access control par role.
+//
+// 2 roles dans la collection Users : "admin" et "editor".
+//   - admin   : full access partout. Reserve a Sebastien + Vianney.
+//   - editor  : peut creer/editer SES PROPRES articles uniquement.
+//               Read public sur tout, mais zero write sur les autres
+//               collections (Cases, Landings, Glossary, TechRadar, Team, Users).
+//
+// Pattern : la plupart des collections sont "read public, write admin-only".
+// Articles a un access custom (ownership) defini directement dans la collection.
+// ---------------------------------------------------------------------------
+
+/** User shape minimal pour les access rules. Eviter d'importer le type Payload
+ *  complet qui n'existe pas encore au moment de la definition du config. */
+type AccessUser = { id: number | string; role?: "admin" | "editor" } | null | undefined;
+
+/** True si le user est authentifie ET admin. */
+const isAdmin = (user: AccessUser): boolean => user?.role === "admin";
+
+/** Access standard pour collections "admin-only writes" : Cases, Landings,
+ *  Glossary, TechRadar, Team. Read public (le contenu est destine au site
+ *  public abbeal.com), writes reservees aux admins. */
+const PUBLIC_READ_ADMIN_WRITE = {
   read: () => true,
-  create: ({ req: { user } }: { req: { user: unknown } }) => Boolean(user),
-  update: ({ req: { user } }: { req: { user: unknown } }) => Boolean(user),
-  delete: ({ req: { user } }: { req: { user: unknown } }) => Boolean(user),
+  create: ({ req: { user } }: { req: { user: AccessUser } }) => isAdmin(user),
+  update: ({ req: { user } }: { req: { user: AccessUser } }) => isAdmin(user),
+  delete: ({ req: { user } }: { req: { user: AccessUser } }) => isAdmin(user),
 };
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -193,7 +214,17 @@ const PUBLIC_READ_AUTH_WRITE = {
 // ═══════════════════════════════════════════════════════════════════════════
 
 // ---------------------------------------------------------------------------
-// Users — auth + API Keys (pour Cowork)
+// Users — auth + API Keys (Cowork) + roles (admin/editor).
+//
+// Access :
+//   - read    : un user voit son propre profil + les profils visibles par
+//               son role (admin voit tout, editor ne voit que lui).
+//   - create  : seul un admin peut creer un nouveau user (= inviter).
+//   - update  : un user peut s'editer lui-meme. Un admin peut editer tous.
+//               LE CHAMP `role` ne peut etre modifie QUE par un admin
+//               (cf. field-level access ci-dessous) — sinon un editor
+//               s'auto-promouvrait admin.
+//   - delete  : seul un admin peut supprimer un user.
 // ---------------------------------------------------------------------------
 const Users: CollectionConfig = {
   slug: "users",
@@ -202,27 +233,128 @@ const Users: CollectionConfig = {
   },
   admin: {
     useAsTitle: "email",
-    description: "Comptes admin du CMS Abbeal (auth Payload + API Keys pour Cowork)",
+    description: "Comptes admin (auth Payload + API Keys pour Cowork). 2 roles : admin (Seb + Vianney) / editor (redacteurs articles).",
+    defaultColumns: ["email", "role", "firstName", "lastName"],
+  },
+  access: {
+    read: ({ req: { user } }) => {
+      if (!user) return false;
+      const u = user as AccessUser;
+      if (isAdmin(u)) return true;
+      // Editor : voit que son propre profil
+      return { id: { equals: u!.id } };
+    },
+    create: ({ req: { user } }) => isAdmin(user as AccessUser),
+    update: ({ req: { user } }) => {
+      if (!user) return false;
+      const u = user as AccessUser;
+      if (isAdmin(u)) return true;
+      // Editor : peut editer son propre profil
+      return { id: { equals: u!.id } };
+    },
+    delete: ({ req: { user } }) => isAdmin(user as AccessUser),
   },
   fields: [
     { name: "firstName", type: "text" },
     { name: "lastName", type: "text" },
+    {
+      name: "role",
+      type: "select",
+      required: true,
+      defaultValue: "editor",
+      options: [
+        { label: "Admin (full access)", value: "admin" },
+        { label: "Editor (ses propres articles uniquement)", value: "editor" },
+      ],
+      admin: {
+        description:
+          "Admin = Seb + Vianney, full access partout. Editor = redacteur, peut creer/editer SES articles uniquement.",
+      },
+      access: {
+        // Field-level : seul un admin peut modifier le role d'un user.
+        // Sinon un editor s'auto-promouvrait admin via PATCH /api/users/{id}.
+        update: ({ req: { user } }) => isAdmin(user as AccessUser),
+      },
+    },
   ],
 };
 
 // ---------------------------------------------------------------------------
-// Articles — 27 articles d'insights /insights (mirror lib/articles.ts)
+// Articles — 27 articles d'insights /insights (mirror lib/articles.ts).
+//
+// Access ownership :
+//   - read    : public (le contenu est sur abbeal.com)
+//   - create  : tout user authentifie (admin OR editor)
+//   - update  : admin sur tout. Editor uniquement sur ses propres articles
+//               (filter where author == user.id).
+//   - delete  : idem update.
+//
+// Le champ `author` est rempli automatiquement au create par le hook
+// beforeChange ci-dessous (= user courant qui POST). Apres ca, immuable
+// pour les editors (un editor ne peut pas transferer son article a un
+// autre editor pour bypasser l'access rule).
 // ---------------------------------------------------------------------------
 const Articles: CollectionConfig = {
   slug: "articles",
   admin: {
     useAsTitle: "slug",
-    defaultColumns: ["slug", "tag", "publishedAt", "featured"],
-    description: "Articles d'insights /insights. 4 langues. Body = blocks.",
+    defaultColumns: ["slug", "tag", "author", "publishedAt", "featured"],
+    description: "Articles d'insights /insights. 4 langues. Body = blocks. Editor = peut creer/editer SES articles uniquement.",
   },
-  access: PUBLIC_READ_AUTH_WRITE,
+  access: {
+    read: () => true,
+    create: ({ req: { user } }) => Boolean(user),
+    update: ({ req: { user } }) => {
+      if (!user) return false;
+      const u = user as AccessUser;
+      if (isAdmin(u)) return true;
+      // Editor : seulement ses propres articles
+      return { author: { equals: u!.id } };
+    },
+    delete: ({ req: { user } }) => {
+      if (!user) return false;
+      const u = user as AccessUser;
+      if (isAdmin(u)) return true;
+      return { author: { equals: u!.id } };
+    },
+  },
+  hooks: {
+    beforeChange: [
+      ({ req, operation, data }) => {
+        // Au create : auto-remplit author avec le user courant (req.user).
+        // Si admin cree pour quelqu'un d'autre, il peut overrider explicitement
+        // via le champ author (admin-only update on this field).
+        if (operation === "create" && req.user && !data.author) {
+          data.author = req.user.id;
+        }
+        return data;
+      },
+    ],
+  },
   fields: [
     { name: "slug", type: "text", required: true, unique: true, index: true },
+    {
+      name: "author",
+      type: "relationship",
+      relationTo: "users",
+      // required: false volontairement au schema-level pour pouvoir ajouter
+      // ce champ sur une table avec lignes existantes sans drop (sinon SQLite
+      // refuse NOT NULL sans default sur une table peuplee). Le hook
+      // beforeChange ci-dessus force quand meme l'author au create, donc
+      // c'est require functionnellement pour les NOUVEAUX articles.
+      // Les articles pre-existants sont back-filles via scripts/payload-migrate-roles.ts.
+      required: false,
+      admin: {
+        description: "Auteur de l'article (auto-rempli au create). Modifiable seulement par un admin.",
+        position: "sidebar",
+      },
+      access: {
+        // Field-level : seul un admin peut REASSIGNER l'auteur d'un article.
+        // Sinon un editor pourrait transferer ses articles a un autre user
+        // pour bypasser l'access rule update/delete.
+        update: ({ req: { user } }) => isAdmin(user as AccessUser),
+      },
+    },
     { name: "featured", type: "checkbox", defaultValue: false },
     { name: "featuredOnHome", type: "checkbox" },
     { name: "tag", type: "text", required: true, admin: { description: "Ex: IA, Engineering, Talent, Mobbeal, Business" } },
@@ -270,7 +402,7 @@ const Cases: CollectionConfig = {
     defaultColumns: ["slug", "sector", "geo", "publishedAt", "featured"],
     description: "Case studies /cases. 4 langues. Body = blocks.",
   },
-  access: PUBLIC_READ_AUTH_WRITE,
+  access: PUBLIC_READ_ADMIN_WRITE,
   fields: [
     { name: "slug", type: "text", required: true, unique: true, index: true },
     { name: "featured", type: "checkbox", defaultValue: false },
@@ -366,7 +498,7 @@ const LandingPages: CollectionConfig = {
     defaultColumns: ["slug", "h1"],
     description: "Landing pages SEO non-branded. 4 langues. Body = blocks + FAQ.",
   },
-  access: PUBLIC_READ_AUTH_WRITE,
+  access: PUBLIC_READ_ADMIN_WRITE,
   fields: [
     { name: "slug", type: "text", required: true, unique: true, index: true },
     {
@@ -432,7 +564,7 @@ const Glossary: CollectionConfig = {
     defaultColumns: ["slug", "category"],
     description: "Glossaire technique. 54 termes, 4 langues, schema DefinedTerm.",
   },
-  access: PUBLIC_READ_AUTH_WRITE,
+  access: PUBLIC_READ_ADMIN_WRITE,
   fields: [
     { name: "slug", type: "text", required: true, unique: true, index: true },
     {
@@ -476,7 +608,7 @@ const TechRadar: CollectionConfig = {
     defaultColumns: ["slug", "ring", "category"],
     description: "Tech Radar — items 1 par doc, name/rationale localises.",
   },
-  access: PUBLIC_READ_AUTH_WRITE,
+  access: PUBLIC_READ_ADMIN_WRITE,
   fields: [
     { name: "slug", type: "text", required: true, unique: true, index: true, admin: { description: "Identifiant stable (ex: rust-for-systems)" } },
     {
@@ -528,7 +660,7 @@ const Team: CollectionConfig = {
     defaultColumns: ["name", "role", "geo", "active"],
     description: "Equipe Abbeal — fiches membres pour /about, /careers, etc.",
   },
-  access: PUBLIC_READ_AUTH_WRITE,
+  access: PUBLIC_READ_ADMIN_WRITE,
   fields: [
     { name: "slug", type: "text", required: true, unique: true, index: true, admin: { description: "URL slug (kebab-case). Ex: sebastien-lonjon" } },
     { name: "name", type: "text", required: true, admin: { description: "Prenom + Nom (ou prenom seul si anonymise)" } },
