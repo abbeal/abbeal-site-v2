@@ -78,6 +78,52 @@ export default async function CaseStudyPage({
     .slice(0, 3);
   const relatedFinal = related.length >= 2 ? related : fallback;
 
+  // Lien interne contextuel vers la landing SEO la plus pertinente selon
+  // la geo du case (W22 Ticket 2 — maillage cases -> landings).
+  // Texte d'ancre = phrase naturelle avec mot-cle, pas "cliquez ici".
+  // Logique de routing :
+  //   - Tokyo / JP-related        -> /tech-consulting-tokyo
+  //   - Tri-geo / Montreal        -> /follow-the-sun-delivery
+  //   - Paris / autre             -> /services/squads-embarques (generique)
+  const geoLower = c.geo.toLowerCase();
+  const slugLower = c.slug.toLowerCase();
+  const isTokyo =
+    geoLower.includes("tokyo") ||
+    geoLower.includes("japon") ||
+    slugLower.includes("japon") ||
+    slugLower.includes("jp-");
+  const isTriGeoOrMontreal =
+    geoLower.includes("tri-geo") || geoLower.includes("montréal") || geoLower.includes("montreal");
+  const similarLink = isTokyo
+    ? {
+        href: "/tech-consulting-tokyo",
+        label: {
+          fr: "notre offre tech consulting à Tokyo",
+          en: "our tech consulting offer in Tokyo",
+          ja: "東京テックコンサルティングのオファー",
+          "fr-ca": "notre offre tech consulting à Tokyo",
+        },
+      }
+    : isTriGeoOrMontreal
+      ? {
+          href: "/follow-the-sun-delivery",
+          label: {
+            fr: "notre delivery Follow-the-Sun tri-géo",
+            en: "our tri-geo Follow-the-Sun delivery",
+            ja: "三拠点 Follow-the-Sun デリバリー",
+            "fr-ca": "notre delivery Follow-the-Sun tri-géo",
+          },
+        }
+      : {
+          href: "/services/squads-embarques",
+          label: {
+            fr: "notre offre squads embarqués",
+            en: "our embedded squads offer",
+            ja: "組み込みスクワッドのオファー",
+            "fr-ca": "notre offre escouades embarquées",
+          },
+        };
+
   const t = {
     fr: {
       back: "← Cases",
@@ -89,6 +135,8 @@ export default async function CaseStudyPage({
       related: "// À lire ensuite",
       ctaTitle: "Un cas similaire chez vous ?",
       ctaBtn: "Parler à un architecte",
+      similarLabel: "// Discuter d'un projet similaire",
+      similarPrefix: "Cette mission ressemble à votre besoin ? Découvrez",
     },
     en: {
       back: "← Cases",
@@ -100,6 +148,8 @@ export default async function CaseStudyPage({
       related: "// Read next",
       ctaTitle: "A similar case at your place?",
       ctaBtn: "Talk to an architect",
+      similarLabel: "// Discuss a similar project",
+      similarPrefix: "This engagement looks like your need? Discover",
     },
     ja: {
       back: "← ケース",
@@ -111,6 +161,8 @@ export default async function CaseStudyPage({
       related: "// 次に読む",
       ctaTitle: "貴社でも似たケースがある？",
       ctaBtn: "アーキテクトと話す",
+      similarLabel: "// 類似プロジェクトを相談",
+      similarPrefix: "このミッションがニーズに似ていますか？",
     },
     "fr-ca": {
       back: "← Cas clients",
@@ -122,6 +174,8 @@ export default async function CaseStudyPage({
       related: "// À lire ensuite",
       ctaTitle: "Un cas similaire chez vous ?",
       ctaBtn: "Parler à un architecte",
+      similarLabel: "// Discuter d'un mandat similaire",
+      similarPrefix: "Ce mandat ressemble à votre besoin ? Découvrez",
     },
   }[locale];
 
@@ -326,6 +380,28 @@ export default async function CaseStudyPage({
           </div>
         </section>
       )}
+
+      {/* "Discuter d'un projet similaire" — internal link enrichi vers la
+          landing SEO la plus pertinente selon la geo du case (W22 Ticket 2,
+          maillage cases -> landings pour booster CTR pages SEO Tokyo).
+          Texte d'ancre = phrase naturelle avec mots-cles (pas "cliquez ici"). */}
+      <section className="border-b border-[var(--color-border)]">
+        <div className="mx-auto max-w-[760px] px-6 md:px-10 py-12">
+          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-muted)] mb-3">
+            {t.similarLabel}
+          </p>
+          <p className="text-lg text-[var(--color-ink-soft)] leading-relaxed">
+            {t.similarPrefix}{" "}
+            <Link
+              href={`/${locale}${similarLink.href}`}
+              className="text-[var(--color-brand-teal)] underline decoration-[var(--color-brand-teal)]/40 underline-offset-4 hover:decoration-[var(--color-brand-teal)]"
+            >
+              {similarLink.label[locale]}
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
 
       {/* CTA — Calendly partagé pour booker direct (vs /contact qui ajoute
           une étape de saisie de formulaire). Lien externe = nouvel onglet. */}
