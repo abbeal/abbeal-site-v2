@@ -44,20 +44,28 @@ function altLanguages(path: string): Record<string, string> {
 }
 
 /**
- * Per-locale priority weight reflecting business focus.
- * Revenue split (April 2026): QC 50% · JP 35% · FR 15%.
- * Boost fr-ca and ja in the sitemap to signal indexation priority to Google.
+ * Per-route priority weight (W22 audit fix).
+ *
+ * Historique : avant W22, on boostait fr-ca et ja en sitemap parce que
+ * QC 50% / JP 35% du revenue. Resultat : la home /fr-ca etait priority 1.0
+ * et la home /fr a 0.8 — incoherent vu de l'exterieur (la home FR est
+ * historiquement la brand canonique) et flagge par l'audit SEO W22 comme
+ * "etrange". Google ignore largement priority de toute facon : c'est
+ * hreflang qui gere la geo-targeting.
+ *
+ * Nouvelle approche : priority basee sur l'importance de la ROUTE
+ * (pas la locale). Toutes les locales d'une meme page partagent la meme
+ * priority. Plus conventionnel, plus lisible, et hreflang fait le boulot
+ * de localisation cote Google.
  */
-const LOCALE_PRIORITY_WEIGHT: Record<string, number> = {
-  "fr-ca": 0.2,
-  ja: 0.15,
-  en: 0.05,
-  fr: 0.0,
-};
-
-function priorityFor(route: string, locale: string): number {
-  const base = route === "" ? 0.8 : route === "/mobbeal" ? 0.7 : 0.5;
-  return Math.min(1.0, base + (LOCALE_PRIORITY_WEIGHT[locale] ?? 0));
+function priorityFor(route: string): number {
+  if (route === "") return 1.0; // home
+  if (route === "/mobbeal") return 0.8;
+  if (route === "/cases" || route === "/insights") return 0.8;
+  if (route === "/about" || route === "/careers" || route === "/contact") return 0.7;
+  if (route === "/partners") return 0.6;
+  if (route === "/glossaire") return 0.6;
+  return 0.5; // /cgu et tout reste
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -70,7 +78,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${SITE_URL}/${locale}${route}`,
         lastModified: now,
         changeFrequency: route === "" ? "weekly" : "monthly",
-        priority: priorityFor(route, locale),
+        priority: priorityFor(route),
         alternates: { languages: altLanguages(route) },
       });
     }
@@ -102,17 +110,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Landing pages SEO non-branded (4 landings × 4 langues = 16 pages).
-  // Issu de l'audit W19 : pages thématiques pour ranker non-branded
+  // Landing pages SEO non-branded (6 landings × 4 langues = 24 pages).
+  // Issu de l'audit W19 : pages thematiques pour ranker non-branded
   // sur "follow-the-sun delivery", "tech consulting Tokyo", etc.
-  // Priority haute (0.85) car contenu evergreen + niche unique.
+  // Priority haute (0.9) car contenu evergreen + niche unique +
+  // entree principale pour les requetes SEO non-brandees prioritaires.
   for (const lp of landingPages) {
     for (const locale of locales) {
       entries.push({
         url: `${SITE_URL}/${locale}/${lp.slug}`,
         lastModified: now,
         changeFrequency: "monthly",
-        priority: Math.min(1.0, 0.85 + (LOCALE_PRIORITY_WEIGHT[locale] ?? 0)),
+        priority: 0.9,
         alternates: { languages: altLanguages(`/${lp.slug}`) },
       });
     }
