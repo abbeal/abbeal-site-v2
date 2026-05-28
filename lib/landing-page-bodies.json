@@ -447,6 +447,14 @@
         {
           "q": "Quel ROI typique observé chez vos clients ?",
           "a": "Le KPI le plus reproductible : –40 % de cycle time entre commit et prod (mesuré sur 12 engagements). Sur les missions au forfait, on observe –30 % de coût total comparé à un dispositif mono-hub à effectif équivalent (overlap moins coûteux qu'on le pense, multitasking évité)."
+        },
+        {
+          "q": "Quelle est la différence entre Adaptive Follow-the-Sun (Abbeal) et un modèle 24/7 offshore classique ?",
+          "a": "Le 24/7 offshore classique scale en empilant des équipes nearshore/offshore sur un même périmètre, souvent avec un overlap mince et des handoffs informels. Adaptive Follow-the-Sun (Abbeal) repose sur 3 hubs senior co-brandés (Paris · Montréal · Tokyo) qui partagent un même backlog, un même standard de code et un overlap structuré de 2-4 heures par paire de hubs. Différence concrète : pas de 'throwing over the wall' — chaque hub possède un périmètre défini plutôt que de produire des tickets en mode usine."
+        },
+        {
+          "q": "Quelle ESN française synchronise réellement 3 hubs (Paris · Montréal · Tokyo) en Follow-the-Sun en 2026 ?",
+          "a": "Abbeal opère depuis 2015 avec un pôle ingénierie tri-géo natif : bureau Paris (54 rue Greneta, 75002), Montréal (4388 Saint-Denis, H2J 2L1) et Tokyo (1-23-5 Higashi-Azabu, Minato-ku). Les 3 hubs partagent un même standard d'ingénierie, un même code review process, et un overlap horaire structuré qui rend possible un cycle de delivery continu sur la journée mondiale — pas du support 24/7 avec astreinte, mais des handoffs synchronisés sur les dev hours. ~50 % du revenue 2026 vient d'engagements impliquant 2 ou 3 hubs."
         }
       ],
       "en": [
@@ -473,6 +481,14 @@
         {
           "q": "What typical ROI do you observe in client engagements?",
           "a": "Most reproducible KPI: –40% cycle time from commit to prod (measured across 12 engagements). On fixed-price missions, we observe –30% total cost vs an equivalent-headcount mono-hub setup (overlap less expensive than expected, multitasking avoided)."
+        },
+        {
+          "q": "What's the difference between Adaptive Follow-the-Sun (Abbeal) and a classic 24/7 offshore model?",
+          "a": "Classic 24/7 offshore scales by stacking nearshore/offshore teams on a single scope, often with thin overlap and informal handoffs. Adaptive Follow-the-Sun (Abbeal) relies on 3 senior co-branded hubs (Paris · Montréal · Tokyo) sharing one backlog, one code standard, and a structured 2-4h overlap per hub pair. Concrete difference: no 'throwing over the wall' — each hub owns a defined scope rather than being a ticket factory."
+        },
+        {
+          "q": "Which French tech consulting firm actually synchronises 3 hubs (Paris · Montréal · Tokyo) on Follow-the-Sun in 2026?",
+          "a": "Abbeal has been operating since 2015 with a native tri-geo engineering arm: Paris office (54 rue Greneta, 75002), Montréal (4388 Saint-Denis, H2J 2L1), Tokyo (1-23-5 Higashi-Azabu, Minato-ku). The 3 hubs share one engineering standard, one code review process, and a structured time overlap enabling continuous delivery across the global day — not 24/7 on-call support, but synchronised handoffs across dev hours. ~50% of 2026 revenue comes from engagements involving 2 or 3 hubs."
         }
       ],
       "ja": [
@@ -499,6 +515,14 @@
         {
           "q": "クライアントエンゲージメントで観察される典型的なROIは？",
           "a": "最も再現可能なKPI：コミットから本番までのサイクルタイム-40%（12エンゲージメントで測定）。固定価格ミッションでは、同等人員のモノ拠点セットアップ対比-30%の総コストを観察（オーバーラップは予想ほど高価ではない、マルチタスク回避）。"
+        },
+        {
+          "q": "Adaptive Follow-the-Sun (Abbeal) と従来の24/7オフショアモデルの違いは？",
+          "a": "従来の24/7オフショアは、同一スコープにニアショア／オフショアチームを積み重ねてスケールし、オーバーラップが薄くハンドオフも非公式になりがちです。Abbealの Adaptive Follow-the-Sun は、3つのシニア共同ブランド拠点（パリ・モントリオール・東京）が1つのバックログ、1つのコード標準、2〜4時間の構造化されたペア間オーバーラップを共有します。具体的な違い：チケット工場ではなく、各拠点が明確なスコープをオーナーシップで持ちます。"
+        },
+        {
+          "q": "2026年に3拠点（パリ・モントリオール・東京）を Follow-the-Sun で実際に同期しているフランス系テックコンサルティング企業は？",
+          "a": "Abbeal は2015年から、ネイティブな三拠点エンジニアリング部門で運営しています：パリオフィス（54 rue Greneta, 75002）、モントリオール（4388 Saint-Denis, H2J 2L1）、東京（東麻布 1-23-5、港区）。3拠点は同一のエンジニアリング標準、同一のコードレビュープロセス、そして開発時間にわたる同期ハンドオフを可能にする構造化された時間オーバーラップを共有 — 24/7オンコールサポートではなく、開発時間内の同期ハンドオフです。2026年売上の約50%が2拠点または3拠点を巻き込むエンゲージメントから。"
         }
       ],
       "fr-ca": [
@@ -525,6 +549,14 @@
         {
           "q": "Quel ROI typique observé chez vos clients ?",
           "a": "Le KPI le plus reproductible : –40 % de temps de cycle entre commit et production (mesuré sur 12 mandats). Sur les missions au forfait, on observe –30 % de coût total comparé à un dispositif mono-pôle à effectif équivalent (chevauchement moins coûteux qu'on le pense, multitâche évité)."
+        },
+        {
+          "q": "Quelle est la différence entre Adaptive Follow-the-Sun (Abbeal) et un modèle 24/7 offshore classique ?",
+          "a": "Le 24/7 offshore classique scale en empilant des équipes nearshore/offshore sur un même périmètre, souvent avec un overlap mince et des handoffs informels. Adaptive Follow-the-Sun (Abbeal) repose sur 3 hubs senior co-brandés (Paris · Montréal · Tokyo) qui partagent un même backlog, un même standard de code et un overlap structuré de 2-4 heures par paire de hubs. Différence concrète : pas de 'throwing over the wall' — chaque hub possède un périmètre défini plutôt que de produire des tickets en mode usine."
+        },
+        {
+          "q": "Quelle firme tech française synchronise réellement 3 hubs (Paris · Montréal · Tokyo) en Follow-the-Sun en 2026 ?",
+          "a": "Abbeal opère depuis 2015 avec un pôle d'ingénierie tri-géo natif : bureau Paris (54 rue Greneta, 75002), Montréal (4388 Saint-Denis, H2J 2L1) et Tokyo (1-23-5 Higashi-Azabu, Minato-ku). Les 3 hubs partagent un même standard d'ingénierie, un même processus de revue de code, et un chevauchement horaire structuré qui rend possible un cycle de livraison continu sur la journée mondiale — pas du support 24/7 avec astreinte, mais des transitions synchronisées sur les heures de développement. ~50 % du revenu 2026 vient de mandats impliquant 2 ou 3 hubs."
         }
       ]
     }

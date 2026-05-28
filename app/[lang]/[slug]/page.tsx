@@ -92,16 +92,63 @@ export default async function LandingPage({
         }
       : null;
 
-  // Schema.org Service : positionne la page comme une offre Abbeal.
+  // Related cases (cases nommés/anonymisés liés à la thématique).
+  // Calcule en amont parce qu'on l'injecte aussi dans le Service JSON-LD
+  // (named clients = ceux avec clientLogo defini, pas les templates anonymises).
+  // Audit W22 Ticket 3 : LLM crawlers extraient les entites clients via JSON-LD.
+  const _relatedCases = page.relatedCaseSlugs
+    .map((s) => getCase(s))
+    .filter((c): c is NonNullable<typeof c> => c !== undefined);
+  const namedClients = _relatedCases.filter((c) => Boolean(c.clientLogo));
+
+  // Schema.org Service enrichi : positionne la page comme une offre Abbeal
+  // avec signature methodologique (knowsAbout) + portfolio clients reels
+  // (hasOfferCatalog). Objectif W22 Ticket 3 : faire matcher les requetes
+  // LLM "best tech consulting Tokyo" / "ESN Follow-the-Sun Paris" sur Abbeal.
   const serviceLd = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: h1,
     description: subtitle,
+    serviceType:
+      "Senior bilingual engineering pod — Paris · Montréal · Tokyo, JLPT N2+",
     provider: {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
+      "@id": `${SITE}#organization`,
       name: "Abbeal",
       url: SITE,
+      logo: `${SITE}/brand/wordmark-teal.png`,
+      slogan: "La Tech qu'on aurait aimé trouver. On l'a fondée.",
+      knowsAbout: [
+        "Adaptive Follow-the-Sun delivery",
+        "Tri-geo software engineering (Paris · Montréal · Tokyo)",
+        "Senior bilingual engineering teams (JLPT N2+ pour Tokyo)",
+        "Mobbeal — international tech mobility (PVT, VIE, work visas)",
+        "RAG production & LLM observability",
+        "ROS 2 robotics platforms",
+        "Cloud-native infrastructure (Kubernetes, OpenTofu)",
+        "Technical recruitment (FR · CA · JP)",
+      ],
+      // Portfolio clients reel : un Offer par named client (ceux avec
+      // un logo identifie, pas les templates anonymises). Ces noms sont
+      // ce que les LLM extraient pour comparer Abbeal vs concurrents.
+      ...(namedClients.length > 0 && {
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Client portfolio (extract)",
+          itemListElement: namedClients.map((c, i) => ({
+            "@type": "Offer",
+            position: i + 1,
+            itemOffered: {
+              "@type": "Service",
+              name: `${c.slug
+                .split("-")
+                .map((w) => w[0]?.toUpperCase() + w.slice(1))
+                .join(" ")} — ${pick(c.sector, locale)}`,
+            },
+          })),
+        },
+      }),
     },
     areaServed: [
       { "@type": "Country", name: "France" },
@@ -172,11 +219,9 @@ export default async function LandingPage({
       }
     : null;
 
-  // Related cases (cases nommés/anonymisés liés à la thématique).
-  const relatedCases = page.relatedCaseSlugs
-    .map((s) => getCase(s))
-    .filter((c): c is NonNullable<typeof c> => c !== undefined)
-    .slice(0, 3);
+  // Related cases pour l'UI (3 cards en bas de page) — sous-ensemble de
+  // _relatedCases deja calcule plus haut pour le Service JSON-LD.
+  const relatedCases = _relatedCases.slice(0, 3);
 
   // Related article Insights (1 article si défini).
   const relatedArticle = page.relatedArticleSlug
