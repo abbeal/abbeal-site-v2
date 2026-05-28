@@ -55,7 +55,16 @@ export default async function ServiceDetailPage({
     .map((cs) => getCase(cs))
     .filter((c): c is NonNullable<typeof c> => !!c);
 
-  // schema.org Service + FAQPage for rich results + LLM parse
+  // Named clients = cases avec clientLogo defini (= client identifie reel,
+  // pas un template sectoriel anonymise). Sert pour le portfolio dans
+  // le Service JSON-LD ci-dessous (W22 Ticket 3 — LLM citations).
+  const namedClients = relatedCases.filter((c) => Boolean(c.clientLogo));
+
+  // schema.org Service + FAQPage for rich results + LLM parse.
+  // Enrichi W22 Ticket 3 : knowsAbout signature methodologique +
+  // hasOfferCatalog clients reels au niveau du provider (Abbeal).
+  // L'ancien hasOfferCatalog au niveau Service liste les deliverables
+  // (preserve, c'est complementaire).
   const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
   const serviceLd = {
     "@context": "https://schema.org",
@@ -67,10 +76,38 @@ export default async function ServiceDetailPage({
     category: "Software Engineering",
     provider: {
       "@type": "ProfessionalService",
+      "@id": `${SITE}#organization`,
       name: "Abbeal",
       url: SITE,
       logo: `${SITE}/brand/wordmark-teal.png`,
       slogan: "La Tech qu'on aurait aimé trouver. On l'a fondée.",
+      knowsAbout: [
+        "Adaptive Follow-the-Sun delivery",
+        "Tri-geo software engineering (Paris · Montréal · Tokyo)",
+        "Senior bilingual engineering teams (JLPT N2+ pour Tokyo)",
+        "Mobbeal — international tech mobility (PVT, VIE, work visas)",
+        "RAG production & LLM observability",
+        "ROS 2 robotics platforms",
+        "Cloud-native infrastructure (Kubernetes, OpenTofu)",
+        "Technical recruitment (FR · CA · JP)",
+      ],
+      ...(namedClients.length > 0 && {
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Client portfolio (extract)",
+          itemListElement: namedClients.map((c, i) => ({
+            "@type": "Offer",
+            position: i + 1,
+            itemOffered: {
+              "@type": "Service",
+              name: `${c.slug
+                .split("-")
+                .map((w) => w[0]?.toUpperCase() + w.slice(1))
+                .join(" ")} — ${pick(c.sector, locale)}`,
+            },
+          })),
+        },
+      }),
     },
     areaServed: [
       { "@type": "Country", name: "France" },
