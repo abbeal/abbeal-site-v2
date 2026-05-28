@@ -162,5 +162,12 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|api|favicon.ico|.*\\..*).*)"],
+  // Exclusions du matcher i18n :
+  // - _next : assets Next.js (jamais a relocaliser)
+  // - api : routes API (Payload REST/GraphQL, contact, consent-log...)
+  // - admin : interface Payload CMS (PoC W22). Sans cette exclusion,
+  //   /admin etait redirige vers /fr/admin -> catch-all [lang]/[slug]
+  //   -> ERR_CONNECTION_RESET. Couvre toutes les sous-routes /admin/*.
+  // - favicon.ico + .*\..* : fichiers statiques (jamais a relocaliser)
+  matcher: ["/((?!_next|api|admin|favicon.ico|.*\\..*).*)"],
 };
