@@ -29,6 +29,7 @@
  * On reextraira quand on aura plus de 7 collections (probable jamais).
  */
 
+import { randomBytes } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildConfig, type Block, type CollectionConfig } from "payload";
@@ -231,6 +232,52 @@ const Users: CollectionConfig = {
   slug: "users",
   auth: {
     useAPIKey: true, // Header: Authorization: users API-Key <key>
+    // Customise les emails forgotPassword. Sert aussi pour le flow
+    // d'invitation : quand un admin cree un user via /admin, le hook
+    // afterChange (ci-dessous) declenche un forgotPassword auto qui
+    // utilise ces templates. On detecte "invite vs vrai reset" via la
+    // recence de createdAt (< 5 min apres create = invitation initiale).
+    forgotPassword: {
+      generateEmailSubject: (args) => {
+        const u = ((args?.user ?? {}) as { createdAt?: string });
+        const isInvite =
+          !!u.createdAt &&
+          Date.now() - new Date(u.createdAt).getTime() < 5 * 60 * 1000;
+        return isInvite
+          ? "Bienvenue dans le CMS Abbeal — definis ton mot de passe"
+          : "Reinitialiser ton mot de passe Abbeal CMS";
+      },
+      generateEmailHTML: (args) => {
+        const token = args?.token;
+        const u = ((args?.user ?? {}) as {
+          email?: string;
+          firstName?: string;
+          createdAt?: string;
+        });
+        const isInvite =
+          !!u.createdAt &&
+          Date.now() - new Date(u.createdAt).getTime() < 5 * 60 * 1000;
+        const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
+        const link = `${SITE}/admin/reset/${token}`;
+        const firstName = u.firstName ? `, ${u.firstName}` : "";
+        const intro = isInvite
+          ? `Bonjour${firstName}, ton compte sur le CMS Abbeal vient d'etre cree. Pour activer ton acces, definis ton mot de passe en cliquant sur le lien ci-dessous (valide 1h).`
+          : `Bonjour${firstName}, tu as demande la reinitialisation de ton mot de passe sur le CMS Abbeal. Clique sur le lien ci-dessous pour le redefinir (valide 1h).`;
+        const cta = isInvite ? "Definir mon mot de passe" : "Reinitialiser mon mot de passe";
+        return `
+<!DOCTYPE html><html><head><meta charset="utf-8"></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#0c343d;max-width:560px;margin:0 auto;padding:32px 24px;line-height:1.6;">
+  <h2 style="font-weight:600;letter-spacing:-0.02em;font-size:24px;margin-bottom:24px;">Abbeal CMS</h2>
+  <p>${intro}</p>
+  <p style="margin:32px 0;">
+    <a href="${link}" style="display:inline-block;background:#0c343d;color:#fff;text-decoration:none;padding:14px 28px;font-weight:500;">${cta} →</a>
+  </p>
+  <p style="font-size:13px;color:#6b7280;">Si tu n'as pas demande cet email, ignore-le. Le lien expire automatiquement.</p>
+  <hr style="border:none;border-top:1px solid #e5e7eb;margin:32px 0;">
+  <p style="font-size:12px;color:#9ca3af;">Abbeal — Pole d'ingenierie tri-geo Paris · Montreal · Tokyo</p>
+</body></html>`;
+      },
+    },
   },
   admin: {
     useAsTitle: "email",
@@ -254,6 +301,52 @@ const Users: CollectionConfig = {
       return { id: { equals: u!.id } };
     },
     delete: ({ req: { user } }) => isAdmin(user as AccessUser),
+  },
+  hooks: {
+    beforeValidate: [
+      ({ operation, data }) => {
+        // INVITATION FLOW : si l'admin cree un user sans taper de password,
+        // on en genere un random costaud que personne ne saura. Le user le
+        // remplacera via le lien forgotPassword qu'il recevra par mail
+        // (cf. afterChange ci-dessous).
+        if (
+          data &&
+          operation === "create" &&
+          (!data.password || data.password === "")
+        ) {
+          data.password = randomBytes(24).toString("hex");
+        }
+        return data;
+      },
+    ],
+    afterChange: [
+      async ({ operation, doc, req }) => {
+        // INVITATION FLOW : nouveau user cree -> on declenche forgotPassword
+        // pour qu'il recoive un email "bienvenue, definis ton mot de passe".
+        // Customisation : le template generateEmailSubject/HTML ci-dessus
+        // detecte que createdAt est recent et adapte le wording.
+        if (operation !== "create") return doc;
+        if (!doc.email) return doc;
+        try {
+          await req.payload.forgotPassword({
+            collection: "users",
+            data: { email: doc.email as string },
+          });
+          req.payload.logger.info(
+            `Invitation email sent to ${doc.email} (id=${doc.id})`,
+          );
+        } catch (err) {
+          req.payload.logger.error(
+            { err, email: doc.email },
+            "Failed to send invitation email — verifier RESEND_API_KEY et CMS_EMAIL_FROM",
+          );
+          // Ne PAS throw : le user est cree avec un password random,
+          // l'admin peut re-trigger l'invitation manuellement si l'email
+          // a foire (ou utiliser la fonction "Forgot password" de l'UI).
+        }
+        return doc;
+      },
+    ],
   },
   fields: [
     { name: "firstName", type: "text" },
