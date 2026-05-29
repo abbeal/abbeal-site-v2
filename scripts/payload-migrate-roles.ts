@@ -28,30 +28,48 @@ const ADMIN_EMAIL = "sebastien.lonjon@abbeal.com";
 async function main() {
   const payload = await getPayload({ config });
 
-  // ─── 1. Promote Sebastien en admin ────────────────────────────────────────
-  console.log(`\n[1/2] Promote ${ADMIN_EMAIL} en role "admin"`);
+  // ─── 1. S'assure que Sebastien existe en role "admin" ─────────────────────
+  console.log(`\n[1/2] S'assure que ${ADMIN_EMAIL} existe en role "admin"`);
   const found = await payload.find({
     collection: "users",
     where: { email: { equals: ADMIN_EMAIL } },
     limit: 1,
   });
 
+  let sebUser: { id: number | string };
   if (found.docs.length === 0) {
-    console.error(`  ❌ User ${ADMIN_EMAIL} introuvable. Cree-le d'abord via /admin.`);
-    process.exit(1);
-  }
-
-  const sebUser = found.docs[0]!;
-  if ((sebUser as Record<string, unknown>).role === "admin") {
-    console.log(`  ✓ ${ADMIN_EMAIL} est deja admin (id=${sebUser.id})`);
-  } else {
-    await payload.update({
+    // User n'existe pas (typiquement le cas sur Turso prod fraichement
+    // initialise). On le cree via overrideAccess avec role=admin. Le hook
+    // beforeValidate genere un password random, le hook afterChange envoie
+    // automatiquement l'email d'invitation -> Sebastien recoit le lien
+    // "definis ton mot de passe" par mail.
+    console.log(`  → User absent, creation via SDK (declenchera l'email d'invitation)`);
+    const created = await payload.create({
       collection: "users",
-      id: sebUser.id,
       overrideAccess: true,
-      data: { role: "admin" },
+      data: {
+        email: ADMIN_EMAIL,
+        role: "admin",
+        firstName: "Sebastien",
+        lastName: "Lonjon",
+      },
     });
-    console.log(`  ✓ ${ADMIN_EMAIL} promu admin (id=${sebUser.id})`);
+    sebUser = { id: created.id };
+    console.log(`  ✓ ${ADMIN_EMAIL} cree en admin (id=${sebUser.id})`);
+    console.log(`  → email d'invitation envoye via Resend, check ta boite`);
+  } else {
+    sebUser = found.docs[0]!;
+    if ((sebUser as unknown as { role?: string }).role === "admin") {
+      console.log(`  ✓ ${ADMIN_EMAIL} est deja admin (id=${sebUser.id})`);
+    } else {
+      await payload.update({
+        collection: "users",
+        id: sebUser.id,
+        overrideAccess: true,
+        data: { role: "admin" },
+      });
+      console.log(`  ✓ ${ADMIN_EMAIL} promu admin (id=${sebUser.id})`);
+    }
   }
 
   // ─── 2. Back-fill author sur les articles existants ───────────────────────

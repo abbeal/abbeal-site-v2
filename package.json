@@ -22,7 +22,7 @@
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.8.3",
     "@payloadcms/db-sqlite": "^3.84.1",
-    "@payloadcms/email-resend": "^3.85.0",
+    "@payloadcms/email-resend": "^3.84.1",
     "@payloadcms/next": "^3.84.1",
     "@payloadcms/richtext-lexical": "^3.84.1",
     "@sentry/nextjs": "^10.49.0",
