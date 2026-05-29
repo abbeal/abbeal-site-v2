@@ -239,6 +239,14 @@ const Users: CollectionConfig = {
   slug: "users",
   auth: {
     useAPIKey: true, // Header: Authorization: users API-Key <key>
+    // Brute-force protection desactive : equipe interne tres petite
+    // (Seb + Vianney + 3-4 redacteurs), pas exposee au public, et le
+    // pattern "lock apres 5 echecs pour 10 min" cree des deadlocks
+    // quand on debug ou que Chrome auto-fill un ancien password. On
+    // accepte le trade-off securite vs UX pour cette taille d'equipe.
+    // Reactiver maxLoginAttempts: 5, lockTime: 600000 si jamais l'equipe
+    // edito grossit ou si on ouvre l'admin a un perimetre plus large.
+    maxLoginAttempts: 0,
     // Customise les emails forgotPassword. Sert aussi pour le flow
     // d'invitation : quand un admin cree un user via /admin, le hook
     // afterChange (ci-dessous) declenche un forgotPassword auto qui
