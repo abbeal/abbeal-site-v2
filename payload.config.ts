@@ -199,7 +199,14 @@ const STANDARD_CONTENT_BLOCKS: Block[] = [
 type AccessUser = { id: number | string; role?: "admin" | "editor" } | null | undefined;
 
 /** True si le user est authentifie ET admin. */
-const isAdmin = (user: AccessUser): boolean => user?.role === "admin";
+const isAdmin = (user: AccessUser): boolean => {
+  const result = user?.role === "admin";
+  // DEBUG W22 : a retirer apres validation
+  if (process.env.NODE_ENV === "production") {
+    console.log("[isAdmin] user=", JSON.stringify({ id: user?.id, role: user?.role, hasUser: !!user }), "result=", result);
+  }
+  return result;
+};
 
 /** Access standard pour collections "admin-only writes" : Cases, Landings,
  *  Glossary, TechRadar, Team. Read public (le contenu est destine au site
