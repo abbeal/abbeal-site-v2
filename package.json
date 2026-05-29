@@ -17,7 +17,8 @@
     "migrate:glossary": "tsx scripts/payload-migrate-glossary.ts",
     "migrate:tech-radar": "tsx scripts/payload-migrate-tech-radar.ts",
     "migrate:roles": "tsx scripts/payload-migrate-roles.ts",
-    "migrate:all": "pnpm migrate:articles && pnpm migrate:cases && pnpm migrate:landings && pnpm migrate:glossary && pnpm migrate:tech-radar && pnpm migrate:roles"
+    "migrate:articles-status": "tsx scripts/payload-migrate-articles-status.ts",
+    "migrate:all": "pnpm migrate:articles && pnpm migrate:cases && pnpm migrate:landings && pnpm migrate:glossary && pnpm migrate:tech-radar && pnpm migrate:roles && pnpm migrate:articles-status"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.8.3",
