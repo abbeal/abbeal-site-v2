@@ -16,11 +16,13 @@
     "migrate:landings": "tsx scripts/payload-migrate-landings.ts",
     "migrate:glossary": "tsx scripts/payload-migrate-glossary.ts",
     "migrate:tech-radar": "tsx scripts/payload-migrate-tech-radar.ts",
-    "migrate:all": "pnpm migrate:articles && pnpm migrate:cases && pnpm migrate:landings && pnpm migrate:glossary && pnpm migrate:tech-radar"
+    "migrate:roles": "tsx scripts/payload-migrate-roles.ts",
+    "migrate:all": "pnpm migrate:articles && pnpm migrate:cases && pnpm migrate:landings && pnpm migrate:glossary && pnpm migrate:tech-radar && pnpm migrate:roles"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.8.3",
     "@payloadcms/db-sqlite": "^3.84.1",
+    "@payloadcms/email-resend": "^3.85.0",
     "@payloadcms/next": "^3.84.1",
     "@payloadcms/richtext-lexical": "^3.84.1",
     "@sentry/nextjs": "^10.49.0",
