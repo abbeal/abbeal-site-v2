@@ -829,8 +829,32 @@ const Team: CollectionConfig = {
 //                             BUILD CONFIG
 // ═══════════════════════════════════════════════════════════════════════════
 
+// CSRF / serverURL config (W22 — fix critical "user=null" sur POST /api/users
+// en prod).
+// Payload protege les writes via une comparaison entre la request Origin et
+// serverURL/csrf list. Sans serverURL = bon hostname en prod, Payload reject
+// silencieusement le cookie d'auth → user=null cote serveur → "You are not
+// allowed" sur toute action POST/PATCH/DELETE.
+//
+// Priorite serverURL :
+//   1. PAYLOAD_PUBLIC_SERVER_URL (override manuel)
+//   2. https://${VERCEL_URL}     (auto-set par Vercel sur preview deploys)
+//   3. https://abbeal.com        (prod custom domain par defaut)
+//   4. http://localhost:3000     (dev local)
+const PROD_URL = "https://abbeal.com";
+const VERCEL_URL = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null;
+const RESOLVED_SERVER_URL =
+  process.env.PAYLOAD_PUBLIC_SERVER_URL ??
+  VERCEL_URL ??
+  (process.env.NODE_ENV === "production" ? PROD_URL : "http://localhost:3000");
+
 export default buildConfig({
-  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL ?? "http://localhost:3000",
+  serverURL: RESOLVED_SERVER_URL,
+  // Liste explicite des origins autorises pour les writes (CSRF protection).
+  // Toujours inclure le custom domain prod + le current VERCEL_URL (preview).
+  csrf: [PROD_URL, `https://www.abbeal.com`, VERCEL_URL].filter(
+    (url): url is string => Boolean(url),
+  ),
   admin: {
     user: Users.slug,
     meta: { titleSuffix: "— Abbeal CMS" },
