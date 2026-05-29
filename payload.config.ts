@@ -32,7 +32,7 @@
 import { randomBytes } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { buildConfig, type Block, type CollectionConfig } from "payload";
+import { buildConfig, type Block, type CollectionConfig, type Where } from "payload";
 import { sqliteAdapter } from "@payloadcms/db-sqlite";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { resendAdapter } from "@payloadcms/email-resend";
@@ -210,6 +210,12 @@ const PUBLIC_READ_ADMIN_WRITE = {
   update: ({ req: { user } }: { req: { user: AccessUser } }) => isAdmin(user),
   delete: ({ req: { user } }: { req: { user: AccessUser } }) => isAdmin(user),
 };
+
+/** Cache une collection du sidebar /admin pour tout user qui n'est pas admin.
+ *  L'API REST publique reste accessible (read public) — c'est juste l'UI qui
+ *  masque. Use case : editors voient SEULEMENT Articles + leur profil Users,
+ *  pas les autres collections qu'ils ne peuvent pas editer de toute facon. */
+const HIDDEN_FROM_EDITORS = ({ user }: { user?: unknown }) => !isAdmin(user as AccessUser);
 
 // ═══════════════════════════════════════════════════════════════════════════
 //                             COLLECTIONS
@@ -407,11 +413,37 @@ const Articles: CollectionConfig = {
   slug: "articles",
   admin: {
     useAsTitle: "slug",
-    defaultColumns: ["slug", "tag", "author", "publishedAt", "featured"],
-    description: "Articles d'insights /insights. 4 langues. Body = blocks. Editor = peut creer/editer SES articles uniquement.",
+    defaultColumns: ["slug", "tag", "status", "author", "publishedAt", "featured"],
+    description: "Articles d'insights /insights. Workflow: Editor cree en Draft -> soumet en Pending review -> Admin valide en Published.",
   },
+  // Read access avec workflow status (W22 publish workflow) :
+  //   - public (non logge)  : voit uniquement les articles "published"
+  //   - editor              : voit "published" de tout le monde + tous SES drafts/pending
+  //   - admin               : voit tout
+  // Write access :
+  //   - create  : tout user authentifie (en draft par defaut)
+  //   - update  : admin sur tout. Editor uniquement sur ses propres articles
+  //               (filter where author == user.id) MAIS ne peut pas passer
+  //               status en "published" (cf field-level access sur status).
+  //   - delete  : idem update.
   access: {
-    read: () => true,
+    read: ({ req: { user } }) => {
+      const u = user as AccessUser;
+      if (isAdmin(u)) return true;
+      if (u) {
+        // Editor : published de tout le monde + ses propres drafts/pending
+        const w: Where = {
+          or: [
+            { status: { equals: "published" } },
+            { author: { equals: u.id } },
+          ],
+        };
+        return w;
+      }
+      // Public non-logge : uniquement les articles published
+      const w: Where = { status: { equals: "published" } };
+      return w;
+    },
     create: ({ req: { user } }) => Boolean(user),
     update: ({ req: { user } }) => {
       if (!user) return false;
@@ -431,10 +463,23 @@ const Articles: CollectionConfig = {
     beforeChange: [
       ({ req, operation, data }) => {
         // Au create : auto-remplit author avec le user courant (req.user).
-        // Si admin cree pour quelqu'un d'autre, il peut overrider explicitement
-        // via le champ author (admin-only update on this field).
         if (operation === "create" && req.user && !data.author) {
           data.author = req.user.id;
+        }
+        // Sur create, si status n'est pas defini, force "draft".
+        if (operation === "create" && !data.status) {
+          data.status = "draft";
+        }
+        // CRITICAL : un editor ne peut PAS publier directement. Si un editor
+        // essaie de set status=published, on downgrade en pending_review
+        // (= sa soumission pour validation admin). Belt + suspenders avec
+        // le field-level access qui check aussi.
+        if (
+          data.status === "published" &&
+          req.user &&
+          !isAdmin(req.user as AccessUser)
+        ) {
+          data.status = "pending_review";
         }
         return data;
       },
@@ -442,6 +487,37 @@ const Articles: CollectionConfig = {
   },
   fields: [
     { name: "slug", type: "text", required: true, unique: true, index: true },
+    {
+      name: "status",
+      type: "select",
+      // required: false au schema-level pour permettre l'ajout sur table peuplee
+      // sans drop. Le hook beforeChange force "draft" au create si pas defini.
+      required: false,
+      defaultValue: "draft",
+      options: [
+        { label: "Draft (brouillon)", value: "draft" },
+        { label: "Pending review (soumis a validation)", value: "pending_review" },
+        { label: "Published (en ligne)", value: "published" },
+      ],
+      admin: {
+        description:
+          "Workflow : Draft -> Pending review (editor soumet) -> Published (seul admin peut basculer). Seuls les Published sont servis sur abbeal.com.",
+        position: "sidebar",
+      },
+      access: {
+        // Field-level : seul un admin peut set le status a "published".
+        // L'update est autorise pour tous, mais le hook beforeChange ci-dessous
+        // empeche un editor de set "published" (rejette ou downgrade en
+        // "pending_review"). Cette field-level access est un filet de plus.
+        update: ({ req: { user }, data }) => {
+          // Si on essaie de passer en "published", seul un admin l'autorise.
+          if ((data as Record<string, unknown>)?.status === "published") {
+            return isAdmin(user as AccessUser);
+          }
+          return true;
+        },
+      },
+    },
     {
       name: "author",
       type: "relationship",
@@ -510,6 +586,7 @@ const Cases: CollectionConfig = {
     useAsTitle: "slug",
     defaultColumns: ["slug", "sector", "geo", "publishedAt", "featured"],
     description: "Case studies /cases. 4 langues. Body = blocks.",
+    hidden: HIDDEN_FROM_EDITORS, // cache du sidebar admin pour editors (API publique reste accessible)
   },
   access: PUBLIC_READ_ADMIN_WRITE,
   fields: [
@@ -606,6 +683,7 @@ const LandingPages: CollectionConfig = {
     useAsTitle: "slug",
     defaultColumns: ["slug", "h1"],
     description: "Landing pages SEO non-branded. 4 langues. Body = blocks + FAQ.",
+    hidden: HIDDEN_FROM_EDITORS,
   },
   access: PUBLIC_READ_ADMIN_WRITE,
   fields: [
@@ -672,6 +750,7 @@ const Glossary: CollectionConfig = {
     useAsTitle: "slug",
     defaultColumns: ["slug", "category"],
     description: "Glossaire technique. 54 termes, 4 langues, schema DefinedTerm.",
+    hidden: HIDDEN_FROM_EDITORS,
   },
   access: PUBLIC_READ_ADMIN_WRITE,
   fields: [
@@ -716,6 +795,7 @@ const TechRadar: CollectionConfig = {
     useAsTitle: "slug",
     defaultColumns: ["slug", "ring", "category"],
     description: "Tech Radar — items 1 par doc, name/rationale localises.",
+    hidden: HIDDEN_FROM_EDITORS,
   },
   access: PUBLIC_READ_ADMIN_WRITE,
   fields: [
@@ -768,6 +848,7 @@ const Team: CollectionConfig = {
     useAsTitle: "name",
     defaultColumns: ["name", "role", "geo", "active"],
     description: "Equipe Abbeal — fiches membres pour /about, /careers, etc.",
+    hidden: HIDDEN_FROM_EDITORS,
   },
   access: PUBLIC_READ_ADMIN_WRITE,
   fields: [
