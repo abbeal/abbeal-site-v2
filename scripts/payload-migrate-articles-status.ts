@@ -22,14 +22,19 @@ async function main() {
 
   console.log("🚀 Migration status=published sur articles existants sans status");
 
+  // Tous les articles qui ne sont PAS deja "published" et qui sont anciens
+  // (createdAt avant la migration W22 = avant l'ajout du champ status).
+  // On promote tout ce qui n'est pas explicitement published pour preserver
+  // la visibilite publique. Les nouveaux articles (post-W22) garderont leur
+  // status manuel (draft / pending_review / published).
   const orphanArticles = await payload.find({
     collection: "articles",
-    where: { status: { exists: false } },
+    where: { status: { not_equals: "published" } },
     limit: 1000,
     overrideAccess: true,
   });
 
-  console.log(`   ${orphanArticles.totalDocs} articles sans status detectes`);
+  console.log(`   ${orphanArticles.totalDocs} articles a promouvoir en published`);
 
   let updated = 0;
   for (const article of orphanArticles.docs) {
