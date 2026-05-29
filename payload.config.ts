@@ -201,19 +201,6 @@ type AccessUser = { id: number | string; role?: "admin" | "editor" } | null | un
 /** True si le user est authentifie ET admin. */
 const isAdmin = (user: AccessUser): boolean => user?.role === "admin";
 
-/** DEBUG W22 — log toute access decision pour identifier le bug "not allowed". */
-function logAccess(label: string, user: AccessUser, result: boolean | object): void {
-  console.log(
-    `[ACCESS ${label}]`,
-    JSON.stringify({
-      userId: user?.id ?? null,
-      role: user?.role ?? null,
-      hasUser: !!user,
-      result: typeof result === "boolean" ? result : "where-clause",
-    }),
-  );
-}
-
 /** Access standard pour collections "admin-only writes" : Cases, Landings,
  *  Glossary, TechRadar, Team. Read public (le contenu est destine au site
  *  public abbeal.com), writes reservees aux admins. */
@@ -307,33 +294,21 @@ const Users: CollectionConfig = {
   },
   access: {
     read: ({ req: { user } }) => {
+      if (!user) return false;
       const u = user as AccessUser;
-      if (!user) { logAccess("users.read", u, false); return false; }
-      if (isAdmin(u)) { logAccess("users.read", u, true); return true; }
-      const r = { id: { equals: u!.id } };
-      logAccess("users.read", u, r);
-      return r;
+      if (isAdmin(u)) return true;
+      // Editor : voit que son propre profil
+      return { id: { equals: u!.id } };
     },
-    create: ({ req: { user } }) => {
-      const u = user as AccessUser;
-      const r = isAdmin(u);
-      logAccess("users.create", u, r);
-      return r;
-    },
+    create: ({ req: { user } }) => isAdmin(user as AccessUser),
     update: ({ req: { user } }) => {
+      if (!user) return false;
       const u = user as AccessUser;
-      if (!user) { logAccess("users.update", u, false); return false; }
-      if (isAdmin(u)) { logAccess("users.update", u, true); return true; }
-      const r = { id: { equals: u!.id } };
-      logAccess("users.update", u, r);
-      return r;
+      if (isAdmin(u)) return true;
+      // Editor : peut editer son propre profil
+      return { id: { equals: u!.id } };
     },
-    delete: ({ req: { user } }) => {
-      const u = user as AccessUser;
-      const r = isAdmin(u);
-      logAccess("users.delete", u, r);
-      return r;
-    },
+    delete: ({ req: { user } }) => isAdmin(user as AccessUser),
   },
   hooks: {
     beforeValidate: [
@@ -407,12 +382,7 @@ const Users: CollectionConfig = {
       access: {
         // Field-level : seul un admin peut modifier le role d'un user.
         // Sinon un editor s'auto-promouvrait admin via PATCH /api/users/{id}.
-        update: ({ req: { user } }) => {
-          const u = user as AccessUser;
-          const r = isAdmin(u);
-          logAccess("field.users.role.update", u, r);
-          return r;
-        },
+        update: ({ req: { user } }) => isAdmin(user as AccessUser),
       },
     },
   ],
