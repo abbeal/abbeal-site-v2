@@ -356,6 +356,13 @@ const Users: CollectionConfig = {
       type: "select",
       required: true,
       defaultValue: "editor",
+      // CRITICAL : sans saveToJWT=true, le role n'est PAS inclus dans le
+      // token JWT renvoye au login. Resultat : req.user.role === undefined
+      // cote serveur sur les requests authentifiees, et toutes les access
+      // rules basees sur isAdmin(user) retournent false meme pour les
+      // vrais admins. Bug detecte W22 : Sebastien (admin en DB) ne pouvait
+      // pas creer de user via /admin -> "You are not allowed".
+      saveToJWT: true,
       options: [
         { label: "Admin (full access)", value: "admin" },
         { label: "Editor (ses propres articles uniquement)", value: "editor" },
