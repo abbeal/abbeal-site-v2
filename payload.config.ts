@@ -955,6 +955,18 @@ export default buildConfig({
   //      Marketplace integration Turso — pas besoin de les ajouter a la main)
   //   2. DATABASE_URI        + DATABASE_AUTH_TOKEN (override manuel possible)
   //   3. file:./payload.db   (dev local, pas d'auth)
+  //
+  // CRITICAL — push: false en PROD pour eviter data loss (W22 incident) :
+  //   Par defaut Payload + db-sqlite push automatiquement le schema au boot
+  //   (drizzle-kit push). En prod serverless, ce push tourne SILENCIEUSEMENT
+  //   sans le prompt interactif "DATA LOSS WARNING — accept?". Resultat
+  //   observe : on a perdu 2 users quand un changement de schema (drop de
+  //   login_attempts apres maxLoginAttempts:0) a ete deploye en prod.
+  //
+  //   Fix : push activatif SEULEMENT en dev local. En preview + prod (Vercel
+  //   NODE_ENV=production), aucun push auto. Les migrations de schema en
+  //   prod passent par les scripts explicites (pnpm tsx scripts/...) qu'on
+  //   run a la main APRES verification + backup mental de l'etat.
   db: sqliteAdapter({
     client: {
       url:
@@ -968,5 +980,7 @@ export default buildConfig({
           }
         : {}),
     },
+    // Disable auto schema push en prod (cf comment ci-dessus).
+    push: process.env.NODE_ENV !== "production",
   }),
 });
