@@ -1102,6 +1102,10 @@ export const articles: Article[] = [
   {
     slug: "senior-engineering-team-asia-europe-north-america",
     featured: true,
+    // Retire du slot home : titre long qui cassait la mise en page du
+    // bloc Insights (retour a la ligne + espace vide laid). Garde
+    // featured=true pour rester en haut de /insights listing.
+    featuredOnHome: false,
     tag: "Talent",
     readTime: "7 min",
     publishedAt: "2026-05-25",
