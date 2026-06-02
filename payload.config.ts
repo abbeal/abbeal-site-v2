@@ -1012,7 +1012,14 @@ export default buildConfig({
           }
         : {}),
     },
-    // Disable auto schema push en prod (cf comment ci-dessus).
-    push: process.env.NODE_ENV !== "production",
+    // Disable auto schema push :
+    //   - en runtime PROD/PREVIEW (NODE_ENV=production sur Vercel serverless)
+    //   - DES QU'ON PARLE A TURSO (= scripts locaux avec env vars TURSO_*
+    //     pullees pour migrer/reassign), pour eviter qu'un drift de schema
+    //     local cause un drop de columns + rows perdues sur Turso
+    // Push:true autorise SEULEMENT en dev local pur (SQLite local, pas de Turso).
+    // Toute migration de schema en prod = passer par un script EXPLICITE qui
+    // call drizzle-kit avec un prompt y/N visible (a venir).
+    push: process.env.NODE_ENV !== "production" && !process.env.TURSO_DATABASE_URL,
   }),
 });
