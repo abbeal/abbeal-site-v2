@@ -501,7 +501,7 @@ const Articles: CollectionConfig = {
       ],
       admin: {
         description:
-          "Workflow : Draft -> Pending review (editor soumet) -> Published (seul admin peut basculer). Seuls les Published sont servis sur abbeal.com.",
+          "Workflow : Draft (brouillon, invisible publiquement) → Pending review (= je soumets à Seb/Vianney pour validation) → Published (seul admin peut basculer, l'article apparaît sur abbeal.com). Si un editor sélectionne 'Published' et sauvegarde, le système redescend automatiquement en 'Pending review' (= équivalent à soumettre).",
         position: "sidebar",
       },
       access: {
@@ -544,8 +544,22 @@ const Articles: CollectionConfig = {
     { name: "featuredOnHome", type: "checkbox" },
     { name: "tag", type: "text", required: true, admin: { description: "Ex: IA, Engineering, Talent, Mobbeal, Business" } },
     { name: "readTime", type: "text", required: true, admin: { description: 'Ex: "5 min"' } },
-    { name: "publishedAt", type: "date", required: true },
-    { name: "updatedAt", type: "date" },
+    {
+      name: "publishedAt",
+      type: "date",
+      required: true,
+      admin: {
+        // Format europeen JJ/MM/AAAA (au lieu de MM/JJ/AAAA US par defaut)
+        date: { displayFormat: "dd/MM/yyyy", pickerAppearance: "dayOnly" },
+      },
+    },
+    {
+      name: "updatedAt",
+      type: "date",
+      admin: {
+        date: { displayFormat: "dd/MM/yyyy", pickerAppearance: "dayOnly" },
+      },
+    },
     { name: "relatedCaseSlug", type: "text" },
     { name: "relatedServiceSlug", type: "text" },
 
@@ -559,6 +573,10 @@ const Articles: CollectionConfig = {
       type: "array",
       localized: true,
       labels: { singular: "FAQ Q/R", plural: "FAQ Q/R" },
+      admin: {
+        description:
+          "FAQ optionnelle (4-6 Q/R recommandé). Rendu en bas de l'article + injecté en Schema.org FAQPage JSON-LD → éligible aux Rich Results Google (encart FAQ déroulable dans la SERP) et lu par les LLM (ChatGPT, Perplexity, Claude) pour répondre aux requêtes utilisateurs. Format Q/A en français/anglais/etc. par locale. Booste très visiblement la SERP. Laisse vide si l'article n'a pas naturellement de questions.",
+      },
       fields: [
         { name: "q", type: "text", required: true },
         { name: "a", type: "textarea", required: true },
@@ -646,7 +664,15 @@ const Cases: CollectionConfig = {
       labels: { singular: "Tech", plural: "Tech Stack" },
       fields: [{ name: "name", type: "text", required: true }],
     },
-    { name: "publishedAt", type: "date", required: true },
+    {
+      name: "publishedAt",
+      type: "date",
+      required: true,
+      admin: {
+        // Format europeen JJ/MM/AAAA (au lieu de MM/JJ/AAAA US par defaut)
+        date: { displayFormat: "dd/MM/yyyy", pickerAppearance: "dayOnly" },
+      },
+    },
 
     // KPI principal (group, partiellement localise — value reste un nombre/string commun)
     {
@@ -868,7 +894,13 @@ const Team: CollectionConfig = {
     { name: "photo", type: "text", admin: { description: "Chemin /public, ex: /team/team-1.jpg" } },
     { name: "linkedinUrl", type: "text" },
     { name: "githubUrl", type: "text" },
-    { name: "joinedAt", type: "date" },
+    {
+      name: "joinedAt",
+      type: "date",
+      admin: {
+        date: { displayFormat: "dd/MM/yyyy", pickerAppearance: "dayOnly" },
+      },
+    },
 
     // Localises
     { name: "role", type: "text", required: true, localized: true, admin: { description: 'Ex: "CEO", "Senior Engineer", "VP Growth"' } },
