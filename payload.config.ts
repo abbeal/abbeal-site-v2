@@ -1,7 +1,7 @@
 /**
  * Payload CMS 3 config — PoC.
  *
- * 7 collections :
+ * 8 collections :
  *   - Users         (auth, API Keys pour Cowork)
  *   - Articles      (27 articles d'insights, body blocks 11 types)
  *   - Cases         (25 case studies, meme body blocks)
@@ -9,6 +9,7 @@
  *   - Glossary      (54 termes techniques + Schema.org DefinedTerm)
  *   - TechRadar     (11 items × 4 locales, ring/category non-localises)
  *   - Team          (vide, a remplir manuellement via /admin)
+ *   - JobOffers     (offres d'emploi /careers, cree par admins ou Cowork via API)
  *
  * SQLite local (./payload.db) — Postgres viendra a la bascule prod.
  * 4 locales fr/en/ja/fr-ca, defaultLocale fr, fallback active.
@@ -908,6 +909,198 @@ const Team: CollectionConfig = {
   ],
 };
 
+// ---------------------------------------------------------------------------
+// JobOffers — offres d'emploi publiees sur /careers.
+//
+// Use case principal : Cowork detecte un nouveau besoin commercial, POST
+// automatiquement une offre via /api/job-offers (auth API Key). Le workflow
+// draft -> pending_review -> published assure qu'un humain valide avant
+// publication.
+//
+// Access : seuls les admins (Seb + Vianney) peuvent creer/editer/supprimer.
+// Read public (les offres apparaissent sur abbeal.com/careers).
+// Editors ne voient PAS cette collection dans /admin sidebar.
+//
+// Workflow status : meme logique qu'Articles. Editor cree -> Pending review
+// -> Admin valide en Published. Mais comme l'access write est admin-only,
+// en pratique seuls admins peuvent meme creer une draft → le workflow est
+// "Admin cree direct en Published" OU "Cowork cree en Draft -> Admin valide
+// en Published".
+// ---------------------------------------------------------------------------
+const JobOffers: CollectionConfig = {
+  slug: "job-offers",
+  admin: {
+    useAsTitle: "slug",
+    defaultColumns: [
+      "slug",
+      "status",
+      "location",
+      "contractType",
+      "experienceLevel",
+      "publishedAt",
+    ],
+    description:
+      "Offres d'emploi publiees sur /careers. Workflow draft -> pending_review -> published. Cowork peut creer via POST /api/job-offers (auth API Key admin).",
+    hidden: HIDDEN_FROM_EDITORS, // editors ne voient pas dans le sidebar
+  },
+  access: PUBLIC_READ_ADMIN_WRITE, // read public, write admin-only
+  hooks: {
+    beforeChange: [
+      ({ req, operation, data }) => {
+        // Auto-fill author au create avec le user courant.
+        if (operation === "create" && req.user && !data.author) {
+          data.author = req.user.id;
+        }
+        if (operation === "create" && !data.status) {
+          data.status = "draft";
+        }
+        return data;
+      },
+    ],
+  },
+  fields: [
+    {
+      name: "slug",
+      type: "text",
+      required: true,
+      unique: true,
+      index: true,
+      admin: { description: "URL slug kebab-case. Ex: senior-backend-engineer-tokyo" },
+    },
+    {
+      name: "status",
+      type: "select",
+      required: false,
+      defaultValue: "draft",
+      options: [
+        { label: "Draft (brouillon)", value: "draft" },
+        { label: "Pending review (soumis a validation)", value: "pending_review" },
+        { label: "Published (en ligne sur /careers)", value: "published" },
+      ],
+      admin: {
+        description:
+          "Workflow : Draft → Pending review → Published. Seuls les Published apparaissent sur /careers.",
+        position: "sidebar",
+      },
+    },
+    {
+      name: "author",
+      type: "relationship",
+      relationTo: "users",
+      required: false,
+      admin: {
+        description: "Auteur de l'offre (auto-rempli au create). Pour Cowork = user admin dont la cle API a ete utilisee.",
+        position: "sidebar",
+      },
+    },
+    {
+      name: "featured",
+      type: "checkbox",
+      defaultValue: false,
+      admin: { description: "Remonte en haut de /careers" },
+    },
+
+    // Localises
+    { name: "title", type: "text", required: true, localized: true, admin: { description: 'Ex: "Senior Backend Engineer — Tokyo"' } },
+    { name: "excerpt", type: "textarea", required: true, localized: true, admin: { description: "1-2 phrases pour la card listing /careers" } },
+    { name: "metaDescription", type: "textarea", localized: true, admin: { description: "Meta SEO 140-160 chars (fallback excerpt)" } },
+
+    // Champs metier non-localises
+    {
+      name: "location",
+      type: "select",
+      required: true,
+      options: [
+        { label: "Paris", value: "paris" },
+        { label: "Tokyo", value: "tokyo" },
+        { label: "Montréal", value: "montreal" },
+        { label: "Tri-géo (Paris · Montréal · Tokyo)", value: "tri-geo" },
+        { label: "Remote (EU)", value: "remote-eu" },
+        { label: "Remote (worldwide)", value: "remote-ww" },
+      ],
+    },
+    {
+      name: "contractType",
+      type: "select",
+      required: true,
+      options: [
+        { label: "CDI", value: "cdi" },
+        { label: "Freelance / Contractor", value: "freelance" },
+        { label: "Stage", value: "stage" },
+        { label: "VIE", value: "vie" },
+        { label: "PVT (Working Holiday)", value: "pvt" },
+        { label: "Alternance", value: "alternance" },
+      ],
+    },
+    {
+      name: "experienceLevel",
+      type: "select",
+      required: true,
+      options: [
+        { label: "Junior (0-2 ans)", value: "junior" },
+        { label: "Confirmé (3-5 ans)", value: "confirme" },
+        { label: "Senior (6-9 ans)", value: "senior" },
+        { label: "Lead / Staff+ (10+ ans)", value: "lead-plus" },
+      ],
+    },
+    {
+      name: "techStack",
+      type: "array",
+      labels: { singular: "Tech", plural: "Tech stack" },
+      fields: [{ name: "name", type: "text", required: true }],
+      admin: { description: "Ex: Go, Kubernetes, PostgreSQL, Pinecone" },
+    },
+    {
+      name: "salaryRange",
+      type: "text",
+      admin: { description: 'Optionnel. Ex: "60-80k€", "selon experience", "8M-12M JPY"' },
+    },
+    {
+      name: "applyUrl",
+      type: "text",
+      required: true,
+      admin: {
+        description:
+          'URL Welcome to the Jungle / Typeform / mailto. Ex: "https://www.welcometothejungle.com/..." ou "mailto:recrutement@abbeal.com?subject=Senior+Backend+Tokyo"',
+      },
+    },
+    {
+      name: "publishedAt",
+      type: "date",
+      required: true,
+      admin: {
+        date: { displayFormat: "dd/MM/yyyy", pickerAppearance: "dayOnly" },
+      },
+    },
+    {
+      name: "closedAt",
+      type: "date",
+      admin: {
+        description: "Date de fermeture du poste (optionnelle). Apres cette date l'offre n'est plus visible sur /careers.",
+        date: { displayFormat: "dd/MM/yyyy", pickerAppearance: "dayOnly" },
+      },
+    },
+    {
+      name: "relatedCaseSlugs",
+      type: "array",
+      labels: { singular: "Case lie", plural: "Cases lies" },
+      fields: [{ name: "slug", type: "text", required: true }],
+      admin: { description: "Slugs de cases qui montrent du travail similaire — affiches en bas de l'offre." },
+    },
+
+    // Body : description longue en blocks (meme 11 types qu'Articles/Cases)
+    {
+      name: "description",
+      type: "blocks",
+      required: true,
+      localized: true,
+      labels: { singular: "bloc", plural: "blocs" },
+      blocks: STANDARD_CONTENT_BLOCKS,
+      admin: { description: "Description complete : missions, profil recherche, equipe, methodes. Utilise h2/p/list/callout/code." },
+    },
+  ],
+};
+
 // ═══════════════════════════════════════════════════════════════════════════
 //                             BUILD CONFIG
 // ═══════════════════════════════════════════════════════════════════════════
@@ -942,7 +1135,7 @@ export default buildConfig({
     user: Users.slug,
     meta: { titleSuffix: "— Abbeal CMS" },
   },
-  collections: [Users, Articles, Cases, LandingPages, Glossary, TechRadar, Team],
+  collections: [Users, Articles, Cases, LandingPages, Glossary, TechRadar, Team, JobOffers],
   editor: lexicalEditor(),
   localization: {
     locales: [
@@ -1018,8 +1211,14 @@ export default buildConfig({
     //     pullees pour migrer/reassign), pour eviter qu'un drift de schema
     //     local cause un drop de columns + rows perdues sur Turso
     // Push:true autorise SEULEMENT en dev local pur (SQLite local, pas de Turso).
-    // Toute migration de schema en prod = passer par un script EXPLICITE qui
-    // call drizzle-kit avec un prompt y/N visible (a venir).
-    push: process.env.NODE_ENV !== "production" && !process.env.TURSO_DATABASE_URL,
+    //
+    // ESCAPE HATCH : PAYLOAD_ALLOW_PUSH=1 force push:true meme contre Turso.
+    // Usage exceptionnel : ajouter une nouvelle table (CREATE TABLE = non-destructif),
+    // run drizzle-kit avec prompt Y/N visible. JAMAIS en CI/CD, JAMAIS en deploy.
+    // Toujours faire 'list-users' avant + apres pour verifier l'integrite.
+    push:
+      process.env.PAYLOAD_ALLOW_PUSH === "1"
+        ? true
+        : process.env.NODE_ENV !== "production" && !process.env.TURSO_DATABASE_URL,
   }),
 });
