@@ -401,7 +401,8 @@
         {
           "city": "Paris",
           "address": "54 rue Greneta, 75002 Paris",
-          "tag": "Hub Europe"
+          "tag": "Hub Europe",
+          "href": "/consultant-informatique-paris"
         },
         {
           "city": "Montréal",

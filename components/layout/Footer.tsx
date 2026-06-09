@@ -10,7 +10,18 @@ type FooterDict = {
     tagline: string;
     addresses: {
       title: string;
-      items: { city: string; address: string; tag: string }[];
+      items: {
+        city: string;
+        address: string;
+        tag: string;
+        /** Optional internal link slug — sans le prefix locale (ex.
+         *  "/consultant-informatique-paris"). Si defini, le nom de la
+         *  ville devient un <Link> qui pointe vers /{locale}{href}.
+         *  Cas d'usage W24-t3 : landing FR-only sur Paris -> seul fr.json
+         *  defini ce champ pour l'item Paris, les autres locales gardent
+         *  le texte simple (fallback safe). */
+        href?: string;
+      }[];
     };
     contact: { title: string; general: string; recruitment: string };
     follow: { title: string; linkedin: string; youtube: string };
@@ -100,7 +111,16 @@ export function Footer({
               {d.footer.addresses.items.map((a) => (
                 <li key={a.city}>
                   <p className="flex items-baseline gap-2">
-                    <span className="font-semibold">{a.city}</span>
+                    {a.href ? (
+                      <Link
+                        href={`/${locale}${a.href}`}
+                        className="font-semibold hover:text-[var(--color-brand-teal)] transition-colors"
+                      >
+                        {a.city}
+                      </Link>
+                    ) : (
+                      <span className="font-semibold">{a.city}</span>
+                    )}
                     <span className="font-mono text-[10px] uppercase tracking-wider text-[var(--color-muted)]">
                       {a.tag}
                     </span>
