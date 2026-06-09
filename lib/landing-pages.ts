@@ -433,6 +433,67 @@ export const landingPages: LandingPage[] = [
       },
     },
   },
+  // ========================================================================
+  // 7. consultant-informatique-paris — Landing FR-only (audit W24-t3)
+  // ========================================================================
+  // Audit W24 GSC : "consultant informatique paris" position 61 sur 1 imp /
+  // 1 click 90j. Mot-cle high-volume FR (>1k searches/mois). On crée une
+  // page dediee pour rentrer dans le top 20 sous 60j.
+  //
+  // FR-only : la query est FR-native, l'audience est FR pure. Pas de
+  // version EN/JA/FR-CA → garde gere par generateStaticParams + sitemap +
+  // dynamicParams=false (cf app/[lang]/[slug]/page.tsx).
+  // Si ce mot-cle ramene du trafic, on traduira plus tard.
+  {
+    slug: "consultant-informatique-paris",
+    keywords: [
+      "consultant informatique paris",
+      "ESN paris senior",
+      "squad ingenierie paris",
+      "recrutement tech paris",
+      "CTO externe paris",
+      "delivery agile paris",
+      "consultant software senior paris",
+      "consultant IA paris",
+      "consultant data paris",
+    ],
+    relatedCaseSlugs: ["bnp", "carrefour", "enedis"],
+    relatedArticleSlug: "recruter-top-1-tech-process-48h",
+    tape: {
+      fr: "// CONSULTANT INFORMATIQUE PARIS",
+    },
+    h1: {
+      fr: "Consultant informatique senior à Paris.",
+    },
+    subtitle: {
+      fr: "Hub Paris depuis 2015 (54 rue Greneta, 75002). BNP, AXA, Société Générale, Carrefour, Enedis, Qonto. Squads embarqués · recrutement tech · delivery clé en main. Software, IA, Data, Robotique. Couverture 24/7 si vous voulez — hubs Montréal et Tokyo qui prennent le relais quand Paris ferme.",
+    },
+    metaDescription: {
+      fr: "Consultant informatique senior à Paris : squads embarqués, recrutement tech, delivery 24/7. Software, IA, Data, Robotique. Cadrage gratuit 30 min.",
+    },
+    body: {
+      fr: BODIES["consultant-informatique-paris"]?.body?.fr ?? [],
+    },
+    faq: {
+      fr: BODIES["consultant-informatique-paris"]?.faq?.fr ?? [],
+    },
+    extraSchema: {
+      // LocalBusiness (sub-type ProfessionalService de schema.org) pour :
+      //   - Knowledge Panel Google sur "Abbeal Paris"
+      //   - ranking local sur "consultant informatique paris" geo-targeted
+      //   - couverture du critere brief "Service avec areaServed=Paris"
+      //     (LocalBusiness est sub-type de Service côté schema.org)
+      localBusiness: {
+        name: "Abbeal — Hub Paris",
+        streetAddress: "54 rue Greneta",
+        addressLocality: "Paris",
+        postalCode: "75002",
+        addressCountry: "FR",
+        // Coordonnees Google Maps (Greneta x Reaumur, 2e arrondissement)
+        geo: { latitude: 48.8654, longitude: 2.3517 },
+      },
+    },
+  },
 ];
 
 export function getLandingPage(slug: string): LandingPage | undefined {

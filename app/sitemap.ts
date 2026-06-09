@@ -110,13 +110,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Landing pages SEO non-branded (6 landings × 4 langues = 24 pages).
+  // Landing pages SEO non-branded.
   // Issu de l'audit W19 : pages thematiques pour ranker non-branded
   // sur "follow-the-sun delivery", "tech consulting Tokyo", etc.
   // Priority haute (0.9) car contenu evergreen + niche unique +
   // entree principale pour les requetes SEO non-brandees prioritaires.
+  //
+  // W24-t3 : certaines landings sont fr-only (ex. consultant-informatique-
+  // paris cible audience FR pure). On filtre les locales pour ne lister
+  // que celles ou la landing a du contenu — sinon Google indexerait des
+  // pages au contenu fallback FR derriere des URL /en/... → duplicate.
   for (const lp of landingPages) {
     for (const locale of locales) {
+      const bodyForLocale = lp.body[locale];
+      if (!bodyForLocale || bodyForLocale.length === 0) continue;
       entries.push({
         url: `${SITE_URL}/${locale}/${lp.slug}`,
         lastModified: now,
