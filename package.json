@@ -19,7 +19,8 @@
     "migrate:roles": "tsx scripts/payload-migrate-roles.ts",
     "migrate:articles-status": "tsx scripts/payload-migrate-articles-status.ts",
     "reassign:author": "tsx scripts/payload-reassign-author.ts",
-    "migrate:all": "pnpm migrate:articles && pnpm migrate:cases && pnpm migrate:landings && pnpm migrate:glossary && pnpm migrate:tech-radar && pnpm migrate:roles && pnpm migrate:articles-status"
+    "migrate:all": "pnpm migrate:articles && pnpm migrate:cases && pnpm migrate:landings && pnpm migrate:glossary && pnpm migrate:tech-radar && pnpm migrate:roles && pnpm migrate:articles-status",
+    "audit:canonicals": "tsx scripts/check-canonicals.ts"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.8.3",
