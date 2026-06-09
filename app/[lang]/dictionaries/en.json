@@ -865,7 +865,12 @@
   "insightsIndex": {
     "tape": "// Insights",
     "h1": "No bullshit.",
-    "subtitle": "Field reports from Abbeal teams. Quarterly updates."
+    "subtitle": "Field reports from Abbeal teams. Quarterly updates.",
+    "seoTitle": "Tech Insights — AI, Software, Data, Robotics · Tokyo, Paris, Montréal",
+    "allTagsLabel": "All",
+    "tagFilterLabel": "Filter by topic",
+    "noResultsLabel": "No article for this topic.",
+    "filteredByPrefix": "Filtered by"
   },
   "legal": {
     "mentions": {
