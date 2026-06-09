@@ -565,6 +565,15 @@
     "body": {
       "fr": [
         {
+          "type": "list",
+          "items": [
+            "150+ clients · Software, IA, Data, Robotique — depuis 2015",
+            "3 hubs · Adaptive Follow-the-Sun — Paris, Montréal, Tokyo",
+            "Delivery 24/7 — couverture continue, zéro astreinte nocturne pour vos équipes"
+          ],
+          "ordered": false
+        },
+        {
           "type": "p",
           "content": "Tokyo n'est pas un marché tech comme les autres. C'est un écosystème ou la JFSA (Financial Services Agency) impose ses propres règles, ou le JLPT N2 fait la difference entre un meeting qui avance et un meeting poli qui ne mène nulle part, et ou le mode 100% remote reste une exception culturelle. Pour une entreprise occidentale qui veut s'implanter ou scaler ses opérations tech au Japon, le mur n'est pas technique. Il est culturel, réglementaire et logistique. Abbeal opère un hub Tokyo basé à Higashi-Azabu (PMC Building, 1-23-5, Minato-ku 106-0044) depuis 2018, et nos équipes ingé seniors interviennent en mode hybride sur les sites clients (Tamachi, Otemachi, Roppongi) avec un staffing JLPT N2+ obligatoire."
         },
@@ -707,6 +716,15 @@
         }
       ],
       "en": [
+        {
+          "type": "list",
+          "items": [
+            "150+ clients · Software, AI, Data, Robotics — since 2015",
+            "3 hubs · Adaptive Follow-the-Sun — Paris, Montréal, Tokyo",
+            "24/7 delivery — continuous coverage, no night on-call for your teams"
+          ],
+          "ordered": false
+        },
         {
           "type": "p",
           "content": "Tokyo is not just another tech market. It's an ecosystem where the JFSA (Financial Services Agency) sets its own rules, where JLPT N2 fluency is the difference between a meeting that moves forward and a polite meeting that goes nowhere, and where 100% remote remains a cultural exception. For Western enterprises trying to land or scale tech operations in Japan, the wall is not technical. It's cultural, regulatory, and logistical. Abbeal has operated a Tokyo hub from Higashi-Azabu (PMC Building, 1-23-5, Minato-ku 106-0044) since 2018, and our senior engineering teams deliver hybrid on-site (Tamachi, Otemachi, Roppongi) with mandatory JLPT N2+ staffing."
@@ -851,6 +869,15 @@
       ],
       "ja": [
         {
+          "type": "list",
+          "items": [
+            "150社以上のクライアント · Software, AI, Data, Robotics — 2015年から",
+            "3拠点 · Adaptive Follow-the-Sun — パリ、モントリオール、東京",
+            "24/7デリバリー — 継続的なカバレッジ、貴社チームの夜間オンコールなし"
+          ],
+          "ordered": false
+        },
+        {
           "type": "p",
           "content": "東京は単なるテック市場ではありません。金融庁(JFSA)が独自のルールを定め、JLPT N2レベルの日本語力が会議を前進させるか、礼儀正しいだけで終わるかを分け、100%リモート勤務が文化的に例外として残る独特なエコシステムです。日本でテック事業を立ち上げ、または拡大しようとする欧米企業にとって、壁は技術的なものではなく、文化、規制、そしてロジスティクスにあります。Abbealは2018年から東京・東麻布(PMCビル、1-23-5、港区106-0044)に拠点を構え、JLPT N2以上を必須とするシニアエンジニアリングチームを、田町・大手町・六本木のクライアント先にハイブリッド体制で派遣しています。"
         },
@@ -993,6 +1020,15 @@
         }
       ],
       "fr-ca": [
+        {
+          "type": "list",
+          "items": [
+            "150+ clients · Logiciel, IA, Données, Robotique — depuis 2015",
+            "3 pôles · Adaptive Follow-the-Sun — Paris, Montréal, Tokyo",
+            "Livraison 24/7 — couverture continue, zéro garde de nuit pour vos équipes"
+          ],
+          "ordered": false
+        },
         {
           "type": "p",
           "content": "Tokyo n'est pas un marché techno comme les autres. C'est un écosystème ou la JFSA (Financial Services Agency) impose ses propres règles, ou le JLPT N2 fait la différence entre une rencontre qui avance et une rencontre polie qui ne mène nulle part, et ou le mode 100% télétravail reste une exception culturelle. Pour une entreprise occidentale qui veut s'implanter ou faire croitre ses opérations techno au Japon, le mur n'est pas technique. Il est culturel, réglementaire et logistique. Abbeal opère un carrefour Tokyo basé à Higashi-Azabu (PMC Building, 1-23-5, Minato-ku 106-0044) depuis 2018, et nos équipes d'ingénierie seniors interviennent en mode hybride sur les sites clients (Tamachi, Otemachi, Roppongi) avec un staffing JLPT N2+ obligatoire."
