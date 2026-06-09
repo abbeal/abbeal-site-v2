@@ -3610,5 +3610,138 @@
         }
       ]
     }
+  },
+  "consultant-informatique-paris": {
+    "body": {
+      "fr": [
+        {
+          "type": "p",
+          "content": "Vous cherchez un consultant informatique senior à Paris pour livrer du software, de l'IA, de la data ou de la robotique. Vous avez déjà vu passer des CV impeccables sur le papier mais peu de candidats qui codent vraiment, livrent vraiment, ou tiennent un cadrage technique sans le repousser de deux semaines. Cette page existe pour ça : vous dire concrètement ce qu'on fait, comment, avec qui et pour combien."
+        },
+        {
+          "type": "h2",
+          "content": "Le problème : 80 % du consulting tech parisien tourne sur des juniors mal encadrés"
+        },
+        {
+          "type": "p",
+          "content": "Le marché parisien du consulting informatique a une particularité : les grandes ESN vendent du senior et staffent du junior. Le candidat qui passe l'entretien commercial n'est pas celui qui se présente au kickoff. La courbe d'apprentissage se paie au TJM senior pendant six mois, le client râle, le consultant brûle, on remet une couche."
+        },
+        {
+          "type": "p",
+          "content": "Le second piège : les profils freelances sur les places de marché. Souvent excellents techniquement, mais isolés. Pas de revue de code par des pairs, pas de mentoring, pas de seconde tête sur les sujets sensibles. Quand le freelance tombe malade ou part en mission ailleurs, le projet patine."
+        },
+        {
+          "type": "p",
+          "content": "On a monté Abbeal en 2015 (54 rue Greneta, 75002, à 200 m de République) pour résoudre exactement ces deux problèmes : staffer des seniors qu'on connaît personnellement, en les gardant connectés à un collectif qui peut peer-reviewer et prendre le relais."
+        },
+        {
+          "type": "h2",
+          "content": "Trois façons de bosser avec nous, à Paris"
+        },
+        {
+          "type": "h3",
+          "content": "1. Squad embarqué (staff augmentation)"
+        },
+        {
+          "type": "p",
+          "content": "On rejoint vos équipes avec un ownership de périmètre clair. Dev, Ops, Data, QA. Montée en charge rapide, mentoring des juniors internes, qualité au niveau senior dès le sprint 1. Format préféré pour les missions de 3 à 18 mois avec un product owner solide en interne. TJM 700-1200 € selon expertise. Engagement minimum : 1 mois."
+        },
+        {
+          "type": "h3",
+          "content": "2. Recrutement technique (talent acquisition)"
+        },
+        {
+          "type": "p",
+          "content": "Top 1 % sourcé par des ingénieurs (pas par un cabinet RH classique). Validation technique courte mais exigeante (2-3 heures de pair coding sur un vrai problème, pas d'algos LeetCode sans contexte). Closing en 48 heures. Garantie 6 mois : si le candidat ne fait pas l'affaire ou part, on re-source à zéro sans facturer. Tarif : 18-22 % du package annuel, payable en 3 fois sur les 6 premiers mois. CTO, Lead Dev, experts niche, Data Scientists seniors."
+        },
+        {
+          "type": "h3",
+          "content": "3. Delivery clé en main (digital solutions)"
+        },
+        {
+          "type": "p",
+          "content": "De la conception au run. Engagement output, pas time & material : on s'engage sur un livrable périmètre·délai, pas sur des jours/homme. SLOs définis dès le cadrage, observabilité bakée dès le sprint 1, run maîtrisé par votre équipe à la fin. Format pour les projets greenfield ou les refontes lourdes où vous voulez transférer la propriété en interne plutôt que dépendre d'un prestataire à vie."
+        },
+        {
+          "type": "h2",
+          "content": "Le hub Paris : 54 rue Greneta, depuis 2015"
+        },
+        {
+          "type": "p",
+          "content": "Le hub Paris est notre siège historique. Bureau opérationnel 54 rue Greneta dans le 2e arrondissement (métro Réaumur-Sébastopol, à 10 min de Châtelet et Gare du Nord). C'est ici qu'on reçoit les clients, qu'on opère les onboardings et qu'on tient les revues de mission mensuelles."
+        },
+        {
+          "type": "p",
+          "content": "Track record Paris/Ile-de-France depuis 2015 : BNP Paribas (LLM agents production), AXA (modernisation core IARD), Société Générale (data platform GreenOps), Carrefour (refonte e-commerce headless), Enedis (ETL FinTech temps réel), Qonto (squad payments scaling), Le Monde (Insights data depuis Paris). 60+ missions FR-IDF cumulées, taux de renouvellement client > 80 %."
+        },
+        {
+          "type": "h2",
+          "content": "Quatre expertises, sans hype et sans bullshit"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Software : Rust, Go, TypeScript, Kotlin. Backend services à fort débit, frontend React/Next à fort SEO, mobile native iOS/Android sur les use cases qui justifient le natif (vs PWA).",
+            "IA : RAG production (Pinecone, pgvector), agents LLM (Claude, Llama self-hosted), evals CI continus (Promptfoo, Langfuse), cost guards multi-LLM (LiteLLM). Pas de prompt engineering bullshit : on mesure l'accuracy et le coût, on tient des SLOs.",
+            "Data : pipelines Airflow / dbt, lakehouse Databricks ou Iceberg, streaming Kafka / Flink, observabilité Datadog / Honeycomb. GreenOps : -30 % de facture cloud sans toucher aux SLOs.",
+            "Robotique : ROS 2, edge inference (NVIDIA Jetson, Coral), Rust embarqué. Une seule mission active à Paris aujourd'hui (les autres sont à Tokyo), mais c'est une expertise active."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "La méthode : sprints courts, ownership produit, transfert systématique"
+        },
+        {
+          "type": "p",
+          "content": "On ne fait pas de waterfall. On ne fait pas non plus de l'agile cargo-cult où on déplace des stickers Jira en réunion. Sprints d'1 ou 2 semaines selon le contexte, pair programming sur les sujets sensibles (paiement, auth, RGPD), code review IA-assistée (Codex pour la première passe, humain pour le jugement)."
+        },
+        {
+          "type": "p",
+          "content": "Engagement de transfert dès le sprint 1 : votre équipe interne doit pouvoir prendre le relais quand on part. Documentation continue, RFCs versionnées, sessions de transfert de propriété en fin de mission. Notre KPI principal : votre équipe peut shipper sans nous au mois +1."
+        },
+        {
+          "type": "h2",
+          "content": "Couverture 24/7 si vous voulez — Adaptive Follow-the-Sun"
+        },
+        {
+          "type": "p",
+          "content": "Spécificité Abbeal : on a aussi des hubs à Montréal (Hub Amériques, 4388 rue Saint-Denis) et Tokyo (Hub Asie, 1-23-5 Higashi-Azabu). Quand votre projet Paris a besoin d'une couverture étendue (SLA 24/5 stricts, runs critiques sans astreinte nocturne, intégration internationale), on bascule en mode Adaptive Follow-the-Sun : Paris ferme à 18h CET, Montréal prend le relais jusqu'à 21h EST, Tokyo enchaîne jusqu'à 19h JST, Paris reprend à 9h."
+        },
+        {
+          "type": "p",
+          "content": "Mesurée sur 12 missions tri-géo opérées depuis 2020 : lead time divisé par 1,8 en moyenne, attrition consultant < 6 %, NPS interne 72. Pas une promesse marketing, des chiffres."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Cadrage gratuit 30 min. Vous nous expliquez le besoin, on vous dit honnêtement si on est les bons (ou pas) et comment on attaquerait. Pas de pitch, pas de roadmap PowerPoint."
+        }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "q": "Quel est le TJM moyen d'un consultant Abbeal à Paris ?",
+          "a": "700 à 1200 € HT selon l'expertise et la séniorité. Senior dev backend/frontend : 800-1000 €. Lead Tech ou architecte : 1000-1200 €. Data Scientist senior : 900-1100 €. Expert IA production (RAG, agents, evals) : 1100-1400 € selon la criticité. Pas de prix d'appel, pas de surcharge cachée."
+        },
+        {
+          "q": "Combien de temps pour staffer un consultant senior à Paris ?",
+          "a": "10 à 15 jours ouvrés en moyenne entre le brief et le démarrage. On présente 2-3 profils sous 7 jours. Validation client en 1-2 entretiens techniques (1h30 chacun, par un de nos seniors). Démarrage J+3 après la signature. Si vous avez un besoin urgent (J+5 par exemple), on a généralement 1-2 consultants seniors disponibles en intercontrat sur les stacks principales."
+        },
+        {
+          "q": "Vous travaillez en remote ou en présentiel à Paris ?",
+          "a": "Mode hybride : 2-3 jours présence chez le client en moyenne, le reste en remote. Nos consultants viennent au bureau Greneta 1 fois par semaine pour la peer review et le partage technique. Si vous demandez du présentiel full (banque, sensibilité réglementaire), on adapte — c'est plus rare mais ça arrive."
+        },
+        {
+          "q": "Quelle est la différence vs une grande ESN (Capgemini, Sopra, Atos) ?",
+          "a": "Trois différences claires : (1) on ne staffe pas de junior derrière un commercial senior — vous voyez et vous gardez les vrais profils ; (2) on s'engage sur output (livrable, périmètre, délai) plutôt que sur time & material ; (3) on a un collectif technique senior connecté qui peer-review et qui prend le relais si un consultant tombe — pas de single point of failure. Conséquence pratique : on est plus chers au TJM (700-1200 € vs 550-800 €) mais le coût total de la mission est plus bas car moins de re-work."
+        },
+        {
+          "q": "Quelle garantie sur le recrutement technique ?",
+          "a": "Garantie 6 mois : si le candidat ne fait pas l'affaire ou part dans les 6 mois, on re-source un remplaçant à zéro sans refacturer. Cas mesurés sur 2024-2025 : 4 garanties activées sur 47 placements (8,5 %), toutes re-sourcées en moins de 6 semaines. Tarif : 18-22 % du package annuel, payable en 3 fois sur les 6 premiers mois."
+        }
+      ]
+    }
   }
 }

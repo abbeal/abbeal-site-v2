@@ -22,10 +22,26 @@ import { pageAlternates } from "@/lib/seo";
  */
 
 export async function generateStaticParams() {
+  // W24-t3 : on ne genere QUE les couples (lang, slug) ou la landing a un
+  // body pour cette locale. Permet aux landings fr-only (ex. consultant-
+  // informatique-paris) de ne pas exister en /en/, /ja/, /fr-ca/ — sinon
+  // Google indexerait du contenu fallback FR derriere des URL non-FR.
   return locales.flatMap((lang) =>
-    landingPageSlugs.map((slug) => ({ lang, slug })),
+    landingPageSlugs
+      .map((slug) => ({ slug, page: getLandingPage(slug) }))
+      .filter(({ page }) => {
+        if (!page) return false;
+        const body = page.body[lang as Locale];
+        return Boolean(body && body.length > 0);
+      })
+      .map(({ slug }) => ({ lang, slug })),
   );
 }
+
+// Defense in depth : bloque les requetes runtime vers une (locale, slug)
+// pas pre-genere par generateStaticParams. Sans ca Next 16 tenterait un
+// SSR on-demand qui rendrait le fallback FR sous une URL /en/... = SEO bug.
+export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
