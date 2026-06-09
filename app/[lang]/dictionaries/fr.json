@@ -851,7 +851,12 @@
   "insightsIndex": {
     "tape": "// Insights",
     "h1": "Sans bullshit.",
-    "subtitle": "Retours terrain des équipes Abbeal. Mises à jour trimestrielles."
+    "subtitle": "Retours terrain des équipes Abbeal. Mises à jour trimestrielles.",
+    "seoTitle": "Insights tech — IA, Software, Data, Robotique · Tokyo, Paris, Montréal",
+    "allTagsLabel": "Tous",
+    "tagFilterLabel": "Filtrer par sujet",
+    "noResultsLabel": "Aucun article pour ce sujet.",
+    "filteredByPrefix": "Filtré par"
   },
   "legal": {
     "mentions": {
