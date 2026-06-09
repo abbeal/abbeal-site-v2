@@ -5,6 +5,13 @@ import { hasLocale, type Locale } from "@/lib/i18n";
 import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { generateJobPostings } from "@/lib/jobPosting";
+import {
+  getPublishedJobOffers,
+  locationLabel,
+  contractLabel,
+  levelLabel,
+  type JobOffer,
+} from "@/lib/job-offers";
 
 type Dict = {
   nav: { careers: string };
@@ -40,6 +47,10 @@ type Dict = {
   };
 };
 
+// Re-render toutes les 5 min : balance entre fraicheur (nouvelle offre
+// publiee visible en <5 min) et SSR cost (cold start Payload + Turso).
+export const revalidate = 300;
+
 export async function generateMetadata({
   params,
 }: PageProps<"/[lang]/careers">): Promise<Metadata> {
@@ -56,6 +67,38 @@ export async function generateMetadata({
   };
 }
 
+/** Convertit une JobOffer CMS en Role (shape attendue par le rendu et par
+ *  generateJobPostings JSON-LD). Pivot pour reutiliser le UI existant +
+ *  helper Schema.org sans tout reecrire pour cette iteration. */
+function offerToRole(offer: JobOffer, locale: Locale, defaultEmail: string) {
+  const subject =
+    locale === "ja"
+      ? `応募 — ${offer.title}`
+      : locale === "en"
+        ? `Application — ${offer.title}`
+        : `Candidature — ${offer.title}`;
+  return {
+    slug: offer.slug,
+    title: offer.title,
+    stack: offer.techStack.join(" · "),
+    location: locationLabel(offer.location, locale),
+    subject,
+    body: offer.excerpt,
+    // Champs additionnels CMS-only (pas dans le shape Role legacy)
+    _applyUrl: offer.applyUrl || `mailto:${defaultEmail}?subject=${encodeURIComponent(subject)}`,
+    _contract: contractLabel(offer.contractType, locale),
+    _level: levelLabel(offer.experienceLevel, locale),
+    _salaryRange: offer.salaryRange,
+  };
+}
+
+type RenderedRole = ReturnType<typeof offerToRole> | (Dict["careers"]["roles"][number] & {
+  _applyUrl?: string;
+  _contract?: string;
+  _level?: string;
+  _salaryRange?: string | null;
+});
+
 export default async function CareersPage({ params }: PageProps<"/[lang]/careers">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
@@ -64,12 +107,29 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/careers
   const d = dict.careers;
   const crumbs = breadcrumbs(locale, [[dict.nav.careers, "/careers"]]);
 
+  // Fetch offres CMS publiees. Si zero (ou erreur) → fallback dict statique
+  // pour ne JAMAIS afficher une page vide tant que personne n'a publie sur
+  // le CMS (transition douce). Quand Seb publie sa 1ere offre CMS, le
+  // fallback disparait automatiquement.
+  const cmsOffers = await getPublishedJobOffers(locale);
+  const usesCMS = cmsOffers.length > 0;
+  const roles: RenderedRole[] = usesCMS
+    ? cmsOffers.map((o) => offerToRole(o, locale, d.applyEmail))
+    : d.roles;
+
   // Schema.org JobPosting par role : eligibilite Google Jobs box.
   // Boost CTR sur le longtail non-branded ("AI Engineer Tokyo", etc.)
   // identifie par l'audit SEO W19.
   const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
   const jobPostings = generateJobPostings(
-    d.roles,
+    roles.map((r) => ({
+      slug: r.slug,
+      title: r.title,
+      stack: r.stack,
+      location: r.location,
+      subject: r.subject,
+      body: r.body,
+    })),
     locale,
     SITE,
     d.applyEmail,
@@ -165,40 +225,61 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/careers
         id="roles"
         className="mt-20 pt-16 border-t border-[var(--color-border)] divide-y divide-[var(--color-border)]"
       >
-        {d.roles.map((role, i) => (
-          <li id={role.slug} key={role.slug} className="group scroll-mt-24">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 py-10 md:py-12">
-              <div className="md:col-span-1">
-                <span className="font-mono text-xs tracking-widest text-[var(--color-muted)]">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+        {roles.map((role, i) => {
+          const applyHref =
+            role._applyUrl ??
+            `mailto:${d.applyEmail}?subject=${encodeURIComponent(role.subject)}`;
+          const isExternal = applyHref.startsWith("http");
+          // Petite ligne meta : contrat · niveau · salaire (CMS only)
+          const metaBits = [role._contract, role._level, role._salaryRange]
+            .filter(Boolean)
+            .join(" · ");
+
+          return (
+            <li id={role.slug} key={role.slug} className="group scroll-mt-24">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 py-10 md:py-12">
+                <div className="md:col-span-1">
+                  <span className="font-mono text-xs tracking-widest text-[var(--color-muted)]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <div className="md:col-span-7">
+                  <h2 className="text-2xl md:text-3xl font-semibold tracking-tight group-hover:text-[var(--color-brand-teal)] transition-colors">
+                    {role.title}
+                  </h2>
+                  {role.stack ? (
+                    <p className="mt-2 font-mono text-sm text-[var(--color-brand-teal)]">
+                      {role.stack}
+                    </p>
+                  ) : null}
+                  <p className="mt-1 font-mono text-xs uppercase tracking-wider text-[var(--color-muted)]">
+                    {role.location}
+                  </p>
+                  {metaBits ? (
+                    <p className="mt-1 font-mono text-[11px] uppercase tracking-wider text-[var(--color-muted)]/80">
+                      {metaBits}
+                    </p>
+                  ) : null}
+                  <p className="mt-5 text-[15px] text-[var(--color-ink-soft)] leading-relaxed max-w-2xl">
+                    {role.body}
+                  </p>
+                </div>
+                <div className="md:col-span-4 flex md:justify-end items-start">
+                  <a
+                    href={applyHref}
+                    {...(isExternal
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                    className="inline-flex items-center gap-2 h-11 px-5 text-sm border border-[var(--color-ink)] hover:bg-[var(--color-ink)] hover:text-[var(--color-bg-light)] transition-colors"
+                  >
+                    {d.applyTo}
+                    <span aria-hidden>→</span>
+                  </a>
+                </div>
               </div>
-              <div className="md:col-span-7">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight group-hover:text-[var(--color-brand-teal)] transition-colors">
-                  {role.title}
-                </h2>
-                <p className="mt-2 font-mono text-sm text-[var(--color-brand-teal)]">
-                  {role.stack}
-                </p>
-                <p className="mt-1 font-mono text-xs uppercase tracking-wider text-[var(--color-muted)]">
-                  {role.location}
-                </p>
-                <p className="mt-5 text-[15px] text-[var(--color-ink-soft)] leading-relaxed max-w-2xl">
-                  {role.body}
-                </p>
-              </div>
-              <div className="md:col-span-4 flex md:justify-end items-start">
-                <a
-                  href={`mailto:${d.applyEmail}?subject=${encodeURIComponent(role.subject)}`}
-                  className="inline-flex items-center gap-2 h-11 px-5 text-sm border border-[var(--color-ink)] hover:bg-[var(--color-ink)] hover:text-[var(--color-bg-light)] transition-colors"
-                >
-                  {d.applyTo}
-                  <span aria-hidden>→</span>
-                </a>
-              </div>
-            </div>
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
