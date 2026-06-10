@@ -18,9 +18,9 @@ export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
 export async function POST(req: Request) {
-  let body: { secret?: string };
+  let body: { secret?: string; force?: boolean };
   try {
-    body = (await req.json()) as { secret?: string };
+    body = (await req.json()) as { secret?: string; force?: boolean };
   } catch {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
@@ -32,7 +32,9 @@ export async function POST(req: Request) {
   const payload = await getPayload({ config });
   const slug = "lead-llm-engineer-ia-notariat-paris";
 
-  // Idempotent : si deja en DB, retourne sans recreer
+  // Si deja en DB :
+  //   - force=false (default) : skip (idempotent)
+  //   - force=true : DELETE puis CREATE (restore body apres bug)
   const existing = await payload.find({
     collection: "job-offers",
     where: { slug: { equals: slug } },
@@ -40,12 +42,20 @@ export async function POST(req: Request) {
     overrideAccess: true,
   });
   if (existing.docs.length > 0) {
-    return NextResponse.json({
-      ok: true,
-      existed: true,
-      id: existing.docs[0]!.id,
-      slug,
-      createdAt: (existing.docs[0] as { createdAt?: string }).createdAt,
+    if (!body.force) {
+      return NextResponse.json({
+        ok: true,
+        existed: true,
+        id: existing.docs[0]!.id,
+        slug,
+        createdAt: (existing.docs[0] as { createdAt?: string }).createdAt,
+      });
+    }
+    // Force : delete first
+    await payload.delete({
+      collection: "job-offers",
+      id: existing.docs[0]!.id as number,
+      overrideAccess: true,
     });
   }
 
