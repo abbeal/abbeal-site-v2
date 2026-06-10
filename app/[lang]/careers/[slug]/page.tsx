@@ -6,6 +6,7 @@ import { hasLocale, type Locale } from "@/lib/i18n";
 import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { ArticleBlocks } from "@/components/sections/ArticleBlocks";
+import { ApplyForm } from "@/components/sections/ApplyForm";
 import {
   getJobOffer,
   locationLabel,
@@ -197,24 +198,27 @@ export default async function JobOfferDetailPage({
         </div>
       ) : null}
 
-      {/* Apply CTA repeat (below-the-fold) */}
-      <div className="mt-16 pt-12 border-t border-[var(--color-border)] max-w-3xl">
+      {/* Apply section (form Resend) — remplace l'ancien CTA repeat.
+          Form structure : LinkedIn, Calendly, message ; envoie un email via
+          Resend a recrutement@abbeal.com. Le mailto direct reste accessible
+          via le bouton du header (above-the-fold) pour ceux qui preferent. */}
+      <div
+        id="apply"
+        className="mt-16 pt-12 border-t border-[var(--color-border)] max-w-3xl"
+      >
         <h2 className="text-2xl font-semibold tracking-tight">
-          {d.applyTo} →
+          {(locale === "ja" && "応募する") ||
+            (locale === "en" && "Apply") ||
+            "Postuler"}
         </h2>
         <p className="mt-3 text-[15px] text-[var(--color-ink-soft)]">
           {offer.title}
         </p>
-        <a
-          href={offer.applyUrl}
-          {...(isExternalApply
-            ? { target: "_blank", rel: "noopener noreferrer" }
-            : {})}
-          className="mt-6 inline-flex items-center gap-2 h-12 px-6 text-sm border border-[var(--color-ink)] bg-[var(--color-ink)] text-[var(--color-bg-light)] hover:bg-[var(--color-brand-teal)] hover:border-[var(--color-brand-teal)] transition-colors"
-        >
-          {d.applyTo}
-          <span aria-hidden>→</span>
-        </a>
+        <ApplyForm
+          locale={locale}
+          offerSlug={offer.slug}
+          offerTitle={offer.title}
+        />
       </div>
     </section>
   );
