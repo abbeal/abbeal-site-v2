@@ -334,6 +334,43 @@ const Users: CollectionConfig = {
         return data;
       },
     ],
+    beforeChange: [
+      ({ operation, data, originalDoc }) => {
+        // FIX BUG W24 : Payload UI reset apiKey/enableAPIKey a chaque save.
+        //
+        // Symptome (rapporte par Seb) : "les cle API ne sont pas remanente
+        // et il faut reactiver l'option et recreer la cle a chaque fois".
+        //
+        // Cause : sur un save normal depuis /admin (ex. update firstName),
+        // le PATCH payload envoie undefined pour apiKey/enableAPIKey si le
+        // form ne les a pas explicitement modifies. Payload ecrit undefined
+        // en DB -> la cle est wipee.
+        //
+        // Fix defensif : si on est en update ET que les champs apiKey ou
+        // enableAPIKey ne sont pas explicitement fournis dans data MAIS
+        // qu'ils existent dans originalDoc (DB row actuel), on les preserve.
+        //
+        // Trade-off : si Seb VEUT vraiment desactiver une cle via UI, il
+        // devra utiliser le script payload-set-api-key.ts (overrideAccess
+        // bypass) ou un curl direct API. Mais c'est rare ; la priorite
+        // est que les cles persistent dans le flow normal.
+        if (operation === "update" && originalDoc) {
+          if (
+            typeof data.enableAPIKey === "undefined" &&
+            typeof originalDoc.enableAPIKey !== "undefined"
+          ) {
+            data.enableAPIKey = originalDoc.enableAPIKey;
+          }
+          if (
+            (typeof data.apiKey === "undefined" || data.apiKey === null) &&
+            originalDoc.apiKey
+          ) {
+            data.apiKey = originalDoc.apiKey;
+          }
+        }
+        return data;
+      },
+    ],
     afterChange: [
       async ({ operation, doc, req }) => {
         // INVITATION FLOW : nouveau user cree -> on declenche forgotPassword
