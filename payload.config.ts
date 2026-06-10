@@ -237,7 +237,10 @@ const HIDDEN_FROM_EDITORS = ({ user }: { user?: unknown }) => !isAdmin(user as A
 // ---------------------------------------------------------------------------
 const Users: CollectionConfig = {
   slug: "users",
-  versions: { maxPerDoc: 10 }, // anti-perte W24 followup (audit persistance)
+  // ⚠️ versions: désactivé (revert urgence Sebastien 2026-06-10). Causait
+  // rollback des saves car les tables _v n'existent pas sur Turso prod.
+  // Re-activer SEULEMENT après PAYLOAD_ALLOW_PUSH=1 sur Turso prod
+  // (commande dans /tmp/SCHEMA-PUSH-REQUIRED.md). Voir incident W24.
   auth: {
     useAPIKey: true, // Header: Authorization: users API-Key <key>
     // Brute-force protection desactive : equipe interne tres petite
@@ -450,11 +453,7 @@ const Users: CollectionConfig = {
 // ---------------------------------------------------------------------------
 const Articles: CollectionConfig = {
   slug: "articles",
-  // Versioning anti-perte (W24 followup) : 20 revisions par article. Si Seb
-  // ou un editor ecrase/supprime un article, on peut restaurer depuis la
-  // tab "Versions" dans /admin. Pas de drafts: true pour eviter le conflit
-  // avec le champ status custom (draft/pending_review/published).
-  versions: { maxPerDoc: 20 },
+  // ⚠️ versions désactivé (revert urgence). Re-activer après schema push.
   admin: {
     useAsTitle: "slug",
     defaultColumns: ["slug", "tag", "status", "author", "publishedAt", "featured"],
@@ -643,7 +642,7 @@ const Articles: CollectionConfig = {
 // techStack/kpi/clientLogo).
 // ---------------------------------------------------------------------------
 const Cases: CollectionConfig = {
-  versions: { maxPerDoc: 20 }, // anti-perte W24 followup
+  // ⚠️ versions désactivé (revert urgence). Re-activer après schema push.
   slug: "cases",
   admin: {
     useAsTitle: "slug",
@@ -749,7 +748,7 @@ const Cases: CollectionConfig = {
 // LandingPages — 6 landings SEO non-branded (mirror lib/landing-pages.ts)
 // ---------------------------------------------------------------------------
 const LandingPages: CollectionConfig = {
-  versions: { maxPerDoc: 20 }, // anti-perte W24 followup
+  // ⚠️ versions désactivé (revert urgence). Re-activer après schema push.
   slug: "landing-pages",
   admin: {
     useAsTitle: "slug",
@@ -817,7 +816,7 @@ const LandingPages: CollectionConfig = {
 // standard, fr-ca tombera en fallback fr automatiquement.
 // ---------------------------------------------------------------------------
 const Glossary: CollectionConfig = {
-  versions: { maxPerDoc: 20 }, // anti-perte W24 followup
+  // ⚠️ versions désactivé (revert urgence). Re-activer après schema push.
   slug: "glossary",
   admin: {
     useAsTitle: "slug",
@@ -863,7 +862,7 @@ const Glossary: CollectionConfig = {
 // Chaque item = 1 doc avec ring/category non-localises + name/rationale localises.
 // ---------------------------------------------------------------------------
 const TechRadar: CollectionConfig = {
-  versions: { maxPerDoc: 20 }, // anti-perte W24 followup
+  // ⚠️ versions désactivé (revert urgence). Re-activer après schema push.
   slug: "tech-radar",
   admin: {
     useAsTitle: "slug",
@@ -917,7 +916,7 @@ const TechRadar: CollectionConfig = {
 // Photos disponibles dans /public/team/team-{1..6}.jpg.
 // ---------------------------------------------------------------------------
 const Team: CollectionConfig = {
-  versions: { maxPerDoc: 20 }, // anti-perte W24 followup
+  // ⚠️ versions désactivé (revert urgence). Re-activer après schema push.
   slug: "team",
   admin: {
     useAsTitle: "name",
@@ -977,18 +976,17 @@ const Team: CollectionConfig = {
 // ---------------------------------------------------------------------------
 const JobOffers: CollectionConfig = {
   slug: "job-offers",
-  // Versioning : conserve un historique de revisions par offre. Si quelqu'un
-  // ecrase une offre (ex. change slug + content pour la transformer en autre
-  // chose) ou la supprime par accident, on peut restaurer la version
-  // precedente via l'admin Payload (tab "Versions" sur chaque doc).
+  // ⚠️ versions DESACTIVE (revert urgence 2026-06-10).
   //
-  // Pas de "drafts" parallele car on a deja un champ status custom
-  // (draft/pending_review/published) qui orchestre le workflow editorial.
-  // Activer drafts: true creerait un 2e systeme parallele confus.
+  // Cause : avec versions activee + tables _job_offers_v absentes en Turso
+  // prod (schema push pas effectue), les save offers du /admin etaient en
+  // transaction rollback : l'offre apparait brievement (cache CDN frontend)
+  // puis disparait (Payload rollback la row principale + revision). Resultat :
+  // Sebastien voit l'offre 5 secondes puis 404.
   //
-  // maxPerDoc: 20 = garde les 20 dernieres revisions par offre. Pour les
-  // 5-15 offres ouvertes en moyenne, c'est ~300 rows max dans la table
-  // _job_offers_v — negligeable.
+  // Pour reactiver : run PAYLOAD_ALLOW_PUSH=1 contre Turso prod APRES le
+  // deploy de cette PR (= schema sans versions = pas d'erreur attendue).
+  // Puis re-add `versions: { maxPerDoc: 20 }` dans une PR separee.
   //
   // Migration : enabling versions sur une collection existante AJOUTE des
   // tables (_job_offers_v, _job_offers_v_locales, etc.). Operation non-
@@ -996,7 +994,8 @@ const JobOffers: CollectionConfig = {
   // apres le merge pour creer les tables. Les rows existantes ne sont pas
   // recuperees (le passe est perdu), mais a partir du push toutes les
   // edits sont versionnees.
-  versions: { maxPerDoc: 20 },
+  // Ligne suivante DESACTIVEE temporairement (cf commentaire en haut) :
+  // versions: { maxPerDoc: 20 },
   admin: {
     useAsTitle: "slug",
     defaultColumns: [
