@@ -102,6 +102,30 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
     }));
   const teaserRoles = [...cmsTeaserRoles, ...dictTeaserRoles];
 
+  // Date "mis a jour le X" dynamique : si on a des offres CMS published,
+  // on prend le max de leur publishedAt (chaque save trigger publishedAt =
+  // bonne approximation de "derniere update du portfolio carrieres"). Sinon
+  // fallback sur la date hardcoded du dict (legacy).
+  const lastOfferDate = cmsOffers.length
+    ? cmsOffers
+        .map((o) => o.publishedAt)
+        .filter(Boolean)
+        .sort()
+        .at(-1)
+    : null;
+  const dateLocale =
+    locale === "fr" ? "fr-FR"
+    : locale === "ja" ? "ja-JP"
+    : locale === "fr-ca" ? "fr-CA"
+    : "en-GB";
+  const dynamicUpdatedLabel = lastOfferDate
+    ? (locale === "ja"
+        ? `求人募集中 · ${new Date(lastOfferDate).toLocaleDateString(dateLocale, { year: "numeric", month: "long", day: "numeric" })}更新`
+        : locale === "en"
+          ? `Open roles · updated ${new Date(lastOfferDate).toLocaleDateString(dateLocale, { year: "numeric", month: "long", day: "numeric" })}`
+          : `Postes actifs · mis à jour le ${new Date(lastOfferDate).toLocaleDateString(dateLocale, { year: "numeric", month: "long", day: "numeric" })}`)
+    : dict.careersHome.updated;
+
   // FAQPage JSON-LD — rich snippets + LLM extraction
   const faqLd = {
     "@context": "https://schema.org",
@@ -147,7 +171,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       <Insights locale={locale} dict={dict} items={featuredInsights} />
       <CareersTeaser
         locale={locale}
-        teaser={dict.careersHome}
+        teaser={{ ...dict.careersHome, updated: dynamicUpdatedLabel }}
         roles={teaserRoles}
       />
       <CTAFinal locale={locale} dict={dict} />
