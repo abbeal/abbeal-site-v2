@@ -26,29 +26,46 @@ jobs:
 
       - name: Fetch all collections from CMS API
         run: |
-          set -e
-          # Collections backed up : on snapshot tout le content + les users
-          # (sans password hash car l'API ne les retourne pas, c'est OK pour
-          # un restore manuel — Seb reinit les passwords via forgotPassword).
-          COLLECTIONS=(users articles cases landing-pages glossary tech-radar team job-offers)
+          # Collections content snapshot. Users SKIPPE car /api/users est
+          # protege par access rule (admin only). Pour backup users, faut
+          # creer un endpoint admin authentifie ou utiliser un API key
+          # secret. Pour 3 users seulement, c'est OK de skip — recreation
+          # manuelle en cas de perte. Le versioning Payload sur Users
+          # (PR #17) couvre le risque d ecrasement.
+          COLLECTIONS=(articles cases landing-pages glossary tech-radar team job-offers)
+          FAILED=()
 
           for col in "${COLLECTIONS[@]}"; do
             echo "Fetching $col..."
-            # depth=0 pour ne pas exploser les relations, limit=1000 large
-            # (on a ~50 glossary max, on monte avec marge)
-            curl -fsS --max-time 60 \
+            if ! curl -fsS --max-time 60 \
               "https://abbeal.com/api/$col?limit=1000&depth=0" \
-              -o "backups/${col}-${DATE}.json"
+              -o "backups/${col}-${DATE}.json"; then
+              echo "::warning::HTTP error fetching $col — skipping"
+              FAILED+=("$col")
+              rm -f "backups/${col}-${DATE}.json"
+              continue
+            fi
 
-            # Sanity check : le fichier doit etre du JSON valide non-vide
+            # Sanity check : JSON valide non-vide
             if ! python3 -m json.tool "backups/${col}-${DATE}.json" > /dev/null 2>&1; then
-              echo "::error::Invalid JSON for $col"
-              exit 1
+              echo "::warning::Invalid JSON for $col — skipping"
+              FAILED+=("$col")
+              rm -f "backups/${col}-${DATE}.json"
+              continue
             fi
 
             count=$(python3 -c "import json; print(json.load(open('backups/${col}-${DATE}.json')).get('totalDocs', 0))")
             echo "  $col : $count docs backed up"
           done
+
+          # On accepte des fails individuels (warning) mais on fail le job
+          # si TOUTES les collections ont rate (probable outage prod).
+          SUCCESS_COUNT=$((${#COLLECTIONS[@]} - ${#FAILED[@]}))
+          echo "Summary: $SUCCESS_COUNT/${#COLLECTIONS[@]} collections backed up"
+          if [ "$SUCCESS_COUNT" -eq 0 ]; then
+            echo "::error::All collections failed — likely outage. Abort."
+            exit 1
+          fi
 
       - name: Generate manifest
         run: |
