@@ -929,6 +929,26 @@ const Team: CollectionConfig = {
 // ---------------------------------------------------------------------------
 const JobOffers: CollectionConfig = {
   slug: "job-offers",
+  // Versioning : conserve un historique de revisions par offre. Si quelqu'un
+  // ecrase une offre (ex. change slug + content pour la transformer en autre
+  // chose) ou la supprime par accident, on peut restaurer la version
+  // precedente via l'admin Payload (tab "Versions" sur chaque doc).
+  //
+  // Pas de "drafts" parallele car on a deja un champ status custom
+  // (draft/pending_review/published) qui orchestre le workflow editorial.
+  // Activer drafts: true creerait un 2e systeme parallele confus.
+  //
+  // maxPerDoc: 20 = garde les 20 dernieres revisions par offre. Pour les
+  // 5-15 offres ouvertes en moyenne, c'est ~300 rows max dans la table
+  // _job_offers_v — negligeable.
+  //
+  // Migration : enabling versions sur une collection existante AJOUTE des
+  // tables (_job_offers_v, _job_offers_v_locales, etc.). Operation non-
+  // destructive cote schema. Run PAYLOAD_ALLOW_PUSH=1 contre Turso prod
+  // apres le merge pour creer les tables. Les rows existantes ne sont pas
+  // recuperees (le passe est perdu), mais a partir du push toutes les
+  // edits sont versionnees.
+  versions: { maxPerDoc: 20 },
   admin: {
     useAsTitle: "slug",
     defaultColumns: [
