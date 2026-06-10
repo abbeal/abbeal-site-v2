@@ -39,10 +39,16 @@ import { NextResponse } from "next/server";
 // Whitelist stricte : seuls ces paths sont revalidables via ce endpoint.
 // Etendre quand on ajoute d'autres collections CMS-driven (articles, cases).
 const ALLOWED_PATHS = new Set<string>([
+  // /careers listing
   "/fr/careers",
   "/en/careers",
   "/ja/careers",
   "/fr-ca/careers",
+  // Home (le CareersTeaser cumule les offres CMS)
+  "/fr",
+  "/en",
+  "/ja",
+  "/fr-ca",
 ]);
 
 export async function POST(req: Request) {

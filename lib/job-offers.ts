@@ -18,8 +18,6 @@
  *   const offers = await getPublishedJobOffers("fr");
  */
 
-import { getPayload } from "payload";
-import config from "../payload.config";
 import type { Locale } from "./i18n";
 
 // ---------------------------------------------------------------------------
@@ -228,39 +226,46 @@ function normalizeOffer(raw: Record<string, unknown>): JobOffer {
 }
 
 /** Toutes les offres publiees, non-fermees, triees featured + publishedAt DESC.
- *  Vide si erreur Payload (resilient — la page /careers fallback sur le dict).
+ *  Vide si erreur (resilient — la page /careers fallback sur le dict).
  *
- *  W24 bug fix : on simplifie la where clause a status=published uniquement
- *  et on filtre closedAt cote JS apres fetch. La requete combinee Payload
- *  `and: [status, or: [exists, greater_than]]` semblait ne retourner aucune
- *  offre published en runtime SSR Vercel alors qu'elles existent en DB.
- *  Le filtre JS post-fetch est moins puissant cote SGBD mais beaucoup plus
- *  predictible et debug-friendly. Pour 100 offres max c'est OK.
+ *  W24 fix v2 : on passe par fetch HTTP vers /api/job-offers (REST Payload)
+ *  au lieu de getPayload({ config }) SDK direct. Raison :
+ *    - getPayload SSR sur Vercel runtime ne retournait PAS les memes offres
+ *      que l'API REST publique (probleme d'init Payload SSR / cache). L'offre
+ *      LLM Paris publiee par Seb apparaissait sur /api/job-offers mais pas
+ *      sur /fr/careers ni /fr/careers/[slug].
+ *    - L'API REST a une init Payload partagee, gere par @payloadcms/next.
+ *      Plus stable. Overhead HTTP ~50-200ms mais cache Next intelligent
+ *      (next: { revalidate: 60 }) le rend negligeable.
  */
 export async function getPublishedJobOffers(
   locale: Locale,
 ): Promise<JobOffer[]> {
   try {
-    const payload = await getPayload({ config });
+    const base =
+      process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : "http://localhost:3000");
+    const url = `${base}/api/job-offers?where[status][equals]=published&locale=${locale}&depth=0&limit=100&sort=-featured,-publishedAt`;
 
-    const result = await payload.find({
-      collection: "job-offers",
-      locale,
-      depth: 0,
-      limit: 100,
-      where: { status: { equals: "published" } },
-      sort: ["-featured", "-publishedAt"],
-      overrideAccess: false, // respecte l'access public read
+    const res = await fetch(url, {
+      // Cache HTTP cote Next, invalide via revalidatePath() du hook Payload
+      // afterChange (cf payload.config.ts JobOffers).
+      next: { revalidate: 60, tags: ["job-offers"] },
     });
-
+    if (!res.ok) {
+      console.error(`[job-offers] /api/job-offers returned ${res.status}`);
+      return [];
+    }
+    const data = (await res.json()) as { docs?: Array<Record<string, unknown>> };
     const today = new Date();
-    return result.docs
-      .map((d) => normalizeOffer(d as unknown as Record<string, unknown>))
+    return (data.docs ?? [])
+      .map((d) => normalizeOffer(d))
       .filter((o) => {
-        // Filtre closedAt cote JS : exclus si closedAt <= today.
         if (!o.closedAt) return true;
         const closed = new Date(o.closedAt);
-        if (Number.isNaN(closed.getTime())) return true; // garde si parse fail
+        if (Number.isNaN(closed.getTime())) return true;
         return closed.getTime() > today.getTime();
       });
   } catch (err) {
@@ -329,30 +334,31 @@ export function payloadBlocksToArticleBlocks(
   return out;
 }
 
-/** Une offre par slug (status published uniquement). */
+/** Une offre par slug (status published uniquement). Pass par fetch HTTP
+ *  vers /api/job-offers, meme raison que getPublishedJobOffers (cf
+ *  commentaire au-dessus). */
 export async function getJobOffer(
   slug: string,
   locale: Locale,
 ): Promise<JobOffer | null> {
   try {
-    const payload = await getPayload({ config });
+    const base =
+      process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : "http://localhost:3000");
+    const url = `${base}/api/job-offers?where[and][0][slug][equals]=${encodeURIComponent(slug)}&where[and][1][status][equals]=published&locale=${locale}&depth=0&limit=1`;
 
-    const result = await payload.find({
-      collection: "job-offers",
-      locale,
-      depth: 0,
-      limit: 1,
-      where: {
-        and: [
-          { slug: { equals: slug } },
-          { status: { equals: "published" } },
-        ],
-      },
-      overrideAccess: false,
+    const res = await fetch(url, {
+      next: { revalidate: 60, tags: ["job-offers"] },
     });
-
-    if (result.docs.length === 0) return null;
-    return normalizeOffer(result.docs[0] as unknown as Record<string, unknown>);
+    if (!res.ok) {
+      console.error(`[job-offers] /api/job-offers returned ${res.status}`);
+      return null;
+    }
+    const data = (await res.json()) as { docs?: Array<Record<string, unknown>> };
+    if (!data.docs?.length) return null;
+    return normalizeOffer(data.docs[0]!);
   } catch (err) {
     console.error(`[job-offers] getJobOffer(${slug}) failed :`, err);
     return null;

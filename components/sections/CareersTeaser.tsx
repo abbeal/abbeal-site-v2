@@ -6,6 +6,10 @@ type Role = {
   title: string;
   stack: string;
   location: string;
+  /** Lien cible quand on clique sur la card. Si defini, prend precedence
+   *  sur le defaut `/{locale}/careers#{slug}`. Utilise pour pointer vers
+   *  la page detail d'une offre CMS plutot que l'anchor du listing. */
+  href?: string;
 };
 
 type Teaser = {
@@ -60,7 +64,7 @@ export function CareersTeaser({
         {list.map((role) => (
           <li key={role.slug}>
             <Link
-              href={`/${locale}/careers#${role.slug}`}
+              href={role.href ?? `/${locale}/careers#${role.slug}`}
               className="group block h-full border border-[var(--color-border)] bg-[var(--color-bg-paper)] p-6 hover:border-[var(--color-brand-teal)] transition-colors"
             >
               <div className="flex items-start justify-between gap-4">
