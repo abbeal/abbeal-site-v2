@@ -1150,6 +1150,76 @@ const JobOffers: CollectionConfig = {
           });
         }
       },
+      // AUTO-TRANSLATION : meme pattern que Articles (cf hook PR #21). Save
+      // une offre FR -> Claude traduit auto vers EN/JA/FR-CA si vides.
+      // Permet a Cowork de POST en FR seulement et avoir les 4 locales sous
+      // ~90s automatiquement.
+      async ({ req, doc, operation, context }) => {
+        if ((context as { autoTranslate?: boolean })?.autoTranslate) return doc;
+        if (operation !== "create" && operation !== "update") return doc;
+
+        const d = doc as Record<string, unknown>;
+        const frTitle = typeof d.title === "string" ? d.title : null;
+        if (!frTitle) return doc;
+
+        const { translateArticle } = await import("./lib/translate-article");
+
+        const source = {
+          title: frTitle,
+          excerpt: typeof d.excerpt === "string" ? d.excerpt : "",
+          metaDescription:
+            typeof d.metaDescription === "string"
+              ? d.metaDescription
+              : undefined,
+          body: Array.isArray(d.description)
+            ? (d.description as Array<Record<string, unknown> & { type: string }>)
+            : [],
+        };
+
+        const targets = ["en", "ja", "fr-ca"] as const;
+        for (const locale of targets) {
+          (async () => {
+            try {
+              const existing = await req.payload.findByID({
+                collection: "job-offers",
+                id: doc.id as number,
+                locale,
+              });
+              const existingTitle = (existing as { title?: string }).title;
+              if (existingTitle && existingTitle !== frTitle) return;
+
+              const translated = await translateArticle(source, locale);
+              if (!translated) return;
+
+              await req.payload.update({
+                collection: "job-offers",
+                id: doc.id as number,
+                locale,
+                data: {
+                  title: translated.title,
+                  excerpt: translated.excerpt,
+                  ...(translated.metaDescription
+                    ? { metaDescription: translated.metaDescription }
+                    : {}),
+                  description: translated.body,
+                } as unknown as Record<string, unknown>,
+                overrideAccess: true,
+                context: { autoTranslate: true },
+              });
+
+              req.payload.logger.info(
+                `[JobOffers auto-translate] ${doc.id} -> ${locale} OK`,
+              );
+            } catch (err) {
+              req.payload.logger.error(
+                { err, id: doc.id, locale },
+                "[JobOffers auto-translate] failed",
+              );
+            }
+          })();
+        }
+        return doc;
+      },
     ],
   },
   fields: [

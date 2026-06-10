@@ -39,7 +39,15 @@ type ReqBody = {
   slug?: string;
   secret?: string;
   force?: boolean; // si true, re-traduit meme si la locale est deja remplie
+  collection?: "articles" | "job-offers"; // default: articles
 };
+
+// Map collection slug -> sa shape (body field name + types compatibility)
+const SUPPORTED_COLLECTIONS = {
+  articles: { bodyField: "body" },
+  "job-offers": { bodyField: "description" },
+} as const;
+type SupportedCollection = keyof typeof SUPPORTED_COLLECTIONS;
 
 export async function POST(req: Request) {
   let body: ReqBody;
@@ -70,12 +78,21 @@ export async function POST(req: Request) {
     );
   }
 
+  const collection: SupportedCollection = body.collection ?? "articles";
+  if (!(collection in SUPPORTED_COLLECTIONS)) {
+    return NextResponse.json(
+      { error: `Unsupported collection: ${collection}` },
+      { status: 400 },
+    );
+  }
+  const bodyField = SUPPORTED_COLLECTIONS[collection].bodyField;
+
   try {
     const payload = await getPayload({ config });
 
-    // Fetch article FR (overrideAccess pour bypass draft access)
+    // Fetch doc FR (overrideAccess pour bypass draft access)
     const found = await payload.find({
-      collection: "articles",
+      collection,
       where: { slug: { equals: body.slug } },
       locale: "fr",
       limit: 1,
@@ -83,27 +100,27 @@ export async function POST(req: Request) {
     });
     if (found.docs.length === 0) {
       return NextResponse.json(
-        { error: `Article slug "${body.slug}" not found` },
+        { error: `${collection} slug "${body.slug}" not found` },
         { status: 404 },
       );
     }
-    const article = found.docs[0]!;
-    const ar = article as unknown as Record<string, unknown>;
-    const frTitle = typeof ar.title === "string" ? ar.title : null;
+    const doc = found.docs[0]!;
+    const dr = doc as unknown as Record<string, unknown>;
+    const frTitle = typeof dr.title === "string" ? dr.title : null;
     if (!frTitle) {
       return NextResponse.json(
-        { error: `Article ${body.slug} has no FR title` },
+        { error: `${collection} ${body.slug} has no FR title` },
         { status: 400 },
       );
     }
 
     const source = {
       title: frTitle,
-      excerpt: typeof ar.excerpt === "string" ? ar.excerpt : "",
+      excerpt: typeof dr.excerpt === "string" ? dr.excerpt : "",
       metaDescription:
-        typeof ar.metaDescription === "string" ? ar.metaDescription : undefined,
-      body: Array.isArray(ar.body)
-        ? (ar.body as Array<Record<string, unknown> & { type: string }>)
+        typeof dr.metaDescription === "string" ? dr.metaDescription : undefined,
+      body: Array.isArray(dr[bodyField])
+        ? (dr[bodyField] as Array<Record<string, unknown> & { type: string }>)
         : [],
     };
 
@@ -115,8 +132,8 @@ export async function POST(req: Request) {
     for (const locale of targets) {
       try {
         const existing = await payload.findByID({
-          collection: "articles",
-          id: article.id as number,
+          collection,
+          id: doc.id as number,
           locale,
           overrideAccess: true,
         });
@@ -137,11 +154,22 @@ export async function POST(req: Request) {
           continue;
         }
 
+        // Remap : translateArticle retourne { body } mais job-offers attend
+        // { description }. On mappe le champ correctement.
+        const updateData: Record<string, unknown> = {
+          title: result.title,
+          excerpt: result.excerpt,
+          ...(result.metaDescription
+            ? { metaDescription: result.metaDescription }
+            : {}),
+          [bodyField]: result.body,
+        };
+
         await payload.update({
-          collection: "articles",
-          id: article.id as number,
+          collection,
+          id: doc.id as number,
           locale,
-          data: result as Record<string, unknown>,
+          data: updateData,
           overrideAccess: true,
           context: { autoTranslate: true },
         });
@@ -157,8 +185,9 @@ export async function POST(req: Request) {
 
     return NextResponse.json({
       ok: true,
+      collection,
       slug: body.slug,
-      id: article.id,
+      id: doc.id,
       translated,
       skipped,
       failed,
