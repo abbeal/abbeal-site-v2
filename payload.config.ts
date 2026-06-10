@@ -237,6 +237,7 @@ const HIDDEN_FROM_EDITORS = ({ user }: { user?: unknown }) => !isAdmin(user as A
 // ---------------------------------------------------------------------------
 const Users: CollectionConfig = {
   slug: "users",
+  versions: { maxPerDoc: 10 }, // anti-perte W24 followup (audit persistance)
   auth: {
     useAPIKey: true, // Header: Authorization: users API-Key <key>
     // Brute-force protection desactive : equipe interne tres petite
