@@ -1388,14 +1388,30 @@ export default buildConfig({
   //   run a la main APRES verification + backup mental de l'etat.
   db: sqliteAdapter({
     client: {
+      // PRIORITE :
+      //   1. TURSO_PRIMARY_URL — override manuel pour pointer vers la primary
+      //      branch (pas la dpl-XXX ephemere creee par Vercel-Turso integration
+      //      a chaque deploy). Critique pour persistance des writes admin.
+      //      Cause investigation W24 2026-06-10 : la Vercel-Turso integration
+      //      Marketplace cree une branche dpl-XXX par deploy. TURSO_DATABASE_URL
+      //      qu elle inject pointe vers cette branche ephemere, donc tous les
+      //      writes admin (offres, API keys, etc.) sont perdus au deploy suivant.
+      //   2. TURSO_DATABASE_URL — fallback (peut-etre dpl-XXX si integration active)
+      //   3. DATABASE_URI — legacy
+      //   4. file:./payload.db — dev local
       url:
+        process.env.TURSO_PRIMARY_URL ??
         process.env.TURSO_DATABASE_URL ??
         process.env.DATABASE_URI ??
         "file:./payload.db",
-      ...(process.env.TURSO_AUTH_TOKEN || process.env.DATABASE_AUTH_TOKEN
+      ...(process.env.TURSO_PRIMARY_AUTH_TOKEN ||
+      process.env.TURSO_AUTH_TOKEN ||
+      process.env.DATABASE_AUTH_TOKEN
         ? {
             authToken:
-              process.env.TURSO_AUTH_TOKEN ?? process.env.DATABASE_AUTH_TOKEN,
+              process.env.TURSO_PRIMARY_AUTH_TOKEN ??
+              process.env.TURSO_AUTH_TOKEN ??
+              process.env.DATABASE_AUTH_TOKEN,
           }
         : {}),
     },
