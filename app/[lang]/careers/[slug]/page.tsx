@@ -14,6 +14,7 @@ import {
   levelLabel,
   payloadBlocksToArticleBlocks,
 } from "@/lib/job-offers";
+import { getCareerBody } from "@/lib/career-bodies";
 
 type DictRole = {
   slug: string;
@@ -181,11 +182,15 @@ export default async function JobOfferDetailPage({
         </div>
       </div>
 
-      {/* Body description : CMS = blocks markdown, dict = juste body excerpt
-          (deja affiche en subtitle, donc on skip cette section pour dict) */}
+      {/* Body description :
+          - CMS = blocks markdown depuis offer.description
+          - Dict = blocks markdown depuis lib/career-bodies.json (enriched)
+            si dispo, sinon body excerpt only (deja en subtitle) */}
       {loaded.kind === "cms" ? (
         <CmsBody offer={loaded.offer} />
-      ) : null}
+      ) : (
+        <DictBody slug={slug} locale={locale} />
+      )}
 
       {/* Apply section — form Resend, meme pour CMS et dict */}
       <div
@@ -285,5 +290,65 @@ function CmsBody({
     <div className="mt-16 max-w-3xl">
       <ArticleBlocks blocks={articleBlocks} />
     </div>
+  );
+}
+
+/** Render le body + FAQ enrichis pour les 4 templates statiques. Lit
+ *  lib/career-bodies.json. Si pas dispo (slug non couvert), affiche rien
+ *  -> la page reste utile avec juste le subtitle + le form apply. */
+function DictBody({ slug, locale }: { slug: string; locale: Locale }) {
+  const content = getCareerBody(slug, locale);
+  if (!content) return null;
+
+  // FAQPage JSON-LD : eligibilite Rich Results + extraction LLM. Pour
+  // les dict templates riches aussi (egalite avec CMS).
+  const faqLd =
+    content.faq.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: content.faq.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.a,
+            },
+          })),
+        }
+      : null;
+
+  return (
+    <>
+      {faqLd ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      ) : null}
+      <div className="mt-16 max-w-3xl">
+        <ArticleBlocks blocks={content.body} />
+      </div>
+      {content.faq.length > 0 ? (
+        <div className="mt-16 pt-12 border-t border-[var(--color-border)] max-w-3xl">
+          <h2 className="text-2xl font-semibold tracking-tight">FAQ</h2>
+          <dl className="mt-8 space-y-6">
+            {content.faq.map((item, i) => (
+              <div
+                key={i}
+                className="pb-6 border-b border-[var(--color-border)] last:border-b-0 last:pb-0"
+              >
+                <dt className="font-semibold text-[var(--color-ink)]">
+                  {item.q}
+                </dt>
+                <dd className="mt-2 text-[15px] text-[var(--color-ink-soft)] leading-relaxed">
+                  {item.a}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      ) : null}
+    </>
   );
 }

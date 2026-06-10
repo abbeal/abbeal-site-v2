@@ -1,0 +1,246 @@
+{
+  "senior-fullstack": {
+    "body": {
+      "fr": [
+        { "type": "p", "content": "Rejoins une squad Abbeal en client final. Tu portes des features end-to-end (du wireframe à la prod), tu mentores 1-2 juniors si tu veux, et tu défends la qualité technique dans les arbitrages produit. Pas de junior derrière un commercial senior : tu es présenté, tu signes, tu livres." },
+
+        { "type": "h2", "content": "Ce que tu fais concrètement" },
+        { "type": "list", "ordered": false, "items": [
+          "Concevoir et livrer des features full-stack : design technique (RFC court), implémentation, tests, déploiement, observabilité.",
+          "Code review pair-à-pair avec un autre senior Abbeal hebdomadaire (peer review hors-mission, pour garder le niveau quand le client est plus junior).",
+          "Mentorer 1-2 juniors si la mission l'inclut (côté Abbeal ou côté client).",
+          "Participer aux refinements produit : challenger les specs floues, proposer des découpages en MVP, défendre les SLOs.",
+          "Document de transfert en fin de mission (RFC + Loom + session live) — on ne crée pas de dépendance, on transfère."
+        ]},
+
+        { "type": "h2", "content": "Stack typique" },
+        { "type": "list", "ordered": false, "items": [
+          "Frontend : React/Next.js (default), Vue 3 si client, Angular si legacy. TypeScript partout. Tailwind ou MUI selon design system.",
+          "Backend : Node.js (Nest, Fastify, Hono), Java (Spring Boot), Python (FastAPI, Django) ou Go selon le client. PostgreSQL en majorité, MongoDB sur projets event-driven.",
+          "Infra : Docker, K8s ou serverless (Vercel, AWS Lambda), CI/CD GitHub Actions ou GitLab, observabilité Datadog/Honeycomb."
+        ]},
+
+        { "type": "h2", "content": "Le profil qu'on cherche" },
+        { "type": "list", "ordered": false, "items": [
+          "6+ ans en production sur des projets non-trivials (>10k utilisateurs ou critique métier).",
+          "Très à l'aise sur AU MOINS une stack frontend + une stack backend. On préfère les T-shaped solides plutôt que les diluants.",
+          "Expérience real-world des trade-offs perf / coût / DX. Tu sais quand pondre une feature en 2 jours vs quand investir 2 sprints.",
+          "Capacité à expliquer ton code à un PM ou un designer sans condescendance.",
+          "Anglais courant à l'écrit. Si Tokyo : JLPT N2 minimum (on staffe en bilingue, pas en anglais-only)."
+        ]},
+
+        { "type": "h2", "content": "La méthode Abbeal" },
+        { "type": "p", "content": "Pas de time & material flou. Soit on cadre un périmètre output avec engagement de delivery, soit on rejoint en staff augmentation avec un ownership clair. Sprints d'1 ou 2 semaines, code review obligatoire (humain + IA-assistée via Codex), pair programming sur les sujets sensibles (auth, paiement, RGPD)." },
+        { "type": "p", "content": "Engagement de transfert dès le sprint 1 : ton équipe interne doit pouvoir shipper sans nous au mois +1 après la fin de mission. C'est notre KPI principal." },
+
+        { "type": "h2", "content": "Mobbeal : mobilité internationale" },
+        { "type": "p", "content": "Si après 12-18 mois chez nous tu veux bouger Paris → Montréal → Tokyo, on gère : visa, logement, famille, école, sponsorship. 52 mobilités opérées depuis 2018, 91% de réussite >24 mois. Voir l'article \"Mobbeal Playbook\" sur /insights." },
+
+        { "type": "callout", "tone": "teal", "content": "Cadrage 30 min : tu nous expliques ce que tu cherches, on te dit honnêtement si on est les bons (ou pas). Pas de pitch, pas de PowerPoint." }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "q": "Quel package sur ce rôle ?",
+          "a": "Salarié CDI : 65-85 k€ brut annuel selon expérience + bonus performance + 4 jours d'astreinte rotation. Freelance : 700-900 € TJM HT selon expertise. On ne pratique pas le low-ball sur les négos initiales."
+        },
+        {
+          "q": "Tu peux préciser \"client final\" ?",
+          "a": "On staffe chez les clients en direct (pas en sous-traitance 2e ou 3e rang). Tu travailles avec leurs équipes produit/tech, tu participes à leurs daily, tu as un onboarding chez eux. Le contrat est entre Abbeal et le client, mais l'expérience est celle d'un consultant interne intégré."
+        },
+        {
+          "q": "Quelle est la durée typique d'une mission ?",
+          "a": "6-18 mois en moyenne. Minimum 3 mois (en-dessous on refuse, ça vaut pas l'onboarding). Les missions qui marchent bien se prolongent souvent 2-3 fois."
+        },
+        {
+          "q": "Mode remote ou présentiel ?",
+          "a": "Hybride 2-3 jours présence client en moyenne. Full remote négociable selon le client (banque/santé en général demande du présentiel). 1 jour par semaine au hub Abbeal (Paris Greneta / Montréal St-Denis / Tokyo Higashi-Azabu) pour la peer review + le partage."
+        }
+      ]
+    }
+  },
+
+  "ai-engineer": {
+    "body": {
+      "fr": [
+        { "type": "p", "content": "Sortir l'IA des notebooks. Tu prends en charge des projets RAG / agents / LLM en production pour des clients qui ont déjà passé le POC et qui veulent du fiable. Pas de demo theater : on mesure l'accuracy, le coût, la latence, on tient des SLOs." },
+
+        { "type": "h2", "content": "Ce que tu fais concrètement" },
+        { "type": "list", "ordered": false, "items": [
+          "Architecturer des pipelines RAG production : retrieval (Pinecone, pgvector, Qdrant), chunking + reranking, eval framework CI (Promptfoo, Langfuse).",
+          "Déployer des agents LLM avec garde-fous : tool use validation, cost guards, retry logic, observability via Langfuse/Helicone.",
+          "Optimiser les coûts d'inférence : routing multi-LLM (LiteLLM), batching, cache sémantique, fine-tuning quand le ROI le justifie.",
+          "Pair-design avec les data scientists internes du client pour transférer la propriété en fin de mission.",
+          "Évangéliser les patterns AI-safe en interne : RBAC sur les contexts, prompt injection mitigation, audit logs APPI/GDPR-ready."
+        ]},
+
+        { "type": "h2", "content": "Stack typique" },
+        { "type": "list", "ordered": false, "items": [
+          "LLM providers : Claude (default pour reasoning), OpenAI (default pour tool use), Llama 3.3 self-hosted (vLLM) pour privacy-critical.",
+          "Frameworks : LangChain (legacy clients), LlamaIndex, DSPy (en assess), Pydantic AI. Pour les agents : LangGraph, Vercel AI SDK.",
+          "Vector DB : Pinecone (managed, default), pgvector (si Postgres déjà en prod), Qdrant (self-hosted).",
+          "Observability + evals : Langfuse (default), Helicone, Promptfoo en CI.",
+          "Backend : Python (FastAPI) ou Node (Hono). Déploiement Modal, Runpod, ou K8s GPU node-groups."
+        ]},
+
+        { "type": "h2", "content": "Le profil qu'on cherche" },
+        { "type": "list", "ordered": false, "items": [
+          "4+ ans en production sur des projets ML/AI. Ou 2+ ans avec une vraie spécialisation LLM/RAG production.",
+          "Solide en Python (typage strict, async, tests). Une stack backend secondaire (Node, Go) est un plus.",
+          "Comprends la différence entre un POC qui marche en demo et un système qui tient à 10k QPS avec p99 < 4s.",
+          "Connaissance pratique des trade-offs : embedding model choice, chunk size, retrieval strategy, prompt engineering vs fine-tuning.",
+          "Bonus : expérience LLM agents en prod (LangGraph, AutoGen, ou framework custom), ou MLOps (Kubeflow, MLflow, BentoML)."
+        ]},
+
+        { "type": "h2", "content": "Pourquoi Abbeal pour ce rôle" },
+        { "type": "p", "content": "On a 12+ missions AI production en cours (BNP, Cartier, Le Monde, AXA, plus des moins-glamour). Notre tech radar Q2 2026 met Rust et Pinecone en Adopt, Bun et DSPy en Trial, MongoDB et low-code en Hold — on est opinionated et on tient des comptes." },
+        { "type": "p", "content": "Tu rejoins une équipe AI qui couvre Paris + Tokyo (la mission Cartier qui combine LLM privé et NLP japonais te donne une idée du niveau). Code review pair-à-pair avec un autre senior AI hebdomadaire, accès au tech radar interne." },
+
+        { "type": "callout", "tone": "teal", "content": "Pas de \"prompt engineer\" qui ne code pas. On veut des ingés qui font du LLM, pas l'inverse." }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "q": "Quel package sur ce rôle ?",
+          "a": "Salarié CDI : 75-100 k€ brut + bonus. Freelance : 800-1100 € TJM HT selon expertise. Les profils confirmés sur RAG production + observability (Langfuse, Promptfoo CI) sont en haut de la fourchette."
+        },
+        {
+          "q": "Faut-il un PhD ?",
+          "a": "Non. On préfère 4 ans de production AI à un PhD sans expérience industrielle. Si tu as les deux : tant mieux."
+        },
+        {
+          "q": "Quels clients sur ce rôle ?",
+          "a": "Banques (BNP, SocGen, BNC, Desjardins) : RAG sur core COBOL + audit ACPR. Luxe (Cartier) : LLM privé sur catalogue produit + NLP JP. Médias (Le Monde) : Insights data pour la rédaction. Industriels (Toyota, Money Forward) : agents tool-use sur ERP. Mix selon ta dispo."
+        },
+        {
+          "q": "Le mode hybride Tokyo ?",
+          "a": "Pour les missions à Tokyo : présentiel partiel chez le client + remote depuis le hub Higashi-Azabu. JLPT N2 minimum demandé côté Tokyo (clients enterprise japonais ne tournent pas en english-only, sauf exceptions startups)."
+        }
+      ]
+    }
+  },
+
+  "cloud-devops": {
+    "body": {
+      "fr": [
+        { "type": "p", "content": "Tu prends en charge l'infra production de nos clients : IaC, K8s, observabilité, runs critiques. On cherche des ingés qui aiment porter le pager et qui sont capables de dire non à un design qui scale pas. Pas de DevOps qui font du run-only — tu participes aux arbitrages d'archi avec les devs." },
+
+        { "type": "h2", "content": "Ce que tu fais concrètement" },
+        { "type": "list", "ordered": false, "items": [
+          "Infrastructure as Code complète : Terraform/OpenTofu (modules réutilisables), Pulumi sur les cas Typescript-only, état versionné dans Terraform Cloud ou S3+DynamoDB.",
+          "Plateforme K8s : Karpenter (autoscaling EC2 spot), Argo CD (GitOps), Istio ou Linkerd selon le besoin service mesh, Kyverno pour les policies.",
+          "Observability : Prometheus + Grafana (default open-source), Datadog (default managé), Honeycomb pour traces hautes cardinalités. Toujours un golden signal dashboard par service.",
+          "Runs critiques : on-call rotation Abbeal sur les missions où le client n'a pas la maturité (pas d'astreinte gratuite, c'est facturé en heures runs).",
+          "Performance + GreenOps : -30 % facture cloud en moyenne sur les missions où on a la main, sans toucher aux SLOs (voir l'article \"GreenOps : 7 leviers\" sur /insights)."
+        ]},
+
+        { "type": "h2", "content": "Stack typique" },
+        { "type": "list", "ordered": false, "items": [
+          "Cloud : AWS (60 % des missions), GCP (20 %), Azure (15 %), Vercel pour le Web (5 %). On évite les multi-cloud sauf justification métier.",
+          "Orchestration : Kubernetes (EKS, GKE, AKS, ou bare metal pour les rares cas robotique edge). Karpenter par défaut depuis 2024.",
+          "CI/CD : GitHub Actions (default), GitLab si client legacy, Tekton sur les setups full Kubernetes-native.",
+          "Secrets : Vault ou Doppler. Jamais d'env vars en clair dans Git, jamais.",
+          "IaC : OpenTofu 1.7+ (passé en Adopt Q2 2026, on migre les Terraform existants au renouvellement de mission). Pulumi sur les cas TypeScript first."
+        ]},
+
+        { "type": "h2", "content": "Le profil qu'on cherche" },
+        { "type": "list", "ordered": false, "items": [
+          "5+ ans en production sur AU MOINS un cloud majeur. Multi-cloud nice-to-have mais pas requis.",
+          "Très solide sur Linux (résolution incident, troubleshooting réseau, perfs systèmes).",
+          "Expérience pair-prod avec des devs (pas un mur DevOps vs Dev — culture you-build-it-you-run-it).",
+          "Capacité à écrire des post-mortems pédagogiques (incidents = matériel d'apprentissage, pas blame).",
+          "Bonus : certif AWS/GCP solo Architect ou Pro, contributions OSS infra, expérience sécurité (CIS benchmarks, SOC 2, SecNumCloud, APPI selon géo)."
+        ]},
+
+        { "type": "h2", "content": "Pourquoi Abbeal sur ce rôle" },
+        { "type": "p", "content": "On a un client portfolio qui force la maturité : BNP (audit ACPR), SocGen (SecNumCloud), Hydro-Québec (CISA), Money Forward (PCI-DSS JP). Tu apprends en croisant les frameworks réglementaires plutôt qu'en faisant 5 ans le même AWS dans la même boîte." },
+        { "type": "p", "content": "Pour les missions multi-géo (Paris + Montréal + Tokyo en Adaptive Follow-the-Sun), on staffe des binômes infra qui s'overlap sur les fenêtres de handoff. Tu n'es jamais seul sur un run critique." },
+
+        { "type": "callout", "tone": "teal", "content": "On n'accepte pas les missions où le client veut un \"DevOps qui exécute des tickets\". Si pas d'ownership archi, on refuse." }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "q": "Quel package sur ce rôle ?",
+          "a": "Salarié CDI : 70-95 k€ brut + bonus astreinte. Freelance : 750-1000 € TJM HT, +20% si on-call pager active. Les profils Karpenter + GitOps + observability sont en haut de la fourchette."
+        },
+        {
+          "q": "On-call et astreintes ?",
+          "a": "Rotation entre 4 et 6 ingés (selon le périmètre). Maximum 1 semaine on-call par mois. Astreintes nocturnes payées séparément (forfait + heures effectives en cas d'incident)."
+        },
+        {
+          "q": "Vous faites du multi-cloud ?",
+          "a": "Sauf demande explicite client + ROI justifié, non. On préfère un cloud bien maîtrisé qu'une abstraction multi-cloud qui ajoute de la complexité. Si le client veut absolument du multi-cloud, on documente les trade-offs et on facture le surcoût."
+        },
+        {
+          "q": "Quelle géo prioritaire ?",
+          "a": "Paris (3-4 missions actives), Montréal (2 missions), Tokyo (1-2 missions, NTT/Money Forward). Mobilité possible après 12 mois via Mobbeal."
+        }
+      ]
+    }
+  },
+
+  "embedded-robotics": {
+    "body": {
+      "fr": [
+        { "type": "p", "content": "Tu codes du bas niveau pour des robots et systèmes embarqués qui doivent être fiables — vraie fiabilité industrielle, pas du démo. La majorité de nos missions robotique est à Tokyo (collaboration avec NTT Data, Toyota Tsusho, Fanuc) mais on a aussi des projets edge embarqués à Paris (mobilité urbaine, énergie)." },
+
+        { "type": "h2", "content": "Ce que tu fais concrètement" },
+        { "type": "list", "ordered": false, "items": [
+          "Stack temps-réel : C++ moderne (20+), Rust embarqué (no_std), ou C selon le client. Linux temps-réel (PREEMPT_RT) ou RTOS (FreeRTOS, Zephyr).",
+          "ROS 2 (passé en Adopt 2026) : navigation, perception, fusion capteurs. Migration des bases ROS 1 existantes vers ROS 2 humble/jazzy.",
+          "Communication terrain : MQTT, BLE, CAN, OPC-UA selon les contraintes (latence, fiabilité, sécurité industrielle).",
+          "Hardware-in-the-loop : SITL pour les drones, simulateurs Gazebo/Isaac Sim, banc de test physique pour validation.",
+          "Sécurité fonctionnelle : ISO 26262 (automobile), IEC 61508 (industriel), DO-178 (aéro) selon le client."
+        ]},
+
+        { "type": "h2", "content": "Stack typique" },
+        { "type": "list", "ordered": false, "items": [
+          "Languages : C++ 20/23 (default robotique), Rust embarqué (default nouveaux projets edge), C pour drivers spécifiques, Python pour outillage + supervision.",
+          "Robotique : ROS 2 humble/jazzy. micro-ROS sur les microcontrôleurs.",
+          "OS : Yocto (Linux embarqué configuré au plus près), Zephyr RTOS pour les contraintes <1MB RAM, FreeRTOS sur les legacy.",
+          "Edge inference : NVIDIA Jetson (Nano, Orin), Google Coral, ou ASICs custom pour les besoins extrêmes.",
+          "Tests : GTest + GMock pour C++, embedded-hal mocks pour Rust, hardware-in-the-loop test bench (on co-design avec le client)."
+        ]},
+
+        { "type": "h2", "content": "Le profil qu'on cherche" },
+        { "type": "list", "ordered": false, "items": [
+          "5+ ans en production sur du code embarqué ou robotique. Une mission sortie en série (pas juste prototype) est un GROS plus.",
+          "Très solide sur AU MOINS C++ moderne ou Rust embarqué. Bonus si tu as les deux.",
+          "Rigueur absolue sur les invariants temps-réel : tu sais distinguer hard real-time vs soft real-time, tu sais calculer un WCET, tu débuggues avec un oscillo si besoin.",
+          "Expérience de safety functional sur au moins un projet (ISO 26262, IEC 61508, ou équivalent métier).",
+          "Si tu candidates sur Tokyo : JLPT N2 minimum (les meetings techniques avec NTT/Toyota se passent en japonais, traduction côté gestion projet uniquement)."
+        ]},
+
+        { "type": "h2", "content": "Pourquoi Abbeal sur ce rôle" },
+        { "type": "p", "content": "On est UNE des rares ESN à avoir une vraie practice robotique avec sortie en série. La plupart de nos concurrents font de la R&D papier — nous on a 3 missions à Tokyo qui tournent en flotte production (Toyota Tsusho automation logistique, Fanuc cobotique, NTT Data drone delivery)." },
+        { "type": "p", "content": "Tu rejoins un binôme/trinôme robotique Paris-Tokyo : pair design sur les architectures critiques, code review en overlap window matin Paris + après-midi Tokyo. Accès au tech radar Embedded interne (mis à jour trimestriellement)." },
+
+        { "type": "callout", "tone": "teal", "content": "Si tu n'as fait que du software \"normal\" et que tu veux te reconvertir en embarqué : on aime, mais on commence par te faire passer 6 mois en pair sur une mission de 2nd rang avant de te confier de l'autonomie." }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "q": "Quel package sur ce rôle ?",
+          "a": "Salarié CDI Paris : 70-95 k€ brut. Salarié Tokyo : 9-13M JPY annuel. Freelance Paris : 700-950 € TJM HT. Freelance Tokyo : 1.5-2M JPY/mois. Top fourchette pour les profils avec Rust embarqué + ROS 2 + safety functional."
+        },
+        {
+          "q": "Mobilité Tokyo ?",
+          "a": "On opère via Mobbeal : visa Engineer/Specialist in Humanities sponsoré par Abbeal K.K. (notre entité japonaise depuis 2018). Délai moyen 12 semaines de la décision au démarrage Tokyo. Sponsorship visa famille inclus si applicable."
+        },
+        {
+          "q": "Quelle proportion de missions sont en série production ?",
+          "a": "70 % de nos missions robotique sont en série production ou pré-série. 30 % R&D/POC mais avec engagement de série dans 12-24 mois. On évite les missions \"science\" pures car le pipeline talent est plus difficile."
+        },
+        {
+          "q": "Mode présentiel ou remote ?",
+          "a": "Robotique = beaucoup de présentiel (hardware partagé, bench tests). Paris : 4 jours par semaine sur site client en moyenne. Tokyo : 5 jours sur site Higashi-Azabu chez NTT/Toyota selon mission."
+        }
+      ]
+    }
+  }
+}
