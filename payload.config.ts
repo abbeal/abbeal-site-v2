@@ -527,6 +527,83 @@ const Articles: CollectionConfig = {
         return data;
       },
     ],
+    // AUTO-TRANSLATION : a chaque save d'un article FR, on traduit
+    // automatiquement vers EN/JA/FR-CA via Claude API si les autres
+    // locales sont vides. Cf lib/translate-article.ts.
+    //
+    // Skip si :
+    //   - context.autoTranslate = true (= recursion suite a notre propre update)
+    //   - ANTHROPIC_API_KEY absent (graceful, log warning)
+    //   - locale cible deja remplie avec un title different du FR
+    //
+    // L'admin peut toujours editer manuellement les traductions apres
+    // dans /admin (selecteur de locale en haut a droite).
+    afterChange: [
+      async ({ req, doc, operation, context }) => {
+        if ((context as { autoTranslate?: boolean })?.autoTranslate) return doc;
+        if (operation !== "create" && operation !== "update") return doc;
+
+        const d = doc as Record<string, unknown>;
+        const frTitle = typeof d.title === "string" ? d.title : null;
+        if (!frTitle) return doc;
+
+        // Lazy import to avoid loading on collections that don't translate
+        const { translateArticle } = await import("./lib/translate-article");
+
+        const source = {
+          title: frTitle,
+          excerpt: typeof d.excerpt === "string" ? d.excerpt : "",
+          metaDescription:
+            typeof d.metaDescription === "string"
+              ? d.metaDescription
+              : undefined,
+          body: Array.isArray(d.body)
+            ? (d.body as Array<Record<string, unknown> & { type: string }>)
+            : [],
+        };
+
+        // Fire-and-forget en parallel pour les 3 locales. On n'attend pas la
+        // fin (jusqu'a 30s par locale via Claude) pour ne pas bloquer la
+        // reponse /admin. Erreurs logged via req.payload.logger.
+        const targets = ["en", "ja", "fr-ca"] as const;
+        for (const locale of targets) {
+          (async () => {
+            try {
+              const existing = await req.payload.findByID({
+                collection: "articles",
+                id: doc.id as number,
+                locale,
+              });
+              const existingTitle = (existing as { title?: string }).title;
+              // Skip si traduction deja faite manuellement (= title diff du FR)
+              if (existingTitle && existingTitle !== frTitle) return;
+
+              const translated = await translateArticle(source, locale);
+              if (!translated) return;
+
+              await req.payload.update({
+                collection: "articles",
+                id: doc.id as number,
+                locale,
+                data: translated as Record<string, unknown>,
+                overrideAccess: true,
+                context: { autoTranslate: true },
+              });
+
+              req.payload.logger.info(
+                `[auto-translate] article ${doc.id} -> ${locale} OK`,
+              );
+            } catch (err) {
+              req.payload.logger.error(
+                { err, id: doc.id, locale },
+                "[auto-translate] failed",
+              );
+            }
+          })();
+        }
+        return doc;
+      },
+    ],
   },
   fields: [
     { name: "slug", type: "text", required: true, unique: true, index: true },
