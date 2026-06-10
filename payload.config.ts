@@ -957,6 +957,50 @@ const JobOffers: CollectionConfig = {
         return data;
       },
     ],
+    // On-demand ISR revalidation : fix le bug "offre Published n'apparait
+    // pas sur /careers pendant des heures" (cache CDN Vercel >35h observe
+    // en W24 malgre revalidate=300). A chaque save/update/delete, on POST
+    // /api/revalidate pour les 4 locales -> /careers refait un SSR frais
+    // a la prochaine request, offre visible sous <5s.
+    //
+    // Fire-and-forget : on n'attend pas la reponse pour ne pas bloquer le
+    // save dans /admin. Si revalidate fail (network, secret missing), on
+    // log mais on continue.
+    afterChange: [
+      async ({ req }) => {
+        const secret = process.env.REVALIDATE_SECRET;
+        if (!secret) {
+          req.payload?.logger?.warn?.(
+            "[JobOffers] REVALIDATE_SECRET not set -> /careers cache won't auto-refresh",
+          );
+          return;
+        }
+        const base =
+          process.env.PAYLOAD_PUBLIC_SERVER_URL ??
+          (process.env.VERCEL_URL
+            ? `https://${process.env.VERCEL_URL}`
+            : "https://abbeal.com");
+        const paths = [
+          "/fr/careers",
+          "/en/careers",
+          "/ja/careers",
+          "/fr-ca/careers",
+        ];
+        // Fire-and-forget : pas de await pour ne pas bloquer le save admin.
+        // Les erreurs sont logged mais n'interrompent pas le flux Payload.
+        for (const path of paths) {
+          fetch(`${base}/api/revalidate`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ path, secret }),
+          }).catch((err) => {
+            req.payload?.logger?.error?.(
+              `[JobOffers] revalidate ${path} failed : ${err?.message ?? err}`,
+            );
+          });
+        }
+      },
+    ],
   },
   fields: [
     {
