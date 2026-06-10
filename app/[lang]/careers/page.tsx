@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary } from "../dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
@@ -89,6 +90,9 @@ function offerToRole(offer: JobOffer, locale: Locale, defaultEmail: string) {
     _contract: contractLabel(offer.contractType, locale),
     _level: levelLabel(offer.experienceLevel, locale),
     _salaryRange: offer.salaryRange,
+    // Lien vers la page detail /careers/[slug] (CMS only — les dict
+    // templates n'ont pas de body markdown pour justifier une page detail).
+    _detailHref: `/${locale}/careers/${offer.slug}`,
   };
 }
 
@@ -97,6 +101,7 @@ type RenderedRole = ReturnType<typeof offerToRole> | (Dict["careers"]["roles"][n
   _contract?: string;
   _level?: string;
   _salaryRange?: string | null;
+  _detailHref?: string;
 });
 
 export default async function CareersPage({ params }: PageProps<"/[lang]/careers">) {
@@ -253,9 +258,26 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/careers
                   </span>
                 </div>
                 <div className="md:col-span-7">
-                  <h2 className="text-2xl md:text-3xl font-semibold tracking-tight group-hover:text-[var(--color-brand-teal)] transition-colors">
-                    {role.title}
-                  </h2>
+                  {role._detailHref ? (
+                    <Link
+                      href={role._detailHref}
+                      className="inline-block"
+                    >
+                      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight group-hover:text-[var(--color-brand-teal)] transition-colors">
+                        {role.title}{" "}
+                        <span
+                          aria-hidden
+                          className="inline-block text-[var(--color-brand-teal)] opacity-0 group-hover:opacity-100 transition-opacity translate-x-0 group-hover:translate-x-1"
+                        >
+                          →
+                        </span>
+                      </h2>
+                    </Link>
+                  ) : (
+                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
+                      {role.title}
+                    </h2>
+                  )}
                   {role.stack ? (
                     <p className="mt-2 font-mono text-sm text-[var(--color-brand-teal)]">
                       {role.stack}
@@ -272,6 +294,14 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/careers
                   <p className="mt-5 text-[15px] text-[var(--color-ink-soft)] leading-relaxed max-w-2xl">
                     {role.body}
                   </p>
+                  {role._detailHref ? (
+                    <Link
+                      href={role._detailHref}
+                      className="mt-4 inline-block font-mono text-xs uppercase tracking-[0.15em] text-[var(--color-brand-teal)] hover:underline underline-offset-4"
+                    >
+                      {locale === "ja" ? "詳細を見る" : locale === "en" ? "Read the full role" : "Voir le détail"} →
+                    </Link>
+                  ) : null}
                 </div>
                 <div className="md:col-span-4 flex md:justify-end items-start">
                   <a
