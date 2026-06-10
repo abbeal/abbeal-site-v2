@@ -14,20 +14,15 @@ type FormState = "idle" | "sending" | "success" | "error";
 const LABELS: Record<Locale, Record<string, string>> = {
   fr: {
     title: "Postuler",
-    subtitle:
-      "Laisse ton LinkedIn, un lien Calendly ou un message — on revient vers toi en 48h.",
     nameLabel: "Nom *",
     namePh: "Prénom Nom",
     emailLabel: "Email *",
     emailPh: "toi@example.com",
-    linkedinLabel: "LinkedIn (URL)",
+    linkedinLabel: "LinkedIn *",
     linkedinPh: "https://www.linkedin.com/in/...",
-    calendlyLabel: "Calendly (URL)",
-    calendlyPh: "https://calendly.com/...",
-    messageLabel: "Message (optionnel)",
+    messageLabel: "Message",
     messagePh:
       "Quelques mots sur ce qui t'intéresse, ta dispo, tes attentes...",
-    hint: "Au moins un parmi LinkedIn, Calendly ou message.",
     cta: "Envoyer ma candidature",
     sending: "Envoi…",
     success:
@@ -36,19 +31,14 @@ const LABELS: Record<Locale, Record<string, string>> = {
   },
   en: {
     title: "Apply",
-    subtitle:
-      "Drop your LinkedIn, a Calendly link or a quick message — we'll get back within 48h.",
     nameLabel: "Name *",
     namePh: "Full name",
     emailLabel: "Email *",
     emailPh: "you@example.com",
-    linkedinLabel: "LinkedIn (URL)",
+    linkedinLabel: "LinkedIn *",
     linkedinPh: "https://www.linkedin.com/in/...",
-    calendlyLabel: "Calendly (URL)",
-    calendlyPh: "https://calendly.com/...",
-    messageLabel: "Message (optional)",
+    messageLabel: "Message",
     messagePh: "A few words about your fit, availability, expectations...",
-    hint: "At least one of LinkedIn, Calendly, or message.",
     cta: "Send my application",
     sending: "Sending…",
     success:
@@ -57,19 +47,14 @@ const LABELS: Record<Locale, Record<string, string>> = {
   },
   ja: {
     title: "応募する",
-    subtitle:
-      "LinkedIn、Calendlyのリンク、またはメッセージをお送りください — 48時間以内にご連絡します。",
     nameLabel: "氏名 *",
     namePh: "山田 太郎",
     emailLabel: "メール *",
     emailPh: "you@example.com",
-    linkedinLabel: "LinkedIn（URL）",
+    linkedinLabel: "LinkedIn *",
     linkedinPh: "https://www.linkedin.com/in/...",
-    calendlyLabel: "Calendly（URL）",
-    calendlyPh: "https://calendly.com/...",
-    messageLabel: "メッセージ（任意）",
+    messageLabel: "メッセージ",
     messagePh: "ご関心、ご都合、ご期待など...",
-    hint: "LinkedIn、Calendly、メッセージのうち少なくとも1つを入力してください。",
     cta: "応募する",
     sending: "送信中…",
     success:
@@ -79,20 +64,15 @@ const LABELS: Record<Locale, Record<string, string>> = {
   },
   "fr-ca": {
     title: "Postuler",
-    subtitle:
-      "Laisse ton LinkedIn, un lien Calendly ou un message — on revient vers toi en 48h.",
     nameLabel: "Nom *",
     namePh: "Prénom Nom",
     emailLabel: "Courriel *",
     emailPh: "toi@example.com",
-    linkedinLabel: "LinkedIn (URL)",
+    linkedinLabel: "LinkedIn *",
     linkedinPh: "https://www.linkedin.com/in/...",
-    calendlyLabel: "Calendly (URL)",
-    calendlyPh: "https://calendly.com/...",
-    messageLabel: "Message (optionnel)",
+    messageLabel: "Message",
     messagePh:
       "Quelques mots sur ce qui t'intéresse, ta dispo, tes attentes...",
-    hint: "Au moins un parmi LinkedIn, Calendly ou message.",
     cta: "Envoyer ma candidature",
     sending: "Envoi…",
     success:
@@ -115,7 +95,6 @@ export function ApplyForm({ locale, offerSlug, offerTitle }: ApplyFormProps) {
       name: String(fd.get("name") ?? ""),
       email: String(fd.get("email") ?? ""),
       linkedin: String(fd.get("linkedin") ?? ""),
-      calendly: String(fd.get("calendly") ?? ""),
       message: String(fd.get("message") ?? ""),
       _website: String(fd.get("_website") ?? ""), // honeypot
       offerSlug,
@@ -192,30 +171,19 @@ export function ApplyForm({ locale, offerSlug, offerTitle }: ApplyFormProps) {
         </label>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <label className="block">
-          <span className="block font-mono text-[11px] uppercase tracking-wider text-[var(--color-muted)] mb-2">
-            {l.linkedinLabel}
-          </span>
-          <input
-            type="url"
-            name="linkedin"
-            placeholder={l.linkedinPh}
-            className="w-full px-4 h-11 border border-[var(--color-border)] bg-[var(--color-bg-light)] focus:outline-none focus:border-[var(--color-brand-teal)] transition-colors"
-          />
-        </label>
-        <label className="block">
-          <span className="block font-mono text-[11px] uppercase tracking-wider text-[var(--color-muted)] mb-2">
-            {l.calendlyLabel}
-          </span>
-          <input
-            type="url"
-            name="calendly"
-            placeholder={l.calendlyPh}
-            className="w-full px-4 h-11 border border-[var(--color-border)] bg-[var(--color-bg-light)] focus:outline-none focus:border-[var(--color-brand-teal)] transition-colors"
-          />
-        </label>
-      </div>
+      <label className="block">
+        <span className="block font-mono text-[11px] uppercase tracking-wider text-[var(--color-muted)] mb-2">
+          {l.linkedinLabel}
+        </span>
+        <input
+          type="url"
+          name="linkedin"
+          required
+          placeholder={l.linkedinPh}
+          pattern="https?://.*linkedin\\.com/.*"
+          className="w-full px-4 h-11 border border-[var(--color-border)] bg-[var(--color-bg-light)] focus:outline-none focus:border-[var(--color-brand-teal)] transition-colors"
+        />
+      </label>
 
       <label className="block">
         <span className="block font-mono text-[11px] uppercase tracking-wider text-[var(--color-muted)] mb-2">
@@ -228,10 +196,6 @@ export function ApplyForm({ locale, offerSlug, offerTitle }: ApplyFormProps) {
           className="w-full px-4 py-3 border border-[var(--color-border)] bg-[var(--color-bg-light)] focus:outline-none focus:border-[var(--color-brand-teal)] transition-colors resize-y"
         />
       </label>
-
-      <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--color-muted)]/80">
-        {l.hint}
-      </p>
 
       <div className="flex items-center gap-4">
         <button

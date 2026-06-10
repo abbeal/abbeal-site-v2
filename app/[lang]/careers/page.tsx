@@ -128,8 +128,16 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/careers
   const cmsOffers = await getPublishedJobOffers(locale);
   const cmsRoles = cmsOffers.map((o) => offerToRole(o, locale, d.applyEmail));
   const cmsSlugs = new Set(cmsRoles.map((r) => r.slug));
-  const dictRolesNotOverridden = d.roles.filter((r) => !cmsSlugs.has(r.slug));
-  const roles: RenderedRole[] = [...cmsRoles, ...dictRolesNotOverridden];
+  // W24 followup : on rend AUSSI les dict roles cliquables vers leur page
+  // detail (qui fait fallback dict si offre CMS pas trouvee). Tous les cards
+  // -> page detail desormais, plus d'anchor #slug.
+  const dictRolesEnriched = d.roles
+    .filter((r) => !cmsSlugs.has(r.slug))
+    .map((r) => ({
+      ...r,
+      _detailHref: `/${locale}/careers/${r.slug}`,
+    }));
+  const roles: RenderedRole[] = [...cmsRoles, ...dictRolesEnriched];
 
   // Schema.org JobPosting par role : eligibilite Google Jobs box.
   // Boost CTR sur le longtail non-branded ("AI Engineer Tokyo", etc.)
@@ -240,10 +248,10 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/careers
         className="mt-20 pt-16 border-t border-[var(--color-border)] divide-y divide-[var(--color-border)]"
       >
         {roles.map((role, i) => {
-          const applyHref =
-            role._applyUrl ??
-            `mailto:${d.applyEmail}?subject=${encodeURIComponent(role.subject)}`;
-          const isExternal = applyHref.startsWith("http");
+          // W24 followup : le bouton "Postuler" du listing pointe maintenant
+          // vers la page detail #apply (anchor du form Resend). Tous les
+          // cards ont _detailHref (CMS + dict templates desormais).
+          const applyHref = `${role._detailHref}#apply`;
           // Petite ligne meta : contrat · niveau · salaire (CMS only)
           const metaBits = [role._contract, role._level, role._salaryRange]
             .filter(Boolean)
@@ -304,16 +312,13 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/careers
                   ) : null}
                 </div>
                 <div className="md:col-span-4 flex md:justify-end items-start">
-                  <a
+                  <Link
                     href={applyHref}
-                    {...(isExternal
-                      ? { target: "_blank", rel: "noopener noreferrer" }
-                      : {})}
                     className="inline-flex items-center gap-2 h-11 px-5 text-sm border border-[var(--color-ink)] hover:bg-[var(--color-ink)] hover:text-[var(--color-bg-light)] transition-colors"
                   >
                     {d.applyTo}
                     <span aria-hidden>→</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </li>

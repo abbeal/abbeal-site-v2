@@ -15,11 +15,21 @@ import {
   payloadBlocksToArticleBlocks,
 } from "@/lib/job-offers";
 
+type DictRole = {
+  slug: string;
+  title: string;
+  stack: string;
+  location: string;
+  subject: string;
+  body: string;
+};
+
 type Dict = {
   nav: { careers: string };
   careers: {
     applyTo: string;
     applyEmail: string;
+    roles: DictRole[];
   };
 };
 
@@ -28,8 +38,19 @@ type Dict = {
 export const revalidate = 300;
 
 // dynamicParams = true (default) : permet de servir une offre nouvellement
-// creee meme si elle n'etait pas dans la liste au build. getJobOffer() retourne
-// null si pas trouvee -> notFound() -> 404 propre.
+// creee meme si elle n'etait pas dans la liste au build. Fallback dict si
+// CMS pas trouve permet d'afficher les 4 templates statiques en page detail
+// aussi (demande W24 follow-up Seb).
+
+async function loadForSlug(slug: string, locale: Locale, dict: Dict) {
+  // 1. Essaye CMS d'abord (offre published)
+  const offer = await getJobOffer(slug, locale);
+  if (offer) return { kind: "cms" as const, offer };
+  // 2. Fallback : check dict.careers.roles (4 templates statiques)
+  const dictRole = dict.careers.roles.find((r) => r.slug === slug);
+  if (dictRole) return { kind: "dict" as const, role: dictRole };
+  return null;
+}
 
 export async function generateMetadata({
   params,
@@ -37,15 +58,21 @@ export async function generateMetadata({
   const { lang, slug } = await params;
   if (!hasLocale(lang)) return {};
   const locale = lang as Locale;
-  const offer = await getJobOffer(slug, locale);
-  if (!offer) return {};
-  const description = offer.metaDescription ?? offer.excerpt;
+  const dict = (await getDictionary(locale)) as Dict;
+  const loaded = await loadForSlug(slug, locale, dict);
+  if (!loaded) return {};
+
+  const title = loaded.kind === "cms" ? loaded.offer.title : loaded.role.title;
+  const description =
+    loaded.kind === "cms"
+      ? loaded.offer.metaDescription ?? loaded.offer.excerpt
+      : loaded.role.body;
   return {
-    title: `${offer.title} · Abbeal`,
+    title: `${title} · Abbeal`,
     description,
     alternates: pageAlternates(locale, `/careers/${slug}`),
     ...pageOpenGraph(locale, {
-      title: offer.title,
+      title,
       description,
       path: `/careers/${slug}`,
     }),
@@ -58,20 +85,142 @@ export default async function JobOfferDetailPage({
   const { lang, slug } = await params;
   if (!hasLocale(lang)) notFound();
   const locale = lang as Locale;
-  const offer = await getJobOffer(slug, locale);
-  if (!offer) notFound();
-
   const dict = (await getDictionary(locale)) as Dict;
-  const d = dict.careers;
+  const loaded = await loadForSlug(slug, locale, dict);
+  if (!loaded) notFound();
+
+  const title = loaded.kind === "cms" ? loaded.offer.title : loaded.role.title;
   const crumbs = breadcrumbs(locale, [
     [dict.nav.careers, "/careers"],
-    [offer.title, `/careers/${slug}`],
+    [title, `/careers/${slug}`],
   ]);
 
-  // Convertit les blocks Payload en ArticleBlock pour reutiliser le renderer.
-  const articleBlocks = payloadBlocksToArticleBlocks(offer.description);
+  // i18n minimal pour les labels (apply, postuler, etc.)
+  const t = {
+    apply:
+      (locale === "ja" && "応募する") ||
+      (locale === "en" && "Apply") ||
+      "Postuler",
+    detailIntro:
+      (locale === "ja" && "詳細") ||
+      (locale === "en" && "About the role") ||
+      "À propos du poste",
+  };
 
-  // Schema.org JobPosting pour Google Jobs.
+  return (
+    <section className="mx-auto max-w-[1100px] px-6 md:px-10 py-20 md:py-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
+      />
+      {loaded.kind === "cms" ? <CmsSchemaLd offer={loaded.offer} locale={locale} slug={slug} /> : null}
+
+      {/* Breadcrumb back to listing */}
+      <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-muted)] mb-6">
+        <Link
+          href={`/${locale}/careers`}
+          className="hover:text-[var(--color-brand-teal)] transition-colors"
+        >
+          ← {dict.nav.careers}
+        </Link>
+      </p>
+
+      {/* Header — meme structure pour les 2 variants, contenu adapte */}
+      <div className="max-w-3xl">
+        {loaded.kind === "cms" ? (
+          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)] mb-4">
+            {locationLabel(loaded.offer.location, locale)} ·{" "}
+            {contractLabel(loaded.offer.contractType, locale)} ·{" "}
+            {levelLabel(loaded.offer.experienceLevel, locale)}
+          </p>
+        ) : (
+          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)] mb-4">
+            {loaded.role.location}
+          </p>
+        )}
+        <h1 className="font-semibold tracking-[-0.025em] text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.05]">
+          {title}
+        </h1>
+        <p className="mt-5 text-lg text-[var(--color-ink-soft)] leading-relaxed">
+          {loaded.kind === "cms" ? loaded.offer.excerpt : loaded.role.body}
+        </p>
+
+        {/* Tech stack badges (CMS only — dict templates ont juste un string) */}
+        {loaded.kind === "cms" && loaded.offer.techStack.length > 0 ? (
+          <ul className="mt-6 flex flex-wrap gap-2">
+            {loaded.offer.techStack.map((tech) => (
+              <li
+                key={tech}
+                className="font-mono text-xs px-2.5 py-1 border border-[var(--color-border)] bg-[var(--color-bg-paper)] text-[var(--color-ink-soft)]"
+              >
+                {tech}
+              </li>
+            ))}
+          </ul>
+        ) : loaded.kind === "dict" ? (
+          <p className="mt-6 font-mono text-sm text-[var(--color-brand-teal)]">
+            {loaded.role.stack}
+          </p>
+        ) : null}
+
+        {/* Apply CTA above-the-fold : scroll vers le form #apply
+            (au lieu d'un mailto direct comme avant). Seul path candidature. */}
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <a
+            href="#apply"
+            className="inline-flex items-center gap-2 h-12 px-6 text-sm border border-[var(--color-ink)] bg-[var(--color-ink)] text-[var(--color-bg-light)] hover:bg-[var(--color-brand-teal)] hover:border-[var(--color-brand-teal)] transition-colors"
+          >
+            {t.apply}
+            <span aria-hidden>↓</span>
+          </a>
+          {loaded.kind === "cms" && loaded.offer.salaryRange ? (
+            <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted)]">
+              {loaded.offer.salaryRange}
+            </span>
+          ) : null}
+        </div>
+      </div>
+
+      {/* Body description : CMS = blocks markdown, dict = juste body excerpt
+          (deja affiche en subtitle, donc on skip cette section pour dict) */}
+      {loaded.kind === "cms" ? (
+        <CmsBody offer={loaded.offer} />
+      ) : null}
+
+      {/* Apply section — form Resend, meme pour CMS et dict */}
+      <div
+        id="apply"
+        className="mt-16 pt-12 border-t border-[var(--color-border)] max-w-3xl scroll-mt-24"
+      >
+        <h2 className="text-2xl font-semibold tracking-tight">{t.apply}</h2>
+        <p className="mt-3 text-[15px] text-[var(--color-ink-soft)]">
+          {title}
+        </p>
+        <ApplyForm
+          locale={locale}
+          offerSlug={slug}
+          offerTitle={title}
+        />
+      </div>
+    </section>
+  );
+}
+
+// ============================================================================
+// Sub-components — extraits pour clarte du rendu principal.
+// ============================================================================
+
+/** Schema.org JobPosting (uniquement pour offres CMS — les dict templates
+ *  n'ont pas assez de champs structures pour eligibilite Google Jobs box). */
+function CmsSchemaLd({
+  offer,
+  locale,
+  slug,
+}: {
+  offer: NonNullable<Awaited<ReturnType<typeof getJobOffer>>>;
+  locale: Locale;
+  slug: string;
+}) {
   const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
   const today = new Date().toISOString().slice(0, 10);
   const validThrough =
@@ -111,115 +260,30 @@ export default async function JobOfferDetailPage({
       ? {
           baseSalary: {
             "@type": "MonetaryAmount",
-            // On garde la string brute car les formats varient (TJM, salaire,
-            // M JPY, etc.). Google accepte la forme description.
             currency: "EUR",
             value: { "@type": "QuantitativeValue", unitText: offer.salaryRange },
           },
         }
       : {}),
   };
-
-  const isExternalApply = offer.applyUrl.startsWith("http");
-
   return (
-    <section className="mx-auto max-w-[1100px] px-6 md:px-10 py-20 md:py-28">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingLd) }}
-      />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingLd) }}
+    />
+  );
+}
 
-      {/* Breadcrumb back to listing */}
-      <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-muted)] mb-6">
-        <Link
-          href={`/${locale}/careers`}
-          className="hover:text-[var(--color-brand-teal)] transition-colors"
-        >
-          ← {dict.nav.careers}
-        </Link>
-      </p>
-
-      {/* Header */}
-      <div className="max-w-3xl">
-        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)] mb-4">
-          {locationLabel(offer.location, locale)} ·{" "}
-          {contractLabel(offer.contractType, locale)} ·{" "}
-          {levelLabel(offer.experienceLevel, locale)}
-        </p>
-        <h1 className="font-semibold tracking-[-0.025em] text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.05]">
-          {offer.title}
-        </h1>
-        <p className="mt-5 text-lg text-[var(--color-ink-soft)] leading-relaxed">
-          {offer.excerpt}
-        </p>
-
-        {/* Tech stack badges */}
-        {offer.techStack.length > 0 ? (
-          <ul className="mt-6 flex flex-wrap gap-2">
-            {offer.techStack.map((t) => (
-              <li
-                key={t}
-                className="font-mono text-xs px-2.5 py-1 border border-[var(--color-border)] bg-[var(--color-bg-paper)] text-[var(--color-ink-soft)]"
-              >
-                {t}
-              </li>
-            ))}
-          </ul>
-        ) : null}
-
-        {/* Apply CTA (above-the-fold for mobile) */}
-        <div className="mt-8 flex flex-wrap items-center gap-4">
-          <a
-            href={offer.applyUrl}
-            {...(isExternalApply
-              ? { target: "_blank", rel: "noopener noreferrer" }
-              : {})}
-            className="inline-flex items-center gap-2 h-12 px-6 text-sm border border-[var(--color-ink)] bg-[var(--color-ink)] text-[var(--color-bg-light)] hover:bg-[var(--color-brand-teal)] hover:border-[var(--color-brand-teal)] transition-colors"
-          >
-            {d.applyTo}
-            <span aria-hidden>→</span>
-          </a>
-          {offer.salaryRange ? (
-            <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-muted)]">
-              {offer.salaryRange}
-            </span>
-          ) : null}
-        </div>
-      </div>
-
-      {/* Body description (blocks) */}
-      {articleBlocks.length > 0 ? (
-        <div className="mt-16 max-w-3xl">
-          <ArticleBlocks blocks={articleBlocks} />
-        </div>
-      ) : null}
-
-      {/* Apply section (form Resend) — remplace l'ancien CTA repeat.
-          Form structure : LinkedIn, Calendly, message ; envoie un email via
-          Resend a recrutement@abbeal.com. Le mailto direct reste accessible
-          via le bouton du header (above-the-fold) pour ceux qui preferent. */}
-      <div
-        id="apply"
-        className="mt-16 pt-12 border-t border-[var(--color-border)] max-w-3xl"
-      >
-        <h2 className="text-2xl font-semibold tracking-tight">
-          {(locale === "ja" && "応募する") ||
-            (locale === "en" && "Apply") ||
-            "Postuler"}
-        </h2>
-        <p className="mt-3 text-[15px] text-[var(--color-ink-soft)]">
-          {offer.title}
-        </p>
-        <ApplyForm
-          locale={locale}
-          offerSlug={offer.slug}
-          offerTitle={offer.title}
-        />
-      </div>
-    </section>
+function CmsBody({
+  offer,
+}: {
+  offer: NonNullable<Awaited<ReturnType<typeof getJobOffer>>>;
+}) {
+  const articleBlocks = payloadBlocksToArticleBlocks(offer.description);
+  if (articleBlocks.length === 0) return null;
+  return (
+    <div className="mt-16 max-w-3xl">
+      <ArticleBlocks blocks={articleBlocks} />
+    </div>
   );
 }

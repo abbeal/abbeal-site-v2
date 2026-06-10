@@ -46,7 +46,6 @@ type ApplyPayload = {
   name?: string;
   email?: string;
   linkedin?: string;
-  calendly?: string;
   message?: string;
   offerSlug?: string;
   offerTitle?: string;
@@ -56,8 +55,7 @@ type ApplyPayload = {
 type ValidatedData = {
   name: string;
   email: string;
-  linkedin?: string;
-  calendly?: string;
+  linkedin: string;
   message?: string;
   offerSlug?: string;
   offerTitle?: string;
@@ -70,6 +68,8 @@ function validate(
 
   const name = body.name?.trim();
   const email = body.email?.trim();
+  const linkedin = body.linkedin?.trim();
+  const message = body.message?.trim();
 
   if (!name || name.length < 2 || name.length > 120) {
     return { ok: false, error: "Invalid name" };
@@ -78,22 +78,19 @@ function validate(
     return { ok: false, error: "Invalid email" };
   }
 
-  // Au moins LinkedIn OU Calendly OU message — sinon la candidature est vide.
-  const linkedin = body.linkedin?.trim();
-  const calendly = body.calendly?.trim();
-  const message = body.message?.trim();
-  if (!linkedin && !calendly && !message) {
+  // LinkedIn required + doit etre une URL linkedin.com
+  if (!linkedin) {
+    return { ok: false, error: "LinkedIn URL is required" };
+  }
+  if (
+    !/^https?:\/\/[^\s]*linkedin\.com\/[^\s]{2,}$/i.test(linkedin) ||
+    linkedin.length > 500
+  ) {
     return {
       ok: false,
-      error: "Provide at least one of: LinkedIn URL, Calendly link, or message",
+      error: "Invalid LinkedIn URL (must be https://www.linkedin.com/in/...)",
     };
   }
-
-  // URL sanity check
-  const urlOk = (u: string | undefined) =>
-    !u || /^https?:\/\/[^\s]{4,}$/.test(u);
-  if (!urlOk(linkedin)) return { ok: false, error: "Invalid LinkedIn URL" };
-  if (!urlOk(calendly)) return { ok: false, error: "Invalid Calendly URL" };
 
   if (message && message.length > 5000) {
     return { ok: false, error: "Message too long" };
@@ -104,8 +101,7 @@ function validate(
     data: {
       name,
       email,
-      ...(linkedin ? { linkedin } : {}),
-      ...(calendly ? { calendly } : {}),
+      linkedin,
       ...(message ? { message } : {}),
       ...(body.offerSlug ? { offerSlug: body.offerSlug.trim() } : {}),
       ...(body.offerTitle ? { offerTitle: body.offerTitle.trim() } : {}),
@@ -168,8 +164,7 @@ export async function POST(request: Request) {
       ``,
       `Candidat : ${data.name}`,
       `Email : ${data.email}`,
-      data.linkedin ? `LinkedIn : ${data.linkedin}` : null,
-      data.calendly ? `Calendly : ${data.calendly}` : null,
+      `LinkedIn : ${data.linkedin}`,
       ``,
       data.message ? `Message :\n${data.message}` : null,
       ``,
