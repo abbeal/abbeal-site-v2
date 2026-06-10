@@ -156,13 +156,24 @@ export async function POST(req: Request) {
 
         // Remap : translateArticle retourne { body } mais job-offers attend
         // { description }. On mappe le champ correctement.
+        //
+        // Strip `id` des blocks : Payload genere de nouveaux UUIDs par locale.
+        // Si on laisse les IDs originaux, Drizzle insert tente de re-use le
+        // meme UUID pour FR et EN -> primary key conflict + transaction fail.
+        const stripIds = (blocks: Array<Record<string, unknown>>) =>
+          blocks.map(({ id: _id, ...rest }) => rest);
+
+        const translatedBody = Array.isArray(result.body)
+          ? stripIds(result.body as Array<Record<string, unknown>>)
+          : [];
+
         const updateData: Record<string, unknown> = {
           title: result.title,
           excerpt: result.excerpt,
           ...(result.metaDescription
             ? { metaDescription: result.metaDescription }
             : {}),
-          [bodyField]: result.body,
+          [bodyField]: translatedBody,
         };
 
         await payload.update({
