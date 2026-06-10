@@ -228,43 +228,105 @@ function normalizeOffer(raw: Record<string, unknown>): JobOffer {
 }
 
 /** Toutes les offres publiees, non-fermees, triees featured + publishedAt DESC.
- *  Vide si erreur Payload (resilient — la page /careers fallback sur le dict). */
+ *  Vide si erreur Payload (resilient — la page /careers fallback sur le dict).
+ *
+ *  W24 bug fix : on simplifie la where clause a status=published uniquement
+ *  et on filtre closedAt cote JS apres fetch. La requete combinee Payload
+ *  `and: [status, or: [exists, greater_than]]` semblait ne retourner aucune
+ *  offre published en runtime SSR Vercel alors qu'elles existent en DB.
+ *  Le filtre JS post-fetch est moins puissant cote SGBD mais beaucoup plus
+ *  predictible et debug-friendly. Pour 100 offres max c'est OK.
+ */
 export async function getPublishedJobOffers(
   locale: Locale,
 ): Promise<JobOffer[]> {
   try {
     const payload = await getPayload({ config });
-    const today = new Date().toISOString().slice(0, 10);
 
     const result = await payload.find({
       collection: "job-offers",
       locale,
       depth: 0,
       limit: 100,
-      where: {
-        and: [
-          { status: { equals: "published" } },
-          {
-            or: [
-              { closedAt: { exists: false } },
-              { closedAt: { greater_than: today } },
-            ],
-          },
-        ],
-      },
+      where: { status: { equals: "published" } },
       sort: ["-featured", "-publishedAt"],
       overrideAccess: false, // respecte l'access public read
     });
 
-    return result.docs.map((d) =>
-      normalizeOffer(d as unknown as Record<string, unknown>),
-    );
+    const today = new Date();
+    return result.docs
+      .map((d) => normalizeOffer(d as unknown as Record<string, unknown>))
+      .filter((o) => {
+        // Filtre closedAt cote JS : exclus si closedAt <= today.
+        if (!o.closedAt) return true;
+        const closed = new Date(o.closedAt);
+        if (Number.isNaN(closed.getTime())) return true; // garde si parse fail
+        return closed.getTime() > today.getTime();
+      });
   } catch (err) {
-    // Resilient : si Payload init fail (cold start, DB issue), retourne [].
-    // La page /careers fallback sur le dict statique => pas de 500 user-facing.
     console.error("[job-offers] getPublishedJobOffers failed :", err);
     return [];
   }
+}
+
+// ---------------------------------------------------------------------------
+// Block conversion : Payload JobOffer.description -> ArticleBlock[]
+// pour reutiliser le renderer existant components/sections/ArticleBlocks.tsx
+// sans dupliquer la logique de rendu (h2, p, list, callout, etc.).
+// ---------------------------------------------------------------------------
+
+import type { ArticleBlock } from "./articles";
+
+/** Convertit les blocks Payload (avec blockType) en ArticleBlock (avec type)
+ *  pour passer au renderer existant components/sections/ArticleBlocks. */
+export function payloadBlocksToArticleBlocks(
+  blocks: JobOfferBlock[],
+): ArticleBlock[] {
+  const out: ArticleBlock[] = [];
+  for (const b of blocks) {
+    const t = b.blockType;
+    if (t === "h2" || t === "h3") {
+      out.push({ type: t, content: (b.content as string) ?? "" });
+    } else if (t === "p") {
+      out.push({ type: "p", content: (b.content as string) ?? "" });
+    } else if (t === "list") {
+      const items = (b.items as Array<{ text: string }> | undefined) ?? [];
+      out.push({
+        type: "list",
+        items: items.map((i) => i.text).filter(Boolean),
+        ordered: Boolean(b.ordered),
+      });
+    } else if (t === "quote") {
+      out.push({
+        type: "quote",
+        content: (b.content as string) ?? "",
+        ...(b.author ? { author: b.author as string } : {}),
+      });
+    } else if (t === "code") {
+      out.push({
+        type: "code",
+        content: (b.content as string) ?? "",
+        ...(b.lang ? { lang: b.lang as string } : {}),
+      });
+    } else if (t === "callout") {
+      out.push({
+        type: "callout",
+        content: (b.content as string) ?? "",
+        ...(b.tone ? { tone: b.tone as "default" | "teal" | "ink" } : {}),
+      });
+    } else if (t === "byline") {
+      out.push({
+        type: "byline",
+        name: (b.name as string) ?? "",
+        role: (b.role as string) ?? "",
+        ...(b.linkedinUrl ? { linkedinUrl: b.linkedinUrl as string } : {}),
+        ...(b.photo ? { photo: b.photo as string } : {}),
+      });
+    }
+    // Skip silently les types non reconnus (platformHeader, image, link)
+    // — pas utilises sur les offres pour l'instant. A etendre si besoin.
+  }
+  return out;
 }
 
 /** Une offre par slug (status published uniquement). */
