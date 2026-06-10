@@ -1191,6 +1191,15 @@ const JobOffers: CollectionConfig = {
               const translated = await translateArticle(source, locale);
               if (!translated) return;
 
+              // Strip block IDs (cf fix admin/translate route.ts)
+              const stripIds = (blocks: Array<Record<string, unknown>>) =>
+                blocks.map(({ id: _id, ...rest }) => rest);
+              const translatedBody = Array.isArray(translated.body)
+                ? stripIds(
+                    translated.body as Array<Record<string, unknown>>,
+                  )
+                : [];
+
               await req.payload.update({
                 collection: "job-offers",
                 id: doc.id as number,
@@ -1201,7 +1210,7 @@ const JobOffers: CollectionConfig = {
                   ...(translated.metaDescription
                     ? { metaDescription: translated.metaDescription }
                     : {}),
-                  description: translated.body,
+                  description: translatedBody,
                 } as unknown as Record<string, unknown>,
                 overrideAccess: true,
                 context: { autoTranslate: true },
