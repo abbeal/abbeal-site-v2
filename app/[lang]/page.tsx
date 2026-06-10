@@ -96,8 +96,9 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       title: r.title,
       stack: r.stack,
       location: r.location,
-      // Pas de page detail pour les templates dict → anchor sur listing
-      href: `/${locale}/careers#${r.slug}`,
+      // W24 followup : les templates dict ont desormais une page detail
+      // (fallback dans /careers/[slug]). Plus d'anchor sur le listing.
+      href: `/${locale}/careers/${r.slug}`,
     }));
   const teaserRoles = [...cmsTeaserRoles, ...dictTeaserRoles];
 
