@@ -1191,11 +1191,21 @@ const JobOffers: CollectionConfig = {
               const translated = await translateArticle(source, locale);
               if (!translated) return;
 
-              // Strip block IDs (cf fix admin/translate route.ts)
-              const stripIds = (blocks: Array<Record<string, unknown>>) =>
-                blocks.map(({ id: _id, ...rest }) => rest);
+              // Strip block IDs ET nested items IDs (cf fix admin/translate)
+              const stripIdsDeep = (
+                blocks: Array<Record<string, unknown>>,
+              ) =>
+                blocks.map(({ id: _id, ...rest }) => {
+                  const out = { ...rest };
+                  if (Array.isArray(out.items)) {
+                    out.items = (
+                      out.items as Array<Record<string, unknown>>
+                    ).map(({ id: _itemId, ...itemRest }) => itemRest);
+                  }
+                  return out;
+                });
               const translatedBody = Array.isArray(translated.body)
-                ? stripIds(
+                ? stripIdsDeep(
                     translated.body as Array<Record<string, unknown>>,
                   )
                 : [];
