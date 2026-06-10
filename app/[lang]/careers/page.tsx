@@ -107,15 +107,24 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/careers
   const d = dict.careers;
   const crumbs = breadcrumbs(locale, [[dict.nav.careers, "/careers"]]);
 
-  // Fetch offres CMS publiees. Si zero (ou erreur) → fallback dict statique
-  // pour ne JAMAIS afficher une page vide tant que personne n'a publie sur
-  // le CMS (transition douce). Quand Seb publie sa 1ere offre CMS, le
-  // fallback disparait automatiquement.
+  // Mode CUMUL (W24 follow-up) : on affiche TOUJOURS les 4 templates
+  // statiques du dict ("Postes toujours ouverts") PLUS les offres CMS
+  // ponctuelles published. Logique business :
+  //   - Les 4 du dict (senior-fullstack, ai-engineer, cloud-devops,
+  //     embedded-robotics) sont des positions toujours ouvertes
+  //     ("talent magnets") qui restent visibles meme sans offre concrete.
+  //   - Les offres CMS sont des positions specifiques avec deadline,
+  //     stack pointue, parfois geo. Elles passent EN HAUT (plus fraiches
+  //     + plus urgentes) et basculent les talent magnets dessous.
+  //
+  // Dedupe par slug : si une offre CMS a le meme slug qu'un template
+  // dict (ex. cms repond avec slug "ai-engineer"), le CMS gagne et
+  // remplace le template (source de verite plus recente).
   const cmsOffers = await getPublishedJobOffers(locale);
-  const usesCMS = cmsOffers.length > 0;
-  const roles: RenderedRole[] = usesCMS
-    ? cmsOffers.map((o) => offerToRole(o, locale, d.applyEmail))
-    : d.roles;
+  const cmsRoles = cmsOffers.map((o) => offerToRole(o, locale, d.applyEmail));
+  const cmsSlugs = new Set(cmsRoles.map((r) => r.slug));
+  const dictRolesNotOverridden = d.roles.filter((r) => !cmsSlugs.has(r.slug));
+  const roles: RenderedRole[] = [...cmsRoles, ...dictRolesNotOverridden];
 
   // Schema.org JobPosting par role : eligibilite Google Jobs box.
   // Boost CTR sur le longtail non-branded ("AI Engineer Tokyo", etc.)
