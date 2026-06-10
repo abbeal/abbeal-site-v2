@@ -18,6 +18,13 @@ import { CTAFinal } from "@/components/sections/CTAFinal";
 import { getHomeFeaturedArticles, pick } from "@/lib/articles";
 import { getHomeFeaturedCases } from "@/lib/cases";
 import { breadcrumbs } from "@/lib/breadcrumbs";
+import { getPublishedJobOffers, locationLabel } from "@/lib/job-offers";
+
+// 5 min ISR : balance fraicheur (offres CMS published apparaissent dans le
+// CareersTeaser de la home <5min) vs cost. Le hook Payload afterChange
+// invalide aussi /{locale} pour rafraichir instantanement (cf
+// app/api/revalidate/route.ts + payload.config.ts).
+export const revalidate = 300;
 
 export async function generateMetadata({
   params,
@@ -69,6 +76,31 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
     excerpt: pick(c.excerpt, locale),
   }));
 
+  // CareersTeaser : cumul des offres CMS published + dict.roles, comme sur
+  // /careers. CMS en TOP avec href vers page detail, dict en bas avec
+  // anchor #slug vers le listing (pas de body markdown pour detail).
+  // Limite 4 cards (layout 2x2 desktop).
+  const cmsOffers = await getPublishedJobOffers(locale);
+  const cmsTeaserRoles = cmsOffers.map((o) => ({
+    slug: o.slug,
+    title: o.title,
+    stack: o.techStack.join(" · "),
+    location: locationLabel(o.location, locale),
+    href: `/${locale}/careers/${o.slug}`,
+  }));
+  const cmsSlugs = new Set(cmsTeaserRoles.map((r) => r.slug));
+  const dictTeaserRoles = dict.careers.roles
+    .filter((r) => !cmsSlugs.has(r.slug))
+    .map((r) => ({
+      slug: r.slug,
+      title: r.title,
+      stack: r.stack,
+      location: r.location,
+      // Pas de page detail pour les templates dict → anchor sur listing
+      href: `/${locale}/careers#${r.slug}`,
+    }));
+  const teaserRoles = [...cmsTeaserRoles, ...dictTeaserRoles];
+
   // FAQPage JSON-LD — rich snippets + LLM extraction
   const faqLd = {
     "@context": "https://schema.org",
@@ -115,7 +147,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       <CareersTeaser
         locale={locale}
         teaser={dict.careersHome}
-        roles={dict.careers.roles}
+        roles={teaserRoles}
       />
       <CTAFinal locale={locale} dict={dict} />
     </>

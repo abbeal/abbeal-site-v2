@@ -981,10 +981,16 @@ const JobOffers: CollectionConfig = {
             ? `https://${process.env.VERCEL_URL}`
             : "https://abbeal.com");
         const paths = [
+          // Listing /careers
           "/fr/careers",
           "/en/careers",
           "/ja/careers",
           "/fr-ca/careers",
+          // Home (CareersTeaser cumule les offres CMS)
+          "/fr",
+          "/en",
+          "/ja",
+          "/fr-ca",
         ];
         // Fire-and-forget : pas de await pour ne pas bloquer le save admin.
         // Les erreurs sont logged mais n'interrompent pas le flux Payload.
