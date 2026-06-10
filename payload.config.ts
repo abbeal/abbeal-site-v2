@@ -412,6 +412,11 @@ const Users: CollectionConfig = {
 // ---------------------------------------------------------------------------
 const Articles: CollectionConfig = {
   slug: "articles",
+  // Versioning anti-perte (W24 followup) : 20 revisions par article. Si Seb
+  // ou un editor ecrase/supprime un article, on peut restaurer depuis la
+  // tab "Versions" dans /admin. Pas de drafts: true pour eviter le conflit
+  // avec le champ status custom (draft/pending_review/published).
+  versions: { maxPerDoc: 20 },
   admin: {
     useAsTitle: "slug",
     defaultColumns: ["slug", "tag", "status", "author", "publishedAt", "featured"],
@@ -600,6 +605,7 @@ const Articles: CollectionConfig = {
 // techStack/kpi/clientLogo).
 // ---------------------------------------------------------------------------
 const Cases: CollectionConfig = {
+  versions: { maxPerDoc: 20 }, // anti-perte W24 followup
   slug: "cases",
   admin: {
     useAsTitle: "slug",
@@ -705,6 +711,7 @@ const Cases: CollectionConfig = {
 // LandingPages — 6 landings SEO non-branded (mirror lib/landing-pages.ts)
 // ---------------------------------------------------------------------------
 const LandingPages: CollectionConfig = {
+  versions: { maxPerDoc: 20 }, // anti-perte W24 followup
   slug: "landing-pages",
   admin: {
     useAsTitle: "slug",
@@ -772,6 +779,7 @@ const LandingPages: CollectionConfig = {
 // standard, fr-ca tombera en fallback fr automatiquement.
 // ---------------------------------------------------------------------------
 const Glossary: CollectionConfig = {
+  versions: { maxPerDoc: 20 }, // anti-perte W24 followup
   slug: "glossary",
   admin: {
     useAsTitle: "slug",
@@ -817,6 +825,7 @@ const Glossary: CollectionConfig = {
 // Chaque item = 1 doc avec ring/category non-localises + name/rationale localises.
 // ---------------------------------------------------------------------------
 const TechRadar: CollectionConfig = {
+  versions: { maxPerDoc: 20 }, // anti-perte W24 followup
   slug: "tech-radar",
   admin: {
     useAsTitle: "slug",
@@ -870,6 +879,7 @@ const TechRadar: CollectionConfig = {
 // Photos disponibles dans /public/team/team-{1..6}.jpg.
 // ---------------------------------------------------------------------------
 const Team: CollectionConfig = {
+  versions: { maxPerDoc: 20 }, // anti-perte W24 followup
   slug: "team",
   admin: {
     useAsTitle: "name",
