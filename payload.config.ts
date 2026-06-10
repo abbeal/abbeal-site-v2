@@ -1210,6 +1210,23 @@ const JobOffers: CollectionConfig = {
                   )
                 : [];
 
+              // SalaryRange : translate aussi (Cowork peut mettre du contexte
+              // FR dedans, faut le traduire pour /en /ja /fr-ca).
+              const frSalary =
+                typeof d.salaryRange === "string" ? d.salaryRange : null;
+              let translatedSalary: string | undefined;
+              if (frSalary) {
+                const trWrap = await translateArticle(
+                  {
+                    title: frSalary,
+                    excerpt: "",
+                    body: [],
+                  },
+                  locale,
+                );
+                if (trWrap?.title) translatedSalary = trWrap.title;
+              }
+
               await req.payload.update({
                 collection: "job-offers",
                 id: doc.id as number,
@@ -1219,6 +1236,9 @@ const JobOffers: CollectionConfig = {
                   excerpt: translated.excerpt,
                   ...(translated.metaDescription
                     ? { metaDescription: translated.metaDescription }
+                    : {}),
+                  ...(translatedSalary
+                    ? { salaryRange: translatedSalary }
                     : {}),
                   description: translatedBody,
                 } as unknown as Record<string, unknown>,
@@ -1336,7 +1356,11 @@ const JobOffers: CollectionConfig = {
     {
       name: "salaryRange",
       type: "text",
-      admin: { description: 'Optionnel. Ex: "60-80k€", "selon experience", "8M-12M JPY"' },
+      localized: true,
+      admin: {
+        description:
+          'Optionnel. Ex: "60-80k€", "selon experience", "8M-12M JPY". Localized : differentes valeurs FR/EN/JA/FR-CA possible (auto-translate via hook si rempli en FR seul).',
+      },
     },
     {
       name: "applyUrl",

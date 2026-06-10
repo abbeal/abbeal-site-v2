@@ -177,12 +177,28 @@ export async function POST(req: Request) {
           ? stripIdsDeep(result.body as Array<Record<string, unknown>>)
           : [];
 
+        // SalaryRange translate (job-offers only — Articles n'a pas ce field)
+        let translatedSalary: string | undefined;
+        if (collection === "job-offers" && typeof dr.salaryRange === "string") {
+          const sourceSalary = dr.salaryRange as string;
+          const trWrap = await translateArticle(
+            {
+              title: sourceSalary,
+              excerpt: "",
+              body: [],
+            },
+            locale,
+          );
+          if (trWrap?.title) translatedSalary = trWrap.title;
+        }
+
         const updateData: Record<string, unknown> = {
           title: result.title,
           excerpt: result.excerpt,
           ...(result.metaDescription
             ? { metaDescription: result.metaDescription }
             : {}),
+          ...(translatedSalary ? { salaryRange: translatedSalary } : {}),
           [bodyField]: translatedBody,
         };
 
