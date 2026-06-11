@@ -3,12 +3,29 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { hasLocale, locales, type Locale } from "@/lib/i18n";
 import { articles, getArticle, getAllArticles, pick } from "@/lib/articles";
+import { getCMSArticle, cmsArticleAsArticle } from "@/lib/articles-cms";
+
+// Revalidate 5 min ; hook Payload afterChange invalidera sous 5s sur save
+export const revalidate = 300;
+
+/** Resolveur unifie : essaye CMS d'abord (frais), fallback statique.
+ *  Si trouve en CMS : retourne l'Article shape (pour reutiliser le rendu).
+ *  Si trouve en statique : retourne tel quel.
+ *  Sinon : null. */
+async function resolveArticle(slug: string, locale: Locale) {
+  const cms = await getCMSArticle(slug, locale);
+  if (cms) return cmsArticleAsArticle(cms);
+  const sta = getArticle(slug);
+  return sta ?? null;
+}
 import { getCase } from "@/lib/cases";
 import { ArticleBlocks } from "@/components/sections/ArticleBlocks";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { pageAlternates } from "@/lib/seo";
 
 export async function generateStaticParams() {
+  // Generate static params pour les 28 statiques uniquement. Les CMS
+  // articles sont rendus on-demand (dynamicParams = true default).
   return locales.flatMap((lang) =>
     articles.map((a) => ({ lang, slug: a.slug })),
   );
@@ -19,9 +36,9 @@ export async function generateMetadata({
 }: PageProps<"/[lang]/insights/[slug]">): Promise<Metadata> {
   const { lang, slug } = await params;
   if (!hasLocale(lang)) return {};
-  const article = getArticle(slug);
-  if (!article) return { title: "Article introuvable · Abbeal" };
   const locale = lang as Locale;
+  const article = await resolveArticle(slug, locale);
+  if (!article) return { title: "Article introuvable · Abbeal" };
   const title = pick(article.title, locale);
   // Privilégie metaDescription étendue (140-160 chars cible SEO Google)
   // si défini, sinon fallback excerpt (qui sert la card listing).
@@ -75,7 +92,7 @@ export default async function InsightArticlePage({
   const { lang, slug } = await params;
   if (!hasLocale(lang)) notFound();
   const locale = lang as Locale;
-  const article = getArticle(slug);
+  const article = await resolveArticle(slug, locale);
   if (!article) notFound();
 
   const title = pick(article.title, locale);
