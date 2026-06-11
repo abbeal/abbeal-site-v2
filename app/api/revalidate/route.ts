@@ -44,12 +44,21 @@ const ALLOWED_PATHS = new Set<string>([
   "/en/careers",
   "/ja/careers",
   "/fr-ca/careers",
+  // /insights listing (pivot CMS-first PR #32)
+  "/fr/insights",
+  "/en/insights",
+  "/ja/insights",
+  "/fr-ca/insights",
   // Home (le CareersTeaser cumule les offres CMS)
   "/fr",
   "/en",
   "/ja",
   "/fr-ca",
 ]);
+
+// Pour /insights/[slug] (variable) on accepte tout path qui matche
+// /{locale}/insights/{slug} avec slug kebab-case.
+const INSIGHT_DETAIL_PATTERN = /^\/(fr|en|ja|fr-ca)\/insights\/[a-z0-9-]+$/;
 
 export async function POST(req: Request) {
   try {
@@ -70,7 +79,10 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "unauthorized" }, { status: 401 });
     }
 
-    if (!path || !ALLOWED_PATHS.has(path)) {
+    if (
+      !path ||
+      (!ALLOWED_PATHS.has(path) && !INSIGHT_DETAIL_PATTERN.test(path))
+    ) {
       return NextResponse.json(
         { error: "invalid path (not in whitelist)" },
         { status: 400 },
