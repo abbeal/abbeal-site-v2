@@ -6,6 +6,11 @@ import { hasLocale, type Locale } from "@/lib/i18n";
 import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { getAllArticles, pick } from "@/lib/articles";
+import { getCMSArticles } from "@/lib/articles-cms";
+
+// Revalidate 5 min. Hook Payload afterChange (a ajouter sur Articles)
+// invalidera /insights instantanement quand un article est save/publish.
+export const revalidate = 300;
 
 type Dict = {
   nav: { insights: string };
@@ -61,16 +66,34 @@ export default async function InsightsIndexPage({
   const rawTag = sp.tag;
   const tagParam = Array.isArray(rawTag) ? rawTag[0] : rawTag;
 
-  // Liste de tous les articles + extraction de la liste unique de tags
-  // (tri par fréquence DESC pour mettre les tags dominants devant).
-  const allArticles = getAllArticles().map((a) => ({
+  // CUMUL CMS + STATIQUES (W24 followup pivot insights).
+  //   - CMS published d'abord (frais, edites recemment, multi-lang via API)
+  //   - Statique en fallback (les 28 anciens articles de lib/articles.ts)
+  //   - Dedupe par slug si conflit (CMS gagne, source de verite plus recente)
+  // Article CMS pour cette locale (fetch HTTP API REST, pas getPayload SDK
+  // cf bug W24 sur Vercel runtime SSR documente dans lib/job-offers.ts).
+  const cmsArticles = await getCMSArticles(locale);
+  const cmsFlat = cmsArticles.map((a) => ({
     slug: a.slug,
     tag: a.tag,
     readTime: a.readTime,
     publishedAt: a.publishedAt,
-    title: pick(a.title, locale),
-    excerpt: pick(a.excerpt, locale),
+    title: a.title,
+    excerpt: a.excerpt,
   }));
+  const cmsSlugs = new Set(cmsFlat.map((a) => a.slug));
+  const staticArticles = getAllArticles()
+    .filter((a) => !cmsSlugs.has(a.slug))
+    .map((a) => ({
+      slug: a.slug,
+      tag: a.tag,
+      readTime: a.readTime,
+      publishedAt: a.publishedAt,
+      title: pick(a.title, locale),
+      excerpt: pick(a.excerpt, locale),
+    }));
+  // CMS d'abord (par sort=-publishedAt deja applique cote API), statiques apres
+  const allArticles = [...cmsFlat, ...staticArticles];
 
   const tagCounts = allArticles.reduce<Record<string, number>>((acc, a) => {
     acc[a.tag] = (acc[a.tag] ?? 0) + 1;
