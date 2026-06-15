@@ -26,6 +26,13 @@ export type Service = {
   techStack: string[]; // shared across locales
   relatedCaseSlugs: string[]; // 2-3 cases slugs
   faq: Translatable<FAQ[]>; // 4-5 Q&A
+  /** SEO meta override optionnel — utilise si defini par le service
+   *  detail page generateMetadata, sinon fallback sur title/hookline.
+   *  Ajoute pour QW4 W25 audit : cibler des mots-cles GSC specifiques
+   *  ("engineering staff augmentation" pos 60 -> top 20) sans toucher
+   *  au title affiche dans l'UI (cards, h1, etc). */
+  metaTitle?: Translatable<string>;
+  metaDescription?: Translatable<string>;
 };
 
 export const services: Service[] = [
@@ -302,6 +309,21 @@ export const services: Service[] = [
           a: "3ヶ月（対象機能）から2年（クリティカルプラットフォーム）。長期的な方がインパクトが大きいので好む。スコープが明確なら短期もOK。",
         },
       ],
+    },
+    // SEO override (QW4 W25 audit) : cible "engineering staff augmentation"
+    // (pos 60 GSC EN -> top 20). On garde l'UI title "Embedded squads" car
+    // c'est le nom maison qui figure partout sur le site, mais on dedie le
+    // <title> + meta description au terme commercial cible que cherchent
+    // les CTOs EN-speaking.
+    metaTitle: {
+      fr: "Squads embarqués — Staff Augmentation senior · Squads ingés intégrés | Abbeal",
+      en: "Engineering Staff Augmentation — Senior Embedded Squads | Abbeal",
+      ja: "エンジニアリング・スタッフ拡張 — シニア組み込みスクワッド | Abbeal",
+    },
+    metaDescription: {
+      fr: "Staff augmentation engineering : squads seniors embarqués chez nos clients (CTO, scale-ups, grands comptes). Ownership de périmètre, livraison 24/7 tri-géo. Cadrage gratuit 30 min.",
+      en: "Engineering staff augmentation: senior embedded squads integrated in your stack (CTO, scale-ups, enterprise). Scope ownership, 24/7 tri-geo delivery (Paris·Montreal·Tokyo). Free 30-min scoping call.",
+      ja: "エンジニアリング・スタッフ拡張：シニア組み込みスクワッドを貴社チームに統合（CTO、スケールアップ、大企業向け）。担当範囲のオーナーシップ、3拠点24/7デリバリー。30分の無料スコーピング。",
     },
   },
 

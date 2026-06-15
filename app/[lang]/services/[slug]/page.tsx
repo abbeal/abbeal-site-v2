@@ -22,8 +22,15 @@ export async function generateMetadata({
   const s = getService(slug);
   if (!s) return { title: "Service introuvable · Abbeal" };
   const locale = lang as Locale;
-  const title = `${pick(s.title, locale)} · Abbeal`;
-  const description = pick(s.hookline, locale);
+  // SEO meta override (QW4 W25) : si s.metaTitle/metaDescription sont
+  // definis, on les prefere (cible mots-cles GSC sans toucher au title
+  // UI affiche partout sur le site). Sinon fallback title + hookline.
+  const title = s.metaTitle
+    ? pick(s.metaTitle, locale)
+    : `${pick(s.title, locale)} · Abbeal`;
+  const description = s.metaDescription
+    ? pick(s.metaDescription, locale)
+    : pick(s.hookline, locale);
   return {
     title,
     description,
