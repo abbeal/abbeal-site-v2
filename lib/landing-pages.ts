@@ -494,6 +494,73 @@ export const landingPages: LandingPage[] = [
       },
     },
   },
+  // ========================================================================
+  // 8. entreprise-developpement-informatique-montreal — Landing FR + FR-CA
+  // ========================================================================
+  // Audit W25 GSC : "entreprise de developpement informatique montreal"
+  // position 18 (page 2), 36 imp / 90j. + "montreal robotics companies"
+  // pos 28. Marche Montreal genere des impressions non-branded mais
+  // reste en page 2.
+  //
+  // Locales actives : FR + FR-CA. EN+JA pas crees (audit cible juste le
+  // marche francophone canadien + visiteurs France cherchant un partenaire
+  // tech a Montreal). Le mecanisme generateStaticParams + sitemap skip
+  // (cf app/[lang]/[slug]/page.tsx) ne genere que ces 2 locales.
+  {
+    slug: "entreprise-developpement-informatique-montreal",
+    keywords: [
+      "entreprise developpement informatique montreal",
+      "ESN Montreal",
+      "developpement web Montreal",
+      "consultant informatique Montreal",
+      "squad ingenierie Montreal",
+      "recrutement tech Montreal",
+      "developpement logiciel Quebec",
+      "robotique Montreal",
+    ],
+    relatedCaseSlugs: ["paraito", "mobilitas", "bopizy"],
+    relatedArticleSlug: "follow-the-sun-sans-bruler-equipes",
+    tape: {
+      fr: "// MONTRÉAL",
+      "fr-ca": "// MONTRÉAL",
+    },
+    h1: {
+      fr: "Entreprise de développement informatique à Montréal.",
+      "fr-ca": "Entreprise de développement informatique à Montréal.",
+    },
+    subtitle: {
+      fr: "Hub Montréal depuis 2023 (4388 rue Saint-Denis, Plateau-Mont-Royal). Squads embarqués · recrutement tech · delivery clé en main. Software, IA, Data, Robotique. Clients Banque Nationale, Hydro-Québec, Desjardins, Cogeco. Vianney Blanquart au pilotage. Mobilité Mobbeal France↔Canada↔Japon possible.",
+      "fr-ca": "Pôle Montréal depuis 2023 (4388 rue Saint-Denis, Plateau-Mont-Royal). Squads embarqués · recrutement tech · livraison clé en main. Logiciel, IA, Données, Robotique. Clients Banque Nationale, Hydro-Québec, Desjardins, Cogeco. Vianney Blanquart au pilotage. Mobilité Mobbeal France↔Canada↔Japon possible.",
+    },
+    metaDescription: {
+      fr: "Entreprise de développement informatique à Montréal : squads seniors embarqués, recrutement tech, delivery 24/7. Software, IA, Data, Robotique. Clients BNC, Hydro-Québec, Desjardins. Cadrage gratuit 30 min.",
+      "fr-ca": "Entreprise de développement informatique à Montréal : squads séniors embarqués, recrutement tech, livraison 24/7. Logiciel, IA, Données, Robotique. Clients BNC, Hydro-Québec, Desjardins. Cadrage gratuit 30 min.",
+    },
+    body: {
+      fr: BODIES["entreprise-developpement-informatique-montreal"]?.body?.fr ?? [],
+      "fr-ca":
+        BODIES["entreprise-developpement-informatique-montreal"]?.body?.["fr-ca"],
+    },
+    faq: {
+      fr: BODIES["entreprise-developpement-informatique-montreal"]?.faq?.fr ?? [],
+      "fr-ca":
+        BODIES["entreprise-developpement-informatique-montreal"]?.faq?.["fr-ca"],
+    },
+    extraSchema: {
+      // LocalBusiness Montreal (= sub-type ProfessionalService côté
+      // schema.org) pour Knowledge Panel Google + ranking geo-targeted
+      // sur le marche Quebec/Canada.
+      localBusiness: {
+        name: "Abbeal — Hub Montréal",
+        streetAddress: "4388 rue Saint-Denis",
+        addressLocality: "Montréal",
+        postalCode: "H2J 2L1",
+        addressCountry: "CA",
+        // Coordonnees Google Maps (Plateau-Mont-Royal, intersection Marie-Anne)
+        geo: { latitude: 45.5234, longitude: -73.5824 },
+      },
+    },
+  },
 ];
 
 export function getLandingPage(slug: string): LandingPage | undefined {
