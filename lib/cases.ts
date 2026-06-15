@@ -111,10 +111,10 @@ export const cases: CaseStudy[] = [
       "fr-ca": "Paraito : recrutement IA & plateforme pour passer à l'échelle une legaltech québécoise.",
     },
     excerpt: {
-      fr: "Paraito automatise le Registre foncier du Québec pour les notaires (−70 % temps de collecte, 3× plus de dossiers à effectif constant). Abbeal a livré 3 recrutements permanents (2 AI Engineers + 1 Lead Platform), dont 1 mobilité France→Montréal via Mobbeal — différenciant fort sur un marché tech québécois en tension IA.",
-      en: "Paraito automates Quebec's Land Registry for notaries (−70% collection time, 3× more files handled at constant headcount). Abbeal delivered 3 permanent hires (2 AI Engineers + 1 Lead Platform), including 1 France→Montreal relocation via Mobbeal — a strong differentiator on a tight Quebec AI tech market.",
-      ja: "パライトは公証人向けにケベック州不動産登記簿を自動化（収集時間-70%、同人員で3倍のファイル処理）。Abbealは3名の正社員採用（AIエンジニア2名 + リードプラットフォーム1名）を実現、Mobbeal経由のフランス→モントリオール1名のモビリティを含む — ケベックAI技術市場の人材不足における強い差別化要因。",
-      "fr-ca": "Paraito automatise le Registre foncier du Québec pour les notaires (−70 % temps de collecte, 3× plus de dossiers à effectif constant). Abbeal a livré 3 recrutements permanents (2 AI Engineers + 1 Lead Platform), dont 1 mobilité France→Montréal via Mobbeal — différenciateur fort sur un marché tech québécois en tension IA.",
+      fr: "3 recrutements permanents (2 AI Engineers + 1 Lead Platform) en 6 semaines pour Paraito, legaltech québécoise qui automatise le Registre foncier (−70 % temps de collecte). Mobilité France→Montréal via Mobbeal incluse.",
+      en: "3 senior AI/Platform hires in 6 weeks for Paraito, a Quebec legaltech automating Land Registry (−70% collection time, 3× output at constant headcount). France→Montreal Mobbeal relocation included.",
+      ja: "パライト（ケベック州不動産登記簿を自動化するリーガルテック、収集時間-70%）向けに、6週間で3名のシニアAI/プラットフォーム正社員を採用。Mobbeal経由のフランス→モントリオール移住を含む。",
+      "fr-ca": "3 recrutements permanents (2 AI Engineers + 1 Lead Platform) en 6 semaines pour Paraito, legaltech québécoise qui automatise le Registre foncier (−70 % temps de collecte). Mobilité France→Montréal via Mobbeal incluse.",
     },
     body: {
       fr: CASE_BODIES["paraito"]?.fr ?? [],
