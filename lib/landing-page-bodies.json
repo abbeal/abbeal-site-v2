@@ -3743,5 +3743,273 @@
         }
       ]
     }
+  },
+  "entreprise-developpement-informatique-montreal": {
+    "body": {
+      "fr": [
+        {
+          "type": "p",
+          "content": "Vous cherchez une entreprise de développement informatique à Montréal pour livrer du software, de l'IA, de la data ou de la robotique. Le marché québécois est tendu — tous les bons engineers sont déjà chez Shopify, Lightspeed, Hopper ou un cabinet de conseil grand format. Trouver des seniors qui restent et qui livrent, c'est dur."
+        },
+        {
+          "type": "h2",
+          "content": "Le marché tech à Montréal en 2026"
+        },
+        {
+          "type": "p",
+          "content": "Montréal est devenu un des trois pôles IA mondiaux (avec Toronto et la Bay Area) grâce à Mila, IVADO et l'écosystème universitaire (UdeM, McGill, Polytechnique, UQAM). Les banques (BNC, Desjardins, RBC) et les énergéticiens (Hydro-Québec, Cascades) accélèrent leur transformation tech. Mais le sourcing est devenu compétitif : 8-12 sem pour fermer un poste senior local, 18-24 sem pour les profils IA seniors avec visa Open Work."
+        },
+        {
+          "type": "p",
+          "content": "On a ouvert le hub Abbeal Montréal en 2023 (4388 rue Saint-Denis, Plateau-Mont-Royal) pour adresser ce marché en direct. Vianney Blanquart, co-fondateur, a déménagé à temps plein à Montréal pour piloter le hub Amériques."
+        },
+        {
+          "type": "h2",
+          "content": "Trois façons de bosser avec nous, à Montréal"
+        },
+        {
+          "type": "h3",
+          "content": "1. Squad embarqué (staff augmentation)"
+        },
+        {
+          "type": "p",
+          "content": "On rejoint vos équipes avec un ownership de périmètre clair. Software, Data, IA, DevOps, Mobile. Senior bilingue FR/EN, full-time hybrid (2-3 jours sur site, le reste depuis le hub Saint-Denis ou en remote). TJM 850-1300 $ CAD selon expertise. Engagement minimum : 1 mois."
+        },
+        {
+          "type": "h3",
+          "content": "2. Recrutement technique (talent acquisition)"
+        },
+        {
+          "type": "p",
+          "content": "Top 1 % sourcé par des ingénieurs (pas par cabinet RH généraliste). Validation tech courte mais exigeante (2-3h pair coding sur un vrai problème, pas du LeetCode). Closing en 48h. Garantie 6 mois. Tarif : 18-22 % du package annuel CAD, payable en 3 fois. Spécialités : Senior Eng, Lead, Staff Eng, Data Scientists, AI Engineers, Tech Leads."
+        },
+        {
+          "type": "h3",
+          "content": "3. Delivery clé en main (digital solutions)"
+        },
+        {
+          "type": "p",
+          "content": "De la conception au run. Engagement output, pas time & material. SLOs définis dès le cadrage, observabilité dès le sprint 1, transfert de propriété en fin de mission. Format idéal pour les refontes lourdes (plateformes clients, ERP modernization, dashboards data) où vous voulez garder le contrôle à long terme."
+        },
+        {
+          "type": "h2",
+          "content": "Le hub Montréal : 4388 Saint-Denis, depuis 2023"
+        },
+        {
+          "type": "p",
+          "content": "Bureau opérationnel 4388 rue Saint-Denis dans le Plateau (métro Mont-Royal, 5 min à pied). C'est ici qu'on reçoit les clients, qu'on opère les onboardings et qu'on tient les revues mensuelles."
+        },
+        {
+          "type": "p",
+          "content": "Track record Québec depuis 2023 : Banque Nationale (data platform GreenOps, agents LLM), Hydro-Québec (modernisation core, ISO 27001), Desjardins (transformation data IARD), Cogeco (telecom networks observability), Paraito (legaltech / IA Registre foncier — 3 hires permanents en 6 sem). 30+ missions cumulées, taux de renouvellement client > 75 %."
+        },
+        {
+          "type": "h2",
+          "content": "Quatre expertises, calibrées pour le marché québécois"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Software : React/Next.js, Node.js, Python (FastAPI/Django), Java/Spring, Kotlin. Backend services à fort débit, frontend SPA/SSR à fort SEO. Mobile React Native ou natif iOS/Android selon use case.",
+            "IA : RAG production (Pinecone, pgvector), agents LLM (Claude, Llama self-hosted), evals CI continus (Promptfoo, Langfuse). Le pôle Mila et IVADO sont à 10 min — on connaît bien l'écosystème de recherche.",
+            "Data : pipelines Airflow/dbt, lakehouse Databricks ou Iceberg, streaming Kafka/Flink, observabilité Datadog/Honeycomb. Compliance Loi 25 (PIPEDA + AEP Québec) bakée dès le design.",
+            "Robotique : ROS 2, edge inference (NVIDIA Jetson, Coral), Rust embarqué. Une mission active à Montréal (logistique automatisée) + relais Tokyo si scaling international."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "La méthode Abbeal"
+        },
+        {
+          "type": "p",
+          "content": "Pas de waterfall. Pas d'agile cargo-cult. Sprints d'1 ou 2 semaines, pair programming sur les sujets sensibles (auth, paiement, Loi 25), code review IA-assistée (Codex), pair review hebdo entre seniors Abbeal."
+        },
+        {
+          "type": "p",
+          "content": "Engagement de transfert dès le sprint 1 : votre équipe interne doit pouvoir shipper sans nous au mois +1 après la fin de mission. C'est notre KPI principal — on ne crée pas de dépendance long-terme."
+        },
+        {
+          "type": "h2",
+          "content": "Couverture 24/7 via Adaptive Follow-the-Sun"
+        },
+        {
+          "type": "p",
+          "content": "Spécificité Abbeal tri-géo : Paris (54 rue Greneta), Montréal (4388 Saint-Denis), Tokyo (1-23-5 Higashi-Azabu). Quand vos besoins justifient une couverture étendue (SLA 24/5, runs critiques nocturnes, lancement produit international), on bascule en Adaptive Follow-the-Sun : Montréal ferme à 21h EST, Tokyo prend le relais jusqu'à 19h JST, Paris reprend à 9h CET, Montréal reprend à 9h EST. Couverture 24/5 sans astreinte locale."
+        },
+        {
+          "type": "p",
+          "content": "Mesuré sur 12 missions tri-géo opérées depuis 2020 : lead time divisé par 1,8 en moyenne, attrition consultant < 6 %, NPS interne 72. Pas de promesse marketing — des chiffres."
+        },
+        {
+          "type": "h2",
+          "content": "Mobbeal : mobilité internationale France ↔ Canada ↔ Japon"
+        },
+        {
+          "type": "p",
+          "content": "Si vous voulez recruter à Montréal un profil rare (AI Engineer senior, Tech Lead trilingue, etc.) qu'on ne trouve pas localement, on opère via Mobbeal le rapatriement depuis Paris ou Tokyo. Sponsoring Open Work Permit ou Mobilité Intra-Compagnie (IMP), accompagnement administratif (logement, école, famille), 12 semaines moyennes de la décision à l'opérationnel à Montréal. 52 mobilités opérées depuis 2018, 91 % de réussite >24 mois."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Cadrage gratuit 30 min. Vianney ou un Tech Lead vous explique honnêtement si on est les bons (ou pas) et comment on attaquerait. Pas de pitch, pas de PowerPoint."
+        }
+      ],
+      "fr-ca": [
+        {
+          "type": "p",
+          "content": "Vous cherchez une entreprise de développement informatique à Montréal pour livrer du logiciel, de l'IA, des données ou de la robotique. Le marché québécois est tendu — tous les bons ingés sont déjà chez Shopify, Lightspeed, Hopper ou une firme-conseil grand format. Trouver des séniors qui restent et qui livrent, c'est dur."
+        },
+        {
+          "type": "h2",
+          "content": "Le marché techno à Montréal en 2026"
+        },
+        {
+          "type": "p",
+          "content": "Montréal est devenu un des trois pôles IA mondiaux (avec Toronto et la Bay Area) grâce à Mila, IVADO et l'écosystème universitaire (UdeM, McGill, Polytechnique, UQAM). Les banques (BNC, Desjardins, RBC) et les énergéticiens (Hydro-Québec, Cascades) accélèrent leur transformation techno. Mais le sourcing est devenu compétitif : 8-12 semaines pour fermer un poste sénior local, 18-24 semaines pour les profils IA séniors avec permis Open Work."
+        },
+        {
+          "type": "p",
+          "content": "On a ouvert le pôle Abbeal Montréal en 2023 (4388 rue Saint-Denis, Plateau-Mont-Royal) pour adresser ce marché en direct. Vianney Blanquart, co-fondateur, a déménagé à temps plein à Montréal pour piloter le pôle Amériques."
+        },
+        {
+          "type": "h2",
+          "content": "Trois façons de bosser avec nous, à Montréal"
+        },
+        {
+          "type": "h3",
+          "content": "1. Squad embarqué (renforcement d'équipe)"
+        },
+        {
+          "type": "p",
+          "content": "On rejoint vos équipes avec un ownership de portée clair. Logiciel, Données, IA, DevOps, Mobile. Sénior bilingue FR/EN, temps plein hybride (2-3 jours sur place, le reste depuis le pôle Saint-Denis ou en télétravail). TJM 850-1300 $ CAD selon expertise. Engagement minimum : 1 mois."
+        },
+        {
+          "type": "h3",
+          "content": "2. Recrutement techno (acquisition de talents)"
+        },
+        {
+          "type": "p",
+          "content": "Top 1 % recherché par des ingés (pas par firme RH généraliste). Validation techno courte mais exigeante (2-3h pair coding sur un vrai problème, pas du LeetCode). Conclusion en 48h. Garantie 6 mois. Tarif : 18-22 % du package annuel CAD, payable en 3 fois. Spécialités : Sénior Eng, Lead, Staff Eng, Data Scientists, AI Engineers, Tech Leads."
+        },
+        {
+          "type": "h3",
+          "content": "3. Livraison clé en main (solutions numériques)"
+        },
+        {
+          "type": "p",
+          "content": "De la conception au run. Engagement sur la portée, pas du temps & matériel. SLOs définis dès le cadrage, observabilité dès le sprint 1, transfert de propriété en fin de mandat. Format idéal pour les refontes lourdes (plateformes clients, modernisation ERP, tableaux de bord données) où vous voulez garder le contrôle à long terme."
+        },
+        {
+          "type": "h2",
+          "content": "Le pôle Montréal : 4388 Saint-Denis, depuis 2023"
+        },
+        {
+          "type": "p",
+          "content": "Bureau opérationnel 4388 rue Saint-Denis dans le Plateau (métro Mont-Royal, 5 min à pied). C'est ici qu'on reçoit les clients, qu'on opère les onboardings et qu'on tient les rencontres mensuelles."
+        },
+        {
+          "type": "p",
+          "content": "Historique Québec depuis 2023 : Banque Nationale (plateforme données GreenOps, agents LLM), Hydro-Québec (modernisation noyau, ISO 27001), Desjardins (transformation données IARD), Cogeco (observabilité réseaux télécom), Paraito (legaltech / IA Registre foncier — 3 embauches permanentes en 6 semaines). 30+ mandats cumulés, taux de renouvellement client > 75 %."
+        },
+        {
+          "type": "h2",
+          "content": "Quatre expertises, calibrées pour le marché québécois"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Logiciel : React/Next.js, Node.js, Python (FastAPI/Django), Java/Spring, Kotlin. Services back-end à fort débit, front-end SPA/SSR à fort référencement. Mobile React Native ou natif iOS/Android selon usage.",
+            "IA : RAG production (Pinecone, pgvector), agents LLM (Claude, Llama auto-hébergé), evals CI continus (Promptfoo, Langfuse). Le pôle Mila et IVADO sont à 10 min — on connaît bien l'écosystème de recherche.",
+            "Données : pipelines Airflow/dbt, lakehouse Databricks ou Iceberg, diffusion Kafka/Flink, observabilité Datadog/Honeycomb. Conformité Loi 25 (LPRPDE + AEP Québec) intégrée dès la conception.",
+            "Robotique : ROS 2, inférence en périphérie (NVIDIA Jetson, Coral), Rust embarqué. Un mandat actif à Montréal (logistique automatisée) + relais Tokyo si mise à l'échelle internationale."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "La méthode Abbeal"
+        },
+        {
+          "type": "p",
+          "content": "Pas de cascade. Pas d'agile vidé de son sens. Sprints d'1 ou 2 semaines, pair programming sur les sujets sensibles (auth, paiement, Loi 25), revue de code assistée par IA (Codex), pair review hebdo entre séniors Abbeal."
+        },
+        {
+          "type": "p",
+          "content": "Engagement de transfert dès le sprint 1 : votre équipe interne doit pouvoir livrer sans nous au mois +1 après la fin de mandat. C'est notre KPI principal — on ne crée pas de dépendance long-terme."
+        },
+        {
+          "type": "h2",
+          "content": "Couverture 24/7 via Adaptive Follow-the-Sun"
+        },
+        {
+          "type": "p",
+          "content": "Spécificité Abbeal tri-pôle : Paris (54 rue Greneta), Montréal (4388 Saint-Denis), Tokyo (1-23-5 Higashi-Azabu). Quand vos besoins justifient une couverture étendue (SLA 24/5, runs critiques nocturnes, lancement produit international), on bascule en Adaptive Follow-the-Sun : Montréal ferme à 21h EST, Tokyo prend le relais jusqu'à 19h JST, Paris reprend à 9h CET, Montréal reprend à 9h EST. Couverture 24/5 sans garde locale."
+        },
+        {
+          "type": "p",
+          "content": "Mesuré sur 12 mandats tri-pôle opérés depuis 2020 : délai de livraison divisé par 1,8 en moyenne, attrition consultant < 6 %, NPS interne 72. Pas de promesse marketing — des chiffres."
+        },
+        {
+          "type": "h2",
+          "content": "Mobbeal : mobilité internationale France ↔ Canada ↔ Japon"
+        },
+        {
+          "type": "p",
+          "content": "Si vous voulez recruter à Montréal un profil rare (AI Engineer sénior, Tech Lead trilingue, etc.) qu'on ne trouve pas localement, on opère via Mobbeal le rapatriement depuis Paris ou Tokyo. Sponsoring Open Work Permit ou Mobilité Intra-Compagnie (IMP), accompagnement administratif (logement, école, famille), 12 semaines en moyenne de la décision à l'opérationnel à Montréal. 52 mobilités opérées depuis 2018, 91 % de réussite >24 mois."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Cadrage gratuit 30 min. Vianney ou un Tech Lead vous explique honnêtement si on est les bons (ou pas) et comment on attaquerait. Pas de pitch, pas de PowerPoint."
+        }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "q": "Quel est le TJM moyen d'un consultant Abbeal à Montréal ?",
+          "a": "850 à 1300 $ CAD HT selon expertise et séniorité. Senior dev back-end ou front-end : 900-1100 $. Lead Tech ou architecte : 1100-1300 $. Data Scientist senior : 1000-1200 $. Expert IA production (RAG, agents, evals) : 1200-1500 $ selon criticité. Pas de prix d'appel, pas de surcharge cachée."
+        },
+        {
+          "q": "Quel délai pour staffer un consultant senior à Montréal ?",
+          "a": "10 à 15 jours ouvrés en moyenne entre le brief et le démarrage. 2-3 profils présentés sous 7 jours. Validation client en 1-2 entretiens techniques. Démarrage J+3 après signature. Pour les besoins urgents : on a généralement 1-2 seniors disponibles en intercontrat sur les stacks principales (React, Python, Go, AWS, Spark)."
+        },
+        {
+          "q": "Vous travaillez en remote ou en présentiel à Montréal ?",
+          "a": "Hybride : 2-3 jours présence client en moyenne, le reste en remote depuis le hub Saint-Denis ou depuis chez le consultant. Pour les banques et les comptes réglementés (Loi 25 sensible), on adapte vers plus de présentiel selon le besoin client. Le hub Saint-Denis sert aussi de bureau de jour pour les consultants en télétravail."
+        },
+        {
+          "q": "Quelle est la différence vs une grande firme-conseil québécoise (CGI, Cofomo, R3D) ?",
+          "a": "Trois différences : (1) on ne staffe pas de junior derrière un commercial senior — vous voyez et vous gardez les vrais profils ; (2) on s'engage sur output (livrable, périmètre, délai) plutôt que sur time & material ; (3) on a un collectif technique senior tri-géo qui peer-review et qui prend le relais si un consultant tombe (Paris ou Tokyo en backup). Conséquence pratique : on est plus chers au TJM (850-1300 $ vs 600-900 $) mais le coût total du mandat est plus bas car moins de re-work + délais respectés."
+        },
+        {
+          "q": "Vous accompagnez la conformité Loi 25 (anciennement Loi 64) ?",
+          "a": "Oui systématiquement. Toutes nos missions à Montréal intègrent Loi 25 dans le design : minimisation des données, consentement explicite, audit-trail, DPO ou délégué interne. On a livré 4 audits Loi 25 chez Banque Nationale + Desjardins (2024-2025). Si vous avez besoin uniquement de l'audit Loi 25 (pas du dev), on peut aussi le faire en standalone (2-3 sem)."
+        }
+      ],
+      "fr-ca": [
+        {
+          "q": "Quel est le TJM moyen d'un consultant Abbeal à Montréal ?",
+          "a": "850 à 1300 $ CAD HT selon expertise et séniorité. Sénior dev back-end ou front-end : 900-1100 $. Lead Tech ou architecte : 1100-1300 $. Data Scientist sénior : 1000-1200 $. Expert IA production (RAG, agents, evals) : 1200-1500 $ selon criticité. Pas de prix d'appel, pas de surcharge cachée."
+        },
+        {
+          "q": "Quel délai pour staffer un consultant sénior à Montréal ?",
+          "a": "10 à 15 jours ouvrables en moyenne entre le brief et le démarrage. 2-3 profils présentés sous 7 jours. Validation client en 1-2 entrevues techniques. Démarrage J+3 après signature. Pour les besoins urgents : on a généralement 1-2 séniors disponibles en intercontrat sur les stacks principales (React, Python, Go, AWS, Spark)."
+        },
+        {
+          "q": "Vous travaillez en télétravail ou en présence à Montréal ?",
+          "a": "Hybride : 2-3 jours présence client en moyenne, le reste en télétravail depuis le pôle Saint-Denis ou depuis chez le consultant. Pour les banques et les comptes réglementés (Loi 25 sensible), on adapte vers plus de présence selon le besoin client. Le pôle Saint-Denis sert aussi de bureau de jour pour les consultants en télétravail."
+        },
+        {
+          "q": "Quelle est la différence vs une grande firme-conseil québécoise (CGI, Cofomo, R3D) ?",
+          "a": "Trois différences : (1) on ne staffe pas de junior derrière un commercial sénior — vous voyez et vous gardez les vrais profils ; (2) on s'engage sur la portée (livrable, périmètre, délai) plutôt que sur temps & matériel ; (3) on a un collectif technique sénior tri-pôle qui peer-review et qui prend le relais si un consultant tombe (Paris ou Tokyo en relève). Conséquence pratique : on est plus chers au TJM (850-1300 $ vs 600-900 $) mais le coût total du mandat est plus bas car moins de re-travail + délais respectés."
+        },
+        {
+          "q": "Vous accompagnez la conformité Loi 25 (anciennement Loi 64) ?",
+          "a": "Oui systématiquement. Tous nos mandats à Montréal intègrent Loi 25 dans la conception : minimisation des données, consentement explicite, piste d'audit, DPO ou délégué interne. On a livré 4 audits Loi 25 chez Banque Nationale + Desjardins (2024-2025). Si vous avez besoin uniquement de l'audit Loi 25 (pas du dev), on peut aussi le faire en standalone (2-3 sem)."
+        }
+      ]
+    }
   }
 }
