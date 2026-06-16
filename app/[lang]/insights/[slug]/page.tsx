@@ -27,6 +27,7 @@ async function resolveArticle(slug: string, locale: Locale) {
   return null;
 }
 import { getCase } from "@/lib/cases";
+import { getService } from "@/lib/services";
 import { ArticleBlocks } from "@/components/sections/ArticleBlocks";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { pageAlternates } from "@/lib/seo";
@@ -343,19 +344,30 @@ export default async function InsightArticlePage({
                     </span>
                   </Link>
                 )}
-                {article.relatedServiceSlug && (
-                  <Link
-                    href={`/${locale}/services/${article.relatedServiceSlug}`}
-                    className="group flex items-start gap-3 p-4 border border-[var(--color-border)] bg-[var(--color-bg-paper)] hover:border-[var(--color-brand-teal)] transition-colors"
-                  >
-                    <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--color-brand-teal)] shrink-0 mt-0.5">
-                      {locale === "ja" ? "サービス →" : "Service →"}
-                    </span>
-                    <span className="text-sm font-medium text-[var(--color-ink)] group-hover:text-[var(--color-brand-teal)] transition-colors leading-snug capitalize">
-                      {article.relatedServiceSlug.replace(/-/g, " ")}
-                    </span>
-                  </Link>
-                )}
+                {article.relatedServiceSlug && (() => {
+                  // Resolve service title localise depuis lib/services
+                  // (fallback sur slug-formate si service inconnu, robuste
+                  // si l'auteur set un slug qui n'existe pas).
+                  const relatedService = getService(
+                    article.relatedServiceSlug,
+                  );
+                  const serviceLabel = relatedService
+                    ? pick(relatedService.title, locale)
+                    : article.relatedServiceSlug.replace(/-/g, " ");
+                  return (
+                    <Link
+                      href={`/${locale}/services/${article.relatedServiceSlug}`}
+                      className="group flex items-start gap-3 p-4 border border-[var(--color-border)] bg-[var(--color-bg-paper)] hover:border-[var(--color-brand-teal)] transition-colors"
+                    >
+                      <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--color-brand-teal)] shrink-0 mt-0.5">
+                        {locale === "ja" ? "サービス →" : "Service →"}
+                      </span>
+                      <span className="text-sm font-medium text-[var(--color-ink)] group-hover:text-[var(--color-brand-teal)] transition-colors leading-snug">
+                        {serviceLabel}
+                      </span>
+                    </Link>
+                  );
+                })()}
               </div>
             )}
           </div>
