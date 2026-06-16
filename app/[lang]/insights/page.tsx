@@ -67,13 +67,18 @@ export default async function InsightsIndexPage({
   const tagParam = Array.isArray(rawTag) ? rawTag[0] : rawTag;
 
   // CUMUL CMS + STATIQUES (W24 followup pivot insights).
-  //   - CMS published d'abord (frais, edites recemment, multi-lang via API)
+  //   - CMS published avec body non-vide d'abord (frais, edites)
   //   - Statique en fallback (les 28 anciens articles de lib/articles.ts)
-  //   - Dedupe par slug si conflit (CMS gagne, source de verite plus recente)
+  //   - CMS body vide = ignore (sinon on perd le contenu statique)
+  //
   // Article CMS pour cette locale (fetch HTTP API REST, pas getPayload SDK
   // cf bug W24 sur Vercel runtime SSR documente dans lib/job-offers.ts).
   const cmsArticles = await getCMSArticles(locale);
-  const cmsFlat = cmsArticles.map((a) => ({
+  // W25 fix : filter CMS avec body vide (migration a peut-etre wipe le body
+  // de certains articles, on ne veut pas qu'ils prennent le pas sur le
+  // statique qui a le vrai contenu).
+  const cmsWithBody = cmsArticles.filter((a) => a.body && a.body.length > 0);
+  const cmsFlat = cmsWithBody.map((a) => ({
     slug: a.slug,
     tag: a.tag,
     readTime: a.readTime,
