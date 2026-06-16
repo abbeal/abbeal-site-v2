@@ -149,8 +149,9 @@ export default async function ServiceDetailPage({
   };
 
   // Breadcrumb: Home → Services (home anchor) → Service title
+  // Fix W25 : ternaire ne distinguait pas fr-ca. Map explicite par locale.
   const servicesLabel =
-    locale === "fr" ? "Services" : locale === "ja" ? "サービス" : "Services";
+    locale === "ja" ? "サービス" : locale === "en" ? "Services" : "Services";
   const crumbs = breadcrumbs(locale, [
     [servicesLabel, "#services"],
     [title, `/services/${s.slug}`],
