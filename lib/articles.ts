@@ -1170,6 +1170,68 @@ export const articles: Article[] = [
       "fr-ca": ARTICLE_BODIES["senior-engineering-team-asia-europe-north-america"]?.["fr-ca"],
     },
   },
+  // Article 28 — Stephane Robin (Senior Engineer Montreal) : Fable comme suite
+  // de Mythos. 2e article guest de Stephane, byline auteur en tete du body,
+  // publication post-annonce coupure Fable/Mythos par Dept of Commerce.
+  // Inclut callout intro "Mise a jour 12 juin" + section "Mise a jour
+  // critique" detaillant le retournement gouvernemental. Backlink interne
+  // vers l'article Mythos precedent assure par le contexte editorial du
+  // body. Body FR uniquement static : auto-translate via hook Payload prendra
+  // le relais une fois pushe en CMS (autres locales fallback FR via pick()).
+  {
+    slug: "fable-ia-equipe-remediation-stephane-robin",
+    featured: false,
+    tag: "AI",
+    readTime: "8 min",
+    publishedAt: "2026-06-16",
+    title: {
+      fr: "Fable : quand l'IA devient votre équipe de remédiation.",
+      en: "Fable: when AI becomes your remediation team.",
+      ja: "Fable：AIがあなたの修復チームになるとき。",
+      "fr-ca": "Fable : quand l'IA devient votre équipe de remédiation.",
+    },
+    excerpt: {
+      fr: "Stéphane Robin (Senior Engineer Abbeal Montréal) décrypte Claude Fable 5 d'Anthropic : génération de correctifs CVE en minutes, comportement « relentlessly proactive », et retournement gouvernemental du 12 juin qui a coupé l'accès au modèle.",
+      en: "Stéphane Robin (Senior Engineer Abbeal Montréal) breaks down Anthropic's Claude Fable 5: CVE patch generation in minutes, « relentlessly proactive » behavior, and the June 12 government directive that cut access to the model.",
+      ja: "ステファン・ロビン（Abbealモントリオールシニアエンジニア）がAnthropicのClaude Fable 5を解説：数分でのCVEパッチ生成、「relentlessly proactive」な挙動、そしてモデルへのアクセスを遮断した6月12日の政府指令。",
+      "fr-ca": "Stéphane Robin (Senior Engineer Abbeal Montréal) décrypte Claude Fable 5 d'Anthropic : génération de correctifs CVE en minutes, comportement « relentlessly proactive », et retournement gouvernemental du 12 juin qui a coupé l'accès au modèle.",
+    },
+    metaDescription: {
+      fr: "Claude Fable 5 d'Anthropic : génération automatique de correctifs CVE, intégration CI/CD, comportement agentique. Retour terrain Abbeal Montréal + analyse de la coupure d'accès par le Department of Commerce.",
+      en: "Anthropic's Claude Fable 5: automatic CVE patch generation, CI/CD integration, agentic behavior. Field report from Abbeal Montréal + analysis of the Department of Commerce access cut.",
+      ja: "AnthropicのClaude Fable 5：CVEパッチの自動生成、CI/CD統合、エージェント的挙動。Abbealモントリオール現場レポート + 商務省によるアクセス遮断の分析。",
+      "fr-ca": "Claude Fable 5 d'Anthropic : génération automatique de correctifs CVE, intégration CI/CD, comportement agentique. Retour terrain Abbeal Montréal + analyse de la coupure d'accès par le Department of Commerce.",
+    },
+    keywords: {
+      fr: "Claude Fable 5, Anthropic remédiation CVE, génération automatique patch sécurité, AI DevSecOps, agentic code generation, relentlessly proactive AI, workflow remédiation automatisée, CVE pipeline CI/CD, Anthropic Department of Commerce, jailbreak Fable Mythos, résilience pipeline IA, diversification providers IA, AI gouvernance réglementaire, Simon Willison Fable",
+      en: "Claude Fable 5, Anthropic CVE remediation, automatic security patch generation, AI DevSecOps, agentic code generation, relentlessly proactive AI, automated remediation workflow, CVE CI/CD pipeline, Anthropic Department of Commerce, Fable Mythos jailbreak, AI pipeline resilience, AI provider diversification, AI regulatory governance, Simon Willison Fable",
+      ja: "Claude Fable 5, Anthropic CVE 修復, セキュリティパッチ自動生成, AI DevSecOps, エージェント的コード生成, relentlessly proactive AI, 自動修復ワークフロー, CVE CI/CD パイプライン, Anthropic 商務省, Fable Mythos ジェイルブレイク, AI パイプライン回復力, AI プロバイダー多様化",
+    },
+    faq: {
+      fr: [
+        { q: "Qu'est-ce que Claude Fable 5 d'Anthropic ?", a: "Le modèle de génération de code d'Anthropic conçu pour opérer dans des workflows d'ingénierie autonomes. Il génère des correctifs CVE ciblés, comprend les dépendances multi-fichiers, s'intègre via API dans les pipelines CI/CD et produit les tests unitaires associés. Annoncé en juin 2026, son accès a été coupé le 12 juin 2026 par directive du Department of Commerce américain." },
+        { q: "Que signifie « relentlessly proactive » pour Fable ?", a: "Caractéristique mise en avant par Simon Willison : Fable compose ses propres outils de diagnostic (HTML temporaires, scripts Python), change dynamiquement de stratégie quand une piste échoue (Playwright, inspection DOM), modifie temporairement l'application pour créer des points d'observation, et maintient l'objectif jusqu'au correctif validé. C'est un comportement d'agent autonome, pas de simple suggestion." },
+        { q: "Pourquoi Anthropic a coupé l'accès à Fable 5 et Mythos 5 ?", a: "Le 12 juin 2026, le Department of Commerce américain a émis une directive formelle invoquant un jailbreak permettant à Fable 5 de détecter des failles logicielles. Anthropic a obtempéré mais conteste publiquement la légitimité du motif, indiquant que des concurrents (GPT-5.5) ont des capacités similaires et qu'appliqué à l'industrie, ce standard « stopperait tous les déploiements de modèles frontier »." },
+        { q: "Comment se protéger d'une coupure d'accès gouvernementale à un modèle IA ?", a: "Architecture provider-agnostic obligatoire : interface d'abstraction de modèle (provider pattern) qui permet de basculer entre Anthropic, OpenAI, Google, modèles open-source self-hosted. Diversification des providers IA = décision d'architecture, pas un luxe. SLA contractuels qui intègrent le risque de retrait administratif. Capacités d'agent (composition d'outils, stratégies dynamiques) reproductibles sur d'autres modèles capables d'agentic reasoning." },
+        { q: "Quels SLA de remédiation CVE viser avec un workflow Fable ?", a: "La fenêtre d'exposition, qui se mesure en semaines sur les workflows manuels, se comprime à quelques heures sur des CVE bien caractérisées avec un workflow intégrant Fable. Le SLA n'est plus une contrainte de capacité, il devient une décision de priorité — la limite devient le temps de validation humaine (15-30 min par diff), pas le temps de développement." },
+      ],
+      en: [
+        { q: "What is Anthropic's Claude Fable 5?", a: "Anthropic's code generation model designed to operate in autonomous engineering workflows. It generates targeted CVE patches, understands multi-file dependencies, integrates via API into CI/CD pipelines, and produces the associated unit tests. Announced in June 2026, its access was cut on June 12, 2026 by a US Department of Commerce directive." },
+        { q: "What does « relentlessly proactive » mean for Fable?", a: "Characteristic highlighted by Simon Willison: Fable composes its own diagnostic tools (temporary HTML, Python scripts), dynamically changes strategy when a lead fails (Playwright, DOM inspection), temporarily modifies the application to create observation points, and maintains the objective until the patch is validated. It's autonomous agent behavior, not mere suggestion." },
+        { q: "Why did Anthropic cut access to Fable 5 and Mythos 5?", a: "On June 12, 2026, the US Department of Commerce issued a formal directive citing a jailbreak that allowed Fable 5 to detect software vulnerabilities. Anthropic complied but publicly contests the legitimacy of the rationale, noting that competitors (GPT-5.5) have similar capabilities and that, applied to the industry, this standard « would essentially stop all frontier model deployments »." },
+        { q: "How to protect against a government access cut to an AI model?", a: "Provider-agnostic architecture is mandatory: model abstraction interface (provider pattern) that allows switching between Anthropic, OpenAI, Google, and self-hosted open-source models. AI provider diversification = architecture decision, not a luxury. Contractual SLAs that factor in the administrative retraction risk. Agent capabilities (tool composition, dynamic strategies) reproducible on other models capable of agentic reasoning." },
+        { q: "What CVE remediation SLAs should you target with a Fable workflow?", a: "The exposure window, measured in weeks on manual workflows, compresses to a few hours on well-characterized CVEs with a Fable-integrated workflow. The SLA is no longer a capacity constraint, it becomes a priority decision — the limit becomes human validation time (15-30 min per diff), not development time." },
+      ],
+    },
+    relatedCaseSlug: "fintech-iso27001-devsecops",
+    relatedServiceSlug: "delivery-cle-en-main",
+    body: {
+      fr: ARTICLE_BODIES["fable-ia-equipe-remediation-stephane-robin"]?.fr ?? [],
+      en: ARTICLE_BODIES["fable-ia-equipe-remediation-stephane-robin"]?.en,
+      ja: ARTICLE_BODIES["fable-ia-equipe-remediation-stephane-robin"]?.ja,
+      "fr-ca": ARTICLE_BODIES["fable-ia-equipe-remediation-stephane-robin"]?.["fr-ca"],
+    },
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
