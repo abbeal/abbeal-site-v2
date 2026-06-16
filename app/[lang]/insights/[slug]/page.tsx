@@ -337,7 +337,14 @@ export default async function InsightArticlePage({
                     className="group flex items-start gap-3 p-4 border border-[var(--color-border)] bg-[var(--color-bg-paper)] hover:border-[var(--color-brand-teal)] transition-colors"
                   >
                     <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--color-brand-teal)] shrink-0 mt-0.5">
-                      {locale === "ja" ? "ケース →" : "Case →"}
+                      {/* Fix W25 : fr-ca tombait sur "Case →" (EN) -> on
+                          map explicitement par locale pour donner "Cas →"
+                          en FR/FR-CA. */}
+                      {locale === "ja"
+                        ? "ケース →"
+                        : locale === "en"
+                          ? "Case →"
+                          : "Cas →"}
                     </span>
                     <span className="text-sm font-medium text-[var(--color-ink)] group-hover:text-[var(--color-brand-teal)] transition-colors leading-snug">
                       {pick(relatedCase.title, locale)}
@@ -360,6 +367,9 @@ export default async function InsightArticlePage({
                       className="group flex items-start gap-3 p-4 border border-[var(--color-border)] bg-[var(--color-bg-paper)] hover:border-[var(--color-brand-teal)] transition-colors"
                     >
                       <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--color-brand-teal)] shrink-0 mt-0.5">
+                        {/* Fix W25 : meme bug que ケース ci-dessus.
+                            "Service" est identique en EN et FR donc
+                            seul JA est specifique. */}
                         {locale === "ja" ? "サービス →" : "Service →"}
                       </span>
                       <span className="text-sm font-medium text-[var(--color-ink)] group-hover:text-[var(--color-brand-teal)] transition-colors leading-snug">

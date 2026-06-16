@@ -116,8 +116,16 @@ export default async function InsightsIndexPage({
     ? allArticles.filter((a) => a.tag === activeTag)
     : allArticles;
 
+  // Fix W25 : fr-ca tombait sur "en-GB" -> dates en anglais sur /fr-ca/insights.
+  // Map explicite par locale pour respecter le formatage local quebecois.
   const dateLocale =
-    locale === "fr" ? "fr-FR" : locale === "ja" ? "ja-JP" : "en-GB";
+    locale === "ja"
+      ? "ja-JP"
+      : locale === "en"
+        ? "en-GB"
+        : locale === "fr-ca"
+          ? "fr-CA"
+          : "fr-FR";
 
   const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
   const pageH1 = dict.insightsIndex.h1;

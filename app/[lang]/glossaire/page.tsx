@@ -97,8 +97,10 @@ export default async function GlossaryIndexPage({
     }),
   };
 
+  // Fix W25 : ternaire 2-branches faisait tomber fr-ca sur "Glossary" (EN)
+  // au lieu de "Glossaire" (FR). Map explicite par locale = robuste.
   const breadcrumbLabel =
-    locale === "fr" ? "Glossaire" : locale === "ja" ? "用語集" : "Glossary";
+    locale === "ja" ? "用語集" : locale === "en" ? "Glossary" : "Glossaire";
   const crumbs = breadcrumbs(locale, [[breadcrumbLabel, "/glossaire"]]);
 
   return (
