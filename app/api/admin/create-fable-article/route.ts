@@ -138,7 +138,11 @@ export async function POST(req: Request) {
         metaDescription: article.metaDescription?.fr,
         keywords: article.keywords?.fr,
         faq: faqFR,
-        body: payloadBody,
+        // Cast intentionnel : Payload genere un union type strict pour body
+        // (un type par blockType), incompatible avec notre Record<string, unknown>[]
+        // de conversion. La validation reste assuree par les `required` du
+        // schema collection.
+        body: payloadBody as never,
       },
     });
 
