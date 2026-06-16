@@ -9,14 +9,22 @@ import { getCMSArticle, cmsArticleAsArticle } from "@/lib/articles-cms";
 export const revalidate = 300;
 
 /** Resolveur unifie : essaye CMS d'abord (frais), fallback statique.
- *  Si trouve en CMS : retourne l'Article shape (pour reutiliser le rendu).
- *  Si trouve en statique : retourne tel quel.
- *  Sinon : null. */
+ *  Si trouve en CMS avec body NON VIDE : retourne CMS (Article shape).
+ *  Si CMS body vide (= migration incomplete) ou CMS absent : tente statique.
+ *  Sinon : null.
+ *
+ *  W25 fix : avant on retournait le CMS meme avec body vide -> page detail
+ *  avec juste title+excerpt, contenu invisible. Le statique a souvent le
+ *  vrai contenu (28 articles migres depuis lib/articles.ts d'avant CMS). */
 async function resolveArticle(slug: string, locale: Locale) {
   const cms = await getCMSArticle(slug, locale);
-  if (cms) return cmsArticleAsArticle(cms);
+  if (cms && cms.body && cms.body.length > 0) return cmsArticleAsArticle(cms);
   const sta = getArticle(slug);
-  return sta ?? null;
+  if (sta) return sta;
+  // Si CMS existe mais body vide ET pas de statique : retourne quand meme
+  // le CMS (mieux qu'un 404 — au moins l'utilisateur voit le title/excerpt).
+  if (cms) return cmsArticleAsArticle(cms);
+  return null;
 }
 import { getCase } from "@/lib/cases";
 import { ArticleBlocks } from "@/components/sections/ArticleBlocks";
