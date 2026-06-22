@@ -91,7 +91,11 @@ ${JSON.stringify(source, null, 2)}`;
       },
       body: JSON.stringify({
         model: MODEL,
-        max_tokens: 16000,
+        // 32000 : permet jusqu'a ~24k tokens output (vs 16k). Necessaire pour
+        // les body articles >50 blocks (~10-15k tokens output) qui se faisaient
+        // tronquer en mid-JSON => JSON.parse fail => body retourne vide =>
+        // CMS update body=[]. Claude Sonnet 4.5 supporte jusqu'a 64K output.
+        max_tokens: 32000,
         system: systemPrompt,
         messages: [{ role: "user", content: userPrompt }],
       }),
