@@ -46,6 +46,9 @@ export function Header({
     <header className="sticky top-0 z-40 border-b border-[var(--color-border)]/60 bg-[var(--color-bg-light)]/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-6 px-6 md:px-10">
         <Link href={prefix} className="block" aria-label="Abbeal">
+          {/* fetchPriority="high" : renforce `priority` (preload link) avec
+              un hint navigator de prioriser ce fetch reseau au-dessus du
+              HTML parsing principal. Audit W26 LCP /fr mobile 6.0s. */}
           <Image
             src="/brand/wordmark-teal.png"
             alt="Abbeal"
@@ -53,6 +56,7 @@ export function Header({
             height={333}
             className="h-7 w-auto"
             priority
+            fetchPriority="high"
           />
         </Link>
 
