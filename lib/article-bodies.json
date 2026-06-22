@@ -11361,7 +11361,13 @@
       {
         "type": "byline",
         "name": "Alexandre Lim",
-        "role": "Senior Engineer at Abbeal, Asia Hub · Tokyo. React, frontend testing, software craftsmanship."
+        "role": "Senior Engineer at Abbeal, Asia Hub · Tokyo. React, frontend testing, software craftsmanship.",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "Based on my original Notion notes: [Read the source notes →](https://app.notion.com/p/alexandrelim/Testing-JavaScript-by-Kent-C-Dodds-362de9267188809a9881e0d4ab14c310)"
       },
       {
         "type": "h2",
@@ -11432,7 +11438,8 @@
       {
         "type": "byline",
         "name": "Alexandre Lim",
-        "role": "Senior Engineer chez Abbeal, Pôle Asie · Tokyo. React, testing frontend, software craftsmanship."
+        "role": "Senior Engineer chez Abbeal, Pôle Asie · Tokyo. React, testing frontend, software craftsmanship.",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
       },
       {
         "type": "h2",
@@ -11497,13 +11504,19 @@
       {
         "type": "p",
         "content": "Si tu écris du JavaScript pour gagner ta vie, oui — sans hésiter. Le cours est rentabilisé la première fois qu'il t'évite de livrer une régression."
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "Publié initialement en anglais. Traduction assistée par IA pour la clarté. [Lire l'original →](/en/insights/testing-javascript-kent-c-dodds-retour-alex-lim)"
       }
     ],
     "ja": [
       {
         "type": "byline",
         "name": "Alexandre Lim",
-        "role": "AbbealのシニアエンジニアKent · アジア拠点・東京。React、フロントエンドテスティング、ソフトウェアクラフトマンシップ。"
+        "role": "AbbealのシニアエンジニアKent · アジア拠点・東京。React、フロントエンドテスティング、ソフトウェアクラフトマンシップ。",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
       },
       {
         "type": "h2",
@@ -11568,13 +11581,19 @@
       {
         "type": "p",
         "content": "JavaScriptで生計を立てているなら、迷わず受けるべきだ。リグレッションを本番に出すのを防いでくれた最初の一回で、コースは元が取れる。"
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "原文は英語です。明確化のためAIによる翻訳支援を使用しています。[原文を読む →](/en/insights/testing-javascript-kent-c-dodds-retour-alex-lim)"
       }
     ],
     "fr-ca": [
       {
         "type": "byline",
         "name": "Alexandre Lim",
-        "role": "Senior Engineer chez Abbeal, Pôle Asie · Tokyo. React, testing frontend, software craftsmanship."
+        "role": "Senior Engineer chez Abbeal, Pôle Asie · Tokyo. React, testing frontend, software craftsmanship.",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
       },
       {
         "type": "h2",
@@ -11639,6 +11658,11 @@
       {
         "type": "p",
         "content": "Si t'écris du JavaScript pour gagner ta vie, oui — sans hésiter. Le cours est rentabilisé la première fois qu'il t'évite de livrer une régression en prod."
+      },
+      {
+        "type": "callout",
+        "tone": "default",
+        "content": "Publié initialement en anglais. Traduction assistée par IA pour la clarté. [Lire l'original →](/en/insights/testing-javascript-kent-c-dodds-retour-alex-lim)"
       }
     ]
   }
