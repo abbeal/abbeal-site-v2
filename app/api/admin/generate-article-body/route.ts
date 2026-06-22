@@ -33,14 +33,15 @@ export const maxDuration = 300; // 5 min pour Claude generation longue
 type FAQ = { q: string; a: string };
 
 function buildPrompt(meta: {
-  title: string;
-  excerpt: string;
-  metaDescription?: string;
-  keywords?: string;
+  slug: string;
+  title?: string | null;
+  excerpt?: string | null;
+  metaDescription?: string | null;
+  keywords?: string | null;
   tag?: string;
   readTime?: string;
   faq?: FAQ[];
-}): string {
+}): { prompt: string; needsTitleExcerpt: boolean } {
   const targetMinutes = parseInt(meta.readTime?.match(/\d+/)?.[0] ?? "8");
   const targetWords = targetMinutes * 180; // ~180 mots/min FR
   const faqStr =
@@ -48,7 +49,51 @@ function buildPrompt(meta: {
       ? `\n\nFAQ existante (a integrer naturellement ou completer dans le body, sans la dupliquer mot a mot) :\n${meta.faq.map((q) => `- Q: ${q.q}\n  A: ${q.a}`).join("\n")}`
       : "";
 
-  return `Tu rediges un article de blog technique pour Abbeal, ESN senior specialisee en ingenierie logicielle. Audience : CTOs, tech leads, lead devs. Tone : direct, concret, anti-bullshit, retours terrain plutot que theorie. Pas de marketing-speak.
+  const needsTitleExcerpt = !meta.title || !meta.excerpt;
+
+  // Si pas de title/excerpt, on demande a Claude de les generer en plus du
+  // body. Sortie attendue : {title, excerpt, body[]}. Sinon : juste body[].
+  if (needsTitleExcerpt) {
+    return {
+      needsTitleExcerpt: true,
+      prompt: `Tu rediges un article de blog technique pour Abbeal, ESN senior specialisee en ingenierie logicielle. Audience : CTOs, tech leads, lead devs. Tone : direct, concret, anti-bullshit, retours terrain plutot que theorie. Pas de marketing-speak.
+
+L'article a un slug et une FAQ deja remplis, mais le title et l'excerpt manquent. Genere-les en plus du body.
+
+**Slug** : ${meta.slug}
+${meta.tag ? `**Categorie** : ${meta.tag}` : ""}
+**Read time cible** : ${meta.readTime ?? "8 min"} (~${targetWords} mots)${faqStr}
+
+Format de sortie : JSON object avec 3 cles :
+- "title": string, max ~80 chars, ton direct ("X: ce qu'il faut savoir" / "Pourquoi Y", pas de "Le guide complet de Z")
+- "excerpt": string, 140-180 chars, accroche concrete qui pose le probleme et promet la valeur
+- "body": array de blocks Payload (cf format ci-dessous)
+
+Types de blocks autorises :
+- { "blockType": "h2", "content": "..." }
+- { "blockType": "h3", "content": "..." }
+- { "blockType": "p", "content": "..." }       — markdown inline OK : **bold**, *italic*, [label](url), backticks pour code
+- { "blockType": "list", "items": [{ "text": "..." }, ...] }
+- { "blockType": "list", "ordered": true, "items": [{ "text": "..." }, ...] }
+- { "blockType": "callout", "tone": "default" | "teal" | "ink", "content": "..." }
+- { "blockType": "code", "lang": "ts|py|bash|...", "content": "..." }
+- { "blockType": "quote", "content": "...", "author": "..." }
+
+Structure body attendue :
+1. Intro (2-3 p) qui hook le lecteur et pose le probleme
+2. Sections h2 + body (4-7 h2 sections, certaines avec h3 sub-sections)
+3. Au moins 1-2 list (pour les conseils/criteres/etapes)
+4. Eventuellement 1 callout pour les warnings/highlights importants
+5. Conclusion (1-2 p) avec next steps concrets ou CTA implicite Abbeal
+6. (PAS de byline, PAS de footer Sources, c'est gere ailleurs)
+
+Reponds UNIQUEMENT avec le JSON object, sans markdown wrapper, sans commentaire.`,
+    };
+  }
+
+  return {
+    needsTitleExcerpt: false,
+    prompt: `Tu rediges un article de blog technique pour Abbeal, ESN senior specialisee en ingenierie logicielle. Audience : CTOs, tech leads, lead devs. Tone : direct, concret, anti-bullshit, retours terrain plutot que theorie. Pas de marketing-speak.
 
 Article a rediger :
 
@@ -77,7 +122,8 @@ Structure attendue :
 5. Conclusion (1-2 p) avec next steps concrets ou CTA implicite Abbeal
 6. (PAS de byline, PAS de footer Sources, c'est gere ailleurs)
 
-Reponds UNIQUEMENT avec le JSON array, sans markdown wrapper, sans commentaire, sans rien avant ou apres.`;
+Reponds UNIQUEMENT avec le JSON array, sans markdown wrapper, sans commentaire, sans rien avant ou apres.`,
+  };
 }
 
 export async function POST(req: Request) {
@@ -128,8 +174,9 @@ export async function POST(req: Request) {
   }
 
   const meta = {
-    title: String(doc.title ?? ""),
-    excerpt: String(doc.excerpt ?? ""),
+    slug: String(doc.slug ?? `article-${body.id}`),
+    title: typeof doc.title === "string" ? doc.title : null,
+    excerpt: typeof doc.excerpt === "string" ? doc.excerpt : null,
     metaDescription:
       typeof doc.metaDescription === "string"
         ? doc.metaDescription
@@ -140,7 +187,7 @@ export async function POST(req: Request) {
     faq: Array.isArray(doc.faq) ? (doc.faq as FAQ[]) : undefined,
   };
 
-  const prompt = buildPrompt(meta);
+  const { prompt, needsTitleExcerpt } = buildPrompt(meta);
 
   let rawJson: string;
   try {
@@ -192,9 +239,30 @@ export async function POST(req: Request) {
   }
 
   let blocks: Array<Record<string, unknown>>;
+  let generatedTitle: string | undefined;
+  let generatedExcerpt: string | undefined;
   try {
-    blocks = JSON.parse(rawJson) as Array<Record<string, unknown>>;
-    if (!Array.isArray(blocks)) throw new Error("not an array");
+    const parsed = JSON.parse(rawJson) as unknown;
+    if (needsTitleExcerpt) {
+      // Mode title+excerpt+body : Claude renvoie un objet
+      const obj = parsed as {
+        title?: string;
+        excerpt?: string;
+        body?: Array<Record<string, unknown>>;
+      };
+      if (!obj.title || !obj.excerpt || !Array.isArray(obj.body)) {
+        throw new Error(
+          "expected object {title, excerpt, body[]} from Claude",
+        );
+      }
+      generatedTitle = obj.title;
+      generatedExcerpt = obj.excerpt;
+      blocks = obj.body;
+    } else {
+      // Mode body seulement : Claude renvoie un array direct
+      if (!Array.isArray(parsed)) throw new Error("not an array");
+      blocks = parsed as Array<Record<string, unknown>>;
+    }
   } catch (err) {
     return NextResponse.json(
       {
@@ -207,13 +275,18 @@ export async function POST(req: Request) {
   }
 
   // Update le doc CMS avec le body genere (locale fr explicite).
+  // Si needsTitleExcerpt = true, on update aussi title + excerpt en meme
+  // temps (Claude les a generes dans le meme JSON).
   // Le hook afterChange propage auto-translate vers EN/JA/FR-CA.
+  const updateData: Record<string, unknown> = { body: blocks as never };
+  if (generatedTitle) updateData.title = generatedTitle;
+  if (generatedExcerpt) updateData.excerpt = generatedExcerpt;
   try {
     await payload.update({
       collection: "articles",
       id: body.id,
       locale: "fr",
-      data: { body: blocks as never },
+      data: updateData,
       overrideAccess: true,
     });
   } catch (err) {
@@ -236,6 +309,8 @@ export async function POST(req: Request) {
     wordCount: blocks
       .filter((b) => b.blockType === "p" || b.blockType === "callout")
       .reduce((acc, b) => acc + String(b.content ?? "").split(/\s+/).length, 0),
+    ...(generatedTitle ? { generatedTitle } : {}),
+    ...(generatedExcerpt ? { generatedExcerpt } : {}),
     note: "Hook afterChange Payload declenche auto-translate vers EN/JA/FR-CA en arriere-plan.",
   });
 }
