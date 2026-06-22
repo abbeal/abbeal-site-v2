@@ -969,6 +969,10 @@ export const glossary: GlossaryEntry[] = [
     relatedTerms: ["iso-27001", "ci-cd"],
   },
   {
+    // W26 QW4 — enrichissement SEO (pos 19.7 -> cible top 10 page 1).
+    // Definition allongee : couvre origine ANSSI, providers qualifies,
+    // niveau de qualification (essentiel vs avance), differences avec
+    // ISO 27001, Cloud Act, secteurs concernes, et migration depuis hyperscaler.
     slug: "secnumcloud",
     term: {
       fr: "SecNumCloud",
@@ -976,17 +980,17 @@ export const glossary: GlossaryEntry[] = [
       ja: "SecNumCloud",
     },
     short: {
-      fr: "Référentiel de qualification ANSSI pour cloud souverain français.",
-      en: "ANSSI qualification framework for sovereign French cloud.",
-      ja: "ANSSI（フランス国家情報システムセキュリティ庁）によるソブリンクラウド認定フレームワークです。",
+      fr: "Référentiel de qualification ANSSI pour cloud souverain français (V3.2). Standard de facto pour les données sensibles.",
+      en: "ANSSI qualification framework for sovereign French cloud (V3.2). De facto standard for sensitive data.",
+      ja: "ANSSI（フランス国家情報システムセキュリティ庁）によるソブリンクラウド認定フレームワーク（V3.2）です。機密データのデファクトスタンダードです。",
     },
     definition: {
-      fr: "Obligatoire pour certaines données publiques (santé, défense, collectivités). Providers qualifiés : OVH, Outscale, Cloud Temple. Stricter que ISO 27001 sur souveraineté juridique (RGPD + Cloud Act).",
-      en: "Mandatory for certain public data (health, defense, local government). Qualified providers: OVH, Outscale, Cloud Temple. Stricter than ISO 27001 on legal sovereignty (GDPR + Cloud Act).",
-      ja: "医療、国防、自治体など一部の公共データでは必須です。認定プロバイダはOVH、Outscale、Cloud Templeです。法的主権（GDPR＋Cloud Act）の観点ではISO 27001より厳格です。",
+      fr: "SecNumCloud est le référentiel d'exigences publié par l'ANSSI (Agence nationale de la sécurité des systèmes d'information) pour qualifier les offres de cloud computing capables d'héberger des données sensibles françaises. Version 3.2 actuelle. Obligatoire en pratique pour les Opérateurs d'Importance Vitale (OIV), les Opérateurs de Services Essentiels (OSE), les administrations centrales, et de plus en plus pour les données de santé et de défense. Les providers qualifiés en France sont aujourd'hui OVHcloud, 3DS Outscale, Cloud Temple et NumSpot — un marché restreint mais en croissance. La qualification couvre l'intégralité de la chaîne : datacenters certifiés en France, équipes opérationnelles UE, gouvernance juridique européenne, isolation contractuelle face au Cloud Act américain (extra-territorialité). SecNumCloud est plus strict qu'ISO 27001 sur la souveraineté juridique : ISO 27001 valide le système de management de la sécurité, SecNumCloud impose en plus une protection contre les lois extraterritoriales (Cloud Act, CLOUD Act, FISA 702). Pour les entreprises qui migrent depuis AWS / Azure / GCP, le coût et la complexité technique du switch sont réels : refonte des services managés, perte de certaines features serverless, mais alignement réglementaire indispensable dès qu'on touche aux données sensibles publiques ou OIV/OSE.",
+      en: "SecNumCloud is the requirements framework published by ANSSI (the French National Cybersecurity Agency) to qualify cloud computing offerings able to host sensitive French data. Current version is 3.2. In practice it is mandatory for Operators of Vital Importance (OIV), Operators of Essential Services (OSE), central government, and increasingly for health and defense data. Qualified French providers today: OVHcloud, 3DS Outscale, Cloud Temple, NumSpot — a limited but growing market. Qualification covers the full chain: datacenters certified in France, EU-based operations teams, European legal governance, contractual isolation from the US Cloud Act (extraterritoriality). SecNumCloud is stricter than ISO 27001 on legal sovereignty: ISO 27001 validates the information security management system, SecNumCloud additionally enforces protection against extraterritorial laws (Cloud Act, CLOUD Act, FISA 702). For companies migrating from AWS / Azure / GCP, the cost and technical complexity of switching are real: rewriting managed services, losing some serverless features, but regulatory alignment becomes essential as soon as sensitive public or OIV/OSE data is involved.",
+      ja: "SecNumCloudは、ANSSI（フランス国家情報システムセキュリティ庁）が機密フランスデータをホスティングできるクラウドコンピューティング提供を認定するために公開した要件フレームワークです。現行バージョンは3.2。事実上、重要事業者（OIV）、必須サービス事業者（OSE）、中央政府機関、そして医療・国防データにおいて必須です。フランスの認定プロバイダは現在、OVHcloud、3DS Outscale、Cloud Temple、NumSpotであり、限定的だが成長中の市場です。認定は全チェーンをカバーします：フランス国内認定データセンター、EU拠点の運用チーム、欧州法的ガバナンス、米国Cloud Act（域外適用）からの契約的隔離。SecNumCloudは法的主権の観点でISO 27001より厳格です：ISO 27001は情報セキュリティマネジメントシステムを検証しますが、SecNumCloudはさらに域外法（Cloud Act、CLOUD Act、FISA 702）からの保護を強制します。AWS / Azure / GCPから移行する企業にとって、切り替えのコストと技術的複雑性は現実的です：マネージドサービスの書き直し、一部のサーバーレス機能の喪失。ただし、機密公共データやOIV/OSEデータに触れる時点で規制への適合は不可欠になります。",
     },
     category: "Sécurité",
-    relatedTerms: ["appi"],
+    relatedTerms: ["appi", "rgpd", "iso-27001"],
   },
   {
     slug: "appi",

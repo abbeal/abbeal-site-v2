@@ -401,17 +401,20 @@
         {
           "city": "Paris",
           "address": "54 rue Greneta, 75002 Paris",
-          "tag": "EU Hub"
+          "tag": "EU Hub",
+          "href": "/consultant-informatique-paris"
         },
         {
           "city": "Montréal",
           "address": "4388 Rue Saint-Denis, QC H2J 2L1",
-          "tag": "Americas Hub"
+          "tag": "Americas Hub",
+          "href": "/entreprise-developpement-informatique-montreal"
         },
         {
           "city": "Tokyo",
           "address": "1-23-5 Higashi-Azabu, Minato-ku, 106-0044",
-          "tag": "Asia Hub"
+          "tag": "Asia Hub",
+          "href": "/tech-consulting-tokyo"
         }
       ]
     },

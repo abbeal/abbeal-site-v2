@@ -402,17 +402,20 @@
         {
           "city": "Montréal",
           "address": "4388 rue Saint-Denis, Montréal QC H2J 2L1",
-          "tag": "Pôle Amériques"
+          "tag": "Pôle Amériques",
+          "href": "/entreprise-developpement-informatique-montreal"
         },
         {
           "city": "Paris",
           "address": "54 rue Greneta, 75002 Paris",
-          "tag": "Pôle Europe"
+          "tag": "Pôle Europe",
+          "href": "/consultant-informatique-paris"
         },
         {
           "city": "Tokyo",
           "address": "1-23-5 Higashi-Azabu, Minato-ku, 106-0044",
-          "tag": "Pôle Asie"
+          "tag": "Pôle Asie",
+          "href": "/tech-consulting-tokyo"
         }
       ]
     },
