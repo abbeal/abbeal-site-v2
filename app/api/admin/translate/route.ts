@@ -177,6 +177,11 @@ export async function POST(req: Request) {
           ? stripIdsDeep(result.body as Array<Record<string, unknown>>)
           : [];
 
+        // SAFETY : si Claude a renvoye un body vide (parse partial, truncate,
+        // erreur silencieuse), NE PAS overwrite le body existant — on
+        // preserve ce qui est deja en CMS. Sinon on nullifie le content.
+        const shouldUpdateBody = translatedBody.length > 0;
+
         // SalaryRange translate (job-offers only — Articles n'a pas ce field)
         let translatedSalary: string | undefined;
         if (collection === "job-offers" && typeof dr.salaryRange === "string") {
@@ -199,7 +204,7 @@ export async function POST(req: Request) {
             ? { metaDescription: result.metaDescription }
             : {}),
           ...(translatedSalary ? { salaryRange: translatedSalary } : {}),
-          [bodyField]: translatedBody,
+          ...(shouldUpdateBody ? { [bodyField]: translatedBody } : {}),
         };
 
         await payload.update({

@@ -581,17 +581,30 @@ const Articles: CollectionConfig = {
               const translated = await translateArticle(source, locale);
               if (!translated) return;
 
+              // SAFETY : si Claude a renvoye un body vide (truncate/parse
+              // partial), NE PAS overwrite avec body=[] (= nullification).
+              // On preserve l'existant et on update juste les autres champs.
+              const tr = translated as Record<string, unknown>;
+              const trBody = Array.isArray(tr.body) ? tr.body : [];
+              const dataToUpdate: Record<string, unknown> = {
+                title: tr.title,
+                excerpt: tr.excerpt,
+                ...(tr.metaDescription
+                  ? { metaDescription: tr.metaDescription }
+                  : {}),
+                ...(trBody.length > 0 ? { body: trBody } : {}),
+              };
               await req.payload.update({
                 collection: "articles",
                 id: doc.id as number,
                 locale,
-                data: translated as Record<string, unknown>,
+                data: dataToUpdate,
                 overrideAccess: true,
                 context: { autoTranslate: true },
               });
 
               req.payload.logger.info(
-                `[auto-translate] article ${doc.id} -> ${locale} OK`,
+                `[auto-translate] article ${doc.id} -> ${locale} OK (body=${trBody.length} blocks)`,
               );
             } catch (err) {
               req.payload.logger.error(
@@ -1240,7 +1253,11 @@ const JobOffers: CollectionConfig = {
                   ...(translatedSalary
                     ? { salaryRange: translatedSalary }
                     : {}),
-                  description: translatedBody,
+                  // SAFETY : skip si Claude a renvoye un body vide (truncate)
+                  // pour preserver l'existant au lieu de nullifier.
+                  ...(translatedBody.length > 0
+                    ? { description: translatedBody }
+                    : {}),
                 } as unknown as Record<string, unknown>,
                 overrideAccess: true,
                 context: { autoTranslate: true },
