@@ -40,6 +40,10 @@ type ReqBody = {
   secret?: string;
   force?: boolean; // si true, re-traduit meme si la locale est deja remplie
   collection?: "articles" | "job-offers"; // default: articles
+  /** Si defini, ne traduit QUE cette locale (au lieu des 3 par defaut).
+   *  Utile pour eviter le Vercel function timeout sur les gros bodies :
+   *  faire 3 calls separes plutot qu'un seul call qui boucle. */
+  locale?: "en" | "ja" | "fr-ca";
 };
 
 // Map collection slug -> sa shape (body field name + types compatibility)
@@ -124,7 +128,11 @@ export async function POST(req: Request) {
         : [],
     };
 
-    const targets = ["en", "ja", "fr-ca"] as const;
+    // Si body.locale specifie, on ne traduit QUE cette locale (evite
+    // timeout Vercel sur les gros bodies en faisant 3 calls separes).
+    const targets = body.locale
+      ? ([body.locale] as const)
+      : (["en", "ja", "fr-ca"] as const);
     const translated: string[] = [];
     const skipped: string[] = [];
     const failed: Array<{ locale: string; reason: string }> = [];
