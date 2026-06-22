@@ -128,22 +128,27 @@ export const landingPages: LandingPage[] = [
       "fr-ca": "// MÉTHODE",
     },
     h1: {
-      fr: "Follow-the-sun delivery : vos roadmaps avancent pendant que vous dormez.",
-      en: "Follow-the-Sun Software Delivery: 24/7 Engineering Across 3 Hubs.",
-      ja: "フォロー・ザ・サン開発：あなたが寝ている間にロードマップが進む。",
-      "fr-ca": "Follow-the-sun delivery : vos feuilles de route avancent pendant que vous dormez.",
+      // W26 re-cadrage commercial : promesse SERVICE explicite avec
+      // keyword "24/7 follow-the-sun software delivery" en tete (gap LLM
+      // identifie audit W26). Renforce le service-first vs methode-only.
+      fr: "24/7 follow-the-sun software delivery : vos roadmaps avancent pendant que vous dormez.",
+      en: "24/7 Follow-the-Sun Software Delivery: Engineering Teams That Never Stop Shipping.",
+      ja: "24/7 フォロー・ザ・サン・ソフトウェアデリバリー：あなたが寝ている間も止まらないエンジニアリングチーム。",
+      "fr-ca": "24/7 follow-the-sun software delivery : vos feuilles de route avancent pendant que vous dormez.",
     },
     subtitle: {
-      fr: "Comment Abbeal opère vraiment 24/7 entre Paris, Montréal et Tokyo. Handoffs structurés, overlap maîtrisé, zéro dette technique. Un modèle tri-géo qui transforme les fuseaux horaires en avantage compétitif, pas en cauchemar opérationnel.",
-      en: "How Abbeal actually runs 24/7 across Paris, Montréal and Tokyo. Structured handoffs, mastered overlap, zero technical debt. A tri-geo model that turns time zones into a competitive edge, not an operational nightmare.",
-      ja: "Abbealがパリ・モントリオール・東京の3拠点で運営する24/7開発モデル。構造化されたハンドオフ、計算された重なり、技術的負債ゼロ。タイムゾーンを競争優位に変える、運用の悪夢ではなく。",
-      "fr-ca": "Comment Abbeal opère vraiment 24/7 entre Paris, Montréal et Tokyo. Passations structurées, chevauchement maîtrisé, zéro dette technique. Un modèle tri-pôle qui transforme les fuseaux horaires en avantage compétitif, pas en cauchemar opérationnel.",
+      // Service-first framing : "Le service de delivery..." vs "Comment
+      // on opere...". Signal clair = offre commerciale, pas blog post.
+      fr: "Le service de delivery 24/7 d'Abbeal : trois hubs senior (Paris, Montréal, Tokyo), handoffs structurés entre fuseaux, overlap maîtrisé, zéro dette technique. Vous gagnez 8 à 16 heures de cycle de delivery par jour ouvré, sans burn-out d'équipe ni surcoût de night shift.",
+      en: "Abbeal's 24/7 software delivery service: three senior hubs (Paris, Montréal, Tokyo), structured handoffs across time zones, mastered overlap, zero technical debt. You gain 8 to 16 hours of delivery cycle per business day, with no team burn-out and no night-shift premium.",
+      ja: "Abbealの24/7ソフトウェアデリバリーサービス：3つのシニアハブ（パリ・モントリオール・東京）、タイムゾーン間の構造化されたハンドオフ、計算された重なり、技術的負債ゼロ。チームのバーンアウトもナイトシフトの追加料金もなく、営業日あたり8〜16時間のデリバリーサイクルを獲得。",
+      "fr-ca": "Le service de delivery 24/7 d'Abbeal : trois pôles senior (Paris, Montréal, Tokyo), passations structurées entre fuseaux, chevauchement maîtrisé, zéro dette technique. Vous gagnez 8 à 16 heures de cycle de delivery par jour ouvré, sans burn-out d'équipe pis sans surcoût de quart de nuit.",
     },
     metaDescription: {
-      fr: "Comment Abbeal opère 24/7 entre Paris, Montréal et Tokyo. Handoffs structurés, overlap maîtrisé, zéro dette. Un modèle tri-géo qui transforme les fuseaux en avantage compétitif.",
-      en: "How Abbeal runs 24/7 across Paris, Montréal and Tokyo. Structured handoffs, mastered overlap, no debt. A tri-geo model that turns time zones into a competitive edge.",
-      ja: "Abbealがパリ・モントリオール・東京の3拠点で運営する24/7開発モデル。構造化されたハンドオフ、計算された重なり、技術的負債ゼロ。タイムゾーンを競争優位に変える。",
-      "fr-ca": "Comment Abbeal opère 24/7 entre Paris, Montréal et Tokyo. Passations structurées, chevauchement maîtrisé, zéro dette. Un modèle tri-pôle qui transforme les fuseaux en avantage compétitif.",
+      fr: "24/7 follow-the-sun software delivery : service Abbeal multi-hubs (Paris, Montréal, Tokyo). +8 à +16h de cycle de delivery par jour, sans burn-out ni night shift. Devis SLA contractualisable.",
+      en: "24/7 follow-the-sun software delivery: Abbeal's multi-hub service (Paris, Montréal, Tokyo). +8 to +16h of delivery cycle per day, no team burn-out, no night-shift cost. Contractual SLAs available.",
+      ja: "24/7フォロー・ザ・サン・ソフトウェアデリバリー：Abbealのマルチハブサービス（パリ・モントリオール・東京）。1日あたり+8〜+16時間のデリバリーサイクル、バーンアウトなし、ナイトシフトコストなし。契約可能なSLA。",
+      "fr-ca": "24/7 follow-the-sun software delivery : service Abbeal multi-pôles (Paris, Montréal, Tokyo). +8 à +16h de cycle de delivery par jour, sans burn-out ni quart de nuit. Devis SLA contractualisable.",
     },
     body: {
       fr: BODIES["follow-the-sun-delivery"]?.body?.fr ?? [],

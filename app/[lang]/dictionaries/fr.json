@@ -407,12 +407,14 @@
         {
           "city": "Montréal",
           "address": "4388 Rue Saint-Denis, QC H2J 2L1",
-          "tag": "Hub Amériques"
+          "tag": "Hub Amériques",
+          "href": "/entreprise-developpement-informatique-montreal"
         },
         {
           "city": "Tokyo",
           "address": "1-23-5 Higashi-Azabu, Minato-ku, 106-0044",
-          "tag": "Hub Asie"
+          "tag": "Hub Asie",
+          "href": "/tech-consulting-tokyo"
         }
       ]
     },

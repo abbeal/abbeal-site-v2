@@ -401,17 +401,20 @@
         {
           "city": "パリ",
           "address": "54 rue Greneta, 75002 Paris",
-          "tag": "欧州拠点"
+          "tag": "欧州拠点",
+          "href": "/consultant-informatique-paris"
         },
         {
           "city": "モントリオール",
           "address": "4388 Rue Saint-Denis, QC H2J 2L1",
-          "tag": "アメリカ拠点"
+          "tag": "アメリカ拠点",
+          "href": "/entreprise-developpement-informatique-montreal"
         },
         {
           "city": "東京",
           "address": "東京都港区東麻布1-23-5",
-          "tag": "アジア拠点"
+          "tag": "アジア拠点",
+          "href": "/tech-consulting-tokyo"
         }
       ]
     },
