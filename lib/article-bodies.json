@@ -11355,5 +11355,291 @@
         ]
       }
     ]
+  },
+  "testing-javascript-kent-c-dodds-retour-alex-lim": {
+    "en": [
+      {
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "Senior Engineer at Abbeal, Asia Hub · Tokyo. React, frontend testing, software craftsmanship."
+      },
+      {
+        "type": "h2",
+        "content": "What is Testing JavaScript?"
+      },
+      {
+        "type": "p",
+        "content": "[Testing JavaScript](https://testingjavascript.com/) is an online course by Kent C. Dodds — author of [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) — that teaches how to efficiently test a JavaScript application using the Testing Trophy method. It's beginner-friendly on the testing side but assumes you've built a few web apps before. Eight modules, each packed with video lessons."
+      },
+      {
+        "type": "p",
+        "content": "The core promise: learn the smart, efficient way to test any JavaScript application — without the dogma."
+      },
+      {
+        "type": "h2",
+        "content": "Why I took the course"
+      },
+      {
+        "type": "p",
+        "content": "As a software craftsman, testing is non-negotiable to me — it's what makes the difference between code I ship with confidence and code I'm scared to touch six months later. I had used Enzyme on previous projects, but the React community had clearly moved on to React Testing Library and its more user-centric philosophy. Learning testing directly from the library's author seemed like the most direct path to leveling up."
+      },
+      {
+        "type": "h2",
+        "content": "Did it deliver on its promise?"
+      },
+      {
+        "type": "p",
+        "content": "Yes — and for two distinct audiences."
+      },
+      {
+        "type": "p",
+        "content": "If you're new to the JavaScript testing ecosystem, the course gives you a coherent mental model and saves you months of trial-and-error. If you're a veteran, you'll still pick up sharper patterns and a clearer rationale for the trade-offs you already make intuitively. Check the modules on the landing page and judge whether the investment fits your stage."
+      },
+      {
+        "type": "p",
+        "content": "In my case I had testing experience, but I still walked away with a stronger foundation — patterns I now apply to every personal and professional project, and that I've taught to the engineers I work with."
+      },
+      {
+        "type": "h2",
+        "content": "From course to production: a real story"
+      },
+      {
+        "type": "p",
+        "content": "A few years ago I joined a client who had just raised a serious round and was scaling fast. Their stack had solid E2E coverage but almost no frontend unit or integration tests. As the codebase grew, E2E alone became a bottleneck — too slow, too coarse, blind to the edge cases that actually broke things in production."
+      },
+      {
+        "type": "p",
+        "content": "Convincing leadership to invest in a proper frontend testing layer is rarely easy. We pushed, and they eventually gave us a window. The team knew I had completed Testing JavaScript and asked me to lead the effort — pick the tools, set the patterns, integrate them into the existing codebase, and bring the frontend teams along."
+      },
+      {
+        "type": "p",
+        "content": "I took it. Step by step we shipped a real test infrastructure, added tests to the definition of done for every task, and shifted the team culture toward something closer to a test-driven mindset. Code quality went up. Regressions went down. The amount of time spent debugging in production dropped meaningfully. And — almost more importantly — engineers started taking pride in shipping things they trusted."
+      },
+      {
+        "type": "p",
+        "content": "I became the go-to person for frontend testing in that org. Beyond fulfilling its promise, the course opened opportunities that I'm still benefiting from today."
+      },
+      {
+        "type": "h2",
+        "content": "Worth it?"
+      },
+      {
+        "type": "p",
+        "content": "If you write JavaScript for a living, yes — without hesitation. The course pays for itself the first time it stops you from shipping a regression."
+      }
+    ],
+    "fr": [
+      {
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "Senior Engineer chez Abbeal, Pôle Asie · Tokyo. React, testing frontend, software craftsmanship."
+      },
+      {
+        "type": "h2",
+        "content": "C'est quoi Testing JavaScript ?"
+      },
+      {
+        "type": "p",
+        "content": "[Testing JavaScript](https://testingjavascript.com/) est un cours en ligne de Kent C. Dodds — auteur de [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) — qui apprend à tester efficacement une application JavaScript via la méthode du Testing Trophy. Accessible côté testing, mais il faut avoir déjà construit quelques apps web. Huit modules, chacun bourré de vidéos."
+      },
+      {
+        "type": "p",
+        "content": "La promesse : apprendre la façon intelligente et efficace de tester n'importe quelle app JavaScript — sans dogme."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi j'ai pris ce cours"
+      },
+      {
+        "type": "p",
+        "content": "Pour un software craftsman, tester n'est pas négociable — c'est ce qui sépare le code que je ship avec confiance du code que j'ai peur de toucher six mois plus tard. J'avais utilisé Enzyme sur des projets précédents, mais la communauté React avait clairement basculé sur React Testing Library et sa philosophie plus user-centric. Apprendre le testing directement avec l'auteur de la lib m'a paru le chemin le plus direct pour monter en niveau."
+      },
+      {
+        "type": "h2",
+        "content": "Est-ce que le cours tient sa promesse ?"
+      },
+      {
+        "type": "p",
+        "content": "Oui — pour deux audiences différentes."
+      },
+      {
+        "type": "p",
+        "content": "Si tu débutes sur l'écosystème de testing JavaScript, le cours te donne un modèle mental cohérent et t'épargne des mois de tâtonnements. Si tu es expérimenté, tu en retiens quand même des patterns plus affûtés et une justification plus claire des trade-offs que tu fais déjà à l'instinct. Va voir les modules sur la landing page et juge si l'investissement colle à ton niveau."
+      },
+      {
+        "type": "p",
+        "content": "Dans mon cas j'avais déjà de l'expérience en testing, mais j'en suis sorti avec une base plus solide — des patterns que j'applique maintenant à chaque projet perso ou pro, et que j'ai transmis aux devs avec qui j'ai bossé."
+      },
+      {
+        "type": "h2",
+        "content": "Du cours à la prod : une histoire vraie"
+      },
+      {
+        "type": "p",
+        "content": "Il y a quelques années, j'ai rejoint un client qui venait de lever un round sérieux et qui scalait fort. Leur stack avait du E2E solide mais quasi aucun test unitaire ou d'intégration côté frontend. Au fur et à mesure que la codebase grossissait, le E2E seul est devenu un goulot d'étranglement — trop lent, trop grossier, aveugle aux edge cases qui cassaient vraiment des choses en prod."
+      },
+      {
+        "type": "p",
+        "content": "Convaincre la direction d'investir dans une vraie couche de testing frontend, c'est rarement facile. On a insisté, on a fini par avoir une fenêtre. L'équipe savait que j'avais complété Testing JavaScript et m'a demandé de prendre le lead — choisir les outils, poser les patterns, les intégrer dans la codebase existante, et embarquer les équipes frontend."
+      },
+      {
+        "type": "p",
+        "content": "J'ai pris. Étape par étape on a livré une vraie infra de tests, ajouté les tests dans la definition of done de chaque ticket, et fait bouger la culture de l'équipe vers quelque chose qui ressemblait à du test-driven. La qualité du code a monté. Les régressions ont baissé. Le temps passé à débugger en prod a chuté de façon significative. Et — presque plus important — les devs ont retrouvé une vraie fierté à livrer des trucs en lesquels ils avaient confiance."
+      },
+      {
+        "type": "p",
+        "content": "Je suis devenu la personne de référence sur le testing frontend dans cette boîte. Au-delà de tenir sa promesse, le cours m'a ouvert des opportunités dont je profite encore aujourd'hui."
+      },
+      {
+        "type": "h2",
+        "content": "Est-ce que ça vaut le coup ?"
+      },
+      {
+        "type": "p",
+        "content": "Si tu écris du JavaScript pour gagner ta vie, oui — sans hésiter. Le cours est rentabilisé la première fois qu'il t'évite de livrer une régression."
+      }
+    ],
+    "ja": [
+      {
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "AbbealのシニアエンジニアKent · アジア拠点・東京。React、フロントエンドテスティング、ソフトウェアクラフトマンシップ。"
+      },
+      {
+        "type": "h2",
+        "content": "Testing JavaScriptとは？"
+      },
+      {
+        "type": "p",
+        "content": "[Testing JavaScript](https://testingjavascript.com/)は、[React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)の作者であるKent C. Doddsによるオンラインコースで、Testing Trophyの手法を使ってJavaScriptアプリケーションを効率的にテストする方法を教える。テスティング自体は初心者向けだが、Webアプリ開発の経験が前提だ。8モジュールに豊富なビデオレッスンが詰まっている。"
+      },
+      {
+        "type": "p",
+        "content": "中核となる約束：ドグマなしで、どんなJavaScriptアプリケーションでもスマートかつ効率的にテストする方法を学ぶこと。"
+      },
+      {
+        "type": "h2",
+        "content": "なぜ受講したか"
+      },
+      {
+        "type": "p",
+        "content": "ソフトウェアクラフトマンとして、テスティングは譲れない。自信を持ってshipできるコードと、半年後に触るのが怖いコードを分けるのはテストだ。以前のプロジェクトではEnzymeを使っていたが、ReactコミュニティはReact Testing Libraryと、よりユーザー中心の哲学に明確に移行していた。ライブラリの作者から直接テスティングを学ぶことが、レベルアップへの最も直接的な道に見えた。"
+      },
+      {
+        "type": "h2",
+        "content": "約束は果たされたか？"
+      },
+      {
+        "type": "p",
+        "content": "果たされた——しかも2種類の異なる層に対して。"
+      },
+      {
+        "type": "p",
+        "content": "JavaScriptテスティングのエコシステムが初めてなら、このコースは一貫したメンタルモデルを与え、数ヶ月の試行錯誤を節約してくれる。ベテランでも、より鋭いパターンと、直感的にやっているトレードオフのより明確な根拠を持ち帰れる。ランディングページでモジュールを確認し、自分のステージに投資が見合うかを判断してほしい。"
+      },
+      {
+        "type": "p",
+        "content": "私の場合、テスティング経験はあったが、それでもより強固な基盤を持ち帰れた——個人プロジェクトでも仕事のプロジェクトでも今適用しているパターン、そして一緒に働いてきたエンジニアに教えてきたパターンだ。"
+      },
+      {
+        "type": "h2",
+        "content": "コースから本番へ：実話"
+      },
+      {
+        "type": "p",
+        "content": "数年前、大きな資金調達を済ませて急成長フェーズに入っていたクライアントに参画した。スタックには堅実なE2Eカバレッジはあったが、フロントエンドのユニットテストや統合テストはほとんどなかった。コードベースが成長するにつれて、E2Eだけではボトルネックになった——遅すぎて、粗すぎて、本番で実際に壊れるエッジケースに対して盲目だった。"
+      },
+      {
+        "type": "p",
+        "content": "経営層にちゃんとしたフロントエンドテスティング層への投資を納得させるのは簡単ではない。粘って、ついにチャンスをもらった。チームは私がTesting JavaScriptを修了していることを知っていて、リードを取るように依頼してきた——ツールを選び、パターンを定め、既存のコードベースに統合し、フロントエンドチームを巻き込む役割だ。"
+      },
+      {
+        "type": "p",
+        "content": "引き受けた。段階的に本物のテスト基盤を構築し、すべてのタスクのdefinition of doneにテストを追加し、チームカルチャーをテスト駆動に近いものへとシフトさせた。コード品質は上がった。リグレッションは下がった。本番でのデバッグに費やす時間は意味のあるレベルで減った。そして——ほぼそれ以上に重要なことに——エンジニアは信頼できるものを出荷することに誇りを取り戻した。"
+      },
+      {
+        "type": "p",
+        "content": "私はその組織でフロントエンドテスティングのgo-toパーソンになった。約束を果たすことに加えて、このコースは今も恩恵を受けている機会を開いてくれた。"
+      },
+      {
+        "type": "h2",
+        "content": "受講する価値はあるか？"
+      },
+      {
+        "type": "p",
+        "content": "JavaScriptで生計を立てているなら、迷わず受けるべきだ。リグレッションを本番に出すのを防いでくれた最初の一回で、コースは元が取れる。"
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "Senior Engineer chez Abbeal, Pôle Asie · Tokyo. React, testing frontend, software craftsmanship."
+      },
+      {
+        "type": "h2",
+        "content": "C'est quoi Testing JavaScript ?"
+      },
+      {
+        "type": "p",
+        "content": "[Testing JavaScript](https://testingjavascript.com/) est un cours en ligne de Kent C. Dodds — auteur de [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) — qui apprend à tester efficacement une application JavaScript via la méthode du Testing Trophy. Accessible côté testing, mais ça prend d'avoir déjà bâti quelques apps web. Huit modules, chacun bourré de vidéos."
+      },
+      {
+        "type": "p",
+        "content": "La promesse : apprendre la façon intelligente pis efficace de tester n'importe quelle app JavaScript — sans dogme."
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi j'ai pris ce cours"
+      },
+      {
+        "type": "p",
+        "content": "Pour un software craftsman, tester c'est pas négociable — c'est ce qui sépare le code que je ship avec confiance du code que j'ai peur de toucher six mois plus tard. J'avais utilisé Enzyme sur des projets précédents, mais la communauté React avait clairement basculé sur React Testing Library pis sa philosophie plus user-centric. Apprendre le testing directement avec l'auteur de la lib, c'était le chemin le plus direct pour monter de niveau."
+      },
+      {
+        "type": "h2",
+        "content": "Est-ce que le cours tient sa promesse ?"
+      },
+      {
+        "type": "p",
+        "content": "Oui — pis pour deux audiences ben différentes."
+      },
+      {
+        "type": "p",
+        "content": "Si tu pars de zéro sur l'écosystème de testing JavaScript, le cours te donne un modèle mental cohérent pis t'épargne des mois de tâtonnements. Si t'as déjà de l'expérience, t'en sors quand même avec des patterns plus affûtés pis une meilleure justification des trade-offs que tu fais déjà à l'instinct. Va voir les modules sur la landing page pis juge si l'investissement colle à ton niveau."
+      },
+      {
+        "type": "p",
+        "content": "Dans mon cas j'avais déjà de l'expérience en testing, mais j'en suis sorti avec une base plus solide — des patterns que j'applique astheure à chaque projet perso ou pro, pis que j'ai transmis aux devs avec qui j'ai bossé."
+      },
+      {
+        "type": "h2",
+        "content": "Du cours à la prod : une histoire vraie"
+      },
+      {
+        "type": "p",
+        "content": "Y'a quelques années, j'ai rejoint un client qui venait de lever un round sérieux pis qui scalait fort. Leur stack avait du E2E solide mais quasi pas de tests unitaires ou d'intégration côté frontend. À mesure que la codebase grossissait, le E2E tout seul est devenu un goulot d'étranglement — trop lent, trop grossier, aveugle aux edge cases qui cassaient vraiment des affaires en prod."
+      },
+      {
+        "type": "p",
+        "content": "Convaincre la direction d'investir dans une vraie couche de testing frontend, c'est rarement facile. On a insisté, pis on a fini par avoir une fenêtre. L'équipe savait que j'avais complété Testing JavaScript pis m'a demandé de prendre le lead — choisir les outils, poser les patterns, les intégrer dans la codebase existante, pis embarquer les équipes frontend."
+      },
+      {
+        "type": "p",
+        "content": "J'ai pris. Étape par étape on a livré une vraie infra de tests, ajouté les tests dans la definition of done de chaque ticket, pis fait bouger la culture de l'équipe vers quelque chose qui ressemblait à du test-driven. La qualité du code a monté. Les régressions ont baissé. Le temps passé à débugger en prod a chuté de façon significative. Pis — presque plus important — les devs ont retrouvé une vraie fierté à livrer des affaires en lesquelles ils avaient confiance."
+      },
+      {
+        "type": "p",
+        "content": "Je suis devenu la personne de référence sur le testing frontend dans cette boîte. Au-delà de tenir sa promesse, le cours m'a ouvert des portes dont je profite encore aujourd'hui."
+      },
+      {
+        "type": "h2",
+        "content": "Est-ce que ça vaut le coup ?"
+      },
+      {
+        "type": "p",
+        "content": "Si t'écris du JavaScript pour gagner ta vie, oui — sans hésiter. Le cours est rentabilisé la première fois qu'il t'évite de livrer une régression en prod."
+      }
+    ]
   }
 }
