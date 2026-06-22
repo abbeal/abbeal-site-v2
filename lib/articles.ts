@@ -1232,6 +1232,61 @@ export const articles: Article[] = [
       "fr-ca": ARTICLE_BODIES["fable-ia-equipe-remediation-stephane-robin"]?.["fr-ca"],
     },
   },
+  // Article 29 — Testing JavaScript (Kent C. Dodds), retour Alex Lim. 3e
+  // article guest d'Alex apres CSS for JS Devs et Kwik Reading. Notes Notion
+  // d'Alex restructurees en review article. EN canonique + traductions
+  // FR/JA/FR-CA. Pattern identique aux precedents articles Alex.
+  {
+    slug: "testing-javascript-kent-c-dodds-retour-alex-lim",
+    featured: false,
+    tag: "Learning",
+    readTime: "5 min",
+    publishedAt: "2026-06-22",
+    title: {
+      fr: "Testing JavaScript de Kent C. Dodds : un retour honnête",
+      en: "Testing JavaScript by Kent C. Dodds: An Honest Review",
+      ja: "Kent C. Doddsの Testing JavaScript — 率直なレビュー",
+      "fr-ca": "Testing JavaScript de Kent C. Dodds : un retour honnête",
+    },
+    excerpt: {
+      fr: "Le senior engineer Alexandre Lim passe en revue Testing JavaScript de Kent C. Dodds — le cours qui apprend à tester une app JavaScript via le Testing Trophy. Du modèle mental aux patterns concrets, du E2E à React Testing Library, avec une histoire vraie de prise de lead testing chez un client en hyper-croissance.",
+      en: "Senior engineer Alexandre Lim reviews Kent C. Dodds' Testing JavaScript — the course that teaches how to test a JavaScript app using the Testing Trophy. From mental model to concrete patterns, from E2E to React Testing Library, with a real story of leading testing adoption at a fast-growth client.",
+      ja: "シニアエンジニアのAlexandre Limが、Kent C. DoddsのTesting JavaScriptをレビュー。Testing Trophyを使ってJavaScriptアプリをテストする方法を教えるコース。メンタルモデルから具体的なパターンまで、E2EからReact Testing Libraryまで、急成長クライアントでテスティング導入をリードした実話とともに。",
+      "fr-ca": "Le senior engineer Alexandre Lim passe en revue Testing JavaScript de Kent C. Dodds — le cours qui apprend à tester une app JavaScript via le Testing Trophy. Du modèle mental aux patterns concrets, du E2E à React Testing Library, avec une histoire vraie de prise de lead testing chez un client en hyper-croissance.",
+    },
+    metaDescription: {
+      fr: "Retour honnête du senior engineer Alexandre Lim sur le cours Testing JavaScript de Kent C. Dodds : Testing Trophy, React Testing Library, migration depuis Enzyme, et expérience terrain en environnement frontend fast-growth.",
+      en: "Honest review by senior engineer Alexandre Lim of Kent C. Dodds' Testing JavaScript course: Testing Trophy method, React Testing Library, migrating from Enzyme, and field experience in a fast-growth frontend environment.",
+      ja: "シニアエンジニアAlexandre LimによるKent C. DoddsのTesting JavaScriptコースの率直なレビュー：Testing Trophyの手法、React Testing Library、Enzymeからの移行、急成長フロントエンド環境での実地経験。",
+      "fr-ca": "Retour honnête du senior engineer Alexandre Lim sur le cours Testing JavaScript de Kent C. Dodds : Testing Trophy, React Testing Library, migration depuis Enzyme, et expérience terrain en environnement frontend fast-growth.",
+    },
+    keywords: {
+      fr: "Testing JavaScript, Kent C. Dodds, React Testing Library, Testing Trophy, testing frontend, Enzyme migration, tests unitaires React, tests d'intégration, E2E vs unit tests, software craftsmanship, test-driven development",
+      en: "Testing JavaScript, Kent C. Dodds, React Testing Library, Testing Trophy, frontend testing, Enzyme migration, React unit tests, integration tests, E2E vs unit tests, software craftsmanship, test-driven development",
+      ja: "Testing JavaScript, Kent C. Dodds, React Testing Library, Testing Trophy, フロントエンドテスティング, Enzyme 移行, React ユニットテスト, 統合テスト, E2E vs ユニットテスト, ソフトウェアクラフトマンシップ, テスト駆動開発",
+    },
+    faq: {
+      fr: [
+        { q: "Qu'est-ce que le cours Testing JavaScript de Kent C. Dodds ?", a: "Un cours en ligne en huit modules qui enseigne le testing JavaScript via la méthode du Testing Trophy : unit, integration, E2E, statique. Kent C. Dodds, l'auteur de React Testing Library, structure tout autour de patterns concrets utilisables directement en production." },
+        { q: "C'est quoi le Testing Trophy ?", a: "Une heuristique proposée par Kent C. Dodds pour répartir l'effort de testing : beaucoup d'analyse statique (TypeScript, ESLint), beaucoup de tests d'intégration (qui donnent le meilleur ROI), moins de tests unitaires, et très peu de E2E (lents, fragiles). Inversion du classique Testing Pyramid de Mike Cohn." },
+        { q: "Faut-il migrer d'Enzyme vers React Testing Library ?", a: "Oui, c'est le consensus actuel de la communauté React. RTL teste depuis le point de vue utilisateur (DOM rendu, interactions), pas les implementation details des composants. Plus robuste aux refactors, et c'est ce que Kent C. Dodds enseigne dans Testing JavaScript." },
+        { q: "Le cours vaut-il l'investissement ?", a: "Pour quiconque écrit du JavaScript en production, oui. Le ROI est immédiat dès la première régression évitée. Particulièrement précieux si tu veux passer d'une approche test ad-hoc à une vraie stratégie de testing d'équipe." },
+      ],
+      en: [
+        { q: "What is Kent C. Dodds' Testing JavaScript course?", a: "An online course in eight modules that teaches JavaScript testing through the Testing Trophy method: unit, integration, E2E, and static. Kent C. Dodds — author of React Testing Library — structures everything around concrete patterns you can use directly in production." },
+        { q: "What is the Testing Trophy?", a: "A heuristic by Kent C. Dodds for distributing testing effort: a lot of static analysis (TypeScript, ESLint), a lot of integration tests (best ROI), fewer unit tests, and very few E2E tests (slow, brittle). An inversion of Mike Cohn's classic Testing Pyramid." },
+        { q: "Should you migrate from Enzyme to React Testing Library?", a: "Yes — that's the current React community consensus. RTL tests from the user's perspective (rendered DOM, interactions), not the implementation details of components. More robust to refactors, and it's what Kent C. Dodds teaches in Testing JavaScript." },
+        { q: "Is the course worth the investment?", a: "For anyone writing JavaScript in production, yes. The ROI is immediate the first time it prevents a regression. Especially valuable if you want to move from ad-hoc testing to a real team testing strategy." },
+      ],
+    },
+    relatedServiceSlug: "squads-embarques",
+    body: {
+      fr: ARTICLE_BODIES["testing-javascript-kent-c-dodds-retour-alex-lim"]?.fr ?? [],
+      en: ARTICLE_BODIES["testing-javascript-kent-c-dodds-retour-alex-lim"]?.en,
+      ja: ARTICLE_BODIES["testing-javascript-kent-c-dodds-retour-alex-lim"]?.ja,
+      "fr-ca": ARTICLE_BODIES["testing-javascript-kent-c-dodds-retour-alex-lim"]?.["fr-ca"],
+    },
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
