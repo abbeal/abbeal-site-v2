@@ -127,7 +127,12 @@ Reponds UNIQUEMENT avec le JSON array, sans markdown wrapper, sans commentaire, 
 }
 
 export async function POST(req: Request) {
-  let body: { id?: number; secret?: string; force?: boolean };
+  let body: {
+    id?: number;
+    secret?: string;
+    force?: boolean;
+    collection?: "articles" | "job-offers";
+  };
   try {
     body = (await req.json()) as typeof body;
   } catch {
@@ -147,10 +152,20 @@ export async function POST(req: Request) {
     );
   }
 
+  const collection = body.collection ?? "articles";
+  if (collection !== "articles" && collection !== "job-offers") {
+    return NextResponse.json(
+      { error: `Unsupported collection: ${collection}` },
+      { status: 400 },
+    );
+  }
+  // Body field name differs : articles.body vs job-offers.description
+  const bodyField = collection === "job-offers" ? "description" : "body";
+
   const payload = await getPayload({ config });
   const doc = (await payload
     .findByID({
-      collection: "articles",
+      collection,
       id: body.id,
       locale: "fr",
       overrideAccess: true,
@@ -158,23 +173,40 @@ export async function POST(req: Request) {
     .catch(() => null)) as Record<string, unknown> | null;
   if (!doc) {
     return NextResponse.json(
-      { error: `Article id=${body.id} not found` },
+      { error: `${collection} id=${body.id} not found` },
       { status: 404 },
     );
   }
 
-  const existingBody = Array.isArray(doc.body) ? doc.body : [];
+  const existingBody = Array.isArray(doc[bodyField])
+    ? (doc[bodyField] as unknown[])
+    : [];
   if (existingBody.length > 0 && !body.force) {
     return NextResponse.json({
       ok: true,
       skipped: true,
-      reason: `body already has ${existingBody.length} blocks. Use force=true to regenerate.`,
+      reason: `${bodyField} already has ${existingBody.length} blocks. Use force=true to regenerate.`,
       id: body.id,
     });
   }
 
+  // Build meta from doc (works for both articles and job-offers since job-offers
+  // also have title/excerpt/metaDescription/keywords). For job-offers, we
+  // additionally pass location/contractType/experienceLevel/techStack as hints
+  // via the prompt builder (handled below).
+  const techStackArr = Array.isArray(doc.techStack)
+    ? (doc.techStack as Array<{ name?: string }>)
+        .map((t) => t.name)
+        .filter(Boolean)
+        .join(", ")
+    : undefined;
+  const jobHint =
+    collection === "job-offers"
+      ? `\n**Type d'offre** : ${doc.location ?? "?"}, ${doc.contractType ?? "?"}, ${doc.experienceLevel ?? "?"}${techStackArr ? `\n**TechStack** : ${techStackArr}` : ""}`
+      : "";
+
   const meta = {
-    slug: String(doc.slug ?? `article-${body.id}`),
+    slug: String(doc.slug ?? `${collection}-${body.id}`),
     title: typeof doc.title === "string" ? doc.title : null,
     excerpt: typeof doc.excerpt === "string" ? doc.excerpt : null,
     metaDescription:
@@ -182,7 +214,7 @@ export async function POST(req: Request) {
         ? doc.metaDescription
         : undefined,
     keywords: typeof doc.keywords === "string" ? doc.keywords : undefined,
-    tag: typeof doc.tag === "string" ? doc.tag : undefined,
+    tag: typeof doc.tag === "string" ? doc.tag : jobHint || undefined,
     readTime: typeof doc.readTime === "string" ? doc.readTime : undefined,
     faq: Array.isArray(doc.faq) ? (doc.faq as FAQ[]) : undefined,
   };
@@ -278,12 +310,13 @@ export async function POST(req: Request) {
   // Si needsTitleExcerpt = true, on update aussi title + excerpt en meme
   // temps (Claude les a generes dans le meme JSON).
   // Le hook afterChange propage auto-translate vers EN/JA/FR-CA.
-  const updateData: Record<string, unknown> = { body: blocks as never };
+  // bodyField = "body" pour articles, "description" pour job-offers.
+  const updateData: Record<string, unknown> = { [bodyField]: blocks as never };
   if (generatedTitle) updateData.title = generatedTitle;
   if (generatedExcerpt) updateData.excerpt = generatedExcerpt;
   try {
     await payload.update({
-      collection: "articles",
+      collection,
       id: body.id,
       locale: "fr",
       data: updateData,
@@ -302,6 +335,7 @@ export async function POST(req: Request) {
   return NextResponse.json({
     ok: true,
     generated: true,
+    collection,
     id: body.id,
     slug: doc.slug,
     blocksGenerated: blocks.length,
