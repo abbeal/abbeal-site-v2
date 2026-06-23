@@ -33,16 +33,21 @@ function renderInline(text: string): ReactNode {
     const token = m[0];
 
     if (token.startsWith("**") && token.endsWith("**")) {
+      // Pas de text-color force : le <strong> herite du parent (necessaire
+      // pour les callouts tone="ink" qui ont texte clair sur fond sombre,
+      // sinon le bold force a --color-ink devient invisible. Fix W26.)
       parts.push(
-        <strong key={key++} className="font-semibold text-[var(--color-ink)]">
+        <strong key={key++} className="font-semibold">
           {token.slice(2, -2)}
         </strong>,
       );
     } else if (token.startsWith("`") && token.endsWith("`")) {
+      // Code inline : bg semi-transparent + couleur heritee du parent pour
+      // s'adapter aux callouts ink (fond sombre) comme aux p normaux (clair).
       parts.push(
         <code
           key={key++}
-          className="font-mono text-[0.92em] px-1.5 py-0.5 rounded bg-[var(--color-bg-cream)] border border-[var(--color-border)] text-[var(--color-ink)]"
+          className="font-mono text-[0.92em] px-1.5 py-0.5 rounded bg-current/10 ring-1 ring-current/15"
         >
           {token.slice(1, -1)}
         </code>,
