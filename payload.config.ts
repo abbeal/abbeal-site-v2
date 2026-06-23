@@ -527,14 +527,20 @@ const Articles: CollectionConfig = {
         return data;
       },
     ],
-    // AUTO-TRANSLATION : a chaque save d'un article FR, on traduit
-    // automatiquement vers EN/JA/FR-CA via Claude API si les autres
-    // locales sont vides. Cf lib/translate-article.ts.
+    // AUTO-TRANSLATION : a chaque save d'un article FR (= locale source),
+    // on traduit automatiquement vers EN/JA/FR-CA via Claude API si les
+    // autres locales sont vides. Cf lib/translate-article.ts.
     //
     // Skip si :
     //   - context.autoTranslate = true (= recursion suite a notre propre update)
     //   - ANTHROPIC_API_KEY absent (graceful, log warning)
-    //   - locale cible deja remplie avec un title different du FR
+    //   - operation === update SUR UNE LOCALE != fr (= utilisateur ecrit
+    //     directement en/ja/fr-ca, on ne doit pas re-translate sur la base
+    //     du doc dans cette locale puisque "doc.title" sera le title EN/JA,
+    //     pas le FR source). Bug W26 vu sur article 36.
+    //   - locale cible deja remplie avec un title different du FR (= deja traduit)
+    //   - locale cible a deja un body non vide (= utilisateur a fourni cette
+    //     locale explicitement via API, on ne doit pas la ecraser). Bug W26.
     //
     // L'admin peut toujours editer manuellement les traductions apres
     // dans /admin (selecteur de locale en haut a droite).
@@ -542,6 +548,13 @@ const Articles: CollectionConfig = {
       async ({ req, doc, operation, context }) => {
         if ((context as { autoTranslate?: boolean })?.autoTranslate) return doc;
         if (operation !== "create" && operation !== "update") return doc;
+
+        // CRITICAL : ne propager que les writes effectues sur la locale FR.
+        // Payload set req.locale via ?locale=xx du URL. Sans cette garde, un
+        // PATCH ?locale=en re-declenche le hook avec doc.title = EN title,
+        // qui devient "frTitle" mal nomme et ecrase les autres locales.
+        const writeLocale = (req as { locale?: string }).locale;
+        if (writeLocale && writeLocale !== "fr") return doc;
 
         const d = doc as Record<string, unknown>;
         const frTitle = typeof d.title === "string" ? d.title : null;
@@ -569,14 +582,25 @@ const Articles: CollectionConfig = {
         for (const locale of targets) {
           (async () => {
             try {
-              const existing = await req.payload.findByID({
+              const existing = (await req.payload.findByID({
                 collection: "articles",
                 id: doc.id as number,
                 locale,
-              });
-              const existingTitle = (existing as { title?: string }).title;
+              })) as { title?: string; body?: unknown[] };
+              const existingTitle = existing.title;
+              const existingBody = Array.isArray(existing.body)
+                ? existing.body
+                : [];
               // Skip si traduction deja faite manuellement (= title diff du FR)
               if (existingTitle && existingTitle !== frTitle) return;
+              // Skip si user a deja fourni le body sur cette locale (sinon
+              // on l'ecrase via la traduction Claude). Bug W26 article 36.
+              if (existingBody.length > 0) {
+                req.payload.logger.info(
+                  `[auto-translate] article ${doc.id} -> ${locale} SKIP : body deja rempli (${existingBody.length} blocks)`,
+                );
+                return;
+              }
 
               const translated = await translateArticle(source, locale);
               if (!translated) return;
@@ -1167,9 +1191,21 @@ const JobOffers: CollectionConfig = {
       // une offre FR -> Claude traduit auto vers EN/JA/FR-CA si vides.
       // Permet a Cowork de POST en FR seulement et avoir les 4 locales sous
       // ~90s automatiquement.
+      //
+      // Skip si :
+      //   - context.autoTranslate = true (recursion de notre propre update)
+      //   - write locale != fr (sinon le hook re-translate avec doc.title
+      //     dans une locale non-FR, ecrase les autres locales)
+      //   - locale cible deja remplie avec title diff du FR (= deja traduit)
+      //   - locale cible a deja un body non vide (= utilisateur a fourni
+      //     cette locale, on ne doit pas l'ecraser via Claude)
       async ({ req, doc, operation, context }) => {
         if ((context as { autoTranslate?: boolean })?.autoTranslate) return doc;
         if (operation !== "create" && operation !== "update") return doc;
+
+        // Skip si write != fr (meme fix que Articles, bug W26 article 36)
+        const writeLocale = (req as { locale?: string }).locale;
+        if (writeLocale && writeLocale !== "fr") return doc;
 
         const d = doc as Record<string, unknown>;
         const frTitle = typeof d.title === "string" ? d.title : null;
@@ -1193,13 +1229,23 @@ const JobOffers: CollectionConfig = {
         for (const locale of targets) {
           (async () => {
             try {
-              const existing = await req.payload.findByID({
+              const existing = (await req.payload.findByID({
                 collection: "job-offers",
                 id: doc.id as number,
                 locale,
-              });
-              const existingTitle = (existing as { title?: string }).title;
+              })) as { title?: string; description?: unknown[] };
+              const existingTitle = existing.title;
+              const existingBody = Array.isArray(existing.description)
+                ? existing.description
+                : [];
               if (existingTitle && existingTitle !== frTitle) return;
+              // Skip si user a deja fourni le body (bug W26)
+              if (existingBody.length > 0) {
+                req.payload.logger.info(
+                  `[JobOffers auto-translate] ${doc.id} -> ${locale} SKIP : description deja remplie (${existingBody.length} blocks)`,
+                );
+                return;
+              }
 
               const translated = await translateArticle(source, locale);
               if (!translated) return;
