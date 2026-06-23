@@ -7,38 +7,72 @@ import type { ArticleBlock } from "@/lib/articles";
 const ease = [0.16, 1, 0.3, 1] as const;
 
 /**
- * renderInline — parse les liens markdown inline `[label](url)` dans le texte
- * d'un bloc et les rend en <a> cliquables. Rétro-compatible : un texte sans
- * `[..](..)` est renvoyé inchangé, donc aucun risque pour les ~60 articles
- * existants qui n'utilisent que du texte brut.
+ * renderInline — parse le markdown inline dans le texte d'un bloc :
+ *   - `[label](url)` → <a> cliquable (externes : target=_blank rel=noopener)
+ *   - `**text**`     → <strong> gras (W26 fix : etait rendu litteral avant)
+ *   - `*text*`       → <em> italique (idem)
+ *   - `` `text` ``   → <code> inline mono (idem)
  *
- * - URL externe (http/https) → target="_blank" rel="noopener"
- * - URL interne (commence par /) → navigation même onglet
+ * Tokenizer single-pass : un seul regex alternance pour eviter les conflits
+ * (notamment ** vs *). L'ordre dans l'alternance est important : ** avant *
+ * pour matcher correctement les marqueurs longs en premier.
  *
- * Utilisé dans les blocs `p` et les items de `list`. Sert au lien inline
- * "landing page" de l'article CSS d'Alex (brief W21 correction #4).
+ * Retro-compatible : un texte sans aucun marqueur est renvoye inchange.
+ * Utilise dans les blocs `p`, `callout` et les items de `list`.
  */
 function renderInline(text: string): ReactNode {
-  const re = /\[([^\]]+)\]\(([^)]+)\)/g;
+  // Ordre important : ** avant *, et code/link encadres pour eviter overlap
+  const re =
+    /(\*\*[^*\n]+\*\*|`[^`\n]+`|\[[^\]]+\]\([^)]+\)|\*[^*\n]+\*)/g;
   const parts: ReactNode[] = [];
   let last = 0;
   let key = 0;
   let m: RegExpExecArray | null;
   while ((m = re.exec(text)) !== null) {
     if (m.index > last) parts.push(text.slice(last, m.index));
-    const [, label, href] = m;
-    const external = /^https?:\/\//.test(href);
-    parts.push(
-      <a
-        key={key++}
-        href={href}
-        {...(external ? { target: "_blank", rel: "noopener" } : {})}
-        className="text-[var(--color-brand-teal)] underline underline-offset-2 decoration-[var(--color-brand-teal)]/40 hover:decoration-[var(--color-brand-teal)] transition-colors"
-      >
-        {label}
-      </a>,
-    );
-    last = m.index + m[0].length;
+    const token = m[0];
+
+    if (token.startsWith("**") && token.endsWith("**")) {
+      parts.push(
+        <strong key={key++} className="font-semibold text-[var(--color-ink)]">
+          {token.slice(2, -2)}
+        </strong>,
+      );
+    } else if (token.startsWith("`") && token.endsWith("`")) {
+      parts.push(
+        <code
+          key={key++}
+          className="font-mono text-[0.92em] px-1.5 py-0.5 rounded bg-[var(--color-bg-cream)] border border-[var(--color-border)] text-[var(--color-ink)]"
+        >
+          {token.slice(1, -1)}
+        </code>,
+      );
+    } else if (token.startsWith("[")) {
+      const linkMatch = token.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+      if (linkMatch) {
+        const [, label, href] = linkMatch;
+        const external = /^https?:\/\//.test(href!);
+        parts.push(
+          <a
+            key={key++}
+            href={href}
+            {...(external ? { target: "_blank", rel: "noopener" } : {})}
+            className="text-[var(--color-brand-teal)] underline underline-offset-2 decoration-[var(--color-brand-teal)]/40 hover:decoration-[var(--color-brand-teal)] transition-colors"
+          >
+            {label}
+          </a>,
+        );
+      } else {
+        parts.push(token);
+      }
+    } else if (token.startsWith("*") && token.endsWith("*")) {
+      parts.push(
+        <em key={key++} className="italic">
+          {token.slice(1, -1)}
+        </em>,
+      );
+    }
+    last = m.index + token.length;
   }
   if (last < text.length) parts.push(text.slice(last));
   return parts.length === 0 ? text : parts;
