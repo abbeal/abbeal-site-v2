@@ -95,7 +95,17 @@ const OG_IMAGE = `${SITE}/brand/og-image.png`;
  */
 export function pageOpenGraph(
   locale: Locale | string,
-  opts: { title: string; description: string; path: string },
+  opts: {
+    title: string;
+    description: string;
+    path: string;
+    /** Si true, OMET le champ `images` du openGraph + twitter -> Next.js
+     *  detecte automatiquement le opengraph-image.tsx adjacent a la page
+     *  et l'utilise. A utiliser pour les routes dynamiques qui ont leur
+     *  propre OG image generee (careers/[slug], glossaire/[slug], etc.).
+     *  Sans ce flag, l'OG par defaut /brand/og-image.png override le dynamic. */
+    withDynamicImage?: boolean;
+  },
 ): Pick<Metadata, "openGraph" | "twitter"> {
   const cleanPath =
     opts.path === "" || opts.path === "/"
@@ -103,6 +113,7 @@ export function pageOpenGraph(
       : opts.path.startsWith("/")
         ? opts.path
         : `/${opts.path}`;
+  const dyn = opts.withDynamicImage === true;
   return {
     openGraph: {
       title: opts.title,
@@ -111,13 +122,15 @@ export function pageOpenGraph(
       type: "website",
       siteName: "Abbeal",
       locale,
-      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Abbeal" }],
+      ...(dyn
+        ? {}
+        : { images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Abbeal" }] }),
     },
     twitter: {
       card: "summary_large_image",
       title: opts.title,
       description: opts.description,
-      images: [OG_IMAGE],
+      ...(dyn ? {} : { images: [OG_IMAGE] }),
     },
   };
 }
