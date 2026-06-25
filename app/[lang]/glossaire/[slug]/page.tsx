@@ -39,7 +39,12 @@ export async function generateMetadata({
     title,
     description,
     alternates: pageAlternates(locale, `/glossaire/${slug}`),
-    ...pageOpenGraph(locale, { title, description, path: `/glossaire/${slug}` }),
+    ...pageOpenGraph(locale, {
+      title,
+      description,
+      path: `/glossaire/${slug}`,
+      withDynamicImage: true, // opengraph-image.tsx adjacent
+    }),
   };
 }
 

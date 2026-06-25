@@ -76,6 +76,7 @@ export async function generateMetadata({
       title,
       description,
       path: `/careers/${slug}`,
+      withDynamicImage: true, // opengraph-image.tsx adjacent
     }),
   };
 }
