@@ -14,6 +14,10 @@ import {
   levelLabel,
   payloadBlocksToArticleBlocks,
 } from "@/lib/job-offers";
+import {
+  jobOfferLocationToPlaces,
+  jobOfferExperienceToMonths,
+} from "@/lib/jobPosting";
 import { getCareerBody } from "@/lib/career-bodies";
 
 type DictRole = {
@@ -240,7 +244,56 @@ function CmsSchemaLd({
     pvt: "TEMPORARY",
     alternance: "PART_TIME",
   };
-  const jobPostingLd = {
+  // Schema.org JobPosting — fixes GSC W26 :
+  //   1) jobLocation : Place(s) avec PostalAddress structures. Remote ->
+  //      jobLocationType=TELECOMMUTE + applicantLocationRequirements.
+  //   2) experienceRequirements : OccupationalExperienceRequirements avec
+  //      monthsOfExperience (number), pas une string libre (enum invalide).
+  //   3) baseSalary : on parse une fourchette numerique du salaryRange si
+  //      possible (regex sur K-K + devise), sinon on omet le champ. Le
+  //      QuantitativeValue.unitText brut ne passe pas la validation Google.
+  const places = jobOfferLocationToPlaces(offer.location);
+  const isRemote = offer.location.startsWith("remote-");
+  const remoteApplicantCountries: Record<string, Array<{ name: string }>> = {
+    "remote-eu": [
+      { name: "FR" },
+      { name: "BE" },
+      { name: "DE" },
+      { name: "ES" },
+      { name: "IT" },
+      { name: "NL" },
+      { name: "PT" },
+    ],
+    "remote-ww": [{ name: "FR" }, { name: "CA" }, { name: "JP" }],
+  };
+
+  // Parse salary fourchette format "50-70k EUR" / "50K-70K€" / "50000-70000"
+  const parsedSalary = (() => {
+    if (!offer.salaryRange) return null;
+    const m = offer.salaryRange.match(
+      /(\d{2,4})\s*[kK]?\s*[-–—aà]\s*(\d{2,4})\s*[kK]?/,
+    );
+    if (!m) return null;
+    const mult =
+      /[kK]/.test(offer.salaryRange) ||
+      (parseInt(m[1]!) < 1000 && parseInt(m[2]!) < 1000)
+        ? 1000
+        : 1;
+    const minValue = parseInt(m[1]!) * mult;
+    const maxValue = parseInt(m[2]!) * mult;
+    if (minValue <= 0 || maxValue <= 0 || minValue > maxValue) return null;
+    const currency =
+      /CAD|\$.*CA|C\$/i.test(offer.salaryRange)
+        ? "CAD"
+        : /JPY|¥|円/i.test(offer.salaryRange)
+          ? "JPY"
+          : /USD|\$/i.test(offer.salaryRange)
+            ? "USD"
+            : "EUR";
+    return { minValue, maxValue, currency };
+  })();
+
+  const jobPostingLd: Record<string, unknown> = {
     "@context": "https://schema.org/",
     "@type": "JobPosting",
     title: offer.title,
@@ -259,15 +312,37 @@ function CmsSchemaLd({
       sameAs: SITE,
       logo: `${SITE}/brand/wordmark-teal.png`,
     },
-    experienceRequirements: levelLabel(offer.experienceLevel, locale),
+    // jobLocation : structured Place. Si remote, on omet + ajoute
+    // jobLocationType TELECOMMUTE + applicantLocationRequirements.
+    ...(places.length > 0 ? { jobLocation: places } : {}),
+    ...(isRemote
+      ? {
+          jobLocationType: "TELECOMMUTE",
+          applicantLocationRequirements: (
+            remoteApplicantCountries[offer.location] ?? [{ name: "FR" }]
+          ).map((c) => ({ "@type": "Country", name: c.name })),
+        }
+      : {}),
+    // experienceRequirements : OccupationalExperienceRequirements + months
+    experienceRequirements: {
+      "@type": "OccupationalExperienceRequirements",
+      monthsOfExperience: jobOfferExperienceToMonths(offer.experienceLevel),
+    },
+    // Aussi log le niveau humain en qualification (Google le tolere)
+    qualifications: levelLabel(offer.experienceLevel, locale),
     inLanguage: locale,
     url: `${SITE}/${locale}/careers/${slug}`,
-    ...(offer.salaryRange
+    ...(parsedSalary
       ? {
           baseSalary: {
             "@type": "MonetaryAmount",
-            currency: "EUR",
-            value: { "@type": "QuantitativeValue", unitText: offer.salaryRange },
+            currency: parsedSalary.currency,
+            value: {
+              "@type": "QuantitativeValue",
+              minValue: parsedSalary.minValue,
+              maxValue: parsedSalary.maxValue,
+              unitText: "YEAR",
+            },
           },
         }
       : {}),
