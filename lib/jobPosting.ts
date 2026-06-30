@@ -21,13 +21,13 @@ type Role = {
 
 /** Map d'une ville (string libre dans dico) vers son adresse complète Abbeal.
  *  Données canoniques context-abbeal v8 — adresses physiques des 3 hubs. */
-type CityAddress = {
+export type CityAddress = {
   country: string; // ISO 3166-1 alpha-2
   region?: string; // addressRegion (subdivision admin)
   postalCode: string;
   streetAddress: string;
 };
-const CITY_TO_ADDRESS: Record<string, CityAddress> = {
+export const CITY_TO_ADDRESS: Record<string, CityAddress> = {
   Paris: {
     country: "FR",
     region: "Île-de-France",
@@ -53,6 +53,51 @@ const CITY_TO_ADDRESS: Record<string, CityAddress> = {
     streetAddress: "PMC Building, 1-23-5 Higashi-Azabu",
   },
 };
+
+/** Map JobOfferLocation (enum CMS) -> tableau de Place Schema.org pour
+ *  le champ jobLocation. Les locations remote retournent un tableau vide
+ *  (le caller doit alors set jobLocationType=TELECOMMUTE +
+ *  applicantLocationRequirements). */
+export function jobOfferLocationToPlaces(
+  loc: string,
+): Array<Record<string, unknown>> {
+  const map: Record<string, string[]> = {
+    paris: ["Paris"],
+    tokyo: ["Tokyo"],
+    montreal: ["Montreal"],
+    "tri-geo": ["Paris", "Montreal", "Tokyo"],
+    "remote-eu": [], // remote -> pas de jobLocation, applicantLocReq + telecom
+    "remote-ww": [],
+  };
+  const cities = map[loc] ?? [];
+  return cities
+    .map((city) => CITY_TO_ADDRESS[city])
+    .filter((addr): addr is CityAddress => Boolean(addr))
+    .map((addr, i) => ({
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: addr.streetAddress,
+        addressLocality: cities[i],
+        ...(addr.region ? { addressRegion: addr.region } : {}),
+        postalCode: addr.postalCode,
+        addressCountry: addr.country,
+      },
+    }));
+}
+
+/** Map JobOfferExperienceLevel -> monthsOfExperience pour
+ *  OccupationalExperienceRequirements Schema.org. Valeurs alignees avec
+ *  les conventions du secteur tech FR. */
+export function jobOfferExperienceToMonths(level: string): number {
+  const map: Record<string, number> = {
+    junior: 0, // entry-level / 0-2 ans
+    confirme: 24, // 2+ ans
+    senior: 60, // 5+ ans
+    "lead-plus": 96, // 8+ ans
+  };
+  return map[level] ?? 24;
+}
 
 /** Parse "Paris / Montréal / Tokyo" → array d'adresses complètes */
 function parseLocations(loc: string): { city: string; addr: CityAddress }[] {
