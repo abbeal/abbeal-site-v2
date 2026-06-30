@@ -11365,9 +11365,10 @@
         "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
       },
       {
-        "type": "callout",
-        "tone": "default",
-        "content": "Based on my original Notion notes: [Read the source notes →](https://app.notion.com/p/alexandrelim/Testing-JavaScript-by-Kent-C-Dodds-362de9267188809a9881e0d4ab14c310)"
+        "type": "image",
+        "src": "/insights/testing-javascript-alex/alex-lim-certificate.png",
+        "alt": "Alex Lim's Testing JavaScript completion certificate",
+        "caption": "My Testing JavaScript completion certificate."
       },
       {
         "type": "h2",
@@ -11428,6 +11429,12 @@
         "name": "Alexandre Lim",
         "role": "Senior Engineer chez Abbeal, Pôle Asie · Tokyo. React, testing frontend, software craftsmanship.",
         "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
+      },
+      {
+        "type": "image",
+        "src": "/insights/testing-javascript-alex/alex-lim-certificate.png",
+        "alt": "Certificat de fin de cours Testing JavaScript d'Alex Lim",
+        "caption": "Mon certificat de fin du cours Testing JavaScript."
       },
       {
         "type": "h2",
@@ -11495,6 +11502,12 @@
         "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
       },
       {
+        "type": "image",
+        "src": "/insights/testing-javascript-alex/alex-lim-certificate.png",
+        "alt": "Alex LimのTesting JavaScript修了証明書",
+        "caption": "私のTesting JavaScript修了証明書。"
+      },
+      {
         "type": "h2",
         "content": "Testing JavaScriptとは？"
       },
@@ -11558,6 +11571,12 @@
         "name": "Alexandre Lim",
         "role": "Senior Engineer chez Abbeal, Pôle Asie · Tokyo. React, testing frontend, software craftsmanship.",
         "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
+      },
+      {
+        "type": "image",
+        "src": "/insights/testing-javascript-alex/alex-lim-certificate.png",
+        "alt": "Certificat de fin de cours Testing JavaScript d'Alex Lim",
+        "caption": "Mon certificat de fin du cours Testing JavaScript."
       },
       {
         "type": "h2",
