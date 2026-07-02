@@ -545,6 +545,65 @@ const Articles: CollectionConfig = {
     // L'admin peut toujours editer manuellement les traductions apres
     // dans /admin (selecteur de locale en haut a droite).
     afterChange: [
+      // Hook revalidate (memes garde-fous que JobOffers) : chaque save d'un
+      // article invalide le cache Vercel pour /insights, /insights/{slug},
+      // la home (les Insights featured y apparaissent) ET le sitemap.xml
+      // (pour que Google voie instantanement la nouvelle URL). Fix W26 :
+      // avant, aucun hook revalidate n'existait sur Articles -> les
+      // nouveaux articles CMS pouvaient trainer heures avant d'apparaitre.
+      async ({ req, doc, operation, context }) => {
+        // Skip si autoTranslate=true (recursion) OU delete-like op
+        if ((context as { autoTranslate?: boolean })?.autoTranslate) return doc;
+        if (operation !== "create" && operation !== "update") return doc;
+        const secret = process.env.REVALIDATE_SECRET;
+        if (!secret) {
+          req.payload?.logger?.warn?.(
+            "[Articles] REVALIDATE_SECRET not set -> cache won't auto-refresh",
+          );
+          return doc;
+        }
+        const base =
+          process.env.PAYLOAD_PUBLIC_SERVER_URL ??
+          (process.env.VERCEL_URL
+            ? `https://${process.env.VERCEL_URL}`
+            : "https://abbeal.com");
+        const slug = (doc as { slug?: string }).slug;
+        const paths = [
+          // Listing /insights (pivot CMS-first PR #32)
+          "/fr/insights",
+          "/en/insights",
+          "/ja/insights",
+          "/fr-ca/insights",
+          // Home (Insights featured section)
+          "/fr",
+          "/en",
+          "/ja",
+          "/fr-ca",
+          // Detail pages si slug present
+          ...(slug
+            ? [
+                `/fr/insights/${slug}`,
+                `/en/insights/${slug}`,
+                `/ja/insights/${slug}`,
+                `/fr-ca/insights/${slug}`,
+              ]
+            : []),
+          // Sitemap : indexation instantannee cote Google. Fix W26.
+          "/sitemap.xml",
+        ];
+        for (const path of paths) {
+          fetch(`${base}/api/revalidate`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ path, secret }),
+          }).catch((err) => {
+            req.payload?.logger?.error?.(
+              `[Articles] revalidate ${path} failed : ${err?.message ?? err}`,
+            );
+          });
+        }
+        return doc;
+      },
       async ({ req, doc, operation, context }) => {
         if ((context as { autoTranslate?: boolean })?.autoTranslate) return doc;
         if (operation !== "create" && operation !== "update") return doc;
@@ -1172,6 +1231,9 @@ const JobOffers: CollectionConfig = {
           "/en",
           "/ja",
           "/fr-ca",
+          // Sitemap : regenere pour que Google voie la nouvelle
+          // /careers/{slug}. Fix W26.
+          "/sitemap.xml",
         ];
         // Fire-and-forget : pas de await pour ne pas bloquer le save admin.
         // Les erreurs sont logged mais n'interrompent pas le flux Payload.
