@@ -1287,6 +1287,64 @@ export const articles: Article[] = [
       "fr-ca": ARTICLE_BODIES["testing-javascript-kent-c-dodds-retour-alex-lim"]?.["fr-ca"],
     },
   },
+  // Article Alex Lim (4e guest, apres CSS/Kwik/TestingJS). Part 1 d'une
+  // serie "Learning Japanese: My Journey So Far" (Growth Mindset). Contenu
+  // fourni par Alex, publie avec son autorisation explicite. EN canonique
+  // + traductions FR/JA/FR-CA. Tag Learning, pas de related case
+  // (temoignage perso). Serie 3 parts prevue -> part 2 = tools/methode,
+  // part 3 = routine quotidienne.
+  {
+    slug: "learning-japanese-my-journey-part-1-growth-mindset-alex-lim",
+    featured: false,
+    tag: "Learning",
+    readTime: "6 min",
+    publishedAt: "2026-06-30",
+    title: {
+      fr: "Apprendre le japonais — Mon parcours jusqu'ici · Partie 1 : Growth Mindset",
+      en: "Learning Japanese: My Journey So Far · Part 1: Growth Mindset",
+      ja: "日本語を学ぶ — これまでの道のり · パート1：グロース・マインドセット",
+      "fr-ca": "Apprendre le japonais — Mon parcours jusqu'ici · Partie 1 : Growth Mindset",
+    },
+    excerpt: {
+      fr: "Le senior engineer Alexandre Lim raconte son arrivée à Tokyo en 2022, ses 4 ans d'apprentissage du japonais en solo (JLPT N3 en janvier 2025), et le Growth Mindset de Carol Dweck qui l'a aidé à ne pas abandonner. Partie 1 d'une série honnête sur l'apprentissage d'une langue en travaillant à plein temps.",
+      en: "Senior engineer Alexandre Lim shares his arrival in Tokyo in 2022, his 4-year self-taught Japanese journey (JLPT N3 in January 2025), and the Growth Mindset by Carol Dweck that kept him going. Part 1 of an honest series on learning a language while working full-time.",
+      ja: "シニアエンジニアのAlexandre Limが2022年の東京到着、4年間の独学日本語学習の道のり（2025年1月にJLPT N3合格）、そして諦めずに続けられた理由となったキャロル・ドゥエックのグロース・マインドセットについて語る。フルタイムで働きながら言語を学ぶことについての率直なシリーズのパート1。",
+      "fr-ca": "Le senior engineer Alexandre Lim raconte son arrivée à Tokyo en 2022, ses 4 ans d'apprentissage du japonais en solo (JLPT N3 en janvier 2025), pis le Growth Mindset de Carol Dweck qui l'a aidé à pas abandonner. Partie 1 d'une série honnête sur l'apprentissage d'une langue en travaillant à temps plein.",
+    },
+    metaDescription: {
+      fr: "Le senior engineer Alexandre Lim partage son parcours de 4 ans d'apprentissage du japonais depuis son arrivée à Tokyo en 2022 : Growth Mindset, Kaizen, JLPT N3, et la mentalité pour tenir dans la durée sans école. Partie 1/3.",
+      en: "Senior engineer Alexandre Lim shares his 4-year Japanese learning journey since arriving in Tokyo in 2022: Growth Mindset, Kaizen, JLPT N3, and the mindset to stick with it long-term without a language school. Part 1/3.",
+      ja: "シニアエンジニアのAlexandre Limが、2022年の東京到着以来の4年間の日本語学習の道のりを共有：グロース・マインドセット、改善（カイゼン）、JLPT N3、そして語学学校なしで長期的に続けるためのマインドセット。パート1/3。",
+      "fr-ca": "Le senior engineer Alexandre Lim partage son parcours de 4 ans d'apprentissage du japonais depuis son arrivée à Tokyo en 2022 : Growth Mindset, Kaizen, JLPT N3, pis la mentalité pour tenir dans la durée sans école. Partie 1/3.",
+    },
+    keywords: {
+      fr: "apprendre le japonais, JLPT N3, JLPT N2, Growth Mindset, Carol Dweck, Kaizen, expat Tokyo, apprentissage langue solo, mentalité apprentissage, rendaku, développeur au Japon, Mobbeal Tokyo",
+      en: "learning Japanese, JLPT N3, JLPT N2, Growth Mindset, Carol Dweck, Kaizen, expat Tokyo, self-taught language learning, learning mindset, rendaku, developer in Japan, Mobbeal Tokyo",
+      ja: "日本語学習, JLPT N3, JLPT N2, グロース・マインドセット, キャロル・ドゥエック, 改善, 東京駐在, 独学言語学習, 学習マインドセット, 連濁, 日本のデベロッパー, Mobbeal 東京",
+    },
+    faq: {
+      fr: [
+        { q: "Combien de temps faut-il pour apprendre le japonais à un niveau conversationnel ?", a: "D'après le parcours d'Alex : environ 2-3 ans en étudiant au moins 2h par jour de manière constante pour atteindre un niveau de fluidité pour la vie quotidienne. Pour les contextes professionnels, il faut plus de 5 ans. Les variables individuelles (langue maternelle, immersion, temps disponible) peuvent accélérer ou ralentir le processus." },
+        { q: "Qu'est-ce que le Growth Mindset et pourquoi c'est important pour apprendre une langue ?", a: "Le Growth Mindset, concept développé par Carol Dweck, est la croyance que l'intelligence et les talents se développent par l'effort et l'apprentissage. Pour l'apprentissage d'une langue longue comme le japonais, il permet d'éviter le piège du doute de soi (« je ne suis pas doué ») et de maintenir l'effort quotidien nécessaire sur des années." },
+        { q: "Peut-on apprendre le japonais au Japon en travaillant, sans école de langue ?", a: "Oui. Alex est arrivé à Tokyo à 29 ans, a commencé à travailler immédiatement, et a appris le japonais sur son temps libre. Il a atteint le JLPT N3 en 4 ans (janvier 2025). Abbeal couvrait 2h de cours en ligne par semaine, et il complétait par de l'auto-apprentissage quotidien avant/après le travail." },
+        { q: "Qu'est-ce que le Kaizen dans le contexte de l'apprentissage ?", a: "Kaizen (改善) signifie « changement pour le mieux » : la pratique de petites améliorations continues au fil du temps. Appliqué à l'apprentissage d'une langue, c'est l'idée que quelques minutes chaque jour, sur des années, compose vers un résultat qu'on ne pensait pas possible au départ." },
+      ],
+      en: [
+        { q: "How long does it take to learn Japanese to a conversational level?", a: "Based on Alex's journey: about 2-3 years studying at least 2 hours a day consistently to reach fluency for everyday life. For business contexts, it takes more than 5 years. Individual variables (native language, immersion, available time) can speed up or slow down the process." },
+        { q: "What is the Growth Mindset and why does it matter for learning a language?", a: "The Growth Mindset, developed by Carol Dweck, is the belief that intelligence and talents can be developed through effort and learning. For a long language learning journey like Japanese, it helps avoid the self-doubt trap (\"I'm not talented enough\") and maintain the daily effort needed over years." },
+        { q: "Can you learn Japanese in Japan while working, without a language school?", a: "Yes. Alex arrived in Tokyo at age 29, started working immediately, and learned Japanese in his free time. He reached JLPT N3 in 4 years (January 2025). Abbeal covered 2 hours of online lessons per week, complemented by daily self-study before/after work." },
+        { q: "What is Kaizen in the context of learning?", a: "Kaizen (改善) means \"change for the better\": the practice of small, continuous improvements over time. Applied to language learning, it's the idea that a few minutes every day, over years, compounds into a result you didn't think possible at the start." },
+      ],
+    },
+    relatedServiceSlug: "squads-embarques",
+    relatedCaseSlug: "money-forward",
+    body: {
+      fr: ARTICLE_BODIES["learning-japanese-my-journey-part-1-growth-mindset-alex-lim"]?.fr ?? [],
+      en: ARTICLE_BODIES["learning-japanese-my-journey-part-1-growth-mindset-alex-lim"]?.en,
+      ja: ARTICLE_BODIES["learning-japanese-my-journey-part-1-growth-mindset-alex-lim"]?.ja,
+      "fr-ca": ARTICLE_BODIES["learning-japanese-my-journey-part-1-growth-mindset-alex-lim"]?.["fr-ca"],
+    },
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
