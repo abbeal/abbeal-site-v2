@@ -10,6 +10,52 @@ import { landingPages } from "@/lib/landing-pages";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
 
 /**
+ * Sitemap = ISR avec revalidation de 5 min (safety net) + trigger explicite
+ * revalidatePath('/sitemap.xml') dans le hook Payload afterChange sur
+ * articles + job-offers -> le sitemap se regenere sous 5s a chaque
+ * publication (create/update/delete). Voir payload.config.ts + api/revalidate.
+ *
+ * Fix W26 : avant, le sitemap ne contenait que le static articles (~28) et
+ * ZERO job-offer -> les nouveaux articles CMS + toutes les offres CMS
+ * n'etaient jamais indexes par Google. Maintenant fetch CMS live.
+ */
+export const revalidate = 300;
+
+/** Fetch tous les documents publies d'une collection CMS. Utilise pour
+ *  hydrater le sitemap avec le contenu CMS live (articles + job-offers)
+ *  qui n'est pas dans le static lib/. Tolerant aux echecs : si le CMS
+ *  ne repond pas, on renvoie [] (le sitemap conserve le fallback static). */
+async function fetchCmsSlugs(
+  collection: "articles" | "job-offers",
+): Promise<Array<{ slug: string; updatedAt?: string; publishedAt?: string }>> {
+  try {
+    // Query en locale=fr (source) avec fallback-locale=null pour ne pas
+    // avoir les entrees sans FR source. status=published seul (les drafts
+    // ne doivent pas etre dans le sitemap).
+    const url = `${SITE_URL}/api/${collection}?where[status][equals]=published&limit=500&depth=0&locale=fr&fallback-locale=null`;
+    const res = await fetch(url, { next: { revalidate: 300 } });
+    if (!res.ok) return [];
+    const data = (await res.json()) as {
+      docs?: Array<{
+        slug?: string;
+        updatedAt?: string;
+        publishedAt?: string;
+        status?: string;
+      }>;
+    };
+    return (data.docs ?? [])
+      .filter((d) => d.slug && d.status === "published")
+      .map((d) => ({
+        slug: d.slug!,
+        updatedAt: d.updatedAt,
+        publishedAt: d.publishedAt,
+      }));
+  } catch {
+    return [];
+  }
+}
+
+/**
  * Indexable routes only — pages with `robots: { index: false }` are excluded
  * (mentions-legales, confidentialite). Listing them in the sitemap while
  * they're noindex'd triggers GSC "Excluded by noindex" warnings.
@@ -68,9 +114,17 @@ function priorityFor(route: string): number {
   return 0.5; // /cgu et tout reste
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
+
+  // Fetch CMS live : articles + job-offers publies. Les 2 collections
+  // sont hydratees ici pour couvrir 100% du contenu publie sans
+  // rebuild manuel a chaque publication.
+  const [cmsArticles, cmsJobs] = await Promise.all([
+    fetchCmsSlugs("articles"),
+    fetchCmsSlugs("job-offers"),
+  ]);
 
   for (const route of ROUTES) {
     for (const locale of locales) {
@@ -84,15 +138,49 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Article pages — one per locale per slug
-  for (const article of articles) {
+  // Article pages — merge static (lib/articles.ts) + CMS. Dedup par slug
+  // (le CMS peut mirror le static). CMS gagne sur les meta (updatedAt).
+  const articleSlugs = new Map<string, { publishedAt?: string; updatedAt?: string }>();
+  for (const a of articles) {
+    articleSlugs.set(a.slug, { publishedAt: a.publishedAt });
+  }
+  for (const a of cmsArticles) {
+    articleSlugs.set(a.slug, { publishedAt: a.publishedAt, updatedAt: a.updatedAt });
+  }
+  for (const [slug, meta] of articleSlugs) {
     for (const locale of locales) {
       entries.push({
-        url: `${SITE_URL}/${locale}/insights/${article.slug}`,
-        lastModified: new Date(article.publishedAt),
+        url: `${SITE_URL}/${locale}/insights/${slug}`,
+        lastModified: meta.updatedAt
+          ? new Date(meta.updatedAt)
+          : meta.publishedAt
+            ? new Date(meta.publishedAt)
+            : now,
         changeFrequency: "yearly",
         priority: 0.6,
-        alternates: { languages: altLanguages(`/insights/${article.slug}`) },
+        alternates: { languages: altLanguages(`/insights/${slug}`) },
+      });
+    }
+  }
+
+  // Job offer pages (/careers/{slug}) — CMS uniquement (les templates
+  // static dans dictionaries n'ont pas d'URL detail dediee, elles
+  // pointent vers la home /careers avec anchor). Fix W26 : jusqu'a
+  // aujourd'hui, ZERO /careers/{slug} etait indexe -> Google ne
+  // voyait aucune offre individuellement.
+  for (const j of cmsJobs) {
+    for (const locale of locales) {
+      entries.push({
+        url: `${SITE_URL}/${locale}/careers/${j.slug}`,
+        lastModified: j.updatedAt
+          ? new Date(j.updatedAt)
+          : j.publishedAt
+            ? new Date(j.publishedAt)
+            : now,
+        // Weekly : les offres sont renouvelees frequemment
+        changeFrequency: "weekly",
+        priority: 0.7,
+        alternates: { languages: altLanguages(`/careers/${j.slug}`) },
       });
     }
   }

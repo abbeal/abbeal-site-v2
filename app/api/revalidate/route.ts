@@ -54,11 +54,16 @@ const ALLOWED_PATHS = new Set<string>([
   "/en",
   "/ja",
   "/fr-ca",
+  // Sitemap : regenere a chaque publication CMS d'articles ou job-offers
+  // pour que Google voie instantanement les nouvelles URLs. Fix W26.
+  "/sitemap.xml",
 ]);
 
 // Pour /insights/[slug] (variable) on accepte tout path qui matche
 // /{locale}/insights/{slug} avec slug kebab-case.
 const INSIGHT_DETAIL_PATTERN = /^\/(fr|en|ja|fr-ca)\/insights\/[a-z0-9-]+$/;
+// Pour /careers/[slug] : idem
+const CAREER_DETAIL_PATTERN = /^\/(fr|en|ja|fr-ca)\/careers\/[a-z0-9-]+$/;
 
 export async function POST(req: Request) {
   try {
@@ -81,7 +86,9 @@ export async function POST(req: Request) {
 
     if (
       !path ||
-      (!ALLOWED_PATHS.has(path) && !INSIGHT_DETAIL_PATTERN.test(path))
+      (!ALLOWED_PATHS.has(path) &&
+        !INSIGHT_DETAIL_PATTERN.test(path) &&
+        !CAREER_DETAIL_PATTERN.test(path))
     ) {
       return NextResponse.json(
         { error: "invalid path (not in whitelist)" },
