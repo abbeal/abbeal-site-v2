@@ -11636,5 +11636,263 @@
         "content": "Publié initialement en anglais. Traduction assistée par IA pour la clarté. [Lire l'original →](/en/insights/testing-javascript-kent-c-dodds-retour-alex-lim)"
       }
     ]
+  },
+  "learning-japanese-my-journey-part-1-growth-mindset-alex-lim": {
+    "en": [
+      {
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "Senior Engineer at Abbeal, Asia Hub · Tokyo. React, frontend testing, software craftsmanship. Learning Japanese since 2022.",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
+      },
+      {
+        "type": "p",
+        "content": "September 2, 2022. I landed at Haneda Airport, Tokyo. It was my first time in Japan, and I wasn't here as a tourist but to live here and work at Abbeal's Japanese office."
+      },
+      {
+        "type": "p",
+        "content": "Everything was new and overwhelming. Even now, I still remember the mix of nervousness and excitement, and the first time I used my broken Japanese in a real situation. It's quite funny that the first time I went to the FamilyMart in Shibuya, when the cashier asked me if I wanted a plastic bag, I couldn't understand it because I had only learned the word 「袋」(ふくろ) from my textbook. He actually said 「レジ袋」(レジぶくろ), which literally translates to \"register bag\". But because of the rendaku, the sound change from ふくろ to ぶくろ, I didn't recognize it as the word I knew."
+      },
+      {
+        "type": "p",
+        "content": "That was the beginning of a long journey. It's been 4 years since I started learning Japanese. I passed the JLPT N3 in January 2025. I didn't go to a Japanese school. I came here at 29 years old, started working right away, and learned Japanese in my free time along the way."
+      },
+      {
+        "type": "p",
+        "content": "Telling you about my study routine and the tools I use won't matter if you give up six months later. Our biggest enemy is ourselves. That's why I want to start by sharing the mindset that helped me push through. In part 2, I'll share what worked for me to keep going. And in the final part, I will give you my daily routine and content recommendations."
+      },
+      {
+        "type": "h2",
+        "content": "The Growth Mindset"
+      },
+      {
+        "type": "p",
+        "content": "Learning Japanese is difficult. It's not only about understanding and speaking words or writing kanji. It's also about opening ourselves to Japan's culture, its people, society, and way of thinking. For example, \"reading the air\" (空気を読む) is one of the most important concepts to grasp (or at least to try to grasp). Japanese is an indirect, high-context language with nuances that can't always be captured in textbooks and can only be grasped through experience and sometimes embarrassing situations..."
+      },
+      {
+        "type": "p",
+        "content": "From my experience, by studying consistently for at least 2h every day, it takes around 2-3 years to reach some level of fluency for everyday life. For business contexts, it takes more than 5 years. Of course, some people learn faster, and many variables can either slow down or speed up the process, such as Chinese speakers already knowing kanji."
+      },
+      {
+        "type": "p",
+        "content": "I don't want to give false hope or dreams. It takes consistent effort for a long period of time. Many people give up along the way. It's a danger everyone goes through when starting the journey and it's always lurking somewhere to jump at us whenever we're showing weakness."
+      },
+      {
+        "type": "p",
+        "content": "Years ago, I learned about the **Growth Mindset by Carol Dweck**. A growth mindset is the belief that intelligence and talents can be developed through effort and learning. It's opposed to the fixed mindset, the belief that intelligence and talent are static traits we either have or don't. There's depth and nuance and I highly recommend this talk by **Carol Dweck**."
+      },
+      {
+        "type": "p",
+        "content": "Things don't come easily to me, but adopting a Growth Mindset helps me stay positive and believe I can improve and that my efforts will not betray me. Even if slow, I need to keep building my Japanese step by step. There's a famous Japanese word that describes this process: *Kaizen* (改善). It means \"change for the better,\" referring to the practice of making small, continuous improvements over time."
+      },
+      {
+        "type": "p",
+        "content": "It took time but with a few hours per day, I was able to reach the JLPT N3 level. Abbeal covered 2 hours per week for online lessons and I studied by myself before or after work almost every day."
+      },
+      {
+        "type": "p",
+        "content": "The N3 felt so far away when I started. Just thinking of the number of kanji and vocabulary I needed to memorize overwhelmed me. I didn't dare think too far ahead about the N2 as there is a significant jump from the N3 requirements."
+      },
+      {
+        "type": "p",
+        "content": "\"Can I really do it?\" \"How long will it take?\" There were times when these questions flooded my mind, and I began to doubt myself. By reminding myself to adopt a growth mindset, I avoided the trap of spiraling into self-doubt. I told myself that even if I'm average, with dedicated effort, I can do it. In the end, I really did it. The N3 is behind me, and the N2 is now within reach."
+      },
+      {
+        "type": "p",
+        "content": "There's no magic shortcut in learning a language. The growth mindset is one of the weapons needed, but it's not enough to keep us safe from the danger of giving up. The key is consistent daily effort paired with time. It compounds, leading to results we didn't think would be possible when we started. But how can we keep studying every day for years without giving up? That's what I'll cover in the second part."
+      }
+    ],
+    "fr": [
+      {
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "Senior Engineer chez Abbeal, Pôle Asie · Tokyo. React, testing frontend, software craftsmanship. Apprend le japonais depuis 2022.",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
+      },
+      {
+        "type": "p",
+        "content": "2 septembre 2022. J'ai atterri à l'aéroport de Haneda, Tokyo. C'était ma première fois au Japon, et je n'y étais pas en tant que touriste mais pour y vivre et travailler dans le bureau japonais d'Abbeal."
+      },
+      {
+        "type": "p",
+        "content": "Tout était nouveau et écrasant. Même maintenant, je me souviens encore du mélange de nervosité et d'excitation, et de la première fois où j'ai utilisé mon japonais bancal dans une situation réelle. C'est assez drôle : la première fois que je suis allé au FamilyMart de Shibuya, quand le caissier m'a demandé si je voulais un sac plastique, je n'ai pas compris parce que j'avais seulement appris le mot 「袋」(ふくろ) dans mon manuel. Il avait en fait dit 「レジ袋」(レジぶくろ), qui se traduit littéralement par « sac de caisse ». Mais à cause du rendaku, le changement sonore de ふくろ à ぶくろ, je n'ai pas reconnu le mot que je connaissais."
+      },
+      {
+        "type": "p",
+        "content": "C'était le début d'un long parcours. Cela fait 4 ans que j'ai commencé à apprendre le japonais. J'ai passé le JLPT N3 en janvier 2025. Je ne suis pas allé dans une école japonaise. Je suis arrivé ici à 29 ans, j'ai commencé à travailler tout de suite, et j'ai appris le japonais sur mon temps libre en chemin."
+      },
+      {
+        "type": "p",
+        "content": "Te parler de ma routine d'étude et des outils que j'utilise n'aura pas d'importance si tu abandonnes six mois plus tard. Notre plus grand ennemi, c'est nous-mêmes. C'est pourquoi je veux commencer par partager l'état d'esprit qui m'a aidé à tenir. Dans la partie 2, je partagerai ce qui a marché pour moi pour continuer. Et dans la partie finale, je te donnerai ma routine quotidienne et mes recommandations de contenus."
+      },
+      {
+        "type": "h2",
+        "content": "Le Growth Mindset"
+      },
+      {
+        "type": "p",
+        "content": "Apprendre le japonais est difficile. Il ne s'agit pas seulement de comprendre et de parler des mots ou d'écrire des kanji. Il s'agit aussi de s'ouvrir à la culture du Japon, à ses gens, à sa société et à sa façon de penser. Par exemple, « lire l'air » (空気を読む) est l'un des concepts les plus importants à saisir (ou du moins à essayer de saisir). Le japonais est une langue indirecte, à contexte élevé, avec des nuances qui ne peuvent pas toujours être capturées dans les manuels et qui ne peuvent être saisies qu'à travers l'expérience et parfois des situations embarrassantes..."
+      },
+      {
+        "type": "p",
+        "content": "D'après mon expérience, en étudiant de manière constante au moins 2h par jour, il faut environ 2-3 ans pour atteindre un certain niveau de fluidité pour la vie quotidienne. Pour les contextes professionnels, il faut plus de 5 ans. Bien sûr, certaines personnes apprennent plus vite, et de nombreuses variables peuvent soit ralentir soit accélérer le processus, comme les locuteurs chinois qui connaissent déjà les kanji."
+      },
+      {
+        "type": "p",
+        "content": "Je ne veux pas donner de faux espoirs ou de rêves. Cela demande un effort constant sur une longue période. Beaucoup de gens abandonnent en chemin. C'est un danger auquel tout le monde est confronté au début du parcours et il est toujours tapi quelque part, prêt à nous sauter dessus dès qu'on montre de la faiblesse."
+      },
+      {
+        "type": "p",
+        "content": "Il y a des années, j'ai découvert le **Growth Mindset de Carol Dweck**. Un growth mindset, c'est la croyance que l'intelligence et les talents peuvent être développés par l'effort et l'apprentissage. C'est l'opposé du fixed mindset, la croyance que l'intelligence et le talent sont des traits statiques que l'on a ou pas. Il y a de la profondeur et de la nuance et je recommande vivement cette conférence de **Carol Dweck**."
+      },
+      {
+        "type": "p",
+        "content": "Les choses ne me viennent pas facilement, mais adopter un Growth Mindset m'aide à rester positif et à croire que je peux m'améliorer et que mes efforts ne me trahiront pas. Même lentement, je dois continuer à construire mon japonais étape par étape. Il y a un mot japonais célèbre qui décrit ce processus : *Kaizen* (改善). Cela signifie « changement pour le mieux », et fait référence à la pratique de faire de petites améliorations continues au fil du temps."
+      },
+      {
+        "type": "p",
+        "content": "Cela a pris du temps mais avec quelques heures par jour, j'ai pu atteindre le niveau JLPT N3. Abbeal couvrait 2 heures par semaine de cours en ligne et j'étudiais seul avant ou après le travail presque tous les jours."
+      },
+      {
+        "type": "p",
+        "content": "Le N3 me semblait si loin quand j'ai commencé. Juste penser au nombre de kanji et de vocabulaire à mémoriser me submergeait. Je n'osais pas penser trop loin au N2 car il y a un saut significatif par rapport aux exigences du N3."
+      },
+      {
+        "type": "p",
+        "content": "« Est-ce que je peux vraiment y arriver ? » « Combien de temps ça va prendre ? » Il y a eu des moments où ces questions m'ont inondé l'esprit, et j'ai commencé à douter de moi. En me rappelant d'adopter un growth mindset, j'ai évité le piège de tomber dans le doute de soi. Je me suis dit que même si je suis moyen, avec un effort dédié, je peux le faire. Au final, je l'ai vraiment fait. Le N3 est derrière moi, et le N2 est maintenant à portée."
+      },
+      {
+        "type": "p",
+        "content": "Il n'y a pas de raccourci magique pour apprendre une langue. Le growth mindset est l'une des armes nécessaires, mais il n'est pas suffisant pour nous mettre à l'abri du danger d'abandonner. La clé, c'est l'effort quotidien constant associé au temps. Ça se compose, menant à des résultats qu'on ne pensait pas possibles quand on a commencé. Mais comment continuer à étudier tous les jours pendant des années sans abandonner ? C'est ce que je couvrirai dans la seconde partie."
+      }
+    ],
+    "ja": [
+      {
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "AbbealのシニアエンジニアKent · アジア拠点・東京。React、フロントエンドテスティング、ソフトウェアクラフトマンシップ。2022年から日本語を学習中。",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
+      },
+      {
+        "type": "p",
+        "content": "2022年9月2日、私は羽田空港に降り立った。日本は初めてで、観光客としてではなく、Abbealの日本オフィスで働くために住みに来ていた。"
+      },
+      {
+        "type": "p",
+        "content": "すべてが新しく、圧倒的だった。今でも、緊張と興奮が入り混じった感覚と、初めて実際の場面で片言の日本語を使った瞬間を覚えている。渋谷のFamilyMartに初めて行ったとき、レジの店員がビニール袋が必要か聞いてきたが、私は教科書で「袋」(ふくろ) という言葉しか習っていなかったため理解できなかった。彼は実際には「レジ袋」(レジぶくろ) と言っていた。文字通り訳すと「register bag」だ。だが、ふくろからぶくろへの連濁による音の変化のせいで、知っている言葉として認識できなかった。"
+      },
+      {
+        "type": "p",
+        "content": "それが長い旅の始まりだった。日本語の学習を始めてから4年になる。2025年1月にJLPT N3に合格した。日本語学校には通わなかった。29歳でここに来て、すぐに働き始め、空いた時間で日本語を学んでいった。"
+      },
+      {
+        "type": "p",
+        "content": "私の勉強のルーティンや使っているツールについて話しても、半年後に諦めてしまえば意味がない。最大の敵は自分自身だ。だからこそ、まず私が乗り越えるのに役立ったマインドセットを共有したい。パート2では、続けるために効果的だったことを共有する。そして最終パートでは、私の日々のルーティンとコンテンツの推薦を紹介する。"
+      },
+      {
+        "type": "h2",
+        "content": "グロース・マインドセット"
+      },
+      {
+        "type": "p",
+        "content": "日本語を学ぶのは難しい。単語を理解して話したり、漢字を書いたりすることだけではない。日本の文化、人々、社会、考え方に自分を開くことでもある。例えば、「空気を読む」ことは、掴むべき（少なくとも掴もうと努力すべき）最も重要な概念の一つだ。日本語は間接的でハイコンテクストな言語であり、教科書では常には捉えきれないニュアンスがあり、経験と時には恥ずかしい状況を通してしか掴めない..."
+      },
+      {
+        "type": "p",
+        "content": "私の経験では、毎日少なくとも2時間、一貫して学習することで、日常生活のある程度の流暢さに達するには約2〜3年かかる。ビジネスの文脈では、5年以上かかる。もちろん、より早く学ぶ人もいるし、既に漢字を知っている中国語話者のように、プロセスを遅くしたり早めたりする多くの変数がある。"
+      },
+      {
+        "type": "p",
+        "content": "偽の希望や夢を与えたいわけではない。長い期間にわたって一貫した努力が必要だ。多くの人が途中で諦める。旅の始まりに誰もが直面する危険で、弱さを見せた瞬間に飛びかかろうと常にどこかに潜んでいる。"
+      },
+      {
+        "type": "p",
+        "content": "数年前、私は**キャロル・ドゥエックのグロース・マインドセット**について学んだ。グロース・マインドセットとは、知性と才能は努力と学習によって発達させることができるという信念だ。フィクスト・マインドセット、つまり知性や才能は持っているか持っていないかの静的な特性であるという信念とは対照的だ。深さとニュアンスがあり、**キャロル・ドゥエック**のこのトークを強くお勧めする。"
+      },
+      {
+        "type": "p",
+        "content": "物事は私にとって簡単には来ないが、グロース・マインドセットを採用することで、ポジティブでいられて、自分は改善できる、努力は裏切らないと信じられる。遅くても、一歩ずつ日本語を積み上げていく必要がある。このプロセスを表す有名な日本語がある：*改善（カイゼン）*だ。「より良い方向への変化」を意味し、時間をかけて小さく継続的な改善を重ねる実践を指す。"
+      },
+      {
+        "type": "p",
+        "content": "時間はかかったが、1日数時間で、JLPT N3レベルに到達できた。Abbealが週2時間のオンラインレッスンをカバーしてくれ、私はほぼ毎日、仕事の前後に自習した。"
+      },
+      {
+        "type": "p",
+        "content": "始めた頃、N3ははるか遠くに感じた。覚える必要のある漢字と語彙の数を考えるだけで圧倒された。N3の要件から大きな飛躍があるため、N2について先を考える勇気はなかった。"
+      },
+      {
+        "type": "p",
+        "content": "「本当にできるのか？」「どれくらい時間がかかるのか？」これらの疑問が頭を埋め尽くし、自分を疑い始めた時期があった。グロース・マインドセットを採用することを思い出すことで、自己疑念のスパイラルに陥る罠を避けられた。たとえ平均的でも、献身的な努力があればできると自分に言い聞かせた。結局、本当にやり遂げた。N3は後ろに、N2は今、手の届く範囲にある。"
+      },
+      {
+        "type": "p",
+        "content": "言語学習に魔法の近道はない。グロース・マインドセットは必要な武器の一つだが、諦める危険から守ってくれるには十分ではない。鍵は、時間と組み合わせた一貫した日々の努力だ。それが積み重なり、始めたときには可能だと思わなかった結果につながる。しかし、諦めずに何年も毎日勉強し続けるにはどうすればいいのか？それは第2部でカバーする。"
+      }
+    ],
+    "fr-ca": [
+      {
+        "type": "byline",
+        "name": "Alexandre Lim",
+        "role": "Senior Engineer chez Abbeal, Pôle Asie · Tokyo. React, testing frontend, software craftsmanship. Apprend le japonais depuis 2022.",
+        "linkedinUrl": "https://linkedin.com/in/alexandre-lim"
+      },
+      {
+        "type": "p",
+        "content": "2 septembre 2022. J'ai atterri à l'aéroport de Haneda, Tokyo. C'était ma première fois au Japon, pis je n'étais pas là comme touriste mais pour y vivre pis travailler dans le bureau japonais d'Abbeal."
+      },
+      {
+        "type": "p",
+        "content": "Tout était nouveau pis écrasant. Encore aujourd'hui, je me rappelle du mélange de nervosité pis d'excitation, pis de la première fois que j'ai utilisé mon japonais bancal dans une vraie situation. C'est ben drôle : la première fois que je suis allé au FamilyMart de Shibuya, quand le caissier m'a demandé si je voulais un sac de plastique, j'ai pas compris parce que j'avais juste appris le mot 「袋」(ふくろ) dans mon manuel. Il avait en fait dit 「レジ袋」(レジぶくろ), qui se traduit littéralement par « sac de caisse ». Mais à cause du rendaku, le changement sonore de ふくろ à ぶくろ, j'ai pas reconnu le mot que je connaissais."
+      },
+      {
+        "type": "p",
+        "content": "C'était le début d'un long parcours. Ça fait 4 ans que j'ai commencé à apprendre le japonais. J'ai passé le JLPT N3 en janvier 2025. J'suis pas allé dans une école japonaise. J'suis arrivé icitte à 29 ans, j'ai commencé à travailler tout de suite, pis j'ai appris le japonais sur mon temps libre en chemin."
+      },
+      {
+        "type": "p",
+        "content": "Te parler de ma routine d'étude pis des outils que j'utilise ça va rien changer si t'abandonnes six mois plus tard. Notre pire ennemi, c'est nous-mêmes. C'est pour ça que je veux commencer par partager l'état d'esprit qui m'a aidé à tenir. Dans la partie 2, je vais partager ce qui a marché pour moi pour continuer. Pis dans la partie finale, je vais te donner ma routine quotidienne pis mes recommandations de contenus."
+      },
+      {
+        "type": "h2",
+        "content": "Le Growth Mindset"
+      },
+      {
+        "type": "p",
+        "content": "Apprendre le japonais, c'est difficile. C'est pas juste comprendre pis parler des mots ou écrire des kanji. C'est aussi s'ouvrir à la culture du Japon, à son monde, à sa société, à sa façon de penser. Par exemple, « lire l'air » (空気を読む) c'est un des concepts les plus importants à saisir (ou au moins à essayer de saisir). Le japonais c'est une langue indirecte, à contexte élevé, avec des nuances que les manuels peuvent pas toujours capturer pis qui se saisissent juste à travers l'expérience pis parfois des situations gênantes..."
+      },
+      {
+        "type": "p",
+        "content": "D'après mon expérience, en étudiant de façon constante au moins 2h par jour, ça prend environ 2-3 ans pour atteindre un certain niveau de fluidité pour la vie de tous les jours. Pour les contextes professionnels, ça prend plus que 5 ans. Ben sûr, y'en a qui apprennent plus vite, pis ben des variables peuvent ralentir ou accélérer le processus, comme les locuteurs chinois qui connaissent déjà les kanji."
+      },
+      {
+        "type": "p",
+        "content": "Je veux pas donner de faux espoirs ou de rêves. Ça demande un effort constant sur une longue période. Ben du monde abandonne en chemin. C'est un danger auquel tout le monde fait face au début du parcours pis il est toujours tapi quelque part, prêt à nous sauter dessus dès qu'on montre de la faiblesse."
+      },
+      {
+        "type": "p",
+        "content": "Y'a des années, j'ai découvert le **Growth Mindset de Carol Dweck**. Un growth mindset, c'est la croyance que l'intelligence pis les talents peuvent être développés par l'effort pis l'apprentissage. C'est l'opposé du fixed mindset, la croyance que l'intelligence pis le talent sont des traits statiques qu'on a ou qu'on a pas. Y'a de la profondeur pis de la nuance pis je recommande fortement cette conférence de **Carol Dweck**."
+      },
+      {
+        "type": "p",
+        "content": "Les affaires me viennent pas facilement, mais adopter un Growth Mindset m'aide à rester positif pis à croire que je peux m'améliorer pis que mes efforts vont pas me trahir. Même lentement, je dois continuer à bâtir mon japonais étape par étape. Y'a un mot japonais célèbre qui décrit ce processus : *Kaizen* (改善). Ça veut dire « changement pour le mieux », pis ça fait référence à la pratique de faire des petites améliorations continues au fil du temps."
+      },
+      {
+        "type": "p",
+        "content": "Ça a pris du temps mais avec quelques heures par jour, j'ai pu atteindre le niveau JLPT N3. Abbeal couvrait 2 heures par semaine de cours en ligne pis j'étudiais tout seul avant ou après le travail presque à tous les jours."
+      },
+      {
+        "type": "p",
+        "content": "Le N3 me semblait tellement loin quand j'ai commencé. Juste penser au nombre de kanji pis de vocabulaire à mémoriser me submergeait. J'osais pas penser trop loin au N2 parce qu'y a un saut significatif comparé aux exigences du N3."
+      },
+      {
+        "type": "p",
+        "content": "« Est-ce que je peux vraiment le faire ? » « Combien de temps ça va prendre ? » Y'a eu des moments où ces questions m'ont inondé la tête, pis j'ai commencé à douter de moi. En me rappelant d'adopter un growth mindset, j'ai évité le piège de tomber dans le doute de soi. Je me suis dit que même si j'suis moyen, avec un effort dédié, je peux le faire. Au final, je l'ai vraiment fait. Le N3 est derrière moi, pis le N2 est astheure à portée."
+      },
+      {
+        "type": "p",
+        "content": "Y'a pas de raccourci magique pour apprendre une langue. Le growth mindset c'est une des armes nécessaires, mais c'est pas assez pour nous mettre à l'abri du danger d'abandonner. La clé, c'est l'effort quotidien constant combiné au temps. Ça se compose, ça mène à des résultats qu'on pensait pas possibles quand on a commencé. Mais comment continuer à étudier à tous les jours pendant des années sans abandonner ? C'est ce que je vais couvrir dans la deuxième partie."
+      }
+    ]
   }
 }
