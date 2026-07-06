@@ -189,11 +189,15 @@ export const landingPages: LandingPage[] = [
       ja: "// 東京",
       "fr-ca": "// TOKYO",
     },
+    // W28 reco SEO Cowork : aligner H1 sur le meme pattern
+    // keyword-frontloaded que la meta pour maximiser le signal SEO sur
+    // "tech consulting Tokyo" + "IT staffing Japan". H1 = title = meta,
+    // une seule verite. Pas de metaTitle en override -> fallback sur H1.
     h1: {
-      fr: "Tech Consulting à Tokyo — Équipes ingé seniors pour les entreprises occidentales.",
-      en: "Tech Consulting in Tokyo — Senior engineering teams for Western enterprises.",
-      ja: "東京のテックコンサルティング — 欧米企業向けシニアエンジニアリングチーム。",
-      "fr-ca": "Conseil techno à Tokyo — Équipes d'ingénierie seniors pour les entreprises occidentales.",
+      fr: "Tech Consulting Tokyo & IT staffing Japan — Équipes ingé seniors bilingues.",
+      en: "Tech Consulting Tokyo & IT staffing Japan — Senior bilingual engineering teams.",
+      ja: "東京のテックコンサルティング & 日本のIT人材確保 — シニアバイリンガルエンジニアリングチーム。",
+      "fr-ca": "Conseil techno Tokyo & IT staffing Japan — Équipes d'ingénierie seniors bilingues.",
     },
     subtitle: {
       fr: "Hub Tokyo opérationnel depuis 2018 : Money Forward (digital banking from-scratch), Cartier (LLM privé), Le Monde (Insights data depuis Tokyo). On parle JFSA, on staffe en JLPT N2+, on livre en mode hybride Tamachi/remote.",
@@ -201,16 +205,8 @@ export const landingPages: LandingPage[] = [
       ja: "2018年から稼働中の東京拠点：マネーフォワード（ゼロから構築するデジタルバンキング）、カルティエ（プライベートLLM）、ル・モンド（東京からのInsightsデータ）。JFSAに対応し、JLPT N2+でスタッフィングし、田町/リモートのハイブリッドモードで納品します。",
       "fr-ca": "Pôle Tokyo opérationnel depuis 2018 : Money Forward (banque numérique greenfield), Cartier (LLM privé), Le Monde (Insights data depuis Tokyo). On parle JFSA, on place en JLPT N2+, on livre en mode hybride Tamachi/à distance.",
     },
-    // W28 post-mortem : title HTML SEO decouple du H1 UI. Keyword-frontloaded
-    // 'Tech consulting Tokyo & IT staffing Japan' pour capter les 2
-    // intentions non-brandees principales (fix report utilisateur : le title
-    // n'avait pas bouge en PR#70 car h1 non modifie sur cette landing).
-    metaTitle: {
-      fr: "Tech consulting Tokyo & IT staffing Japan",
-      en: "Tech consulting Tokyo & IT staffing Japan",
-      ja: "東京のテックコンサルティング & 日本のIT人材確保",
-      "fr-ca": "Conseil techno Tokyo & IT staffing Japan",
-    },
+    // Pas de metaTitle : H1 deja keyword-frontloaded (voir commentaire H1),
+    // le fallback pick(h1, locale) suffit.
     // W28 QW3 : meta enrichie mots-cles cibles ("IT staffing Japan",
     // "senior developer recruitment Japan") + CTA final. Signal CTR
     // dans les SERPs Google/Bing.
