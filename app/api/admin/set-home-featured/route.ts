@@ -82,10 +82,14 @@ export async function POST(req: Request) {
         return;
       }
       const doc = found.docs[0]!;
+      // draft: true = bypass required-field validation (certains articles
+      // CMS ont body vide car pas encore migres depuis static). On ne
+      // change que featured/featuredOnHome, pas le contenu, donc OK.
       await payload.update({
         collection: "articles",
         id: doc.id as number,
         data,
+        draft: true,
         overrideAccess: true,
         context: { autoTranslate: true },
       });
