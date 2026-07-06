@@ -445,7 +445,14 @@
       "ok": "Inscription enregistrée. À très vite.",
       "errorGeneric": "Erreur. Réessaie ou écris-nous à contact@abbeal.com."
     },
-    "status": "Tous les services opérationnels"
+    "status": "Tous les services opérationnels",
+    "landingsTitle": "Nos expertises",
+    "landings": {
+      "techConsultingTokyo": "Tech consulting Tokyo",
+      "esnTriGeoJapon": "ESN française à Tokyo",
+      "intlRecruitment": "Recrutement tech international",
+      "followTheSun": "24/7 Follow-the-Sun delivery"
+    }
   },
   "cookieBanner": {
     "title": "// Cookies et consentement",

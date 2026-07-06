@@ -445,7 +445,14 @@
       "ok": "You're in. See you soon.",
       "errorGeneric": "Something went wrong. Try again or email contact@abbeal.com."
     },
-    "status": "All systems operational"
+    "status": "All systems operational",
+    "landingsTitle": "Our expertise",
+    "landings": {
+      "techConsultingTokyo": "Tech consulting Tokyo",
+      "esnTriGeoJapon": "French tech firm in Tokyo",
+      "intlRecruitment": "International tech recruitment",
+      "followTheSun": "24/7 Follow-the-Sun delivery"
+    }
   },
   "cookieBanner": {
     "title": "// Cookies & consent",
