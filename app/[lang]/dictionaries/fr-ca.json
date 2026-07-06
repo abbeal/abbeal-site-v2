@@ -446,7 +446,14 @@
       "ok": "Abonnement enregistré. À très bientôt.",
       "errorGeneric": "Erreur. Réessaie ou écris-nous à contact@abbeal.com."
     },
-    "status": "Tous les services en marche"
+    "status": "Tous les services en marche",
+    "landingsTitle": "Nos expertises",
+    "landings": {
+      "techConsultingTokyo": "Conseil techno Tokyo",
+      "esnTriGeoJapon": "Cabinet français à Tokyo",
+      "intlRecruitment": "Recrutement techno international",
+      "followTheSun": "24/7 Follow-the-Sun delivery"
+    }
   },
   "cookieBanner": {
     "title": "// Témoins et consentement",

@@ -196,11 +196,14 @@ export const landingPages: LandingPage[] = [
       ja: "2018年から稼働中の東京拠点：マネーフォワード（ゼロから構築するデジタルバンキング）、カルティエ（プライベートLLM）、ル・モンド（東京からのInsightsデータ）。JFSAに対応し、JLPT N2+でスタッフィングし、田町/リモートのハイブリッドモードで納品します。",
       "fr-ca": "Pôle Tokyo opérationnel depuis 2018 : Money Forward (banque numérique greenfield), Cartier (LLM privé), Le Monde (Insights data depuis Tokyo). On parle JFSA, on place en JLPT N2+, on livre en mode hybride Tamachi/à distance.",
     },
+    // W28 QW3 : meta enrichie mots-cles cibles ("IT staffing Japan",
+    // "senior developer recruitment Japan") + CTA final. Signal CTR
+    // dans les SERPs Google/Bing.
     metaDescription: {
-      fr: "Tech consulting à Tokyo : équipes ingé seniors bilingues (JLPT N2+) pour entreprises occidentales. Clients : Money Forward, Cartier, Le Monde. Hub depuis 2018.",
-      en: "Tech consulting in Tokyo: senior bilingual engineering teams (JLPT N2+) for Western enterprises. Clients: Money Forward, Cartier, Le Monde. Hub since 2018.",
-      ja: "東京のテックコンサルティング：欧米企業向けシニアバイリンガルエンジニアリングチーム（JLPT N2+）。クライアント：マネーフォワード、カルティエ、ル・モンド。2018年から拠点。",
-      "fr-ca": "Conseil techno à Tokyo : équipes d'ingénierie seniors bilingues (JLPT N2+) pour entreprises occidentales. Clients : Money Forward, Cartier, Le Monde. Pôle depuis 2018.",
+      fr: "Tech consulting Tokyo & IT staffing Japan : équipes ingé seniors bilingues (JLPT N2+) pour entreprises occidentales. Clients : Money Forward, Cartier, Le Monde. Hub depuis 2018. Discuter avec un consultant Abbeal.",
+      en: "Tech consulting Tokyo & IT staffing Japan: senior bilingual engineering teams (JLPT N2+) for Western enterprises. Clients: Money Forward, Cartier, Le Monde. Hub since 2018. Talk to an Abbeal consultant.",
+      ja: "東京のテックコンサルティング & 日本のIT人材確保：欧米企業向けシニアバイリンガルエンジニアリングチーム（JLPT N2+）。クライアント：マネーフォワード、カルティエ、ル・モンド。2018年から拠点。Abbealコンサルタントに相談。",
+      "fr-ca": "Conseil techno à Tokyo & IT staffing Japan : équipes d'ingénierie seniors bilingues (JLPT N2+) pour entreprises occidentales. Clients : Money Forward, Cartier, Le Monde. Pôle depuis 2018. Parle à un consultant Abbeal.",
     },
     body: {
       fr: BODIES["tech-consulting-tokyo"]?.body?.fr ?? [],
@@ -344,10 +347,13 @@ export const landingPages: LandingPage[] = [
       "fr-ca": "// PÔLE TOKYO",
     },
     h1: {
-      fr: "Une ESN tri-géo qui opère vraiment depuis Tokyo.",
-      en: "A tri-geo engineering firm that actually operates from Tokyo.",
-      ja: "東京から本当に運営する三拠点エンジニアリングファーム。",
-      "fr-ca": "Une compagnie d'ingénierie tri-pôle qui opère vraiment depuis Tokyo.",
+      // W28 QW3 : "ESN française Tokyo" + "ESN tri-géo Japon" = mots-cles
+      // cibles absents du top 50 GSC. Frontload pour ranker sur ces
+      // intentions commerciales B2B FR.
+      fr: "ESN française à Tokyo : studio tri-géo qui opère vraiment depuis le Japon.",
+      en: "French tech consulting firm in Tokyo: tri-geo engineering studio that actually operates from Japan.",
+      ja: "東京のフランス系ITコンサルティングファーム：日本から本当に運営する三拠点エンジニアリングスタジオ。",
+      "fr-ca": "Cabinet d'ingénierie français à Tokyo : studio tri-pôle qui opère vraiment depuis le Japon.",
     },
     subtitle: {
       fr: "Hub permanent à Higashi-Azabu (Minato-ku) depuis 2018. Recrutement local de seniors JP, pont culturel FR/JP, projets tech ambitieux pour CTOs européens et japonais. Pas une boîte aux lettres, pas un BPO : un vrai bureau, une vraie équipe, du vrai code livré depuis Tokyo.",
@@ -355,11 +361,13 @@ export const landingPages: LandingPage[] = [
       ja: "2018年から麻布十番（港区）に常設拠点。JPシニアの現地採用、FR/JP文化的架け橋、欧州と日本のCTO向けの野心的なテックプロジェクト。郵便箱ではなく、BPOでもない：本物のオフィス、本物のチーム、東京から出荷される本物のコード。",
       "fr-ca": "Pôle permanent à Higashi-Azabu (Minato-ku) depuis 2018. Recrutement local de seniors JP, pont culturel FR/JP, projets technos ambitieux pour CTOs européens et japonais. Pas une boîte aux lettres, pas un BPO : un vrai bureau, une vraie équipe, du vrai code livré depuis Tokyo.",
     },
+    // W28 QW3 : "ESN française Tokyo" + "ESN tri-géo Japon" front-loaded
+    // + CTA parler à Abbeal.
     metaDescription: {
-      fr: "Abbeal est une ESN tri-géo avec un hub permanent à Tokyo (Higashi-Azabu). Recrutement local de seniors JP, pont culturel FR/JP, projets tech ambitieux pour CTOs européens et japonais.",
-      en: "Abbeal is a tri-geo engineering firm with a permanent Tokyo hub (Higashi-Azabu). Local senior hiring in JP, FR/JP cultural bridge, ambitious tech projects for European and Japanese CTOs.",
-      ja: "Abbealは東京（麻布十番）に常設拠点を持つ三拠点エンジニアリングファーム。JPシニアの現地採用、FR/JP文化的架け橋、欧州と日本のCTO向けの野心的なプロジェクト。",
-      "fr-ca": "Abbeal est une compagnie d'ingénierie tri-pôle avec un hub permanent à Tokyo (Higashi-Azabu). Recrutement local de seniors JP, pont culturel FR/JP, projets technos ambitieux.",
+      fr: "ESN française à Tokyo depuis 2018 : hub permanent à Higashi-Azabu (Minato-ku). Recrutement local de seniors JP, pont culturel FR/JP, projets tech ambitieux pour CTOs européens et japonais. Rencontrer l'équipe Tokyo.",
+      en: "French tech consulting firm in Tokyo since 2018: permanent hub in Higashi-Azabu (Minato-ku). Local senior hiring in JP, FR/JP cultural bridge, ambitious tech projects for European and Japanese CTOs. Meet the Tokyo team.",
+      ja: "2018年から東京のフランス系ITコンサルティングファーム：麻布十番（港区）に常設拠点。JPシニアの現地採用、FR/JP文化的架け橋、欧州と日本のCTO向けの野心的なプロジェクト。東京チームに会う。",
+      "fr-ca": "Cabinet d'ingénierie français à Tokyo depuis 2018 : pôle permanent à Higashi-Azabu (Minato-ku). Recrutement local de seniors JP, pont culturel FR/JP, projets technos ambitieux. Rencontrer l'équipe Tokyo.",
     },
     body: {
       fr: BODIES["esn-tri-geo-japon"]?.body?.fr ?? [],
@@ -400,11 +408,14 @@ export const landingPages: LandingPage[] = [
       ja: "// 採用",
       "fr-ca": "// RECRUTEMENT",
     },
+    // W28 QW3 : keyword-frontloading "recrutement tech international" +
+    // "cabinet" pour capter l'intention commerciale non-brandee (audit SEO
+    // W28 : aucun mot-cle cible dans top 50 GSC 90j).
     h1: {
-      fr: "Recruter des seniors tech sur 3 pays. Le bon profil, pas le rapide.",
-      en: "Hire senior tech across 3 countries. The right fit, not the fast hire.",
-      ja: "3カ国でシニアテックを採用。早い採用ではなく、適切なフィット。",
-      "fr-ca": "Recruter des seniors techno sur 3 pays. Le bon profil, pas le rapide.",
+      fr: "Recrutement tech international : cabinet multi-pays pour vos seniors, pas juste des CV rapides.",
+      en: "International tech recruitment: multi-country agency for senior hires, not just fast CVs.",
+      ja: "国際テック採用：シニア人材のための多国籍エージェンシー、単なる履歴書の速射ではない。",
+      "fr-ca": "Recrutement techno international : cabinet multi-pays pour tes seniors, pas juste des CV rapides.",
     },
     subtitle: {
       fr: "Sourcing senior dans 3 pays (France, Canada, Japon). Top 1 % validé par des ingés Abbeal (pas par des RH), process court (5 étapes max), garantie 6 mois. Mobbeal pour la mobilité internationale incluse. Cabinet de recrutement tech multi-pays opéré par une ESN tri-géo.",
@@ -412,11 +423,13 @@ export const landingPages: LandingPage[] = [
       ja: "3カ国（フランス、カナダ、日本）でのシニアソーシング。Abbealのエンジニアによって検証されたトップ1%（人事リクルーターではない）、短いプロセス（最大5ステップ）、6ヶ月保証。国際モビリティのためのMobbeal含む。三拠点エンジニアリング会社が運営するテック採用エージェンシー。",
       "fr-ca": "Recherche de seniors dans 3 pays (France, Canada, Japon). Top 1 % validé par des ingés Abbeal (pas par des RH), processus court (5 étapes max), garantie 6 mois. Mobbeal pour la mobilité internationale incluse. Cabinet de recrutement techno multi-pays opéré par une compagnie d'ingénierie tri-pôle.",
     },
+    // W28 QW3 : "international tech recruitment" + "cabinet recrutement
+    // multi-pays" front-loaded + CTA.
     metaDescription: {
-      fr: "Sourcing senior dans 3 pays. Top 1 % validé par des ingés Abbeal, process court (5 étapes max), Mobbeal pour la mobilité internationale. Cabinet de recrutement tech multi-pays par ESN tri-géo.",
-      en: "Senior sourcing across 3 countries. Top 1% validated by Abbeal engineers, short process (5 steps max), Mobbeal for international mobility. Tech recruitment firm by tri-geo engineering company.",
-      ja: "3カ国でのシニアソーシング。Abbealのエンジニアによって検証されたトップ1%、短いプロセス（最大5ステップ）、国際モビリティのためのMobbeal。三拠点エンジニアリング会社による多国籍テック採用エージェンシー。",
-      "fr-ca": "Recherche de seniors dans 3 pays. Top 1 % validé par des ingés Abbeal, processus court (5 étapes max), Mobbeal pour la mobilité internationale. Cabinet de recrutement techno multi-pays par compagnie d'ingénierie tri-pôle.",
+      fr: "Recrutement tech international : cabinet multi-pays (France / Canada / Japon). Top 1 % validé par des ingés Abbeal, process court (5 étapes max), garantie 6 mois. Mobbeal pour la mobilité internationale. Demander une shortlist.",
+      en: "International tech recruitment: multi-country agency (France / Canada / Japan). Top 1% validated by Abbeal engineers, short process (5 steps max), 6-month guarantee. Mobbeal for international mobility. Request a shortlist.",
+      ja: "国際テック採用：多国籍エージェンシー（フランス／カナダ／日本）。Abbealのエンジニアによって検証されたトップ1%、短いプロセス（最大5ステップ）、6ヶ月保証。国際モビリティのためのMobbeal。ショートリストをリクエスト。",
+      "fr-ca": "Recrutement techno international : cabinet multi-pays (France / Canada / Japon). Top 1 % validé par des ingés Abbeal, processus court (5 étapes max), garantie 6 mois. Mobbeal pour la mobilité internationale. Demande une shortlist.",
     },
     body: {
       fr: BODIES["recrutement-tech-international"]?.body?.fr ?? [],

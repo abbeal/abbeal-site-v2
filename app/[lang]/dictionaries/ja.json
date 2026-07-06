@@ -445,7 +445,14 @@
       "ok": "登録完了。またお会いしましょう。",
       "errorGeneric": "エラーが発生しました。再試行するか、contact@abbeal.com までご連絡ください。"
     },
-    "status": "全サービス稼働中"
+    "status": "全サービス稼働中",
+    "landingsTitle": "専門領域",
+    "landings": {
+      "techConsultingTokyo": "東京のテックコンサルティング",
+      "esnTriGeoJapon": "東京のフランス系ITファーム",
+      "intlRecruitment": "国際テック採用",
+      "followTheSun": "24/7 フォロー・ザ・サン・デリバリー"
+    }
   },
   "cookieBanner": {
     "title": "// Cookieと同意",

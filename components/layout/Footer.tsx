@@ -265,7 +265,61 @@ export function Footer({
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-[var(--color-border)] flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        {/* W28 QW3 : bandeau maillage interne vers les landings signature.
+            Ajout de 4 liens vers les pages commerciales non-brandees pour
+            renforcer leur PageRank interne (Footer = presente sur toutes
+            les pages du site). Cible : recrutement-tech-international +
+            esn-tri-geo-japon qui n'avaient AUCUN lien interne avant. */}
+        <div className="mt-14 pt-6 border-t border-[var(--color-border)]/70">
+          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-muted)] mb-4">
+            {(d.footer as unknown as Record<string, string>).landingsTitle ??
+              "Nos expertises"}
+          </p>
+          <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+            <li>
+              <Link
+                href={`${p}/tech-consulting-tokyo`}
+                className="hover:text-[var(--color-brand-teal)] transition-colors"
+              >
+                {((d.footer as unknown as Record<string, Record<string, string>>)
+                  .landings ?? {}).techConsultingTokyo ??
+                  "Tech consulting Tokyo"}
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`${p}/esn-tri-geo-japon`}
+                className="hover:text-[var(--color-brand-teal)] transition-colors"
+              >
+                {((d.footer as unknown as Record<string, Record<string, string>>)
+                  .landings ?? {}).esnTriGeoJapon ??
+                  "ESN française à Tokyo"}
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`${p}/recrutement-tech-international`}
+                className="hover:text-[var(--color-brand-teal)] transition-colors"
+              >
+                {((d.footer as unknown as Record<string, Record<string, string>>)
+                  .landings ?? {}).intlRecruitment ??
+                  "Recrutement tech international"}
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`${p}/follow-the-sun-delivery`}
+                className="hover:text-[var(--color-brand-teal)] transition-colors"
+              >
+                {((d.footer as unknown as Record<string, Record<string, string>>)
+                  .landings ?? {}).followTheSun ??
+                  "24/7 Follow-the-Sun delivery"}
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div className="mt-10 pt-8 border-t border-[var(--color-border)] flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
             <p className="font-mono text-xs text-[var(--color-muted)]">
               {d.footer.copyright}
