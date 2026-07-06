@@ -18,10 +18,16 @@ export type TechRadarEdition = {
 
 export const TECH_RADAR_EDITIONS: TechRadarEdition[] = [
   {
+    slug: "2026-q3",
+    publishedAt: "2026-07-08",
+    title: "Tech Radar Q3 2026",
+    current: true,
+  },
+  {
     slug: "2026-q2",
     publishedAt: "2026-04-15",
     title: "Tech Radar Q2 2026",
-    current: true,
+    current: false,
   },
 ];
 
