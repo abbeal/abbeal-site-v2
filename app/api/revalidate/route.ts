@@ -64,6 +64,11 @@ const ALLOWED_PATHS = new Set<string>([
 const INSIGHT_DETAIL_PATTERN = /^\/(fr|en|ja|fr-ca)\/insights\/[a-z0-9-]+$/;
 // Pour /careers/[slug] : idem
 const CAREER_DETAIL_PATTERN = /^\/(fr|en|ja|fr-ca)\/careers\/[a-z0-9-]+$/;
+// Landings /[lang]/[slug] : ISR fresh-code deploy sans purge CDN (W28
+// post-mortem : PR#75 mergee mais CDN Vercel a servi la version stale
+// pendant 15 min+ apres le deploy). Permet un force-refresh apres
+// modification du contenu d'une landing (h1, meta, body).
+const LANDING_DETAIL_PATTERN = /^\/(fr|en|ja|fr-ca)\/[a-z0-9-]+$/;
 
 export async function POST(req: Request) {
   try {
@@ -88,7 +93,8 @@ export async function POST(req: Request) {
       !path ||
       (!ALLOWED_PATHS.has(path) &&
         !INSIGHT_DETAIL_PATTERN.test(path) &&
-        !CAREER_DETAIL_PATTERN.test(path))
+        !CAREER_DETAIL_PATTERN.test(path) &&
+        !LANDING_DETAIL_PATTERN.test(path))
     ) {
       return NextResponse.json(
         { error: "invalid path (not in whitelist)" },
