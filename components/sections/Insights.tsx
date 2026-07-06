@@ -27,10 +27,11 @@ const VISUAL_MAP: Record<string, React.FC> = {
   "agents-ia-production": AgentTerminalVisual,
   "greenops-7-leviers": GreenOpsBarsVisual,
   "tech-radar-2026": TechRadarVisual,
-  // 3 nouveaux articles a la une (juillet 2026)
+  // Featured juillet 2026
   "patron-et-de-gauche": PatronGaucheVisual,
   "ingenieur-france-quebec-japon-2026": TriPaysVisual,
   "conseil-vs-ia-accenture-karpathy": ConseilVsIaVisual,
+  "embeddings-rag-entreprise-guide": EmbeddingsRagVisual,
 };
 
 function InsightVisual({
@@ -359,6 +360,114 @@ function ConseilVsIaVisual() {
           fill="var(--color-brand-teal)"
         >
           IA / FDE
+        </text>
+      </svg>
+    </div>
+  );
+}
+
+/* Visual 7 — Espace vectoriel pour "Embeddings RAG entreprise guide".
+ * Query point au centre (teal), 3 nearest neighbors surlignes reliees par
+ * lignes dashed + cluster de documents en fond. Signal tech RAG concret. */
+function EmbeddingsRagVisual() {
+  // Coordonnees des points documents (spread realiste dans l'espace 2D)
+  const query = { x: 50, y: 38 };
+  const neighbors = [
+    { x: 42, y: 30, sim: "0.91" },
+    { x: 58, y: 32, sim: "0.87" },
+    { x: 48, y: 48, sim: "0.83" },
+  ];
+  const others = [
+    { x: 22, y: 18 }, { x: 32, y: 15 }, { x: 20, y: 32 },
+    { x: 78, y: 20 }, { x: 82, y: 40 }, { x: 75, y: 55 },
+    { x: 28, y: 55 }, { x: 15, y: 48 }, { x: 65, y: 62 },
+    { x: 88, y: 60 }, { x: 35, y: 65 },
+  ];
+  return (
+    <div className="absolute inset-0 bg-[var(--color-bg-cream)] p-5 pt-14">
+      <div className="absolute top-12 right-4 text-right">
+        <p className="font-mono text-[9px] uppercase tracking-wider text-[var(--color-brand-teal)]">
+          vector · 1536D
+        </p>
+      </div>
+      <svg
+        viewBox="0 0 100 75"
+        className="absolute inset-x-5 top-14 bottom-5 w-[calc(100%-2.5rem)] h-[calc(100%-4.5rem)]"
+        preserveAspectRatio="xMidYMid meet"
+      >
+        {/* Grille dashed subtile (espace vectoriel) */}
+        <g stroke="var(--color-ink)" strokeOpacity="0.1" strokeWidth="0.3" strokeDasharray="1.5 1.5">
+          <line x1="0" y1="20" x2="100" y2="20" />
+          <line x1="0" y1="40" x2="100" y2="40" />
+          <line x1="0" y1="60" x2="100" y2="60" />
+          <line x1="25" y1="0" x2="25" y2="75" />
+          <line x1="50" y1="0" x2="50" y2="75" />
+          <line x1="75" y1="0" x2="75" y2="75" />
+        </g>
+        {/* Zone de similarite (halo cercle autour du query) */}
+        <circle
+          cx={query.x}
+          cy={query.y}
+          r="14"
+          fill="var(--color-brand-teal)"
+          fillOpacity="0.06"
+        />
+        <circle
+          cx={query.x}
+          cy={query.y}
+          r="14"
+          fill="none"
+          stroke="var(--color-brand-teal)"
+          strokeOpacity="0.3"
+          strokeWidth="0.3"
+          strokeDasharray="1 1"
+        />
+        {/* Documents autres (dots grises) */}
+        <g fill="var(--color-ink)" fillOpacity="0.28">
+          {others.map((p, i) => (
+            <circle key={i} cx={p.x} cy={p.y} r="1.4" />
+          ))}
+        </g>
+        {/* Nearest neighbors : lignes dashed vers query + surlignes teal */}
+        <g stroke="var(--color-brand-teal)" strokeWidth="0.4" strokeDasharray="1 1" strokeOpacity="0.7">
+          {neighbors.map((n, i) => (
+            <line key={i} x1={query.x} y1={query.y} x2={n.x} y2={n.y} />
+          ))}
+        </g>
+        {neighbors.map((n, i) => (
+          <g key={i}>
+            <circle cx={n.x} cy={n.y} r="1.8" fill="var(--color-brand-teal)" />
+            <text
+              x={n.x + 3.2}
+              y={n.y + 1.2}
+              fontFamily="var(--font-mono)"
+              fontSize="2.8"
+              fill="var(--color-ink)"
+              fillOpacity="0.8"
+            >
+              {n.sim}
+            </text>
+          </g>
+        ))}
+        {/* Query point */}
+        <circle cx={query.x} cy={query.y} r="2.5" fill="var(--color-ink)" />
+        <circle
+          cx={query.x}
+          cy={query.y}
+          r="4.5"
+          fill="none"
+          stroke="var(--color-ink)"
+          strokeWidth="0.5"
+        />
+        <text
+          x={query.x + 6}
+          y={query.y + 1.2}
+          fontFamily="var(--font-mono)"
+          fontSize="3.2"
+          fontWeight="600"
+          fill="var(--color-ink)"
+        >
+          query
         </text>
       </svg>
     </div>

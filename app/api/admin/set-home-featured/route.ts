@@ -20,21 +20,23 @@ export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
 // Les 3 articles a mettre a la une (validation Sebastien juillet 2026).
-// Note : ia-avenir-du-travail-ce-que-disent-les-chiffres etait dans la
-// selection initiale mais a body vide en CMS -> update rejete par Payload
-// (Body required). Remplace par patron-et-de-gauche (positionnement fort
-// signature Sebastien, angle differenciant).
+// Iteration 2 : swap patron-et-de-gauche -> embeddings-rag-entreprise-guide
+// pour equilibrer avec un signal TECH concret (RAG, vecteurs) qui complete
+// bien Accenture-Karpathy (IA strategique haut niveau) et ingenieur-3-pays
+// (comparatif mobilite).
 const TO_FEATURE = [
-  "patron-et-de-gauche",
+  "embeddings-rag-entreprise-guide",
   "ingenieur-france-quebec-japon-2026",
   "conseil-vs-ia-accenture-karpathy",
 ] as const;
 
 // Anciens articles a retirer de featuredOnHome (mais keep featured=true
-// pour qu'ils restent en tete du listing /insights)
+// pour qu'ils restent en tete du listing /insights). Inclut patron-et-de-
+// gauche depuis iter2 (swap vers embeddings-rag).
 const TO_UNFEATURE_HOME_ONLY = [
   "agents-ia-production",
   "output-based-vs-time-material",
+  "patron-et-de-gauche",
 ] as const;
 
 export async function POST(req: Request) {
