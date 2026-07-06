@@ -51,7 +51,13 @@ export async function generateMetadata({
   const page = getLandingPage(slug);
   if (!page) return {};
   const locale = lang as Locale;
-  const title = pick(page.h1, locale);
+  // Title HTML SEO : utilise metaTitle si defini (permet keyword-frontloaded
+  // sans changer le H1 UI), sinon fallback sur le H1 render. Ajout W28
+  // post-mortem : le H1 tech-consulting-tokyo n'avait pas ete modifie en
+  // PR#70, donc le <title> restait l'ancien. Decouplage clean.
+  const title = page.metaTitle
+    ? pick(page.metaTitle, locale)
+    : pick(page.h1, locale);
   const description = pick(page.metaDescription, locale);
   const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
   const url = `${SITE}/${locale}/${slug}`;

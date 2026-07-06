@@ -81,6 +81,11 @@ export type LandingPage = {
   tape: Translatable<string>;
   h1: Translatable<string>;
   subtitle: Translatable<string>;
+  /** Title HTML SEO (60 chars max recommandé). Si defini, remplace le H1
+   *  comme source du <title> genere dans generateMetadata + openGraph.title
+   *  + twitter.title. Permet de decoupler la punchline UI (H1 court) du
+   *  title SEO keyword-frontloaded. Fallback : pick(h1, locale). */
+  metaTitle?: Translatable<string>;
   /** Description meta (155 chars max recommandé). */
   metaDescription: Translatable<string>;
   /** Body : suite de blocks h2/p/list/callout/quote (ArticleBlocks). */
@@ -184,11 +189,15 @@ export const landingPages: LandingPage[] = [
       ja: "// 東京",
       "fr-ca": "// TOKYO",
     },
+    // W28 reco SEO Cowork : aligner H1 sur le meme pattern
+    // keyword-frontloaded que la meta pour maximiser le signal SEO sur
+    // "tech consulting Tokyo" + "IT staffing Japan". H1 = title = meta,
+    // une seule verite. Pas de metaTitle en override -> fallback sur H1.
     h1: {
-      fr: "Tech Consulting à Tokyo — Équipes ingé seniors pour les entreprises occidentales.",
-      en: "Tech Consulting in Tokyo — Senior engineering teams for Western enterprises.",
-      ja: "東京のテックコンサルティング — 欧米企業向けシニアエンジニアリングチーム。",
-      "fr-ca": "Conseil techno à Tokyo — Équipes d'ingénierie seniors pour les entreprises occidentales.",
+      fr: "Tech Consulting Tokyo & IT staffing Japan — Équipes ingé seniors bilingues.",
+      en: "Tech Consulting Tokyo & IT staffing Japan — Senior bilingual engineering teams.",
+      ja: "東京のテックコンサルティング & 日本のIT人材確保 — シニアバイリンガルエンジニアリングチーム。",
+      "fr-ca": "Conseil techno Tokyo & IT staffing Japan — Équipes d'ingénierie seniors bilingues.",
     },
     subtitle: {
       fr: "Hub Tokyo opérationnel depuis 2018 : Money Forward (digital banking from-scratch), Cartier (LLM privé), Le Monde (Insights data depuis Tokyo). On parle JFSA, on staffe en JLPT N2+, on livre en mode hybride Tamachi/remote.",
@@ -196,6 +205,8 @@ export const landingPages: LandingPage[] = [
       ja: "2018年から稼働中の東京拠点：マネーフォワード（ゼロから構築するデジタルバンキング）、カルティエ（プライベートLLM）、ル・モンド（東京からのInsightsデータ）。JFSAに対応し、JLPT N2+でスタッフィングし、田町/リモートのハイブリッドモードで納品します。",
       "fr-ca": "Pôle Tokyo opérationnel depuis 2018 : Money Forward (banque numérique greenfield), Cartier (LLM privé), Le Monde (Insights data depuis Tokyo). On parle JFSA, on place en JLPT N2+, on livre en mode hybride Tamachi/à distance.",
     },
+    // Pas de metaTitle : H1 deja keyword-frontloaded (voir commentaire H1),
+    // le fallback pick(h1, locale) suffit.
     // W28 QW3 : meta enrichie mots-cles cibles ("IT staffing Japan",
     // "senior developer recruitment Japan") + CTA final. Signal CTR
     // dans les SERPs Google/Bing.
@@ -306,6 +317,16 @@ export const landingPages: LandingPage[] = [
       ja: "東京に挑戦したい？Abbealは既にMobbeal経由で50名以上のエンジニアを東京に派遣しました。ビザ、住居、家族、学校を弊社が対応し、マネーフォワード、ル・モンド、カルティエなどのクライアントにアサインします。あなたはコーディングし、日本での生活を楽しむ、残りは弊社が対応します。",
       "fr-ca": "Tokyo te tente ? Abbeal a déjà installé 50+ ingés à Tokyo via Mobbeal. On prend en charge visa, logement, famille, école, et on te place chez Money Forward, Le Monde, Cartier ou autres clients. Tu codes, tu vis ta vie japonaise, on gère le reste.",
     },
+    // W28 post-mortem : title HTML SEO decouple du H1 (H1 = punchline UI
+     // longue, title = keyword-frontloaded court pour SERPs). H1 render
+     // reste plein 'Engineering jobs a Tokyo & developer jobs Japan...'
+     // mais SERP affiche le short punchy.
+    metaTitle: {
+      fr: "Engineering jobs Tokyo & developer jobs Japan",
+      en: "Engineering jobs Tokyo & developer jobs Japan",
+      ja: "東京のエンジニアリング職 & 日本の開発者求人",
+      "fr-ca": "Emplois ingénierie Tokyo & jobs développeur Japon",
+    },
     metaDescription: {
       fr: "Engineering jobs à Tokyo : programme Mobbeal Abbeal pour ingés tech. Visa + logement + famille + école pris en charge. 50+ expats déjà installés à Tokyo.",
       en: "Engineering jobs in Tokyo: Abbeal's Mobbeal mobility programme for tech engineers. Visa, housing, family, schools handled. 50+ expats already in Tokyo.",
@@ -363,6 +384,14 @@ export const landingPages: LandingPage[] = [
       en: "Permanent hub in Higashi-Azabu (Minato-ku) since 2018. Local senior hiring in JP, FR/JP cultural bridge, ambitious tech projects for European and Japanese CTOs. Not a mailbox, not a BPO: a real office, a real team, real code shipped from Tokyo.",
       ja: "2018年から麻布十番（港区）に常設拠点。JPシニアの現地採用、FR/JP文化的架け橋、欧州と日本のCTO向けの野心的なテックプロジェクト。郵便箱ではなく、BPOでもない：本物のオフィス、本物のチーム、東京から出荷される本物のコード。",
       "fr-ca": "Pôle permanent à Higashi-Azabu (Minato-ku) depuis 2018. Recrutement local de seniors JP, pont culturel FR/JP, projets technos ambitieux pour CTOs européens et japonais. Pas une boîte aux lettres, pas un BPO : un vrai bureau, une vraie équipe, du vrai code livré depuis Tokyo.",
+    },
+    // W28 post-mortem : title SEO decouple du H1. H1 = punchline longue,
+    // title = keyword-frontloaded court.
+    metaTitle: {
+      fr: "ESN française à Tokyo — Studio tri-géo Japon",
+      en: "French tech consulting firm in Tokyo — Tri-geo studio Japan",
+      ja: "東京のフランス系ITコンサルティングファーム — 三拠点スタジオ",
+      "fr-ca": "Cabinet d'ingénierie français à Tokyo — Studio tri-pôle",
     },
     // W28 QW3 : "ESN française Tokyo" + "ESN tri-géo Japon" front-loaded
     // + CTA parler à Abbeal.
@@ -425,6 +454,14 @@ export const landingPages: LandingPage[] = [
       en: "Senior sourcing across 3 countries (France, Canada, Japan). Top 1% validated by Abbeal engineers (not HR recruiters), short process (5 steps max), 6-month guarantee. Mobbeal for international mobility included. Tech recruitment firm operated by a tri-geo engineering company.",
       ja: "3カ国（フランス、カナダ、日本）でのシニアソーシング。Abbealのエンジニアによって検証されたトップ1%（人事リクルーターではない）、短いプロセス（最大5ステップ）、6ヶ月保証。国際モビリティのためのMobbeal含む。三拠点エンジニアリング会社が運営するテック採用エージェンシー。",
       "fr-ca": "Recherche de seniors dans 3 pays (France, Canada, Japon). Top 1 % validé par des ingés Abbeal (pas par des RH), processus court (5 étapes max), garantie 6 mois. Mobbeal pour la mobilité internationale incluse. Cabinet de recrutement techno multi-pays opéré par une compagnie d'ingénierie tri-pôle.",
+    },
+    // W28 post-mortem : title SEO decouple du H1. H1 = punchline longue,
+    // title = keyword-frontloaded court.
+    metaTitle: {
+      fr: "Recrutement tech international — Cabinet multi-pays",
+      en: "International tech recruitment — Multi-country agency",
+      ja: "国際テック採用 — 多国籍エージェンシー",
+      "fr-ca": "Recrutement techno international — Cabinet multi-pays",
     },
     // W28 QW3 : "international tech recruitment" + "cabinet recrutement
     // multi-pays" front-loaded + CTA.
