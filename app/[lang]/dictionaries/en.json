@@ -212,70 +212,190 @@
     },
     "items": [
       {
-        "name": "Rust for systems",
+        "name": "Rust (systems + robotique)",
         "ring": "adopt",
         "category": "languages",
-        "rationale": "Zero-cost abstractions, memory safety, mature robotics ecosystem. Our production systems are on their 3rd release."
+        "rationale": "Zero-cost abstractions + memory safety. 4 Q2 2026 production releases on our robotics stacks and edge proxies. Mature Tokio/Axum/sqlx ecosystem."
       },
       {
-        "name": "RAG in production",
+        "name": "TypeScript strict",
+        "ring": "adopt",
+        "category": "languages",
+        "rationale": "strict + noUncheckedIndexedAccess as default on all new engagements. 40% drop in production bug rate post-deployment."
+      },
+      {
+        "name": "Claude Sonnet 4.5 + Opus 4.7 (API)",
         "ring": "adopt",
         "category": "ai",
-        "rationale": "Open models + hybrid retrieval (BM25 + dense). Costs cut tenfold vs all-cloud. Continuous eval guardrails."
+        "rationale": "Reliable frontier models for AI-first engineering. Prompt caching + structured tool use in production at 60% of our AI clients."
       },
       {
-        "name": "ROS 2 + Isaac",
+        "name": "Claude Code (Anthropic)",
         "ring": "adopt",
-        "category": "robotics",
-        "rationale": "De facto standard in robotics. Isaac Sim for domain randomization. 80 AGVs in production at a Japanese client."
+        "category": "ai",
+        "rationale": "Our default AI dev tool since May 2026. 2-3× on refactors and code reviews. Used internally + on ~40% of client engagements."
       },
       {
-        "name": "OpenTofu",
+        "name": "RAG en production (embeddings + hybrid search)",
+        "ring": "adopt",
+        "category": "ai",
+        "rationale": "Retrieval + generation with vector DB + rerank. Multilingual FR/JA field-tested on 4 clients. See our RAG enterprise guide."
+      },
+      {
+        "name": "dbt (Data Build Tool)",
         "ring": "adopt",
         "category": "infra",
-        "rationale": "Community fork of Terraform. OSS licence, compatible, clear roadmap. We migrate systematically."
+        "rationale": "Versioned, tested and documented SQL standard. Deployed at 4 data clients in 2026. See our dbt guide."
       },
       {
-        "name": "Cache Components Next 16",
-        "ring": "trial",
+        "name": "Turso libSQL (edge SQLite)",
+        "ring": "adopt",
+        "category": "infra",
+        "rationale": "Edge-native distributed SQLite. Our Payload CMS runs on it since W25. Sub-30ms latency from Paris/Tokyo/Montréal."
+      },
+      {
+        "name": "OpenTofu 1.7+",
+        "ring": "adopt",
+        "category": "infra",
+        "rationale": "Systematic migration from Terraform on new projects and renewals. State migration tested + documented."
+      },
+      {
+        "name": "SecNumCloud V3.2 (ANSSI)",
+        "ring": "adopt",
+        "category": "infra",
+        "rationale": "Mandatory French sovereign standard for OIV/OSE, healthcare, defense. We support migrations from hyperscalers to OVHcloud / 3DS Outscale / NumSpot."
+      },
+      {
+        "name": "Next.js 16 + Cache Components",
+        "ring": "adopt",
         "category": "frontend",
-        "rationale": "PPR + use cache directive. Used on 3 client projects, patterns still forming but real perf gains."
+        "rationale": "SSR/ISR + Cache Components production-stable. Our default frontend stack. Abbeal.com runs on it."
       },
       {
-        "name": "Multi-tool agents",
+        "name": "ROS 2 + Nav2 (production)",
+        "ring": "adopt",
+        "category": "robotics",
+        "rationale": "Modern robotics standard framework. DDS transport, real-time, native multi-robot. Nav2 for AMR + mobile robots in production at 2 industrial clients."
+      },
+      {
+        "name": "Vercel + Fluid Compute",
+        "ring": "adopt",
+        "category": "infra",
+        "rationale": "Default deploy platform for frontends + APIs. Standard Node.js runtime, sub-second ISR revalidation. Used on ~80% of our frontend projects."
+      },
+      {
+        "name": "Claude Code Agent SDK",
         "ring": "trial",
         "category": "ai",
-        "rationale": "Orchestration via Claude + tool use. Good for bounded tasks, flaky on long workflows. We lock it down with evals + fallbacks."
+        "rationale": "TS multi-agent workflows. Testing on code review + feature generation pipelines. Promising but with a real learning curve."
       },
       {
-        "name": "Edge AI (Jetson)",
+        "name": "LiteLLM router",
+        "ring": "trial",
+        "category": "ai",
+        "rationale": "AI provider abstraction to switch Claude/GPT-5/Gemini without rewriting. Useful for resilience — see June 2026 Fable 5 government shutdown."
+      },
+      {
+        "name": "Pinecone (vector DB managed)",
+        "ring": "trial",
+        "category": "ai",
+        "rationale": "In production at 3 RAG clients (>10M vectors). Expensive but solid SLA. For <5M vectors, prefer pgvector."
+      },
+      {
+        "name": "pgvector 0.8+",
+        "ring": "trial",
+        "category": "ai",
+        "rationale": "PostgreSQL as vector DB for <5M vector databases. Zero infra friction if Postgres already in prod. Our default for small RAGs."
+      },
+      {
+        "name": "DORA metrics automation",
+        "ring": "trial",
+        "category": "infra",
+        "rationale": "Lead time, deploy freq, MTTR, change failure rate. Instrumented via Sentry + GitHub Actions. See our DORA metrics 2026 article."
+      },
+      {
+        "name": "Architecture MACH (composable commerce)",
+        "ring": "trial",
+        "category": "frontend",
+        "rationale": "Microservices + API-first + Cloud-native + Headless. Delivered in luxury retail with 18-month ROI. Beware over-splitting for <200k SKUs."
+      },
+      {
+        "name": "Cloudflare Workers + Durable Objects",
+        "ring": "trial",
+        "category": "infra",
+        "rationale": "Distributed edge compute for global <50ms latency. Used for AI proxies + rate limiters + geo-distributed WebSockets."
+      },
+      {
+        "name": "Edge IA (NVIDIA Jetson Orin)",
         "ring": "trial",
         "category": "robotics",
-        "rationale": "ML on industrial gateways. Compact ONNX models, latency < 5s. Not yet scaled at mass but 2 convincing projects."
+        "rationale": "AI inference at the edge on mobile robots + industrial kiosks. Deployed on 3 sites in Q2 2026."
       },
       {
-        "name": "WASM on backend",
+        "name": "Agents multi-tools (Claude Sonnet 4.5)",
+        "ring": "assess",
+        "category": "ai",
+        "rationale": "Agent workflows with >3 tools. Reliability improving quarter over quarter but invocation costs to monitor on long runs."
+      },
+      {
+        "name": "Rust web frameworks (Axum, Loco)",
+        "ring": "assess",
+        "category": "frontend",
+        "rationale": "Axum stable, Loco = Rails-like. Promising for perf-critical APIs. Ecosystem still light — not yet a default choice."
+      },
+      {
+        "name": "WASM component model",
         "ring": "assess",
         "category": "languages",
-        "rationale": "Young ecosystem (wasmCloud, Wasmtime). Interesting sandboxing for multi-tenancy, but observability is painful."
+        "rationale": "WASI 0.3, cross-language components. Promising for sandboxed plugins but tooling still stabilizing."
       },
       {
-        "name": "Managed vector DBs",
+        "name": "Qdrant + Weaviate (OSS vector DB)",
         "ring": "assess",
         "category": "ai",
-        "rationale": "Pinecone, Weaviate Cloud, Qdrant Cloud. Handy to start. We prefer self-hosting Qdrant when costs climb."
+        "rationale": "OSS alternatives to Pinecone. Qdrant simple, Weaviate scales on hybrid search. Being evaluated for data-sovereignty specific cases."
       },
       {
-        "name": "Low-code frameworks",
+        "name": "DSPy (Stanford)",
+        "ring": "assess",
+        "category": "ai",
+        "rationale": "Framework to compile systematic prompts. LangChain alternative for deterministic LLM pipelines. Serious learning curve."
+      },
+      {
+        "name": "Foxglove Studio (visualisation ROS 2)",
+        "ring": "assess",
+        "category": "robotics",
+        "rationale": "ROS 2 + rosbag visualization. Becoming the standard for multi-team robotics debugging. Good complement to RViz2."
+      },
+      {
+        "name": "Frameworks low-code (Webflow, Bubble)",
         "ring": "hold",
         "category": "frontend",
-        "rationale": "Vendor lock-in, impossible to debug, average performance. Fine for prototypes, not for products."
+        "rationale": "OK for fast prototyping. For >6 months production, technical debt is inevitable. Migration to React/Next frequently requested by clients."
       },
       {
-        "name": "B2B crypto-payment",
+        "name": "Crypto payment B2B (Europe / Japon)",
         "ring": "hold",
         "category": "infra",
-        "rationale": "No viable client case for us. Volatility, murky compliance, terrible UX. We're watching."
+        "rationale": "Client volumes in FR/JP remain marginal vs SEPA/Stripe. No tangible B2B traction in 2026. Reassessing in Q1 2027."
+      },
+      {
+        "name": "jQuery + legacy JS (Backbone, Ember)",
+        "ring": "hold",
+        "category": "frontend",
+        "rationale": "Maintenance costs exploding in 2026. We systematically migrate to Next / Astro / Svelte depending on needs."
+      },
+      {
+        "name": "Fable 5 / Mythos 5 (Anthropic)",
+        "ring": "hold",
+        "category": "ai",
+        "rationale": "Excellent models but access cut by US Dept of Commerce on June 12, 2026. No commercial access. Sonnet 4.5 / Opus 4.7 remain our defaults."
+      },
+      {
+        "name": "AWS Lambda + Node 18",
+        "ring": "hold",
+        "category": "infra",
+        "rationale": "Node 22 LTS available + Lambda ARM64 (Graviton) 30% more performant. Systematic migration recommended on our cloud engagements."
       }
     ],
     "categories": {

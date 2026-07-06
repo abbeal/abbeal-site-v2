@@ -212,70 +212,190 @@
     },
     "items": [
       {
-        "name": "Rust for systems",
+        "name": "Rust (systems + robotique)",
         "ring": "adopt",
         "category": "languages",
-        "rationale": "ゼロコスト抽象化、メモリ安全性、成熟したロボティクスエコシステム。本番システムは3回目のリリースを迎えている。"
+        "rationale": "ゼロコスト抽象化＋メモリ安全性。2026年Q2にロボティクススタックとedgeプロキシで4回本番リリース。成熟したTokio/Axum/sqlxエコシステム。"
       },
       {
-        "name": "RAG in production",
+        "name": "TypeScript strict",
+        "ring": "adopt",
+        "category": "languages",
+        "rationale": "新規プロジェクトのデフォルトとしてstrict＋noUncheckedIndexedAccess。デプロイ後の本番バグ率が40%減少。"
+      },
+      {
+        "name": "Claude Sonnet 4.5 + Opus 4.7 (API)",
         "ring": "adopt",
         "category": "ai",
-        "rationale": "オープンモデル＋ハイブリッドリトリーバル（BM25＋dense）。全クラウド比でコスト10分の1。継続的な評価ガードレール。"
+        "rationale": "AI-firstエンジニアリング向けの信頼できるフロンティアモデル。AIクライアントの60%でプロンプトキャッシュ＋構造化ツール使用が本番稼働。"
       },
       {
-        "name": "ROS 2 + Isaac",
+        "name": "Claude Code (Anthropic)",
         "ring": "adopt",
-        "category": "robotics",
-        "rationale": "ロボティクスの事実上の標準。Isaac Simによるドメインランダム化。日本のクライアントでAGV80台が本番稼働。"
+        "category": "ai",
+        "rationale": "2026年5月以降、私たちのデフォルトAI開発ツール。リファクタリングとコードレビューで2-3倍の速度。社内および約40%のクライアント業務で使用。"
       },
       {
-        "name": "OpenTofu",
+        "name": "RAG en production (embeddings + hybrid search)",
+        "ring": "adopt",
+        "category": "ai",
+        "rationale": "Vector DB＋リランクによる検索＋生成。FR/JA多言語を4クライアントで実地検証。RAG企業ガイドを参照。"
+      },
+      {
+        "name": "dbt (Data Build Tool)",
         "ring": "adopt",
         "category": "infra",
-        "rationale": "Terraformのコミュニティフォーク。OSSライセンス、互換性、明確なロードマップ。全面移行中。"
+        "rationale": "バージョン管理、テスト、ドキュメント化されたSQL標準。2026年に4つのデータクライアントに展開。dbtガイドを参照。"
       },
       {
-        "name": "Cache Components Next 16",
-        "ring": "trial",
+        "name": "Turso libSQL (edge SQLite)",
+        "ring": "adopt",
+        "category": "infra",
+        "rationale": "エッジネイティブな分散SQLite。W25以降、私たちのPayload CMSが稼働。パリ/東京/モントリオールから30ms未満のレイテンシ。"
+      },
+      {
+        "name": "OpenTofu 1.7+",
+        "ring": "adopt",
+        "category": "infra",
+        "rationale": "新規プロジェクトと更新時にTerraformから体系的に移行。stateマイグレーションをテスト＋文書化。"
+      },
+      {
+        "name": "SecNumCloud V3.2 (ANSSI)",
+        "ring": "adopt",
+        "category": "infra",
+        "rationale": "OIV/OSE、医療、国防に必須のフランスソブリン標準。ハイパースケーラーからOVHcloud / 3DS Outscale / NumSpotへの移行を支援。"
+      },
+      {
+        "name": "Next.js 16 + Cache Components",
+        "ring": "adopt",
         "category": "frontend",
-        "rationale": "PPR＋use cacheディレクティブ。3つのクライアント案件で使用中、パターンはまだ構築中だが実際の性能向上あり。"
+        "rationale": "SSR/ISR＋Cache Componentsが本番安定。私たちのデフォルトフロントスタック。Abbeal.comが稼働。"
       },
       {
-        "name": "Multi-tool agents",
+        "name": "ROS 2 + Nav2 (production)",
+        "ring": "adopt",
+        "category": "robotics",
+        "rationale": "モダンロボティクスの標準フレームワーク。DDSトランスポート、リアルタイム、ネイティブマルチロボット。Nav2でAMR＋モバイルロボットが2つの産業クライアントで本番稼働。"
+      },
+      {
+        "name": "Vercel + Fluid Compute",
+        "ring": "adopt",
+        "category": "infra",
+        "rationale": "フロントエンド＋APIのデフォルトデプロイプラットフォーム。標準Node.jsランタイム、サブ秒ISR再検証。私たちのフロントエンドプロジェクトの約80%で使用。"
+      },
+      {
+        "name": "Claude Code Agent SDK",
         "ring": "trial",
         "category": "ai",
-        "rationale": "Claude＋ツール呼び出しによるオーケストレーション。限定的なタスクには有効、長いワークフローは不安定。評価＋フォールバックで固定。"
+        "rationale": "TSでのマルチエージェントワークフロー。コードレビュー＋機能生成パイプラインでテスト中。有望だが実際の学習曲線あり。"
       },
       {
-        "name": "Edge AI (Jetson)",
+        "name": "LiteLLM router",
+        "ring": "trial",
+        "category": "ai",
+        "rationale": "書き換えなしでClaude/GPT-5/Geminiを切り替えるAIプロバイダー抽象化。レジリエンスに有用 — 2026年6月のFable 5政府シャットダウンを参照。"
+      },
+      {
+        "name": "Pinecone (vector DB managed)",
+        "ring": "trial",
+        "category": "ai",
+        "rationale": "3つのRAGクライアント（1000万ベクトル超）で本番稼働。高価だが堅牢なSLA。500万ベクトル未満の場合はpgvectorを推奨。"
+      },
+      {
+        "name": "pgvector 0.8+",
+        "ring": "trial",
+        "category": "ai",
+        "rationale": "500万ベクトル未満のデータベース向けPostgreSQL vector DB。Postgresが既に本番なら追加インフラなし。小規模RAGのデフォルト。"
+      },
+      {
+        "name": "DORA metrics automation",
+        "ring": "trial",
+        "category": "infra",
+        "rationale": "リードタイム、デプロイ頻度、MTTR、変更失敗率。Sentry＋GitHub Actionsによる計装。DORA metrics 2026記事を参照。"
+      },
+      {
+        "name": "Architecture MACH (composable commerce)",
+        "ring": "trial",
+        "category": "frontend",
+        "rationale": "マイクロサービス＋API-first＋Cloud-native＋Headless。ラグジュアリーリテールで18ヶ月のROIを実現。20万SKU未満の過剰分割に注意。"
+      },
+      {
+        "name": "Cloudflare Workers + Durable Objects",
+        "ring": "trial",
+        "category": "infra",
+        "rationale": "グローバル50ms未満の分散エッジコンピュート。AIプロキシ＋レートリミッター＋地理分散WebSocketで使用。"
+      },
+      {
+        "name": "Edge IA (NVIDIA Jetson Orin)",
         "ring": "trial",
         "category": "robotics",
-        "rationale": "産業ゲートウェイ上でのML。コンパクトなONNXモデル、レイテンシ5秒未満。まだ大規模展開はないが2つの有望プロジェクトあり。"
+        "rationale": "モバイルロボット＋産業キオスクでのエッジAI推論。2026年Q2に3拠点に展開。"
       },
       {
-        "name": "WASM on backend",
+        "name": "Agents multi-tools (Claude Sonnet 4.5)",
+        "ring": "assess",
+        "category": "ai",
+        "rationale": "3ツール超のエージェントワークフロー。四半期ごとに信頼性が向上しているが、長時間実行での呼び出しコストに注意。"
+      },
+      {
+        "name": "Rust web frameworks (Axum, Loco)",
+        "ring": "assess",
+        "category": "frontend",
+        "rationale": "Axumが安定、Loco = Rails風。パフォーマンス重視APIに有望。エコシステムはまだ軽量 — デフォルトの選択肢ではない。"
+      },
+      {
+        "name": "WASM component model",
         "ring": "assess",
         "category": "languages",
-        "rationale": "エコシステムは若い（wasmCloud、Wasmtime）。マルチテナントのサンドボックスとして興味深いが、可観測性が課題。"
+        "rationale": "WASI 0.3、言語間コンポーネント。サンドボックス化プラグインに有望だが、ツーリングはまだ安定化中。"
       },
       {
-        "name": "Managed vector DBs",
+        "name": "Qdrant + Weaviate (OSS vector DB)",
         "ring": "assess",
         "category": "ai",
-        "rationale": "Pinecone、Weaviate Cloud、Qdrant Cloud。始めるには便利。コストが上がったらQdrantをセルフホストする方が良い。"
+        "rationale": "PineconeのOSS代替。Qdrantはシンプル、Weaviateはハイブリッド検索でスケール。データ主権特有のケースで評価中。"
       },
       {
-        "name": "Low-code frameworks",
+        "name": "DSPy (Stanford)",
+        "ring": "assess",
+        "category": "ai",
+        "rationale": "体系的なプロンプトをコンパイルするフレームワーク。決定論的LLMパイプラインのLangChain代替。深刻な学習曲線。"
+      },
+      {
+        "name": "Foxglove Studio (visualisation ROS 2)",
+        "ring": "assess",
+        "category": "robotics",
+        "rationale": "ROS 2＋rosbag可視化。マルチチームロボティクスデバッグの標準になりつつある。RViz2の良い補完。"
+      },
+      {
+        "name": "Frameworks low-code (Webflow, Bubble)",
         "ring": "hold",
         "category": "frontend",
-        "rationale": "ベンダーロックイン、デバッグ不能、パフォーマンス平均的。プロトタイプには使えるが製品には不向き。"
+        "rationale": "高速プロトタイピングにはOK。6ヶ月超の本番運用では技術的負債は不可避。クライアントからReact/Nextへの移行がよく依頼される。"
       },
       {
-        "name": "B2B crypto-payment",
+        "name": "Crypto payment B2B (Europe / Japon)",
         "ring": "hold",
         "category": "infra",
-        "rationale": "当社での実用的なクライアントケースなし。ボラティリティ、不明瞭なコンプライアンス、劣悪なUX。様子見。"
+        "rationale": "FR/JPのクライアントボリュームはSEPA/Stripeに比べて限界的なまま。2026年に具体的なB2Bトラクションなし。2027年Q1に再評価。"
+      },
+      {
+        "name": "jQuery + legacy JS (Backbone, Ember)",
+        "ring": "hold",
+        "category": "frontend",
+        "rationale": "2026年にメンテナンスコストが爆発中。ニーズに応じてNext / Astro / Svelteに体系的に移行。"
+      },
+      {
+        "name": "Fable 5 / Mythos 5 (Anthropic)",
+        "ring": "hold",
+        "category": "ai",
+        "rationale": "優れたモデルだが2026年6月12日に米商務省がアクセスを遮断。商用アクセスなし。Sonnet 4.5 / Opus 4.7がデフォルト。"
+      },
+      {
+        "name": "AWS Lambda + Node 18",
+        "ring": "hold",
+        "category": "infra",
+        "rationale": "Node 22 LTSが利用可能＋Lambda ARM64（Graviton）が30%高性能。クラウド業務での体系的な移行を推奨。"
       }
     ],
     "categories": {
