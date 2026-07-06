@@ -627,10 +627,12 @@ export const glossary: GlossaryEntry[] = [
       en: "DORA metrics",
       ja: "DORAメトリクス入門：4指標で計測するエンジニアリング生産性",
     },
+    // W28 near-miss #5 : /ja/glossaire/dora pos 11-12 / 260 imp -> maillage
+    // vers landing pilier tech-consulting-tokyo + article DORA 2026.
     short: {
-      fr: "4 métriques de performance d'une équipe d'ingénierie (Google SRE).",
-      en: "Four engineering team performance metrics (Google SRE).",
-      ja: "DORAメトリクス（DF, LT, CFR, MTTR）の定義と実装。Tokyo・Paris・Montréalの開発組織が使う指標フレームワーク。",
+      fr: "4 métriques de performance d'une équipe d'ingénierie (Google SRE). Abbeal les instrumente en production — cf notre article DORA 2026 et notre offre tech consulting Tokyo.",
+      en: "Four engineering team performance metrics (Google SRE). Abbeal instruments them in production — see our DORA 2026 article and our Tokyo tech consulting offer.",
+      ja: "DORAメトリクス（DF, LT, CFR, MTTR）の定義と実装。Tokyo・Paris・Montréalの開発組織が使う指標フレームワーク。Abbealが本番環境で計装 — DORA 2026記事と東京テックコンサルティング提供を参照。",
     },
     definition: {
       fr: "Deployment frequency, Lead time for changes, Change failure rate, Mean time to restore. Classes : Low / Medium / High / Elite. Source : DORA annual report (Accelerate). Indicateur bien plus pertinent que lines of code ou story points.",
@@ -647,10 +649,12 @@ export const glossary: GlossaryEntry[] = [
       en: "Runbook",
       ja: "ランブック（Runbook）",
     },
+    // W28 near-miss #5 : /ja/glossaire/runbook 260-390 imp -> maillage vers
+    // landing tech-consulting-tokyo (les runbooks font partie du deploy Abbeal).
     short: {
-      fr: "Documentation opérationnelle pour gérer un incident prod ou une tâche récurrente.",
-      en: "Operational documentation for handling a production incident or recurring task.",
-      ja: "本番インシデント対応や定期タスクのための運用ドキュメントです。",
+      fr: "Documentation opérationnelle pour gérer un incident prod ou une tâche récurrente. Abbeal les intègre dans chaque handover client — cf notre offre tech consulting Tokyo & delivery clé en main.",
+      en: "Operational documentation for handling a production incident or recurring task. Abbeal ships them with every client handover — see our Tokyo tech consulting & turnkey delivery offers.",
+      ja: "本番インシデント対応や定期タスクのための運用ドキュメント。Abbealはクライアント引き継ぎ時に必ず納品 — 東京テックコンサルティングと包括的なデリバリー提供を参照。",
     },
     definition: {
       fr: "Step-by-step, commandes exactes, check-lists. Objectif : n'importe qui d'astreinte peut l'exécuter. Formats : Markdown en Git, Notion, Confluence. Liée aux SLOs et à l'observability.",
@@ -798,7 +802,7 @@ export const glossary: GlossaryEntry[] = [
     short: {
       fr: "Stack de navigation autonome pour ROS 2 : planification + contrôle pour AMR et robots mobiles. Retour d'expérience Abbeal en production sur flottes réelles.",
       en: "Autonomous navigation stack for ROS 2: planning + control for AMR and mobile robots. Abbeal's field feedback from real-world fleet deployments.",
-      ja: "ROS 2向け自律ナビゲーションスタックで、計画と制御を担います。",
+      ja: "ROS 2向け自律ナビゲーションスタック：AMRとモバイルロボットのための計画＋制御。実際のフリート展開における現場フィードバック — ロボティクスアーキテクトに相談。",
     },
     definition: {
       fr: "Behavior Trees, planners (NavFn, Smac), controllers (DWB, MPPI), perception (LiDAR fusion, depth). Production-ready pour AMR et robots mobiles. Alternative : NVIDIA Isaac ROS.",

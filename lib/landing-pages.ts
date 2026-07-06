@@ -292,10 +292,13 @@ export const landingPages: LandingPage[] = [
       "fr-ca": "// MOBBEAL TOKYO",
     },
     h1: {
-      fr: "Engineering jobs à Tokyo — Garde ton job, change de vie. Programme Mobbeal.",
-      en: "Engineering Jobs in Tokyo — Keep your job, change your life. The Mobbeal programme.",
-      ja: "東京のエンジニアリング職 — 仕事はそのまま、人生を変える。Mobbealプログラム。",
-      "fr-ca": "Emplois en ingénierie à Tokyo — Garde ton emploi, change de vie. Programme Mobbeal.",
+      // W28 near-miss #1 : /en/engineering-jobs-tokyo pos 9.4 / 615 imp.
+      // H1 enrichi 'developer jobs Japan' + 'Western engineers' (mots-cles
+      // cibles non-brandes) pour capter le trafic expat + relocation.
+      fr: "Engineering jobs à Tokyo & developer jobs Japan — Garde ton job, change de vie. Programme Mobbeal (visa, logement, famille).",
+      en: "Engineering jobs Tokyo & developer jobs Japan for Western engineers — Keep your job, change your life. Mobbeal programme (visa, housing, family, schools).",
+      ja: "東京のエンジニアリング職 & 日本の開発者求人 — 仕事はそのまま、人生を変える。Mobbealプログラム（ビザ、住居、家族、学校）。",
+      "fr-ca": "Emplois en ingénierie à Tokyo & jobs de développeur au Japon — Garde ton emploi, change de vie. Programme Mobbeal (visa, logement, famille).",
     },
     subtitle: {
       fr: "Tokyo te tente ? Abbeal a déjà installé 50+ ingés à Tokyo via Mobbeal. On prend en charge visa, logement, famille, école, et on te place chez Money Forward, Le Monde, Cartier ou autres clients. Tu codes, tu vis ta vie japonaise, on gère le reste.",
@@ -543,8 +546,11 @@ export const landingPages: LandingPage[] = [
       "fr-ca": "// MONTRÉAL",
     },
     h1: {
-      fr: "Entreprise de développement informatique à Montréal.",
-      "fr-ca": "Entreprise de développement informatique à Montréal.",
+      // W28 near-miss #4 : /fr/entreprise-...-montreal pos 16.7 / 157 imp.
+      // H1 densifie mots-cles ('ESN Montreal', 'squad ingenierie senior',
+      // 'developpement web/logiciel Quebec') pour ranker top 10.
+      fr: "Entreprise de développement informatique à Montréal — ESN & squads d'ingénierie senior pour PME et grands groupes québécois.",
+      "fr-ca": "Entreprise de développement informatique à Montréal — Cabinet & squads d'ingénierie senior pour PME pis grands groupes québécois.",
     },
     subtitle: {
       fr: "Hub Montréal depuis 2023 (4388 rue Saint-Denis, Plateau-Mont-Royal). Squads embarqués · recrutement tech · delivery clé en main. Software, IA, Data, Robotique. Clients Banque Nationale, Hydro-Québec, Desjardins, Cogeco. Vianney Blanquart au pilotage. Mobilité Mobbeal France↔Canada↔Japon possible.",
