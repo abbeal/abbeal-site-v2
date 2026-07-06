@@ -19,9 +19,13 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
-// Les 3 articles a mettre a la une (validation Sebastien juillet 2026)
+// Les 3 articles a mettre a la une (validation Sebastien juillet 2026).
+// Note : ia-avenir-du-travail-ce-que-disent-les-chiffres etait dans la
+// selection initiale mais a body vide en CMS -> update rejete par Payload
+// (Body required). Remplace par patron-et-de-gauche (positionnement fort
+// signature Sebastien, angle differenciant).
 const TO_FEATURE = [
-  "ia-avenir-du-travail-ce-que-disent-les-chiffres",
+  "patron-et-de-gauche",
   "ingenieur-france-quebec-japon-2026",
   "conseil-vs-ia-accenture-karpathy",
 ] as const;
