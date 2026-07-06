@@ -66,8 +66,13 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
   //   3. Dedup par slug (le CMS gagne sur le static si meme slug)
   //   4. Limit 3 (slot scarce Insights section home)
   const cmsArticles = await getCMSArticles(locale);
+  // CMS side : ONLY featuredOnHome=true remonte a la home. Sinon les
+  // articles avec featured=true (importants pour /insights listing mais
+  // pas home) apparaissaient a tort ici. Ex : output-based-vs-time-material
+  // featured=true, featuredOnHome=false -> doit rester en tete du listing
+  // /insights mais PAS sur la home.
   const cmsFeatured = cmsArticles
-    .filter((c) => c.featuredOnHome === true || c.featured === true)
+    .filter((c) => c.featuredOnHome === true)
     .map(cmsArticleAsArticle);
   const staticFeatured = getHomeFeaturedArticles();
   // Merge : CMS first (souvent plus recent), dedup par slug, limit 3
