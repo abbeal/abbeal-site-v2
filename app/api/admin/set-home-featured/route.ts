@@ -45,55 +45,73 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
-  const payload = await getPayload({ config });
-  const applied: Array<{ slug: string; action: string; ok: boolean }> = [];
-
-  // Step 1 : set featured=true + featuredOnHome=true sur les 3 cibles
-  for (const slug of TO_FEATURE) {
-    const found = await payload.find({
-      collection: "articles",
-      where: { slug: { equals: slug } },
-      limit: 1,
-      overrideAccess: true,
-    });
-    if (found.docs.length === 0) {
-      applied.push({ slug, action: "feature", ok: false });
-      continue;
-    }
-    const doc = found.docs[0]!;
-    await payload.update({
-      collection: "articles",
-      id: doc.id as number,
-      data: { featured: true, featuredOnHome: true },
-      overrideAccess: true,
-      // Skip auto-translate hook (no content change)
-      context: { autoTranslate: true },
-    });
-    applied.push({ slug, action: "feature+featuredOnHome", ok: true });
+  let payload: Awaited<ReturnType<typeof getPayload>>;
+  try {
+    payload = await getPayload({ config });
+  } catch (err) {
+    return NextResponse.json(
+      {
+        error: "getPayload failed",
+        message: err instanceof Error ? err.message : String(err),
+      },
+      { status: 500 },
+    );
   }
 
-  // Step 2 : unset featuredOnHome sur les anciens (garde featured=true
-  // pour /insights listing)
-  for (const slug of TO_UNFEATURE_HOME_ONLY) {
-    const found = await payload.find({
-      collection: "articles",
-      where: { slug: { equals: slug } },
-      limit: 1,
-      overrideAccess: true,
-    });
-    if (found.docs.length === 0) {
-      applied.push({ slug, action: "unfeature-home", ok: false });
-      continue;
+  const applied: Array<{
+    slug: string;
+    action: string;
+    ok: boolean;
+    error?: string;
+  }> = [];
+
+  const updateFeatured = async (
+    slug: string,
+    data: Record<string, unknown>,
+    actionLabel: string,
+  ) => {
+    try {
+      const found = await payload.find({
+        collection: "articles",
+        where: { slug: { equals: slug } },
+        limit: 1,
+        overrideAccess: true,
+      });
+      if (found.docs.length === 0) {
+        applied.push({ slug, action: actionLabel, ok: false, error: "not found" });
+        return;
+      }
+      const doc = found.docs[0]!;
+      await payload.update({
+        collection: "articles",
+        id: doc.id as number,
+        data,
+        overrideAccess: true,
+        context: { autoTranslate: true },
+      });
+      applied.push({ slug, action: actionLabel, ok: true });
+    } catch (err) {
+      applied.push({
+        slug,
+        action: actionLabel,
+        ok: false,
+        error: err instanceof Error ? err.message : String(err),
+      });
     }
-    const doc = found.docs[0]!;
-    await payload.update({
-      collection: "articles",
-      id: doc.id as number,
-      data: { featuredOnHome: false },
-      overrideAccess: true,
-      context: { autoTranslate: true },
-    });
-    applied.push({ slug, action: "featuredOnHome=false", ok: true });
+  };
+
+  // Step 1 : featured=true + featuredOnHome=true sur les 3 cibles
+  for (const slug of TO_FEATURE) {
+    await updateFeatured(
+      slug,
+      { featured: true, featuredOnHome: true },
+      "feature+home",
+    );
+  }
+
+  // Step 2 : unset featuredOnHome sur les anciens
+  for (const slug of TO_UNFEATURE_HOME_ONLY) {
+    await updateFeatured(slug, { featuredOnHome: false }, "unfeature-home");
   }
 
   // Step 3 : revalidate home + insights + sitemap
