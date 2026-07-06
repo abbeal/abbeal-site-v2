@@ -11,16 +11,30 @@ import { Footer } from "@/components/layout/Footer";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { CookieBanner } from "@/components/cookies/CookieBanner";
 
+// W28 QW1 : optimisation LCP mobile (5.6s -> cible <2.5s).
+//  - preload: true (default en Next 16 mais explicite pour clarte) charge
+//    la font en <link rel="preload"> tres tot dans le head.
+//  - weight subset : le Hero H1 utilise font-semibold (600) et body p
+//    en 400/500. Restreindre reduit la taille du fichier WOFF2 telecharge
+//    en priorite above-the-fold.
+//  - adjustFontFallback: true (default) applique un size-adjust CSS pour
+//    minimiser le CLS entre le fallback et Geist.
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "600"],
+  preload: true,
 });
 
+// Geist Mono utilise uniquement en poids 400 (footer meta, tape labels,
+// mono spans) -> restreindre au minimum pour reduire le poids charge.
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400"],
+  preload: true,
 });
 
 export async function generateStaticParams() {
