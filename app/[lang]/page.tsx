@@ -16,6 +16,7 @@ import { Insights } from "@/components/sections/Insights";
 import { CareersTeaser } from "@/components/sections/CareersTeaser";
 import { CTAFinal } from "@/components/sections/CTAFinal";
 import { getHomeFeaturedArticles, pick } from "@/lib/articles";
+import { getCMSArticles, cmsArticleAsArticle } from "@/lib/articles-cms";
 import { getHomeFeaturedCases } from "@/lib/cases";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { getPublishedJobOffers, locationLabel } from "@/lib/job-offers";
@@ -56,13 +57,35 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
   const radarDeepLinkLabel =
     dict.techRadarHome?.deepLinkLabel ?? "See full edition";
 
-  const featuredInsights = getHomeFeaturedArticles().map((a) => ({
-    slug: a.slug,
-    tag: a.tag,
-    readTime: a.readTime,
-    title: pick(a.title, locale),
-    excerpt: pick(a.excerpt, locale),
-  }));
+  // Home featured articles : pivot CMS-first (comme /insights PR #32).
+  //   1. Fetch CMS articles publies avec featuredOnHome=true (source de
+  //      verite editoriale, editable depuis /admin sans deploy)
+  //   2. Fallback statique : articles static.featuredOnHome ?? .featured
+  //      pour couvrir le cas oule CMS ne repond pas OU pour les articles
+  //      pre-CMS pas encore migres
+  //   3. Dedup par slug (le CMS gagne sur le static si meme slug)
+  //   4. Limit 3 (slot scarce Insights section home)
+  const cmsArticles = await getCMSArticles(locale);
+  const cmsFeatured = cmsArticles
+    .filter((c) => c.featuredOnHome === true || c.featured === true)
+    .map(cmsArticleAsArticle);
+  const staticFeatured = getHomeFeaturedArticles();
+  // Merge : CMS first (souvent plus recent), dedup par slug, limit 3
+  const seenSlugs = new Set<string>();
+  const featuredInsights = [...cmsFeatured, ...staticFeatured]
+    .filter((a) => {
+      if (seenSlugs.has(a.slug)) return false;
+      seenSlugs.add(a.slug);
+      return true;
+    })
+    .slice(0, 3)
+    .map((a) => ({
+      slug: a.slug,
+      tag: a.tag,
+      readTime: a.readTime,
+      title: pick(a.title, locale),
+      excerpt: pick(a.excerpt, locale),
+    }));
 
   // Marquee Stories sur la home : on prend les cases avec featuredOnHome
   // (4 anonymisés à fort KPI chiffré). Les 5 nommés (Cartier, BNP, Money
