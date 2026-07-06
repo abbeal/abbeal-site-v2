@@ -771,10 +771,13 @@ export const glossary: GlossaryEntry[] = [
       en: "ROS 2 (Robot Operating System)",
       ja: "ROS 2（Robot Operating System）",
     },
+    // W28 QW5 : short enrichi + CTA architecte robotique. Contenu qui
+    // rank deja (pos 6.3 sur 'ros2 2026') mais CTR faible -> capter le
+    // trafic technique existant via CTA commercial.
     short: {
-      fr: "Framework open-source standard pour robotique moderne.",
-      en: "Standard open-source framework for modern robotics.",
-      ja: "モダンロボティクスの標準オープンソースフレームワークです。",
+      fr: "Framework open-source standard pour la robotique moderne (AMR, cobots, flottes de robots). Abbeal accompagne les projets ROS 2 de la simulation à la production — parler à un architecte robotique.",
+      en: "Standard open-source framework for modern robotics (AMR, cobots, robot fleets). Abbeal supports ROS 2 projects from simulation to production — talk to a robotics architect.",
+      ja: "モダンロボティクスの標準オープンソースフレームワーク（AMR、コボット、ロボットフリート）。Abbealはシミュレーションから本番までROS 2プロジェクトを支援します — ロボティクスアーキテクトに相談。",
     },
     definition: {
       fr: "Évolution de ROS 1. DDS (Data Distribution Service) comme transport, real-time, multi-robot native. Packages clés : Nav2 (navigation), MoveIt (manipulation), rclcpp, rclpy. Standard de fait industriel depuis 2022.",
@@ -791,9 +794,10 @@ export const glossary: GlossaryEntry[] = [
       en: "Nav2 (Navigation2)",
       ja: "Nav2（Navigation2）",
     },
+    // W28 QW5 : short enrichi CTA (pos 13.4 sur 'navigation 2' -> CTR low)
     short: {
-      fr: "Stack de navigation autonome pour ROS 2 : planification + contrôle.",
-      en: "Autonomous navigation stack for ROS 2: planning + control.",
+      fr: "Stack de navigation autonome pour ROS 2 : planification + contrôle pour AMR et robots mobiles. Retour d'expérience Abbeal en production sur flottes réelles.",
+      en: "Autonomous navigation stack for ROS 2: planning + control for AMR and mobile robots. Abbeal's field feedback from real-world fleet deployments.",
       ja: "ROS 2向け自律ナビゲーションスタックで、計画と制御を担います。",
     },
     definition: {
@@ -811,10 +815,13 @@ export const glossary: GlossaryEntry[] = [
       en: "Isaac Sim (NVIDIA)",
       ja: "Isaac Sim（NVIDIA）",
     },
+    // W28 QW5 : short enrichi CTA (pos 15.3 sur 'isaac sim' -> 448 imp,
+    // 1 clic -> CTR terrible malgre visibilite). Capter le trafic
+    // technique existant via CTA architecte robotique.
     short: {
-      fr: "Simulateur photoréaliste pour robotique basé sur Omniverse.",
-      en: "Photorealistic robotics simulator built on Omniverse.",
-      ja: "Omniverseベースのフォトリアリスティックなロボティクスシミュレータです。",
+      fr: "Simulateur photoréaliste pour robotique basé sur NVIDIA Omniverse. Training RL, synthetic data, digital twin. Abbeal l'utilise pour valider les stacks robotique avant hardware — parler à un architecte.",
+      en: "Photorealistic robotics simulator built on NVIDIA Omniverse. RL training, synthetic data, digital twin. Abbeal uses it to validate robotics stacks pre-hardware — talk to an architect.",
+      ja: "NVIDIA Omniverseベースのフォトリアリスティックなロボティクスシミュレータ。強化学習の学習、合成データ、デジタルツイン。Abbealはハードウェア前のロボティクススタック検証に使用します — アーキテクトに相談。",
     },
     definition: {
       fr: "Physique (PhysX), rendering RTX, domain randomization. Use cases : training RL, synthetic data, digital twin, validation sans hardware. Alternative open : Gazebo, Webots.",
@@ -979,10 +986,13 @@ export const glossary: GlossaryEntry[] = [
       en: "SecNumCloud",
       ja: "SecNumCloud",
     },
+    // W28 QW4 : short enrichi (meta description SEO) avec plus de mots-cles
+    // cibles ('cloud souverain', 'OIV', 'donnees sensibles') + CTA soft.
+    // Objectif : pos 20 -> top 10 sur 'secnumcloud'.
     short: {
-      fr: "Référentiel de qualification ANSSI pour cloud souverain français (V3.2). Standard de facto pour les données sensibles.",
-      en: "ANSSI qualification framework for sovereign French cloud (V3.2). De facto standard for sensitive data.",
-      ja: "ANSSI（フランス国家情報システムセキュリティ庁）によるソブリンクラウド認定フレームワーク（V3.2）です。機密データのデファクトスタンダードです。",
+      fr: "Référentiel de qualification ANSSI pour cloud souverain français (V3.2). Obligatoire pour OIV/OSE, données santé et défense. Abbeal accompagne les migrations SecNumCloud — parler à un architecte cloud souverain.",
+      en: "ANSSI qualification framework for sovereign French cloud (V3.2). Mandatory for OIV/OSE, health and defense data. Abbeal supports SecNumCloud migrations — talk to a sovereign cloud architect.",
+      ja: "ANSSI（フランス国家情報システムセキュリティ庁）によるソブリンクラウド認定フレームワーク（V3.2）です。OIV/OSE、医療・国防データで必須。AbbealはSecNumCloudマイグレーションを支援します — ソブリンクラウドアーキテクトに相談。",
     },
     definition: {
       fr: "SecNumCloud est le référentiel d'exigences publié par l'ANSSI (Agence nationale de la sécurité des systèmes d'information) pour qualifier les offres de cloud computing capables d'héberger des données sensibles françaises. Version 3.2 actuelle. Obligatoire en pratique pour les Opérateurs d'Importance Vitale (OIV), les Opérateurs de Services Essentiels (OSE), les administrations centrales, et de plus en plus pour les données de santé et de défense. Les providers qualifiés en France sont aujourd'hui OVHcloud, 3DS Outscale, Cloud Temple et NumSpot — un marché restreint mais en croissance. La qualification couvre l'intégralité de la chaîne : datacenters certifiés en France, équipes opérationnelles UE, gouvernance juridique européenne, isolation contractuelle face au Cloud Act américain (extra-territorialité). SecNumCloud est plus strict qu'ISO 27001 sur la souveraineté juridique : ISO 27001 valide le système de management de la sécurité, SecNumCloud impose en plus une protection contre les lois extraterritoriales (Cloud Act, CLOUD Act, FISA 702). Pour les entreprises qui migrent depuis AWS / Azure / GCP, le coût et la complexité technique du switch sont réels : refonte des services managés, perte de certaines features serverless, mais alignement réglementaire indispensable dès qu'on touche aux données sensibles publiques ou OIV/OSE.",
