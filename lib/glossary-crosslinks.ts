@@ -151,16 +151,28 @@ export const glossaryCrosslinks: Record<string, GlossaryCrosslink> = {
   },
 
   // === Robotique ===
+  // W29 : enrichir maillage vers service squads-embarques (dont la stack
+  // mentionne explicitement "Robotique (ROS 2)") + article ros2 lecons.
+  // Reco audit brief : "maillage vers la landing service Embarque &
+  // Robotique". squads-embarques est le service Abbeal qui operationnalise
+  // ce staff-augmentation robotique.
   ros2: {
-    serviceSlugs: ["recrutement-technique"],
+    serviceSlugs: ["squads-embarques", "recrutement-technique"],
     caseSlugs: ["robotique-jp-ros2-flotte"],
-    articleSlugs: ["tech-radar-2026"],
+    articleSlugs: [
+      "ros2-production-flotte-robots-lecons",
+      "tech-radar-2026",
+    ],
   },
   nav2: {
+    serviceSlugs: ["squads-embarques"],
     caseSlugs: ["robotique-jp-ros2-flotte"],
+    articleSlugs: ["ros2-production-flotte-robots-lecons"],
   },
   "isaac-sim": {
+    serviceSlugs: ["squads-embarques"],
     caseSlugs: ["robotique-jp-ros2-flotte"],
+    articleSlugs: ["ros2-production-flotte-robots-lecons"],
   },
 
   // === Méthodes ===
