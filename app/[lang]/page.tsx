@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import dynamic from "next/dynamic";
 import { getDictionary } from "./dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
 import { pageAlternates } from "@/lib/seo";
@@ -8,13 +9,31 @@ import { KPIs } from "@/components/sections/KPIs";
 import { ADN } from "@/components/sections/ADN";
 import { Services } from "@/components/sections/Services";
 import { Expertises } from "@/components/sections/Expertises";
-import { TechRadar } from "@/components/sections/TechRadar";
 import { getCurrentEdition } from "@/lib/tech-radar";
-import { Stories } from "@/components/sections/Stories";
-import { Moments } from "@/components/sections/Moments";
-import { Insights } from "@/components/sections/Insights";
 import { CareersTeaser } from "@/components/sections/CareersTeaser";
 import { CTAFinal } from "@/components/sections/CTAFinal";
+
+// W29 v2 LCP fix : les 4 composants client below-fold les plus lourds
+// (TechRadar 280 lignes, Insights 602 lignes, Stories 135 lignes, Moments
+// 98 lignes) sont chunk-splitted via next/dynamic. Le JS Total initial
+// passe de ~1.6MB a ~1MB, ce qui liberera 500-600ms de bande passante
+// mobile pour la phase FCP (3.0s -> cible <1.8s).
+//
+// Les 4 sections restent SSR-rendered (HTML dans la reponse initiale
+// pour SEO/LLM) ; seul le JS de hydratation est defer. Placeholder
+// `<div />` = pas de layout shift.
+const TechRadar = dynamic(() =>
+  import("@/components/sections/TechRadar").then((m) => ({ default: m.TechRadar })),
+);
+const Stories = dynamic(() =>
+  import("@/components/sections/Stories").then((m) => ({ default: m.Stories })),
+);
+const Moments = dynamic(() =>
+  import("@/components/sections/Moments").then((m) => ({ default: m.Moments })),
+);
+const Insights = dynamic(() =>
+  import("@/components/sections/Insights").then((m) => ({ default: m.Insights })),
+);
 import { getHomeFeaturedArticles, pick } from "@/lib/articles";
 import { getCMSArticles, cmsArticleAsArticle } from "@/lib/articles-cms";
 import { getHomeFeaturedCases } from "@/lib/cases";
