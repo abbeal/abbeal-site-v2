@@ -4011,5 +4011,150 @@
         }
       ]
     }
+  },
+  "entreprise-developpement-informatique-paris": {
+    "body": {
+      "fr": [
+        {
+          "type": "p",
+          "content": "Vous cherchez une entreprise de développement informatique à Paris pour livrer du software, de l'IA, de la data ou de la robotique. Le marché parisien est saturé — grands cabinets, ESN classiques, freelances Malt, agences web pléthoriques. Trouver des seniors qui livrent vraiment et qui restent au-delà de la mission, c'est le vrai enjeu."
+        },
+        {
+          "type": "h2",
+          "content": "Le marché tech à Paris en 2026"
+        },
+        {
+          "type": "p",
+          "content": "Paris reste le premier pôle tech européen : Station F, 3 000+ startups, écosystème IA porté par INRIA, École Polytechnique, ENS, Sorbonne. Les banques (BNP, Société Générale, BPCE, Crédit Agricole), les assureurs (AXA, CNP, Groupama) et les grands industriels (Carrefour, LVMH, Vinci, Enedis) accélèrent leur transformation. Mais le sourcing senior est devenu tendu : 6-10 semaines pour fermer un poste back-end senior, 12-16 semaines pour les profils IA production (RAG, agents, evals), 18+ semaines pour un architecte cloud SecNumCloud."
+        },
+        {
+          "type": "p",
+          "content": "On a ouvert le hub Abbeal Paris en 2015 (54 rue Greneta, 75002, quartier Réaumur-Sébastopol / Sentier tech). C'est ici que Sébastien Lonjon (CEO) et Adrien Casanova (CTO) opèrent le hub Europe, où on tient les revues clients hebdo et où on onboarde chaque nouveau consultant Abbeal."
+        },
+        {
+          "type": "h2",
+          "content": "Trois façons de bosser avec nous, à Paris"
+        },
+        {
+          "type": "h3",
+          "content": "1. Squad embarqué (staff augmentation)"
+        },
+        {
+          "type": "p",
+          "content": "On rejoint vos équipes avec un ownership de périmètre clair. Software, Data, IA, DevOps, Mobile. Senior FR/EN, temps plein hybride (2-3 jours sur site, le reste depuis le hub Greneta ou en remote). TJM 900-1500 € HT selon expertise et séniorité. Engagement minimum : 1 mois."
+        },
+        {
+          "type": "h3",
+          "content": "2. Recrutement technique (talent acquisition)"
+        },
+        {
+          "type": "p",
+          "content": "Top 1 % sourcé par des ingénieurs (pas par cabinet RH généraliste). Validation tech courte mais exigeante (2-3h pair coding sur un vrai problème, pas du LeetCode). Closing en 48h. Garantie 6 mois. Tarif : 18-22 % du package annuel brut, payable en 3 fois. Spécialités : Senior Eng, Lead, Staff Eng, Data Scientists, AI Engineers, Tech Leads, SRE, DevSecOps."
+        },
+        {
+          "type": "h3",
+          "content": "3. Delivery clé en main (digital solutions)"
+        },
+        {
+          "type": "p",
+          "content": "De la conception au run. Engagement output, pas time & material. SLOs définis dès le cadrage, observabilité dès le sprint 1, transfert de propriété en fin de mission. Format idéal pour les refontes lourdes (plateformes clients, ERP modernization, dashboards data) où vous voulez garder le contrôle à long terme et sortir de la dépendance ESN classique."
+        },
+        {
+          "type": "h2",
+          "content": "Le hub Paris : 54 rue Greneta, depuis 2015"
+        },
+        {
+          "type": "p",
+          "content": "Bureau opérationnel 54 rue Greneta, 75002, en plein Sentier tech (métro Réaumur-Sébastopol 3 min, Étienne Marcel 5 min). C'est ici qu'on reçoit les clients, qu'on opère les onboardings et qu'on tient les revues mensuelles. Cinq salles de réunion, dont une conçue pour les board reviews (Chatham House Rules)."
+        },
+        {
+          "type": "p",
+          "content": "Track record Paris depuis 2015 : BNP Paribas (RAG production banque, coûts divisés par 10), AXA (data platform IARD, agents document IA), Société Générale (modernisation core banking), Carrefour (retail omnichannel tri-géo), Enedis (IoT edge temps réel, plateformes GreenOps), Qonto (SRE scale-up), Groupe Le Monde (Insights data Tokyo→Paris). 200+ missions cumulées, taux de renouvellement client > 80 %."
+        },
+        {
+          "type": "h2",
+          "content": "Quatre expertises, calibrées pour le marché parisien"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Software : React/Next.js, Node.js, Python (FastAPI/Django), Java/Spring, Kotlin, Go, Rust. Backend services à fort débit (fintech, retail), frontend SPA/SSR à fort SEO, mobile React Native ou natif iOS/Android selon use case.",
+            "IA : RAG production (Pinecone, pgvector, Qdrant), agents LLM (Claude, GPT-5, Llama self-hosted), evals CI continus (Promptfoo, Langfuse, Braintrust). Écosystème Station F / INRIA / Mistral à 15 min — on connaît les acteurs de la scène IA Paris.",
+            "Data : pipelines Airflow/dbt, lakehouse Databricks ou Iceberg, streaming Kafka/Flink, observabilité Datadog/Honeycomb, catalog Unity/OpenMetadata. Compliance RGPD + SecNumCloud native, hébergement souverain OVH/Scaleway/Outscale au besoin.",
+            "Robotique : ROS 2, edge inference (NVIDIA Jetson, Coral), Rust embarqué, Isaac Sim pour la validation. Une mission active en robotique industrielle (agroalimentaire) + relais Tokyo pour scaling international."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "La méthode Abbeal"
+        },
+        {
+          "type": "p",
+          "content": "Pas de waterfall. Pas d'agile cargo-cult. Sprints d'1 ou 2 semaines, pair programming sur les sujets sensibles (auth, paiement, RGPD, données santé), code review IA-assistée (Codex, Claude), pair review hebdo entre seniors Abbeal."
+        },
+        {
+          "type": "p",
+          "content": "Engagement de transfert dès le sprint 1 : votre équipe interne doit pouvoir shipper sans nous au mois +1 après la fin de mission. C'est notre KPI principal — on ne crée pas de dépendance long-terme. C'est ce qui nous différencie des grands cabinets qui vivent sur du T&M à rallonge."
+        },
+        {
+          "type": "h2",
+          "content": "Souveraineté et conformité : RGPD, SecNumCloud, ANSSI"
+        },
+        {
+          "type": "p",
+          "content": "Les cas d'usage souverains montent : santé (HDS), défense (Diffusion Restreinte), finance (DORA), énergie (NIS 2). On accompagne le design compliance-by-design : minimisation des données, chiffrement au repos et en transit, hébergement qualifié SecNumCloud (OVH SNC, Outscale, Scaleway Elements), audit trail, DPO ou délégué interne. 6 audits SecNumCloud livrés depuis 2023 (banque, énergie, healthtech)."
+        },
+        {
+          "type": "h2",
+          "content": "Couverture 24/7 via Adaptive Follow-the-Sun"
+        },
+        {
+          "type": "p",
+          "content": "Spécificité Abbeal tri-géo : Paris (54 rue Greneta), Montréal (4388 Saint-Denis), Tokyo (1-23-5 Higashi-Azabu). Quand vos besoins justifient une couverture étendue (SLA 24/5, runs critiques nocturnes, lancement produit international, incident majeur multi-fuseaux), on bascule en Adaptive Follow-the-Sun : Paris ferme à 19h CET, Montréal prend le relais jusqu'à 21h EST, Tokyo reprend à 9h JST, Paris reprend à 9h CET. Couverture 24/5 sans astreinte locale, sans burn-out d'équipe."
+        },
+        {
+          "type": "p",
+          "content": "Mesuré sur 12 missions tri-géo opérées depuis 2020 : lead time divisé par 1,8 en moyenne, attrition consultant < 6 %, NPS interne 72. Pas de promesse marketing — des chiffres qu'on partage."
+        },
+        {
+          "type": "h2",
+          "content": "Mobbeal : mobilité internationale France ↔ Canada ↔ Japon"
+        },
+        {
+          "type": "p",
+          "content": "Si vous voulez recruter à Paris un profil rare (AI Engineer senior, Tech Lead JP/EN, expert robotique embarquée) qu'on ne trouve pas localement, on opère via Mobbeal le rapatriement depuis Montréal ou Tokyo. Sponsoring Passeport Talent ou Mobilité Intra-Compagnie (ICT), accompagnement administratif (logement, école, famille), 12 semaines moyennes de la décision à l'opérationnel à Paris. 52 mobilités opérées depuis 2018, 91 % de réussite >24 mois."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Cadrage gratuit 30 min. Sébastien, Adrien ou un Tech Lead senior vous explique honnêtement si on est les bons (ou pas) et comment on attaquerait. Pas de pitch, pas de PowerPoint."
+        }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "q": "Quel est le TJM moyen d'un consultant Abbeal à Paris ?",
+          "a": "900 à 1500 € HT selon expertise et séniorité. Senior dev back-end ou front-end : 900-1150 €. Lead Tech ou architecte : 1150-1400 €. Data Scientist senior : 1050-1300 €. Expert IA production (RAG, agents, evals) : 1300-1600 € selon criticité. SRE/DevSecOps senior : 1100-1400 €. Pas de prix d'appel, pas de surcharge cachée, TJM aligné marché Paris 2026."
+        },
+        {
+          "q": "Quel délai pour staffer un consultant senior à Paris ?",
+          "a": "10 à 15 jours ouvrés en moyenne entre le brief et le démarrage. 2-3 profils présentés sous 7 jours. Validation client en 1-2 entretiens techniques. Démarrage J+3 après signature. Pour les besoins urgents : on a généralement 1-2 seniors disponibles en intercontrat sur les stacks principales (React/Next, Python, Go, AWS/GCP, Spark, Rust)."
+        },
+        {
+          "q": "Vous travaillez en remote ou en présentiel à Paris ?",
+          "a": "Hybride : 2-3 jours présence client en moyenne, le reste en remote depuis le hub Greneta (54 rue Greneta 75002) ou depuis chez le consultant. Pour les banques, les assureurs et les comptes réglementés (RGPD sensible, SecNumCloud), on adapte vers plus de présentiel selon le besoin client. Le hub Greneta sert aussi de bureau de jour pour les consultants en télétravail."
+        },
+        {
+          "q": "Quelle est la différence vs une grande ESN parisienne (Sopra Steria, Capgemini, Devoteam, Accenture) ?",
+          "a": "Trois différences : (1) on ne staffe pas de junior derrière un commercial senior — vous voyez et vous gardez les vrais profils, pas de pyramid rating ; (2) on s'engage sur output (livrable, périmètre, délai) plutôt que sur time & material à rallonge ; (3) on a un collectif technique senior tri-géo qui peer-review et qui prend le relais si un consultant tombe (Montréal ou Tokyo en backup). Conséquence pratique : on est plus chers au TJM (900-1500 € vs 550-800 € en offshore ou 700-1000 € on-site classique) mais le coût total du projet est plus bas car moins de re-work + délais respectés + zéro turnover en cours de mission."
+        },
+        {
+          "q": "Vous accompagnez la conformité RGPD, SecNumCloud, HDS ou DORA ?",
+          "a": "Oui systématiquement. Toutes nos missions à Paris intègrent la compliance dans le design (RGPD baké dès le sprint 1, SecNumCloud si data souveraine sensible, HDS pour la santé, DORA pour la finance). On a livré 6 audits SecNumCloud + 4 audits HDS depuis 2023 (BNP, AXA, Enedis, healthtech). Si vous avez besoin uniquement de l'audit compliance (pas du dev), on peut aussi le faire en standalone (3-4 sem selon périmètre)."
+        }
+      ]
+    }
   }
 }
