@@ -208,7 +208,14 @@ export const glossaryCrosslinks: Record<string, GlossaryCrosslink> = {
     serviceSlugs: ["squads-embarques", "delivery-cle-en-main"],
     caseSlugs: ["fintech-iso27001-devsecops"],
   },
+  // W29 P3b : ajout serviceSlugs delivery-cle-en-main (le service qui
+  // opere concretement les audits + migrations SecNumCloud) + case client
+  // fintech-iso27001-devsecops (le seul case public sur compliance/audit
+  // heavy). Maillage vers offre commerciale pour capter le trafic
+  // technique existant (pos 19.6 / 107 imp).
   secnumcloud: {
+    serviceSlugs: ["delivery-cle-en-main"],
+    caseSlugs: ["fintech-iso27001-devsecops"],
     articleSlugs: ["souverainete-secnumcloud-vs-appi"],
   },
   appi: {
