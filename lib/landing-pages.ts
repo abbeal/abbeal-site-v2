@@ -520,8 +520,11 @@ export const landingPages: LandingPage[] = [
     tape: {
       fr: "// CONSULTANT INFORMATIQUE PARIS",
     },
+    // W29 P1.a : H1 keyword-frontload sur "Consultant informatique Paris"
+    // (requete exacte pos 61 GSC) + qualifiers seniors/experts pour
+    // signaler le positionnement. Pas trop long : mobile-friendly.
     h1: {
-      fr: "Consultant informatique senior à Paris.",
+      fr: "Consultant informatique à Paris — Squads seniors, IA, Data, DevOps, Robotique.",
     },
     subtitle: {
       fr: "Hub Paris depuis 2015 (54 rue Greneta, 75002). BNP, AXA, Société Générale, Carrefour, Enedis, Qonto. Squads embarqués · recrutement tech · delivery clé en main. Software, IA, Data, Robotique. Couverture 24/7 si vous voulez — hubs Montréal et Tokyo qui prennent le relais quand Paris ferme.",
@@ -619,6 +622,77 @@ export const landingPages: LandingPage[] = [
         addressCountry: "CA",
         // Coordonnees Google Maps (Plateau-Mont-Royal, intersection Marie-Anne)
         geo: { latitude: 45.5234, longitude: -73.5824 },
+      },
+    },
+  },
+  // ========================================================================
+  // 9. entreprise-developpement-informatique-paris — Landing FR-only (W29)
+  // ========================================================================
+  // Audit W29 GSC :
+  //  - "entreprise informatique paris" pos 23 / high-volume FR (>1k/mois)
+  //  - "software development company paris" pos 10 EN (Perplexity Paris
+  //    cite Euro Tech Conseil, Yield Studio, Sopra Steria = pas Abbeal)
+  //  - Landing existante consultant-informatique-paris pos 61 / 1 imp
+  //    (couvre l'intention "freelance senior" mais pas "entreprise/agence"
+  //    qui est une intention distincte : cabinet vs consultant individuel).
+  //
+  // Miroir de entreprise-developpement-informatique-montreal (pos 16.7),
+  // adapte au marche Paris : Sopra/Capgemini/Devoteam/Accenture comme
+  // benchmarks big-firm, RGPD/SecNumCloud/HDS/DORA compliance, TJM EUR,
+  // ecosysteme Station F/INRIA/Mistral.
+  {
+    slug: "entreprise-developpement-informatique-paris",
+    keywords: [
+      "entreprise developpement informatique paris",
+      "entreprise informatique paris",
+      "ESN Paris senior",
+      "cabinet developpement software Paris",
+      "software development company Paris",
+      "developpement logiciel Paris",
+      "consultant informatique senior Paris",
+      "IA production Paris",
+      "SecNumCloud Paris",
+    ],
+    relatedCaseSlugs: ["bnp", "carrefour", "enedis"],
+    relatedArticleSlug: "recruter-top-1-tech-process-48h",
+    tape: {
+      fr: "// ENTREPRISE INFORMATIQUE PARIS",
+    },
+    h1: {
+      // W29 P1.a : keyword-frontload sur la requete exacte "entreprise
+      // developpement informatique paris" pour ranker top 20 sous 60j.
+      fr: "Entreprise de développement informatique à Paris — ESN & squads d'ingénierie senior pour banques, assureurs et grands groupes.",
+    },
+    subtitle: {
+      fr: "Hub Paris depuis 2015 (54 rue Greneta, 75002, Sentier tech). Squads embarqués · recrutement tech · delivery clé en main. Software, IA, Data, Robotique. Clients BNP, AXA, Société Générale, Carrefour, Enedis, Qonto. Souveraineté RGPD / SecNumCloud / HDS / DORA. Couverture 24/7 via hubs Montréal et Tokyo.",
+    },
+    // W29 P1.a : meta enrichie keyword-cible + benefices concrets (Sopra
+    // Steria / Capgemini comme reference implicite, souverainete FR).
+    metaDescription: {
+      fr: "Entreprise de développement informatique à Paris : squads seniors embarqués, recrutement tech, delivery 24/7. Software, IA, Data, Robotique. Compliance RGPD / SecNumCloud / HDS / DORA. Clients BNP, AXA, SocGen, Carrefour, Enedis. Cadrage gratuit 30 min.",
+    },
+    body: {
+      fr:
+        BODIES["entreprise-developpement-informatique-paris"]?.body?.fr ?? [],
+    },
+    faq: {
+      fr: BODIES["entreprise-developpement-informatique-paris"]?.faq?.fr ?? [],
+    },
+    extraSchema: {
+      // LocalBusiness (sub-type ProfessionalService de schema.org) pour :
+      //  - Knowledge Panel Google sur "Abbeal Paris"
+      //  - ranking local sur "entreprise informatique paris" geo-targeted
+      //  - couverture du critere brief "Service avec areaServed=Paris"
+      // Meme adresse que consultant-informatique-paris (les 2 landings
+      // sont co-implantees au 54 rue Greneta).
+      localBusiness: {
+        name: "Abbeal — Hub Paris",
+        streetAddress: "54 rue Greneta",
+        addressLocality: "Paris",
+        postalCode: "75002",
+        addressCountry: "FR",
+        // Coordonnees Google Maps (Greneta x Reaumur, 2e arrondissement)
+        geo: { latitude: 48.8654, longitude: 2.3517 },
       },
     },
   },
