@@ -130,6 +130,58 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
       // TODO_VERIFY · Vianney peut confirmer le headcount exact 2026.
       numberOfEmployees: { "@type": "QuantitativeValue", value: "100+" },
       founders: d.leaders.map((l) => ({ "@type": "Person", name: l.name })),
+      // W29 P2a : areaServed + knowsAbout + address enrichis. Signal fort
+      // pour LLMs (ChatGPT/Perplexity/Claude/Gemini) qui exploitent le
+      // Organization schema comme source d'autorite business. Cible :
+      // citation Abbeal sur les prompts locaux "meilleure ESN à Paris /
+      // Montréal / Tokyo" (audit brief W29 : Perplexity cite Euro Tech
+      // Conseil / Hays Japan au lieu d'Abbeal).
+      areaServed: [
+        {
+          "@type": "Place",
+          name: "Paris",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "54 rue Greneta",
+            addressLocality: "Paris",
+            postalCode: "75002",
+            addressCountry: "FR",
+          },
+        },
+        {
+          "@type": "Place",
+          name: "Montréal",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "4388 rue Saint-Denis",
+            addressLocality: "Montréal",
+            postalCode: "H2J 2L1",
+            addressCountry: "CA",
+          },
+        },
+        {
+          "@type": "Place",
+          name: "Tokyo",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku",
+            addressLocality: "Tokyo",
+            postalCode: "106-0044",
+            addressCountry: "JP",
+          },
+        },
+      ],
+      knowsAbout: [
+        "Software engineering",
+        "Artificial intelligence",
+        "Data engineering",
+        "Robotics",
+        "DevSecOps",
+        "SecNumCloud",
+        "Follow-the-Sun software delivery",
+        "Tech staff augmentation",
+        "Senior engineer recruitment",
+      ],
       sameAs: [
         "https://www.linkedin.com/company/abbeal",
         "https://www.youtube.com/@abbeal8017",

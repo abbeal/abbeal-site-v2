@@ -61,6 +61,31 @@ Abbeal ne facture pas des jours d'ingénieurs. Abbeal livre un périmètre. Squa
 - [Mon top ramen à Tokyo : 4 adresses qui m'ont remis à ma place](https://abbeal.com/fr/insights/top-ramen-tokyo-afuri-tamotsu-menya-kokoro.md) : Sébastien Lonjon — Hujishiro, Menya Kokoro, Afuri, Tamotsu + n°1 secret
 - [Agents IA dans les banques françaises : 7 leçons côté production](https://abbeal.com/en/insights/ai-agents-french-banks.md) : article EN-first, BNP + SocGen + assureur top 3
 
+## Hubs par ville — landings locales
+
+Abbeal opère 3 hubs synchrones où l'équipe est physiquement implantée. Chaque hub sert son marché local avec des consultants seniors bilingues et une adresse opérationnelle vérifiable.
+
+### Abbeal Paris — senior engineering firm in Paris
+
+Adresse : 54 Rue Greneta, 75002 Paris, France. Opéré depuis 2015. Marché : banques (BNP, SocGen, BPCE, CA), assureurs (AXA, CNP, Groupama), retail (Carrefour, LVMH), énergie (Enedis). Souveraineté RGPD / SecNumCloud / HDS / DORA. TJM 900-1500 € HT.
+
+- [Consultant informatique à Paris](https://abbeal.com/fr/consultant-informatique-paris.md) : squads seniors freelance, IA/Data/DevOps
+- [Entreprise de développement informatique à Paris](https://abbeal.com/fr/entreprise-developpement-informatique-paris.md) : ESN & squads pour banques/assureurs/grands groupes
+
+### Abbeal Montréal — senior engineering firm in Montréal
+
+Adresse : 4388 Rue Saint-Denis, H2J 2L1 Montréal, Québec, Canada. Opéré depuis 2023. Marché : Banque Nationale, Hydro-Québec, Desjardins, Cogeco. Conformité Loi 25 (LPRPDE + AEP Québec). TJM 850-1300 $ CAD. Vianney Blanquart au pilotage.
+
+- [Entreprise de développement informatique à Montréal](https://abbeal.com/fr/entreprise-developpement-informatique-montreal.md) : ESN, recrutement, delivery Québec
+
+### Abbeal Tokyo — senior engineering firm in Tokyo
+
+Adresse : PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044 Tokyo, Japan. Opéré depuis 2018. Marché : Money Forward, Cartier Japan, Le Monde Tokyo. Consultants JLPT N2+, JFSA-aware. TJM ¥ 12k-25k / jour selon expertise.
+
+- [Tech consulting Tokyo & IT staffing Japan](https://abbeal.com/en/tech-consulting-tokyo.md) : engineering teams for Western enterprises
+- [ESN française à Tokyo — Studio tri-géo Japon](https://abbeal.com/fr/esn-tri-geo-japon.md) : hub permanent Minato-ku
+- [Engineering jobs Tokyo & developer jobs Japan](https://abbeal.com/en/engineering-jobs-tokyo.md) : Mobbeal relocation programme
+
 ## Mobbeal — mobilité internationale tech
 
 [Mobbeal](https://abbeal.com/fr/mobbeal.md) : programme de relocation pour ingénieurs vers Paris, Montréal ou Tokyo. Accompagnement complet : visa, logement, famille, école. Partenaires : JETRO, Business France, La French Tech, Montréal International.
