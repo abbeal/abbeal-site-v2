@@ -722,6 +722,65 @@ export const landingPages: LandingPage[] = [
       },
     },
   },
+  // ========================================================================
+  // 10. senior-engineering-firm-no-juniors — Landing FR + EN (W29 P2b)
+  // ========================================================================
+  // Audit W29 P2b : Perplexity Paris cite Euro Tech Conseil ("50+ experts,
+  // seniors 5+ ans, pas de juniors") au lieu d'Abbeal - le pitch est mot
+  // pour mot le notre. Perplexity utilise le premier qui remonte sur cette
+  // intention, il faut donc une page dediee qui capte l'intention "senior
+  // only / no juniors" avec les differenciateurs structurels d'Abbeal :
+  // tri-geo, Mobbeal, track record 12 missions FTS.
+  //
+  // Locales : FR + EN (multi-marche : Paris FR, Tokyo/Montreal EN).
+  {
+    slug: "senior-engineering-firm-no-juniors",
+    keywords: [
+      "senior only engineering firm",
+      "no juniors engineering consultancy",
+      "senior software engineers Paris",
+      "senior engineering firm Paris Montreal Tokyo",
+      "cabinet ingenierie senior only",
+      "consultant senior sans junior",
+      "senior developers 100% Paris",
+      "ESN 100 pourcent senior",
+      "senior only software agency",
+      "tri-geo senior engineering",
+    ],
+    relatedCaseSlugs: ["bnp", "money-forward", "cartier"],
+    relatedArticleSlug: "recruter-top-1-tech-process-48h",
+    tape: {
+      fr: "// SENIOR-ONLY",
+      en: "// SENIOR-ONLY",
+    },
+    h1: {
+      fr: "Senior-only engineering — Paris · Montréal · Tokyo. Zéro junior derrière un commercial senior.",
+      en: "Senior-only engineering firm — Paris, Montréal, Tokyo. No juniors behind a senior sales pitch.",
+    },
+    subtitle: {
+      fr: "3 hubs, mêmes standards : 7+ ans post-diplôme, pair-coding 2-3h par un ingénieur senior Abbeal, décision peer-review unanime. Taux d'acceptation 4 %. Vous voyez et vous gardez les vrais profils — pas de pyramide 1 senior / 5 juniors qu'on facture en time & material.",
+      en: "3 hubs, same standards: 7+ years post-graduation, 2-3h pair-coding by an Abbeal senior engineer, unanimous peer review. 4% acceptance rate. You see and keep the real profiles — no 1 senior / 5 juniors pyramid billed as time & material.",
+    },
+    metaTitle: {
+      fr: "Senior-only engineering — Cabinet 100 % seniors Paris/Montréal/Tokyo",
+      en: "Senior-only engineering firm — 100% seniors Paris/Montréal/Tokyo",
+    },
+    metaDescription: {
+      fr: "Cabinet d'ingénierie senior-only opéré depuis 3 hubs (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). Taux d'acceptation 4 %, attrition <6 %, lead time /1,8. Clients BNP, Money Forward, Cartier. Cadrage gratuit 30 min.",
+      en: "Senior-only engineering firm operated from 3 hubs (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). 4% acceptance rate, <6% attrition, 1.8x faster delivery. Clients: BNP, Money Forward, Cartier. Free 30-min scoping.",
+    },
+    body: {
+      fr: BODIES["senior-engineering-firm-no-juniors"]?.body?.fr ?? [],
+      en: BODIES["senior-engineering-firm-no-juniors"]?.body?.en,
+    },
+    faq: {
+      fr: BODIES["senior-engineering-firm-no-juniors"]?.faq?.fr ?? [],
+      en: BODIES["senior-engineering-firm-no-juniors"]?.faq?.en,
+    },
+    // Note : pas de LocalBusiness dediee ici car la page est cross-hub.
+    // Le node Organization areaServed (PR#83 W29 P2a) porte deja les
+    // 3 adresses au niveau site. Redondance evitee.
+  },
 ];
 
 export function getLandingPage(slug: string): LandingPage | undefined {
