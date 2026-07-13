@@ -173,6 +173,10 @@ export const landingPages: LandingPage[] = [
   // ========================================================================
   {
     slug: "tech-consulting-tokyo",
+    // W29 P1.b : ajout keywords JP-hiring pour couvrir l'intention
+    // locale "hiring senior software engineers Tokyo" identifiee par
+    // l'audit W29 (Perplexity local Tokyo cite Hays / 9cv9 / Akkodis
+    // au lieu d'Abbeal). Termes JP natifs + EN pour double couverture.
     keywords: [
       "tech consulting Tokyo",
       "IT staffing Japan",
@@ -180,6 +184,12 @@ export const landingPages: LandingPage[] = [
       "tech consulting Japan",
       "external CTO Tokyo",
       "engineering Japan western enterprise",
+      "hiring senior software engineers Tokyo",
+      "hire senior developer Japan",
+      "外資系 エンジニア 採用 東京",
+      "東京 シニアエンジニア 採用",
+      "日本 ソフトウェアエンジニア 採用",
+      "senior software engineer Tokyo hiring 2026",
     ],
     relatedCaseSlugs: ["money-forward", "le-monde", "cartier"],
     relatedArticleSlug: "souverainete-secnumcloud-vs-appi",
@@ -227,6 +237,14 @@ export const landingPages: LandingPage[] = [
       en: BODIES["tech-consulting-tokyo"]?.faq?.en,
       ja: BODIES["tech-consulting-tokyo"]?.faq?.ja,
       "fr-ca": BODIES["tech-consulting-tokyo"]?.faq?.["fr-ca"],
+    },
+    extraSchema: {
+      // W29 P1.b : LocalBusiness JSON-LD indispensable pour Knowledge
+      // Panel Google "Abbeal Tokyo" + ranking local geo-targeted sur
+      // "tech consulting Tokyo" / "hiring senior software engineers Tokyo".
+      // Meme adresse que esn-tri-geo-japon (les 2 landings Tokyo sont
+      // co-implantees Higashi-Azabu, Minato-ku).
+      localBusiness: TOKYO_OFFICE,
     },
   },
   // ========================================================================
