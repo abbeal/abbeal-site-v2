@@ -46,17 +46,19 @@ export function Header({
     <header className="sticky top-0 z-40 border-b border-[var(--color-border)]/60 bg-[var(--color-bg-light)]/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-6 px-6 md:px-10">
         <Link href={prefix} className="block" aria-label="Abbeal">
-          {/* fetchPriority="high" : renforce `priority` (preload link) avec
-              un hint navigator de prioriser ce fetch reseau au-dessus du
-              HTML parsing principal. Audit W26 LCP /fr mobile 6.0s. */}
+          {/* Wordmark = NOT le LCP (rendu 127x28 max, ecrase visuellement
+              par le H1 clamp 44-96px qui occupe tout le viewport mobile).
+              W29 : retire priority + fetchPriority=high qui volaient la
+              bande passante mobile aux fonts Geist preloaded (H1 = vrai
+              LCP text-based). sizes="140px" limite le srcset a 640w au
+              lieu de 3840w par defaut. Audit W29 LCP 5.6s -> cible <2.5s. */}
           <Image
             src="/brand/wordmark-teal.png"
             alt="Abbeal"
             width={1511}
             height={333}
+            sizes="140px"
             className="h-7 w-auto"
-            priority
-            fetchPriority="high"
           />
         </Link>
 
