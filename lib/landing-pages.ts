@@ -587,6 +587,9 @@ export const landingPages: LandingPage[] = [
   // (cf app/[lang]/[slug]/page.tsx) ne genere que ces 2 locales.
   {
     slug: "entreprise-developpement-informatique-montreal",
+    // W29 P1.c : keywords elargis avec "agence developpement Montreal" +
+    // "talents tech Montreal seniors" (audit brief W29 : couvrir les
+    // intentions locales "agence/talents" additionnelles au "entreprise").
     keywords: [
       "entreprise developpement informatique montreal",
       "ESN Montreal",
@@ -596,6 +599,11 @@ export const landingPages: LandingPage[] = [
       "recrutement tech Montreal",
       "developpement logiciel Quebec",
       "robotique Montreal",
+      "agence developpement informatique Montreal",
+      "agence tech Quebec",
+      "talents tech Montreal seniors",
+      "developpement logiciel senior Montreal",
+      "cabinet developpement Montreal",
     ],
     relatedCaseSlugs: ["paraito", "mobilitas", "bopizy"],
     relatedArticleSlug: "follow-the-sun-sans-bruler-equipes",
