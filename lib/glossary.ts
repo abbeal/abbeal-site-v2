@@ -33,6 +33,16 @@ export type GlossaryEntry = {
   definition: I18nString; // 2-4 phrases
   category: GlossaryCategory;
   relatedTerms?: string[]; // slugs
+  /** SEO title override (60 chars max recommande). Si defini, remplace
+   *  `${term} · Glossaire Abbeal` dans generateMetadata + openGraph.title
+   *  + twitter.title. Permet du keyword-frontloading + promesse claire
+   *  pour les termes indexes mais a CTR faible (audit W29 : isaac-sim,
+   *  nav2, ros2 sont ranked pos 6-15 mais CTR ~0). Fallback : template. */
+  metaTitle?: I18nString;
+  /** SEO description override (155 chars max recommande). Si defini,
+   *  remplace `short` dans generateMetadata + openGraph.description.
+   *  Permet de gagner en signal commercial vs texte court UI. */
+  metaDescription?: I18nString;
 };
 
 export const CATEGORY_I18N: Record<GlossaryCategory, I18nString> = {
@@ -783,6 +793,18 @@ export const glossary: GlossaryEntry[] = [
       en: "Standard open-source framework for modern robotics (AMR, cobots, robot fleets). Abbeal supports ROS 2 projects from simulation to production — talk to a robotics architect.",
       ja: "モダンロボティクスの標準オープンソースフレームワーク（AMR、コボット、ロボットフリート）。Abbealはシミュレーションから本番までROS 2プロジェクトを支援します — ロボティクスアーキテクトに相談。",
     },
+    // W29 CTR fix : title keyword-frontloaded + promesse claire ("2026",
+    // "production"). Pos 6.3 sur 'ros2 2026' => trafic est la, faut clic.
+    metaTitle: {
+      fr: "ROS 2 en 2026 — Standard robotique : DDS, Nav2, MoveIt, production",
+      en: "ROS 2 in 2026 — Robotics standard: DDS, Nav2, MoveIt, production",
+      ja: "ROS 2 2026年 — ロボティクス標準：DDS、Nav2、MoveIt、本番運用",
+    },
+    metaDescription: {
+      fr: "Framework robotique open-source de référence en 2026. DDS temps-réel, multi-robot natif, Nav2 + MoveIt. Retour terrain Abbeal sur ROS 2 en production (AMR, cobots, flottes).",
+      en: "The reference open-source robotics framework in 2026. Real-time DDS, native multi-robot, Nav2 + MoveIt. Abbeal's field notes on ROS 2 in production (AMRs, cobots, fleets).",
+      ja: "2026年の標準オープンソースロボティクスフレームワーク。リアルタイムDDS、マルチロボット、Nav2＋MoveIt。AMR、コボット、フリートでのROS 2本番運用 — Abbealの現場ノート。",
+    },
     definition: {
       fr: "Évolution de ROS 1. DDS (Data Distribution Service) comme transport, real-time, multi-robot native. Packages clés : Nav2 (navigation), MoveIt (manipulation), rclcpp, rclpy. Standard de fait industriel depuis 2022.",
       en: "Successor to ROS 1. DDS (Data Distribution Service) as transport, real-time, native multi-robot. Key packages: Nav2 (navigation), MoveIt (manipulation), rclcpp, rclpy. De facto industry standard since 2022.",
@@ -803,6 +825,18 @@ export const glossary: GlossaryEntry[] = [
       fr: "Stack de navigation autonome pour ROS 2 : planification + contrôle pour AMR et robots mobiles. Retour d'expérience Abbeal en production sur flottes réelles.",
       en: "Autonomous navigation stack for ROS 2: planning + control for AMR and mobile robots. Abbeal's field feedback from real-world fleet deployments.",
       ja: "ROS 2向け自律ナビゲーションスタック：AMRとモバイルロボットのための計画＋制御。実際のフリート展開における現場フィードバック — ロボティクスアーキテクトに相談。",
+    },
+    // W29 CTR fix : title keyword-frontloaded avec composants concrets
+    // pour techies qui cherchent la stack. Pos 13.4 sur 'navigation 2'.
+    metaTitle: {
+      fr: "Nav2 (Navigation 2) — Stack ROS 2 : Behavior Trees, MPPI, LiDAR",
+      en: "Nav2 (Navigation 2) — ROS 2 stack: Behavior Trees, MPPI, LiDAR",
+      ja: "Nav2（Navigation 2） — ROS 2スタック：Behavior Trees、MPPI、LiDAR",
+    },
+    metaDescription: {
+      fr: "Behavior Trees, planners (NavFn, Smac), controllers (DWB, MPPI), fusion LiDAR. Nav2 en production sur flottes AMR — retour d'expérience Abbeal 2026.",
+      en: "Behavior Trees, planners (NavFn, Smac), controllers (DWB, MPPI), LiDAR fusion. Nav2 in production for AMR fleets — Abbeal 2026 field notes.",
+      ja: "Behavior Trees、プランナー（NavFn、Smac）、コントローラ（DWB、MPPI）、LiDARフュージョン。AMRフリートでのNav2本番運用 — Abbealの2026年現場ノート。",
     },
     definition: {
       fr: "Behavior Trees, planners (NavFn, Smac), controllers (DWB, MPPI), perception (LiDAR fusion, depth). Production-ready pour AMR et robots mobiles. Alternative : NVIDIA Isaac ROS.",
@@ -826,6 +860,19 @@ export const glossary: GlossaryEntry[] = [
       fr: "Simulateur photoréaliste pour robotique basé sur NVIDIA Omniverse. Training RL, synthetic data, digital twin. Abbeal l'utilise pour valider les stacks robotique avant hardware — parler à un architecte.",
       en: "Photorealistic robotics simulator built on NVIDIA Omniverse. RL training, synthetic data, digital twin. Abbeal uses it to validate robotics stacks pre-hardware — talk to an architect.",
       ja: "NVIDIA Omniverseベースのフォトリアリスティックなロボティクスシミュレータ。強化学習の学習、合成データ、デジタルツイン。Abbealはハードウェア前のロボティクススタック検証に使用します — アーキテクトに相談。",
+    },
+    // W29 CTR fix : title keyword-frontloaded avec bénéfice concret
+    // ("photoréaliste", "avant hardware", "flottes en prod"). Pos 15
+    // avec 530 imp -> plus grosse opportunite CTR non-realisee.
+    metaTitle: {
+      fr: "Isaac Sim NVIDIA — Simulation robotique photoréaliste avant hardware",
+      en: "Isaac Sim NVIDIA — Photorealistic robotics simulation before hardware",
+      ja: "Isaac Sim（NVIDIA） — ハードウェア前のフォトリアルなロボティクスシミュレーション",
+    },
+    metaDescription: {
+      fr: "Photoréalisme RTX, physique PhysX, training RL, digital twin. Comment Abbeal utilise Isaac Sim en production sur des flottes robotiques (retour terrain 2026).",
+      en: "RTX photorealism, PhysX physics, RL training, digital twin. How Abbeal uses Isaac Sim in production for robotics fleets (2026 field notes).",
+      ja: "RTXフォトリアリズム、PhysX物理エンジン、強化学習の学習、デジタルツイン。Abbealのロボティクスフリート本番でのIsaac Sim活用（2026年現場ノート）。",
     },
     definition: {
       fr: "Physique (PhysX), rendering RTX, domain randomization. Use cases : training RL, synthetic data, digital twin, validation sans hardware. Alternative open : Gazebo, Webots.",

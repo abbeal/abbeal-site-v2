@@ -33,8 +33,18 @@ export async function generateMetadata({
   if (!e) return { title: "Terme introuvable · Abbeal Glossaire" };
   const locale = lang as Locale;
   const loc = localizeGlossaryEntry(e, locale);
-  const title = `${loc.term} · Glossaire Abbeal`;
-  const description = loc.short;
+  // W29 CTR fix : metaTitle/metaDescription override le template
+  // `${term} · Glossaire Abbeal` + le `short` UI. Cible : les termes
+  // indexes mais a CTR ~0 (isaac-sim pos 15 / 530 imp, ros2 pos 6, nav2
+  // pos 13). Titles keyword-frontloaded + promesse claire = plus de clics.
+  const metaTitleI18n = e.metaTitle;
+  const metaDescI18n = e.metaDescription;
+  const title = metaTitleI18n
+    ? metaTitleI18n[toGlossaryLocale(locale)]
+    : `${loc.term} · Glossaire Abbeal`;
+  const description = metaDescI18n
+    ? metaDescI18n[toGlossaryLocale(locale)]
+    : loc.short;
   return {
     title,
     description,
