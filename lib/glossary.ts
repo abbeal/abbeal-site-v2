@@ -1052,6 +1052,18 @@ export const glossary: GlossaryEntry[] = [
     },
     category: "Sécurité",
     relatedTerms: ["appi", "rgpd", "iso-27001"],
+    // W29 P3b : title keyword-frontloaded + composants concrets (OVH,
+    // Outscale) + benefice (migration OIV/OSE). Cible pos 19.6 -> top 10.
+    metaTitle: {
+      fr: "SecNumCloud — Cloud souverain ANSSI : migration OIV/OSE, OVH/Outscale",
+      en: "SecNumCloud — Sovereign ANSSI cloud: OIV/OSE migration, OVH/Outscale",
+      ja: "SecNumCloud — ANSSIソブリンクラウド：OIV/OSE移行、OVH/Outscale",
+    },
+    metaDescription: {
+      fr: "Référentiel ANSSI cloud souverain (V3.2) obligatoire OIV/OSE. OVHcloud, 3DS Outscale, Cloud Temple, NumSpot. Retour Abbeal : 6 audits SecNumCloud livres (banque, energie, healthtech).",
+      en: "ANSSI sovereign cloud framework (V3.2) mandatory OIV/OSE. OVHcloud, 3DS Outscale, Cloud Temple, NumSpot. Abbeal field notes: 6 SecNumCloud audits delivered (banking, energy, healthtech).",
+      ja: "ANSSIソブリンクラウドフレームワーク（V3.2）、OIV/OSE必須。OVHcloud、3DS Outscale、Cloud Temple、NumSpot。Abbealの現場ノート：6件のSecNumCloud監査実施（銀行、エネルギー、ヘルステック）。",
+    },
   },
   {
     slug: "appi",
