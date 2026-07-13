@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import dynamic from "next/dynamic";
 import { getDictionary } from "./dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
 import { pageAlternates } from "@/lib/seo";
@@ -9,42 +8,27 @@ import { KPIs } from "@/components/sections/KPIs";
 import { ADN } from "@/components/sections/ADN";
 import { Services } from "@/components/sections/Services";
 import { Expertises } from "@/components/sections/Expertises";
+import { TechRadar } from "@/components/sections/TechRadar";
 import { getCurrentEdition } from "@/lib/tech-radar";
+import { Stories } from "@/components/sections/Stories";
+import { Moments } from "@/components/sections/Moments";
+import { Insights } from "@/components/sections/Insights";
 import { CareersTeaser } from "@/components/sections/CareersTeaser";
 import { CTAFinal } from "@/components/sections/CTAFinal";
-
-// W29 v2 LCP fix : les 4 composants client below-fold les plus lourds
-// (TechRadar 280 lignes, Insights 602 lignes, Stories 135 lignes, Moments
-// 98 lignes) sont chunk-splitted via next/dynamic. Le JS Total initial
-// passe de ~1.6MB a ~1MB, ce qui liberera 500-600ms de bande passante
-// mobile pour la phase FCP (3.0s -> cible <1.8s).
-//
-// Les 4 sections restent SSR-rendered (HTML dans la reponse initiale
-// pour SEO/LLM) ; seul le JS de hydratation est defer. Placeholder
-// `<div />` = pas de layout shift.
-const TechRadar = dynamic(() =>
-  import("@/components/sections/TechRadar").then((m) => ({ default: m.TechRadar })),
-);
-const Stories = dynamic(() =>
-  import("@/components/sections/Stories").then((m) => ({ default: m.Stories })),
-);
-const Moments = dynamic(() =>
-  import("@/components/sections/Moments").then((m) => ({ default: m.Moments })),
-);
-const Insights = dynamic(() =>
-  import("@/components/sections/Insights").then((m) => ({ default: m.Insights })),
-);
 import { getHomeFeaturedArticles, pick } from "@/lib/articles";
 import { getCMSArticles, cmsArticleAsArticle } from "@/lib/articles-cms";
 import { getHomeFeaturedCases } from "@/lib/cases";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { getPublishedJobOffers, locationLabel } from "@/lib/job-offers";
 
-// 5 min ISR : balance fraicheur (offres CMS published apparaissent dans le
-// CareersTeaser de la home <5min) vs cost. Le hook Payload afterChange
-// invalide aussi /{locale} pour rafraichir instantanement (cf
-// app/api/revalidate/route.ts + payload.config.ts).
-export const revalidate = 300;
+// W29 v3 TTFB fix : revalidate 1h (au lieu de 5 min). Le hook Payload
+// afterChange (cf app/api/revalidate/route.ts + payload.config.ts) invalide
+// deja /{locale} instantanement quand un admin publie une offre ou un
+// article. Le revalidate est un fallback : passer de 300s a 3600s reduit
+// drastiquement le taux de cache MISS (donc TTFB) sans impact sur la
+// fraicheur (le hook garantit la fraicheur reelle).
+// Field CrUX W29 : TTFB 1.6s -> cible <0.8s (seuil "good" CWV).
+export const revalidate = 3600;
 
 export async function generateMetadata({
   params,
@@ -76,6 +60,11 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
   const radarDeepLinkLabel =
     dict.techRadarHome?.deepLinkLabel ?? "See full edition";
 
+  // W29 v3 TTFB fix : les 2 requetes Turso independantes (getCMSArticles
+  // pour Insights section + getPublishedJobOffers pour CareersTeaser)
+  // sont parallelisees via Promise.all. Sequentiel = ~800ms (2x400ms),
+  // parallele = ~400ms (max). Direct gain sur TTFB SSR.
+  //
   // Home featured articles : pivot CMS-first (comme /insights PR #32).
   //   1. Fetch CMS articles publies avec featuredOnHome=true (source de
   //      verite editoriale, editable depuis /admin sans deploy)
@@ -84,7 +73,10 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
   //      pre-CMS pas encore migres
   //   3. Dedup par slug (le CMS gagne sur le static si meme slug)
   //   4. Limit 3 (slot scarce Insights section home)
-  const cmsArticles = await getCMSArticles(locale);
+  const [cmsArticles, cmsOffers] = await Promise.all([
+    getCMSArticles(locale),
+    getPublishedJobOffers(locale),
+  ]);
   // CMS side : ONLY featuredOnHome=true remonte a la home. Sinon les
   // articles avec featured=true (importants pour /insights listing mais
   // pas home) apparaissaient a tort ici. Ex : output-based-vs-time-material
@@ -127,7 +119,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
   // /careers. CMS en TOP avec href vers page detail, dict en bas avec
   // anchor #slug vers le listing (pas de body markdown pour detail).
   // Limite 4 cards (layout 2x2 desktop).
-  const cmsOffers = await getPublishedJobOffers(locale);
+  // W29 v3 : cmsOffers deja fetche via Promise.all ci-dessus.
   const cmsTeaserRoles = cmsOffers.map((o) => ({
     slug: o.slug,
     title: o.title,
