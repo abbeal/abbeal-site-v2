@@ -34,7 +34,10 @@ export function Header({
   const navHint = (dict as unknown as { nav: { mobbealHint?: string } }).nav
     .mobbealHint;
   const items = [
-    { label: d.nav.services, href: `${prefix}#services`, title: undefined },
+    // W29 : /services listing existe desormais (fix 404 + SEO hub OfferCatalog).
+    // Ancien lien vers ancre home #services conserve semantiquement via
+    // la section Services de la home qui reste en place.
+    { label: d.nav.services, href: `${prefix}/services`, title: undefined },
     { label: d.nav.expertises, href: `${prefix}#expertises`, title: undefined },
     { label: d.nav.stories, href: `${prefix}/cases`, title: undefined },
     { label: d.nav.mobbeal, href: `${prefix}/mobbeal`, title: navHint },
