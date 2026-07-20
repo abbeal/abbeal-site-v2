@@ -72,6 +72,12 @@ const ROUTES = [
   "/careers",
   "/contact",
   "/cgu",
+  // W30 audit fix : le hub /services listing (cree PR #88) n'etait pas
+  // dans le sitemap. Seuls les enfants /services/{squads-embarques,
+  // recrutement-technique, delivery-cle-en-main} etaient listes via la
+  // boucle services au-dessous. Ajoute ici pour que Google indexe le
+  // hub OfferCatalog + le canonical /{locale}/services par locale.
+  "/services",
 ] as const;
 
 /**
