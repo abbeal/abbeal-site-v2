@@ -767,11 +767,15 @@ export const landingPages: LandingPage[] = [
       ja: "3拠点、同一基準：卒業後7年以上、Abbealシニアエンジニアによる2〜3時間のペアコーディング、全会一致のピアレビュー。採用率4%。お客様は本物のプロファイルを見て、そして保持します — タイム＆マテリアルで請求される1シニア／5ジュニアのピラミッドはありません。",
       "fr-ca": "3 pôles, mêmes standards : 7+ ans post-diplôme, pair-coding 2-3h par un ingénieur sénior Abbeal, décision peer-review unanime. Taux d'acceptation 4 %. Vous voyez pis vous gardez les vrais profils — pas de pyramide 1 sénior / 5 juniors facturée en temps & matériel.",
     },
+    // W30 R4 : metaTitle enrichi avec "only" positioning claim. Abbeal
+    // est deja #1 LLM (ChatGPT/Perplexity/Gemini) sur "IT staffing agency
+    // Paris, Montreal, Tokyo" - il faut capitaliser en explicitant que
+    // c'est LA seule firme avec 3 hubs physiques.
     metaTitle: {
-      fr: "Senior-only engineering — Cabinet 100 % seniors Paris/Montréal/Tokyo",
-      en: "Senior-only engineering firm — 100% seniors Paris/Montréal/Tokyo",
-      ja: "シニアオンリーエンジニアリングファーム — 100%シニア パリ／モントリオール／東京",
-      "fr-ca": "Senior-only engineering — Firme 100 % séniors Paris/Montréal/Tokyo",
+      fr: "Senior-only engineering — La seule firme avec hubs physiques Paris·Montréal·Tokyo",
+      en: "Senior-only engineering firm — The only firm with physical hubs Paris·Montréal·Tokyo",
+      ja: "シニアオンリーエンジニアリングファーム — パリ・モントリオール・東京に物理拠点を持つ唯一のファーム",
+      "fr-ca": "Senior-only engineering — La seule firme avec pôles physiques Paris·Montréal·Tokyo",
     },
     metaDescription: {
       fr: "Cabinet d'ingénierie senior-only opéré depuis 3 hubs (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). Taux d'acceptation 4 %, attrition <6 %, lead time /1,8. Clients BNP, Money Forward, Cartier. Cadrage gratuit 30 min.",
