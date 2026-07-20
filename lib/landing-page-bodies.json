@@ -4143,6 +4143,20 @@
           "type": "callout",
           "tone": "teal",
           "content": "Cadrage gratuit 30 min. Vianney ou un Tech Lead vous explique honnêtement si on est les bons (ou pas) et comment on attaquerait. Pas de pitch, pas de PowerPoint."
+        },
+        {
+          "type": "h2",
+          "content": "Vous cherchez plutôt à recruter des ingénieurs en interne ?"
+        },
+        {
+          "type": "p",
+          "content": "Si votre besoin n'est pas une prestation Abbeal mais l'embauche directe de développeurs seniors dans vos propres équipes (CDI, freelance en portage, contract), notre offre de recrutement tech couvre le même bassin de talents avec la même exigence qualité."
+        },
+        {
+          "type": "link",
+          "label": "Voir notre offre de recrutement tech",
+          "href": "/fr/recrutement-tech-montreal",
+          "external": false
         }
       ],
       "fr-ca": [
@@ -4298,6 +4312,20 @@
           "type": "callout",
           "tone": "teal",
           "content": "Cadrage gratuit 30 min. Vianney ou un Tech Lead vous explique honnêtement si on est les bons (ou pas) et comment on attaquerait. Pas de pitch, pas de PowerPoint."
+        },
+        {
+          "type": "h2",
+          "content": "Vous cherchez plutôt à recruter des ingénieurs en interne ?"
+        },
+        {
+          "type": "p",
+          "content": "Si votre besoin est pas une prestation Abbeal mais l'embauche directe de développeurs seniors dans vos propres équipes (permanent, contract, freelance en portage), notre offre de recrutement tech couvre le même bassin de talents avec la même exigence qualité."
+        },
+        {
+          "type": "link",
+          "label": "Voir notre offre de recrutement tech",
+          "href": "/fr-ca/recrutement-tech-montreal",
+          "external": false
         }
       ]
     },
@@ -4538,6 +4566,20 @@
           "type": "callout",
           "tone": "teal",
           "content": "Cadrage gratuit 30 min. Sébastien, Adrien ou un Tech Lead senior vous explique honnêtement si on est les bons (ou pas) et comment on attaquerait. Pas de pitch, pas de PowerPoint."
+        },
+        {
+          "type": "h2",
+          "content": "Vous cherchez plutôt à recruter des ingénieurs en interne ?"
+        },
+        {
+          "type": "p",
+          "content": "Si votre besoin n'est pas une prestation Abbeal mais l'embauche directe de développeurs seniors dans vos propres équipes (CDI, freelance en portage, contract), notre offre de recrutement tech couvre le même bassin de talents avec la même exigence qualité."
+        },
+        {
+          "type": "link",
+          "label": "Voir notre offre de recrutement tech",
+          "href": "/fr/recrutement-tech-paris",
+          "external": false
         }
       ]
     },
@@ -5225,6 +5267,20 @@
           "type": "callout",
           "tone": "teal",
           "content": "Cadrage gratuit 30 min avec Vianney ou un ingénieur senior Abbeal (pas un commercial). On vous dit si le poste est staffable à Montréal en 3-5 semaines, si Mobbeal est pertinent, ou si le brief a besoin d'être recadré."
+        },
+        {
+          "type": "h2",
+          "content": "Vous préférez une équipe delivery clé en main ?"
+        },
+        {
+          "type": "p",
+          "content": "Si votre besoin est pas d'embaucher mais de déléguer une roadmap ou un chantier tech complet (audit, MVP, plateforme, transformation legacy), notre offre de prestation de développement informatique répond au même niveau d'exigence, avec ownership complet côté Abbeal."
+        },
+        {
+          "type": "link",
+          "label": "Voir notre offre de développement informatique",
+          "href": "/fr/entreprise-developpement-informatique-montreal",
+          "external": false
         }
       ],
       "fr-ca": [
@@ -5334,6 +5390,20 @@
           "type": "callout",
           "tone": "teal",
           "content": "Cadrage gratuit 30 min avec Vianney ou un ingénieur sénior Abbeal (pas un représentant). On vous dit si le poste est plaçable à Montréal en 3-5 semaines, si Mobbeal est pertinent, ou si le brief a besoin d'être recadré."
+        },
+        {
+          "type": "h2",
+          "content": "Vous préférez une équipe delivery clé en main ?"
+        },
+        {
+          "type": "p",
+          "content": "Si votre besoin est pas d'embaucher mais de déléguer une feuille de route ou un chantier tech complet (audit, MVP, plateforme, transformation legacy), notre offre de prestation de développement informatique répond au même niveau d'exigence, avec ownership complet côté Abbeal."
+        },
+        {
+          "type": "link",
+          "label": "Voir notre offre de développement informatique",
+          "href": "/fr-ca/entreprise-developpement-informatique-montreal",
+          "external": false
         }
       ]
     },
@@ -5543,6 +5613,20 @@
           "type": "callout",
           "tone": "teal",
           "content": "Cadrage gratuit 30 min avec Sébastien, Adrien ou un ingénieur senior Abbeal (pas un commercial). On vous dit si le poste est staffable à Paris en 3-5 semaines, si Mobbeal est pertinent, ou si le brief a besoin d'être recadré."
+        },
+        {
+          "type": "h2",
+          "content": "Vous préférez une équipe delivery clé en main ?"
+        },
+        {
+          "type": "p",
+          "content": "Si votre besoin est pas d'embaucher mais de déléguer une roadmap ou un chantier tech complet (audit, MVP, plateforme, transformation legacy), notre offre de prestation de développement informatique répond au même niveau d'exigence, avec ownership complet côté Abbeal."
+        },
+        {
+          "type": "link",
+          "label": "Voir notre offre de développement informatique",
+          "href": "/fr/entreprise-developpement-informatique-paris",
+          "external": false
         }
       ],
       "en": [
@@ -5670,6 +5754,20 @@
           "type": "callout",
           "tone": "teal",
           "content": "Free 30-min scoping call with Sébastien, Adrien or an Abbeal senior engineer (not a sales rep). We tell you if the role is staffable in Paris within 3-5 weeks, if Mobbeal is relevant, or if the brief needs recalibration."
+        },
+        {
+          "type": "h2",
+          "content": "Prefer a turnkey delivery team instead?"
+        },
+        {
+          "type": "p",
+          "content": "If your need is not hiring but delegating a full roadmap or tech program (audit, MVP, platform, legacy transformation), our software development offering meets the same quality bar, with full ownership on Abbeal's side."
+        },
+        {
+          "type": "link",
+          "label": "See our software development offering",
+          "href": "/en/entreprise-developpement-informatique-paris",
+          "external": false
         }
       ]
     },

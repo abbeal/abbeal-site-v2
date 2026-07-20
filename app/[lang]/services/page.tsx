@@ -7,6 +7,7 @@ import { pick } from "@/lib/articles";
 import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { getDictionary } from "../dictionaries";
+import { Hubs } from "@/components/sections/Hubs";
 
 /**
  * Services listing hub — /{locale}/services
@@ -213,6 +214,9 @@ export default async function ServicesListingPage({
           );
         })}
       </div>
+
+      {/* W30+ Section C : maillage vers 6 pages ville x service */}
+      <Hubs locale={locale} />
 
       {/* CTA final */}
       <section className="mt-24 pt-16 border-t border-[var(--color-border)] text-center">

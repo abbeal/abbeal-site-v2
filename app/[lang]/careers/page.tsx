@@ -6,6 +6,7 @@ import { hasLocale, type Locale } from "@/lib/i18n";
 import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { generateJobPostings } from "@/lib/jobPosting";
+import { Hubs } from "@/components/sections/Hubs";
 import {
   getPublishedJobOffers,
   locationLabel,
@@ -158,6 +159,7 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/careers
   );
 
   return (
+    <>
     <section className="mx-auto max-w-[1200px] px-6 md:px-10 py-20 md:py-28">
       <script
         type="application/ld+json"
@@ -326,5 +328,8 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/careers
         })}
       </ul>
     </section>
+    {/* W30+ Section C : maillage vers 6 pages ville x service */}
+    <Hubs locale={locale} />
+    </>
   );
 }
