@@ -7,6 +7,7 @@ import { hasLocale, type Locale } from "@/lib/i18n";
 import { pageAlternates, pageOpenGraph } from "@/lib/seo";
 import { breadcrumbs } from "@/lib/breadcrumbs";
 import { CountUp } from "@/components/ui/CountUp";
+import { Hubs } from "@/components/sections/Hubs";
 
 type Dict = {
   nav: { about: string };
@@ -374,6 +375,9 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           ))}
         </div>
       </section>
+
+      {/* W30+ Section C : maillage vers 6 pages ville x service */}
+      <Hubs locale={locale} />
 
       {/* CTA final */}
       <section className="bg-[var(--color-ink)] text-[var(--color-bg-light)]">
