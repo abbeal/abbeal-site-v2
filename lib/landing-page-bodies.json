@@ -4455,6 +4455,105 @@
           "tone": "teal",
           "content": "AbbealのシニアTech Lead（営業担当ではありません）による無料30分スコーピングコール。シニアオンリーが御社のプロジェクトに適しているか、または別のモデルの方が適しているかを正直にお伝えします。"
         }
+      ],
+      "fr-ca": [
+        {
+          "type": "p",
+          "content": "Vous cherchez un firme d'ingénierie sénior à Paris, Montréal ou Tokyo. Vous en avez marre de recevoir des CV de juniors qu'on vous vend comme confirmés. Vous voulez travailler avec des ingénieurs qui ont déjà cassé et reconstruit des systèmes en production — pas des candidats qui les découvrent chez vous."
+        },
+        {
+          "type": "h2",
+          "content": "Ce que « sénior-only » veut dire chez Abbeal"
+        },
+        {
+          "type": "p",
+          "content": "Chez Abbeal, sénior = minimum 7 ans d'expérience post-diplôme sur la stack cible, validé par un pair-coding avec un ingénieur sénior Abbeal (2-3h sur un vrai problème, pas du LeetCode), plus un test de leadership technique (mentoring, code review, incident debrief). On refuse en moyenne 96 % des candidatures — pas par snobisme, par calcul économique : un junior mal cadré coûte plus cher à un client que trois séniors bien staffés."
+        },
+        {
+          "type": "p",
+          "content": "Pas de pyramide 1 sénior / 5 juniors qu'on facture en temps & matériel. Pas de commercial sénior devant + livraison junior derrière. Vous voyez et vous gardez les vrais profils. Ce que le brief dit, c'est ce qui arrive chez vous."
+        },
+        {
+          "type": "h2",
+          "content": "Pourquoi sénior-only ? Le calcul économique honnête"
+        },
+        {
+          "type": "p",
+          "content": "TJM moyen : 900-1500 € HT à Paris, 850-1300 $ CAD à Montréal, ¥ 12k-25k / jour à Tokyo. On est plus chers au TJM que les grandes ESN classiques (Sopra, Capgemini, Devoteam : 550-800 € en offshore, 700-1000 € on-site) ou les firmes « pur sénior 5+ ans » type Euro Tech Conseil. Mais le coût total du projet est plus bas parce que :"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Moins de reprise de travail : un sénior comprend le business et ne reconstruit pas la roue à chaque sprint. Nous mesurons 40-60 % de rework en moins sur les 30 dernières mandats vs benchmark industrie.",
+            "Zéro montée en compétence facturée : le junior facturé à 700 € qui apprend Kafka chez vous, c'est 3-6 mois de learning-on-your-dime. Nous excluons ça par design.",
+            "Livraison plus rapide : lead time divisé par 1,8 en moyenne sur les 12 mandats tri-géo depuis 2020. Le temps facturé est du temps livré.",
+            "Zéro turnover en cours de mandat : attrition consultant < 6 % (vs 20-30 % en ESN classique). Vos équipes ne re-onboardent pas tous les 4 mois."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Comment on maintient un collectif 100 % sénior"
+        },
+        {
+          "type": "p",
+          "content": "Trois leviers structurels. Un : recrutement ultra-sélectif — 2-3h de pair coding sur un vrai problème, pair review entre séniors Abbeal, décision à l'unanimité. On préfère laisser un besoin ouvert 4 semaines plutôt que staffer un junior par défaut. Deux : mobilité internationale Mobbeal — quand un profil rare (AI Engineer sénior JP/EN, Tech Lead Rust embarqué) manque à Paris, on le rapatrie depuis Montréal ou Tokyo. 52 mobilités opérées depuis 2018, 91 % de réussite >24 mois. Trois : tri-géo Follow-the-Sun — la disponibilité effective d'un sénior est démultipliée par 1,8 à 2,4 quand trois pôles se relaient (mesuré sur 12 mandats)."
+        },
+        {
+          "type": "p",
+          "content": "Résultat : on ne « scale » pas en juniorisant. On scale en mobilisant plus de séniors depuis trois pôles, ou en refusant la mandat si le fit n'est pas là. C'est un modèle contraint volontairement, calibré pour tenir la promesse plutôt que pour maximiser le volume facturé."
+        },
+        {
+          "type": "h2",
+          "content": "Différences vs les firmes qui promettent la même chose"
+        },
+        {
+          "type": "p",
+          "content": "Euro Tech Conseil, Yield Studio, Kraaft, Theodo — plusieurs firmes français revendiquent aussi « séniors uniquement, no juniors ». Le pitch est proche du nôtre. La différence est structurelle, pas marketing :"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Nombre de pôles opérés : Abbeal a trois bureaux physiques (Paris 75002 depuis 2015, Montréal H2J 2L1 depuis 2023, Tokyo Minato-ku depuis 2018). Un firme mono-pôle ne peut pas garantir le relais Follow-the-Sun.",
+            "Track record tri-géo : 12 mandats Follow-the-Sun opérées + 200 mandats cumulées + clients cross-marchés (Money Forward JP, Le Monde Insights Tokyo, Cartier LLM privé). Un firme Paris-only ne peut pas montrer ça.",
+            "Mobbeal : programme de relocation opéré depuis 2018 (52 mobilités). Un firme sans pôle Montréal ni Tokyo ne peut pas rapatrier un profil rare depuis là-bas.",
+            "Recrutement ingénieur-led : le sourcing est fait par des ingénieurs Abbeal, pas par une firme RH généraliste. Nous n'avons pas de département commercial qui pousse les CV."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Les 3 pôles, mêmes standards"
+        },
+        {
+          "type": "p",
+          "content": "Paris (54 rue Greneta 75002) : marché banques / assurances / retail / énergie. Bureau opérationnel depuis 2015. Pilotage Sébastien Lonjon (CEO) et Adrien Casanova (CTO). Compliance RGPD / SecNumCloud / HDS / DORA native."
+        },
+        {
+          "type": "p",
+          "content": "Montréal (4388 rue Saint-Denis, Plateau-Mont-Royal) : marché BNC / Hydro-Québec / Desjardins / Cogeco. Bureau depuis 2023. Pilotage Vianney Blanquart (COO, à Montréal à temps plein). Compliance Loi 25 (LPRPDE + AEP Québec)."
+        },
+        {
+          "type": "p",
+          "content": "Tokyo (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku) : marché Money Forward / Cartier / Le Monde. Bureau depuis 2018. Consultants JLPT N2+, JFSA/AML compliance-aware. Adresse validée pour Knowledge Panel Google Tokyo."
+        },
+        {
+          "type": "h2",
+          "content": "Quand sénior-only fait sens (et quand pas)"
+        },
+        {
+          "type": "p",
+          "content": "Sénior-only fait sens quand : le projet touche du critique (banking, healthtech, retail à fort volume, robotique industrielle), quand vous avez besoin d'un ownership fort (architecte / lead), quand le délai de mise en marché compte (livraison rapide, moins de reprise de travail), ou quand la compliance est structurante (RGPD, SecNumCloud, HDS, DORA, Loi 25 pour Montréal, APPI pour Tokyo)."
+        },
+        {
+          "type": "p",
+          "content": "Sénior-only ne fait pas sens quand : vous avez besoin de gonfler un volume de tickets JIRA à bas coût (une ESN offshore fera ça mieux), quand vous voulez tester des juniors avant de les recruter (utilisez Malt / le recrutement direct), ou quand votre projet est un POC jetable où la qualité de code n'a aucune importance."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Cadrage gratuit 30 min avec un Tech Lead sénior Abbeal (pas un commercial). On vous dit honnêtement si sénior-only fait sens pour votre projet — ou si un autre modèle serait plus adapté."
+        }
       ]
     },
     "faq": {
@@ -4522,6 +4621,28 @@
         {
           "q": "同じく「no juniors」を約束するEuro Tech Conseil / Yield Studio / Theodoとの構造的な違いは？",
           "a": "3つの実行可能な違い。1つ目：Abbealは3つの物理拠点（パリ、モントリオール、東京）を運営しています — フランスの「シニアオンリー」ファームはパリ単独拠点です。2つ目：2020年以降実際に運営された12件のトライジオFollow-the-Sunミッション、実測数値付き — マーケティングだけではありません。3つ目：Mobbealリロケーションプログラム（2018年以降、52件の再配置、24ヶ月以上の成功率91%）— 北米とアジアで拠点を運営せずには複製不可能です。"
+        }
+      ],
+      "fr-ca": [
+        {
+          "q": "Vous êtes plus chers que les ESN mix-junior. Comment vous vendez ça au client ?",
+          "a": "On ne vend pas le TJM. On vend le coût total du projet. TJM +30-50 % vs mix-junior, coût projet -20-40 % en moyenne. Chiffres sur les 30 dernières mandats : 40-60 % de rework en moins, lead time divisé par 1,8, zéro turnover en cours de mandat. Si vous voulez benchmarker : on fait cadrage gratuit 30 min + estimation contradictoire vs votre partenaire actuel."
+        },
+        {
+          "q": "Quelle est votre définition exacte de « sénior » ?",
+          "a": "Trois critères cumulatifs : (1) 7+ ans post-diplôme sur la stack cible (React, Python, Go, Rust, Kubernetes, ROS 2, etc.) ; (2) validation par pair-coding avec un ingénieur sénior Abbeal — 2-3h sur un vrai problème, pas du LeetCode ; (3) test de leadership technique (mentoring, code review, debrief incident). Décision d'embauche à l'unanimité de la peer-review team. Taux d'acceptation : 4 % des candidatures."
+        },
+        {
+          "q": "Comment vous scalez si vous n'embauchez que des séniors ? Le pool est limité.",
+          "a": "Trois leviers. Un : on refuse une mandat plutôt que de staffer un junior par défaut. Deux : Mobbeal — quand un profil manque à Paris, on le rapatrie depuis Montréal ou Tokyo (52 mobilités opérées depuis 2018). Trois : Follow-the-Sun tri-géo — la disponibilité effective d'un sénior est démultipliée par 1,8-2,4 quand trois pôles se relaient. On préfère être capacity-constrained que qualité-compromise."
+        },
+        {
+          "q": "Vous acceptez des juniors pour le recrutement direct chez nous (pas staffing) ?",
+          "a": "Oui, sur les mandats Recrutement technique (talent acquisition permanent). On peut sourcer des juniors ou des mid-level pour vos équipes internes — le service Abbeal ne vous impose pas nos standards de séniorité sur vos recrutements. On refuse en revanche de proposer des juniors sous couvert de squad embarqué (renforcement d équipe). C'est là que la promesse « sénior-only » est structurante."
+        },
+        {
+          "q": "Quelle différence structurelle vs Euro Tech Conseil / Yield Studio / Theodo qui promettent aussi « no juniors » ?",
+          "a": "Trois différences opérables. Un : Abbeal opère trois pôles physiques (Paris, Montréal, Tokyo) — les firmes français « sénior only » sont mono-pôle Paris. Deux : 12 mandats Follow-the-Sun tri-géo réellement opérées depuis 2020, avec chiffres mesurés — pas juste une promesse marketing. Trois : Mobbeal relocation program depuis 2018, 52 mobilités, 91 % de réussite >24 mois — impossible à répliquer sans pôles opérés en Amérique du Nord et en Asie."
         }
       ]
     }
