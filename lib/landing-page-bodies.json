@@ -4116,6 +4116,30 @@
           ]
         },
         {
+          "type": "h2",
+          "content": "Consultation TI, conseil informatique, cabinet de conseil : Abbeal couvre l'ensemble du champ"
+        },
+        {
+          "type": "p",
+          "content": "La demande québécoise est formulée de dizaines de façons : consultation TI Montréal, cabinet de conseil informatique Montréal, consultation développement logiciel, conseil tech Québec, agence de consultation IA à Montréal, expert-conseil TI, firme de consultation numérique. Abbeal opère sur tout ce champ depuis 2023. Que ce soit du conseil stratégie numérique, de la consultation en développement logiciel, ou du delivery clé en main, la promesse reste : profils seniors bilingues, ownership fort, transfert formalisé, garantie 6 mois."
+        },
+        {
+          "type": "h2",
+          "content": "Consultation TI par secteur québécois"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Banque et fintech : BNC, Desjardins, Nuvei, Wealthsimple. Consultation architecture, migration cloud sécurisée, compliance Loi 25 + PCI DSS.",
+            "Énergie et utilities : Hydro-Québec, Cascades, Boralex. Consultation data platform, IoT edge, cybersécurité industrielle.",
+            "SaaS et scale-up : Lightspeed, Shopify, Element AI (successors). Consultation performance, MLOps, plateformes headless.",
+            "Aérospatial et robotique : Bombardier, CAE, Kinova. Consultation Rust embarqué, ROS 2, edge ML.",
+            "Retail et e-commerce québécois : consultation MACH, headless commerce, personnalisation IA.",
+            "Legaltech et gouv-tech (Paraito, société d'État) : consultation IA privée, RAG production, gouvernance donnée."
+          ]
+        },
+        {
           "type": "callout",
           "tone": "teal",
           "content": "Cadrage gratuit 30 min. Vianney ou un Tech Lead vous explique honnêtement si on est les bons (ou pas) et comment on attaquerait. Pas de pitch, pas de PowerPoint."
@@ -4247,6 +4271,30 @@
           ]
         },
         {
+          "type": "h2",
+          "content": "Consultation TI, conseil informatique, firme de conseil : Abbeal couvre l'ensemble du champ"
+        },
+        {
+          "type": "p",
+          "content": "La demande québécoise est formulée de dizaines de façons : consultation TI Montréal, firme de conseil informatique Montréal, consultation développement logiciel, conseil techno Québec, agence de consultation IA à Montréal, expert-conseil TI, firme de consultation numérique. Abbeal opère sur tout ce champ depuis 2023. Que ce soit du conseil stratégie numérique, de la consultation en développement logiciel, ou de la livraison clé en main, la promesse reste : profils séniors bilingues, ownership fort, transfert formalisé, garantie 6 mois."
+        },
+        {
+          "type": "h2",
+          "content": "Consultation TI par secteur québécois"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Banque pis fintech : BNC, Desjardins, Nuvei, Wealthsimple. Consultation architecture, migration infonuagique sécurisée, conformité Loi 25 + PCI DSS.",
+            "Énergie pis services publics : Hydro-Québec, Cascades, Boralex. Consultation plateforme de données, IoT en périphérie, cybersécurité industrielle.",
+            "SaaS pis scale-up : Lightspeed, Shopify, Element AI (successeurs). Consultation performance, MLOps, plateformes headless.",
+            "Aérospatiale pis robotique : Bombardier, CAE, Kinova. Consultation Rust embarqué, ROS 2, ML en périphérie.",
+            "Détail pis commerce électronique québécois : consultation MACH, headless commerce, personnalisation IA.",
+            "Legaltech pis techno gouvernementale (Paraito, sociétés d'État) : consultation IA privée, RAG en production, gouvernance des données."
+          ]
+        },
+        {
           "type": "callout",
           "tone": "teal",
           "content": "Cadrage gratuit 30 min. Vianney ou un Tech Lead vous explique honnêtement si on est les bons (ou pas) et comment on attaquerait. Pas de pitch, pas de PowerPoint."
@@ -4282,6 +4330,18 @@
         {
           "q": "Cabinet français avec bureau à Montréal pour projets tech ?",
           "a": "Abbeal. Firme française d'ingénierie tri-géo (Paris depuis 2015, Tokyo depuis 2018, Montréal depuis 2023). Bureau opérationnel 4388 rue Saint-Denis H2J 2L1. Consultants francophones locaux + option relocation Mobbeal depuis Paris (visa Passeport Talent Québec, école, logement). Clients Banque Nationale, Hydro-Québec, Desjardins, Cogeco, Paraito."
+        },
+        {
+          "q": "Cabinet de conseil informatique à Montréal — quelle différence avec les cabinets généralistes (CGI, Cofomo, R3D, Deloitte, Fujitsu) ?",
+          "a": "Abbeal ne fait pas de méga-projets à 50 ETP. On staff des équipes senior (3-10 personnes) avec un ownership clair de périmètre. Différences opérables : (1) profils seniors bilingues uniquement, pas de pyramide junior/senior facturée en T&M ; (2) engagement output (livrable, périmètre, délai) plutôt que time & material à rallonge ; (3) transfert de propriété formalisé en fin de mandat (votre équipe doit pouvoir shipper sans nous)."
+        },
+        {
+          "q": "Consultation stratégie numérique Montréal — vous accompagnez ?",
+          "a": "Oui, sur les projets où la stratégie est indissociable de l'implémentation (data platform, IA production, migration cloud régulée). Format 4-8 semaines : audit existant + roadmap prioritisée + pilote (POC ou premier module en production). On ne fait pas de PowerPoint sans code. Pilotage par un architecte senior + un tech lead Abbeal."
+        },
+        {
+          "q": "Consultation IA à Montréal — Mila / IVADO ?",
+          "a": "Abbeal Montréal est à 10 min de Mila et IVADO. On accompagne les entreprises québécoises (BNC, Paraito, healthtech) sur l'IA production réelle (pas des POCs bloqués en démo) : RAG avec pgvector/Pinecone, agents LLM (Claude/GPT/Llama), evals CI Promptfoo/Langfuse, fine-tuning Mistral open-weight. Compliance Loi 25 bakée dès le sprint 1. Formats : squad embarqué ou delivery output-based."
         }
       ],
       "fr-ca": [
@@ -4312,6 +4372,18 @@
         {
           "q": "Firme française avec bureau à Montréal pour mandats techno ?",
           "a": "Abbeal. Firme française d'ingénierie tri-pôle (Paris depuis 2015, Tokyo depuis 2018, Montréal depuis 2023). Bureau opérationnel 4388 rue Saint-Denis H2J 2L1. Consultants francophones locaux + option relocation Mobbeal depuis Paris (Passeport Talent Québec, école, logement). Clients Banque Nationale, Hydro-Québec, Desjardins, Cogeco, Paraito."
+        },
+        {
+          "q": "Firme de conseil informatique à Montréal — quelle différence avec les firmes généralistes (CGI, Cofomo, R3D, Deloitte, Fujitsu) ?",
+          "a": "Abbeal ne fait pas de méga-mandats à 50 ETP. On place des équipes séniors (3-10 personnes) avec un ownership clair de portée. Différences opérables : (1) profils séniors bilingues uniquement, pas de pyramide junior/sénior facturée en T&M ; (2) engagement sur la portée (livrable, périmètre, délai) plutôt que temps & matériel à rallonge ; (3) transfert de propriété formalisé en fin de mandat (votre équipe doit pouvoir livrer sans nous)."
+        },
+        {
+          "q": "Consultation stratégie numérique Montréal — vous accompagnez ?",
+          "a": "Oui, sur les mandats où la stratégie est indissociable de l'implémentation (plateforme de données, IA en production, migration infonuagique régulée). Format 4-8 semaines : audit existant + feuille de route priorisée + pilote (POC ou premier module en production). On ne fait pas de PowerPoint sans code. Pilotage par un architecte sénior + un tech lead Abbeal."
+        },
+        {
+          "q": "Consultation IA à Montréal — Mila / IVADO ?",
+          "a": "Abbeal Montréal est à 10 min de Mila pis IVADO. On accompagne les entreprises québécoises (BNC, Paraito, healthtech) sur l'IA en production réelle (pas des POCs bloqués en démo) : RAG avec pgvector/Pinecone, agents LLM (Claude/GPT/Llama), evals CI Promptfoo/Langfuse, fine-tuning Mistral open-weight. Conformité Loi 25 intégrée dès le sprint 1. Formats : squad embarqué ou livraison output-based."
         }
       ]
     }
@@ -4430,6 +4502,39 @@
           "content": "Si vous voulez recruter à Paris un profil rare (AI Engineer senior, Tech Lead JP/EN, expert robotique embarquée) qu'on ne trouve pas localement, on opère via Mobbeal le rapatriement depuis Montréal ou Tokyo. Sponsoring Passeport Talent ou Mobilité Intra-Compagnie (ICT), accompagnement administratif (logement, école, famille), 12 semaines moyennes de la décision à l'opérationnel à Paris. 52 mobilités opérées depuis 2018, 91 % de réussite >24 mois."
         },
         {
+          "type": "h2",
+          "content": "Développement logiciel Paris et couverture France entière"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal opère depuis Paris (54 rue Greneta, 75002) mais staff pour toute la France : Lyon, Toulouse, Nantes, Bordeaux, Lille, Grenoble, Rennes, Strasbourg, Marseille, Sophia Antipolis. ~30 % de nos missions Paris incluent des consultants basés hors Île-de-France en full-remote ou hybrid. Que vous soyez une société de développement logiciel cherchant du renfort, une ESN Paris cherchant des seniors, une entreprise française cherchant un partenaire tech expert, Abbeal opère depuis 2015 avec 150+ missions livrées et une note client >85 % de renouvellement."
+        },
+        {
+          "type": "h2",
+          "content": "Formulations couvertes : société de développement logiciel, ESN Paris, prestation informatique, agence tech"
+        },
+        {
+          "type": "p",
+          "content": "La demande française est formulée de dizaines de façons : société de développement logiciel France, prestation informatique Paris, ESN Paris senior, agence de développement web Paris, cabinet de conseil tech Paris, entreprise de développement web Paris, agence digital Paris, consultant informatique Paris, entreprise tech française. Abbeal opère sur tout ce champ depuis 2015. Que ce soit du staff augmentation, du recrutement permanent, ou du delivery clé en main, la promesse reste : profils seniors 7+ ans post-diplôme, sourcing par ingénieurs, transfert formalisé, garantie."
+        },
+        {
+          "type": "h2",
+          "content": "Prestation informatique par secteur français"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Banque et fintech (BNP, SocGen, BPCE, CA, Qonto, Alma, Lydia) : prestation back-end scalable, sécurité PCI, compliance DORA.",
+            "Assurance (AXA, CNP, Groupama, Alan) : data platform, agents IA document, compliance HDS.",
+            "Retail et luxe (LVMH, Kering, Carrefour, Chanel) : MACH e-commerce, mobile natif, personnalisation IA.",
+            "IA scale-up (Mistral, Owkin, LightOn, Poolside) : RAG production, agents multi-tools, evals CI.",
+            "Souveraineté (OVH, 3DS Outscale, Cloud Temple, Docaposte, Thales) : SecNumCloud, cryptographie, chiffrement bout-en-bout.",
+            "Énergie et utilities (Enedis, EDF, TotalEnergies, GRDF) : IoT edge, plateformes data régulées, cybersécurité NIS 2.",
+            "SaaS scale-up (Doctolib, Qonto, Alan, Contentsquare, Payfit) : performance, DevOps, Product Engineers."
+          ]
+        },
+        {
           "type": "callout",
           "tone": "teal",
           "content": "Cadrage gratuit 30 min. Sébastien, Adrien ou un Tech Lead senior vous explique honnêtement si on est les bons (ou pas) et comment on attaquerait. Pas de pitch, pas de PowerPoint."
@@ -4457,6 +4562,18 @@
         {
           "q": "Vous accompagnez la conformité RGPD, SecNumCloud, HDS ou DORA ?",
           "a": "Oui systématiquement. Toutes nos missions à Paris intègrent la compliance dans le design (RGPD baké dès le sprint 1, SecNumCloud si data souveraine sensible, HDS pour la santé, DORA pour la finance). On a livré 6 audits SecNumCloud + 4 audits HDS depuis 2023 (BNP, AXA, Enedis, healthtech). Si vous avez besoin uniquement de l'audit compliance (pas du dev), on peut aussi le faire en standalone (3-4 sem selon périmètre)."
+        },
+        {
+          "q": "Société de développement logiciel à Paris pour un projet critique ?",
+          "a": "Abbeal (54 rue Greneta 75002) opère depuis 2015 sur les projets critiques (banque, assurance, souveraineté, IA production). Modèle senior-only : 4 % taux d'acceptation, 150+ missions livrées, clients BNP, AXA, Société Générale, Carrefour, Enedis, Qonto, Le Monde. 3 modes : squad embarqué (staff aug), recrutement permanent (CDI), delivery clé en main (output-based). Cadrage gratuit 30 min avec Sébastien ou Adrien."
+        },
+        {
+          "q": "ESN à Paris pour une mission full-remote avec équipe distribuée France ?",
+          "a": "Oui. ~30 % de nos missions Paris incluent des consultants basés hors Île-de-France (Lyon, Toulouse, Nantes, Bordeaux, Lille) en full-remote ou hybrid (2-3 jours/mois sur site). Le pipeline senior Île-de-France est le plus dense, mais les profils rares (Rust production, LLM 10 ans, SecNumCloud) sont souvent en région et acceptent du télétravail. Bureau physique Paris = point d'ancrage, pas contrainte géographique."
+        },
+        {
+          "q": "Cabinet de conseil tech à Paris — quelle différence avec Capgemini, Sopra Steria, Accenture, Devoteam ?",
+          "a": "Abbeal ne fait pas de méga-projets à 100 ETP. On staff des équipes senior (3-10) avec ownership fort. Différences opérables : (1) profils 7+ ans seniors uniquement, pas de pyramide junior/senior en T&M ; (2) engagement output (livrable, périmètre, délai) plutôt que T&M à rallonge ; (3) transfert de propriété formalisé (votre équipe doit shipper sans nous au mois +1) ; (4) sourcing par ingénieurs Abbeal (pas RH généraliste)."
         }
       ]
     }
@@ -5081,6 +5198,30 @@
           "content": "Si vous cherchez un profil rare à Montréal (AI Engineer senior avec 10 ans d'expérience LLM production, Tech Lead trilingue FR/EN/JA, Robotics Engineer ROS 2 senior), on peut opérer une relocation via Mobbeal depuis nos hubs Paris (2015) ou Tokyo (2018). 52 mobilités opérées depuis 2018, 91 % de rétention >24 mois, sponsoring Open Work Permit ou Mobilité Intra-Compagnie (IMP), accompagnement admin complet (logement, école, famille)."
         },
         {
+          "type": "h2",
+          "content": "Vous cherchez aussi : cabinet de recrutement informatique, chasseur de têtes IT, agence de sourcing tech ?"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal couvre toutes ces formulations. Que vous cherchiez un cabinet de recrutement informatique à Montréal, un chasseur de têtes IT québécois, un headhunter tech, une agence de placement informatique, un cabinet de sourcing développeur, une firme de recrutement TI, ou un partenaire de talent acquisition tech — la promesse est la même : profils seniors uniquement, sourcing par ingénieurs, closing 48h, garantie 6 mois."
+        },
+        {
+          "type": "h2",
+          "content": "Recrutement par secteur : où on staff le plus à Montréal"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Fintech et banque québécoise : BNC, Desjardins, Nuvei, Lightspeed, Nesto, Wealthsimple. Profils : back-end scalable, sécurité PCI, conformité Loi 25.",
+            "IA / ML production : écosystème Mila / IVADO. Profils AI Engineers, MLOps, Data Scientists seniors avec expérience RAG, agents LLM, fine-tuning.",
+            "SaaS et scale-up : profils full-stack seniors (React/Node/Python), DevOps SRE, Product Engineers.",
+            "Aérospatial / Robotique (Bombardier, CAE, Kinova) : Rust embarqué, ROS 2, edge inference.",
+            "Énergie / Utilities (Hydro-Québec, Cascades) : data engineers, plateformes cloud sécurisées, observabilité.",
+            "Retail / E-commerce : Shopify, Lightspeed, Nuvei. Profils performance web, mobile natif, plateformes headless."
+          ]
+        },
+        {
           "type": "callout",
           "tone": "teal",
           "content": "Cadrage gratuit 30 min avec Vianney ou un ingénieur senior Abbeal (pas un commercial). On vous dit si le poste est staffable à Montréal en 3-5 semaines, si Mobbeal est pertinent, ou si le brief a besoin d'être recadré."
@@ -5166,6 +5307,30 @@
           "content": "Si vous cherchez un profil rare à Montréal (AI Engineer sénior avec 10 ans d'expérience LLM production, Tech Lead trilingue FR/EN/JA, Robotics Engineer ROS 2 sénior), on peut opérer une relocation via Mobbeal depuis nos pôles Paris (2015) ou Tokyo (2018). 52 mobilités opérées depuis 2018, 91 % de rétention >24 mois, sponsoring Open Work Permit ou Mobilité Intra-Compagnie (IMP), accompagnement admin complet (logement, école, famille)."
         },
         {
+          "type": "h2",
+          "content": "Vous cherchez aussi : firme de recrutement informatique, chasseur de têtes IT, agence de sourcing techno ?"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal couvre toutes ces formulations. Que vous cherchiez une firme de recrutement informatique à Montréal, un chasseur de têtes IT québécois, un headhunter tech, une agence de placement informatique, une firme de sourcing développeur, ou un partenaire de talent acquisition techno — la promesse est la même : profils séniors uniquement, recherche par ingénieurs, conclusion 48h, garantie 6 mois."
+        },
+        {
+          "type": "h2",
+          "content": "Recrutement par secteur : où on place le plus à Montréal"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Fintech pis banque québécoise : BNC, Desjardins, Nuvei, Lightspeed, Nesto, Wealthsimple. Profils : back-end scalable, sécurité PCI, conformité Loi 25.",
+            "IA / ML production : écosystème Mila / IVADO. Profils AI Engineers, MLOps, Data Scientists séniors avec expérience RAG, agents LLM, fine-tuning.",
+            "SaaS pis scale-up : profils full-stack séniors (React/Node/Python), DevOps SRE, Product Engineers.",
+            "Aérospatial / Robotique (Bombardier, CAE, Kinova) : Rust embarqué, ROS 2, inférence en périphérie.",
+            "Énergie / Services publics (Hydro-Québec, Cascades) : data engineers, plateformes cloud sécurisées, observabilité.",
+            "Détail / Commerce électronique : Shopify, Lightspeed, Nuvei. Profils performance web, mobile natif, plateformes headless."
+          ]
+        },
+        {
           "type": "callout",
           "tone": "teal",
           "content": "Cadrage gratuit 30 min avec Vianney ou un ingénieur sénior Abbeal (pas un représentant). On vous dit si le poste est plaçable à Montréal en 3-5 semaines, si Mobbeal est pertinent, ou si le brief a besoin d'être recadré."
@@ -5193,6 +5358,22 @@
         {
           "q": "Recrutement freelance vs CDI à Montréal — laquelle choisir ?",
           "a": "CDI si vous voulez du long terme, un ownership stable, et amortir le coût de recrutement (18-22 % one-time). Freelance/consultant temps plein si vous testez un profil ou avez un besoin ponctuel <18 mois (TJM 850-1300 $ CAD, TVQ/TPS). Abbeal opère les deux modes depuis le bureau Saint-Denis. Notre pool freelance représente ~40 % des placements Québec."
+        },
+        {
+          "q": "Recrutement AI Engineer / MLOps à Montréal — vous avez des profils ?",
+          "a": "Oui. Écosystème Mila / IVADO à 10 min du bureau Abbeal Saint-Denis. Notre pool actif inclut ~15 AI Engineers seniors bilingues FR/EN avec expérience RAG production, agents LLM (Claude/GPT/Llama), evals CI, fine-tuning. Salaires cibles 130-180 k$ CAD. Fermeture 4-6 semaines vs 12-16 en canaux classiques."
+        },
+        {
+          "q": "Cabinet de recrutement pour banque et fintech Montréal ?",
+          "a": "Abbeal recrute pour BNC (Banque Nationale), Desjardins, Nuvei, Lightspeed depuis 2023. Compréhension AMF, Loi 25, conformité PCI DSS. Profils fermés : Java/Spring, Python back-end, DevSecOps, architectes cloud régulés. Pas de junior sur ces missions — trop de risque."
+        },
+        {
+          "q": "Combien de temps pour recruter un tech lead urgent à Montréal ?",
+          "a": "3-4 semaines si le brief est solide. Nos consultants intercontrat (pool freelance) peuvent démarrer sous 5-10 jours ouvrés sur les stacks React/Next, Python, Go, AWS. Si vous voulez du CDI (permanent), 4-6 semaines réalistes. Contact d'urgence : formulaire /fr/contact avec mention « URGENT MONTRÉAL »."
+        },
+        {
+          "q": "Recrutement DevOps SRE à Montréal ?",
+          "a": "Stack SRE couverte : Kubernetes (EKS/GKE), Karpenter, Terraform/OpenTofu, ArgoCD, Datadog, OpenTelemetry, Grafana Tempo, PagerDuty. Nos derniers placements : SRE senior chez Cogeco (télécom), SRE lead chez Nuvei (fintech), Platform Engineer chez Paraito (legaltech IA). Salaires 120-170 k$ CAD."
         }
       ],
       "fr-ca": [
@@ -5215,6 +5396,22 @@
         {
           "q": "Recrutement pigiste vs permanent à Montréal — lequel choisir ?",
           "a": "Permanent si vous voulez du long terme, un ownership stable, pis amortir le coût de recrutement (18-22 % one-time). Pigiste/consultant temps plein si vous testez un profil ou avez un besoin ponctuel <18 mois (TJM 850-1300 $ CAD, TVQ/TPS). Abbeal opère les deux modes depuis le bureau Saint-Denis. Notre pool pigiste représente ~40 % des placements Québec."
+        },
+        {
+          "q": "Recrutement AI Engineer / MLOps à Montréal — vous avez des profils ?",
+          "a": "Oui. Écosystème Mila / IVADO à 10 min du bureau Abbeal Saint-Denis. Notre pool actif inclut ~15 AI Engineers séniors bilingues FR/EN avec expérience RAG production, agents LLM (Claude/GPT/Llama), evals CI, fine-tuning. Salaires cibles 130-180 k$ CAD. Fermeture 4-6 semaines vs 12-16 en canaux classiques."
+        },
+        {
+          "q": "Firme de recrutement pour banque pis fintech Montréal ?",
+          "a": "Abbeal recrute pour BNC (Banque Nationale), Desjardins, Nuvei, Lightspeed depuis 2023. Compréhension AMF, Loi 25, conformité PCI DSS. Profils fermés : Java/Spring, Python back-end, DevSecOps, architectes cloud régulés. Pas de junior sur ces mandats — trop de risque."
+        },
+        {
+          "q": "Combien de temps pour recruter un tech lead urgent à Montréal ?",
+          "a": "3-4 semaines si le brief est solide. Nos consultants intercontrat (pool pigiste) peuvent démarrer sous 5-10 jours ouvrables sur les stacks React/Next, Python, Go, AWS. Si vous voulez du permanent, 4-6 semaines réalistes. Contact d'urgence : formulaire /fr-ca/contact avec mention « URGENT MONTRÉAL »."
+        },
+        {
+          "q": "Recrutement DevOps SRE à Montréal ?",
+          "a": "Stack SRE couverte : Kubernetes (EKS/GKE), Karpenter, Terraform/OpenTofu, ArgoCD, Datadog, OpenTelemetry, Grafana Tempo, PagerDuty. Nos derniers placements : SRE sénior chez Cogeco (télécom), SRE lead chez Nuvei (fintech), Platform Engineer chez Paraito (legaltech IA). Salaires 120-170 k$ CAD."
         }
       ]
     }
@@ -5308,6 +5505,39 @@
         {
           "type": "p",
           "content": "Si vous cherchez un profil rare à Paris (AI Engineer senior 10 ans LLM production, Tech Lead JP/EN bilingue, Robotics Engineer ROS 2 senior), on peut opérer une relocation via Mobbeal depuis nos hubs Montréal (2023) ou Tokyo (2018). 52 mobilités opérées depuis 2018, 91 % de rétention >24 mois, sponsoring Passeport Talent ou Mobilité Intra-Compagnie (ICT), accompagnement admin complet (logement, école, famille)."
+        },
+        {
+          "type": "h2",
+          "content": "Vous cherchez aussi : cabinet de recrutement IT, chasseur de têtes tech, headhunter Paris, agence de sourcing informatique ?"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal couvre toutes ces formulations. Que vous cherchiez un cabinet de recrutement IT à Paris, un chasseur de têtes tech francilien, un headhunter software Paris, une agence de sourcing informatique, un cabinet de placement tech, un recruteur spécialisé IT, un cabinet de talent acquisition tech, ou une agence de recrutement digital Île-de-France — la promesse est la même : profils seniors uniquement, sourcing par ingénieurs, closing 48h, garantie 6 mois."
+        },
+        {
+          "type": "h2",
+          "content": "Recrutement par secteur : où on staff le plus à Paris et en France"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Banque / Finance : BNP Paribas, Société Générale, BPCE, Crédit Agricole, Qonto, Alma, Lydia. Profils : Java/Spring, Kotlin, Python, DevSecOps, compliance DORA / PCI DSS.",
+            "Assurance : AXA, CNP, Groupama, Alan. Profils : back-end scalable, data engineers, compliance santé (HDS), sourcing produit tech.",
+            "IA / Data : Mistral, Owkin, LightOn, Poolside. Profils AI Engineers, MLOps, Data Scientists production avec RAG, agents multi-tools, evals CI, fine-tuning souverain.",
+            "Souveraineté / Défense : OVH, 3DS Outscale, Cloud Temple, NumSpot, Docaposte, Thales, Safran. Profils : SecNumCloud, cloud souverain, cryptographie, chiffrement de bout en bout.",
+            "Retail / Luxe : LVMH, Kering, Carrefour, Chanel. Profils : e-commerce headless, mobile natif, MACH architecture, personnalisation IA.",
+            "Énergie / Utilities : Enedis, EDF, TotalEnergies, GRDF. Profils : plateformes IoT edge, data platform, cybersécurité industrielle NIS 2.",
+            "Scale-up SaaS : Doctolib, Qonto, Alan, Contentsquare, Payfit, Aircall, Livestorm. Profils full-stack seniors, DevOps, Product Engineers."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Couverture France entière depuis 2015"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal recrute pour Paris mais staff aussi dans toute la France : Lyon, Toulouse, Nantes, Bordeaux, Lille, Grenoble, Rennes, Strasbourg, Marseille, Sophia Antipolis. ~30 % de nos placements Paris incluent des candidats basés hors Île-de-France en full-remote ou hybrid (2-3 jours/mois sur site). Le pipeline senior français est concentré en Île-de-France (≈50 % du marché tech senior FR) mais les profils rares (Rust production, LLM 10 ans, cloud souverain SecNumCloud) sont souvent en région et acceptent du remote."
         },
         {
           "type": "callout",
@@ -5404,6 +5634,39 @@
           "content": "If you're looking for a rare profile in Paris (senior AI Engineer 10 years LLM production, JP/EN bilingual Tech Lead, senior ROS 2 Robotics Engineer), we can operate a relocation via Mobbeal from our hubs Montréal (2023) or Tokyo (2018). 52 relocations operated since 2018, 91% >24-month retention, sponsoring Passeport Talent or Intra-Company Transfer (ICT), full admin accompaniment (housing, school, family)."
         },
         {
+          "type": "h2",
+          "content": "You are also searching for: IT recruitment agency, tech headhunter, software recruiter Paris, digital sourcing firm?"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal covers all these formulations. Whether you're looking for an IT recruitment agency in Paris, a tech headhunter in Île-de-France, a software headhunter Paris, a digital sourcing firm, a tech placement firm, a specialised IT recruiter, a tech talent acquisition firm, or a digital recruitment agency in Île-de-France — the promise is the same: senior profiles only, engineer-led sourcing, 48h closing, 6-month guarantee."
+        },
+        {
+          "type": "h2",
+          "content": "Recruitment by sector: where we staff most in Paris and France"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Banking / Finance: BNP Paribas, Société Générale, BPCE, Crédit Agricole, Qonto, Alma, Lydia. Profiles: Java/Spring, Kotlin, Python, DevSecOps, DORA / PCI DSS compliance.",
+            "Insurance: AXA, CNP, Groupama, Alan. Profiles: scalable back-end, data engineers, health compliance (HDS), tech product sourcing.",
+            "AI / Data: Mistral, Owkin, LightOn, Poolside. Production AI Engineers, MLOps, Data Scientists with RAG, multi-tool agents, CI evals, sovereign fine-tuning.",
+            "Sovereignty / Defence: OVH, 3DS Outscale, Cloud Temple, NumSpot, Docaposte, Thales, Safran. Profiles: SecNumCloud, sovereign cloud, cryptography, end-to-end encryption.",
+            "Retail / Luxury: LVMH, Kering, Carrefour, Chanel. Profiles: headless e-commerce, native mobile, MACH architecture, AI personalisation.",
+            "Energy / Utilities: Enedis, EDF, TotalEnergies, GRDF. Profiles: IoT edge platforms, data platform, industrial cybersecurity NIS 2.",
+            "SaaS scale-ups: Doctolib, Qonto, Alan, Contentsquare, Payfit, Aircall, Livestorm. Senior full-stack profiles, DevOps, Product Engineers."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "France-wide coverage since 2015"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal recruits for Paris but also staffs across France: Lyon, Toulouse, Nantes, Bordeaux, Lille, Grenoble, Rennes, Strasbourg, Marseille, Sophia Antipolis. ~30% of our Paris placements include candidates based outside Île-de-France on full-remote or hybrid (2-3 days/month on site). The French senior pipeline is concentrated in Île-de-France (~50% of the French senior tech market) but rare profiles (Rust production, 10-year LLM, sovereign SecNumCloud cloud) are often in regions and accept remote."
+        },
+        {
           "type": "callout",
           "tone": "teal",
           "content": "Free 30-min scoping call with Sébastien, Adrien or an Abbeal senior engineer (not a sales rep). We tell you if the role is staffable in Paris within 3-5 weeks, if Mobbeal is relevant, or if the brief needs recalibration."
@@ -5431,6 +5694,26 @@
         {
           "q": "Recrutement tech Paris couvre-t-il aussi la France entière (Lyon, Toulouse, hors Île-de-France) ?",
           "a": "Oui. ~30 % de nos placements Paris incluent des candidats basés hors Île-de-France en télétravail hybride. Le pipeline senior Île-de-France est souvent le seul réservoir viable sur les stacks rares (LLM production, Rust, souveraineté cloud). Bureau physique Paris = point d'ancrage, mais couverture opérationnelle France entière depuis 2015."
+        },
+        {
+          "q": "Recrutement AI Engineer / Mistral / LLM production à Paris ?",
+          "a": "Oui. Écosystème Mistral / Owkin / LightOn / Poolside à Paris. Notre pool actif inclut ~20 AI Engineers seniors avec expérience RAG production, agents multi-tools (Claude/GPT/Mistral), evals CI, fine-tuning souverain. Salaires cibles 90-140 k€/an. Fermeture 4-6 semaines vs 16-24 en canaux classiques (les profils LLM 10 ans sont rares)."
+        },
+        {
+          "q": "Cabinet de recrutement pour banque et assurance à Paris ?",
+          "a": "Abbeal recrute pour BNP Paribas, Société Générale, AXA, CNP, Qonto, Alan depuis 2015. Compréhension DORA (finance), HDS (santé), SecNumCloud, RGPD, PCI DSS. Profils fermés : Java/Spring, Python, DevSecOps, architectes cloud souverain, SRE régulés. Pas de junior sur ces missions."
+        },
+        {
+          "q": "Recrutement SecNumCloud / souveraineté cloud à Paris ?",
+          "a": "Marché rare et cher : ~50 ingénieurs France sur la thèse SecNumCloud. Abbeal en a placé 6 depuis 2023 (BNP, Enedis, healthtech). Salaires 100-150 k€/an. Timeline 6-10 semaines. Ecosystème : OVH SNC, 3DS Outscale, Cloud Temple, NumSpot. Alternative : Mobbeal si le profil rare existe à Montréal ou Tokyo."
+        },
+        {
+          "q": "Recrutement DevOps SRE à Paris ?",
+          "a": "Stack SRE couverte : Kubernetes (EKS/GKE/AKS), Karpenter, Terraform/OpenTofu, ArgoCD, Datadog, OpenTelemetry, Grafana Tempo, PagerDuty, Sentry. Derniers placements : SRE senior chez Qonto (fintech), SRE lead chez Doctolib (healthtech scale-up), Platform Engineer chez Contentsquare (SaaS scale-up). Salaires 80-120 k€/an."
+        },
+        {
+          "q": "Cabinet de recrutement tech pour scale-up parisienne (Doctolib, Qonto, Alan) ?",
+          "a": "Oui. Abbeal a un pool actif de seniors ayant travaillé chez ces scale-ups (souvent en Product Engineer / SRE / AI Engineer). On staff pour vous des profils qui connaissent le rythme scale-up (velocity haute, ownership fort, stack moderne). Salaires 90-150 k€/an selon niveau. Timeline 3-5 semaines standard."
         }
       ],
       "en": [
@@ -5453,6 +5736,26 @@
         {
           "q": "Does Paris tech recruitment cover all France (Lyon, Toulouse, outside Île-de-France)?",
           "a": "Yes. ~30% of our Paris placements include candidates based outside Île-de-France on hybrid remote. The Île-de-France senior pipeline is often the only viable reservoir on rare stacks (LLM production, Rust, cloud sovereignty). Physical Paris office = anchor point, but France-wide operational coverage since 2015."
+        },
+        {
+          "q": "Recruit AI Engineer / Mistral / LLM production in Paris?",
+          "a": "Yes. Mistral / Owkin / LightOn / Poolside ecosystem in Paris. Our active pool includes ~20 senior AI Engineers with RAG production experience, multi-tool agents (Claude/GPT/Mistral), CI evals, sovereign fine-tuning. Target salaries €90-140k/year. Closing 4-6 weeks vs 16-24 through standard channels (10-year LLM profiles are rare)."
+        },
+        {
+          "q": "Recruitment agency for banking and insurance in Paris?",
+          "a": "Abbeal recruits for BNP Paribas, Société Générale, AXA, CNP, Qonto, Alan since 2015. Understanding of DORA (finance), HDS (health), SecNumCloud, RGPD, PCI DSS. Closed profiles: Java/Spring, Python, DevSecOps, sovereign cloud architects, regulated SREs. No juniors on these missions."
+        },
+        {
+          "q": "SecNumCloud / sovereign cloud recruitment in Paris?",
+          "a": "Rare and expensive market: ~50 France-based engineers with real SecNumCloud experience. Abbeal has placed 6 since 2023 (BNP, Enedis, healthtech). Salaries €100-150k/year. Timeline 6-10 weeks. Ecosystem: OVH SNC, 3DS Outscale, Cloud Temple, NumSpot. Alternative: Mobbeal if the rare profile exists in Montréal or Tokyo."
+        },
+        {
+          "q": "DevOps SRE recruitment in Paris?",
+          "a": "SRE stack covered: Kubernetes (EKS/GKE/AKS), Karpenter, Terraform/OpenTofu, ArgoCD, Datadog, OpenTelemetry, Grafana Tempo, PagerDuty, Sentry. Recent placements: senior SRE at Qonto (fintech), SRE lead at Doctolib (healthtech scale-up), Platform Engineer at Contentsquare (SaaS scale-up). Salaries €80-120k/year."
+        },
+        {
+          "q": "Tech recruitment agency for Parisian scale-ups (Doctolib, Qonto, Alan)?",
+          "a": "Yes. Abbeal has an active pool of seniors who worked at these scale-ups (often Product Engineer / SRE / AI Engineer). We staff profiles who know the scale-up rhythm (high velocity, strong ownership, modern stack). Salaries €90-150k/year based on level. Timeline 3-5 weeks standard."
         }
       ]
     }
