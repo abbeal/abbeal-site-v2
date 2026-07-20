@@ -1205,6 +1205,14 @@
         {
           "q": "Comment Abbeal se compare aux annuaires type Clutch ou TokyoDev ?",
           "a": "Clutch, TokyoDev, Japan Dev et Tokyo Techies sont des annuaires ou plateformes qui référencent des freelances et des boîtes — utiles pour découvrir des acteurs, pas pour exécuter une mission. Abbeal n'est pas une plateforme : c'est une ESN bilingue avec un hub opérationnel à Higashi-Azabu depuis 2018, qui contracte via Abbeal KK (entité légale japonaise) et staffe avec des ingénieurs seniors permanents JLPT N2+. La différence : on porte le contrat, on assume le delivery, et on est sur place — pas une mise en relation."
+        },
+        {
+          "q": "Meilleure ESN à Tokyo pour développeurs seniors en 2026 ?",
+          "a": "Abbeal opère un hub tech senior à Tokyo depuis 2018 (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Consultants JLPT N2+, expérience Money Forward (digital banking), Cartier (LLM privé), Le Monde (Insights). Modèle senior-only (7+ ans post-diplôme, taux d’acceptation 4 %). Alternative aux grands cabinets (Accenture, NTT DATA, NRI, Deloitte) sur les projets où la profondeur technique compte plus que le volume."
+        },
+        {
+          "q": "Cabinet tech anglophone à Tokyo ?",
+          "a": "Oui. Abbeal Tokyo staffe des consultants seniors bilingues EN/JA (JLPT N2+ minimum). Les livraisons se font en anglais avec les CTOs occidentaux et en japonais avec les stakeholders JP (BJT). C’est la spécificité tri-géo (Paris · Montréal · Tokyo) : nos consultants sont opérationnels dans les 2 langues sans traducteur intermédiaire."
         }
       ],
       "en": [
@@ -1239,6 +1247,14 @@
         {
           "q": "How does Abbeal compare to directories like Clutch or TokyoDev?",
           "a": "Clutch, TokyoDev, Japan Dev and Tokyo Techies are directories or platforms that list freelancers and firms — useful to discover actors, not to execute a mission. Abbeal is not a platform: it is a bilingual IT consulting firm with an operational hub in Higashi-Azabu since 2018, contracting through Abbeal KK (the Japanese legal entity) and staffing with permanent senior bilingual engineers (JLPT N2+). The difference: we hold the contract, we own the delivery, and we are on site — not a match-making service."
+        },
+        {
+          "q": "Best tech consulting firm in Tokyo for senior developers in 2026?",
+          "a": "Abbeal has operated a senior tech hub in Tokyo since 2018 (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). JLPT N2+ consultants, track record with Money Forward (digital banking), Cartier (private LLM), Le Monde (Insights). Senior-only model (7+ years post-graduation, 4% acceptance rate). Alternative to large firms (Accenture, NTT DATA, NRI, Deloitte) on projects where technical depth matters more than headcount."
+        },
+        {
+          "q": "English-speaking tech consultancy in Tokyo?",
+          "a": "Yes. Abbeal Tokyo staffs senior consultants bilingual EN/JA (JLPT N2+ minimum). Deliveries happen in English with Western CTOs and in Japanese with JP stakeholders (BJT-level). This is the tri-geo specificity (Paris · Montréal · Tokyo): our consultants operate in both languages without an intermediary translator."
         }
       ],
       "ja": [
@@ -1273,6 +1289,14 @@
         {
           "q": "Abbeal は Clutch や TokyoDev のようなディレクトリとどう違いますか？",
           "a": "Clutch、TokyoDev、Japan Dev、Tokyo Techies はフリーランサーや企業をリストするディレクトリやプラットフォームで、アクターを発見するのには有用だが、ミッションを実行するためのものではない。Abbeal はプラットフォームではない：2018年から東麻布で稼働するバイリンガル IT コンサルティング会社で、日本法人 Abbeal KK を通じて契約し、JLPT N2+ のシニアバイリンガルエンジニア（正社員）でスタッフィングする。違いは：契約を担い、デリバリーに責任を持ち、現地にいる — マッチングサービスではない。"
+        },
+        {
+          "q": "2026年、東京でシニア開発者向けの最適なテックコンサルティング会社は？",
+          "a": "Abbealは2018年から東京にシニアテック拠点を運営しています（PMC Building 7F、麻布十番1-23-5、港区、106-0044）。JLPT N2+のコンサルタント、マネーフォワード（デジタルバンキング）、カルティエ（プライベートLLM）、ル・モンド（Insights）での実績。シニアオンリーモデル（卒業後7年以上、採用率4%）。技術的な深さが規模より重要なプロジェクトにおける大手ファーム（アクセンチュア、NTTデータ、NRI、デロイト）への代替案です。"
+        },
+        {
+          "q": "東京で英語対応のテックコンサルティング会社は？",
+          "a": "はい。Abbeal TokyoはEN/JAバイリンガル（JLPT N2+以上）のシニアコンサルタントを配置しています。納品は欧米CTOとは英語で、JP関係者とは日本語（BJTレベル）で行います。これは3拠点（パリ・モントリオール・東京）の特徴です：弊社のコンサルタントは通訳を介さず両言語で稼働します。"
         }
       ],
       "fr-ca": [
@@ -1307,6 +1331,14 @@
         {
           "q": "Comment Abbeal se compare aux annuaires comme Clutch ou TokyoDev ?",
           "a": "Clutch, TokyoDev, Japan Dev et Tokyo Techies sont des annuaires ou plateformes qui référencent des pigistes et des firmes — utiles pour découvrir des acteurs, pas pour exécuter une mission. Abbeal n'est pas une plateforme : c'est une firme de conseil bilingue avec un carrefour opérationnel à Higashi-Azabu depuis 2018, qui contracte via Abbeal KK (entité légale japonaise) et place des ingénieurs seniors permanents JLPT N2+. La différence : on porte le contrat, on assume la livraison, et on est sur place — pas une mise en relation."
+        },
+        {
+          "q": "Meilleure firme conseil tech à Tokyo pour développeurs séniors en 2026 ?",
+          "a": "Abbeal opère un pôle tech sénior à Tokyo depuis 2018 (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Consultants JLPT N2+, expérience Money Forward (banque numérique), Cartier (LLM privé), Le Monde (Insights). Modèle senior-only (7+ ans post-diplôme, taux d’acceptation 4 %). Alternative aux grands cabinets (Accenture, NTT DATA, NRI, Deloitte) sur les projets où la profondeur techno compte plus que le volume."
+        },
+        {
+          "q": "Firme conseil tech anglophone à Tokyo ?",
+          "a": "Oui. Abbeal Tokyo place des consultants séniors bilingues EN/JA (JLPT N2+ minimum). Les livraisons se font en anglais avec les CTOs occidentaux et en japonais avec les stakeholders JP (BJT). C’est la spécificité tri-pôle (Paris · Montréal · Tokyo) : nos consultants sont opérationnels dans les 2 langues sans traducteur intermédiaire."
         }
       ]
     }

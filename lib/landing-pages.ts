@@ -203,9 +203,14 @@ export const landingPages: LandingPage[] = [
     // keyword-frontloaded que la meta pour maximiser le signal SEO sur
     // "tech consulting Tokyo" + "IT staffing Japan". H1 = title = meta,
     // une seule verite. Pas de metaTitle en override -> fallback sur H1.
+    // W30 R1 : H1 EN reformule pour matcher exact-query "tech consulting firm
+    // in Tokyo for senior developers" (audit W30 : pos 8.4 sur EN, cible
+    // top 3). FR/JA/FR-CA conservent leur formulation W28 (deja bien
+    // ranked : pos 12.8 JA, FR quasi absent car marche FR peu actif sur
+    // "tokyo tech" queries).
     h1: {
       fr: "Tech Consulting Tokyo & IT staffing Japan — Équipes ingé seniors bilingues.",
-      en: "Tech Consulting Tokyo & IT staffing Japan — Senior bilingual engineering teams.",
+      en: "Tech consulting firm in Tokyo for senior developers — IT staffing Japan, bilingual JLPT N2+.",
       ja: "東京のテックコンサルティング & 日本のIT人材確保 — シニアバイリンガルエンジニアリングチーム。",
       "fr-ca": "Conseil techno Tokyo & IT staffing Japan — Équipes d'ingénierie seniors bilingues.",
     },
