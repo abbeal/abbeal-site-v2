@@ -753,36 +753,43 @@ export const landingPages: LandingPage[] = [
       fr: "// SENIOR-ONLY",
       en: "// SENIOR-ONLY",
       ja: "// シニアオンリー",
+      "fr-ca": "// SENIOR-ONLY",
     },
     h1: {
       fr: "Senior-only engineering — Paris · Montréal · Tokyo. Zéro junior derrière un commercial senior.",
       en: "Senior-only engineering firm — Paris, Montréal, Tokyo. No juniors behind a senior sales pitch.",
       ja: "シニアオンリーエンジニアリング — パリ・モントリオール・東京。営業担当のシニアの陰にジュニアはゼロ。",
+      "fr-ca": "Senior-only engineering — Paris · Montréal · Tokyo. Zéro junior derrière un représentant sénior.",
     },
     subtitle: {
       fr: "3 hubs, mêmes standards : 7+ ans post-diplôme, pair-coding 2-3h par un ingénieur senior Abbeal, décision peer-review unanime. Taux d'acceptation 4 %. Vous voyez et vous gardez les vrais profils — pas de pyramide 1 senior / 5 juniors qu'on facture en time & material.",
       en: "3 hubs, same standards: 7+ years post-graduation, 2-3h pair-coding by an Abbeal senior engineer, unanimous peer review. 4% acceptance rate. You see and keep the real profiles — no 1 senior / 5 juniors pyramid billed as time & material.",
       ja: "3拠点、同一基準：卒業後7年以上、Abbealシニアエンジニアによる2〜3時間のペアコーディング、全会一致のピアレビュー。採用率4%。お客様は本物のプロファイルを見て、そして保持します — タイム＆マテリアルで請求される1シニア／5ジュニアのピラミッドはありません。",
+      "fr-ca": "3 pôles, mêmes standards : 7+ ans post-diplôme, pair-coding 2-3h par un ingénieur sénior Abbeal, décision peer-review unanime. Taux d'acceptation 4 %. Vous voyez pis vous gardez les vrais profils — pas de pyramide 1 sénior / 5 juniors facturée en temps & matériel.",
     },
     metaTitle: {
       fr: "Senior-only engineering — Cabinet 100 % seniors Paris/Montréal/Tokyo",
       en: "Senior-only engineering firm — 100% seniors Paris/Montréal/Tokyo",
       ja: "シニアオンリーエンジニアリングファーム — 100%シニア パリ／モントリオール／東京",
+      "fr-ca": "Senior-only engineering — Firme 100 % séniors Paris/Montréal/Tokyo",
     },
     metaDescription: {
       fr: "Cabinet d'ingénierie senior-only opéré depuis 3 hubs (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). Taux d'acceptation 4 %, attrition <6 %, lead time /1,8. Clients BNP, Money Forward, Cartier. Cadrage gratuit 30 min.",
       en: "Senior-only engineering firm operated from 3 hubs (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). 4% acceptance rate, <6% attrition, 1.8x faster delivery. Clients: BNP, Money Forward, Cartier. Free 30-min scoping.",
       ja: "3拠点（パリ75002、モントリオールH2J 2L1、東京港区）で運営されるシニアオンリーエンジニアリングファーム。採用率4%、離職率<6%、リードタイム1.8倍高速化。クライアント：BNP、マネーフォワード、カルティエ。無料30分スコーピング。",
+      "fr-ca": "Firme d'ingénierie senior-only opérée depuis 3 pôles (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). Taux d'acceptation 4 %, attrition <6 %, délai de livraison /1,8. Clients BNP, Money Forward, Cartier. Cadrage gratuit 30 min.",
     },
     body: {
       fr: BODIES["senior-engineering-firm-no-juniors"]?.body?.fr ?? [],
       en: BODIES["senior-engineering-firm-no-juniors"]?.body?.en,
       ja: BODIES["senior-engineering-firm-no-juniors"]?.body?.ja,
+      "fr-ca": BODIES["senior-engineering-firm-no-juniors"]?.body?.["fr-ca"],
     },
     faq: {
       fr: BODIES["senior-engineering-firm-no-juniors"]?.faq?.fr ?? [],
       en: BODIES["senior-engineering-firm-no-juniors"]?.faq?.en,
       ja: BODIES["senior-engineering-firm-no-juniors"]?.faq?.ja,
+      "fr-ca": BODIES["senior-engineering-firm-no-juniors"]?.faq?.["fr-ca"],
     },
     // Note : pas de LocalBusiness dediee ici car la page est cross-hub.
     // Le node Organization areaServed (PR#83 W29 P2a) porte deja les
