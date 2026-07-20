@@ -195,10 +195,10 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
       />
       <Hero locale={locale} dict={dict} />
+      <Hubs locale={locale} />
       <KPIs dict={dict} />
       <ADN dict={dict} />
       <Services locale={locale} dict={dict} />
-      <Hubs locale={locale} />
       <Expertises dict={dict} />
       <TechRadar
         dict={dict}
