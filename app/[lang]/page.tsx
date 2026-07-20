@@ -7,7 +7,6 @@ import { Hero } from "@/components/sections/Hero";
 import { KPIs } from "@/components/sections/KPIs";
 import { ADN } from "@/components/sections/ADN";
 import { Services } from "@/components/sections/Services";
-import { Hubs } from "@/components/sections/Hubs";
 import { Expertises } from "@/components/sections/Expertises";
 import { TechRadar } from "@/components/sections/TechRadar";
 import { getCurrentEdition } from "@/lib/tech-radar";
@@ -198,7 +197,6 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       <KPIs dict={dict} />
       <ADN dict={dict} />
       <Services locale={locale} dict={dict} />
-      <Hubs locale={locale} />
       <Expertises dict={dict} />
       <TechRadar
         dict={dict}
