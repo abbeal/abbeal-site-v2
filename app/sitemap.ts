@@ -78,6 +78,9 @@ const ROUTES = [
   // boucle services au-dessous. Ajoute ici pour que Google indexe le
   // hub OfferCatalog + le canonical /{locale}/services par locale.
   "/services",
+  // W30+ : page /hubs dediee (retrait Hubs de la home). Landing SEO
+  // "bureaux Abbeal", "Abbeal Paris Montreal Tokyo", "拠点 Abbeal".
+  "/hubs",
 ] as const;
 
 /**
