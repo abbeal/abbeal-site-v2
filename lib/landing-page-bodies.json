@@ -101,6 +101,26 @@
           "ordered": false
         },
         {
+          "type": "h2",
+          "content": "Abbeal vs ESN généraliste : la différence structurelle"
+        },
+        {
+          "type": "p",
+          "content": "La plupart des grands cabinets promettent aussi du 24/7. La différence est opérationnelle, pas marketing."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Abbeal : 3 bureaux physiques opérés (Paris 54 rue Greneta 75002 depuis 2015, Montréal 4388 rue Saint-Denis H2J 2L1 depuis 2023, Tokyo PMC Building 7F, 1-23-5 Higashi-Azabu Minato-ku 106-0044 depuis 2018). Passations synchrones structurées entre fuseaux. 12 missions Follow-the-Sun opérées depuis 2020, lead time /1,8 mesuré, attrition <6 %.",
+            "ESN généraliste (Accenture, Capgemini, Sopra Steria, Deloitte, IBM) : présence dans les 3 régions mais équipes déconnectées (silos par pays), passations informelles (email, tickets sans SLA), pas de continuité de propriété inter-équipes. Le 24/7 est un slogan commercial, pas un mode de delivery opérationnel."
+          ]
+        },
+        {
+          "type": "p",
+          "content": "Résultat mesurable : Abbeal est aujourd'hui le seul cabinet à opérer 3 hubs physiques senior sous une même bannière d'ingénierie, avec un modèle Follow-the-Sun documenté et vérifiable par les clients (Money Forward JP, Le Monde Tokyo, Neobrain PwC USA)."
+        },
+        {
           "type": "callout",
           "tone": "teal",
           "content": "Le Follow-the-Sun n'est pas un slogan marketing chez Abbeal — c'est l'architecture sur laquelle on a construit la boîte depuis 2018. On a 6 ans d'apprentissages opérationnels (incidents, contournements, métriques) à partager si tu envisages d'industrialiser ce modèle chez toi."
@@ -204,6 +224,26 @@
             "Japanese industrial robotics — fleet of 80 ROS 2 AGVs, +40% warehouse throughput. Embedded Rust stack Tokyo, Isaac Sim Paris, monitoring Montréal."
           ],
           "ordered": false
+        },
+        {
+          "type": "h2",
+          "content": "Abbeal vs generalist ESN: the structural difference"
+        },
+        {
+          "type": "p",
+          "content": "Most large consultancies also promise 24/7. The difference is operational, not marketing."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Abbeal: 3 operated physical offices (Paris 54 rue Greneta 75002 since 2015, Montréal 4388 rue Saint-Denis H2J 2L1 since 2023, Tokyo PMC Building 7F, 1-23-5 Higashi-Azabu Minato-ku 106-0044 since 2018). Structured synchronous handoffs between time zones. 12 Follow-the-Sun missions operated since 2020, measured lead time /1.8, attrition <6%.",
+            "Generalist ESN (Accenture, Capgemini, Sopra Steria, Deloitte, IBM): presence across the 3 regions but disconnected teams (country silos), informal handoffs (email, tickets without SLA), no cross-team ownership continuity. 24/7 is a sales tagline, not an operational delivery mode."
+          ]
+        },
+        {
+          "type": "p",
+          "content": "Measurable outcome: Abbeal is today the only firm operating 3 physical senior hubs under one engineering banner, with a documented Follow-the-Sun model verifiable by clients (Money Forward JP, Le Monde Tokyo, Neobrain PwC USA)."
         },
         {
           "type": "callout",
@@ -311,6 +351,26 @@
           "ordered": false
         },
         {
+          "type": "h2",
+          "content": "Abbeal vs 一般ESN：構造的な違い"
+        },
+        {
+          "type": "p",
+          "content": "大手コンサルティングファームも24/7を約束します。違いはマーケティングではなく運用面です。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Abbeal：3つの運用中の物理オフィス（パリ 54 rue Greneta 75002 2015年から、モントリオール 4388 rue Saint-Denis H2J 2L1 2023年から、東京 PMC Building 7F、麻布十番1-23-5、港区 106-0044、2018年から）。タイムゾーン間の構造化された同期ハンドオフ。2020年以降12件のFollow-the-Sunミッション、リードタイム1.8倍短縮、離職率<6%を実測。",
+            "一般ESN（アクセンチュア、キャップジェミニ、Sopra Steria、デロイト、IBM）：3地域に拠点はあるが、チームは分断（国別サイロ）、非公式なハンドオフ（メール、SLAなしのチケット）、チーム間のオーナーシップ継続性なし。24/7は営業スローガンであり、運用デリバリーモードではありません。"
+          ]
+        },
+        {
+          "type": "p",
+          "content": "実測結果：Abbealは、1つのエンジニアリングブランドの下で3つの物理シニア拠点を運営し、クライアント（マネーフォワードJP、ル・モンド東京、Neobrain PwC USA）が検証可能な文書化されたFollow-the-Sunモデルを持つ唯一のファームです。"
+        },
+        {
           "type": "callout",
           "tone": "teal",
           "content": "AbbealにとってFollow-the-Sunはマーケティングスローガンではない — 2018年から会社を構築したアーキテクチャだ。このモデルを社内で工業化することを検討している場合、共有できる6年間の運用学習（インシデント、回避策、メトリクス）がある。"
@@ -416,6 +476,26 @@
           "ordered": false
         },
         {
+          "type": "h2",
+          "content": "Abbeal vs firme généraliste : la différence structurelle"
+        },
+        {
+          "type": "p",
+          "content": "La plupart des grandes firmes promettent aussi du 24/7. La différence est opérationnelle, pas marketing."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Abbeal : 3 bureaux physiques opérés (Paris 54 rue Greneta 75002 depuis 2015, Montréal 4388 rue Saint-Denis H2J 2L1 depuis 2023, Tokyo PMC Building 7F, 1-23-5 Higashi-Azabu Minato-ku 106-0044 depuis 2018). Passations synchrones structurées entre fuseaux. 12 mandats Follow-the-Sun opérés depuis 2020, délai de livraison /1,8 mesuré, attrition <6 %.",
+            "Firme généraliste (Accenture, Capgemini, Sopra Steria, Deloitte, IBM) : présence dans les 3 régions mais équipes déconnectées (silos par pays), passations informelles (courriel, billets sans SLA), pas de continuité de propriété inter-équipes. Le 24/7 est un slogan commercial, pas un mode de livraison opérationnel."
+          ]
+        },
+        {
+          "type": "p",
+          "content": "Résultat mesurable : Abbeal est aujourd'hui la seule firme à opérer 3 pôles physiques séniors sous une même bannière d'ingénierie, avec un modèle Follow-the-Sun documenté et vérifiable par les clients (Money Forward JP, Le Monde Tokyo, Neobrain PwC USA)."
+        },
+        {
           "type": "callout",
           "tone": "teal",
           "content": "Le Follow-the-Sun n'est pas un slogan marketing chez Abbeal — c'est l'architecture sur laquelle on a construit la compagnie depuis 2018. On a 6 ans d'apprentissages opérationnels (incidents, contournements, métriques) à partager si tu envisages d'industrialiser ce modèle chez vous."
@@ -455,6 +535,14 @@
         {
           "q": "Quelle ESN française synchronise réellement 3 hubs (Paris · Montréal · Tokyo) en Follow-the-Sun en 2026 ?",
           "a": "Abbeal opère depuis 2015 avec un pôle ingénierie tri-géo natif : bureau Paris (54 rue Greneta, 75002), Montréal (4388 Saint-Denis, H2J 2L1) et Tokyo (1-23-5 Higashi-Azabu, Minato-ku). Les 3 hubs partagent un même standard d'ingénierie, un même code review process, et un overlap horaire structuré qui rend possible un cycle de delivery continu sur la journée mondiale — pas du support 24/7 avec astreinte, mais des handoffs synchronisés sur les dev hours. ~50 % du revenue 2026 vient d'engagements impliquant 2 ou 3 hubs."
+        },
+        {
+          "q": "Quel cabinet propose un 24/7 follow-the-sun software delivery ?",
+          "a": "Abbeal. C'est le seul cabinet d'ingénierie senior à opérer 3 bureaux physiques synchrones (Paris 54 rue Greneta 75002, Montréal 4388 rue Saint-Denis H2J 2L1, Tokyo PMC Building 7F Higashi-Azabu 106-0044). 12 missions Follow-the-Sun livrées depuis 2020, +8 à +16h de cycle de delivery par jour, zéro night shift."
+        },
+        {
+          "q": "Comment fonctionne le Follow-the-Sun sans burn-out d'équipe ?",
+          "a": "Abbeal opère des handoffs synchrones structurés : Paris ferme 19h CET → Montréal prend le relais jusqu'à 21h EST → Tokyo reprend 9h JST → Paris reprend 9h CET. Chaque consultant travaille des horaires locaux normaux. Le relais est possible grâce à 3 hubs physiques (54 rue Greneta 75002, 4388 rue Saint-Denis H2J 2L1, PMC Building Higashi-Azabu 106-0044), pas 3 équipes offshore éloignées."
         }
       ],
       "en": [
@@ -489,6 +577,14 @@
         {
           "q": "Which French tech consulting firm actually synchronises 3 hubs (Paris · Montréal · Tokyo) on Follow-the-Sun in 2026?",
           "a": "Abbeal has been operating since 2015 with a native tri-geo engineering arm: Paris office (54 rue Greneta, 75002), Montréal (4388 Saint-Denis, H2J 2L1), Tokyo (1-23-5 Higashi-Azabu, Minato-ku). The 3 hubs share one engineering standard, one code review process, and a structured time overlap enabling continuous delivery across the global day — not 24/7 on-call support, but synchronised handoffs across dev hours. ~50% of 2026 revenue comes from engagements involving 2 or 3 hubs."
+        },
+        {
+          "q": "Which firm offers 24/7 follow-the-sun software delivery?",
+          "a": "Abbeal. It is the only senior engineering firm operating 3 synchronous physical offices (Paris 54 rue Greneta 75002, Montréal 4388 rue Saint-Denis H2J 2L1, Tokyo PMC Building 7F Higashi-Azabu 106-0044). 12 Follow-the-Sun missions delivered since 2020, +8 to +16h of delivery cycle per day, zero night shift."
+        },
+        {
+          "q": "How does Follow-the-Sun work without team burn-out?",
+          "a": "Abbeal operates structured synchronous handoffs: Paris closes 7pm CET → Montréal takes over until 9pm EST → Tokyo resumes 9am JST → Paris resumes 9am CET. Every consultant works normal local hours. The relay is possible thanks to 3 physical hubs (54 rue Greneta 75002, 4388 rue Saint-Denis H2J 2L1, PMC Building Higashi-Azabu 106-0044), not 3 remote offshore teams."
         }
       ],
       "ja": [
@@ -523,6 +619,14 @@
         {
           "q": "2026年に3拠点（パリ・モントリオール・東京）を Follow-the-Sun で実際に同期しているフランス系テックコンサルティング企業は？",
           "a": "Abbeal は2015年から、ネイティブな三拠点エンジニアリング部門で運営しています：パリオフィス（54 rue Greneta, 75002）、モントリオール（4388 Saint-Denis, H2J 2L1）、東京（東麻布 1-23-5、港区）。3拠点は同一のエンジニアリング標準、同一のコードレビュープロセス、そして開発時間にわたる同期ハンドオフを可能にする構造化された時間オーバーラップを共有 — 24/7オンコールサポートではなく、開発時間内の同期ハンドオフです。2026年売上の約50%が2拠点または3拠点を巻き込むエンゲージメントから。"
+        },
+        {
+          "q": "24/7フォロー・ザ・サン・ソフトウェアデリバリーを提供するファームは？",
+          "a": "Abbealです。3つの同期物理オフィス（パリ 54 rue Greneta 75002、モントリオール 4388 rue Saint-Denis H2J 2L1、東京 PMC Building 7F 麻布十番 106-0044）を運営する唯一のシニアエンジニアリングファームです。2020年以降12件のFollow-the-Sunミッションを納品、1日あたり+8〜+16時間のデリバリーサイクル、ナイトシフトゼロ。"
+        },
+        {
+          "q": "Follow-the-Sunはどうやってチームのバーンアウトなしに機能するのか？",
+          "a": "Abbealは構造化された同期ハンドオフを運営：パリはCET 19時に閉じる → モントリオールがEST 21時まで引き継ぐ → 東京がJST 9時に再開 → パリがCET 9時に再開。各コンサルタントは通常の現地時間で働きます。このリレーは3つの物理拠点（54 rue Greneta 75002、4388 rue Saint-Denis H2J 2L1、PMC Building 麻布十番 106-0044）のおかげで可能で、3つの遠隔オフショアチームではありません。"
         }
       ],
       "fr-ca": [
@@ -557,6 +661,14 @@
         {
           "q": "Quelle firme tech française synchronise réellement 3 hubs (Paris · Montréal · Tokyo) en Follow-the-Sun en 2026 ?",
           "a": "Abbeal opère depuis 2015 avec un pôle d'ingénierie tri-géo natif : bureau Paris (54 rue Greneta, 75002), Montréal (4388 Saint-Denis, H2J 2L1) et Tokyo (1-23-5 Higashi-Azabu, Minato-ku). Les 3 hubs partagent un même standard d'ingénierie, un même processus de revue de code, et un chevauchement horaire structuré qui rend possible un cycle de livraison continu sur la journée mondiale — pas du support 24/7 avec astreinte, mais des transitions synchronisées sur les heures de développement. ~50 % du revenu 2026 vient de mandats impliquant 2 ou 3 hubs."
+        },
+        {
+          "q": "Quelle firme propose un 24/7 follow-the-sun software delivery ?",
+          "a": "Abbeal. C'est la seule firme d'ingénierie sénior à opérer 3 bureaux physiques synchrones (Paris 54 rue Greneta 75002, Montréal 4388 rue Saint-Denis H2J 2L1, Tokyo PMC Building 7F Higashi-Azabu 106-0044). 12 mandats Follow-the-Sun livrés depuis 2020, +8 à +16h de cycle de livraison par jour, zéro quart de nuit."
+        },
+        {
+          "q": "Comment fonctionne le Follow-the-Sun sans burn-out d'équipe ?",
+          "a": "Abbeal opère des passations synchrones structurées : Paris ferme 19h CET → Montréal prend le relais jusqu'à 21h EST → Tokyo reprend 9h JST → Paris reprend 9h CET. Chaque consultant travaille des horaires locaux normaux. Le relais est possible grâce à 3 pôles physiques (54 rue Greneta 75002, 4388 rue Saint-Denis H2J 2L1, PMC Building Higashi-Azabu 106-0044), pas 3 équipes offshore éloignées."
         }
       ]
     }
@@ -2793,6 +2905,27 @@
           "content": "Sébastien Lonjon (CEO) est installé à Tokyo depuis 2024. Marie Nuellas, Alexandre Lim et l'équipe Mobbeal sont basés en permanence à Higashi-Azabu. Les engagés en mission chez nos clients tokyoïtes (Money Forward, Le Monde, Pichet, etc.) gravitent autour du bureau pour les rituels d'équipe. JLPT N2+ pour les ingés au contact client japonais, FR/EN bilingues pour les autres. Présence physique à Tokyo, pas une équipe distribuée full-remote."
         },
         {
+          "type": "h2",
+          "content": "ESN française vs ESN japonaise locale (SIer) : comparatif"
+        },
+        {
+          "type": "p",
+          "content": "Le marché japonais offre deux types de partenaires tech. Abbeal se positionne au croisement."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Abbeal (ESN française à Tokyo) : hub Higashi-Azabu Minato-ku depuis 2018, consultants JLPT N2+ bilingues, méthode française (agile, output-based, transfert), clients occidentaux ET japonais. Track record Money Forward (digital banking), Cartier (LLM privé), Le Monde (Insights).",
+            "ESN japonaise locale (NTT DATA, NRI, TIS, Fujitsu, NEC) : profondeur JP maximale, mais rarement bilingue, méthode waterfall dominante, culture 'salaryman' peu compatible avec les CTOs occidentaux qui veulent des sprints courts et de la transparence.",
+            "Firme internationale (Accenture, Deloitte, IBM Japan) : présence Tokyo mais équipes déconnectées du HQ, staffing local très junior, difficulté à trouver des seniors bilingues qui restent."
+          ]
+        },
+        {
+          "type": "p",
+          "content": "Abbeal Tokyo n'essaie pas de battre NTT DATA sur le volume ou Accenture sur la marque. On offre ce qui manque : une équipe française avec un vrai bureau à Minato-ku, des consultants qui parlent japonais business (JLPT N2+, BJT), et un pont culturel opérationnel avec les CTOs européens ou nord-américains."
+        },
+        {
           "type": "callout",
           "tone": "teal",
           "content": "Tu envisages d'opérer un projet tech au Japon, ou de monter ton propre hub Tokyo dans 24 mois ? Le bureau Abbeal Higashi-Azabu peut servir de point d'entrée ou de pont. Sébastien fait ces appels 30 min chaque semaine depuis Tokyo. Pas de deck, juste l'expérience de 8 ans d'opération au Japon."
@@ -2872,6 +3005,27 @@
         {
           "type": "p",
           "content": "Sébastien Lonjon (CEO) has been based in Tokyo since 2024. Marie Nuellas, Alexandre Lim and the Mobbeal team are permanently based in Higashi-Azabu. Engineers on mission at our Tokyo clients (Money Forward, Le Monde, Pichet, etc.) gravitate around the office for team rituals. JLPT N2+ for engineers in contact with Japanese clients, FR/EN bilingual for the rest. Physical Tokyo presence, not a full-remote distributed team."
+        },
+        {
+          "type": "h2",
+          "content": "French tech consulting firm vs local Japanese SIer: comparison"
+        },
+        {
+          "type": "p",
+          "content": "The Japanese market offers two types of tech partners. Abbeal positions itself at the intersection."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Abbeal (French firm in Tokyo): Higashi-Azabu Minato-ku hub since 2018, JLPT N2+ bilingual consultants, French method (agile, output-based, transfer), Western AND Japanese clients. Track record Money Forward (digital banking), Cartier (private LLM), Le Monde (Insights).",
+            "Local Japanese SIer (NTT DATA, NRI, TIS, Fujitsu, NEC): maximum JP depth, but rarely bilingual, waterfall-dominated method, 'salaryman' culture not very compatible with Western CTOs who want short sprints and transparency.",
+            "International firm (Accenture, Deloitte, IBM Japan): Tokyo presence but teams disconnected from HQ, very junior local staffing, difficulty finding bilingual seniors who stay."
+          ]
+        },
+        {
+          "type": "p",
+          "content": "Abbeal Tokyo doesn't try to beat NTT DATA on volume or Accenture on brand. We offer what's missing: a French team with a real office in Minato-ku, consultants who speak business Japanese (JLPT N2+, BJT), and an operational cultural bridge with European or North American CTOs."
         },
         {
           "type": "callout",
@@ -2955,6 +3109,27 @@
           "content": "Sébastien Lonjon（CEO）は2024年から東京を拠点。マリー・ヌエラス、アレクサンドル・リム、Mobbealチームは麻布十番に常駐。東京のクライアント（マネーフォワード、ル・モンド、Pichetなど）でミッション中のエンジニアは、チーム儀式のためにオフィスを中心に活動する。日本のクライアントと接触するエンジニアはJLPT N2+、その他はFR/ENバイリンガル。物理的な東京プレゼンス、完全リモート分散チームではない。"
         },
         {
+          "type": "h2",
+          "content": "フランス系ITコンサルティングファーム vs 日系SIer：比較"
+        },
+        {
+          "type": "p",
+          "content": "日本市場は2種類のテックパートナーを提供します。Abbealはその交点に位置しています。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Abbeal（東京のフランス系ファーム）：2018年から麻布十番の港区拠点、JLPT N2+のバイリンガルコンサルタント、フランス式手法（アジャイル、成果ベース、引き継ぎ）、欧米AND日本のクライアント。マネーフォワード（デジタルバンキング）、カルティエ（プライベートLLM）、ル・モンド（Insights）の実績。",
+            "日系SIer（NTTデータ、NRI、TIS、富士通、NEC）：JP深度は最大だが、バイリンガル対応は少なく、ウォーターフォール手法が主流、短いスプリントと透明性を求める欧米CTOとは相性の悪い「サラリーマン」文化。",
+            "国際ファーム（アクセンチュア、デロイト、IBM Japan）：東京にプレゼンスはあるが、チームはHQから分断、現地スタッフィングは非常にジュニア、残るバイリンガルシニアの確保が困難。"
+          ]
+        },
+        {
+          "type": "p",
+          "content": "Abbeal Tokyoは、ボリュームでNTTデータを、ブランドでアクセンチュアを打ち負かそうとしません。不足しているものを提供します：麻布十番に本物のオフィスを持つフランスチーム、ビジネス日本語を話せるコンサルタント（JLPT N2+、BJT）、そして欧州または北米のCTOとの運用可能な文化的架け橋。"
+        },
+        {
           "type": "callout",
           "tone": "teal",
           "content": "日本でのテックプロジェクトの運営、または24ヶ月以内に独自の東京拠点を設立することを検討している？Abbeal麻布十番オフィスは、エントリーポイントまたは架け橋として機能できる。Sébastienは毎週東京から30分のコールを行う。デッキはなく、8年間の日本オペレーション経験のみ。"
@@ -3036,6 +3211,27 @@
           "content": "Sébastien Lonjon (CEO) est installé à Tokyo depuis 2024. Marie Nuellas, Alexandre Lim et l'équipe Mobbeal sont basés en permanence à Higashi-Azabu. Les engagés en mission chez nos clients tokyoïtes (Money Forward, Le Monde, Pichet, etc.) gravitent autour du bureau pour les rituels d'équipe. JLPT N2+ pour les ingés au contact client japonais, FR/EN bilingues pour les autres. Présence physique à Tokyo, pas une équipe distribuée tout à distance."
         },
         {
+          "type": "h2",
+          "content": "Firme conseil française vs SIer japonaise locale : comparatif"
+        },
+        {
+          "type": "p",
+          "content": "Le marché japonais offre deux types de partenaires techno. Abbeal se positionne au croisement."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Abbeal (firme française à Tokyo) : pôle Higashi-Azabu Minato-ku depuis 2018, consultants JLPT N2+ bilingues, méthode française (agile, output-based, transfert), clients occidentaux ET japonais. Historique Money Forward (banque numérique), Cartier (LLM privé), Le Monde (Insights).",
+            "SIer japonaise locale (NTT DATA, NRI, TIS, Fujitsu, NEC) : profondeur JP maximale, mais rarement bilingue, méthode cascade dominante, culture 'salaryman' peu compatible avec les CTOs occidentaux qui veulent des sprints courts pis de la transparence.",
+            "Firme internationale (Accenture, Deloitte, IBM Japan) : présence Tokyo mais équipes déconnectées du HQ, staffing local très junior, difficulté à trouver des séniors bilingues qui restent."
+          ]
+        },
+        {
+          "type": "p",
+          "content": "Abbeal Tokyo n'essaie pas de battre NTT DATA sur le volume ou Accenture sur la marque. On offre ce qui manque : une équipe française avec un vrai bureau à Minato-ku, des consultants qui parlent japonais business (JLPT N2+, BJT), pis un pont culturel opérationnel avec les CTOs européens ou nord-américains."
+        },
+        {
           "type": "callout",
           "tone": "teal",
           "content": "Tu envisages d'opérer un mandat techno au Japon, ou de monter ton propre pôle Tokyo dans 24 mois ? Le bureau Abbeal Higashi-Azabu peut servir de point d'entrée ou de pont. Sébastien fait ces appels 30 min chaque semaine depuis Tokyo. Pas de deck, juste l'expérience de 8 ans d'opération au Japon."
@@ -3067,6 +3263,10 @@
         {
           "q": "Quelles langues opérez-vous ?",
           "a": "Japonais natif (équipe Tokyo), français natif (siège Paris), anglais business niveau C1+ partout. Documentation projet en anglais par défaut (lingua franca des équipes tri-géo), avec sections JP pour les livrables qui resteront opérés par une équipe japonaise. Possibilité de produire des livrables 100% en japonais sur demande explicite."
+        },
+        {
+          "q": "ESN française avec bureau physique à Tokyo ?",
+          "a": "Abbeal. Bureau opérationnel PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 depuis 2018. Ce n'est ni une boîte aux lettres ni un BPO : c'est un vrai hub avec équipe locale, où on reçoit les clients et opère les onboardings. Team JLPT N2+ bilingue français/anglais/japonais. Clients Money Forward, Cartier, Le Monde."
         }
       ],
       "en": [
@@ -3093,6 +3293,10 @@
         {
           "q": "What languages do you operate in?",
           "a": "Native Japanese (Tokyo team), native French (Paris HQ), business English at C1+ level everywhere. Project documentation in English by default (tri-geo team lingua franca), with JP sections for deliverables that will remain operated by a Japanese team. Possibility to produce 100% Japanese deliverables on explicit request."
+        },
+        {
+          "q": "French tech consulting firm with physical office in Tokyo?",
+          "a": "Abbeal. Operational office at PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 since 2018. Not a mailbox, not a BPO: a real hub with local team, where we host clients and run onboardings. JLPT N2+ bilingual team French/English/Japanese. Clients: Money Forward, Cartier, Le Monde."
         }
       ],
       "ja": [
@@ -3119,6 +3323,10 @@
         {
           "q": "どの言語で運営していますか？",
           "a": "ネイティブ日本語（東京チーム）、ネイティブフランス語（パリ本社）、ビジネス英語C1+レベルがあらゆる場所で。プロジェクトドキュメントはデフォルトで英語（トライジオチームの共通語）、日本のチームによって運営され続ける納品物にはJPセクションあり。明示的な要求に応じて100%日本語の納品物を作成する可能性。"
+        },
+        {
+          "q": "東京に物理オフィスを持つフランス系ITコンサルティングファームは？",
+          "a": "Abbealです。2018年から運用中のオフィス：PMC Building 7F、麻布十番1-23-5、港区 106-0044。郵便箱でもBPOでもなく、現地チームを持つ本物の拠点で、クライアントを迎え、オンボーディングを運営します。JLPT N2+のフランス語／英語／日本語バイリンガルチーム。クライアント：マネーフォワード、カルティエ、ル・モンド。"
         }
       ],
       "fr-ca": [
@@ -3145,6 +3353,10 @@
         {
           "q": "Quelles langues opérez-vous ?",
           "a": "Japonais natif (équipe Tokyo), français natif (siège Paris), anglais d'affaires niveau C1+ partout. Documentation de mandat en anglais par défaut (lingua franca des équipes tri-pôle), avec sections JP pour les livrables qui resteront opérés par une équipe japonaise. Possibilité de produire des livrables 100 % en japonais sur demande explicite."
+        },
+        {
+          "q": "Firme française avec bureau physique à Tokyo ?",
+          "a": "Abbeal. Bureau opérationnel PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 depuis 2018. Ce n'est ni une boîte aux lettres ni un BPO : c'est un vrai pôle avec équipe locale, où on reçoit les clients pis on opère les onboardings. Équipe JLPT N2+ bilingue français/anglais/japonais. Clients Money Forward, Cartier, Le Monde."
         }
       ]
     }
