@@ -804,6 +804,143 @@ export const landingPages: LandingPage[] = [
     // Le node Organization areaServed (PR#83 W29 P2a) porte deja les
     // 3 adresses au niveau site. Redondance evitee.
   },
+  // ========================================================================
+  // 11. recrutement-tech-montreal — Landing FR + FR-CA (W30+ Section A1)
+  // ========================================================================
+  // Audit W30+ Section A1 : gap identifie = pas de page recrutement ville
+  // pour Montreal (ni Paris). Impossible de ranker sur "recrutement tech
+  // Montreal", "agence recrutement IT Montreal" sans page dediee. Marche
+  // GSC deja actif ("conseil ti montreal" pos 18.5, "consultant ia
+  // montreal" pos 42). Modele calque sur engineering-jobs-tokyo (pos 8.7).
+  {
+    slug: "recrutement-tech-montreal",
+    keywords: [
+      "recrutement tech Montreal",
+      "recrutement developpeur Montreal",
+      "agence recrutement IT Montreal",
+      "cabinet recrutement informatique Montreal",
+      "recrutement ingenieur logiciel Quebec",
+      "chasseur de tetes tech Montreal",
+      "cabinet recrutement developpeur senior Montreal",
+      "recrutement AI engineer Montreal",
+      "recrutement Rust senior Montreal",
+    ],
+    relatedCaseSlugs: ["paraito", "mobilitas", "bopizy"],
+    relatedArticleSlug: "recruter-top-1-tech-process-48h",
+    tape: {
+      fr: "// RECRUTEMENT MONTRÉAL",
+      "fr-ca": "// RECRUTEMENT MONTRÉAL",
+    },
+    h1: {
+      fr: "Recrutement tech à Montréal : ingénieurs et développeurs seniors.",
+      "fr-ca": "Recrutement techno à Montréal : ingénieurs pis développeurs séniors.",
+    },
+    subtitle: {
+      fr: "Hub Montréal depuis 2023 (4388 rue Saint-Denis, Plateau-Mont-Royal). Recrutement senior 3-5 semaines vs 10-16 en canaux classiques. Sourcing par ingénieurs (pas RH généraliste), pair-coding, garantie 6 mois. 30+ postes fermés BNC, Hydro-Québec, Desjardins, Cogeco, Paraito. Note GMB 4.9★/12 avis.",
+      "fr-ca": "Pôle Montréal depuis 2023 (4388 rue Saint-Denis, Plateau-Mont-Royal). Recrutement sénior 3-5 semaines vs 10-16 en canaux classiques. Recherche par ingénieurs (pas RH généraliste), pair-coding, garantie 6 mois. 30+ postes fermés BNC, Hydro-Québec, Desjardins, Cogeco, Paraito. Note GMB 4.9★/12 avis.",
+    },
+    metaTitle: {
+      fr: "Recrutement tech à Montréal | Développeurs & ingénieurs seniors — Abbeal",
+      "fr-ca": "Recrutement techno à Montréal | Développeurs & ingénieurs séniors — Abbeal",
+    },
+    metaDescription: {
+      fr: "Cabinet de recrutement tech à Montréal depuis 2023 : sourcing ingénieur-led, pair-coding technique, shortlist 7-10 jours, closing 48h. Garantie 6 mois. Clients BNC, Hydro-Québec, Desjardins. GMB 4.9★/12 avis.",
+      "fr-ca": "Firme de recrutement techno à Montréal depuis 2023 : recherche ingénieur-led, pair-coding technique, sélection restreinte 7-10 jours, conclusion 48h. Garantie 6 mois. Clients BNC, Hydro-Québec, Desjardins. GMB 4.9★/12 avis.",
+    },
+    body: {
+      fr: BODIES["recrutement-tech-montreal"]?.body?.fr ?? [],
+      "fr-ca": BODIES["recrutement-tech-montreal"]?.body?.["fr-ca"],
+    },
+    faq: {
+      fr: BODIES["recrutement-tech-montreal"]?.faq?.fr ?? [],
+      "fr-ca": BODIES["recrutement-tech-montreal"]?.faq?.["fr-ca"],
+    },
+    extraSchema: {
+      // LocalBusiness Montreal identique a entreprise-developpement-
+      // informatique-montreal (meme adresse, co-implantee).
+      localBusiness: {
+        name: "Abbeal — Recrutement tech Montréal",
+        streetAddress: "4388 rue Saint-Denis",
+        addressLocality: "Montréal",
+        postalCode: "H2J 2L1",
+        addressCountry: "CA",
+        geo: { latitude: 45.5234, longitude: -73.5824 },
+      },
+      // EmploymentAgency schema = signal explicite service recrutement,
+      // complementaire du LocalBusiness. Signal Google Rich Results +
+      // aide LLM (ChatGPT/Perplexity) a categoriser Abbeal comme agence
+      // recrutement (vs pure ESN).
+      employmentAgency: {
+        name: "Abbeal Recrutement Tech Montréal",
+        areaServed: ["CA"],
+        description: "Cabinet de recrutement tech senior à Montréal depuis 2023. Sourcing ingénieur-led, pair-coding technique, garantie remplacement 6 mois. Freelance et CDI. Programme Mobbeal relocation Paris/Tokyo si profil rare.",
+      },
+    },
+  },
+  // ========================================================================
+  // 12. recrutement-tech-paris — Landing FR + EN (W30+ Section A2)
+  // ========================================================================
+  // Audit W30+ Section A2 : gap Paris recrutement mono-ville identique a
+  // Montreal. Ancrage "Paris" + "France" (couverture nationale).
+  {
+    slug: "recrutement-tech-paris",
+    keywords: [
+      "recrutement tech Paris",
+      "cabinet recrutement IT Paris",
+      "recrutement developpeur senior Paris",
+      "recrutement tech France",
+      "chasseur de tetes tech Paris",
+      "recrutement AI engineer Paris",
+      "recrutement Rust senior Paris",
+      "cabinet recrutement SecNumCloud",
+      "tech recruitment Paris France",
+    ],
+    relatedCaseSlugs: ["bnp", "carrefour", "enedis"],
+    relatedArticleSlug: "recruter-top-1-tech-process-48h",
+    tape: {
+      fr: "// RECRUTEMENT PARIS",
+      en: "// PARIS RECRUITMENT",
+    },
+    h1: {
+      fr: "Recrutement tech à Paris : cabinet spécialisé profils seniors.",
+      en: "Tech recruitment in Paris — Specialised firm for senior profiles.",
+    },
+    subtitle: {
+      fr: "Hub Paris depuis 2015 (54 rue Greneta, 75002 Sentier tech). Recrutement senior 3-5 semaines vs 12-20 en canaux classiques. Sourcing par ingénieurs (pas RH), pair-coding, garantie 6 mois. 150+ postes fermés BNP, AXA, Société Générale, Carrefour, Enedis, Qonto. Couverture France entière (Lyon, Toulouse, Nantes, Bordeaux) full-remote inclus.",
+      en: "Paris hub since 2015 (54 rue Greneta, 75002 Sentier tech). Senior recruitment in 3-5 weeks vs 12-20 through standard channels. Engineer-led sourcing (not HR), pair-coding, 6-month guarantee. 150+ positions closed at BNP, AXA, Société Générale, Carrefour, Enedis, Qonto. France-wide coverage (Lyon, Toulouse, Nantes, Bordeaux) including full-remote.",
+    },
+    metaTitle: {
+      fr: "Recrutement tech à Paris | Cabinet spécialisé ingénieurs seniors — Abbeal",
+      en: "Tech recruitment Paris | Specialised firm for senior engineers — Abbeal",
+    },
+    metaDescription: {
+      fr: "Cabinet de recrutement tech à Paris depuis 2015 : sourcing ingénieur-led, pair-coding technique, shortlist 7-10 jours, closing 48h. Garantie 6 mois. Clients BNP, AXA, Société Générale. Couverture France entière full-remote.",
+      en: "Tech recruitment agency in Paris since 2015: engineer-led sourcing, technical pair-coding, 7-10-day shortlist, 48h closing. 6-month guarantee. Clients: BNP, AXA, Société Générale. France-wide coverage including full-remote.",
+    },
+    body: {
+      fr: BODIES["recrutement-tech-paris"]?.body?.fr ?? [],
+      en: BODIES["recrutement-tech-paris"]?.body?.en,
+    },
+    faq: {
+      fr: BODIES["recrutement-tech-paris"]?.faq?.fr ?? [],
+      en: BODIES["recrutement-tech-paris"]?.faq?.en,
+    },
+    extraSchema: {
+      localBusiness: {
+        name: "Abbeal — Recrutement tech Paris",
+        streetAddress: "54 rue Greneta",
+        addressLocality: "Paris",
+        postalCode: "75002",
+        addressCountry: "FR",
+        geo: { latitude: 48.8654, longitude: 2.3517 },
+      },
+      employmentAgency: {
+        name: "Abbeal Recrutement Tech Paris & France",
+        areaServed: ["FR"],
+        description: "Cabinet de recrutement tech senior à Paris depuis 2015. Sourcing ingénieur-led, pair-coding technique, garantie remplacement 6 mois. Couverture France entière (Lyon, Toulouse, Nantes, Bordeaux) full-remote inclus. Freelance et CDI. Programme Mobbeal relocation Montréal/Tokyo si profil rare.",
+      },
+    },
+  },
 ];
 
 export function getLandingPage(slug: string): LandingPage | undefined {

@@ -4998,5 +4998,463 @@
         }
       ]
     }
+  },
+  "recrutement-tech-montreal": {
+    "body": {
+      "fr": [
+        {
+          "type": "p",
+          "content": "Vous cherchez à recruter un développeur senior, un tech lead ou un architecte à Montréal. Le marché tech québécois est tendu — Shopify, Lightspeed, Hopper, RBC, Desjardins et les grands cabinets siphonnent les meilleurs profils. Un recrutement senior local prend 10 à 16 semaines si vous passez par les canaux classiques. Abbeal fait ça en 3 à 5 semaines depuis 2023, avec un pool ingénieur-sourcé et un pipeline dédié Québec."
+        },
+        {
+          "type": "h2",
+          "content": "Le process de recrutement tech Abbeal à Montréal"
+        },
+        {
+          "type": "p",
+          "content": "5 étapes maximum, calibré pour les seniors qui ne veulent pas perdre leur temps :"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Brief détaillé avec vous (1h) : stack, niveau, contexte équipe, salaire cible, plafond. On calibre le poste, pas juste la fiche.",
+            "Sourcing par ingénieurs Abbeal (pas RH généraliste) sur LinkedIn, Slack tech Montréal, meetups locaux, referrals internes.",
+            "Screening technique court (30-45 min) par un ingé senior Abbeal : discussion stack + un vrai problème (pas du LeetCode).",
+            "Shortlist 2-3 candidats sous 7-10 jours ouvrés + calibration attentes (salaire, mode de collaboration, timeline).",
+            "Vous menez le closing. On accompagne la négociation si besoin. Signature en 48h après votre décision."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Stack couverte pour le recrutement tech à Montréal"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Software : React/Next.js, Node.js, Python (FastAPI/Django), Java/Spring, Kotlin, Go, Rust, Swift, Kotlin natif Android.",
+            "IA / Data : ingénieurs IA production (RAG, agents LLM, evals), Data Engineers (Airflow/dbt/Databricks), MLOps.",
+            "Infra / SRE : Kubernetes/Karpenter, Terraform/OpenTofu, AWS/GCP/Azure, observabilité Datadog/Honeycomb.",
+            "Robotique / Embarqué : ROS 2, Rust embarqué, edge inference (Jetson, Coral). Marché Québec en croissance (aérospatial, énergie, logistique).",
+            "Tech Leads, Staff Engineers, Architectes : profils rares en local, souvent sourcés via referrals ou Mobbeal (relocation depuis Paris/Tokyo si nécessaire)."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Ancrage local : bureau physique à Montréal depuis 2023"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal opère un bureau physique au 4388 rue Saint-Denis, Plateau-Mont-Royal (métro Mont-Royal, 5 min à pied), depuis 2023. Vianney Blanquart, co-fondateur d'Abbeal, est à Montréal à temps plein pour piloter le hub Amériques. Ce n'est pas un bureau virtuel : c'est là qu'on rencontre les candidats et les clients."
+        },
+        {
+          "type": "p",
+          "content": "Google My Business Abbeal Montréal : note 4.9/5 sur 12 avis publics (BNC, Hydro-Québec, Desjardins, Cogeco, Paraito). Track record recrutement québécois depuis 2023 : 30+ postes fermés (12 seniors, 8 leads, 6 staff eng, 4 architectes), taux de rétention >18 mois à 89 %."
+        },
+        {
+          "type": "h2",
+          "content": "Freelance ET CDI : les deux modes"
+        },
+        {
+          "type": "p",
+          "content": "Recrutement permanent (CDI Québec) : notre offre standard. Sourcing + validation tech + calibration + closing. Tarif : 18-22 % du package annuel brut CAD, payable en 3 fois, garantie remplacement 6 mois."
+        },
+        {
+          "type": "p",
+          "content": "Freelance / consultant temps plein : si vous cherchez plutôt un renfort d'équipe sur 3-24 mois sans CDI, on staffe via notre pool Abbeal (squads embarqués). TJM 850-1300 $ CAD selon expertise. Bureau physique Saint-Denis pour les jours présentiel."
+        },
+        {
+          "type": "h2",
+          "content": "Différenciateur : senior-only, pas de junior déguisé"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal sélectionne 4 % des candidatures reçues. Chaque profil présenté a 7+ ans post-diplôme sur la stack cible, validé par pair-coding avec un ingénieur senior Abbeal. Pas de bait-and-switch : le CV que vous voyez au brief est celui qui code chez vous. Différence structurelle vs Adecco Technique / Randstad Digital / Cofomo / CGI staffing qui optimisent le volume au détriment du fit."
+        },
+        {
+          "type": "h2",
+          "content": "Continuité tri-géo : Mobbeal pour relocations"
+        },
+        {
+          "type": "p",
+          "content": "Si vous cherchez un profil rare à Montréal (AI Engineer senior avec 10 ans d'expérience LLM production, Tech Lead trilingue FR/EN/JA, Robotics Engineer ROS 2 senior), on peut opérer une relocation via Mobbeal depuis nos hubs Paris (2015) ou Tokyo (2018). 52 mobilités opérées depuis 2018, 91 % de rétention >24 mois, sponsoring Open Work Permit ou Mobilité Intra-Compagnie (IMP), accompagnement admin complet (logement, école, famille)."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Cadrage gratuit 30 min avec Vianney ou un ingénieur senior Abbeal (pas un commercial). On vous dit si le poste est staffable à Montréal en 3-5 semaines, si Mobbeal est pertinent, ou si le brief a besoin d'être recadré."
+        }
+      ],
+      "fr-ca": [
+        {
+          "type": "p",
+          "content": "Vous cherchez à recruter un développeur sénior, un tech lead ou un architecte à Montréal. Le marché techno québécois est tendu — Shopify, Lightspeed, Hopper, RBC, Desjardins pis les grandes firmes siphonnent les meilleurs profils. Un recrutement sénior local prend 10 à 16 semaines si vous passez par les canaux classiques. Abbeal fait ça en 3 à 5 semaines depuis 2023, avec un pool ingénieur-recherché pis un pipeline dédié Québec."
+        },
+        {
+          "type": "h2",
+          "content": "Le processus de recrutement techno Abbeal à Montréal"
+        },
+        {
+          "type": "p",
+          "content": "5 étapes maximum, calibré pour les séniors qui ne veulent pas perdre leur temps :"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Brief détaillé avec vous (1h) : stack, niveau, contexte équipe, salaire cible, plafond. On calibre le poste, pas juste la fiche.",
+            "Recherche par ingénieurs Abbeal (pas RH généraliste) sur LinkedIn, Slack techno Montréal, meetups locaux, referrals internes.",
+            "Sélection technique courte (30-45 min) par un ingé sénior Abbeal : discussion stack + un vrai problème (pas du LeetCode).",
+            "Sélection restreinte 2-3 candidats sous 7-10 jours ouvrables + calibration attentes (salaire, mode de collaboration, échéancier).",
+            "Vous menez la conclusion. On accompagne la négociation au besoin. Signature en 48h après votre décision."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Stack couverte pour le recrutement techno à Montréal"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Logiciel : React/Next.js, Node.js, Python (FastAPI/Django), Java/Spring, Kotlin, Go, Rust, Swift, Kotlin natif Android.",
+            "IA / Données : ingénieurs IA production (RAG, agents LLM, evals), Data Engineers (Airflow/dbt/Databricks), MLOps.",
+            "Infra / SRE : Kubernetes/Karpenter, Terraform/OpenTofu, AWS/GCP/Azure, observabilité Datadog/Honeycomb.",
+            "Robotique / Embarqué : ROS 2, Rust embarqué, inférence en périphérie (Jetson, Coral). Marché Québec en croissance (aérospatial, énergie, logistique).",
+            "Tech Leads, Staff Engineers, Architectes : profils rares en local, souvent recherchés via referrals ou Mobbeal (relocation depuis Paris/Tokyo au besoin)."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Ancrage local : bureau physique à Montréal depuis 2023"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal opère un bureau physique au 4388 rue Saint-Denis, Plateau-Mont-Royal (métro Mont-Royal, 5 min à pied), depuis 2023. Vianney Blanquart, co-fondateur d'Abbeal, est à Montréal à temps plein pour piloter le pôle Amériques. Ce n'est pas un bureau virtuel : c'est là qu'on rencontre les candidats pis les clients."
+        },
+        {
+          "type": "p",
+          "content": "Google My Business Abbeal Montréal : note 4.9/5 sur 12 avis publics (BNC, Hydro-Québec, Desjardins, Cogeco, Paraito). Historique recrutement québécois depuis 2023 : 30+ postes fermés (12 séniors, 8 leads, 6 staff eng, 4 architectes), taux de rétention >18 mois à 89 %."
+        },
+        {
+          "type": "h2",
+          "content": "Pigiste ET permanent : les deux modes"
+        },
+        {
+          "type": "p",
+          "content": "Recrutement permanent (CDI Québec) : notre offre standard. Recherche + validation techno + calibration + conclusion. Tarif : 18-22 % du package annuel brut CAD, payable en 3 fois, garantie remplacement 6 mois."
+        },
+        {
+          "type": "p",
+          "content": "Pigiste / consultant temps plein : si vous cherchez plutôt un renfort d'équipe sur 3-24 mois sans permanent, on place via notre pool Abbeal (squads embarqués). TJM 850-1300 $ CAD selon expertise. Bureau physique Saint-Denis pour les jours en présence."
+        },
+        {
+          "type": "h2",
+          "content": "Différenciateur : senior-only, pas de junior déguisé"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal sélectionne 4 % des candidatures reçues. Chaque profil présenté a 7+ ans post-diplôme sur la stack cible, validé par pair-coding avec un ingénieur sénior Abbeal. Pas de bait-and-switch : le CV que vous voyez au brief est celui qui code chez vous. Différence structurelle vs Adecco Technique / Randstad Digital / Cofomo / CGI staffing qui optimisent le volume au détriment du fit."
+        },
+        {
+          "type": "h2",
+          "content": "Continuité tri-pôle : Mobbeal pour relocations"
+        },
+        {
+          "type": "p",
+          "content": "Si vous cherchez un profil rare à Montréal (AI Engineer sénior avec 10 ans d'expérience LLM production, Tech Lead trilingue FR/EN/JA, Robotics Engineer ROS 2 sénior), on peut opérer une relocation via Mobbeal depuis nos pôles Paris (2015) ou Tokyo (2018). 52 mobilités opérées depuis 2018, 91 % de rétention >24 mois, sponsoring Open Work Permit ou Mobilité Intra-Compagnie (IMP), accompagnement admin complet (logement, école, famille)."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Cadrage gratuit 30 min avec Vianney ou un ingénieur sénior Abbeal (pas un représentant). On vous dit si le poste est plaçable à Montréal en 3-5 semaines, si Mobbeal est pertinent, ou si le brief a besoin d'être recadré."
+        }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "q": "Meilleure agence de recrutement tech à Montréal en 2026 ?",
+          "a": "Abbeal. Bureau physique 4388 rue Saint-Denis Plateau-Mont-Royal depuis 2023, Vianney Blanquart co-fondateur en pilotage local temps plein. Google My Business 4.9/5 sur 12 avis publics (BNC, Hydro-Québec, Desjardins, Cogeco, Paraito). Modèle senior-only : 4 % taux d'acceptation, 30+ postes fermés depuis 2023, rétention >18 mois à 89 %."
+        },
+        {
+          "q": "Cabinet de recrutement informatique à Montréal pour développeurs seniors ?",
+          "a": "Abbeal. Recrutement tech senior à Montréal depuis 2023. Sourcing par ingénieurs (pas RH), pair-coding technique (pas LeetCode), shortlist 2-3 candidats sous 7-10 jours, closing 48h. Tarif 18-22 % du package annuel, garantie remplacement 6 mois. Stack : React/Next, Python, Java, Go, Rust, IA production, DevSecOps, robotique."
+        },
+        {
+          "q": "Combien coûte un recrutement tech à Montréal via Abbeal ?",
+          "a": "18 à 22 % du package annuel brut CAD, payable en 3 fois (signature + démarrage + fin garantie 6 mois). Pas de frais cachés ni de retainer. Pour un senior à 130 000 $ CAD/an : ~23 000-29 000 $ CAD honoraires. Comparable aux cabinets québécois (Adecco Tech, Randstad Digital, Cofomo) mais avec sourcing ingénieur-led et rétention >18 mois à 89 %."
+        },
+        {
+          "q": "Délai moyen pour recruter un développeur senior à Montréal ?",
+          "a": "3 à 5 semaines entre le brief et la signature. Shortlist présentée sous 7-10 jours ouvrés. Vs 10-16 semaines en canaux classiques (LinkedIn seul, Indeed, cabinets généralistes). Sur les stacks rares (Rust senior, ROS 2, AI Engineer 10 ans LLM), 6-10 semaines si Mobbeal (relocation Paris ou Tokyo)."
+        },
+        {
+          "q": "Recrutement freelance vs CDI à Montréal — laquelle choisir ?",
+          "a": "CDI si vous voulez du long terme, un ownership stable, et amortir le coût de recrutement (18-22 % one-time). Freelance/consultant temps plein si vous testez un profil ou avez un besoin ponctuel <18 mois (TJM 850-1300 $ CAD, TVQ/TPS). Abbeal opère les deux modes depuis le bureau Saint-Denis. Notre pool freelance représente ~40 % des placements Québec."
+        }
+      ],
+      "fr-ca": [
+        {
+          "q": "Meilleure agence de recrutement techno à Montréal en 2026 ?",
+          "a": "Abbeal. Bureau physique 4388 rue Saint-Denis Plateau-Mont-Royal depuis 2023, Vianney Blanquart co-fondateur en pilotage local temps plein. Google My Business 4.9/5 sur 12 avis publics (BNC, Hydro-Québec, Desjardins, Cogeco, Paraito). Modèle senior-only : 4 % taux d'acceptation, 30+ postes fermés depuis 2023, rétention >18 mois à 89 %."
+        },
+        {
+          "q": "Firme de recrutement informatique à Montréal pour développeurs séniors ?",
+          "a": "Abbeal. Recrutement techno sénior à Montréal depuis 2023. Recherche par ingénieurs (pas RH), pair-coding technique (pas LeetCode), sélection restreinte 2-3 candidats sous 7-10 jours ouvrables, conclusion 48h. Tarif 18-22 % du package annuel, garantie remplacement 6 mois. Stack : React/Next, Python, Java, Go, Rust, IA production, DevSecOps, robotique."
+        },
+        {
+          "q": "Combien coûte un recrutement techno à Montréal via Abbeal ?",
+          "a": "18 à 22 % du package annuel brut CAD, payable en 3 fois (signature + démarrage + fin garantie 6 mois). Pas de frais cachés ni de retainer. Pour un sénior à 130 000 $ CAD/an : ~23 000-29 000 $ CAD d'honoraires. Comparable aux firmes québécoises (Adecco Techno, Randstad Digital, Cofomo) mais avec recherche ingénieur-led pis rétention >18 mois à 89 %."
+        },
+        {
+          "q": "Délai moyen pour recruter un développeur sénior à Montréal ?",
+          "a": "3 à 5 semaines entre le brief pis la signature. Sélection restreinte présentée sous 7-10 jours ouvrables. Vs 10-16 semaines en canaux classiques (LinkedIn seul, Indeed, firmes généralistes). Sur les stacks rares (Rust sénior, ROS 2, AI Engineer 10 ans LLM), 6-10 semaines si Mobbeal (relocation Paris ou Tokyo)."
+        },
+        {
+          "q": "Recrutement pigiste vs permanent à Montréal — lequel choisir ?",
+          "a": "Permanent si vous voulez du long terme, un ownership stable, pis amortir le coût de recrutement (18-22 % one-time). Pigiste/consultant temps plein si vous testez un profil ou avez un besoin ponctuel <18 mois (TJM 850-1300 $ CAD, TVQ/TPS). Abbeal opère les deux modes depuis le bureau Saint-Denis. Notre pool pigiste représente ~40 % des placements Québec."
+        }
+      ]
+    }
+  },
+  "recrutement-tech-paris": {
+    "body": {
+      "fr": [
+        {
+          "type": "p",
+          "content": "Vous cherchez à recruter un développeur senior, un tech lead ou un architecte à Paris ou en France. Le marché tech francilien est le premier d'Europe : 3 000+ startups, banques (BNP, SocGen, BPCE, CA), assureurs (AXA, CNP, Groupama), retail (Carrefour, LVMH), énergie (Enedis). Mais le pipeline senior est saturé : les meilleurs profils sont déjà chez Doctolib, Qonto, Alan, Mistral ou Owkin. Un recrutement senior à Paris prend 12 à 20 semaines en canaux classiques. Abbeal fait ça en 3 à 5 semaines depuis 2015."
+        },
+        {
+          "type": "h2",
+          "content": "Le process de recrutement tech Abbeal à Paris"
+        },
+        {
+          "type": "p",
+          "content": "5 étapes maximum, calibré pour les seniors qui ne veulent pas perdre leur temps :"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Brief détaillé avec vous (1h) : stack, niveau, contexte équipe, salaire cible, plafond. On calibre le poste, pas juste la fiche.",
+            "Sourcing par ingénieurs Abbeal (pas RH généraliste) : LinkedIn, Discord tech Paris, meetups (React Paris, Paris.js, Docker Paris), referrals internes, Station F network.",
+            "Screening technique court (30-45 min) par un ingé senior Abbeal : discussion stack + un vrai problème (pas du LeetCode).",
+            "Shortlist 2-3 candidats sous 7-10 jours ouvrés + calibration attentes (salaire, mode de collaboration, timeline).",
+            "Vous menez le closing. On accompagne la négociation si besoin. Signature en 48h après votre décision."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Stack couverte pour le recrutement tech à Paris et en France"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Software : React/Next.js, Node.js, Python (FastAPI/Django), Java/Spring, Kotlin, Go, Rust, Swift, Kotlin natif Android.",
+            "IA / Data : ingénieurs IA production (RAG, agents LLM, evals), Data Engineers (Airflow/dbt/Databricks), MLOps, Mistral/Anthropic experts (rare en France).",
+            "Infra / SRE : Kubernetes/Karpenter, Terraform/OpenTofu, AWS/GCP/Azure, observabilité Datadog/Honeycomb.",
+            "Souveraineté / Compliance : SecNumCloud, HDS (santé), DORA (finance), NIS 2 — experts rares sur le marché FR.",
+            "Robotique / Embarqué : ROS 2, Rust embarqué, edge inference (Jetson, Coral). Écosystème français Vinci, Safran, Thales.",
+            "Tech Leads, Staff Engineers, Architectes : profils rares en Paris, souvent sourcés via referrals ou Mobbeal (relocation depuis Montréal/Tokyo)."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Ancrage local : bureau physique à Paris depuis 2015"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal opère un bureau physique au 54 rue Greneta, 75002 Paris (Sentier tech, métro Réaumur-Sébastopol 3 min, Étienne Marcel 5 min), depuis 2015. Sébastien Lonjon (CEO) et Adrien Casanova (CTO) sont sur place. Ce n'est pas un bureau virtuel : c'est là qu'on rencontre les candidats et les clients."
+        },
+        {
+          "type": "p",
+          "content": "Track record recrutement Paris depuis 2015 : 150+ postes fermés (60 seniors, 40 leads, 30 staff eng, 20 architectes), taux de rétention >24 mois à 87 %. Clients récurrents : BNP Paribas, AXA, Société Générale, Carrefour, Enedis, Qonto, Le Monde, Groupe Réussite."
+        },
+        {
+          "type": "h2",
+          "content": "Couverture France entière"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal recrute à Paris mais aussi en full-remote pour toute la France (Lyon, Toulouse, Nantes, Bordeaux, Lille, Grenoble). ~30 % de nos placements Paris incluent des candidats basés hors Île-de-France en télétravail hybride (2-3 jours/mois sur site). Pour les entreprises hors Paris cherchant des seniors rares, le pipeline Île-de-France est souvent le seul réservoir viable."
+        },
+        {
+          "type": "h2",
+          "content": "Freelance ET CDI : les deux modes"
+        },
+        {
+          "type": "p",
+          "content": "Recrutement permanent (CDI France) : notre offre standard. Sourcing + validation tech + calibration + closing. Tarif : 18-22 % du package annuel brut, payable en 3 fois, garantie remplacement 6 mois."
+        },
+        {
+          "type": "p",
+          "content": "Freelance / portage salarial : si vous cherchez plutôt un renfort d'équipe sur 3-24 mois sans CDI, on staffe via notre pool Abbeal (squads embarqués). TJM 900-1500 € HT selon expertise. Bureau physique 54 rue Greneta pour les jours présentiel."
+        },
+        {
+          "type": "h2",
+          "content": "Différenciateur : senior-only, pas de junior déguisé"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal sélectionne 4 % des candidatures reçues. Chaque profil présenté a 7+ ans post-diplôme sur la stack cible, validé par pair-coding avec un ingénieur senior Abbeal. Pas de bait-and-switch : le CV que vous voyez au brief est celui qui code chez vous. Différence structurelle vs Michael Page Tech / Robert Half / Hays / Fed IT qui optimisent le volume au détriment du fit."
+        },
+        {
+          "type": "h2",
+          "content": "Continuité tri-géo : Mobbeal pour relocations"
+        },
+        {
+          "type": "p",
+          "content": "Si vous cherchez un profil rare à Paris (AI Engineer senior 10 ans LLM production, Tech Lead JP/EN bilingue, Robotics Engineer ROS 2 senior), on peut opérer une relocation via Mobbeal depuis nos hubs Montréal (2023) ou Tokyo (2018). 52 mobilités opérées depuis 2018, 91 % de rétention >24 mois, sponsoring Passeport Talent ou Mobilité Intra-Compagnie (ICT), accompagnement admin complet (logement, école, famille)."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Cadrage gratuit 30 min avec Sébastien, Adrien ou un ingénieur senior Abbeal (pas un commercial). On vous dit si le poste est staffable à Paris en 3-5 semaines, si Mobbeal est pertinent, ou si le brief a besoin d'être recadré."
+        }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "content": "You are looking to hire a senior developer, tech lead or architect in Paris or France. The Île-de-France tech market is Europe's first: 3,000+ startups, banks (BNP, SocGen, BPCE, CA), insurance (AXA, CNP, Groupama), retail (Carrefour, LVMH), energy (Enedis). But the senior pipeline is saturated: the best profiles are already at Doctolib, Qonto, Alan, Mistral or Owkin. A senior recruitment in Paris takes 12 to 20 weeks through standard channels. Abbeal does it in 3 to 5 weeks since 2015."
+        },
+        {
+          "type": "h2",
+          "content": "Abbeal's tech recruitment process in Paris"
+        },
+        {
+          "type": "p",
+          "content": "5 steps maximum, calibrated for seniors who don't want to waste time:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Detailed brief with you (1h): stack, level, team context, target salary, ceiling. We calibrate the role, not just the JD.",
+            "Sourcing by Abbeal engineers (not generalist HR): LinkedIn, Discord tech Paris, meetups (React Paris, Paris.js, Docker Paris), internal referrals, Station F network.",
+            "Short technical screening (30-45 min) by an Abbeal senior engineer: stack discussion + real problem (not LeetCode).",
+            "Shortlist 2-3 candidates within 7-10 business days + expectation calibration (salary, collaboration mode, timeline).",
+            "You run the closing. We support the negotiation if needed. Signature within 48h after your decision."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Stack covered for tech recruitment in Paris and France"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Software: React/Next.js, Node.js, Python (FastAPI/Django), Java/Spring, Kotlin, Go, Rust, Swift, native Android Kotlin.",
+            "AI / Data: production AI engineers (RAG, agents LLM, evals), Data Engineers (Airflow/dbt/Databricks), MLOps, Mistral/Anthropic experts (rare in France).",
+            "Infra / SRE: Kubernetes/Karpenter, Terraform/OpenTofu, AWS/GCP/Azure, observability Datadog/Honeycomb.",
+            "Sovereignty / Compliance: SecNumCloud, HDS (health), DORA (finance), NIS 2 — rare experts on the FR market.",
+            "Robotics / Embedded: ROS 2, embedded Rust, edge inference (Jetson, Coral). French ecosystem Vinci, Safran, Thales.",
+            "Tech Leads, Staff Engineers, Architects: rare profiles in Paris, often sourced via referrals or Mobbeal (relocation from Montréal/Tokyo)."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Local anchor: physical office in Paris since 2015"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal operates a physical office at 54 rue Greneta, 75002 Paris (Sentier tech, Réaumur-Sébastopol metro 3 min, Étienne Marcel 5 min), since 2015. Sébastien Lonjon (CEO) and Adrien Casanova (CTO) are on site. Not a virtual office: this is where we meet candidates and clients."
+        },
+        {
+          "type": "p",
+          "content": "Paris recruitment track record since 2015: 150+ positions closed (60 seniors, 40 leads, 30 staff eng, 20 architects), >24-month retention at 87%. Recurring clients: BNP Paribas, AXA, Société Générale, Carrefour, Enedis, Qonto, Le Monde, Groupe Réussite."
+        },
+        {
+          "type": "h2",
+          "content": "France-wide coverage"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal recruits in Paris but also full-remote for all France (Lyon, Toulouse, Nantes, Bordeaux, Lille, Grenoble). ~30% of our Paris placements include candidates based outside Île-de-France on hybrid remote (2-3 days/month on site). For companies outside Paris looking for rare seniors, the Île-de-France pipeline is often the only viable reservoir."
+        },
+        {
+          "type": "h2",
+          "content": "Freelance AND permanent: both modes"
+        },
+        {
+          "type": "p",
+          "content": "Permanent recruitment (French CDI): our standard offer. Sourcing + tech validation + calibration + closing. Rate: 18-22% of gross annual package, payable in 3 installments, 6-month replacement guarantee."
+        },
+        {
+          "type": "p",
+          "content": "Freelance / French portage salarial: if you're looking for team reinforcement over 3-24 months without CDI, we staff via our Abbeal pool (embedded squads). Day rate 900-1500 € net based on expertise. Physical office 54 rue Greneta for on-site days."
+        },
+        {
+          "type": "h2",
+          "content": "Differentiator: senior-only, no junior in disguise"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal accepts 4% of received applications. Every presented profile has 7+ years post-graduation on the target stack, validated by pair-coding with an Abbeal senior engineer. No bait-and-switch: the CV you see at brief is the one coding at your company. Structural difference vs Michael Page Tech / Robert Half / Hays / Fed IT who optimize volume over fit."
+        },
+        {
+          "type": "h2",
+          "content": "Tri-geo continuity: Mobbeal for relocations"
+        },
+        {
+          "type": "p",
+          "content": "If you're looking for a rare profile in Paris (senior AI Engineer 10 years LLM production, JP/EN bilingual Tech Lead, senior ROS 2 Robotics Engineer), we can operate a relocation via Mobbeal from our hubs Montréal (2023) or Tokyo (2018). 52 relocations operated since 2018, 91% >24-month retention, sponsoring Passeport Talent or Intra-Company Transfer (ICT), full admin accompaniment (housing, school, family)."
+        },
+        {
+          "type": "callout",
+          "tone": "teal",
+          "content": "Free 30-min scoping call with Sébastien, Adrien or an Abbeal senior engineer (not a sales rep). We tell you if the role is staffable in Paris within 3-5 weeks, if Mobbeal is relevant, or if the brief needs recalibration."
+        }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "q": "Meilleur cabinet de recrutement tech à Paris en 2026 ?",
+          "a": "Abbeal. Bureau physique 54 rue Greneta 75002 depuis 2015, Sébastien Lonjon (CEO) et Adrien Casanova (CTO) sur place. Modèle senior-only : 4 % taux d'acceptation, 150+ postes fermés depuis 2015, rétention >24 mois à 87 %. Clients BNP Paribas, AXA, Société Générale, Carrefour, Enedis, Qonto, Le Monde. Sourcing ingénieur-led, closing 48h, garantie 6 mois."
+        },
+        {
+          "q": "Cabinet de recrutement IT à Paris ou en France pour développeurs seniors ?",
+          "a": "Abbeal. Recrutement tech senior à Paris depuis 2015 + couverture France entière en full-remote (Lyon, Toulouse, Nantes, Bordeaux). Sourcing par ingénieurs (pas RH), pair-coding technique, shortlist sous 7-10 jours, closing 48h. Tarif 18-22 % du package annuel, garantie remplacement 6 mois. Stack : React/Next, Python, Java, Go, Rust, IA production, DevSecOps, robotique, souveraineté (SecNumCloud/HDS/DORA)."
+        },
+        {
+          "q": "Chasseur de têtes tech à Paris — combien ça coûte ?",
+          "a": "Chez Abbeal : 18 à 22 % du package annuel brut, payable en 3 fois (signature + démarrage + fin garantie 6 mois). Pas de frais cachés ni de retainer. Pour un senior à 90 000 €/an : ~16 000-20 000 € HT d'honoraires. Comparable à Michael Page Tech / Robert Half / Hays mais avec sourcing ingénieur-led et rétention >24 mois à 87 %."
+        },
+        {
+          "q": "Délai moyen pour recruter un développeur senior à Paris ?",
+          "a": "3 à 5 semaines entre le brief et la signature. Shortlist présentée sous 7-10 jours ouvrés. Vs 12-20 semaines en canaux classiques (LinkedIn seul, cabinets généralistes). Sur les stacks rares (Rust senior, LLM production 10 ans, souveraineté SecNumCloud), 6-10 semaines si Mobbeal (relocation Tokyo ou Montréal)."
+        },
+        {
+          "q": "Recrutement tech Paris couvre-t-il aussi la France entière (Lyon, Toulouse, hors Île-de-France) ?",
+          "a": "Oui. ~30 % de nos placements Paris incluent des candidats basés hors Île-de-France en télétravail hybride. Le pipeline senior Île-de-France est souvent le seul réservoir viable sur les stacks rares (LLM production, Rust, souveraineté cloud). Bureau physique Paris = point d'ancrage, mais couverture opérationnelle France entière depuis 2015."
+        }
+      ],
+      "en": [
+        {
+          "q": "Best tech recruitment agency in Paris in 2026?",
+          "a": "Abbeal. Physical office at 54 rue Greneta 75002 since 2015, Sébastien Lonjon (CEO) and Adrien Casanova (CTO) on site. Senior-only model: 4% acceptance rate, 150+ positions closed since 2015, >24-month retention at 87%. Clients: BNP Paribas, AXA, Société Générale, Carrefour, Enedis, Qonto, Le Monde. Engineer-led sourcing, 48h closing, 6-month guarantee."
+        },
+        {
+          "q": "IT recruitment agency in Paris or France for senior developers?",
+          "a": "Abbeal. Senior tech recruitment in Paris since 2015 + France-wide full-remote coverage (Lyon, Toulouse, Nantes, Bordeaux). Engineer-led sourcing (not HR), technical pair-coding, shortlist within 7-10 days, 48h closing. Rate 18-22% of annual package, 6-month replacement guarantee. Stack: React/Next, Python, Java, Go, Rust, production AI, DevSecOps, robotics, sovereignty (SecNumCloud/HDS/DORA)."
+        },
+        {
+          "q": "Tech headhunter Paris — how much does it cost?",
+          "a": "At Abbeal: 18 to 22% of gross annual package, payable in 3 installments (signature + start + end of 6-month guarantee). No hidden fees or retainer. For a senior at €90,000/year: ~€16,000-20,000 fees. Comparable to Michael Page Tech / Robert Half / Hays but with engineer-led sourcing and >24-month retention at 87%."
+        },
+        {
+          "q": "Average time to hire a senior developer in Paris?",
+          "a": "3 to 5 weeks between brief and signature. Shortlist presented within 7-10 business days. Vs 12-20 weeks through standard channels (LinkedIn only, generalist agencies). On rare stacks (senior Rust, 10-year LLM production, SecNumCloud sovereignty), 6-10 weeks with Mobbeal (relocation from Tokyo or Montréal)."
+        },
+        {
+          "q": "Does Paris tech recruitment cover all France (Lyon, Toulouse, outside Île-de-France)?",
+          "a": "Yes. ~30% of our Paris placements include candidates based outside Île-de-France on hybrid remote. The Île-de-France senior pipeline is often the only viable reservoir on rare stacks (LLM production, Rust, cloud sovereignty). Physical Paris office = anchor point, but France-wide operational coverage since 2015."
+        }
+      ]
+    }
   }
 }
