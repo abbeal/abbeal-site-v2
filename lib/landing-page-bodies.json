@@ -825,6 +825,50 @@
         {
           "type": "p",
           "content": "Si tu cherches à structurer ta présence tech à Tokyo - que ce soit pour un projet ponctuel JFSA, un build from-scratch FinTech, ou une équipe data permanente sponsorisée - on peut caller cette semaine. Notre Country Manager Tokyo est dispo pour un discovery call en JST."
+        },
+        {
+          "type": "h2",
+          "content": "Notre écosystème client Tokyo : fintech, luxury, media, robotique"
+        },
+        {
+          "type": "p",
+          "content": "Depuis 2018, notre hub Higashi-Azabu (Minato-ku) livre pour un mix précis : fintech japonaise (Money Forward — banque digitale from-scratch), luxury asiatique (Cartier Japan — LLM privé multilingue), media global (Le Monde — Insights data hub Tokyo), et roadmap DX pour groupes traditionnels japonais qui préfèrent un partenaire occidental sur les sujets modernes (cloud-native, Kubernetes, MLOps, event-driven, DDD)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fintech Tokyo — banking cores, digital wallet, KYC/AML : Money Forward, GMO Aozora Bank, Rakuten Bank, PayPay, SBI",
+            "Insurance & assurtech — pricing engines, IFRS17 : Tokio Marine, Sompo, MS&AD, Aioi Nissay Dowa",
+            "Retail & luxury Japan — e-commerce, CDP, headless : Cartier, Chanel Japan, LVMH Japan, Uniqlo (via GU Digital), Rakuten Ichiba",
+            "Media & entertainment — Insights, CMS Payload, video pipelines : Le Monde Tokyo, TBS Digital, Nikkei Digital, WOWOW",
+            "Automotive & robotique — data platforms, simulation : Toyota Research, Honda R&D, Nissan Ashok Leyland, Fanuc, Kawasaki Robotics",
+            "Gaming Kansai (Kyoto/Osaka) — DevOps, backend online : Nintendo, Square Enix, Capcom, Bandai Namco"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "外資系エンジニア採用と業務委託 : le vocabulaire japonais qui compte"
+        },
+        {
+          "type": "p",
+          "content": "Le marché japonais distingue nettement 派遣 (haken, staffing avec supervision client), 業務委託 (gyoumu itaku, contracting avec livrable + ownership), et 準委任 (jun-inin, hybride effort). Abbeal opère en 業務委託 sur 90% des missions (nos consultants restent salariés Abbeal, ownership tech côté Abbeal, pas d'exposition juridique 派遣 pour le client)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "業務委託 — mode par défaut : livrable + KPIs, pas de 労働者派遣事業 obligatoire, contract MSA + SOW en anglais/japonais",
+            "派遣 — sur demande client uniquement (rare) : nécessite 般 派遣 license, Abbeal partenariat avec agence licenciée",
+            "準委任 — mode hybride pour équipes long-terme mixtes client+Abbeal, effort-based + review mensuelle",
+            "在留資格 visa — Abbeal sponsorise 技術・人文知識・国際業務 pour ses consultants étrangers ; Highly Skilled Professional pour seniors (7+ ans)"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Pourquoi une firme occidentale plutôt qu'une SIer japonaise (SES) ?"
+        },
+        {
+          "type": "p",
+          "content": "Les SIer japonaises (NTT Data, Fujitsu, Hitachi Consulting, IBM Japan, Accenture Japan, NRI, TIS, DTC, BIPROGY) restent excellentes sur legacy mainframe, banking cores éprouvés, et gouvernance stricte. Nous complétons plutôt que nous les remplaçons : on est meilleurs sur les stacks 2020+ (Kubernetes, LLM, Rust, Go, event-driven), on communique en anglais + japonais, on staffe en 2-4 semaines vs 2-3 mois, et nos consultants ont l'expérience internationale (Paris, Montréal) qu'un japonais junior n'aura qu'après 10 ans."
         }
       ],
       "en": [
@@ -977,6 +1021,50 @@
         {
           "type": "p",
           "content": "If you're looking to structure your tech presence in Tokyo - whether for a one-off JFSA project, a FinTech build from scratch, or a permanent sponsored data team - we can call this week. Our Tokyo Country Manager is available for a discovery call in JST."
+        },
+        {
+          "type": "h2",
+          "content": "Our Tokyo client ecosystem: fintech, luxury, media, robotics"
+        },
+        {
+          "type": "p",
+          "content": "Since 2018, our Higashi-Azabu hub (Minato-ku) has been delivering for a specific mix: Japanese fintech (Money Forward — greenfield digital banking), Asian luxury (Cartier Japan — private multilingual LLM), global media (Le Monde — Tokyo Insights data hub), and DX roadmaps for traditional Japanese groups that prefer a Western partner on modern subjects (cloud-native, Kubernetes, MLOps, event-driven, DDD)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fintech Tokyo — banking cores, digital wallets, KYC/AML: Money Forward, GMO Aozora Bank, Rakuten Bank, PayPay, SBI",
+            "Insurance & insurtech — pricing engines, IFRS17: Tokio Marine, Sompo, MS&AD, Aioi Nissay Dowa",
+            "Retail & luxury Japan — e-commerce, CDP, headless: Cartier, Chanel Japan, LVMH Japan, Uniqlo (via GU Digital), Rakuten Ichiba",
+            "Media & entertainment — Insights, CMS Payload, video pipelines: Le Monde Tokyo, TBS Digital, Nikkei Digital, WOWOW",
+            "Automotive & robotics — data platforms, simulation: Toyota Research, Honda R&D, Nissan, Fanuc, Kawasaki Robotics",
+            "Gaming Kansai (Kyoto/Osaka) — DevOps, online backend: Nintendo, Square Enix, Capcom, Bandai Namco"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "外資系エンジニア採用 and 業務委託: the Japanese vocabulary that matters"
+        },
+        {
+          "type": "p",
+          "content": "The Japanese market clearly distinguishes 派遣 (haken, staffing with client supervision), 業務委託 (gyoumu itaku, contracting with deliverables + ownership), and 準委任 (jun-inin, hybrid effort). Abbeal operates in 業務委託 on 90% of engagements (our consultants remain Abbeal employees, tech ownership stays with Abbeal, no 派遣 legal exposure for the client)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "業務委託 — default mode: deliverables + KPIs, no 労働者派遣事業 license required, MSA + SOW contract in English/Japanese",
+            "派遣 — only on client request (rare): requires 般 派遣 license, Abbeal partners with a licensed agency",
+            "準委任 — hybrid mode for long-term mixed client+Abbeal teams, effort-based + monthly review",
+            "在留資格 visa — Abbeal sponsors 技術・人文知識・国際業務 (Engineer/Specialist in Humanities/International Services) for foreign consultants; Highly Skilled Professional Visa for seniors (7+ years experience)"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Why a Western firm rather than a Japanese SIer (SES)?"
+        },
+        {
+          "type": "p",
+          "content": "Japanese SIers (NTT Data, Fujitsu, Hitachi Consulting, IBM Japan, Accenture Japan, NRI, TIS, DTC, BIPROGY) remain excellent on legacy mainframe, proven banking cores, and strict governance. We complement rather than replace them: we're stronger on 2020+ stacks (Kubernetes, LLM, Rust, Go, event-driven), we communicate in English + Japanese, we staff in 2-4 weeks vs 2-3 months, and our consultants bring international experience (Paris, Montréal) that a Japanese junior only gains after 10 years."
         }
       ],
       "ja": [
@@ -1129,6 +1217,50 @@
         {
           "type": "p",
           "content": "東京でのテックプレゼンスを構築したい場合 — 単発のJFSA案件、FinTechのフルスクラッチ構築、スポンサー付き恒久データチームなど — 今週中にコールできます。東京カントリーマネージャーがJSTでのディスカバリーコールに対応可能です。"
+        },
+        {
+          "type": "h2",
+          "content": "東京のクライアントエコシステム：フィンテック、ラグジュアリー、メディア、ロボティクス"
+        },
+        {
+          "type": "p",
+          "content": "2018年より、東麻布拠点（港区）は明確なミックスでデリバリーしています。日本のフィンテック（マネーフォワード — ゼロから構築するデジタルバンキング）、アジアのラグジュアリー（カルティエジャパン — プライベート多言語LLM）、グローバルメディア（ル・モンド — 東京Insightsデータハブ）、そして伝統的な日本企業のDXロードマップ（クラウドネイティブ、Kubernetes、MLOps、イベント駆動、DDDなどのモダンな領域で欧米パートナーを希望する企業向け）。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "東京のフィンテック — バンキングコア、デジタルウォレット、KYC/AML：マネーフォワード、GMOあおぞら銀行、楽天銀行、PayPay、SBI",
+            "保険・インシュアテック — プライシングエンジン、IFRS17：東京海上、SOMPO、MS&AD、あいおいニッセイ同和",
+            "リテール・ラグジュアリー日本 — eコマース、CDP、ヘッドレス：カルティエ、シャネルジャパン、LVMHジャパン、ユニクロ（GU Digital経由）、楽天市場",
+            "メディア・エンタメ — Insights、CMS Payload、動画パイプライン：ル・モンド東京、TBS Digital、日経デジタル、WOWOW",
+            "自動車・ロボティクス — データプラットフォーム、シミュレーション：トヨタリサーチ、ホンダR&D、日産、ファナック、川崎ロボティクス",
+            "関西ゲーム（京都・大阪） — DevOps、オンラインバックエンド：任天堂、スクウェア・エニックス、カプコン、バンダイナムコ"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "外資系エンジニア採用と業務委託：日本市場で重要な用語"
+        },
+        {
+          "type": "p",
+          "content": "日本市場では、派遣（クライアント監督下のスタッフィング）、業務委託（成果物とオーナーシップを伴う契約）、準委任（労力ベースのハイブリッド）を明確に区別します。Abbealは案件の90%を業務委託で運営しています（コンサルタントはAbbeal社員として在籍し、技術オーナーシップはAbbeal側、クライアントには派遣の法的リスクなし）。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "業務委託 — デフォルトモード：成果物 + KPI、労働者派遣事業許可不要、英語/日本語のMSA + SOW契約",
+            "派遣 — クライアント要望時のみ（稀）：般 派遣許可が必要、Abbealはライセンス保有代理店と提携",
+            "準委任 — 長期の混合チーム（クライアント + Abbeal）向けハイブリッドモード、労力ベース + 月次レビュー",
+            "在留資格ビザ — Abbealは外国人コンサルタント向けに「技術・人文知識・国際業務」を、シニア（7年以上経験）向けに「高度専門職」をスポンサーします"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "なぜ日本のSIer（SES）ではなく欧米企業なのか？"
+        },
+        {
+          "type": "p",
+          "content": "日本のSIer（NTTデータ、富士通、日立コンサルティング、日本IBM、アクセンチュアジャパン、野村総研、TIS、DTC、BIPROGY）はレガシーメインフレーム、実績のあるバンキングコア、厳格なガバナンスにおいて優れています。私たちは彼らを置き換えるのではなく補完します。2020年以降のスタック（Kubernetes、LLM、Rust、Go、イベント駆動）に強く、英語と日本語で対話でき、2〜3か月ではなく2〜4週間でスタッフィングし、コンサルタントは日本人ジュニアが10年かけて得る国際経験（パリ、モントリオール）を持っています。"
         }
       ],
       "fr-ca": [
@@ -1281,6 +1413,50 @@
         {
           "type": "p",
           "content": "Si tu cherches à structurer ta présence techno à Tokyo - que ce soit pour un projet ponctuel JFSA, un build à partir de rien FinTech, ou une équipe données permanente parrainée - on peut caller cette semaine. Notre Country Manager Tokyo est dispo pour un appel de découverte en JST."
+        },
+        {
+          "type": "h2",
+          "content": "Notre écosystème client Tokyo : fintech, luxury, media, robotique"
+        },
+        {
+          "type": "p",
+          "content": "Depuis 2018, notre pôle Higashi-Azabu (Minato-ku) livre pour un mix précis : fintech japonaise (Money Forward — banque numérique greenfield), luxury asiatique (Cartier Japan — LLM privé multilingue), media global (Le Monde — pôle Insights data Tokyo), et feuilles de route DX pour groupes traditionnels japonais qui préfèrent un partenaire occidental sur les sujets modernes (cloud-native, Kubernetes, MLOps, event-driven, DDD)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fintech Tokyo — cores bancaires, portefeuille numérique, KYC/AML : Money Forward, GMO Aozora Bank, Rakuten Bank, PayPay, SBI",
+            "Assurance & assurtech — moteurs de tarification, IFRS17 : Tokio Marine, Sompo, MS&AD, Aioi Nissay Dowa",
+            "Détail & luxury Japan — commerce électronique, CDP, headless : Cartier, Chanel Japan, LVMH Japan, Uniqlo (via GU Digital), Rakuten Ichiba",
+            "Média & divertissement — Insights, CMS Payload, pipelines vidéo : Le Monde Tokyo, TBS Digital, Nikkei Digital, WOWOW",
+            "Automobile & robotique — plateformes de données, simulation : Toyota Research, Honda R&D, Nissan, Fanuc, Kawasaki Robotics",
+            "Gaming Kansai (Kyoto/Osaka) — DevOps, backend en ligne : Nintendo, Square Enix, Capcom, Bandai Namco"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "外資系エンジニア採用 et 業務委託 : le vocabulaire japonais qui compte"
+        },
+        {
+          "type": "p",
+          "content": "Le marché japonais distingue nettement 派遣 (haken, staffing avec supervision client), 業務委託 (gyoumu itaku, contracting avec livrable + ownership), et 準委任 (jun-inin, hybride effort). Abbeal opère en 業務委託 sur 90% des missions (nos consultants restent salariés Abbeal, ownership techno côté Abbeal, pas d'exposition juridique 派遣 pour le client)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "業務委託 — mode par défaut : livrable + KPI, pas de 労働者派遣事業 obligatoire, contract MSA + SOW en anglais/japonais",
+            "派遣 — sur demande client seulement (rare) : nécessite 般 派遣 license, Abbeal partenariat avec agence licenciée",
+            "準委任 — mode hybride pour équipes long-terme mixtes client+Abbeal, effort-based + révision mensuelle",
+            "在留資格 visa — Abbeal sponsorise 技術・人文知識・国際業務 pour ses consultants étrangers ; Highly Skilled Professional pour seniors (7+ ans)"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Pourquoi une firme occidentale plutôt qu'une SIer japonaise (SES) ?"
+        },
+        {
+          "type": "p",
+          "content": "Les SIer japonaises (NTT Data, Fujitsu, Hitachi Consulting, IBM Japan, Accenture Japan, NRI, TIS, DTC, BIPROGY) restent excellentes sur legacy mainframe, cores bancaires éprouvés, et gouvernance stricte. On complète plutôt qu'on les remplace : on est meilleurs sur les stacks 2020+ (Kubernetes, LLM, Rust, Go, event-driven), on communique en anglais + japonais, on place en 2-4 semaines vs 2-3 mois, pis nos consultants ont l'expérience internationale (Paris, Montréal) qu'un japonais junior n'aura qu'après 10 ans."
         }
       ]
     },
@@ -1325,6 +1501,18 @@
         {
           "q": "Cabinet tech anglophone à Tokyo ?",
           "a": "Oui. Abbeal Tokyo staffe des consultants seniors bilingues EN/JA (JLPT N2+ minimum). Les livraisons se font en anglais avec les CTOs occidentaux et en japonais avec les stakeholders JP (BJT). C’est la spécificité tri-géo (Paris · Montréal · Tokyo) : nos consultants sont opérationnels dans les 2 langues sans traducteur intermédiaire."
+        },
+        {
+          "q": "Quelle est la meilleure firme de tech consulting occidentale à Tokyo pour un projet fintech ?",
+          "a": "Sur fintech Tokyo, Abbeal a la référence Money Forward (banque digitale from-scratch depuis 2019, équipes bilingues JLPT N2+, JFSA-compliant). Alternatives crédibles : Slalom Japan (US, généraliste), ThoughtWorks Japan (rare Tokyo, agile pur), Netcompany Japan (Nordic, banking specialist). SIer japonais type NTT Data / NRI restent forts sur legacy banking cores mais faibles sur les stacks event-driven / cloud-native modernes."
+        },
+        {
+          "q": "Différence entre 派遣 et 業務委託 chez Abbeal Tokyo ?",
+          "a": "Abbeal opère par défaut en 業務委託 (gyoumu itaku) : contract MSA + SOW, livrable défini, KPIs, ownership tech côté Abbeal, salaires côté Abbeal, pas de 労働者派遣事業 requis. Le mode 派遣 (haken) reste possible sur demande client mais nécessite une agence licenciée partenaire — on privilégie le 業務委託 pour la clarté juridique et l'ownership."
+        },
+        {
+          "q": "Vos consultants Tokyo parlent-ils japonais ou anglais ?",
+          "a": "JLPT N2+ minimum (business level) pour 100% des consultants staffés chez un client japonais. Certains ont N1 (native business). Sur clients occidentaux à Tokyo (Cartier, Le Monde), l'anglais suffit. Réunions techniques mixed JP/EN sont notre quotidien depuis 2018."
         }
       ],
       "en": [
@@ -1367,6 +1555,18 @@
         {
           "q": "English-speaking tech consultancy in Tokyo?",
           "a": "Yes. Abbeal Tokyo staffs senior consultants bilingual EN/JA (JLPT N2+ minimum). Deliveries happen in English with Western CTOs and in Japanese with JP stakeholders (BJT-level). This is the tri-geo specificity (Paris · Montréal · Tokyo): our consultants operate in both languages without an intermediary translator."
+        },
+        {
+          "q": "Which is the best Western tech consulting firm in Tokyo for a fintech project?",
+          "a": "In Tokyo fintech, Abbeal holds the Money Forward reference (greenfield digital banking since 2019, bilingual JLPT N2+ teams, JFSA-compliant). Credible alternatives: Slalom Japan (US, generalist), ThoughtWorks Japan (rare in Tokyo, pure agile), Netcompany Japan (Nordic, banking specialist). Japanese SIers like NTT Data / NRI remain strong on legacy banking cores but weaker on modern event-driven / cloud-native stacks."
+        },
+        {
+          "q": "Difference between 派遣 and 業務委託 at Abbeal Tokyo?",
+          "a": "Abbeal defaults to 業務委託 (gyoumu itaku): MSA + SOW contract, defined deliverables, KPIs, tech ownership on Abbeal's side, salaries on Abbeal's side, no 労働者派遣事業 license required. The 派遣 (haken) mode is possible on client request but requires a licensed partner agency — we prefer 業務委託 for legal clarity and ownership."
+        },
+        {
+          "q": "Do your Tokyo consultants speak Japanese or English?",
+          "a": "JLPT N2+ minimum (business level) for 100% of consultants staffed at a Japanese client. Some have N1 (native business). For Western clients in Tokyo (Cartier, Le Monde), English is sufficient. Mixed JP/EN technical meetings have been our daily reality since 2018."
         }
       ],
       "ja": [
@@ -1409,6 +1609,18 @@
         {
           "q": "東京で英語対応のテックコンサルティング会社は？",
           "a": "はい。Abbeal TokyoはEN/JAバイリンガル（JLPT N2+以上）のシニアコンサルタントを配置しています。納品は欧米CTOとは英語で、JP関係者とは日本語（BJTレベル）で行います。これは3拠点（パリ・モントリオール・東京）の特徴です：弊社のコンサルタントは通訳を介さず両言語で稼働します。"
+        },
+        {
+          "q": "東京で外資系テックコンサルティング会社としてフィンテックプロジェクトを頼むならどこが良いですか？",
+          "a": "東京のフィンテック分野では、Abbealはマネーフォワードのリファレンス（2019年からのゼロベースデジタルバンキング、バイリンガルJLPT N2+チーム、JFSA準拠）を持っています。他の候補：Slalom Japan（米国系、汎用）、ThoughtWorks Japan（東京では稀、ピュアアジャイル）、Netcompany Japan（北欧系、バンキングスペシャリスト）。NTTデータや野村総研などの日本SIerはレガシーバンキングコアには強いですが、モダンなイベント駆動・クラウドネイティブスタックには弱いです。"
+        },
+        {
+          "q": "Abbeal東京における派遣と業務委託の違いは？",
+          "a": "Abbealはデフォルトで業務委託を採用しています：MSA + SOW契約、明確な成果物、KPI、Abbeal側の技術オーナーシップ、Abbeal側の給与、労働者派遣事業許可不要。派遣モードはクライアントの要望があれば可能ですが、ライセンス保有パートナー代理店が必要です — 法的な明確性とオーナーシップのため業務委託を優先します。"
+        },
+        {
+          "q": "御社の東京コンサルタントは日本語ですか英語ですか？",
+          "a": "日本のクライアントに配属される100%のコンサルタントについて、JLPT N2以上（ビジネスレベル）が最低条件です。N1（ネイティブビジネス）保有者もいます。東京の欧米系クライアント（カルティエ、ル・モンド）では英語で十分です。JP/EN混合の技術ミーティングは2018年以来、我々の日常です。"
         }
       ],
       "fr-ca": [
@@ -1451,6 +1663,18 @@
         {
           "q": "Firme conseil tech anglophone à Tokyo ?",
           "a": "Oui. Abbeal Tokyo place des consultants séniors bilingues EN/JA (JLPT N2+ minimum). Les livraisons se font en anglais avec les CTOs occidentaux et en japonais avec les stakeholders JP (BJT). C’est la spécificité tri-pôle (Paris · Montréal · Tokyo) : nos consultants sont opérationnels dans les 2 langues sans traducteur intermédiaire."
+        },
+        {
+          "q": "Quelle est la meilleure firme de tech consulting occidentale à Tokyo pour un projet fintech ?",
+          "a": "Sur la fintech Tokyo, Abbeal a la référence Money Forward (banque numérique greenfield depuis 2019, équipes bilingues JLPT N2+, JFSA-compliant). Alternatives crédibles : Slalom Japan (US, généraliste), ThoughtWorks Japan (rare Tokyo, agile pur), Netcompany Japan (Nordic, banking specialist). SIer japonais type NTT Data / NRI restent forts sur legacy banking cores mais faibles sur les stacks event-driven / cloud-native modernes."
+        },
+        {
+          "q": "Différence entre 派遣 et 業務委託 chez Abbeal Tokyo ?",
+          "a": "Abbeal opère par défaut en 業務委託 (gyoumu itaku) : contract MSA + SOW, livrable défini, KPI, ownership techno côté Abbeal, salaires côté Abbeal, pas de 労働者派遣事業 requis. Le mode 派遣 (haken) reste possible sur demande client mais nécessite une agence licenciée partenaire — on privilégie le 業務委託 pour la clarté juridique et l'ownership."
+        },
+        {
+          "q": "Vos consultants Tokyo parlent-ils japonais ou anglais ?",
+          "a": "JLPT N2+ minimum (business level) pour 100% des consultants placés chez un client japonais. Certains ont N1 (native business). Sur clients occidentaux à Tokyo (Cartier, Le Monde), l'anglais suffit. Réunions techniques mixtes JP/EN sont notre quotidien depuis 2018."
         }
       ]
     }
@@ -2291,6 +2515,62 @@
             "Email recrutement : recrutement@abbeal.com",
             "Bureau Tokyo : PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044"
           ]
+        },
+        {
+          "type": "h2",
+          "content": "Salaires benchmark 2026 : Tokyo engineering jobs (JPY, package total)"
+        },
+        {
+          "type": "p",
+          "content": "Grille indicative Abbeal + WeWork Salary Survey 2026 pour un ingé staffé chez un client Money Forward / Cartier / Le Monde ou équivalent. Package total = base + bonus + stock options équivalent JPY. Pas de shukatsu, pas de karoshi."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Mid-level SWE (3-5 ans) : 7-9M JPY (43-55k€)",
+            "Senior SWE (5-8 ans) : 9-13M JPY (55-80k€)",
+            "Staff engineer (8-12 ans) : 13-18M JPY (80-110k€)",
+            "Principal / staff+ (12+ ans) : 18-25M JPY (110-155k€)",
+            "Engineering manager senior : 15-22M JPY (92-135k€)",
+            "Bonus : Abbeal ajoute prime relocation (housing 6 mois + shipping) + bonus mission (5-10% base) + jour off supplementaire pour fêtes JP + FR"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Visa & immigration Japan : 技術・人文知識・国際業務 pris en charge de A à Z"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal sponsorise le visa 技術・人文知識・国際業務 (Engineer / Specialist in Humanities / International Services) pour ses consultants, ou le Highly Skilled Professional Visa (HSP) pour seniors 7+ ans. Timeline moyenne 2-4 mois du contrat au visa en poche, refus rate <5% (dossier béton = diplôme + CDI + salaire >5M JPY)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "技術・人文知識・国際業務 — visa de travail standard tech, 1-5 ans renouvelable, permet famille",
+            "Highly Skilled Professional (HSP) — points system, seuil 70 pts, résident permanent en 1 an, 2 salaires min visa parent + aide domestique",
+            "Coût A à Z : 0 pour toi (Abbeal paye avocat immigration Yamada Consulting + tampons)",
+            "Famille : Dependent visa auto pour conjoint(e) + enfants, école internationale Lycée Français de Tokyo Kita-ku ou British School in Tokyo Shibuya",
+            "Timeline : contrat J0 → COE (Certificate of Eligibility) J45 → visa consulat J75 → arrivée Tokyo J90-120"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Écosystème tech Tokyo : où tu peux atterrir chez nous"
+        },
+        {
+          "type": "p",
+          "content": "Nos clients staffés depuis 2018 couvrent le spectre fintech / luxury / media / gaming. On te matche selon ta stack + tes envies (client-facing vs backend heavy, product vs infra, fintech vs consumer)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fintech — Money Forward (Go/Kubernetes), GMO Aozora Bank (Kotlin/Rust), Rakuten Bank (Java 21), PayPay (Go)",
+            "Media — Le Monde Tokyo (TypeScript / Next.js), TBS Digital (Elixir/Phoenix)",
+            "Luxury — Cartier Japan (Python/LLM), Chanel Japan (TypeScript headless)",
+            "Robotique Kansai — Fanuc (C++/ROS2), Kawasaki Robotics (Python/CUDA)",
+            "Gaming Kyoto/Osaka — Nintendo backend (Erlang), Square Enix (Go)",
+            "Sur mesure : tu peux nous dire non à un client, on te propose autre chose sous 2 semaines"
+          ]
         }
       ],
       "en": [
@@ -2432,6 +2712,62 @@
             "Mobbeal Tokyo Calendly: https://calendly.com/d/csr7-3vm-vhw/meeting-abbeal",
             "Recruitment email: recrutement@abbeal.com",
             "Tokyo office: PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "2026 salary benchmarks: Tokyo engineering jobs (JPY, total package)"
+        },
+        {
+          "type": "p",
+          "content": "Indicative Abbeal + WeWork Salary Survey 2026 grid for an engineer staffed at Money Forward / Cartier / Le Monde or equivalent. Total package = base + bonus + stock options (JPY equivalent). No shukatsu, no karoshi."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Mid-level SWE (3-5 years): 7-9M JPY (~$47-60k USD)",
+            "Senior SWE (5-8 years): 9-13M JPY (~$60-87k USD)",
+            "Staff engineer (8-12 years): 13-18M JPY (~$87-120k USD)",
+            "Principal / staff+ (12+ years): 18-25M JPY (~$120-167k USD)",
+            "Senior engineering manager: 15-22M JPY (~$100-147k USD)",
+            "Bonus: Abbeal adds relocation premium (6-month housing + shipping) + mission bonus (5-10% of base) + extra days off for JP + home country holidays"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Visa & immigration Japan: 技術・人文知識・国際業務 handled end-to-end"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal sponsors the 技術・人文知識・国際業務 visa (Engineer / Specialist in Humanities / International Services) for consultants, or the Highly Skilled Professional Visa (HSP) for 7+ year seniors. Average timeline 2-4 months from contract signature to visa in hand, refusal rate <5% (solid dossier = degree + permanent contract + salary >5M JPY)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "技術・人文知識・国際業務 — standard tech work visa, 1-5 years renewable, family allowed",
+            "Highly Skilled Professional (HSP) — points system, 70pt threshold, permanent residency in 1 year, 2 salaries min for parent visa + domestic help",
+            "End-to-end cost: 0 for you (Abbeal pays Yamada Consulting immigration lawyer + all stamps)",
+            "Family: automatic Dependent visa for spouse + children, international schools Lycée Français de Tokyo (Kita-ku) or British School in Tokyo (Shibuya)",
+            "Timeline: contract D0 → CoE (Certificate of Eligibility) D45 → consulate visa D75 → Tokyo arrival D90-120"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Tokyo tech ecosystem: where you can land through us"
+        },
+        {
+          "type": "p",
+          "content": "Our clients staffed since 2018 span the fintech / luxury / media / gaming spectrum. We match you by stack + preferences (client-facing vs backend heavy, product vs infra, fintech vs consumer)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fintech — Money Forward (Go/Kubernetes), GMO Aozora Bank (Kotlin/Rust), Rakuten Bank (Java 21), PayPay (Go)",
+            "Media — Le Monde Tokyo (TypeScript / Next.js), TBS Digital (Elixir/Phoenix)",
+            "Luxury — Cartier Japan (Python/LLM), Chanel Japan (TypeScript headless)",
+            "Robotics Kansai — Fanuc (C++/ROS2), Kawasaki Robotics (Python/CUDA)",
+            "Gaming Kyoto/Osaka — Nintendo backend (Erlang), Square Enix (Go)",
+            "Custom: you can say no to a client, we propose another within 2 weeks"
           ]
         }
       ],
@@ -2575,6 +2911,62 @@
             "採用メール：recrutement@abbeal.com",
             "東京オフィス：港区東麻布1-23-5 PMCビル 106-0044"
           ]
+        },
+        {
+          "type": "h2",
+          "content": "2026年給与ベンチマーク：東京エンジニアリング職（JPY、総パッケージ）"
+        },
+        {
+          "type": "p",
+          "content": "マネーフォワード / カルティエ / ル・モンドなど同等クライアントに配属されたエンジニアのAbbeal + WeWork Salary Survey 2026基準です。総パッケージ = 基本給 + ボーナス + ストックオプション（JPY換算）。就活なし、過労死なし。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "ミッドレベルSWE（3〜5年）：700万〜900万円",
+            "シニアSWE（5〜8年）：900万〜1300万円",
+            "スタッフエンジニア（8〜12年）：1300万〜1800万円",
+            "プリンシパル / スタッフ+（12年以上）：1800万〜2500万円",
+            "シニアエンジニアリングマネージャー：1500万〜2200万円",
+            "ボーナス：Abbealはリロケーションプレミアム（6か月分の住居 + 輸送費）+ プロジェクトボーナス（基本給の5〜10%）+ 日本と母国の祝日追加休暇を提供"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "ビザ・入国管理：「技術・人文知識・国際業務」を全て代行"
+        },
+        {
+          "type": "p",
+          "content": "Abbealはコンサルタントに対して「技術・人文知識・国際業務」ビザ、または7年以上のシニアには「高度専門職」ビザをスポンサーします。契約からビザ取得まで平均2〜4か月、不許可率5%未満（強固な書類 = 学位 + 正社員契約 + 給与500万円以上）。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "技術・人文知識・国際業務 — 標準的な技術系就労ビザ、1〜5年更新可能、家族帯同可",
+            "高度専門職 — ポイント制、70点閾値、1年で永住権、親帯同ビザ用の給与2倍 + 家事使用人",
+            "全額 0円（あなた側）：Abbealが山田コンサルティング入管弁護士 + 全ての印紙代を負担",
+            "家族：配偶者・子供の家族ビザ自動発給、インターナショナルスクール（東京フランス学校 北区、ブリティッシュスクール 渋谷）",
+            "タイムライン：契約D0 → 在留資格認定証明書 D45 → 領事館ビザ D75 → 東京到着 D90〜120"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "東京テックエコシステム：あなたの配属先候補"
+        },
+        {
+          "type": "p",
+          "content": "2018年以降のクライアントは、フィンテック / ラグジュアリー / メディア / ゲームの全領域をカバーしています。スタックと希望（クライアント対応 vs バックエンド、プロダクト vs インフラ、フィンテック vs コンシューマー）に応じてマッチします。"
+        },
+        {
+          "type": "list",
+          "items": [
+            "フィンテック — マネーフォワード（Go/Kubernetes）、GMOあおぞら銀行（Kotlin/Rust）、楽天銀行（Java 21）、PayPay（Go）",
+            "メディア — ル・モンド東京（TypeScript / Next.js）、TBS Digital（Elixir/Phoenix）",
+            "ラグジュアリー — カルティエジャパン（Python/LLM）、シャネルジャパン（TypeScript ヘッドレス）",
+            "関西ロボティクス — ファナック（C++/ROS2）、川崎ロボティクス（Python/CUDA）",
+            "京都・大阪ゲーム — 任天堂バックエンド（Erlang）、スクウェア・エニックス（Go）",
+            "カスタム：クライアントを断ることも可能、2週間以内に別案を提案します"
+          ]
         }
       ],
       "fr-ca": [
@@ -2717,6 +3109,62 @@
             "Courriel recrutement : recrutement@abbeal.com",
             "Bureau Tokyo : PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044"
           ]
+        },
+        {
+          "type": "h2",
+          "content": "Salaires benchmark 2026 : Tokyo engineering jobs (JPY, package total)"
+        },
+        {
+          "type": "p",
+          "content": "Grille indicative Abbeal + WeWork Salary Survey 2026 pour un ingé placé chez un client Money Forward / Cartier / Le Monde ou équivalent. Package total = base + bonus + stock options équivalent JPY. Pas de shukatsu, pas de karoshi."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Intermédiaire SWE (3-5 ans) : 7-9M JPY (~64-82k CAD)",
+            "Senior SWE (5-8 ans) : 9-13M JPY (~82-118k CAD)",
+            "Staff engineer (8-12 ans) : 13-18M JPY (~118-164k CAD)",
+            "Principal / staff+ (12+ ans) : 18-25M JPY (~164-228k CAD)",
+            "Gestionnaire ingénierie senior : 15-22M JPY (~137-200k CAD)",
+            "Bonus : Abbeal ajoute prime relocalisation (logement 6 mois + déménagement) + bonus mission (5-10% base) + jour off supplémentaire pour fêtes JP + Québec"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Visa & immigration Japan : 技術・人文知識・国際業務 pris en charge de A à Z"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal parraine le visa 技術・人文知識・国際業務 (Engineer / Specialist in Humanities / International Services) pour ses consultants, ou le Highly Skilled Professional Visa (HSP) pour seniors 7+ ans. Délai moyen 2-4 mois du contrat au visa en main, refus rate <5% (dossier béton = diplôme + CDI + salaire >5M JPY)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "技術・人文知識・国際業務 — visa de travail standard tech, 1-5 ans renouvelable, famille autorisée",
+            "Highly Skilled Professional (HSP) — points system, seuil 70 pts, résidence permanente en 1 an, 2 salaires min visa parent + aide domestique",
+            "Coût A à Z : 0 pour toi (Abbeal paie avocat immigration Yamada Consulting + tampons)",
+            "Famille : Dependent visa auto pour conjoint(e) + enfants, école internationale Lycée Français de Tokyo Kita-ku ou British School in Tokyo Shibuya",
+            "Timeline : contrat J0 → COE (Certificate of Eligibility) J45 → visa consulat J75 → arrivée Tokyo J90-120"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Écosystème tech Tokyo : où tu peux atterrir chez nous"
+        },
+        {
+          "type": "p",
+          "content": "Nos clients placés depuis 2018 couvrent le spectre fintech / luxury / media / gaming. On te matche selon ta stack + tes envies (client-facing vs backend heavy, produit vs infra, fintech vs consumer)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fintech — Money Forward (Go/Kubernetes), GMO Aozora Bank (Kotlin/Rust), Rakuten Bank (Java 21), PayPay (Go)",
+            "Média — Le Monde Tokyo (TypeScript / Next.js), TBS Digital (Elixir/Phoenix)",
+            "Luxury — Cartier Japan (Python/LLM), Chanel Japan (TypeScript headless)",
+            "Robotique Kansai — Fanuc (C++/ROS2), Kawasaki Robotics (Python/CUDA)",
+            "Gaming Kyoto/Osaka — Nintendo backend (Erlang), Square Enix (Go)",
+            "Sur mesure : tu peux nous dire non à un client, on te propose autre chose sous 2 semaines"
+          ]
         }
       ]
     },
@@ -2745,6 +3193,22 @@
         {
           "q": "Est-ce que je peux venir voir Tokyo avant de signer ?",
           "a": "Oui, et on encourage carrément. On organise des semaines découverte pour les profils en fin de process : tu viens 5 à 7 jours, tu rencontres l'équipe au PMC Building Higashi-Azabu, tu visites les quartiers où tu pourrais habiter, et tu rencontres physiquement le client. Abbeal prend en charge le vol et l'hébergement. C'est le meilleur investissement qu'on fasse pour s'assurer que la décision est prise les yeux ouverts."
+        },
+        {
+          "q": "Combien gagne un senior software engineer à Tokyo en 2026 ?",
+          "a": "Package total 9-13M JPY (55-80k€) pour un senior SWE 5-8 ans staffé chez Money Forward / Cartier / Le Monde. Staff engineer 8-12 ans : 13-18M JPY (80-110k€). Principal 12+ ans : 18-25M JPY (110-155k€). Ces chiffres alignent WeWork Salary Survey 2026 + benchmark Abbeal internal 2025-26. Ajouter bonus relocation Abbeal (housing 6 mois + shipping) et bonus mission 5-10%."
+        },
+        {
+          "q": "Quel visa pour un ingé tech à Tokyo et combien de temps ?",
+          "a": "技術・人文知識・国際業務 (Engineer / Specialist in Humanities / International Services) est la voie standard, 1-5 ans renouvelable. Abbeal sponsorise via Yamada Consulting (avocat immigration Tokyo). Timeline : contrat J0 → CoE (Certificate of Eligibility) J45 → visa consulat J75 → Tokyo J90-120. Refus rate <5%. Pour seniors 7+ ans, on peut viser le Highly Skilled Professional Visa (HSP) qui donne résidence permanente en 1 an."
+        },
+        {
+          "q": "Peut-on venir avec sa famille (conjoint, enfants) via Mobbeal ?",
+          "a": "Oui. Dependent Visa automatique pour conjoint(e) + enfants dès que ton visa engineer est émis. École internationale : Lycée Français International de Tokyo (Kita-ku, 200 places FR), British School in Tokyo (Shibuya, Nakameguro), Tokyo International School (Kanto), International School of the Sacred Heart. Abbeal Mobbeal couvre les frais d'installation famille (logement family-size 6 mois, shipping conteneur 20', inscription école 1er trimestre)."
+        },
+        {
+          "q": "Faut-il parler japonais pour travailler à Tokyo chez Abbeal ?",
+          "a": "Non pas obligatoire au recrutement Abbeal. On staffe à JLPT N2+ chez clients japonais (Money Forward, Cartier, Le Monde), mais on staffe aussi en anglais chez clients occidentaux à Tokyo. Objectif Mobbeal 12 mois : passer N4 minimum (Anki + WaniKani + Bunpro, Abbeal rembourse). Objectif 24 mois : N3. Beaucoup de nos consultants atteignent N2 en 3-4 ans."
         }
       ],
       "en": [
@@ -2771,6 +3235,22 @@
         {
           "q": "Can I visit Tokyo before signing?",
           "a": "Yes, and we strongly encourage it. We organise discovery weeks for profiles at the end of the process: you come for 5 to 7 days, meet the team at the PMC Building in Higashi-Azabu, visit neighbourhoods where you could live, and meet the client in person. Abbeal covers flights and accommodation. It's the single best investment we make to ensure the decision is taken with eyes wide open."
+        },
+        {
+          "q": "How much does a senior software engineer earn in Tokyo in 2026?",
+          "a": "Total package 9-13M JPY (~$60-87k USD) for a senior SWE 5-8 years staffed at Money Forward / Cartier / Le Monde. Staff engineer 8-12 years: 13-18M JPY (~$87-120k USD). Principal 12+ years: 18-25M JPY (~$120-167k USD). These figures align with WeWork Salary Survey 2026 + Abbeal internal benchmark 2025-26. Add Abbeal relocation bonus (6-month housing + shipping) and mission bonus 5-10%."
+        },
+        {
+          "q": "Which visa for a tech engineer in Tokyo and how long?",
+          "a": "技術・人文知識・国際業務 (Engineer / Specialist in Humanities / International Services) is the standard path, 1-5 years renewable. Abbeal sponsors via Yamada Consulting (Tokyo immigration lawyer). Timeline: contract D0 → CoE (Certificate of Eligibility) D45 → consulate visa D75 → Tokyo D90-120. Refusal rate <5%. For seniors 7+ years, we can aim for the Highly Skilled Professional Visa (HSP) which grants permanent residency in 1 year."
+        },
+        {
+          "q": "Can you bring your family (spouse, children) via Mobbeal?",
+          "a": "Yes. Automatic Dependent Visa for spouse + children as soon as your engineer visa is issued. International schools: Lycée Français International de Tokyo (Kita-ku, 200 FR seats), British School in Tokyo (Shibuya, Nakameguro), Tokyo International School (Kanto), International School of the Sacred Heart. Abbeal Mobbeal covers family installation (family-size housing 6 months, 20' shipping container, first-trimester school enrollment)."
+        },
+        {
+          "q": "Do you need to speak Japanese to work in Tokyo at Abbeal?",
+          "a": "Not required at Abbeal hiring. We staff at JLPT N2+ for Japanese clients (Money Forward, Cartier, Le Monde), but we also staff in English at Western clients in Tokyo. 12-month Mobbeal target: pass N4 minimum (Anki + WaniKani + Bunpro, Abbeal reimburses). 24-month target: N3. Many of our consultants reach N2 in 3-4 years."
         }
       ],
       "ja": [
@@ -2797,6 +3277,22 @@
         {
           "q": "契約前に東京を視察することはできますか。",
           "a": "はい、強くお勧めします。プロセス終盤の候補者向けにディスカバリーウィークを企画しています。5から7日間来日いただき、東麻布PMCビルでチームと面談、住居候補エリアの視察、クライアントとの直接面談を行います。航空券と宿泊費はAbbealが負担します。意思決定を目を見開いた状態で行っていただくための、最も価値の高い投資と考えています。"
+        },
+        {
+          "q": "2026年、東京でシニアソフトウェアエンジニアの年収は？",
+          "a": "5〜8年経験のシニアSWEがマネーフォワード / カルティエ / ル・モンドに配属された場合、総パッケージ900万〜1300万円。スタッフエンジニア8〜12年：1300万〜1800万円。プリンシパル12年以上：1800万〜2500万円。これらの数字はWeWork Salary Survey 2026 + Abbeal内部ベンチマーク2025-26と一致。Abbealリロケーションボーナス（6か月分の住居 + 輸送費）とプロジェクトボーナス5〜10%を追加。"
+        },
+        {
+          "q": "東京の技術者に必要なビザと期間は？",
+          "a": "「技術・人文知識・国際業務」が標準ルート、1〜5年更新可能。Abbealは山田コンサルティング（東京入管弁護士）経由でスポンサーします。タイムライン：契約D0 → 在留資格認定証明書 D45 → 領事館ビザ D75 → 東京到着 D90〜120。不許可率 5%未満。7年以上のシニアの場合、1年で永住権を付与する「高度専門職ビザ」も可能。"
+        },
+        {
+          "q": "Mobbealで家族（配偶者・子供）と一緒に来られますか？",
+          "a": "はい。エンジニアビザ発給と同時に、配偶者・子供の家族ビザが自動発給されます。インターナショナルスクール：東京フランス国際学園（北区、フランス人枠200名）、ブリティッシュスクール東京（渋谷、中目黒）、東京インターナショナルスクール（関東）、聖心インターナショナルスクール。Abbeal Mobbealは家族設置費用（ファミリーサイズ住居6か月、20フィートコンテナ輸送、第1学期入学金）をカバーします。"
+        },
+        {
+          "q": "東京でAbbealで働くには日本語が必要ですか？",
+          "a": "Abbeal採用時には必須ではありません。日本のクライアント（マネーフォワード、カルティエ、ル・モンド）にはJLPT N2以上で配属しますが、東京の欧米系クライアントには英語で配属します。Mobbeal 12か月目標：N4取得（Anki + WaniKani + Bunpro、Abbealが費用負担）。24か月目標：N3。多くのコンサルタントは3〜4年でN2に到達します。"
         }
       ],
       "fr-ca": [
@@ -2823,6 +3319,22 @@
         {
           "q": "Est-ce que je peux venir voir Tokyo avant de signer ?",
           "a": "Oui, et on encourage carrément. On organise des semaines découverte pour les profils en fin de process : tu viens 5 à 7 jours, tu rencontres l'équipe au PMC Building Higashi-Azabu, tu visites les quartiers où tu pourrais habiter, et tu rencontres physiquement le client. Abbeal prend en charge le vol et l'hébergement. C'est le meilleur investissement qu'on fasse pour s'assurer que la décision est prise les yeux ouverts."
+        },
+        {
+          "q": "Combien gagne un senior software engineer à Tokyo en 2026 ?",
+          "a": "Package total 9-13M JPY (~82-118k CAD) pour un senior SWE 5-8 ans placé chez Money Forward / Cartier / Le Monde. Staff engineer 8-12 ans : 13-18M JPY (~118-164k CAD). Principal 12+ ans : 18-25M JPY (~164-228k CAD). Ces chiffres alignent WeWork Salary Survey 2026 + benchmark Abbeal internal 2025-26. Ajoute bonus relocation Abbeal (logement 6 mois + shipping) et bonus mission 5-10%."
+        },
+        {
+          "q": "Quel visa pour un ingé techno à Tokyo pis combien de temps ?",
+          "a": "技術・人文知識・国際業務 (Engineer / Specialist in Humanities / International Services) est la voie standard, 1-5 ans renouvelable. Abbeal parraine via Yamada Consulting (avocat immigration Tokyo). Timeline : contrat J0 → CoE (Certificate of Eligibility) J45 → visa consulat J75 → Tokyo J90-120. Refus rate <5%. Pour seniors 7+ ans, on peut viser le Highly Skilled Professional Visa (HSP) qui donne résidence permanente en 1 an."
+        },
+        {
+          "q": "Peut-on venir avec sa famille (conjoint, enfants) via Mobbeal ?",
+          "a": "Oui. Dependent Visa automatique pour conjoint(e) + enfants dès que ta visa engineer est émise. École internationale : Lycée Français International de Tokyo (Kita-ku, 200 places FR), British School in Tokyo (Shibuya, Nakameguro), Tokyo International School (Kanto). Abbeal Mobbeal couvre les frais d'installation famille (logement family-size 6 mois, shipping conteneur 20', inscription école 1er trimestre)."
+        },
+        {
+          "q": "Faut-il parler japonais pour travailler à Tokyo chez Abbeal ?",
+          "a": "Non pas obligatoire au recrutement Abbeal. On place à JLPT N2+ chez clients japonais (Money Forward, Cartier, Le Monde), mais on place aussi en anglais chez clients occidentaux à Tokyo. Objectif Mobbeal 12 mois : passer N4 minimum (Anki + WaniKani + Bunpro, Abbeal rembourse). Objectif 24 mois : N3. Beaucoup de nos consultants atteignent N2 en 3-4 ans."
         }
       ]
     }
