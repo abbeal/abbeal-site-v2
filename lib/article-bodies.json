@@ -11700,6 +11700,11 @@
       {
         "type": "p",
         "content": "There's no magic shortcut in learning a language. The growth mindset is one of the weapons needed, but it's not enough to keep us safe from the danger of giving up. The key is consistent daily effort paired with time. It compounds, leading to results we didn't think would be possible when we started. But how can we keep studying every day for years without giving up? That's what I'll cover in the second part."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "→ [Part 2 · Why I Stopped Relying on Motivation](/en/insights/learning-japanese-my-journey-part-2-motivation) — the system Alex built to keep his Japanese habit alive when motivation faded."
       }
     ],
     "fr": [
@@ -11764,6 +11769,11 @@
       {
         "type": "p",
         "content": "Il n'y a pas de raccourci magique pour apprendre une langue. Le growth mindset est l'une des armes nécessaires, mais il n'est pas suffisant pour nous mettre à l'abri du danger d'abandonner. La clé, c'est l'effort quotidien constant associé au temps. Ça se compose, menant à des résultats qu'on ne pensait pas possibles quand on a commencé. Mais comment continuer à étudier tous les jours pendant des années sans abandonner ? C'est ce que je couvrirai dans la seconde partie."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "→ [Partie 2 · Pourquoi j'ai arrêté de compter sur la motivation](/fr/insights/learning-japanese-my-journey-part-2-motivation) — le système qu'Alex a construit pour faire tenir son habitude japonais quand la motivation faiblit."
       }
     ],
     "ja": [
@@ -11828,6 +11838,11 @@
       {
         "type": "p",
         "content": "言語学習に魔法の近道はない。グロース・マインドセットは必要な武器の一つだが、諦める危険から守ってくれるには十分ではない。鍵は、時間と組み合わせた一貫した日々の努力だ。それが積み重なり、始めたときには可能だと思わなかった結果につながる。しかし、諦めずに何年も毎日勉強し続けるにはどうすればいいのか？それは第2部でカバーする。"
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "→ [パート2・なぜモチベーションに頼るのをやめたのか](/ja/insights/learning-japanese-my-journey-part-2-motivation) — モチベーションが薄れた時に日本語の習慣を維持するためにAlexが構築したシステム。"
       }
     ],
     "fr-ca": [
@@ -11892,6 +11907,11 @@
       {
         "type": "p",
         "content": "Y'a pas de raccourci magique pour apprendre une langue. Le growth mindset c'est une des armes nécessaires, mais c'est pas assez pour nous mettre à l'abri du danger d'abandonner. La clé, c'est l'effort quotidien constant combiné au temps. Ça se compose, ça mène à des résultats qu'on pensait pas possibles quand on a commencé. Mais comment continuer à étudier à tous les jours pendant des années sans abandonner ? C'est ce que je vais couvrir dans la deuxième partie."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "→ [Partie 2 · Pourquoi j'ai arrêté de compter sur la motivation](/fr-ca/insights/learning-japanese-my-journey-part-2-motivation) — le système qu'Alex a construit pour faire tenir son habitude japonais quand la motivation faiblit."
       }
     ]
   }
