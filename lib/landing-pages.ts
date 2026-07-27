@@ -1103,6 +1103,60 @@ export const landingPages: LandingPage[] = [
       },
     },
   },
+  // ========================================================================
+  // 13. esn-paris-developpeurs-seniors — Landing FR-only, cree via CMS
+  //     Payload W31 (id=7) mais non route car le handler [lang]/[slug] ne
+  //     lit que lib/landing-pages.ts (dynamicParams=false + generateStaticParams
+  //     depuis landingPageSlugs). Copie depuis CMS pour rendre live.
+  //     Positionnement : ESN Paris seniors-only vs concurrence bait-and-switch.
+  // ========================================================================
+  {
+    slug: "esn-paris-developpeurs-seniors",
+    keywords: [
+      "ESN Paris développeurs seniors",
+      "meilleure ESN Paris",
+      "société de conseil tech Paris",
+      "staff augmentation Paris senior",
+      "squad embarqué senior France",
+      "recrutement développeur senior Paris",
+      "consulting tech IA Paris",
+      "ESN premium Paris",
+    ],
+    relatedCaseSlugs: [
+      "banque-rag-cout-divise-10",
+      "energie-iot-edge-temps-reel",
+      "leader-sport-pwa-conversion",
+    ],
+    relatedArticleSlug: "recruter-top-1-tech-process-48h",
+    tape: {
+      fr: "// PARIS",
+    },
+    h1: {
+      fr: "ESN à Paris pour développeurs seniors — la société de conseil tech qui ne staffe que du senior.",
+    },
+    subtitle: {
+      fr: "Hub Paris au 54 rue Greneta (2e). Squads embarqués d'ingénieurs seniors (7 à 12 ans d'XP), delivery mesuré à l'output, zéro junior déguisé. Vous parlez à un architecte, pas à un commercial.",
+    },
+    metaDescription: {
+      fr: "ESN à Paris qui ne place que des développeurs seniors (7-12 ans d'XP). Squads embarqués, delivery mesuré à l'output, hub au 54 rue Greneta. Parlez à un architecte.",
+    },
+    body: {
+      fr: BODIES["esn-paris-developpeurs-seniors"]?.body?.fr ?? [],
+    },
+    faq: {
+      fr: BODIES["esn-paris-developpeurs-seniors"]?.faq?.fr ?? [],
+    },
+    extraSchema: {
+      localBusiness: {
+        name: "Abbeal — Hub Paris",
+        streetAddress: "54 rue Greneta",
+        addressLocality: "Paris",
+        postalCode: "75002",
+        addressCountry: "FR",
+        geo: { latitude: 48.8654, longitude: 2.3517 },
+      },
+    },
+  },
 ];
 
 export function getLandingPage(slug: string): LandingPage | undefined {
