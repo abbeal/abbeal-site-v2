@@ -6369,5 +6369,169 @@
         }
       ]
     }
+  },
+  "esn-paris-developpeurs-seniors": {
+    "body": {
+      "fr": [
+        {
+          "type": "p",
+          "content": "Chercher la meilleure ESN à Paris quand on a besoin de développeurs seniors, c'est vite déprimant. Les grosses SSII vous envoient un profil senior en avant-vente, puis staffent deux juniors en régie une fois le contrat signé. Les plateformes de freelances vous laissent gérer seul le screening, l'intégration et le risque. Abbeal fait un autre pari : on ne place que des ingénieurs seniors (7 à 12 ans d'XP réelle sur la stack), en squads qui prennent un périmètre et le livrent. Notre hub est au 54 rue Greneta, dans le 2e arrondissement, et le premier interlocuteur que vous avez au téléphone est un architecte, pas un commercial."
+        },
+        {
+          "type": "h2",
+          "content": "Pourquoi seniors-only : le choix qui change tout"
+        },
+        {
+          "type": "p",
+          "content": "Un senior ne coûte pas plus cher, il coûte moins cher au résultat. Il pose la bonne architecture du premier coup, il ne génère pas de dette qu'un autre devra rembourser, et il monte en autonomie sur votre domaine métier en quelques jours au lieu de quelques mois. Chez Abbeal, le plancher de séniorité est bloquant, pas pondéré : sous 5 ans d'XP tech réelle, un profil ne passe pas. Le coeur de cible se situe entre 7 et 12 ans, avec la stack demandée pratiquée récemment."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Plancher bloquant : 5 ans d'XP tech minimum, coeur de cible 7-12 ans, stack cible pratiquée dans les 3 dernières années."
+            },
+            {
+              "text": "Zéro junior déguisé : le profil vu en avant-vente est celui qui livre. Pas de bait-and-switch après signature."
+            },
+            {
+              "text": "Screening technique réel : chaque ingénieur passe un entretien technique conduit par un pair senior, pas un questionnaire RH."
+            },
+            {
+              "text": "Autonomie de périmètre : un senior prend une feature, une brique, un service, et l'amène en production avec ses tests et son observabilité."
+            },
+            {
+              "text": "Transparence : vous savez qui intervient, son parcours, et le mode d'engagement (freelance ou CDI Abbeal)."
+            }
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Squads embarqués : on prend le périmètre, pas juste des mains"
+        },
+        {
+          "type": "p",
+          "content": "Le renfort d'équipe classique vous laisse le coût de coordination : c'est à vous de découper, d'onboarder, de reviewer, de porter le risque. Un squad embarqué Abbeal fonctionne autrement. On s'intègre à vos rituels (standup, sprint, CI/CD, code review) et on prend l'ownership d'un périmètre clair, avec un référent technique côté Abbeal qui garantit la cohérence. Vous gardez la main sur la roadmap ; on porte l'exécution."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Intégration à vos rituels et à votre stack (React, Vue, Node/NestJS, Java/Spring, Python/FastAPI, Go, Kubernetes, Terraform)."
+            },
+            {
+              "text": "Ownership de périmètre : un service, un module, une migration, avec engagement sur la qualité et le run."
+            },
+            {
+              "text": "Un référent technique senior côté Abbeal qui cadre, review et déblo­que, pour ne pas surcharger votre lead."
+            },
+            {
+              "text": "Montée en charge rapide : un premier senior sous 48 à 72h sur les stacks courantes, un squad complet en quelques semaines."
+            },
+            {
+              "text": "Réversibilité : période de test, puis handover documenté si vous internalisez."
+            }
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Delivery mesuré à l'output, pas au temps passé"
+        },
+        {
+          "type": "p",
+          "content": "Facturer des jours-hommes récompense la lenteur. Nous, on préfère parler de ce qui est livré et de ce que ça vous rapporte. Sur les missions cadrées, l'engagement est au résultat : périmètre chiffré, SLOs, observabilité, cadence de release claire, et une période de garantie. Vous mesurez la valeur, pas les heures. C'est aussi ce qui nous pousse à écrire moins de code : le code le plus durable est celui qu'on n'écrit pas, et l'optimisation coût/perf (GreenOps) fait partie du delivery, pas d'une option."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Engagement de résultat possible sur périmètre cadré : chiffrage PERT, SLOs, garantie 6 mois par défaut."
+            },
+            {
+              "text": "DORA metrics et observabilité intégrées : lead time, fréquence de déploiement, taux d'échec, temps de remédiation."
+            },
+            {
+              "text": "GreenOps : budgets coût et carbone, profiling, infra frugale. Exemples anonymisés : coût d'inférence d'une banque européenne divisé par 10, facture cloud d'une scale-up réduite de 30%."
+            },
+            {
+              "text": "Qualité verrouillée : tests, CI/CD, DevSecOps, revues par des pairs seniors."
+            }
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Un hub Paris ancré au 54 rue Greneta"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal opère depuis Paris, au 54 rue Greneta dans le 2e arrondissement, à deux pas de Sentier et de son écosystème tech. Ce n'est pas une boîte aux lettres : c'est un vrai hub d'ingénierie, connecté à nos hubs de Montréal et Tokyo pour les organisations qui veulent du follow-the-sun. Pour un CTO ou un VP Engineering parisien, ça veut dire des seniors qui peuvent passer sur site, un fuseau partagé, et une relation de proximité — sans le spam d'avant-vente des grosses ESN."
+        },
+        {
+          "type": "h2",
+          "content": "Ce qu'on a déjà livré depuis Paris"
+        },
+        {
+          "type": "p",
+          "content": "Preuves concrètes, clients anonymisés (références nominatives sur demande sous NDA) :"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "text": "Banque européenne : RAG hybride en production, coût d'inférence divisé par 10."
+            },
+            {
+              "text": "Énergéticien : 50 000 capteurs, détection temps réel en edge computing."
+            },
+            {
+              "text": "Leader du sport : PWA haute performance, +18% de conversion mobile."
+            },
+            {
+              "text": "Scale-up mobilité : refonte micro-services et observabilité, -30% de facture cloud à service constant."
+            }
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Parler à un architecte"
+        },
+        {
+          "type": "p",
+          "content": "Pas de tunnel commercial. Vous décrivez votre contexte technique et votre besoin, et un architecte senior vous dit franchement si Abbeal est le bon partenaire, ce qu'on ferait, et sous quel délai. Réservez 20 minutes : https://calendly.com/d/csjx-jhz-5yw/your-company-x-abbeal"
+        }
+      ]
+    },
+    "faq": {
+      "fr": [
+        {
+          "q": "Qu'est-ce qui fait d'Abbeal une bonne ESN à Paris pour des profils seniors ?",
+          "a": "Abbeal ne place que des ingénieurs seniors : plancher bloquant de 5 ans d'XP tech, coeur de cible 7-12 ans, stack cible pratiquée récemment. Le profil vu en avant-vente est celui qui livre, et votre premier interlocuteur est un architecte, pas un commercial. Hub à Paris, 54 rue Greneta (2e)."
+        },
+        {
+          "q": "Quelle est la différence entre un squad embarqué et de la régie classique ?",
+          "a": "En régie classique, vous portez le découpage, l'onboarding, la review et le risque. Un squad embarqué Abbeal s'intègre à vos rituels et prend l'ownership d'un périmètre clair, avec un référent technique senior côté Abbeal qui garantit la cohérence. Vous gardez la roadmap, on porte l'exécution."
+        },
+        {
+          "q": "Facturez-vous au temps passé ou au résultat ?",
+          "a": "Les deux modes existent. Sur un périmètre cadré, on privilégie l'engagement de résultat : chiffrage PERT, SLOs, observabilité, cadence de release et garantie 6 mois par défaut. Vous mesurez la valeur livrée, pas les heures."
+        },
+        {
+          "q": "En combien de temps pouvez-vous staffer un développeur senior à Paris ?",
+          "a": "Un premier senior sous 48 à 72h sur les stacks courantes (React, Vue, Node, Java/Spring, Python, Kubernetes, Terraform), et un squad complet en quelques semaines selon le périmètre."
+        },
+        {
+          "q": "Proposez-vous du freelance ou du CDI ?",
+          "a": "Les deux. Selon votre besoin et le profil, l'intervention peut se faire en freelance ou en CDI porté par Abbeal. En cas de doute, on présente les deux options."
+        },
+        {
+          "q": "Où êtes-vous basés et intervenez-vous sur site à Paris ?",
+          "a": "Notre hub Paris est au 54 rue Greneta, 75002. Nos seniors peuvent intervenir sur site en région parisienne comme en hybride ou remote, et on est connectés à nos hubs de Montréal et Tokyo pour les besoins follow-the-sun."
+        }
+      ]
+    }
   }
 }
