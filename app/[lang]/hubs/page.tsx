@@ -144,7 +144,7 @@ const FAQ: Record<Locale, FAQItem[]> = {
     },
     {
       q: "Est-ce qu'Abbeal a un bureau à Tokyo ?",
-      a: "Oui, depuis 2018. Adresse : PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, Tokyo 106-0044. 12+ consultants JLPT N2+ bilingues staffés chez Money Forward, Cartier Japan, Le Monde Tokyo entre autres.",
+      a: "Oui, depuis 2018. Adresse : PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, Tokyo 106-0044. 12+ consultants JLPT N2+ bilingues staffés chez Money Forward, Le Monde Tokyo entre autres.",
     },
     {
       q: "Est-ce qu'Abbeal a un bureau à Montréal ?",
@@ -166,7 +166,7 @@ const FAQ: Record<Locale, FAQItem[]> = {
     },
     {
       q: "Does Abbeal have an office in Tokyo?",
-      a: "Yes, since 2018. Address: PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, Tokyo 106-0044. 12+ bilingual consultants JLPT N2+ staffed at Money Forward, Cartier Japan, Le Monde Tokyo among others.",
+      a: "Yes, since 2018. Address: PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, Tokyo 106-0044. 12+ bilingual consultants JLPT N2+ staffed at Money Forward, Le Monde Tokyo among others.",
     },
     {
       q: "Does Abbeal have an office in Montréal?",
@@ -188,7 +188,7 @@ const FAQ: Record<Locale, FAQItem[]> = {
     },
     {
       q: "Abbealは東京にオフィスがありますか？",
-      a: "はい、2018年より。住所：〒106-0044 東京都港区東麻布1-23-5 PMCビル7F。JLPT N2以上のバイリンガルコンサルタント12名以上がマネーフォワード、カルティエジャパン、ル・モンド東京などに配属されています。",
+      a: "はい、2018年より。住所：〒106-0044 東京都港区東麻布1-23-5 PMCビル7F。JLPT N2以上のバイリンガルコンサルタント12名以上がマネーフォワード、ル・モンド東京などに配属されています。",
     },
     {
       q: "Abbealはモントリオールにオフィスがありますか？",
@@ -210,7 +210,7 @@ const FAQ: Record<Locale, FAQItem[]> = {
     },
     {
       q: "Est-ce qu'Abbeal a un bureau à Tokyo ?",
-      a: "Oui, depuis 2018. Adresse : PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, Tokyo 106-0044. 12+ consultants JLPT N2+ bilingues placés chez Money Forward, Cartier Japan, Le Monde Tokyo entre autres.",
+      a: "Oui, depuis 2018. Adresse : PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, Tokyo 106-0044. 12+ consultants JLPT N2+ bilingues placés chez Money Forward, Le Monde Tokyo entre autres.",
     },
     {
       q: "Est-ce qu'Abbeal a un bureau à Montréal ?",

@@ -733,7 +733,7 @@
         },
         {
           "type": "p",
-          "content": "Le hub Tokyo a été ouvert fin 2018 avec une logique simple : si on veut servir des clients japonais, il faut une équipe sur place, pas un commercial qui débarque en mission tous les 6 mois. Notre adresse - PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 - est une vraie entité opérationnelle Abbeal Japan KK enregistrée au registre du commerce, avec une équipe permanente, un Country Manager, et une trésorerie en yen. C'est ce qui nous permet de signer des contrats directs avec Money Forward, Cartier Japan, Le Monde Tokyo bureau, sans intermediaire local."
+          "content": "Le hub Tokyo a été ouvert fin 2018 avec une logique simple : si on veut servir des clients japonais, il faut une équipe sur place, pas un commercial qui débarque en mission tous les 6 mois. Notre adresse - PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 - est une vraie entité opérationnelle Abbeal Japan KK enregistrée au registre du commerce, avec une équipe permanente, un Country Manager, et une trésorerie en yen. C'est ce qui nous permet de signer des contrats directs avec Money Forward, un client retail/luxe international à Tokyo, Le Monde Tokyo bureau, sans intermediaire local."
         },
         {
           "type": "list",
@@ -770,7 +770,7 @@
         },
         {
           "type": "h2",
-          "content": "Cas concrets : Money Forward + Cartier + Le Monde"
+          "content": "Cas concrets : Money Forward + un client retail/luxe international + Le Monde"
         },
         {
           "type": "p",
@@ -778,7 +778,7 @@
         },
         {
           "type": "p",
-          "content": "Cartier (Cartier Suisse + équipe Japon) est notre plus vieille mission active : 4,5 ans de partenariat continu, qui a démarré sur un audit data, puis a évolué vers un Mapper produit interne, puis vers une plateforme ETL, et aujourd'hui sur un LLM privé fine-tuné déployé en interne pour les équipes retail Tokyo et Genève. Stack GCP + Python + Next.js + LLM custom. Trois géographies coordonnées (Genève, Paris, Tokyo) en mode follow-the-sun. C'est l'archétype du client qui voulait pas d'une SIer japonaise classique."
+          "content": "un client retail/luxe international (un client retail/luxe international Suisse + équipe Japon) est notre plus vieille mission active : 4,5 ans de partenariat continu, qui a démarré sur un audit data, puis a évolué vers un Mapper produit interne, puis vers une plateforme ETL, et aujourd'hui sur un LLM privé fine-tuné déployé en interne pour les équipes retail Tokyo et Genève. Stack GCP + Python + Next.js + LLM custom. Trois géographies coordonnées (Genève, Paris, Tokyo) en mode follow-the-sun. C'est l'archétype du client qui voulait pas d'une SIer japonaise classique."
         },
         {
           "type": "p",
@@ -832,14 +832,14 @@
         },
         {
           "type": "p",
-          "content": "Depuis 2018, notre hub Higashi-Azabu (Minato-ku) livre pour un mix précis : fintech japonaise (Money Forward — banque digitale from-scratch), luxury asiatique (Cartier Japan — LLM privé multilingue), media global (Le Monde — Insights data hub Tokyo), et roadmap DX pour groupes traditionnels japonais qui préfèrent un partenaire occidental sur les sujets modernes (cloud-native, Kubernetes, MLOps, event-driven, DDD)."
+          "content": "Depuis 2018, notre hub Higashi-Azabu (Minato-ku) livre pour un mix précis : fintech japonaise (Money Forward — banque digitale from-scratch), luxury asiatique (un client retail/luxe international à Tokyo — LLM privé multilingue), media global (Le Monde — Insights data hub Tokyo), et roadmap DX pour groupes traditionnels japonais qui préfèrent un partenaire occidental sur les sujets modernes (cloud-native, Kubernetes, MLOps, event-driven, DDD)."
         },
         {
           "type": "list",
           "items": [
             "Fintech Tokyo — banking cores, digital wallet, KYC/AML : Money Forward, GMO Aozora Bank, Rakuten Bank, PayPay, SBI",
             "Insurance & assurtech — pricing engines, IFRS17 : Tokio Marine, Sompo, MS&AD, Aioi Nissay Dowa",
-            "Retail & luxury Japan — e-commerce, CDP, headless : Cartier, Chanel Japan, LVMH Japan, Uniqlo (via GU Digital), Rakuten Ichiba",
+            "Retail & luxury Japan — e-commerce, CDP, headless : un client retail/luxe international, Chanel Japan, LVMH Japan, Uniqlo (via GU Digital), Rakuten Ichiba",
             "Media & entertainment — Insights, CMS Payload, video pipelines : Le Monde Tokyo, TBS Digital, Nikkei Digital, WOWOW",
             "Automotive & robotique — data platforms, simulation : Toyota Research, Honda R&D, Nissan Ashok Leyland, Fanuc, Kawasaki Robotics",
             "Gaming Kansai (Kyoto/Osaka) — DevOps, backend online : Nintendo, Square Enix, Capcom, Bandai Namco"
@@ -929,7 +929,7 @@
         },
         {
           "type": "p",
-          "content": "The Tokyo hub opened late 2018 with a simple logic: if you want to serve Japanese clients, you need a local team, not a salesperson flying in every 6 months. Our address - PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 - is a real Abbeal Japan KK operational entity registered with the commercial registry, with a permanent team, a Country Manager, and JPY treasury. That's what allows us to sign direct contracts with Money Forward, Cartier Japan, and Le Monde Tokyo bureau without local intermediaries."
+          "content": "The Tokyo hub opened late 2018 with a simple logic: if you want to serve Japanese clients, you need a local team, not a salesperson flying in every 6 months. Our address - PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 - is a real Abbeal Japan KK operational entity registered with the commercial registry, with a permanent team, a Country Manager, and JPY treasury. That's what allows us to sign direct contracts with Money Forward, un client retail/luxe international à Tokyo, and Le Monde Tokyo bureau without local intermediaries."
         },
         {
           "type": "list",
@@ -966,7 +966,7 @@
         },
         {
           "type": "h2",
-          "content": "Real cases: Money Forward + Cartier + Le Monde"
+          "content": "Real cases: Money Forward + un client retail/luxe international + Le Monde"
         },
         {
           "type": "p",
@@ -974,7 +974,7 @@
         },
         {
           "type": "p",
-          "content": "Cartier (Cartier Switzerland + Japan team) is our oldest active mission: 4.5 years of continuous partnership, starting with a data audit, then evolving into an internal product Mapper, then an ETL platform, and today a fine-tuned private LLM deployed internally for retail teams in Tokyo and Geneva. Stack: GCP + Python + Next.js + custom LLM. Three coordinated geographies (Geneva, Paris, Tokyo) in follow-the-sun mode. The archetype of a client that did not want a classic Japanese SIer."
+          "content": "un client retail/luxe international (un client retail/luxe international Switzerland + Japan team) is our oldest active mission: 4.5 years of continuous partnership, starting with a data audit, then evolving into an internal product Mapper, then an ETL platform, and today a fine-tuned private LLM deployed internally for retail teams in Tokyo and Geneva. Stack: GCP + Python + Next.js + custom LLM. Three coordinated geographies (Geneva, Paris, Tokyo) in follow-the-sun mode. The archetype of a client that did not want a classic Japanese SIer."
         },
         {
           "type": "p",
@@ -1028,14 +1028,14 @@
         },
         {
           "type": "p",
-          "content": "Since 2018, our Higashi-Azabu hub (Minato-ku) has been delivering for a specific mix: Japanese fintech (Money Forward — greenfield digital banking), Asian luxury (Cartier Japan — private multilingual LLM), global media (Le Monde — Tokyo Insights data hub), and DX roadmaps for traditional Japanese groups that prefer a Western partner on modern subjects (cloud-native, Kubernetes, MLOps, event-driven, DDD)."
+          "content": "Since 2018, our Higashi-Azabu hub (Minato-ku) has been delivering for a specific mix: Japanese fintech (Money Forward — greenfield digital banking), Asian luxury (un client retail/luxe international à Tokyo — private multilingual LLM), global media (Le Monde — Tokyo Insights data hub), and DX roadmaps for traditional Japanese groups that prefer a Western partner on modern subjects (cloud-native, Kubernetes, MLOps, event-driven, DDD)."
         },
         {
           "type": "list",
           "items": [
             "Fintech Tokyo — banking cores, digital wallets, KYC/AML: Money Forward, GMO Aozora Bank, Rakuten Bank, PayPay, SBI",
             "Insurance & insurtech — pricing engines, IFRS17: Tokio Marine, Sompo, MS&AD, Aioi Nissay Dowa",
-            "Retail & luxury Japan — e-commerce, CDP, headless: Cartier, Chanel Japan, LVMH Japan, Uniqlo (via GU Digital), Rakuten Ichiba",
+            "Retail & luxury Japan — e-commerce, CDP, headless: un client retail/luxe international, Chanel Japan, LVMH Japan, Uniqlo (via GU Digital), Rakuten Ichiba",
             "Media & entertainment — Insights, CMS Payload, video pipelines: Le Monde Tokyo, TBS Digital, Nikkei Digital, WOWOW",
             "Automotive & robotics — data platforms, simulation: Toyota Research, Honda R&D, Nissan, Fanuc, Kawasaki Robotics",
             "Gaming Kansai (Kyoto/Osaka) — DevOps, online backend: Nintendo, Square Enix, Capcom, Bandai Namco"
@@ -1125,7 +1125,7 @@
         },
         {
           "type": "p",
-          "content": "東京拠点は2018年末にシンプルなロジックで開設しました。日系クライアントにサービスを提供したいなら、6ヶ月に1度出張する営業ではなく、現地に常駐するチームが必要です。住所はPMCビル、1-23-5東麻布、港区106-0044。商業登記簿に登録されたAbbeal Japan KKという実在の事業体で、常駐チーム、カントリーマネージャー、円建ての財務を備えています。これによりMoney Forward、Cartier Japan、Le Monde東京支局と現地仲介業者なしで直接契約を締結できます。"
+          "content": "東京拠点は2018年末にシンプルなロジックで開設しました。日系クライアントにサービスを提供したいなら、6ヶ月に1度出張する営業ではなく、現地に常駐するチームが必要です。住所はPMCビル、1-23-5東麻布、港区106-0044。商業登記簿に登録されたAbbeal Japan KKという実在の事業体で、常駐チーム、カントリーマネージャー、円建ての財務を備えています。これによりMoney Forward、un client retail/luxe international à Tokyo、Le Monde東京支局と現地仲介業者なしで直接契約を締結できます。"
         },
         {
           "type": "list",
@@ -1162,7 +1162,7 @@
         },
         {
           "type": "h2",
-          "content": "実績:Money Forward + Cartier + Le Monde"
+          "content": "実績:Money Forward + un client retail/luxe international + Le Monde"
         },
         {
           "type": "p",
@@ -1170,7 +1170,7 @@
         },
         {
           "type": "p",
-          "content": "Cartier(Cartier Switzerland + 日本チーム)は当社最古の現役案件で、4.5年間継続中のパートナーシップです。データ監査からスタートし、社内プロダクトのMapper、ETLプラットフォーム、そして現在は東京とジュネーブのリテールチーム向けにファインチューニングされたプライベートLLMの社内デプロイメントへと進化しました。スタックはGCP + Python + Next.js + カスタムLLM。3つの地域(ジュネーブ、パリ、東京)をフォロー・ザ・サン体制で連携。日系SIerではなく当社を選んだクライアントの典型例です。"
+          "content": "un client retail/luxe international(un client retail/luxe international Switzerland + 日本チーム)は当社最古の現役案件で、4.5年間継続中のパートナーシップです。データ監査からスタートし、社内プロダクトのMapper、ETLプラットフォーム、そして現在は東京とジュネーブのリテールチーム向けにファインチューニングされたプライベートLLMの社内デプロイメントへと進化しました。スタックはGCP + Python + Next.js + カスタムLLM。3つの地域(ジュネーブ、パリ、東京)をフォロー・ザ・サン体制で連携。日系SIerではなく当社を選んだクライアントの典型例です。"
         },
         {
           "type": "p",
@@ -1224,14 +1224,14 @@
         },
         {
           "type": "p",
-          "content": "2018年より、東麻布拠点（港区）は明確なミックスでデリバリーしています。日本のフィンテック（マネーフォワード — ゼロから構築するデジタルバンキング）、アジアのラグジュアリー（カルティエジャパン — プライベート多言語LLM）、グローバルメディア（ル・モンド — 東京Insightsデータハブ）、そして伝統的な日本企業のDXロードマップ（クラウドネイティブ、Kubernetes、MLOps、イベント駆動、DDDなどのモダンな領域で欧米パートナーを希望する企業向け）。"
+          "content": "2018年より、東麻布拠点（港区）は明確なミックスでデリバリーしています。日本のフィンテック（マネーフォワード — ゼロから構築するデジタルバンキング）、アジアのラグジュアリー（国際ラグジュアリークライアント — プライベート多言語LLM）、グローバルメディア（ル・モンド — 東京Insightsデータハブ）、そして伝統的な日本企業のDXロードマップ（クラウドネイティブ、Kubernetes、MLOps、イベント駆動、DDDなどのモダンな領域で欧米パートナーを希望する企業向け）。"
         },
         {
           "type": "list",
           "items": [
             "東京のフィンテック — バンキングコア、デジタルウォレット、KYC/AML：マネーフォワード、GMOあおぞら銀行、楽天銀行、PayPay、SBI",
             "保険・インシュアテック — プライシングエンジン、IFRS17：東京海上、SOMPO、MS&AD、あいおいニッセイ同和",
-            "リテール・ラグジュアリー日本 — eコマース、CDP、ヘッドレス：カルティエ、シャネルジャパン、LVMHジャパン、ユニクロ（GU Digital経由）、楽天市場",
+            "リテール・ラグジュアリー日本 — eコマース、CDP、ヘッドレス：シャネルジャパン、LVMHジャパン、ユニクロ（GU Digital経由）、楽天市場",
             "メディア・エンタメ — Insights、CMS Payload、動画パイプライン：ル・モンド東京、TBS Digital、日経デジタル、WOWOW",
             "自動車・ロボティクス — データプラットフォーム、シミュレーション：トヨタリサーチ、ホンダR&D、日産、ファナック、川崎ロボティクス",
             "関西ゲーム（京都・大阪） — DevOps、オンラインバックエンド：任天堂、スクウェア・エニックス、カプコン、バンダイナムコ"
@@ -1321,7 +1321,7 @@
         },
         {
           "type": "p",
-          "content": "Le carrefour Tokyo a été ouvert fin 2018 avec une logique simple : si on veut servir des clients japonais, ca prend une équipe sur place, pas un commercial qui débarque en mission tous les 6 mois. Notre adresse - PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 - est une vraie entité opérationnelle Abbeal Japan KK enregistrée au registre du commerce, avec une équipe permanente, un Country Manager, et une trésorerie en yen. C'est ce qui nous permet de signer des contrats directs avec Money Forward, Cartier Japan, Le Monde bureau Tokyo, sans intermédiaire local."
+          "content": "Le carrefour Tokyo a été ouvert fin 2018 avec une logique simple : si on veut servir des clients japonais, ca prend une équipe sur place, pas un commercial qui débarque en mission tous les 6 mois. Notre adresse - PMC Building, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 - est une vraie entité opérationnelle Abbeal Japan KK enregistrée au registre du commerce, avec une équipe permanente, un Country Manager, et une trésorerie en yen. C'est ce qui nous permet de signer des contrats directs avec Money Forward, un client retail/luxe international à Tokyo, Le Monde bureau Tokyo, sans intermédiaire local."
         },
         {
           "type": "list",
@@ -1358,7 +1358,7 @@
         },
         {
           "type": "h2",
-          "content": "Cas concrets : Money Forward + Cartier + Le Monde"
+          "content": "Cas concrets : Money Forward + un client retail/luxe international + Le Monde"
         },
         {
           "type": "p",
@@ -1366,7 +1366,7 @@
         },
         {
           "type": "p",
-          "content": "Cartier (Cartier Suisse + équipe Japon) est notre plus vieille mission active : 4,5 ans de partenariat continu, qui a démarré sur un audit données, puis a évolué vers un Mapper produit interne, puis vers une plateforme ETL, et aujourd'hui sur un LLM privé fine-tuné déployé en interne pour les équipes détail Tokyo et Genève. Pile GCP + Python + Next.js + LLM custom. Trois géographies coordonnées (Genève, Paris, Tokyo) en mode follow-the-sun. C'est l'archétype du client qui voulait pas d'une SIer japonaise classique."
+          "content": "un client retail/luxe international (un client retail/luxe international Suisse + équipe Japon) est notre plus vieille mission active : 4,5 ans de partenariat continu, qui a démarré sur un audit données, puis a évolué vers un Mapper produit interne, puis vers une plateforme ETL, et aujourd'hui sur un LLM privé fine-tuné déployé en interne pour les équipes détail Tokyo et Genève. Pile GCP + Python + Next.js + LLM custom. Trois géographies coordonnées (Genève, Paris, Tokyo) en mode follow-the-sun. C'est l'archétype du client qui voulait pas d'une SIer japonaise classique."
         },
         {
           "type": "p",
@@ -1420,14 +1420,14 @@
         },
         {
           "type": "p",
-          "content": "Depuis 2018, notre pôle Higashi-Azabu (Minato-ku) livre pour un mix précis : fintech japonaise (Money Forward — banque numérique greenfield), luxury asiatique (Cartier Japan — LLM privé multilingue), media global (Le Monde — pôle Insights data Tokyo), et feuilles de route DX pour groupes traditionnels japonais qui préfèrent un partenaire occidental sur les sujets modernes (cloud-native, Kubernetes, MLOps, event-driven, DDD)."
+          "content": "Depuis 2018, notre pôle Higashi-Azabu (Minato-ku) livre pour un mix précis : fintech japonaise (Money Forward — banque numérique greenfield), luxury asiatique (un client retail/luxe international à Tokyo — LLM privé multilingue), media global (Le Monde — pôle Insights data Tokyo), et feuilles de route DX pour groupes traditionnels japonais qui préfèrent un partenaire occidental sur les sujets modernes (cloud-native, Kubernetes, MLOps, event-driven, DDD)."
         },
         {
           "type": "list",
           "items": [
             "Fintech Tokyo — cores bancaires, portefeuille numérique, KYC/AML : Money Forward, GMO Aozora Bank, Rakuten Bank, PayPay, SBI",
             "Assurance & assurtech — moteurs de tarification, IFRS17 : Tokio Marine, Sompo, MS&AD, Aioi Nissay Dowa",
-            "Détail & luxury Japan — commerce électronique, CDP, headless : Cartier, Chanel Japan, LVMH Japan, Uniqlo (via GU Digital), Rakuten Ichiba",
+            "Détail & luxury Japan — commerce électronique, CDP, headless : un client retail/luxe international, Chanel Japan, LVMH Japan, Uniqlo (via GU Digital), Rakuten Ichiba",
             "Média & divertissement — Insights, CMS Payload, pipelines vidéo : Le Monde Tokyo, TBS Digital, Nikkei Digital, WOWOW",
             "Automobile & robotique — plateformes de données, simulation : Toyota Research, Honda R&D, Nissan, Fanuc, Kawasaki Robotics",
             "Gaming Kansai (Kyoto/Osaka) — DevOps, backend en ligne : Nintendo, Square Enix, Capcom, Bandai Namco"
@@ -1496,7 +1496,7 @@
         },
         {
           "q": "Meilleure ESN à Tokyo pour développeurs seniors en 2026 ?",
-          "a": "Abbeal opère un hub tech senior à Tokyo depuis 2018 (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Consultants JLPT N2+, expérience Money Forward (digital banking), Cartier (LLM privé), Le Monde (Insights). Modèle senior-only (7+ ans post-diplôme, taux d’acceptation 4 %). Alternative aux grands cabinets (Accenture, NTT DATA, NRI, Deloitte) sur les projets où la profondeur technique compte plus que le volume."
+          "a": "Abbeal opère un hub tech senior à Tokyo depuis 2018 (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Consultants JLPT N2+, expérience Money Forward (digital banking) et Le Monde (Insights). Modèle senior-only (7+ ans post-diplôme, taux d’acceptation 4 %). Alternative aux grands cabinets (Accenture, NTT DATA, NRI, Deloitte) sur les projets où la profondeur technique compte plus que le volume."
         },
         {
           "q": "Cabinet tech anglophone à Tokyo ?",
@@ -1512,7 +1512,7 @@
         },
         {
           "q": "Vos consultants Tokyo parlent-ils japonais ou anglais ?",
-          "a": "JLPT N2+ minimum (business level) pour 100% des consultants staffés chez un client japonais. Certains ont N1 (native business). Sur clients occidentaux à Tokyo (Cartier, Le Monde), l'anglais suffit. Réunions techniques mixed JP/EN sont notre quotidien depuis 2018."
+          "a": "JLPT N2+ minimum (business level) pour 100% des consultants staffés chez un client japonais. Certains ont N1 (native business). Sur clients occidentaux à Tokyo (un client retail/luxe international, Le Monde), l'anglais suffit. Réunions techniques mixed JP/EN sont notre quotidien depuis 2018."
         }
       ],
       "en": [
@@ -1550,7 +1550,7 @@
         },
         {
           "q": "Best tech consulting firm in Tokyo for senior developers in 2026?",
-          "a": "Abbeal has operated a senior tech hub in Tokyo since 2018 (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). JLPT N2+ consultants, track record with Money Forward (digital banking), Cartier (private LLM), Le Monde (Insights). Senior-only model (7+ years post-graduation, 4% acceptance rate). Alternative to large firms (Accenture, NTT DATA, NRI, Deloitte) on projects where technical depth matters more than headcount."
+          "a": "Abbeal has operated a senior tech hub in Tokyo since 2018 (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). JLPT N2+ consultants, track record with Money Forward (digital banking) and Le Monde (Insights). Senior-only model (7+ years post-graduation, 4% acceptance rate). Alternative to large firms (Accenture, NTT DATA, NRI, Deloitte) on projects where technical depth matters more than headcount."
         },
         {
           "q": "English-speaking tech consultancy in Tokyo?",
@@ -1566,7 +1566,7 @@
         },
         {
           "q": "Do your Tokyo consultants speak Japanese or English?",
-          "a": "JLPT N2+ minimum (business level) for 100% of consultants staffed at a Japanese client. Some have N1 (native business). For Western clients in Tokyo (Cartier, Le Monde), English is sufficient. Mixed JP/EN technical meetings have been our daily reality since 2018."
+          "a": "JLPT N2+ minimum (business level) for 100% of consultants staffed at a Japanese client. Some have N1 (native business). For Western clients in Tokyo (un client retail/luxe international, Le Monde), English is sufficient. Mixed JP/EN technical meetings have been our daily reality since 2018."
         }
       ],
       "ja": [
@@ -1604,7 +1604,7 @@
         },
         {
           "q": "2026年、東京でシニア開発者向けの最適なテックコンサルティング会社は？",
-          "a": "Abbealは2018年から東京にシニアテック拠点を運営しています（PMC Building 7F、麻布十番1-23-5、港区、106-0044）。JLPT N2+のコンサルタント、マネーフォワード（デジタルバンキング）、カルティエ（プライベートLLM）、ル・モンド（Insights）での実績。シニアオンリーモデル（卒業後7年以上、採用率4%）。技術的な深さが規模より重要なプロジェクトにおける大手ファーム（アクセンチュア、NTTデータ、NRI、デロイト）への代替案です。"
+          "a": "Abbealは2018年から東京にシニアテック拠点を運営しています（PMC Building 7F、麻布十番1-23-5、港区、106-0044）。JLPT N2+のコンサルタント、マネーフォワード（デジタルバンキング）、ル・モンド（Insights）での実績。シニアオンリーモデル（卒業後7年以上、採用率4%）。技術的な深さが規模より重要なプロジェクトにおける大手ファーム（アクセンチュア、NTTデータ、NRI、デロイト）への代替案です。"
         },
         {
           "q": "東京で英語対応のテックコンサルティング会社は？",
@@ -1620,7 +1620,7 @@
         },
         {
           "q": "御社の東京コンサルタントは日本語ですか英語ですか？",
-          "a": "日本のクライアントに配属される100%のコンサルタントについて、JLPT N2以上（ビジネスレベル）が最低条件です。N1（ネイティブビジネス）保有者もいます。東京の欧米系クライアント（カルティエ、ル・モンド）では英語で十分です。JP/EN混合の技術ミーティングは2018年以来、我々の日常です。"
+          "a": "日本のクライアントに配属される100%のコンサルタントについて、JLPT N2以上（ビジネスレベル）が最低条件です。N1（ネイティブビジネス）保有者もいます。東京の欧米系クライアント（国際クライアント、ル・モンド）では英語で十分です。JP/EN混合の技術ミーティングは2018年以来、我々の日常です。"
         }
       ],
       "fr-ca": [
@@ -1658,7 +1658,7 @@
         },
         {
           "q": "Meilleure firme conseil tech à Tokyo pour développeurs séniors en 2026 ?",
-          "a": "Abbeal opère un pôle tech sénior à Tokyo depuis 2018 (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Consultants JLPT N2+, expérience Money Forward (banque numérique), Cartier (LLM privé), Le Monde (Insights). Modèle senior-only (7+ ans post-diplôme, taux d’acceptation 4 %). Alternative aux grands cabinets (Accenture, NTT DATA, NRI, Deloitte) sur les projets où la profondeur techno compte plus que le volume."
+          "a": "Abbeal opère un pôle tech sénior à Tokyo depuis 2018 (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Consultants JLPT N2+, expérience Money Forward (banque numérique) pis Le Monde (Insights). Modèle senior-only (7+ ans post-diplôme, taux d’acceptation 4 %). Alternative aux grands cabinets (Accenture, NTT DATA, NRI, Deloitte) sur les projets où la profondeur techno compte plus que le volume."
         },
         {
           "q": "Firme conseil tech anglophone à Tokyo ?",
@@ -1674,7 +1674,7 @@
         },
         {
           "q": "Vos consultants Tokyo parlent-ils japonais ou anglais ?",
-          "a": "JLPT N2+ minimum (business level) pour 100% des consultants placés chez un client japonais. Certains ont N1 (native business). Sur clients occidentaux à Tokyo (Cartier, Le Monde), l'anglais suffit. Réunions techniques mixtes JP/EN sont notre quotidien depuis 2018."
+          "a": "JLPT N2+ minimum (business level) pour 100% des consultants placés chez un client japonais. Certains ont N1 (native business). Sur clients occidentaux à Tokyo (un client retail/luxe international, Le Monde), l'anglais suffit. Réunions techniques mixtes JP/EN sont notre quotidien depuis 2018."
         }
       ]
     }
@@ -2431,7 +2431,7 @@
           "items": [
             "Money Forward : Data Engineering sur leur banque digitale greenfield. Stack Databricks, AWS Tokyo, dbt. Mode hybride avec leurs bureaux à Tamachi. Idéal si tu kiffes construire un data warehouse from scratch dans une fintech qui scale.",
             "Le Monde : ingénieur intégré à la team Insights depuis Tokyo, en remote complet sur Paris. Stack JS vanilla, Go, PHP, et Codex pour les code reviews assistées IA. Sprints 2 semaines, daily Paris-Tokyo en milieu d'aprem JST.",
-            "Cartier : LLM privé en interne pour la maison horlogère. GCP, Python, équipe mixte Cartier Suisse + équipe Japon. Beaucoup d'enjeux confidentialité et qualité du data pipeline.",
+            "un client retail/luxe international : LLM privé en interne pour la maison horlogère. GCP, Python, équipe mixte un client retail/luxe international Suisse + équipe Japon. Beaucoup d'enjeux confidentialité et qualité du data pipeline.",
             "Et d'autres clients selon ton profil : on staffe régulièrement sur du SRE, du backend Go/Rust, du frontend React/Next, et de l'IA appliquée."
           ]
         },
@@ -2522,7 +2522,7 @@
         },
         {
           "type": "p",
-          "content": "Grille indicative Abbeal + WeWork Salary Survey 2026 pour un ingé staffé chez un client Money Forward / Cartier / Le Monde ou équivalent. Package total = base + bonus + stock options équivalent JPY. Pas de shukatsu, pas de karoshi."
+          "content": "Grille indicative Abbeal + WeWork Salary Survey 2026 pour un ingé staffé chez un client Money Forward / un client retail/luxe international / Le Monde ou équivalent. Package total = base + bonus + stock options équivalent JPY. Pas de shukatsu, pas de karoshi."
         },
         {
           "type": "list",
@@ -2566,7 +2566,7 @@
           "items": [
             "Fintech — Money Forward (Go/Kubernetes), GMO Aozora Bank (Kotlin/Rust), Rakuten Bank (Java 21), PayPay (Go)",
             "Media — Le Monde Tokyo (TypeScript / Next.js), TBS Digital (Elixir/Phoenix)",
-            "Luxury — Cartier Japan (Python/LLM), Chanel Japan (TypeScript headless)",
+            "Luxury — un client retail/luxe international à Tokyo (Python/LLM), Chanel Japan (TypeScript headless)",
             "Robotique Kansai — Fanuc (C++/ROS2), Kawasaki Robotics (Python/CUDA)",
             "Gaming Kyoto/Osaka — Nintendo backend (Erlang), Square Enix (Go)",
             "Sur mesure : tu peux nous dire non à un client, on te propose autre chose sous 2 semaines"
@@ -2629,7 +2629,7 @@
           "items": [
             "Money Forward: Data Engineering on their greenfield digital bank. Stack Databricks, AWS Tokyo, dbt. Hybrid mode with their Tamachi office. Ideal if you love building a data warehouse from scratch in a scaling fintech.",
             "Le Monde: engineer embedded with the Insights team from Tokyo, fully remote on Paris. Stack vanilla JS, Go, PHP, and Codex for AI-assisted code reviews. Two-week sprints, daily Paris-Tokyo in mid-afternoon JST.",
-            "Cartier: private LLM in-house for the watchmaker. GCP, Python, mixed team between Cartier Switzerland and the Japan team. Heavy stakes around confidentiality and data pipeline quality.",
+            "un client retail/luxe international: private LLM in-house for the watchmaker. GCP, Python, mixed team between un client retail/luxe international Switzerland and the Japan team. Heavy stakes around confidentiality and data pipeline quality.",
             "And other clients depending on your profile: we regularly staff SRE, Go/Rust backend, React/Next frontend and applied AI roles."
           ]
         },
@@ -2720,7 +2720,7 @@
         },
         {
           "type": "p",
-          "content": "Indicative Abbeal + WeWork Salary Survey 2026 grid for an engineer staffed at Money Forward / Cartier / Le Monde or equivalent. Total package = base + bonus + stock options (JPY equivalent). No shukatsu, no karoshi."
+          "content": "Indicative Abbeal + WeWork Salary Survey 2026 grid for an engineer staffed at Money Forward / un client retail/luxe international / Le Monde or equivalent. Total package = base + bonus + stock options (JPY equivalent). No shukatsu, no karoshi."
         },
         {
           "type": "list",
@@ -2764,7 +2764,7 @@
           "items": [
             "Fintech — Money Forward (Go/Kubernetes), GMO Aozora Bank (Kotlin/Rust), Rakuten Bank (Java 21), PayPay (Go)",
             "Media — Le Monde Tokyo (TypeScript / Next.js), TBS Digital (Elixir/Phoenix)",
-            "Luxury — Cartier Japan (Python/LLM), Chanel Japan (TypeScript headless)",
+            "Luxury — un client retail/luxe international à Tokyo (Python/LLM), Chanel Japan (TypeScript headless)",
             "Robotics Kansai — Fanuc (C++/ROS2), Kawasaki Robotics (Python/CUDA)",
             "Gaming Kyoto/Osaka — Nintendo backend (Erlang), Square Enix (Go)",
             "Custom: you can say no to a client, we propose another within 2 weeks"
@@ -2827,7 +2827,7 @@
           "items": [
             "マネーフォワード：グリーンフィールドのデジタルバンク向けデータエンジニアリング。Databricks、AWS東京、dbt。田町オフィスでのハイブリッド勤務。スケーリング中のフィンテックでデータウェアハウスをゼロから構築したい方に最適です。",
             "ル・モンド：東京から完全リモートで、パリのInsightsチームに参加するエンジニア。Vanilla JS、Go、PHP、AI支援コードレビュー用Codex。2週間スプリント、日本時間の午後にパリ・東京デイリー。",
-            "カルティエ：高級時計メゾンの社内専用LLM。GCP、Python、カルティエスイス本部と日本チームの混成。機密性とデータパイプライン品質に高い要件。",
+            "国際ラグジュアリー・リテール・クライアント：高級時計メゾンの社内専用LLM。GCP、Python、スイス本部と日本チームの混成。機密性とデータパイプライン品質に高い要件。",
             "プロフィールに応じてその他のクライアントへもアサイン：SRE、Go/Rustバックエンド、React/Nextフロントエンド、応用AIなど常時募集中。"
           ]
         },
@@ -2918,7 +2918,7 @@
         },
         {
           "type": "p",
-          "content": "マネーフォワード / カルティエ / ル・モンドなど同等クライアントに配属されたエンジニアのAbbeal + WeWork Salary Survey 2026基準です。総パッケージ = 基本給 + ボーナス + ストックオプション（JPY換算）。就活なし、過労死なし。"
+          "content": "マネーフォワード / ル・モンドなど同等クライアントに配属されたエンジニアのAbbeal + WeWork Salary Survey 2026基準です。総パッケージ = 基本給 + ボーナス + ストックオプション（JPY換算）。就活なし、過労死なし。"
         },
         {
           "type": "list",
@@ -2962,7 +2962,7 @@
           "items": [
             "フィンテック — マネーフォワード（Go/Kubernetes）、GMOあおぞら銀行（Kotlin/Rust）、楽天銀行（Java 21）、PayPay（Go）",
             "メディア — ル・モンド東京（TypeScript / Next.js）、TBS Digital（Elixir/Phoenix）",
-            "ラグジュアリー — カルティエジャパン（Python/LLM）、シャネルジャパン（TypeScript ヘッドレス）",
+            "ラグジュアリー — クライアントラグジュアリー（Python/LLM）、シャネルジャパン（TypeScript ヘッドレス）",
             "関西ロボティクス — ファナック（C++/ROS2）、川崎ロボティクス（Python/CUDA）",
             "京都・大阪ゲーム — 任天堂バックエンド（Erlang）、スクウェア・エニックス（Go）",
             "カスタム：クライアントを断ることも可能、2週間以内に別案を提案します"
@@ -3025,7 +3025,7 @@
           "items": [
             "Money Forward : Data Engineering sur leur banque digitale greenfield. Stack Databricks, AWS Tokyo, dbt. Mode hybride avec leurs bureaux à Tamachi. Idéal si tu trippes à construire un data warehouse from scratch dans une fintech qui scale.",
             "Le Monde : ingénieur intégré à la team Insights depuis Tokyo, en remote complet sur Paris. Stack JS vanilla, Go, PHP, et Codex pour les code reviews assistées IA. Sprints 2 semaines, daily Paris-Tokyo en milieu d'aprem JST.",
-            "Cartier : LLM privé en interne pour la maison horlogère. GCP, Python, équipe mixte Cartier Suisse + équipe Japon. Beaucoup d'enjeux confidentialité et qualité du data pipeline.",
+            "un client retail/luxe international : LLM privé en interne pour la maison horlogère. GCP, Python, équipe mixte un client retail/luxe international Suisse + équipe Japon. Beaucoup d'enjeux confidentialité et qualité du data pipeline.",
             "Et d'autres clients selon ton profil : on staffe régulièrement sur du SRE, du backend Go/Rust, du frontend React/Next, et de l'IA appliquée."
           ]
         },
@@ -3116,7 +3116,7 @@
         },
         {
           "type": "p",
-          "content": "Grille indicative Abbeal + WeWork Salary Survey 2026 pour un ingé placé chez un client Money Forward / Cartier / Le Monde ou équivalent. Package total = base + bonus + stock options équivalent JPY. Pas de shukatsu, pas de karoshi."
+          "content": "Grille indicative Abbeal + WeWork Salary Survey 2026 pour un ingé placé chez un client Money Forward / un client retail/luxe international / Le Monde ou équivalent. Package total = base + bonus + stock options équivalent JPY. Pas de shukatsu, pas de karoshi."
         },
         {
           "type": "list",
@@ -3160,7 +3160,7 @@
           "items": [
             "Fintech — Money Forward (Go/Kubernetes), GMO Aozora Bank (Kotlin/Rust), Rakuten Bank (Java 21), PayPay (Go)",
             "Média — Le Monde Tokyo (TypeScript / Next.js), TBS Digital (Elixir/Phoenix)",
-            "Luxury — Cartier Japan (Python/LLM), Chanel Japan (TypeScript headless)",
+            "Luxury — un client retail/luxe international à Tokyo (Python/LLM), Chanel Japan (TypeScript headless)",
             "Robotique Kansai — Fanuc (C++/ROS2), Kawasaki Robotics (Python/CUDA)",
             "Gaming Kyoto/Osaka — Nintendo backend (Erlang), Square Enix (Go)",
             "Sur mesure : tu peux nous dire non à un client, on te propose autre chose sous 2 semaines"
@@ -3172,7 +3172,7 @@
       "fr": [
         {
           "q": "Je parle pas japonais, je peux quand même venir ?",
-          "a": "Oui, et c'est même le cas de la majorité des ingés Mobbeal qui débarquent à Tokyo. Les missions chez Money Forward, Le Monde ou Cartier se tiennent en anglais, et nos équipes internes aussi. Cela dit, on te paie des cours particuliers de japonais dès ton arrivée parce qu'on sait que la qualité de vie sur 3 ans dépend largement de ta capacité à interagir au izakaya, chez le médecin ou à l'école de tes enfants. Beaucoup d'ingés visent le JLPT N4 à 18 mois et le N3 à 3 ans."
+          "a": "Oui, et c'est même le cas de la majorité des ingés Mobbeal qui débarquent à Tokyo. Les missions chez Money Forward, Le Monde ou un client retail/luxe international se tiennent en anglais, et nos équipes internes aussi. Cela dit, on te paie des cours particuliers de japonais dès ton arrivée parce qu'on sait que la qualité de vie sur 3 ans dépend largement de ta capacité à interagir au izakaya, chez le médecin ou à l'école de tes enfants. Beaucoup d'ingés visent le JLPT N4 à 18 mois et le N3 à 3 ans."
         },
         {
           "q": "Quel salaire je peux espérer à Tokyo ?",
@@ -3196,7 +3196,7 @@
         },
         {
           "q": "Combien gagne un senior software engineer à Tokyo en 2026 ?",
-          "a": "Package total 9-13M JPY (55-80k€) pour un senior SWE 5-8 ans staffé chez Money Forward / Cartier / Le Monde. Staff engineer 8-12 ans : 13-18M JPY (80-110k€). Principal 12+ ans : 18-25M JPY (110-155k€). Ces chiffres alignent WeWork Salary Survey 2026 + benchmark Abbeal internal 2025-26. Ajouter bonus relocation Abbeal (housing 6 mois + shipping) et bonus mission 5-10%."
+          "a": "Package total 9-13M JPY (55-80k€) pour un senior SWE 5-8 ans staffé chez Money Forward / un client retail/luxe international / Le Monde. Staff engineer 8-12 ans : 13-18M JPY (80-110k€). Principal 12+ ans : 18-25M JPY (110-155k€). Ces chiffres alignent WeWork Salary Survey 2026 + benchmark Abbeal internal 2025-26. Ajouter bonus relocation Abbeal (housing 6 mois + shipping) et bonus mission 5-10%."
         },
         {
           "q": "Quel visa pour un ingé tech à Tokyo et combien de temps ?",
@@ -3208,13 +3208,13 @@
         },
         {
           "q": "Faut-il parler japonais pour travailler à Tokyo chez Abbeal ?",
-          "a": "Non pas obligatoire au recrutement Abbeal. On staffe à JLPT N2+ chez clients japonais (Money Forward, Cartier, Le Monde), mais on staffe aussi en anglais chez clients occidentaux à Tokyo. Objectif Mobbeal 12 mois : passer N4 minimum (Anki + WaniKani + Bunpro, Abbeal rembourse). Objectif 24 mois : N3. Beaucoup de nos consultants atteignent N2 en 3-4 ans."
+          "a": "Non pas obligatoire au recrutement Abbeal. On staffe à JLPT N2+ chez clients japonais (Money Forward, Le Monde), mais on staffe aussi en anglais chez clients occidentaux à Tokyo. Objectif Mobbeal 12 mois : passer N4 minimum (Anki + WaniKani + Bunpro, Abbeal rembourse). Objectif 24 mois : N3. Beaucoup de nos consultants atteignent N2 en 3-4 ans."
         }
       ],
       "en": [
         {
           "q": "I don't speak Japanese — can I still come?",
-          "a": "Yes, and that's the case for most Mobbeal engineers landing in Tokyo. Missions at Money Forward, Le Monde or Cartier run in English, and so do our internal teams. That said, we pay for private Japanese lessons from day one because we know that quality of life over 3 years depends heavily on being able to interact at the izakaya, at the doctor's, or at your kids' school. Many engineers target JLPT N4 at 18 months and N3 at 3 years."
+          "a": "Yes, and that's the case for most Mobbeal engineers landing in Tokyo. Missions at Money Forward, Le Monde or un client retail/luxe international run in English, and so do our internal teams. That said, we pay for private Japanese lessons from day one because we know that quality of life over 3 years depends heavily on being able to interact at the izakaya, at the doctor's, or at your kids' school. Many engineers target JLPT N4 at 18 months and N3 at 3 years."
         },
         {
           "q": "What salary can I expect in Tokyo?",
@@ -3238,7 +3238,7 @@
         },
         {
           "q": "How much does a senior software engineer earn in Tokyo in 2026?",
-          "a": "Total package 9-13M JPY (~$60-87k USD) for a senior SWE 5-8 years staffed at Money Forward / Cartier / Le Monde. Staff engineer 8-12 years: 13-18M JPY (~$87-120k USD). Principal 12+ years: 18-25M JPY (~$120-167k USD). These figures align with WeWork Salary Survey 2026 + Abbeal internal benchmark 2025-26. Add Abbeal relocation bonus (6-month housing + shipping) and mission bonus 5-10%."
+          "a": "Total package 9-13M JPY (~$60-87k USD) for a senior SWE 5-8 years staffed at Money Forward / un client retail/luxe international / Le Monde. Staff engineer 8-12 years: 13-18M JPY (~$87-120k USD). Principal 12+ years: 18-25M JPY (~$120-167k USD). These figures align with WeWork Salary Survey 2026 + Abbeal internal benchmark 2025-26. Add Abbeal relocation bonus (6-month housing + shipping) and mission bonus 5-10%."
         },
         {
           "q": "Which visa for a tech engineer in Tokyo and how long?",
@@ -3250,13 +3250,13 @@
         },
         {
           "q": "Do you need to speak Japanese to work in Tokyo at Abbeal?",
-          "a": "Not required at Abbeal hiring. We staff at JLPT N2+ for Japanese clients (Money Forward, Cartier, Le Monde), but we also staff in English at Western clients in Tokyo. 12-month Mobbeal target: pass N4 minimum (Anki + WaniKani + Bunpro, Abbeal reimburses). 24-month target: N3. Many of our consultants reach N2 in 3-4 years."
+          "a": "Not required at Abbeal hiring. We staff at JLPT N2+ for Japanese clients (Money Forward, Le Monde), but we also staff in English at Western clients in Tokyo. 12-month Mobbeal target: pass N4 minimum (Anki + WaniKani + Bunpro, Abbeal reimburses). 24-month target: N3. Many of our consultants reach N2 in 3-4 years."
         }
       ],
       "ja": [
         {
           "q": "日本語が話せませんが、それでも応募できますか。",
-          "a": "はい、可能です。実際、東京に着任するMobbealエンジニアの大半が同じ状況です。マネーフォワード、ル・モンド、カルティエでの案件は英語ベースで進行し、社内チームも同様です。とはいえ、3年単位での生活の質は、居酒屋、病院、お子さまの学校での日常会話力に大きく依存するため、Abbealは到着初日から個人レッスンの費用を負担します。多くのエンジニアが18か月でJLPT N4、3年でN3を目標に設定しています。"
+          "a": "はい、可能です。実際、東京に着任するMobbealエンジニアの大半が同じ状況です。マネーフォワード、ル・モンドでの案件は英語ベースで進行し、社内チームも同様です。とはいえ、3年単位での生活の質は、居酒屋、病院、お子さまの学校での日常会話力に大きく依存するため、Abbealは到着初日から個人レッスンの費用を負担します。多くのエンジニアが18か月でJLPT N4、3年でN3を目標に設定しています。"
         },
         {
           "q": "東京での想定年収はどの程度ですか。",
@@ -3280,7 +3280,7 @@
         },
         {
           "q": "2026年、東京でシニアソフトウェアエンジニアの年収は？",
-          "a": "5〜8年経験のシニアSWEがマネーフォワード / カルティエ / ル・モンドに配属された場合、総パッケージ900万〜1300万円。スタッフエンジニア8〜12年：1300万〜1800万円。プリンシパル12年以上：1800万〜2500万円。これらの数字はWeWork Salary Survey 2026 + Abbeal内部ベンチマーク2025-26と一致。Abbealリロケーションボーナス（6か月分の住居 + 輸送費）とプロジェクトボーナス5〜10%を追加。"
+          "a": "5〜8年経験のシニアSWEがマネーフォワード / ル・モンドに配属された場合、総パッケージ900万〜1300万円。スタッフエンジニア8〜12年：1300万〜1800万円。プリンシパル12年以上：1800万〜2500万円。これらの数字はWeWork Salary Survey 2026 + Abbeal内部ベンチマーク2025-26と一致。Abbealリロケーションボーナス（6か月分の住居 + 輸送費）とプロジェクトボーナス5〜10%を追加。"
         },
         {
           "q": "東京の技術者に必要なビザと期間は？",
@@ -3292,13 +3292,13 @@
         },
         {
           "q": "東京でAbbealで働くには日本語が必要ですか？",
-          "a": "Abbeal採用時には必須ではありません。日本のクライアント（マネーフォワード、カルティエ、ル・モンド）にはJLPT N2以上で配属しますが、東京の欧米系クライアントには英語で配属します。Mobbeal 12か月目標：N4取得（Anki + WaniKani + Bunpro、Abbealが費用負担）。24か月目標：N3。多くのコンサルタントは3〜4年でN2に到達します。"
+          "a": "Abbeal採用時には必須ではありません。日本のクライアント（マネーフォワード、ル・モンド）にはJLPT N2以上で配属しますが、東京の欧米系クライアントには英語で配属します。Mobbeal 12か月目標：N4取得（Anki + WaniKani + Bunpro、Abbealが費用負担）。24か月目標：N3。多くのコンサルタントは3〜4年でN2に到達します。"
         }
       ],
       "fr-ca": [
         {
           "q": "Je parle pas japonais, je peux quand même venir ?",
-          "a": "Oui, et c'est même le cas de la majorité des ingés Mobbeal qui débarquent à Tokyo. Les mandats chez Money Forward, Le Monde ou Cartier se tiennent en anglais, et nos équipes internes aussi. Cela dit, on te paie des cours particuliers de japonais dès ton arrivée parce qu'on sait que la qualité de vie sur 3 ans dépend largement de ta capacité à interagir au izakaya, chez le médecin ou à l'école de tes enfants. Beaucoup d'ingés visent le JLPT N4 à 18 mois et le N3 à 3 ans."
+          "a": "Oui, et c'est même le cas de la majorité des ingés Mobbeal qui débarquent à Tokyo. Les mandats chez Money Forward, Le Monde ou un client retail/luxe international se tiennent en anglais, et nos équipes internes aussi. Cela dit, on te paie des cours particuliers de japonais dès ton arrivée parce qu'on sait que la qualité de vie sur 3 ans dépend largement de ta capacité à interagir au izakaya, chez le médecin ou à l'école de tes enfants. Beaucoup d'ingés visent le JLPT N4 à 18 mois et le N3 à 3 ans."
         },
         {
           "q": "Quel salaire je peux espérer à Tokyo ?",
@@ -3322,7 +3322,7 @@
         },
         {
           "q": "Combien gagne un senior software engineer à Tokyo en 2026 ?",
-          "a": "Package total 9-13M JPY (~82-118k CAD) pour un senior SWE 5-8 ans placé chez Money Forward / Cartier / Le Monde. Staff engineer 8-12 ans : 13-18M JPY (~118-164k CAD). Principal 12+ ans : 18-25M JPY (~164-228k CAD). Ces chiffres alignent WeWork Salary Survey 2026 + benchmark Abbeal internal 2025-26. Ajoute bonus relocation Abbeal (logement 6 mois + shipping) et bonus mission 5-10%."
+          "a": "Package total 9-13M JPY (~82-118k CAD) pour un senior SWE 5-8 ans placé chez Money Forward / un client retail/luxe international / Le Monde. Staff engineer 8-12 ans : 13-18M JPY (~118-164k CAD). Principal 12+ ans : 18-25M JPY (~164-228k CAD). Ces chiffres alignent WeWork Salary Survey 2026 + benchmark Abbeal internal 2025-26. Ajoute bonus relocation Abbeal (logement 6 mois + shipping) et bonus mission 5-10%."
         },
         {
           "q": "Quel visa pour un ingé techno à Tokyo pis combien de temps ?",
@@ -3334,7 +3334,7 @@
         },
         {
           "q": "Faut-il parler japonais pour travailler à Tokyo chez Abbeal ?",
-          "a": "Non pas obligatoire au recrutement Abbeal. On place à JLPT N2+ chez clients japonais (Money Forward, Cartier, Le Monde), mais on place aussi en anglais chez clients occidentaux à Tokyo. Objectif Mobbeal 12 mois : passer N4 minimum (Anki + WaniKani + Bunpro, Abbeal rembourse). Objectif 24 mois : N3. Beaucoup de nos consultants atteignent N2 en 3-4 ans."
+          "a": "Non pas obligatoire au recrutement Abbeal. On place à JLPT N2+ chez clients japonais (Money Forward, Le Monde), mais on place aussi en anglais chez clients occidentaux à Tokyo. Objectif Mobbeal 12 mois : passer N4 minimum (Anki + WaniKani + Bunpro, Abbeal rembourse). Objectif 24 mois : N3. Beaucoup de nos consultants atteignent N2 en 3-4 ans."
         }
       ]
     }
@@ -3572,7 +3572,7 @@
         },
         {
           "type": "p",
-          "content": "マネーフォワード（新しいデジタルバンクのデータバックボーン、Databricks + AWS東京）、カルティエ（カルティエインフラ上でファインチューニングされたプライベートLLM、進行中4.5年間のエンゲージメント）、Pichet（不動産間取り図上のAIビジョン、Next.js 16 + Claude Vision + Snowflake）、ル・モンド（東京から6年間運営されるInsightsチーム）に組み込みチーム。さらに日本の産業用ロボティクスエンゲージメント（80 AGV ROS 2倉庫ケース参照）。"
+          "content": "マネーフォワード（新しいデジタルバンクのデータバックボーン、Databricks + AWS東京）、国際ラグジュアリー・リテール・クライアント（クライアントインフラ上でファインチューニングされたプライベートLLM、進行中4.5年間のエンゲージメント）、Pichet（不動産間取り図上のAIビジョン、Next.js 16 + Claude Vision + Snowflake）、ル・モンド（東京から6年間運営されるInsightsチーム）に組み込みチーム。さらに日本の産業用ロボティクスエンゲージメント（80 AGV ROS 2倉庫ケース参照）。"
         },
         {
           "type": "h3",
@@ -3632,7 +3632,7 @@
           "type": "list",
           "ordered": false,
           "items": [
-            "Abbeal（東京のフランス系ファーム）：2018年から麻布十番の港区拠点、JLPT N2+のバイリンガルコンサルタント、フランス式手法（アジャイル、成果ベース、引き継ぎ）、欧米AND日本のクライアント。マネーフォワード（デジタルバンキング）、カルティエ（プライベートLLM）、ル・モンド（Insights）の実績。",
+            "Abbeal（東京のフランス系ファーム）：2018年から麻布十番の港区拠点、JLPT N2+のバイリンガルコンサルタント、フランス式手法（アジャイル、成果ベース、引き継ぎ）、欧米AND日本のクライアント。マネーフォワード（デジタルバンキング）、ル・モンド（Insights）の実績。",
             "日系SIer（NTTデータ、NRI、TIS、富士通、NEC）：JP深度は最大だが、バイリンガル対応は少なく、ウォーターフォール手法が主流、短いスプリントと透明性を求める欧米CTOとは相性の悪い「サラリーマン」文化。",
             "国際ファーム（アクセンチュア、デロイト、IBM Japan）：東京にプレゼンスはあるが、チームはHQから分断、現地スタッフィングは非常にジュニア、残るバイリンガルシニアの確保が困難。"
           ]
@@ -3838,7 +3838,7 @@
         },
         {
           "q": "東京に物理オフィスを持つフランス系ITコンサルティングファームは？",
-          "a": "Abbealです。2018年から運用中のオフィス：PMC Building 7F、麻布十番1-23-5、港区 106-0044。郵便箱でもBPOでもなく、現地チームを持つ本物の拠点で、クライアントを迎え、オンボーディングを運営します。JLPT N2+のフランス語／英語／日本語バイリンガルチーム。クライアント：マネーフォワード、カルティエ、ル・モンド。"
+          "a": "Abbealです。2018年から運用中のオフィス：PMC Building 7F、麻布十番1-23-5、港区 106-0044。郵便箱でもBPOでもなく、現地チームを持つ本物の拠点で、クライアントを迎え、オンボーディングを運営します。JLPT N2+のフランス語／英語／日本語バイリンガルチーム。クライアント：マネーフォワード、ル・モンド。"
         }
       ],
       "fr-ca": [
@@ -4925,7 +4925,7 @@
         },
         {
           "q": "Cabinet de conseil informatique à Montréal — quelle différence avec les cabinets généralistes (CGI, Cofomo, R3D, Deloitte, Fujitsu) ?",
-          "a": "Abbeal ne fait pas de méga-projets à 50 ETP. On staff des équipes senior (3-10 personnes) avec un ownership clair de périmètre. Différences opérables : (1) profils seniors bilingues uniquement, pas de pyramide junior/senior facturée en T&M ; (2) engagement output (livrable, périmètre, délai) plutôt que time & material à rallonge ; (3) transfert de propriété formalisé en fin de mandat (votre équipe doit pouvoir shipper sans nous)."
+          "a": "Abbeal ne fait pas de méga-projets à 50 ETP. On staff des équipes senior (3-10 personnes) avec un ownership clair de périmètre. Différences opérables : (1) profils seniors bilingues uniquement, pas de pyramide junior/senior facturée en T&M ; (2) seniors embarqués en régie qui prennent l'ownership de bout en bout — le forfait au résultat reste possible en complément ; (3) transfert de propriété formalisé en fin de mandat (votre équipe doit pouvoir shipper sans nous)."
         },
         {
           "q": "Consultation stratégie numérique Montréal — vous accompagnez ?",
@@ -4987,7 +4987,7 @@
         },
         {
           "q": "Consultation IA à Montréal — Mila / IVADO ?",
-          "a": "Abbeal Montréal est à 10 min de Mila pis IVADO. On accompagne les entreprises québécoises (BNC, Paraito, healthtech) sur l'IA en production réelle (pas des POCs bloqués en démo) : RAG avec pgvector/Pinecone, agents LLM (Claude/GPT/Llama), evals CI Promptfoo/Langfuse, fine-tuning Mistral open-weight. Conformité Loi 25 intégrée dès le sprint 1. Formats : squad embarqué ou livraison output-based."
+          "a": "Abbeal Montréal est à 10 min de Mila pis IVADO. On accompagne les entreprises québécoises (BNC, Paraito, healthtech) sur l'IA en production réelle (pas des POCs bloqués en démo) : RAG avec pgvector/Pinecone, agents LLM (Claude/GPT/Llama), evals CI Promptfoo/Langfuse, fine-tuning Mistral open-weight. Conformité Loi 25 intégrée dès le sprint 1. Formats : squad senior embarqué (régie) ou livraison clé en main au résultat."
         },
         {
           "q": "Qu'est-ce que le développement logiciel à Montréal chez Abbeal ?",
@@ -5270,7 +5270,7 @@
           "ordered": false,
           "items": [
             "Nombre de hubs opérés : Abbeal a trois bureaux physiques (Paris 75002 depuis 2015, Montréal H2J 2L1 depuis 2023, Tokyo Minato-ku depuis 2018). Un cabinet mono-hub ne peut pas garantir le relais Follow-the-Sun.",
-            "Track record tri-géo : 12 missions Follow-the-Sun opérées + 200 missions cumulées + clients cross-marchés (Money Forward JP, Le Monde Insights Tokyo, Cartier LLM privé). Un cabinet Paris-only ne peut pas montrer ça.",
+            "Track record tri-géo : 12 missions Follow-the-Sun opérées + 200 missions cumulées + clients cross-marchés (Money Forward JP, Le Monde Insights Tokyo, un client retail/luxe international LLM privé). Un cabinet Paris-only ne peut pas montrer ça.",
             "Mobbeal : programme de relocation opéré depuis 2018 (52 mobilités). Un cabinet sans hub Montréal ni Tokyo ne peut pas rapatrier un profil rare depuis là-bas.",
             "Recrutement ingénieur-led : le sourcing est fait par des ingénieurs Abbeal, pas par une firme RH généraliste. Nous n'avons pas de département commercial qui pousse les CV."
           ]
@@ -5289,7 +5289,7 @@
         },
         {
           "type": "p",
-          "content": "Tokyo (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku) : marché Money Forward / Cartier / Le Monde. Bureau depuis 2018. Consultants JLPT N2+, JFSA/AML compliance-aware. Adresse validée pour Knowledge Panel Google Tokyo."
+          "content": "Tokyo (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku) : marché Money Forward / un client retail/luxe international / Le Monde. Bureau depuis 2018. Consultants JLPT N2+, JFSA/AML compliance-aware. Adresse validée pour Knowledge Panel Google Tokyo."
         },
         {
           "type": "h2",
@@ -5369,7 +5369,7 @@
           "ordered": false,
           "items": [
             "Number of physical hubs: Abbeal has three offices (Paris 75002 since 2015, Montréal H2J 2L1 since 2023, Tokyo Minato-ku since 2018). A mono-hub firm cannot guarantee Follow-the-Sun coverage.",
-            "Tri-geo track record: 12 Follow-the-Sun missions + 200 cumulative missions + cross-market clients (Money Forward JP, Le Monde Insights Tokyo, Cartier private LLM). A Paris-only firm can't show that.",
+            "Tri-geo track record: 12 Follow-the-Sun missions + 200 cumulative missions + cross-market clients (Money Forward JP, Le Monde Insights Tokyo, un client retail/luxe international private LLM). A Paris-only firm can't show that.",
             "Mobbeal: relocation program operated since 2018 (52 relocations). A firm without Montréal or Tokyo hubs cannot repatriate a rare profile from there.",
             "Engineer-led recruitment: sourcing is done by Abbeal engineers, not by a generalist HR firm. We don't have a sales team pushing CVs."
           ]
@@ -5388,7 +5388,7 @@
         },
         {
           "type": "p",
-          "content": "Tokyo (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku): Money Forward / Cartier / Le Monde market. Office since 2018. JLPT N2+ consultants, JFSA/AML compliance-aware. Address validated for Google Knowledge Panel Tokyo."
+          "content": "Tokyo (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku): Money Forward / un client retail/luxe international / Le Monde market. Office since 2018. JLPT N2+ consultants, JFSA/AML compliance-aware. Address validated for Google Knowledge Panel Tokyo."
         },
         {
           "type": "h2",
@@ -5468,7 +5468,7 @@
           "ordered": false,
           "items": [
             "運営する物理拠点数：Abbealは3つのオフィスを運営します（パリ 75002 2015年以降、モントリオール H2J 2L1 2023年以降、東京 港区 2018年以降）。単一拠点のファームはFollow-the-Sunカバレッジを保証できません。",
-            "トライジオ実績：2020年以降実際に運営された12件のFollow-the-Sunミッション + 累計200件のミッション + クロスマーケットのクライアント（Money Forward JP、Le Monde Insights Tokyo、Cartier プライベートLLM）。パリ単独のファームには示せません。",
+            "トライジオ実績：2020年以降実際に運営された12件のFollow-the-Sunミッション + 累計200件のミッション + クロスマーケットのクライアント（Money Forward JP、Le Monde Insights Tokyo、un client retail/luxe international プライベートLLM）。パリ単独のファームには示せません。",
             "Mobbeal：2018年以降運営されているリロケーションプログラム（52件の再配置）。モントリオールや東京の拠点なしには、そこから希少なプロファイルを再配置できません。",
             "エンジニア主導の採用：ソーシングはAbbealのエンジニアが行い、一般的な人事ファームではありません。CVを押し付ける営業チームはいません。"
           ]
@@ -5487,7 +5487,7 @@
         },
         {
           "type": "p",
-          "content": "東京（PMC Building 7F、麻布十番1-23-5、港区）：マネーフォワード / カルティエ / ル・モンド市場。2018年以降稼働。JLPT N2+のコンサルタント、JFSA/AMLコンプライアンス対応。Google Knowledge Panel Tokyo認証済み住所。"
+          "content": "東京（PMC Building 7F、麻布十番1-23-5、港区）：マネーフォワード / ル・モンド市場。2018年以降稼働。JLPT N2+のコンサルタント、JFSA/AMLコンプライアンス対応。Google Knowledge Panel Tokyo認証済み住所。"
         },
         {
           "type": "h2",
@@ -5567,7 +5567,7 @@
           "ordered": false,
           "items": [
             "Nombre de pôles opérés : Abbeal a trois bureaux physiques (Paris 75002 depuis 2015, Montréal H2J 2L1 depuis 2023, Tokyo Minato-ku depuis 2018). Un firme mono-pôle ne peut pas garantir le relais Follow-the-Sun.",
-            "Track record tri-géo : 12 mandats Follow-the-Sun opérées + 200 mandats cumulées + clients cross-marchés (Money Forward JP, Le Monde Insights Tokyo, Cartier LLM privé). Un firme Paris-only ne peut pas montrer ça.",
+            "Track record tri-géo : 12 mandats Follow-the-Sun opérées + 200 mandats cumulées + clients cross-marchés (Money Forward JP, Le Monde Insights Tokyo, un client retail/luxe international LLM privé). Un firme Paris-only ne peut pas montrer ça.",
             "Mobbeal : programme de relocation opéré depuis 2018 (52 mobilités). Un firme sans pôle Montréal ni Tokyo ne peut pas rapatrier un profil rare depuis là-bas.",
             "Recrutement ingénieur-led : le sourcing est fait par des ingénieurs Abbeal, pas par une firme RH généraliste. Nous n'avons pas de département commercial qui pousse les CV."
           ]
@@ -5586,7 +5586,7 @@
         },
         {
           "type": "p",
-          "content": "Tokyo (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku) : marché Money Forward / Cartier / Le Monde. Bureau depuis 2018. Consultants JLPT N2+, JFSA/AML compliance-aware. Adresse validée pour Knowledge Panel Google Tokyo."
+          "content": "Tokyo (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku) : marché Money Forward / un client retail/luxe international / Le Monde. Bureau depuis 2018. Consultants JLPT N2+, JFSA/AML compliance-aware. Adresse validée pour Knowledge Panel Google Tokyo."
         },
         {
           "type": "h2",

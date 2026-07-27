@@ -17,7 +17,7 @@ Abbeal ne facture pas des jours d'ingénieurs. Abbeal livre un périmètre. Squa
 - [Bopizy : squad cross-Atlantique pour scaler une SaaS click & collect française](https://abbeal.com/fr/cases/bopizy.md) : Nuxt 3 + Vue + Node + GCP + Computer Vision + GPT-3.5/Gemini, 2 devs Montréal sur fuseau européen, +10 microservices
 - [Money Forward : data backbone d'une nouvelle banque digitale à Tokyo](https://abbeal.com/fr/cases/money-forward.md) : Databricks + Delta Lake + dbt + AWS Tokyo + Unity Catalog, joint venture FinTech leader japonais et grand groupe bancaire
 - [Le Monde : 6 ans dans la team Insights, de Paris à Tokyo](https://abbeal.com/fr/cases/le-monde.md) : JS vanilla + Go + PHP + Codex, outil analytics interne Forecast + CMP IAB TCF
-- [Cartier : de l'audit au LLM privé en interne](https://abbeal.com/fr/cases/cartier.md) : 4,5 ans, GCP + Python + Next.js + LLM fine-tuné, trajectoire Compass → Mapper → ETL → IA souveraine
+- [Client retail/luxe international : de l'audit au LLM privé en interne](https://abbeal.com/fr/cases/cartier.md) : 4,5 ans, GCP + Python + Next.js + LLM fine-tuné, trajectoire Compass → Mapper → ETL → IA souveraine
 - [Neobrain × PwC : SkillBot, l'agent IA RH dans Microsoft Teams](https://abbeal.com/fr/cases/neobrain-pwc-skillbot.md) : 35 000+ collaborateurs PwC USA, LangChain + GPT + MS Teams Bot Framework + Argo CD
 - [BNP Paribas : Reference Book PO, de React/Redux aux agents IA produits](https://abbeal.com/fr/cases/bnp.md) : Next.js 16 + Claude Sonnet + LangGraph + pgvector + Bedrock + Kafka
 - [Tripadvisor (TheFork) : du Symfony/SolR à la reco IA hybride](https://abbeal.com/fr/cases/the-fork.md) : Algolia + Mistral 7B + pgvector + Kafka + Datadog
@@ -80,7 +80,7 @@ Adresse : 4388 Rue Saint-Denis, H2J 2L1 Montréal, Québec, Canada. Opéré depu
 
 ### Abbeal Tokyo — senior engineering firm in Tokyo
 
-Adresse : PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044 Tokyo, Japan. Opéré depuis 2018. Marché : Money Forward, Cartier Japan, Le Monde Tokyo. Consultants JLPT N2+, JFSA-aware. TJM ¥ 12k-25k / jour selon expertise.
+Adresse : PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044 Tokyo, Japan. Opéré depuis 2018. Marché : Money Forward, Le Monde Tokyo. Consultants JLPT N2+, JFSA-aware. TJM ¥ 12k-25k / jour selon expertise.
 
 - [Tech consulting Tokyo & IT staffing Japan](https://abbeal.com/en/tech-consulting-tokyo.md) : engineering teams for Western enterprises
 - [ESN française à Tokyo — Studio tri-géo Japon](https://abbeal.com/fr/esn-tri-geo-japon.md) : hub permanent Minato-ku

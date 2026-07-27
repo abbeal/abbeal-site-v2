@@ -219,7 +219,7 @@ export const landingPages: LandingPage[] = [
       "自動車 データプラットフォーム 東京",
       "ゲーム 開発 京都 大阪",
     ],
-    relatedCaseSlugs: ["money-forward", "le-monde", "cartier"],
+    relatedCaseSlugs: ["money-forward", "le-monde"],
     relatedArticleSlug: "souverainete-secnumcloud-vs-appi",
     tape: {
       fr: "// TOKYO",
@@ -243,10 +243,10 @@ export const landingPages: LandingPage[] = [
       "fr-ca": "Conseil techno Tokyo & IT staffing Japan — Équipes d'ingénierie seniors bilingues.",
     },
     subtitle: {
-      fr: "Hub Tokyo opérationnel depuis 2018 : Money Forward (digital banking from-scratch), Cartier (LLM privé), Le Monde (Insights data depuis Tokyo). On parle JFSA, on staffe en JLPT N2+, on livre en mode hybride Tamachi/remote.",
-      en: "Tokyo hub operational since 2018: Money Forward (greenfield digital banking), Cartier (private LLM), Le Monde (Insights data from Tokyo). We speak JFSA, we staff at JLPT N2+, we ship hybrid mode Tamachi/remote.",
-      ja: "2018年から稼働中の東京拠点：マネーフォワード（ゼロから構築するデジタルバンキング）、カルティエ（プライベートLLM）、ル・モンド（東京からのInsightsデータ）。JFSAに対応し、JLPT N2+でスタッフィングし、田町/リモートのハイブリッドモードで納品します。",
-      "fr-ca": "Pôle Tokyo opérationnel depuis 2018 : Money Forward (banque numérique greenfield), Cartier (LLM privé), Le Monde (Insights data depuis Tokyo). On parle JFSA, on place en JLPT N2+, on livre en mode hybride Tamachi/à distance.",
+      fr: "Hub Tokyo opérationnel depuis 2018 : Money Forward (digital banking from-scratch) et Le Monde (Insights data depuis Tokyo). On parle JFSA, on staffe en JLPT N2+, on livre en mode hybride Tamachi/remote.",
+      en: "Tokyo hub operational since 2018: Money Forward (greenfield digital banking) and Le Monde (Insights data from Tokyo). We speak JFSA, we staff at JLPT N2+, we ship hybrid mode Tamachi/remote.",
+      ja: "2018年から稼働中の東京拠点：マネーフォワード（ゼロから構築するデジタルバンキング）、ル・モンド（東京からのInsightsデータ）。JFSAに対応し、JLPT N2+でスタッフィングし、田町/リモートのハイブリッドモードで納品します。",
+      "fr-ca": "Pôle Tokyo opérationnel depuis 2018 : Money Forward (banque numérique greenfield) pis Le Monde (Insights data depuis Tokyo). On parle JFSA, on place en JLPT N2+, on livre en mode hybride Tamachi/à distance.",
     },
     // Pas de metaTitle : H1 deja keyword-frontloaded (voir commentaire H1),
     // le fallback pick(h1, locale) suffit.
@@ -254,10 +254,10 @@ export const landingPages: LandingPage[] = [
     // "senior developer recruitment Japan") + CTA final. Signal CTR
     // dans les SERPs Google/Bing.
     metaDescription: {
-      fr: "Tech consulting Tokyo & IT staffing Japan : équipes ingé seniors bilingues (JLPT N2+) pour entreprises occidentales. Clients : Money Forward, Cartier, Le Monde. Hub depuis 2018. Discuter avec un consultant Abbeal.",
-      en: "Tech consulting Tokyo & IT staffing Japan: senior bilingual engineering teams (JLPT N2+) for Western enterprises. Clients: Money Forward, Cartier, Le Monde. Hub since 2018. Talk to an Abbeal consultant.",
-      ja: "東京のテックコンサルティング & 日本のIT人材確保：欧米企業向けシニアバイリンガルエンジニアリングチーム（JLPT N2+）。クライアント：マネーフォワード、カルティエ、ル・モンド。2018年から拠点。Abbealコンサルタントに相談。",
-      "fr-ca": "Conseil techno à Tokyo & IT staffing Japan : équipes d'ingénierie seniors bilingues (JLPT N2+) pour entreprises occidentales. Clients : Money Forward, Cartier, Le Monde. Pôle depuis 2018. Parle à un consultant Abbeal.",
+      fr: "Tech consulting Tokyo & IT staffing Japan : équipes ingé seniors bilingues (JLPT N2+) pour entreprises occidentales. Clients : Money Forward, Le Monde. Hub depuis 2018. Discuter avec un consultant Abbeal.",
+      en: "Tech consulting Tokyo & IT staffing Japan: senior bilingual engineering teams (JLPT N2+) for Western enterprises. Clients: Money Forward, Le Monde. Hub since 2018. Talk to an Abbeal consultant.",
+      ja: "東京のテックコンサルティング & 日本のIT人材確保：欧米企業向けシニアバイリンガルエンジニアリングチーム（JLPT N2+）。クライアント：マネーフォワード、ル・モンド。2018年から拠点。Abbealコンサルタントに相談。",
+      "fr-ca": "Conseil techno à Tokyo & IT staffing Japan : équipes d'ingénierie seniors bilingues (JLPT N2+) pour entreprises occidentales. Clients : Money Forward, Le Monde. Pôle depuis 2018. Parle à un consultant Abbeal.",
     },
     body: {
       fr: BODIES["tech-consulting-tokyo"]?.body?.fr ?? [],
@@ -397,10 +397,10 @@ export const landingPages: LandingPage[] = [
       "fr-ca": "Emplois en ingénierie à Tokyo & jobs de développeur au Japon — Garde ton emploi, change de vie. Programme Mobbeal (visa, logement, famille).",
     },
     subtitle: {
-      fr: "Tokyo te tente ? Abbeal a déjà installé 50+ ingés à Tokyo via Mobbeal. On prend en charge visa, logement, famille, école, et on te place chez Money Forward, Le Monde, Cartier ou autres clients. Tu codes, tu vis ta vie japonaise, on gère le reste.",
-      en: "Tokyo calling? Abbeal has already relocated 50+ engineers to Tokyo via Mobbeal. We handle visa, housing, family, schools — and we staff you at Money Forward, Le Monde, Cartier or other clients. You code, you live your Japanese life, we handle the rest.",
-      ja: "東京に挑戦したい？Abbealは既にMobbeal経由で50名以上のエンジニアを東京に派遣しました。ビザ、住居、家族、学校を弊社が対応し、マネーフォワード、ル・モンド、カルティエなどのクライアントにアサインします。あなたはコーディングし、日本での生活を楽しむ、残りは弊社が対応します。",
-      "fr-ca": "Tokyo te tente ? Abbeal a déjà installé 50+ ingés à Tokyo via Mobbeal. On prend en charge visa, logement, famille, école, et on te place chez Money Forward, Le Monde, Cartier ou autres clients. Tu codes, tu vis ta vie japonaise, on gère le reste.",
+      fr: "Tokyo te tente ? Abbeal a déjà installé 50+ ingés à Tokyo via Mobbeal. On prend en charge visa, logement, famille, école, et on te place chez Money Forward, Le Monde ou autres clients. Tu codes, tu vis ta vie japonaise, on gère le reste.",
+      en: "Tokyo calling? Abbeal has already relocated 50+ engineers to Tokyo via Mobbeal. We handle visa, housing, family, schools — and we staff you at Money Forward, Le Monde or other clients. You code, you live your Japanese life, we handle the rest.",
+      ja: "東京に挑戦したい？Abbealは既にMobbeal経由で50名以上のエンジニアを東京に派遣しました。ビザ、住居、家族、学校を弊社が対応し、マネーフォワード、ル・モンドなどのクライアントにアサインします。あなたはコーディングし、日本での生活を楽しむ、残りは弊社が対応します。",
+      "fr-ca": "Tokyo te tente ? Abbeal a déjà installé 50+ ingés à Tokyo via Mobbeal. On prend en charge visa, logement, famille, école, et on te place chez Money Forward, Le Monde ou autres clients. Tu codes, tu vis ta vie japonaise, on gère le reste.",
     },
     // W28 post-mortem : title HTML SEO decouple du H1 (H1 = punchline UI
      // longue, title = keyword-frontloaded court pour SERPs). H1 render
@@ -861,7 +861,7 @@ export const landingPages: LandingPage[] = [
       "senior only software agency",
       "tri-geo senior engineering",
     ],
-    relatedCaseSlugs: ["bnp", "money-forward", "cartier"],
+    relatedCaseSlugs: ["bnp", "money-forward"],
     relatedArticleSlug: "recruter-top-1-tech-process-48h",
     tape: {
       fr: "// SENIOR-ONLY",
@@ -892,10 +892,10 @@ export const landingPages: LandingPage[] = [
       "fr-ca": "Senior-only engineering — La seule firme avec pôles physiques Paris·Montréal·Tokyo",
     },
     metaDescription: {
-      fr: "Cabinet d'ingénierie senior-only opéré depuis 3 hubs (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). Taux d'acceptation 4 %, attrition <6 %, lead time /1,8. Clients BNP, Money Forward, Cartier. Cadrage gratuit 30 min.",
-      en: "Senior-only engineering firm operated from 3 hubs (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). 4% acceptance rate, <6% attrition, 1.8x faster delivery. Clients: BNP, Money Forward, Cartier. Free 30-min scoping.",
-      ja: "3拠点（パリ75002、モントリオールH2J 2L1、東京港区）で運営されるシニアオンリーエンジニアリングファーム。採用率4%、離職率<6%、リードタイム1.8倍高速化。クライアント：BNP、マネーフォワード、カルティエ。無料30分スコーピング。",
-      "fr-ca": "Firme d'ingénierie senior-only opérée depuis 3 pôles (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). Taux d'acceptation 4 %, attrition <6 %, délai de livraison /1,8. Clients BNP, Money Forward, Cartier. Cadrage gratuit 30 min.",
+      fr: "Cabinet d'ingénierie senior-only opéré depuis 3 hubs (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). Taux d'acceptation 4 %, attrition <6 %, lead time /1,8. Clients BNP, Money Forward, un client retail/luxe international. Cadrage gratuit 30 min.",
+      en: "Senior-only engineering firm operated from 3 hubs (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). 4% acceptance rate, <6% attrition, 1.8x faster delivery. Clients: BNP, Money Forward, un client retail/luxe international. Free 30-min scoping.",
+      ja: "3拠点（パリ75002、モントリオールH2J 2L1、東京港区）で運営されるシニアオンリーエンジニアリングファーム。採用率4%、離職率<6%、リードタイム1.8倍高速化。クライアント：BNP、マネーフォワード、。無料30分スコーピング。",
+      "fr-ca": "Firme d'ingénierie senior-only opérée depuis 3 pôles (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). Taux d'acceptation 4 %, attrition <6 %, délai de livraison /1,8. Clients BNP, Money Forward, un client retail/luxe international. Cadrage gratuit 30 min.",
     },
     body: {
       fr: BODIES["senior-engineering-firm-no-juniors"]?.body?.fr ?? [],
