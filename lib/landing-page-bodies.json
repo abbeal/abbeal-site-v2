@@ -6389,21 +6389,11 @@
           "type": "list",
           "ordered": false,
           "items": [
-            {
-              "text": "Plancher bloquant : 5 ans d'XP tech minimum, coeur de cible 7-12 ans, stack cible pratiquée dans les 3 dernières années."
-            },
-            {
-              "text": "Zéro junior déguisé : le profil vu en avant-vente est celui qui livre. Pas de bait-and-switch après signature."
-            },
-            {
-              "text": "Screening technique réel : chaque ingénieur passe un entretien technique conduit par un pair senior, pas un questionnaire RH."
-            },
-            {
-              "text": "Autonomie de périmètre : un senior prend une feature, une brique, un service, et l'amène en production avec ses tests et son observabilité."
-            },
-            {
-              "text": "Transparence : vous savez qui intervient, son parcours, et le mode d'engagement (freelance ou CDI Abbeal)."
-            }
+            "Plancher bloquant : 5 ans d'XP tech minimum, coeur de cible 7-12 ans, stack cible pratiquée dans les 3 dernières années.",
+            "Zéro junior déguisé : le profil vu en avant-vente est celui qui livre. Pas de bait-and-switch après signature.",
+            "Screening technique réel : chaque ingénieur passe un entretien technique conduit par un pair senior, pas un questionnaire RH.",
+            "Autonomie de périmètre : un senior prend une feature, une brique, un service, et l'amène en production avec ses tests et son observabilité.",
+            "Transparence : vous savez qui intervient, son parcours, et le mode d'engagement (freelance ou CDI Abbeal)."
           ]
         },
         {
@@ -6418,21 +6408,11 @@
           "type": "list",
           "ordered": false,
           "items": [
-            {
-              "text": "Intégration à vos rituels et à votre stack (React, Vue, Node/NestJS, Java/Spring, Python/FastAPI, Go, Kubernetes, Terraform)."
-            },
-            {
-              "text": "Ownership de périmètre : un service, un module, une migration, avec engagement sur la qualité et le run."
-            },
-            {
-              "text": "Un référent technique senior côté Abbeal qui cadre, review et déblo­que, pour ne pas surcharger votre lead."
-            },
-            {
-              "text": "Montée en charge rapide : un premier senior sous 48 à 72h sur les stacks courantes, un squad complet en quelques semaines."
-            },
-            {
-              "text": "Réversibilité : période de test, puis handover documenté si vous internalisez."
-            }
+            "Intégration à vos rituels et à votre stack (React, Vue, Node/NestJS, Java/Spring, Python/FastAPI, Go, Kubernetes, Terraform).",
+            "Ownership de périmètre : un service, un module, une migration, avec engagement sur la qualité et le run.",
+            "Un référent technique senior côté Abbeal qui cadre, review et déblo­que, pour ne pas surcharger votre lead.",
+            "Montée en charge rapide : un premier senior sous 48 à 72h sur les stacks courantes, un squad complet en quelques semaines.",
+            "Réversibilité : période de test, puis handover documenté si vous internalisez."
           ]
         },
         {
@@ -6447,18 +6427,10 @@
           "type": "list",
           "ordered": false,
           "items": [
-            {
-              "text": "Engagement de résultat possible sur périmètre cadré : chiffrage PERT, SLOs, garantie 6 mois par défaut."
-            },
-            {
-              "text": "DORA metrics et observabilité intégrées : lead time, fréquence de déploiement, taux d'échec, temps de remédiation."
-            },
-            {
-              "text": "GreenOps : budgets coût et carbone, profiling, infra frugale. Exemples anonymisés : coût d'inférence d'une banque européenne divisé par 10, facture cloud d'une scale-up réduite de 30%."
-            },
-            {
-              "text": "Qualité verrouillée : tests, CI/CD, DevSecOps, revues par des pairs seniors."
-            }
+            "Engagement de résultat possible sur périmètre cadré : chiffrage PERT, SLOs, garantie 6 mois par défaut.",
+            "DORA metrics et observabilité intégrées : lead time, fréquence de déploiement, taux d'échec, temps de remédiation.",
+            "GreenOps : budgets coût et carbone, profiling, infra frugale. Exemples anonymisés : coût d'inférence d'une banque européenne divisé par 10, facture cloud d'une scale-up réduite de 30%.",
+            "Qualité verrouillée : tests, CI/CD, DevSecOps, revues par des pairs seniors."
           ]
         },
         {
@@ -6481,18 +6453,10 @@
           "type": "list",
           "ordered": false,
           "items": [
-            {
-              "text": "Banque européenne : RAG hybride en production, coût d'inférence divisé par 10."
-            },
-            {
-              "text": "Énergéticien : 50 000 capteurs, détection temps réel en edge computing."
-            },
-            {
-              "text": "Leader du sport : PWA haute performance, +18% de conversion mobile."
-            },
-            {
-              "text": "Scale-up mobilité : refonte micro-services et observabilité, -30% de facture cloud à service constant."
-            }
+            "Banque européenne : RAG hybride en production, coût d'inférence divisé par 10.",
+            "Énergéticien : 50 000 capteurs, détection temps réel en edge computing.",
+            "Leader du sport : PWA haute performance, +18% de conversion mobile.",
+            "Scale-up mobilité : refonte micro-services et observabilité, -30% de facture cloud à service constant."
           ]
         },
         {
