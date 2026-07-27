@@ -3368,7 +3368,7 @@
         },
         {
           "type": "p",
-          "content": "Equipes embarquées chez Money Forward (data backbone d'une nouvelle banque digitale, Databricks + AWS Tokyo), Cartier (LLM privé fine-tuné sur infra Cartier, projet 4,5 ans en cours), Pichet (AI Vision sur plans immobiliers, Next.js 16 + Claude Vision + Snowflake), Le Monde (équipe Insights opérée depuis Tokyo 6 ans). Plus des engagements en robotique industrielle JP (cf cas usine 80 AGV ROS 2)."
+          "content": "Equipes embarquées chez Money Forward (data backbone d'une nouvelle banque digitale, Databricks + AWS Tokyo), une maison de luxe européenne (LLM privé fine-tuné sur infra client, projet 4,5 ans en cours), Pichet (AI Vision sur plans immobiliers, Next.js 16 + Claude Vision + Snowflake), Le Monde (équipe Insights opérée depuis Tokyo 6 ans). Plus des engagements en robotique industrielle JP (cf cas usine 80 AGV ROS 2)."
         },
         {
           "type": "h3",
@@ -3428,7 +3428,7 @@
           "type": "list",
           "ordered": false,
           "items": [
-            "Abbeal (ESN française à Tokyo) : hub Higashi-Azabu Minato-ku depuis 2018, consultants JLPT N2+ bilingues, méthode française (agile, output-based, transfert), clients occidentaux ET japonais. Track record Money Forward (digital banking), Cartier (LLM privé), Le Monde (Insights).",
+            "Abbeal (ESN française à Tokyo) : hub Higashi-Azabu Minato-ku depuis 2018, consultants JLPT N2+ bilingues, méthode française (agile, output-based, transfert), clients occidentaux ET japonais. Track record Money Forward (digital banking) et Le Monde (Insights).",
             "ESN japonaise locale (NTT DATA, NRI, TIS, Fujitsu, NEC) : profondeur JP maximale, mais rarement bilingue, méthode waterfall dominante, culture 'salaryman' peu compatible avec les CTOs occidentaux qui veulent des sprints courts et de la transparence.",
             "Firme internationale (Accenture, Deloitte, IBM Japan) : présence Tokyo mais équipes déconnectées du HQ, staffing local très junior, difficulté à trouver des seniors bilingues qui restent."
           ]
@@ -3470,7 +3470,7 @@
         },
         {
           "type": "p",
-          "content": "Embedded teams at Money Forward (data backbone for new digital bank, Databricks + AWS Tokyo), Cartier (private LLM fine-tuned on Cartier infra, ongoing 4.5-year engagement), Pichet (AI Vision on real-estate floor plans, Next.js 16 + Claude Vision + Snowflake), Le Monde (Insights team operated from Tokyo for 6 years). Plus industrial robotics JP engagements (cf 80 AGV ROS 2 warehouse case)."
+          "content": "Embedded teams at Money Forward (data backbone for new digital bank, Databricks + AWS Tokyo), a European luxury house (private LLM fine-tuned on client infra, ongoing 4.5-year engagement), Pichet (AI Vision on real-estate floor plans, Next.js 16 + Claude Vision + Snowflake), Le Monde (Insights team operated from Tokyo for 6 years). Plus industrial robotics JP engagements (cf 80 AGV ROS 2 warehouse case)."
         },
         {
           "type": "h3",
@@ -3530,7 +3530,7 @@
           "type": "list",
           "ordered": false,
           "items": [
-            "Abbeal (French firm in Tokyo): Higashi-Azabu Minato-ku hub since 2018, JLPT N2+ bilingual consultants, French method (agile, output-based, transfer), Western AND Japanese clients. Track record Money Forward (digital banking), Cartier (private LLM), Le Monde (Insights).",
+            "Abbeal (French firm in Tokyo): Higashi-Azabu Minato-ku hub since 2018, JLPT N2+ bilingual consultants, French method (agile, output-based, transfer), Western AND Japanese clients. Track record Money Forward (digital banking) and Le Monde (Insights).",
             "Local Japanese SIer (NTT DATA, NRI, TIS, Fujitsu, NEC): maximum JP depth, but rarely bilingual, waterfall-dominated method, 'salaryman' culture not very compatible with Western CTOs who want short sprints and transparency.",
             "International firm (Accenture, Deloitte, IBM Japan): Tokyo presence but teams disconnected from HQ, very junior local staffing, difficulty finding bilingual seniors who stay."
           ]
@@ -3674,7 +3674,7 @@
         },
         {
           "type": "p",
-          "content": "Équipes embarquées chez Money Forward (data backbone d'une nouvelle banque numérique, Databricks + AWS Tokyo), Cartier (LLM privé affiné sur infra Cartier, mandat 4,5 ans en cours), Pichet (AI Vision sur plans immobiliers, Next.js 16 + Claude Vision + Snowflake), Le Monde (équipe Insights opérée depuis Tokyo 6 ans). Plus des engagements en robotique industrielle JP (cf cas usine 80 AGV ROS 2)."
+          "content": "Équipes embarquées chez Money Forward (data backbone d'une nouvelle banque numérique, Databricks + AWS Tokyo), une maison de luxe européenne (LLM privé affiné sur infra client, mandat 4,5 ans en cours), Pichet (AI Vision sur plans immobiliers, Next.js 16 + Claude Vision + Snowflake), Le Monde (équipe Insights opérée depuis Tokyo 6 ans). Plus des engagements en robotique industrielle JP (cf cas usine 80 AGV ROS 2)."
         },
         {
           "type": "h3",
@@ -3734,7 +3734,7 @@
           "type": "list",
           "ordered": false,
           "items": [
-            "Abbeal (firme française à Tokyo) : pôle Higashi-Azabu Minato-ku depuis 2018, consultants JLPT N2+ bilingues, méthode française (agile, output-based, transfert), clients occidentaux ET japonais. Historique Money Forward (banque numérique), Cartier (LLM privé), Le Monde (Insights).",
+            "Abbeal (firme française à Tokyo) : pôle Higashi-Azabu Minato-ku depuis 2018, consultants JLPT N2+ bilingues, méthode française (agile, output-based, transfert), clients occidentaux ET japonais. Historique Money Forward (banque numérique) pis Le Monde (Insights).",
             "SIer japonaise locale (NTT DATA, NRI, TIS, Fujitsu, NEC) : profondeur JP maximale, mais rarement bilingue, méthode cascade dominante, culture 'salaryman' peu compatible avec les CTOs occidentaux qui veulent des sprints courts pis de la transparence.",
             "Firme internationale (Accenture, Deloitte, IBM Japan) : présence Tokyo mais équipes déconnectées du HQ, staffing local très junior, difficulté à trouver des séniors bilingues qui restent."
           ]
@@ -3778,7 +3778,7 @@
         },
         {
           "q": "ESN française avec bureau physique à Tokyo ?",
-          "a": "Abbeal. Bureau opérationnel PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 depuis 2018. Ce n'est ni une boîte aux lettres ni un BPO : c'est un vrai hub avec équipe locale, où on reçoit les clients et opère les onboardings. Team JLPT N2+ bilingue français/anglais/japonais. Clients Money Forward, Cartier, Le Monde."
+          "a": "Abbeal. Bureau opérationnel PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 depuis 2018. Ce n'est ni une boîte aux lettres ni un BPO : c'est un vrai hub avec équipe locale, où on reçoit les clients et opère les onboardings. Team JLPT N2+ bilingue français/anglais/japonais. Clients Money Forward, Le Monde."
         }
       ],
       "en": [
@@ -3808,7 +3808,7 @@
         },
         {
           "q": "French tech consulting firm with physical office in Tokyo?",
-          "a": "Abbeal. Operational office at PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 since 2018. Not a mailbox, not a BPO: a real hub with local team, where we host clients and run onboardings. JLPT N2+ bilingual team French/English/Japanese. Clients: Money Forward, Cartier, Le Monde."
+          "a": "Abbeal. Operational office at PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 since 2018. Not a mailbox, not a BPO: a real hub with local team, where we host clients and run onboardings. JLPT N2+ bilingual team French/English/Japanese. Clients: Money Forward, Le Monde."
         }
       ],
       "ja": [
@@ -3868,7 +3868,7 @@
         },
         {
           "q": "Firme française avec bureau physique à Tokyo ?",
-          "a": "Abbeal. Bureau opérationnel PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 depuis 2018. Ce n'est ni une boîte aux lettres ni un BPO : c'est un vrai pôle avec équipe locale, où on reçoit les clients pis on opère les onboardings. Équipe JLPT N2+ bilingue français/anglais/japonais. Clients Money Forward, Cartier, Le Monde."
+          "a": "Abbeal. Bureau opérationnel PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 depuis 2018. Ce n'est ni une boîte aux lettres ni un BPO : c'est un vrai pôle avec équipe locale, où on reçoit les clients pis on opère les onboardings. Équipe JLPT N2+ bilingue français/anglais/japonais. Clients Money Forward, Le Monde."
         }
       ]
     }
@@ -4416,7 +4416,7 @@
         },
         {
           "type": "p",
-          "content": "De la conception au run. Engagement output, pas time & material : on s'engage sur un livrable périmètre·délai, pas sur des jours/homme. SLOs définis dès le cadrage, observabilité bakée dès le sprint 1, run maîtrisé par votre équipe à la fin. Format pour les projets greenfield ou les refontes lourdes où vous voulez transférer la propriété en interne plutôt que dépendre d'un prestataire à vie."
+          "content": "De la conception au run. Ingénieurs seniors embarqués en régie, avec ownership de périmètre — le forfait au résultat reste une option en complément. SLOs définis dès le cadrage, observabilité bakée dès le sprint 1, run maîtrisé par votre équipe à la fin. Format pour les projets greenfield ou les refontes lourdes où vous voulez transférer la propriété en interne plutôt que dépendre d'un prestataire à vie."
         },
         {
           "type": "h2",
@@ -4491,7 +4491,7 @@
         },
         {
           "q": "Quelle est la différence vs une grande ESN (Capgemini, Sopra, Atos) ?",
-          "a": "Trois différences claires : (1) on ne staffe pas de junior derrière un commercial senior — vous voyez et vous gardez les vrais profils ; (2) on s'engage sur output (livrable, périmètre, délai) plutôt que sur time & material ; (3) on a un collectif technique senior connecté qui peer-review et qui prend le relais si un consultant tombe — pas de single point of failure. Conséquence pratique : on est plus chers au TJM (700-1200 € vs 550-800 €) mais le coût total de la mission est plus bas car moins de re-work."
+          "a": "Trois différences claires : (1) on ne staffe pas de junior derrière un commercial senior — vous voyez et vous gardez les vrais profils ; (2) on embarque des ingénieurs seniors dans vos équipes, en régie et dans la durée, avec ownership de périmètre — pas des jours-homme juniors empilés ; (3) on a un collectif technique senior connecté qui peer-review et qui prend le relais si un consultant tombe — pas de single point of failure. Conséquence pratique : on est plus chers au TJM (700-1200 € vs 550-800 €) mais le coût total de la mission est plus bas car moins de re-work."
         },
         {
           "q": "Quelle garantie sur le recrutement technique ?",
@@ -4545,7 +4545,7 @@
         },
         {
           "type": "p",
-          "content": "De la conception au run. Engagement output, pas time & material. SLOs définis dès le cadrage, observabilité dès le sprint 1, transfert de propriété en fin de mission. Format idéal pour les refontes lourdes (plateformes clients, ERP modernization, dashboards data) où vous voulez garder le contrôle à long terme."
+          "content": "De la conception au run. Ingénieurs seniors embarqués en régie, avec ownership — forfait au résultat en complément. SLOs définis dès le cadrage, observabilité dès le sprint 1, transfert de propriété en fin de mission. Format idéal pour les refontes lourdes (plateformes clients, ERP modernization, dashboards data) où vous voulez garder le contrôle à long terme."
         },
         {
           "type": "h2",
@@ -4909,7 +4909,7 @@
         },
         {
           "q": "Quelle est la différence vs une grande firme-conseil québécoise (CGI, Cofomo, R3D) ?",
-          "a": "Trois différences : (1) on ne staffe pas de junior derrière un commercial senior — vous voyez et vous gardez les vrais profils ; (2) on s'engage sur output (livrable, périmètre, délai) plutôt que sur time & material ; (3) on a un collectif technique senior tri-géo qui peer-review et qui prend le relais si un consultant tombe (Paris ou Tokyo en backup). Conséquence pratique : on est plus chers au TJM (850-1300 $ vs 600-900 $) mais le coût total du mandat est plus bas car moins de re-work + délais respectés."
+          "a": "Trois différences : (1) on ne staffe pas de junior derrière un commercial senior — vous voyez et vous gardez les vrais profils ; (2) on embarque des ingénieurs seniors dans vos équipes, en régie et dans la durée, avec ownership de périmètre — pas des jours-homme juniors empilés ; (3) on a un collectif technique senior tri-géo qui peer-review et qui prend le relais si un consultant tombe (Paris ou Tokyo en backup). Conséquence pratique : on est plus chers au TJM (850-1300 $ vs 600-900 $) mais le coût total du mandat est plus bas car moins de re-work + délais respectés."
         },
         {
           "q": "Vous accompagnez la conformité Loi 25 (anciennement Loi 64) ?",
@@ -4933,7 +4933,7 @@
         },
         {
           "q": "Consultation IA à Montréal — Mila / IVADO ?",
-          "a": "Abbeal Montréal est à 10 min de Mila et IVADO. On accompagne les entreprises québécoises (BNC, Paraito, healthtech) sur l'IA production réelle (pas des POCs bloqués en démo) : RAG avec pgvector/Pinecone, agents LLM (Claude/GPT/Llama), evals CI Promptfoo/Langfuse, fine-tuning Mistral open-weight. Compliance Loi 25 bakée dès le sprint 1. Formats : squad embarqué ou delivery output-based."
+          "a": "Abbeal Montréal est à 10 min de Mila et IVADO. On accompagne les entreprises québécoises (BNC, Paraito, healthtech) sur l'IA production réelle (pas des POCs bloqués en démo) : RAG avec pgvector/Pinecone, agents LLM (Claude/GPT/Llama), evals CI Promptfoo/Langfuse, fine-tuning Mistral open-weight. Compliance Loi 25 bakée dès le sprint 1. Formats : squad senior embarqué (régie) ou delivery clé en main au résultat."
         },
         {
           "q": "Qu'est-ce que le développement logiciel à Montréal chez Abbeal ?",
@@ -4945,7 +4945,7 @@
         },
         {
           "q": "Combien coûte une squad de développement logiciel à Montréal ?",
-          "a": "Notre TJM sénior à Montréal se situe entre 850 et 1350 CAD/j selon la stack et la mission (fintech / IA / cloud-native). Squad type de 4 séniors sur 3 mois : entre 200k et 320k CAD. Devis output-based ou T&M possible. Comparaison honnête vs concurrents : moins cher que Deloitte Digital (2000+ CAD/j moyen) et Cofomo (1600+ CAD/j), équivalent aux boutiques indépendantes type Osedea ou Mirego, plus cher qu'une offre offshore Ukraine/Inde mais avec un delivery et une gouvernance Nord-Amérique."
+          "a": "Notre TJM sénior à Montréal se situe entre 850 et 1350 CAD/j selon la stack et la mission (fintech / IA / cloud-native). Squad type de 4 séniors sur 3 mois : entre 200k et 320k CAD. Régie (TJM) ou forfait au résultat selon le besoin. Comparaison honnête vs concurrents : moins cher que Deloitte Digital (2000+ CAD/j moyen) et Cofomo (1600+ CAD/j), équivalent aux boutiques indépendantes type Osedea ou Mirego, plus cher qu'une offre offshore Ukraine/Inde mais avec un delivery et une gouvernance Nord-Amérique."
         }
       ],
       "fr-ca": [
@@ -4999,7 +4999,7 @@
         },
         {
           "q": "Combien coûte une squad de développement logiciel à Montréal ?",
-          "a": "Notre TJM sénior à Montréal se situe entre 850 pis 1350 CAD/j selon la stack pis la mission (fintech / IA / cloud-native). Squad type de 4 séniors sur 3 mois : entre 200k pis 320k CAD. Devis basé résultats ou T&M possible. Comparaison honnête vs concurrents : moins cher que Deloitte Digital (2000+ CAD/j moyen) pis Cofomo (1600+ CAD/j), équivalent aux boutiques indépendantes type Osedea ou Mirego, plus cher qu'une offre offshore Ukraine/Inde mais avec un delivery pis une gouvernance Nord-Amérique."
+          "a": "Notre TJM sénior à Montréal se situe entre 850 pis 1350 CAD/j selon la stack pis la mission (fintech / IA / cloud-native). Squad type de 4 séniors sur 3 mois : entre 200k pis 320k CAD. Régie (TJM) ou forfait au résultat selon le besoin. Comparaison honnête vs concurrents : moins cher que Deloitte Digital (2000+ CAD/j moyen) pis Cofomo (1600+ CAD/j), équivalent aux boutiques indépendantes type Osedea ou Mirego, plus cher qu'une offre offshore Ukraine/Inde mais avec un delivery pis une gouvernance Nord-Amérique."
         }
       ]
     }
@@ -5049,7 +5049,7 @@
         },
         {
           "type": "p",
-          "content": "De la conception au run. Engagement output, pas time & material. SLOs définis dès le cadrage, observabilité dès le sprint 1, transfert de propriété en fin de mission. Format idéal pour les refontes lourdes (plateformes clients, ERP modernization, dashboards data) où vous voulez garder le contrôle à long terme et sortir de la dépendance ESN classique."
+          "content": "De la conception au run. Ingénieurs seniors embarqués en régie, avec ownership — forfait au résultat en complément. SLOs définis dès le cadrage, observabilité dès le sprint 1, transfert de propriété en fin de mission. Format idéal pour les refontes lourdes (plateformes clients, ERP modernization, dashboards data) où vous voulez garder le contrôle à long terme et sortir de la dépendance ESN classique."
         },
         {
           "type": "h2",
@@ -5187,7 +5187,7 @@
         },
         {
           "q": "Quelle est la différence vs une grande ESN parisienne (Sopra Steria, Capgemini, Devoteam, Accenture) ?",
-          "a": "Trois différences : (1) on ne staffe pas de junior derrière un commercial senior — vous voyez et vous gardez les vrais profils, pas de pyramid rating ; (2) on s'engage sur output (livrable, périmètre, délai) plutôt que sur time & material à rallonge ; (3) on a un collectif technique senior tri-géo qui peer-review et qui prend le relais si un consultant tombe (Montréal ou Tokyo en backup). Conséquence pratique : on est plus chers au TJM (900-1500 € vs 550-800 € en offshore ou 700-1000 € on-site classique) mais le coût total du projet est plus bas car moins de re-work + délais respectés + zéro turnover en cours de mission."
+          "a": "Trois différences : (1) on ne staffe pas de junior derrière un commercial senior — vous voyez et vous gardez les vrais profils, pas de pyramid rating ; (2) on embarque des ingénieurs seniors dans vos équipes, en régie et dans la durée, avec ownership de périmètre — pas des jours-homme juniors empilés à rallonge ; (3) on a un collectif technique senior tri-géo qui peer-review et qui prend le relais si un consultant tombe (Montréal ou Tokyo en backup). Conséquence pratique : on est plus chers au TJM (900-1500 € vs 550-800 € en offshore ou 700-1000 € on-site classique) mais le coût total du projet est plus bas car moins de re-work + délais respectés + zéro turnover en cours de mission."
         },
         {
           "q": "Vous accompagnez la conformité RGPD, SecNumCloud, HDS ou DORA ?",
@@ -6493,11 +6493,11 @@
         },
         {
           "type": "h2",
-          "content": "Delivery mesuré à l'output, pas au temps passé"
+          "content": "Des ingénieurs seniors embarqués dans la durée"
         },
         {
           "type": "p",
-          "content": "Facturer des jours-hommes récompense la lenteur. Nous, on préfère parler de ce qui est livré et de ce que ça vous rapporte. Sur les missions cadrées, l'engagement est au résultat : périmètre chiffré, SLOs, observabilité, cadence de release claire, et une période de garantie. Vous mesurez la valeur, pas les heures. C'est aussi ce qui nous pousse à écrire moins de code : le code le plus durable est celui qu'on n'écrit pas, et l'optimisation coût/perf (GreenOps) fait partie du delivery, pas d'une option."
+          "content": "Notre cœur de métier, c'est du temps d'ingénieurs seniors embarqués dans vos équipes, dans la durée : une capacité stable, facturée au temps (régie / TJM), avec l'ownership d'un périmètre clair. Ce que vous achetez, c'est de la séniorité qui prend la responsabilité d'une brique et la tient dans le temps, pas des mains interchangeables. Sur les missions bien cadrées, on peut aussi s'engager au résultat en complément (périmètre chiffré, SLOs, observabilité, cadence de release, garantie) quand c'est pertinent. Dans tous les cas, la même exigence de qualité et d'autonomie, et du code qu'on n'a pas à réécrire : le code le plus durable est celui qu'on n'écrit pas, et l'optimisation coût/perf (GreenOps) fait partie du delivery, pas d'une option."
         },
         {
           "type": "list",
@@ -6543,6 +6543,296 @@
           "type": "p",
           "content": "Pas de tunnel commercial. Vous décrivez votre contexte technique et votre besoin, et un architecte senior vous dit franchement si Abbeal est le bon partenaire, ce qu'on ferait, et sous quel délai. Réservez 20 minutes : https://calendly.com/d/csjx-jhz-5yw/your-company-x-abbeal"
         }
+      ],
+      "en": [
+        {
+          "type": "p",
+          "content": "Looking for the best tech consulting firm in Paris when you need senior developers gets old fast. Big SIs pitch a senior in pre-sales, then staff two juniors once the contract is signed. Freelance platforms leave you to handle screening, onboarding, and risk on your own. Abbeal takes a different bet: we only place senior engineers (7 to 12 years of real hands-on stack experience), in squads that own a scope and ship it. Our hub is at 54 rue Greneta in the 2nd arrondissement, and the first person you talk to is an architect, not a sales rep."
+        },
+        {
+          "type": "h2",
+          "content": "Why seniors-only: the choice that changes everything"
+        },
+        {
+          "type": "p",
+          "content": "A senior isn't more expensive — they're cheaper per outcome. They lay the right architecture first time, they don't generate debt someone else will pay back, and they ramp up on your domain in days instead of months. At Abbeal, the seniority floor is blocking, not weighted: under 5 years of real tech experience, a profile doesn't pass. Core target sits between 7 and 12 years, with the required stack practiced recently."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Blocking floor: 5 years of tech experience minimum, core target 7-12 years, target stack practiced in the last 3 years.",
+            "No disguised juniors: the profile you saw in pre-sales is the one who ships. No bait-and-switch after signing.",
+            "Real technical screening: every engineer goes through a technical interview led by a senior peer, not an HR questionnaire.",
+            "Scope ownership: a senior takes a feature, a service, a module — and takes it to production with tests and observability.",
+            "Transparency: you know who's on the mission, their background, and the engagement mode (freelance or Abbeal permanent staff)."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Embedded squads: we take the scope, not just hands"
+        },
+        {
+          "type": "p",
+          "content": "Classic team augmentation leaves you paying the coordination cost: you handle the breakdown, onboarding, review, and risk. An Abbeal embedded squad works differently. We integrate into your rituals (standup, sprint, CI/CD, code review) and take ownership of a clear scope, with a senior technical lead on the Abbeal side ensuring coherence. You keep the roadmap; we own the execution."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Integration into your rituals and stack (React, Vue, Node/NestJS, Java/Spring, Python/FastAPI, Go, Kubernetes, Terraform).",
+            "Scope ownership: a service, a module, a migration — with quality and run commitment.",
+            "A senior Abbeal technical lead who frames, reviews and unblocks — so your own lead isn't overloaded.",
+            "Fast ramp-up: first senior within 48-72h on common stacks, full squad within a few weeks.",
+            "Reversibility: trial period, then documented handover if you internalize."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Senior engineers embedded for the long run"
+        },
+        {
+          "type": "p",
+          "content": "Our default engagement is time-based staff augmentation: senior engineers embedded on your team, ongoing capacity, billed per day rate — with scope ownership and peer review baked in. No bait-and-switch, no junior pyramid. Fixed-scope output engagements remain available as an option when the scope is clear enough, with cost/timeline commitment, but they are never opposed to time-based work. Both modes coexist, and we recommend whichever fits your context: capacity + steering (time) or bounded deliverable (output)."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Time-based (régie) as default: senior engineers embedded in your team, day rate, ownership over a defined scope.",
+            "Output-based on well-framed scopes: PERT estimation, SLOs, 6-month default guarantee.",
+            "DORA metrics and observability built-in: lead time, deployment frequency, failure rate, remediation time.",
+            "GreenOps: cost and carbon budgets, profiling, frugal infra. Anonymized examples: European bank inference costs divided by 10, scale-up cloud bill down 30%.",
+            "Quality locked in: tests, CI/CD, DevSecOps, peer reviews by senior engineers."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "A Paris hub rooted at 54 rue Greneta"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal operates from Paris, at 54 rue Greneta in the 2nd arrondissement, steps from Sentier and its tech ecosystem. This isn't a PO box: it's a real engineering hub, connected to our Montréal and Tokyo hubs for organisations that want follow-the-sun. For a Paris-based CTO or VP Engineering, that means seniors who can come on-site, a shared timezone, and a close working relationship — without the pre-sales spam of big SIs."
+        },
+        {
+          "type": "h2",
+          "content": "What we've already shipped from Paris"
+        },
+        {
+          "type": "p",
+          "content": "Concrete proof, anonymized clients (named references available under NDA):"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "European bank: hybrid RAG in production, inference cost divided by 10.",
+            "Energy company: 50,000 sensors, real-time detection at the edge.",
+            "Sport leader: high-performance PWA, +18% mobile conversion.",
+            "Mobility scale-up: microservices refactor and observability, cloud bill down 30% at constant service."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Talk to an architect"
+        },
+        {
+          "type": "p",
+          "content": "No sales funnel. You describe your technical context and need, and a senior architect tells you honestly whether Abbeal is the right partner, what we'd do, and how fast. Book 20 minutes: https://calendly.com/d/csjx-jhz-5yw/your-company-x-abbeal"
+        }
+      ],
+      "ja": [
+        {
+          "type": "p",
+          "content": "パリでシニアエンジニアを必要とする際、最高のテックコンサルティング会社を探すのはすぐに気が滅入ります。大手SIerは商談段階でシニアを提示し、契約後にジュニアを2名派遣します。フリーランスプラットフォームは、スクリーニング、オンボーディング、リスク管理をあなた任せにします。Abbealは違うアプローチを取ります：シニアエンジニアのみを配置（該当スタックで7〜12年の実務経験）、スコープを引き受けて納品するチーム編成。拠点はパリ2区、Greneta通り54番地。最初にお話しするのは営業ではなく、アーキテクトです。"
+        },
+        {
+          "type": "h2",
+          "content": "なぜシニアオンリーなのか：全てを変える選択"
+        },
+        {
+          "type": "p",
+          "content": "シニアは高くない。成果あたりでは安上がりです。最初から正しいアーキテクチャを組み、他人が返済する技術的負債を作らず、数か月ではなく数日でお客様のドメインに順応します。Abbealでは、シニア基準は必須（重み付けではなくブロッキング）：実務5年未満の候補者は通過しません。中心ターゲットは7〜12年、対象スタックの直近3年での実践経験が必要です。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "ブロッキング基準：技術経験5年以上、中心ターゲット7〜12年、対象スタックの直近3年での実践経験。",
+            "ジュニアの偽装なし：商談で見た候補者が実際に納品します。契約後のすり替えなし。",
+            "本格的な技術スクリーニング：全エンジニアが人事アンケートではなく、シニアピアによる技術面接を受けます。",
+            "スコープオーナーシップ：シニアが機能、モジュール、サービスを引き受け、テストと可観測性を含めて本番までリード。",
+            "透明性：誰が担当しているか、経歴、契約形態（フリーランスまたはAbbeal正社員）を把握できます。"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "組込みチーム：手だけでなくスコープを引き受ける"
+        },
+        {
+          "type": "p",
+          "content": "従来の人員増強では、調整コストはお客様負担です。分割、オンボーディング、レビュー、リスクを全て担う必要があります。Abbealの組込みチームは違います。お客様のリチュアル（スタンドアップ、スプリント、CI/CD、コードレビュー）に統合し、明確なスコープのオーナーシップを引き受けます。Abbeal側のシニア技術リードが一貫性を保証。ロードマップはお客様、実行は当社が担います。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "お客様のリチュアル・スタックへの統合（React、Vue、Node/NestJS、Java/Spring、Python/FastAPI、Go、Kubernetes、Terraform）。",
+            "スコープオーナーシップ：サービス、モジュール、マイグレーション。品質と運用へのコミットメント付き。",
+            "Abbealのシニア技術リードがフレーミング、レビュー、ブロック解除を担当。お客様のリードに負担をかけません。",
+            "迅速な立ち上げ：主要スタックで初回シニア48〜72時間以内、フルチーム数週間以内。",
+            "可逆性：試用期間の後、内製化する場合は文書化されたハンドオーバー。"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "長期にわたって組込まれるシニアエンジニア"
+        },
+        {
+          "type": "p",
+          "content": "デフォルトの契約形態は時間ベースの人員増強：シニアエンジニアがチームに組込まれ、継続的なキャパシティを提供、日額料金で請求されます — スコープオーナーシップとピアレビュー込み。すり替えなし、ジュニアピラミッドなし。固定スコープの成果契約もオプションとして提供可能ですが、時間ベース契約と対立するものではありません。両モードが共存し、お客様の状況に応じて推奨します：キャパシティ + ステアリング（時間）または限定的な成果物（成果）。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "時間ベース（régie）がデフォルト：チームに組込まれたシニアエンジニア、日額料金、定義されたスコープに対するオーナーシップ。",
+            "十分にフレーム化されたスコープでは成果ベース：PERT見積、SLO、デフォルト6か月保証。",
+            "DORAメトリクスと可観測性を内蔵：リードタイム、デプロイ頻度、失敗率、修復時間。",
+            "GreenOps：コストとカーボン予算、プロファイリング、質素なインフラ。匿名例：欧州銀行の推論コスト10分の1、スケールアップのクラウド費30%削減。",
+            "品質の確保：テスト、CI/CD、DevSecOps、シニアエンジニアによるピアレビュー。"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Greneta通り54番地のパリ拠点"
+        },
+        {
+          "type": "p",
+          "content": "Abbealはパリ2区Greneta通り54番地から運営、Sentierとそのテックエコシステムから徒歩数分。私書箱ではなく、本物のエンジニアリング拠点で、follow-the-sunを希望する組織向けにモントリオール・東京拠点と接続。パリのCTOやVPエンジニアリングにとっては、オンサイト訪問可能なシニア、共有タイムゾーン、密接な関係性を意味します — 大手SIerの商談スパムなしで。"
+        },
+        {
+          "type": "h2",
+          "content": "パリからすでに納品したもの"
+        },
+        {
+          "type": "p",
+          "content": "具体的な実績、匿名化クライアント（NDA下で実名リファレンス提供可能）："
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "欧州銀行：本番でのハイブリッドRAG、推論コスト10分の1。",
+            "エネルギー会社：50,000センサー、エッジでのリアルタイム検出。",
+            "スポーツリーダー：高性能PWA、モバイルコンバージョン+18%。",
+            "モビリティスケールアップ：マイクロサービス再構築と可観測性、サービス一定でクラウド費30%削減。"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "アーキテクトと話す"
+        },
+        {
+          "type": "p",
+          "content": "営業ファネルなし。技術的なコンテキストとニーズをお聞かせいただければ、シニアアーキテクトが正直にAbbealが適切なパートナーか、何を行うか、どのくらいの期間かをお伝えします。20分ご予約：https://calendly.com/d/csjx-jhz-5yw/your-company-x-abbeal"
+        }
+      ],
+      "fr-ca": [
+        {
+          "type": "p",
+          "content": "Chercher la meilleure ESN à Paris quand on a besoin de développeurs seniors, c'est vite déprimant. Les grosses SSII vous envoient un profil senior en avant-vente, puis staffent deux juniors en régie une fois le contrat signé. Les plateformes de freelances vous laissent gérer seul le screening, l'intégration et le risque. Abbeal fait un autre pari : on ne place que des ingénieurs seniors (7 à 12 ans d'XP réelle sur la stack), en squads qui prennent un périmètre et le livrent. Notre hub est au 54 rue Greneta, dans le 2e arrondissement, et le premier interlocuteur que vous avez au téléphone est un architecte, pas un représentant."
+        },
+        {
+          "type": "h2",
+          "content": "Pourquoi seniors-only : le choix qui change tout"
+        },
+        {
+          "type": "p",
+          "content": "Un senior ne coûte pas plus cher, il coûte moins dispendieux au résultat. Il pose la bonne architecture du premier coup, il ne génère pas de dette qu'un autre devra rembourser, et il monte en autonomie sur votre domaine métier en quelques jours au lieu de quelques mois. Chez Abbeal, le plancher de séniorité est bloquant, pas pondéré : sous 5 ans d'XP tech réelle, un profil ne passe pas. Le coeur de cible se situe entre 7 et 12 ans, avec la stack demandée pratiquée récemment."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Plancher bloquant : 5 ans d'XP tech minimum, coeur de cible 7-12 ans, stack cible pratiquée dans les 3 dernières années.",
+            "Zéro junior déguisé : le profil vu en avant-vente est celui qui livre. Pas de bait-and-switch après signature.",
+            "Screening technique réel : chaque ingénieur passe un entretien technique conduit par un pair senior, pas un questionnaire RH.",
+            "Autonomie de périmètre : un senior prend une feature, une brique, un service, et l'amène en production avec ses tests et son observabilité.",
+            "Transparence : vous savez qui intervient, son parcours, et le mode d'engagement (freelance ou CDI Abbeal)."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Squads embarqués : on prend le périmètre, pas juste des mains"
+        },
+        {
+          "type": "p",
+          "content": "Le renfort d'équipe classique vous laisse le coût de coordination : c'est à vous de découper, d'onboarder, de reviewer, de porter le risque. Un squad embarqué Abbeal fonctionne autrement. On s'intègre à vos rituels (standup, sprint, CI/CD, code review) et on prend l'ownership d'un périmètre clair, avec un référent technique côté Abbeal qui garantit la cohérence. Vous gardez la main sur la roadmap ; on porte l'exécution."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Intégration à vos rituels et à votre stack (React, Vue, Node/NestJS, Java/Spring, Python/FastAPI, Go, Kubernetes, Terraform).",
+            "Ownership de périmètre : un service, un module, une migration, avec engagement sur la qualité et le run.",
+            "Un référent technique senior côté Abbeal qui cadre, review et déblo­que, pour ne pas surcharger votre lead.",
+            "Montée en charge rapide : un premier senior sous 48 à 72h sur les stacks courantes, un squad complet en quelques semaines.",
+            "Réversibilité : période de test, puis handover documenté si vous internalisez."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Des ingénieurs seniors embarqués dans la durée"
+        },
+        {
+          "type": "p",
+          "content": "Notre cœur de métier, c'est du temps d'ingénieurs seniors embarqués dans vos équipes, dans la durée : une capacité stable, facturée au temps (régie / TJM), avec l'ownership d'un périmètre clair. Ce que vous achetez, c'est de la séniorité qui prend la responsabilité d'une brique et la tient dans le temps, pas des mains interchangeables. Sur les missions bien cadrées, on peut aussi s'engager au résultat en complément (périmètre chiffré, SLOs, observabilité, cadence de release, garantie) quand c'est pertinent. Dans tous les cas, la même exigence de qualité et d'autonomie, et du code qu'on n'a pas à réécrire : le code le plus durable est celui qu'on n'écrit pas, et l'optimisation coût/perf (GreenOps) fait partie du delivery, pas d'une option."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Engagement de résultat possible sur périmètre cadré : chiffrage PERT, SLOs, garantie 6 mois par défaut.",
+            "DORA metrics et observabilité intégrées : lead time, fréquence de déploiement, taux d'échec, temps de remédiation.",
+            "GreenOps : budgets coût et carbone, profiling, infra frugale. Exemples anonymisés : coût d'inférence d'une banque européenne divisé par 10, facture cloud d'une scale-up réduite de 30%.",
+            "Qualité verrouillée : tests, CI/CD, DevSecOps, revues par des pairs seniors."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Un hub Paris ancré au 54 rue Greneta"
+        },
+        {
+          "type": "p",
+          "content": "Abbeal opère depuis Paris, au 54 rue Greneta dans le 2e arrondissement, à deux pas de Sentier et de son écosystème tech. Ce n'est pas une boîte aux lettres : c'est un vrai hub d'ingénierie, connecté à nos hubs de Montréal et Tokyo pour les organisations qui veulent du follow-the-sun. Pour un CTO ou un VP Engineering parisien, ça veut dire des seniors qui peuvent passer sur site, un fuseau partagé, et une relation de proximité — sans le spam d'avant-vente des grosses ESN."
+        },
+        {
+          "type": "h2",
+          "content": "Ce qu'on a déjà livré depuis Paris"
+        },
+        {
+          "type": "p",
+          "content": "Preuves concrètes, clients anonymisés (références nominatives sur demande sous NDA) :"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Banque européenne : RAG hybride en production, coût d'inférence divisé par 10.",
+            "Énergéticien : 50 000 capteurs, détection temps réel en edge computing.",
+            "Leader du sport : PWA haute performance, +18% de conversion mobile.",
+            "Scale-up mobilité : refonte micro-services et observabilité, -30% de facture cloud à service constant."
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Parler à un architecte"
+        },
+        {
+          "type": "p",
+          "content": "Pas de tunnel représentant. Vous décrivez votre contexte technique et votre besoin, et un architecte senior vous dit franchement si Abbeal est le bon partenaire, ce qu'on ferait, et sous quel délai. Réservez 20 minutes : https://calendly.com/d/csjx-jhz-5yw/your-company-x-abbeal"
+        }
       ]
     },
     "faq": {
@@ -6557,7 +6847,85 @@
         },
         {
           "q": "Facturez-vous au temps passé ou au résultat ?",
-          "a": "Les deux modes existent. Sur un périmètre cadré, on privilégie l'engagement de résultat : chiffrage PERT, SLOs, observabilité, cadence de release et garantie 6 mois par défaut. Vous mesurez la valeur livrée, pas les heures."
+          "a": "Notre modèle par défaut, c'est la régie : du temps d'ingénieurs seniors embarqués dans vos équipes, avec ownership de périmètre, facturé au temps (TJM). Sur un périmètre bien cadré, on peut aussi s'engager au résultat en complément (chiffrage PERT, SLOs, observabilité, cadence de release, garantie 6 mois). Dans les deux cas, la valeur vient de la séniorité et de l'ownership, pas d'un mode de facturation."
+        },
+        {
+          "q": "En combien de temps pouvez-vous staffer un développeur senior à Paris ?",
+          "a": "Un premier senior sous 48 à 72h sur les stacks courantes (React, Vue, Node, Java/Spring, Python, Kubernetes, Terraform), et un squad complet en quelques semaines selon le périmètre."
+        },
+        {
+          "q": "Proposez-vous du freelance ou du CDI ?",
+          "a": "Les deux. Selon votre besoin et le profil, l'intervention peut se faire en freelance ou en CDI porté par Abbeal. En cas de doute, on présente les deux options."
+        },
+        {
+          "q": "Où êtes-vous basés et intervenez-vous sur site à Paris ?",
+          "a": "Notre hub Paris est au 54 rue Greneta, 75002. Nos seniors peuvent intervenir sur site en région parisienne comme en hybride ou remote, et on est connectés à nos hubs de Montréal et Tokyo pour les besoins follow-the-sun."
+        }
+      ],
+      "en": [
+        {
+          "q": "What makes Abbeal a good Paris tech consulting firm for senior profiles?",
+          "a": "Abbeal only places senior engineers: blocking floor of 5 years tech experience, core target 7-12 years, target stack practiced recently. The profile you saw in pre-sales is the one who ships, and your first point of contact is an architect, not a sales rep. Paris hub at 54 rue Greneta (2nd arrondissement)."
+        },
+        {
+          "q": "What's the difference between an embedded squad and classic staff augmentation?",
+          "a": "In classic staff augmentation you carry the breakdown, onboarding, review and risk. An Abbeal embedded squad integrates into your rituals and takes ownership of a clear scope, with a senior technical lead on the Abbeal side ensuring coherence. You keep the roadmap, we own the execution."
+        },
+        {
+          "q": "Do you bill time-based or output-based?",
+          "a": "Time-based (régie / TJM) is our default: senior engineers embedded in your team, ongoing capacity, billed per day rate, with scope ownership. Output-based fixed-scope engagements are available as an option on well-framed perimeters (PERT estimation, SLOs, 6-month default guarantee). Both modes coexist — we recommend whichever fits your context."
+        },
+        {
+          "q": "How fast can you staff a senior developer in Paris?",
+          "a": "First senior within 48 to 72h on common stacks (React, Vue, Node, Java/Spring, Python, Kubernetes, Terraform), full squad within a few weeks depending on scope."
+        },
+        {
+          "q": "Do you offer freelance or permanent staff?",
+          "a": "Both. Depending on your need and the profile, the engagement can be freelance or Abbeal permanent staff. If unclear, we present both options."
+        },
+        {
+          "q": "Where are you based and do you work on-site in Paris?",
+          "a": "Our Paris hub is at 54 rue Greneta, 75002. Our seniors can work on-site in the Paris region, hybrid or remote, and we're connected to our Montréal and Tokyo hubs for follow-the-sun needs."
+        }
+      ],
+      "ja": [
+        {
+          "q": "パリでシニアプロフィールに強いテックコンサルティング会社としてのAbbealの強みは何ですか？",
+          "a": "Abbealはシニアエンジニアのみ配置：技術経験5年のブロッキング基準、中心ターゲット7〜12年、対象スタックの直近実践経験。商談で見た候補者が実際に納品し、最初の連絡先は営業ではなくアーキテクトです。パリ拠点はGreneta通り54番地（2区）。"
+        },
+        {
+          "q": "組込みチームと従来の人員増強の違いは？",
+          "a": "従来の人員増強では、分割、オンボーディング、レビュー、リスクをお客様が担います。Abbealの組込みチームはお客様のリチュアルに統合し、明確なスコープのオーナーシップを引き受け、Abbeal側のシニア技術リードが一貫性を保証します。ロードマップはお客様、実行は当社。"
+        },
+        {
+          "q": "時間ベースと成果ベース、どちらで請求しますか？",
+          "a": "時間ベース（régie / TJM）がデフォルト：チームに組込まれたシニアエンジニア、継続的キャパシティ、日額料金、スコープオーナーシップ付き。固定スコープの成果ベース契約もオプションとして提供可能（PERT見積、SLO、デフォルト6か月保証）。両モードが共存 — お客様の状況に応じて推奨します。"
+        },
+        {
+          "q": "パリでシニア開発者をどのくらいで配属できますか？",
+          "a": "主要スタック（React、Vue、Node、Java/Spring、Python、Kubernetes、Terraform）で初回シニア48〜72時間以内、スコープ次第でフルチーム数週間以内。"
+        },
+        {
+          "q": "フリーランスと正社員どちらを提供しますか？",
+          "a": "両方。ニーズとプロファイルに応じて、契約はフリーランスまたはAbbeal正社員のいずれかで実施可能。不明な場合は両オプションを提示します。"
+        },
+        {
+          "q": "拠点はどこですか、パリでオンサイト対応しますか？",
+          "a": "パリ拠点はGreneta通り54番地、75002。シニアはパリ地域でのオンサイト、ハイブリッド、リモートで対応可能。follow-the-sunニーズ向けにモントリオール・東京拠点と接続。"
+        }
+      ],
+      "fr-ca": [
+        {
+          "q": "Qu'est-ce qui fait d'Abbeal une bonne ESN à Paris pour des profils seniors ?",
+          "a": "Abbeal ne place que des ingénieurs seniors : plancher bloquant de 5 ans d'XP tech, coeur de cible 7-12 ans, stack cible pratiquée récemment. Le profil vu en avant-vente est celui qui livre, et votre premier interlocuteur est un architecte, pas un représentant. Hub à Paris, 54 rue Greneta (2e)."
+        },
+        {
+          "q": "Quelle est la différence entre un squad embarqué et de la régie classique ?",
+          "a": "En régie classique, vous portez le découpage, l'onboarding, la review et le risque. Un squad embarqué Abbeal s'intègre à vos rituels et prend l'ownership d'un périmètre clair, avec un référent technique senior côté Abbeal qui garantit la cohérence. Vous gardez la roadmap, on porte l'exécution."
+        },
+        {
+          "q": "Facturez-vous au temps passé ou au résultat ?",
+          "a": "Notre modèle par défaut, c'est la régie : du temps d'ingénieurs seniors embarqués dans vos équipes, avec ownership de périmètre, facturé au temps (TJM). Sur un périmètre bien cadré, on peut aussi s'engager au résultat en complément (chiffrage PERT, SLOs, observabilité, cadence de release, garantie 6 mois). Dans les deux cas, la valeur vient de la séniorité et de l'ownership, pas d'un mode de facturation."
         },
         {
           "q": "En combien de temps pouvez-vous staffer un développeur senior à Paris ?",

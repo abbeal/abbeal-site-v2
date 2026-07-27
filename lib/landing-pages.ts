@@ -1130,21 +1130,41 @@ export const landingPages: LandingPage[] = [
     relatedArticleSlug: "recruter-top-1-tech-process-48h",
     tape: {
       fr: "// PARIS",
+      en: "// PARIS",
+      ja: "// パリ",
+      "fr-ca": "// PARIS",
     },
+    // W31 : subtitle+meta reformules — le differenciateur = seniors-only +
+    // regie + ownership + peer-review (pas un mode de facturation).
     h1: {
       fr: "ESN à Paris pour développeurs seniors — la société de conseil tech qui ne staffe que du senior.",
+      en: "Paris tech consulting firm for senior developers — the engineering partner that only staffs seniors.",
+      ja: "シニアデベロッパー向けのパリのテックコンサルティングファーム — シニアのみを配置するエンジニアリングパートナー。",
+      "fr-ca": "Firme de conseil tech à Paris pour développeurs séniors — le partenaire d'ingénierie qui ne place que du sénior.",
     },
     subtitle: {
-      fr: "Hub Paris au 54 rue Greneta (2e). Squads embarqués d'ingénieurs seniors (7 à 12 ans d'XP), delivery mesuré à l'output, zéro junior déguisé. Vous parlez à un architecte, pas à un commercial.",
+      fr: "Hub Paris au 54 rue Greneta (2e). Ingénieurs seniors (7 à 12 ans d'XP) embarqués en régie et dans la durée, avec ownership de périmètre et peer-review collectif. Zéro junior déguisé. Vous parlez à un architecte, pas à un commercial.",
+      en: "Paris hub at 54 rue Greneta (2nd). Senior engineers (7 to 12 years of experience) embedded on your team, ongoing capacity, with scope ownership and collective peer review. No disguised juniors. You talk to an architect, not a sales rep.",
+      ja: "パリ拠点、Greneta通り54番地（2区）。シニアエンジニア（7〜12年の経験）をチームに組込み、継続的なキャパシティを提供、スコープオーナーシップと集合的ピアレビュー付き。ジュニアの偽装なし。営業ではなく、アーキテクトと話せます。",
+      "fr-ca": "Pôle Paris au 54 rue Greneta (2e). Ingénieurs séniors (7 à 12 ans d'XP) embarqués en régie pis dans la durée, avec ownership de portée pis peer-review collectif. Zéro junior déguisé. Vous parlez à un architecte, pas un représentant.",
     },
     metaDescription: {
-      fr: "ESN à Paris qui ne place que des développeurs seniors (7-12 ans d'XP). Squads embarqués, delivery mesuré à l'output, hub au 54 rue Greneta. Parlez à un architecte.",
+      fr: "ESN à Paris qui ne place que des développeurs seniors (7-12 ans d'XP). Ingénieurs embarqués en régie, avec ownership et peer-review. Hub au 54 rue Greneta. Parlez à un architecte.",
+      en: "Paris tech consulting firm that only places senior developers (7-12 years). Engineers embedded on your team, with ownership and peer review. Hub at 54 rue Greneta. Talk to an architect.",
+      ja: "シニアデベロッパー（7〜12年の経験）のみを配置するパリのテックコンサルティングファーム。オーナーシップとピアレビュー付きでチームに組込まれるエンジニア。Greneta通り54番地。アーキテクトと相談。",
+      "fr-ca": "Firme de conseil tech à Paris qui ne place que des développeurs séniors (7-12 ans d'XP). Ingénieurs embarqués en régie, avec ownership pis peer-review. Pôle au 54 rue Greneta. Parlez à un architecte.",
     },
     body: {
       fr: BODIES["esn-paris-developpeurs-seniors"]?.body?.fr ?? [],
+      en: BODIES["esn-paris-developpeurs-seniors"]?.body?.en,
+      ja: BODIES["esn-paris-developpeurs-seniors"]?.body?.ja,
+      "fr-ca": BODIES["esn-paris-developpeurs-seniors"]?.body?.["fr-ca"],
     },
     faq: {
       fr: BODIES["esn-paris-developpeurs-seniors"]?.faq?.fr ?? [],
+      en: BODIES["esn-paris-developpeurs-seniors"]?.faq?.en,
+      ja: BODIES["esn-paris-developpeurs-seniors"]?.faq?.ja,
+      "fr-ca": BODIES["esn-paris-developpeurs-seniors"]?.faq?.["fr-ca"],
     },
     extraSchema: {
       localBusiness: {
