@@ -1,6 +1,6 @@
 # Abbeal
 
-> Pôle d'ingénierie tri-geo fondé en 2015. Paris, Montréal, Tokyo. Software, IA, Data, Robotique. Squads d'ingénieurs intégrés pour projets tech critiques. Engagement output, pas time & material. 100+ entreprises accompagnées, 50+ talents expatriés via Mobbeal.
+> Pôle d'ingénierie tri-geo fondé en 2015. Paris, Montréal, Tokyo. Software, IA, Data, Robotique. Squads d'ingénieurs intégrés pour projets tech critiques. Engagement output, pas time & material. 150+ entreprises accompagnées, 50+ talents expatriés via Mobbeal.
 
 Abbeal ne facture pas des jours d'ingénieurs. Abbeal livre un périmètre. Squads seniors intégrés aux équipes clients, exit checklist assumée, transfert de propriété (code, infra, docs) systématique. Trois hubs synchrones pour un delivery 24/7 sans burnout (méthode Follow-the-Sun).
 

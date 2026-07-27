@@ -1688,7 +1688,7 @@
         },
         {
           "type": "p",
-          "content": "Abbeal, c'est 10 ans de recrutement tech, 100+ entreprises accompagnées, et trois bureaux physiques qui ne sont pas des boîtes postales : Paris (54 rue Greneta, 75002), Montréal (4388 rue Saint-Denis, H2J 2L1) et Tokyo (PMC Building, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Quand on vous présente un profil JLPT N2 à Tokyo ou un staff engineer Go à Montréal, c'est un humain qui l'a vu en vrai, pas un scraper LinkedIn."
+          "content": "Abbeal, c'est 10 ans de recrutement tech, 150+ entreprises accompagnées, et trois bureaux physiques qui ne sont pas des boîtes postales : Paris (54 rue Greneta, 75002), Montréal (4388 rue Saint-Denis, H2J 2L1) et Tokyo (PMC Building, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Quand on vous présente un profil JLPT N2 à Tokyo ou un staff engineer Go à Montréal, c'est un humain qui l'a vu en vrai, pas un scraper LinkedIn."
         },
         {
           "type": "h2",
@@ -1834,7 +1834,7 @@
         },
         {
           "type": "p",
-          "content": "Abbeal is 10 years of tech recruitment, 100+ companies served, and three physical offices that are not PO boxes: Paris (54 rue Greneta, 75002), Montreal (4388 rue Saint-Denis, H2J 2L1) and Tokyo (PMC Building, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). When we present a JLPT N2 profile in Tokyo or a Go staff engineer in Montreal, a human met them in person — not a LinkedIn scraper."
+          "content": "Abbeal is 10 years of tech recruitment, 150+ companies served, and three physical offices that are not PO boxes: Paris (54 rue Greneta, 75002), Montreal (4388 rue Saint-Denis, H2J 2L1) and Tokyo (PMC Building, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). When we present a JLPT N2 profile in Tokyo or a Go staff engineer in Montreal, a human met them in person — not a LinkedIn scraper."
         },
         {
           "type": "h2",
@@ -2126,7 +2126,7 @@
         },
         {
           "type": "p",
-          "content": "Abbeal, c'est 10 ans de recrutement techno, 100+ entreprises accompagnées, pis trois bureaux physiques qui sont pas des boîtes postales : Paris (54 rue Greneta, 75002), Montréal (4388 rue Saint-Denis, H2J 2L1) pis Tokyo (PMC Building, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Quand on te présente un profil JLPT N2 à Tokyo ou un staff engineer Go à Montréal, c'est un humain qui l'a vu en personne, pas un scraper LinkedIn."
+          "content": "Abbeal, c'est 10 ans de recrutement techno, 150+ entreprises accompagnées, pis trois bureaux physiques qui sont pas des boîtes postales : Paris (54 rue Greneta, 75002), Montréal (4388 rue Saint-Denis, H2J 2L1) pis Tokyo (PMC Building, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Quand on te présente un profil JLPT N2 à Tokyo ou un staff engineer Go à Montréal, c'est un humain qui l'a vu en personne, pas un scraper LinkedIn."
         },
         {
           "type": "h2",
@@ -4669,6 +4669,32 @@
           "label": "Voir notre offre de recrutement tech",
           "href": "/fr/recrutement-tech-montreal",
           "external": false
+        },
+        {
+          "type": "h2",
+          "content": "Développement logiciel à Montréal : la profondeur d'un cabinet, l'agilité d'une squad"
+        },
+        {
+          "type": "p",
+          "content": "Le développement logiciel à Montréal, c'est notre cœur de métier depuis 2023 : 15+ consultants séniors placés en full-stack (React, Vue, Next.js), backend (Node.js, Kotlin, Go, Rust, Java Spring), data (Python, Snowflake, Databricks), MLOps (SageMaker, Vertex AI) et devops (Terraform, Kubernetes, GitOps). Nos squads embarquées livrent en Continuous Delivery sur trunk-based development, avec des cycles de déploiement <30 min en prod. Zéro sous-traitance offshore : 100% des développeurs sont basés au Québec, en France ou au Japon, salariés Abbeal."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Développement logiciel sur mesure : SaaS métier, portails clients, back-office critique, migration monolithes → microservices",
+            "Développement mobile : React Native, Flutter, natif iOS/Android (Swift/Kotlin) avec pipeline CI/CD Fastlane + TestFlight",
+            "Développement d'API : GraphQL Apollo, REST OpenAPI, gRPC, event-driven Kafka/RabbitMQ",
+            "Développement IA/ML : RAG, fine-tuning LLM privés, LangChain, LlamaIndex, agents en production",
+            "Développement embedded/robotique : ROS 2, C++/Rust, drones autonomes, systèmes temps réel"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Cas anonymisé Montréal — banque privée, migration legacy Java 8 → 21 (2024-2025)"
+        },
+        {
+          "type": "p",
+          "content": "Contexte : une banque privée québécoise (5000 employés) migre son core-banking legacy Java 8 vers Java 21 + Spring Boot 3, avec réécriture des modules de KYC/AML et refonte de l'interface conseiller (Angular → Next.js 15). Squad Abbeal : 6 séniors (3 backend, 2 fullstack, 1 SRE) embarqués 14 mois. Résultat : livraison en 3 vagues sans downtime, throughput multiplié par 4 (600 → 2400 tx/sec), coûts cloud AWS -38%, temps de génération d'un rapport de conformité passé de 45 min à 90 s. Conformité Loi 25 et OSFI-B13 native. Références sur demande sous NDA."
         }
       ],
       "fr-ca": [
@@ -4838,6 +4864,32 @@
           "label": "Voir notre offre de recrutement tech",
           "href": "/fr-ca/recrutement-tech-montreal",
           "external": false
+        },
+        {
+          "type": "h2",
+          "content": "Développement logiciel à Montréal : la profondeur d'un cabinet, l'agilité d'une squad"
+        },
+        {
+          "type": "p",
+          "content": "Le développement logiciel à Montréal, c'est notre cœur de métier depuis 2023 : 15+ consultants séniors placés en full-stack (React, Vue, Next.js), backend (Node.js, Kotlin, Go, Rust, Java Spring), données (Python, Snowflake, Databricks), MLOps (SageMaker, Vertex AI) pis devops (Terraform, Kubernetes, GitOps). Nos squads embarquées livrent en Continuous Delivery sur trunk-based development, avec des cycles de déploiement <30 min en prod. Zéro sous-traitance offshore : 100% des développeurs sont basés au Québec, en France ou au Japon, salariés Abbeal."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Développement logiciel sur mesure : SaaS métier, portails clients, back-office critique, migration monolithes → microservices",
+            "Développement mobile : React Native, Flutter, natif iOS/Android (Swift/Kotlin) avec pipeline CI/CD Fastlane + TestFlight",
+            "Développement d'API : GraphQL Apollo, REST OpenAPI, gRPC, event-driven Kafka/RabbitMQ",
+            "Développement IA/ML : RAG, fine-tuning LLM privés, LangChain, LlamaIndex, agents en production",
+            "Développement embarqué/robotique : ROS 2, C++/Rust, drones autonomes, systèmes temps réel"
+          ]
+        },
+        {
+          "type": "h2",
+          "content": "Cas anonymisé Montréal — banque privée, migration legacy Java 8 → 21 (2024-2025)"
+        },
+        {
+          "type": "p",
+          "content": "Contexte : une banque privée québécoise (5000 employés) migre son core-banking legacy Java 8 vers Java 21 + Spring Boot 3, avec réécriture des modules de KYC/AML pis refonte de l'interface conseiller (Angular → Next.js 15). Squad Abbeal : 6 séniors (3 backend, 2 fullstack, 1 SRE) embarqués 14 mois. Résultat : livraison en 3 vagues sans downtime, throughput multiplié par 4 (600 → 2400 tx/sec), coûts cloud AWS -38%, temps de génération d'un rapport de conformité passé de 45 min à 90 s. Conformité Loi 25 pis OSFI-B13 native. Références sur demande sous NDA."
         }
       ]
     },
@@ -4882,6 +4934,18 @@
         {
           "q": "Consultation IA à Montréal — Mila / IVADO ?",
           "a": "Abbeal Montréal est à 10 min de Mila et IVADO. On accompagne les entreprises québécoises (BNC, Paraito, healthtech) sur l'IA production réelle (pas des POCs bloqués en démo) : RAG avec pgvector/Pinecone, agents LLM (Claude/GPT/Llama), evals CI Promptfoo/Langfuse, fine-tuning Mistral open-weight. Compliance Loi 25 bakée dès le sprint 1. Formats : squad embarqué ou delivery output-based."
+        },
+        {
+          "q": "Qu'est-ce que le développement logiciel à Montréal chez Abbeal ?",
+          "a": "Notre offre développement logiciel Montréal, c'est des squads seniors embarquées (2 à 8 devs) qui livrent du software critique en Continuous Delivery : SaaS métier, back-office bancaire/assurance, plateformes IA, back-office data, migration legacy. Bureau physique 4388 Saint-Denis, 15+ consultants dispo. Pas de sous-traitance offshore : 100% dev Canada/France/Japon salariés Abbeal. Cadrage gratuit 30 min pour scoper votre besoin."
+        },
+        {
+          "q": "Quels secteurs vous couvrez à Montréal ?",
+          "a": "Fintech (BNC, Desjardins, Nuvei, Wealthsimple), IA/recherche (Mila, IVADO, ElementAI-legacy), énergie (Hydro-Québec, Cascades), aérospatiale (Bombardier, CAE, Pratt & Whitney Canada), télécoms (Cogeco, Bell, Videotron), santé numérique (CIUSSS, RAMQ, Dialogue), retail e-commerce (Lightspeed, SSENSE, Frank & Oak). Loi 25 native sur chaque mission, OSFI-B13 pour la fintech."
+        },
+        {
+          "q": "Combien coûte une squad de développement logiciel à Montréal ?",
+          "a": "Notre TJM sénior à Montréal se situe entre 850 et 1350 CAD/j selon la stack et la mission (fintech / IA / cloud-native). Squad type de 4 séniors sur 3 mois : entre 200k et 320k CAD. Devis output-based ou T&M possible. Comparaison honnête vs concurrents : moins cher que Deloitte Digital (2000+ CAD/j moyen) et Cofomo (1600+ CAD/j), équivalent aux boutiques indépendantes type Osedea ou Mirego, plus cher qu'une offre offshore Ukraine/Inde mais avec un delivery et une gouvernance Nord-Amérique."
         }
       ],
       "fr-ca": [
@@ -4924,6 +4988,18 @@
         {
           "q": "Consultation IA à Montréal — Mila / IVADO ?",
           "a": "Abbeal Montréal est à 10 min de Mila pis IVADO. On accompagne les entreprises québécoises (BNC, Paraito, healthtech) sur l'IA en production réelle (pas des POCs bloqués en démo) : RAG avec pgvector/Pinecone, agents LLM (Claude/GPT/Llama), evals CI Promptfoo/Langfuse, fine-tuning Mistral open-weight. Conformité Loi 25 intégrée dès le sprint 1. Formats : squad embarqué ou livraison output-based."
+        },
+        {
+          "q": "Qu'est-ce que le développement logiciel à Montréal chez Abbeal ?",
+          "a": "Notre offre développement logiciel Montréal, c'est des squads séniors embarquées (2 à 8 devs) qui livrent du software critique en Continuous Delivery : SaaS métier, back-office bancaire/assurance, plateformes IA, back-office data, migration legacy. Bureau physique 4388 Saint-Denis, 15+ consultants dispo. Pas de sous-traitance offshore : 100% dev Canada/France/Japon salariés Abbeal. Cadrage gratuit 30 min pour scoper votre besoin."
+        },
+        {
+          "q": "Quels secteurs vous couvrez à Montréal ?",
+          "a": "Fintech (BNC, Desjardins, Nuvei, Wealthsimple), IA/recherche (Mila, IVADO, ElementAI-legacy), énergie (Hydro-Québec, Cascades), aérospatiale (Bombardier, CAE, Pratt & Whitney Canada), télécoms (Cogeco, Bell, Videotron), santé numérique (CIUSSS, RAMQ, Dialogue), commerce électronique (Lightspeed, SSENSE, Frank & Oak). Loi 25 native sur chaque mission, OSFI-B13 pour la fintech."
+        },
+        {
+          "q": "Combien coûte une squad de développement logiciel à Montréal ?",
+          "a": "Notre TJM sénior à Montréal se situe entre 850 pis 1350 CAD/j selon la stack pis la mission (fintech / IA / cloud-native). Squad type de 4 séniors sur 3 mois : entre 200k pis 320k CAD. Devis basé résultats ou T&M possible. Comparaison honnête vs concurrents : moins cher que Deloitte Digital (2000+ CAD/j moyen) pis Cofomo (1600+ CAD/j), équivalent aux boutiques indépendantes type Osedea ou Mirego, plus cher qu'une offre offshore Ukraine/Inde mais avec un delivery pis une gouvernance Nord-Amérique."
         }
       ]
     }
