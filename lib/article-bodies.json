@@ -505,6 +505,37 @@
       {
         "type": "p",
         "content": "Ces sept leviers ne demandent pas une refonte. Ils demandent une discipline d'ingénierie et un sponsor exec. Si vous voulez auditer votre infra et bâtir une roadmap GreenOps chiffrée, nos équipes interviennent en mode commando, livrables en six semaines."
+      },
+      {
+        "type": "h2",
+        "content": "GreenOps chez Abbeal : notre méthode d'audit en 3 semaines"
+      },
+      {
+        "type": "p",
+        "content": "Notre audit GreenOps type se déroule en 3 semaines calendaires. Semaine 1 : inventaire cloud complet (comptes, régions, services, waste identification) + baseline carbone via Cloud Carbon Footprint (open source, précis à ±10% vs les 8-12% des offres cloud provider natives). Semaine 2 : quick wins immédiats (rightsizing EC2/RDS via AWS Compute Optimizer, réservations d'instances 1-year, S3 tiering IA/Glacier, arrêt planifié des envs dev nights/weekends). Semaine 3 : plan roadmap 6 mois pour les gains structurels (migration Kubernetes → serverless quand pertinent, refactoring queries DB coûteuses, adoption ARM/Graviton). Livrable final : rapport Lighthouse 90+ chiffré, gains attendus mensuels en $ et kg CO2, backlog priorisé."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Lighthouse Web frontend : objectif score 90+ sur les 3 axes Performance/Accessibility/Best Practices — mesuré en labo + Field CrUX",
+          "AWS Compute Optimizer + CloudHealth : rightsizing automatique sur EC2, RDS, EBS, Lambda memory",
+          "Cloud Carbon Footprint (open source Thoughtworks) : baseline précise CO2 par service AWS/GCP/Azure",
+          "Kubernetes cost-observability : Kubecost, OpenCost, Kepler (Kubernetes-based Efficient Power Level Exporter) pour attribution kWh/pod",
+          "Réservations d'instances 1-year : ROI typique 15-25% sur EC2 selon workload, ROI 40-50% sur RDS avec workload prévisible"
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "Cas anonymisé GreenOps — SaaS français Retail, -32% facture AWS en 8 semaines"
+      },
+      {
+        "type": "p",
+        "content": "Contexte : un SaaS français de retail-tech (250k utilisateurs actifs, 12M€ ARR, hébergé AWS eu-west-3 Paris) constate une explosion de la facture AWS (+45% en 6 mois) après une migration K8s hâtive. Squad Abbeal GreenOps : 2 consultants séniors (1 FinOps, 1 SRE) sur 8 semaines. Actions : rightsizing 40 EC2 sur-provisionnées (économie $8k/mois), passage EKS r5.xlarge → r6g.xlarge Graviton (-22% coût + -18% CO2), refactoring 6 queries PostgreSQL trop coûteuses (économie 3 replicas RDS = $12k/mois), archivage S3 IA/Glacier des logs >90j ($4k/mois). Résultat : -32% facture AWS (économie annualisée $340k), -28% empreinte CO2 mesurée, Lighthouse score frontend Web passé de 68 à 94."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "→ [Cadrage gratuit 30 min · Audit GreenOps Abbeal](/fr/contact) — parler à un Tech Lead senior (pas un commercial) pour scoper un audit sur votre stack cloud."
       }
     ],
     "en": [
@@ -590,6 +621,37 @@
       {
         "type": "p",
         "content": "These seven levers don't require a rewrite. They require engineering discipline and an exec sponsor. If you want to audit your infra and build a quantified GreenOps roadmap, our teams operate in commando mode, deliverables in six weeks."
+      },
+      {
+        "type": "h2",
+        "content": "GreenOps at Abbeal: our 3-week audit method"
+      },
+      {
+        "type": "p",
+        "content": "Our typical GreenOps audit runs over 3 calendar weeks. Week 1: complete cloud inventory (accounts, regions, services, waste identification) + carbon baseline via Cloud Carbon Footprint (open source, ±10% accuracy vs 8-12% for cloud-provider-native offerings). Week 2: immediate quick wins (EC2/RDS rightsizing via AWS Compute Optimizer, 1-year reserved instances, S3 IA/Glacier tiering, scheduled shutdown of dev envs nights/weekends). Week 3: 6-month roadmap plan for structural gains (Kubernetes → serverless migration when relevant, costly DB query refactoring, ARM/Graviton adoption). Final deliverable: quantified Lighthouse 90+ report, expected monthly gains in $ and kg CO2, prioritized backlog."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Lighthouse Web frontend: 90+ score target across Performance/Accessibility/Best Practices — measured in lab + Field CrUX",
+          "AWS Compute Optimizer + CloudHealth: automatic rightsizing on EC2, RDS, EBS, Lambda memory",
+          "Cloud Carbon Footprint (open source Thoughtworks): accurate CO2 baseline per AWS/GCP/Azure service",
+          "Kubernetes cost-observability: Kubecost, OpenCost, Kepler (Kubernetes-based Efficient Power Level Exporter) for kWh/pod attribution",
+          "1-year reserved instances: typical 15-25% ROI on EC2 depending on workload, 40-50% ROI on RDS with predictable workload"
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "Anonymized case study GreenOps — French Retail SaaS, -32% AWS bill in 8 weeks"
+      },
+      {
+        "type": "p",
+        "content": "Context: a French retail-tech SaaS (250k active users, €12M ARR, hosted AWS eu-west-3 Paris) sees an AWS bill explosion (+45% in 6 months) after a hasty K8s migration. Abbeal GreenOps squad: 2 senior consultants (1 FinOps, 1 SRE) over 8 weeks. Actions: rightsizing 40 over-provisioned EC2 ($8k/month savings), EKS r5.xlarge → r6g.xlarge Graviton migration (-22% cost + -18% CO2), refactoring 6 costly PostgreSQL queries (savings of 3 RDS replicas = $12k/month), S3 IA/Glacier archival for logs >90d ($4k/month). Result: -32% AWS bill (annualized savings $340k), -28% measured CO2 footprint, Web frontend Lighthouse score jumped from 68 to 94."
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "→ [Free 30-min scoping call · Abbeal GreenOps Audit](/en/contact) — talk to a senior Tech Lead (not a sales rep) to scope an audit on your cloud stack."
       }
     ],
     "ja": [
@@ -2935,6 +2997,48 @@
       {
         "type": "p",
         "content": "Si vous opérez sur plusieurs juridictions et que votre matrice de conformité tient sur trois Excel non synchronisés, nos équipes franco-japonaises ont déjà conçu et fait certifier ce type d'architecture. Discutons-en avant le prochain audit."
+      },
+      {
+        "type": "h2",
+        "content": "Comment on choisit entre SecNumCloud et APPI en 2026"
+      },
+      {
+        "type": "p",
+        "content": "SecNumCloud (ANSSI, France) et APPI (Japon, Personal Information Protection Act) sont deux référentiels de souveraineté distincts, adressés à des besoins client complètement différents. Notre grille de décision opérationnelle, éprouvée sur BNP Paribas, SG, Le Monde et Money Forward :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Données citoyens français à traiter → SecNumCloud obligatoire pour l'État, HDS pour la santé, DORA pour la finance (janvier 2025)",
+          "Données citoyens japonais → conformité APPI + 個人情報保護法 (Kojin Jouhou Hogo Hou), notamment si opérations en 越境移転 (cross-border transfer)",
+          "Data lake mondial pour groupe FR-JP → double conformité, ancrage géographique 3AZ (Paris + Tokyo au minimum), traçabilité audit trail full-EU/JP",
+          "Migration cloud sans SecNumCloud (US-based hyperscaler) → risque contractuel + réputationnel, non-compatible avec les appels d'offres État français depuis 2023",
+          "Backup froid non-critique → cloud US OK avec chiffrement E2EE (KMS client) et data residency Europe (region eu-west-3 Paris)"
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "Fournisseurs SecNumCloud qualifiés 2026 (liste ANSSI officielle)"
+      },
+      {
+        "type": "p",
+        "content": "Panorama à date des offres qualifiées SecNumCloud sur le marché français, tel que nous les recommandons selon le contexte (banque, assurance, État, santé, tech industriel) :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "OVHcloud SecNumCloud (Roubaix + Gravelines) — leader marché, offre IaaS + PaaS Kubernetes, largement adopté BNP/SG/AXA",
+          "Outscale (Dassault Systèmes, Paris) — pionnier SecNumCloud 3.2, forte présence Défense/Aéro (Thales, Safran, Naval Group)",
+          "Cloud Temple (Bull/Atos, Paris) — cloud souverain pour l'État, hébergeur France Services",
+          "NumSpot (Docaposte + Dassault + Bouygues + Banque des Territoires) — arrivée 2024, focus secteur public + collectivités",
+          "Bleu (Capgemini + Orange, distributeur Microsoft Azure sous SecNumCloud) — encore en qualification, dispo 2025",
+          "S3NS (Google + Thales, distributeur Google Cloud sous SecNumCloud) — encore en qualification, dispo 2025-2026"
+        ]
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "→ [Nos squads seniors pour projets souverains SecNumCloud, HDS, DORA](/fr/services/squads-embarques) — consultants habilités qui interviennent sur ces environnements chez BNP, SG, AXA et l'État français."
       }
     ],
     "en": [
@@ -3014,6 +3118,48 @@
       {
         "type": "p",
         "content": "If you operate across multiple jurisdictions and your compliance matrix fits in three unsynchronized Excel files, our Franco-Japanese teams have already designed and certified this type of architecture. Let's talk before the next audit."
+      },
+      {
+        "type": "h2",
+        "content": "How we choose between SecNumCloud and APPI in 2026"
+      },
+      {
+        "type": "p",
+        "content": "SecNumCloud (ANSSI, France) and APPI (Japan, Personal Information Protection Act) are two distinct sovereignty frameworks, addressing completely different client needs. Our operational decision grid, battle-tested on BNP Paribas, SG, Le Monde and Money Forward:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "French citizen data to process → SecNumCloud mandatory for the State, HDS for healthcare, DORA for finance (January 2025)",
+          "Japanese citizen data → APPI + 個人情報保護法 (Personal Information Protection Act) compliance, especially with 越境移転 (cross-border transfer) operations",
+          "Global data lake for FR-JP group → dual compliance, 3AZ geographic anchoring (Paris + Tokyo minimum), full-EU/JP audit trail traceability",
+          "Cloud migration without SecNumCloud (US-based hyperscaler) → contractual + reputational risk, non-compatible with French State tenders since 2023",
+          "Cold non-critical backup → US cloud OK with E2EE encryption (client KMS) and Europe data residency (eu-west-3 Paris region)"
+        ]
+      },
+      {
+        "type": "h2",
+        "content": "SecNumCloud qualified providers 2026 (official ANSSI list)"
+      },
+      {
+        "type": "p",
+        "content": "Overview of qualified SecNumCloud offerings on the French market, as we recommend them based on context (banking, insurance, State, healthcare, industrial tech):"
+      },
+      {
+        "type": "list",
+        "items": [
+          "OVHcloud SecNumCloud (Roubaix + Gravelines) — market leader, IaaS + Kubernetes PaaS offering, widely adopted by BNP/SG/AXA",
+          "Outscale (Dassault Systèmes, Paris) — SecNumCloud 3.2 pioneer, strong Defense/Aerospace presence (Thales, Safran, Naval Group)",
+          "Cloud Temple (Bull/Atos, Paris) — sovereign cloud for the State, France Services hosting provider",
+          "NumSpot (Docaposte + Dassault + Bouygues + Banque des Territoires) — launched 2024, focus on public sector + local governments",
+          "Bleu (Capgemini + Orange, Microsoft Azure distributor under SecNumCloud) — still under qualification, available 2025",
+          "S3NS (Google + Thales, Google Cloud distributor under SecNumCloud) — still under qualification, available 2025-2026"
+        ]
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "→ [Our senior squads for sovereign SecNumCloud, HDS, DORA projects](/en/services/squads-embarques) — cleared consultants who work on these environments at BNP, SG, AXA and the French State."
       }
     ],
     "ja": [

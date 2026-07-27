@@ -700,10 +700,11 @@ export const landingPages: LandingPage[] = [
     },
     h1: {
       // W28 near-miss #4 : /fr/entreprise-...-montreal pos 16.7 / 157 imp.
-      // H1 densifie mots-cles ('ESN Montreal', 'squad ingenierie senior',
-      // 'developpement web/logiciel Quebec') pour ranker top 10.
-      fr: "Entreprise de développement informatique à Montréal — ESN & squads d'ingénierie senior pour PME et grands groupes québécois.",
-      "fr-ca": "Entreprise de développement informatique à Montréal — Cabinet & squads d'ingénierie senior pour PME pis grands groupes québécois.",
+      // W31 QW1 : audit GSC W31 (27,6 sur 1075 imp), demande "developpement
+      // logiciel Montreal" explicite. Densifie double-terme (logiciel +
+      // informatique) pour capter les deux formulations sans perdre ranking.
+      fr: "Entreprise de développement logiciel & informatique à Montréal — ESN, cabinet conseil TI et squads d'ingénierie seniors pour PME et grands groupes québécois.",
+      "fr-ca": "Entreprise de développement logiciel & informatique à Montréal — Cabinet conseil TI pis squads d'ingénierie séniors pour PME pis grands groupes québécois.",
     },
     subtitle: {
       fr: "Hub Montréal depuis 2023 (4388 rue Saint-Denis, Plateau-Mont-Royal). Squads embarqués · recrutement tech · delivery clé en main. Software, IA, Data, Robotique. Clients Banque Nationale, Hydro-Québec, Desjardins, Cogeco. Vianney Blanquart au pilotage. Mobilité Mobbeal France↔Canada↔Japon possible.",
