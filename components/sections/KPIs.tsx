@@ -31,7 +31,6 @@ const LOGOS_ROW_2 = [
   { slug: "desjardins", name: "Desjardins" },
   { slug: "hydro-quebec", name: "Hydro-Québec" },
   { slug: "edf", name: "EDF" },
-  { slug: "cartier", name: "Cartier" },
   { slug: "ticketmaster", name: "Ticketmaster" },
   { slug: "pwc", name: "PwC" },
   { slug: "le-monde", name: "Le Monde" },

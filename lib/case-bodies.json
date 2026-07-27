@@ -4125,9 +4125,18 @@
       }
     ],
     "ja": [
-      {"type": "p", "content": "ケベック州プライバシー委員会（CAI）監査の6週間前、モントリオールのフィンテック（B2B、約80名、FR-CA越境決済）は、Loi 25準拠がPowerPointの段階に留まっていることに気付きました。社内DPOは退職、外部法律事務所はプライバシーポリシーは納品したものの技術的パイプラインは未提供。最悪の場合：CAI罰金最大2,500万カナダドル、または世界売上の4%。"},
-      {"type": "p", "content": "詳細はFR-CA版で公開：上の言語切替でフランス語（カナダ）版へ。Abbealのモントリオール拠点（アメリカ大陸ハブ）から3名のエンジニア、6週間の集中納品、週次サイクル。Audit-as-codeアプローチ、継続的デリバリー、CTOおよび法律事務所との週次レビュー。"},
-      {"type": "p", "content": "成果：納品2週間後にCAI監査を留保なしで通過。製品ロードマップへの影響ゼロ。データアクセス要求の処理時間40%短縮。同意パイプラインは他法域向けテンプレートとして再利用可能（Ontario PIPEDA展開Q3 2026予定）。"}
+      {
+        "type": "p",
+        "content": "ケベック州プライバシー委員会（CAI）監査の6週間前、モントリオールのフィンテック（B2B、約80名、FR-CA越境決済）は、Loi 25準拠がPowerPointの段階に留まっていることに気付きました。社内DPOは退職、外部法律事務所はプライバシーポリシーは納品したものの技術的パイプラインは未提供。最悪の場合：CAI罰金最大2,500万カナダドル、または世界売上の4%。"
+      },
+      {
+        "type": "p",
+        "content": "詳細はFR-CA版で公開：上の言語切替でフランス語（カナダ）版へ。Abbealのモントリオール拠点（アメリカ大陸ハブ）から3名のエンジニア、6週間の集中納品、週次サイクル。Audit-as-codeアプローチ、継続的デリバリー、CTOおよび法律事務所との週次レビュー。"
+      },
+      {
+        "type": "p",
+        "content": "成果：納品2週間後にCAI監査を留保なしで通過。製品ロードマップへの影響ゼロ。データアクセス要求の処理時間40%短縮。同意パイプラインは他法域向けテンプレートとして再利用可能（Ontario PIPEDA展開Q3 2026予定）。"
+      }
     ]
   },
   "le-monde": {
@@ -5884,7 +5893,7 @@
     "fr": [
       {
         "type": "p",
-        "content": "Cartier. Maison de joaillerie et d'horlogerie du Groupe Richemont. Un partenariat tech continu, du premier audit fin 2021 jusqu'a l'infrastructure LLM privee aujourd'hui. Une trajectoire qu'aucun pitch commercial ne peut inventer : elle se construit projet apres projet."
+        "content": "un client retail/luxe international. Maison de joaillerie et d'horlogerie du Groupe Richemont. Un partenariat tech continu, du premier audit fin 2021 jusqu'a l'infrastructure LLM privee aujourd'hui. Une trajectoire qu'aucun pitch commercial ne peut inventer : elle se construit projet apres projet."
       },
       {
         "type": "h2",
@@ -5903,9 +5912,9 @@
         "items": [
           "Compass (audits 2023 + 2025) : web app pricing & benchmarking pour les equipes marketing. Audit Front en 2023 puis audit Back en 2025 (14 recommandations P1/P2/P3 sur securite, perf, qualite)",
           "Mapper V1 + 1.1 + RSP/WWP (2023) : generateur de mappings produits pour le marketing horlogerie puis joaillerie. 77 jours de developpement initial puis extensions iteratives",
-          "ETL Donnees Joaillerie / Horlogerie (2023-2024) : pipeline d'integration de donnees concurrence sur la stack data Cartier (BigQuery, Dataflow)",
-          "POC LLM Web Dev (mai 2023) : premiere brique exploratoire sur les LLMs cote front. Trois ans plus tard, c'est devenu un projet structurant de l'infra IA Cartier",
-          "LLM prive (2026, en cours) : pipeline data -> fine-tuning sur infra Cartier -> evaluation perf -> monitoring production. Driver : confidentialite absolue, les donnees luxe ne quittent jamais l'infrastructure interne"
+          "ETL Donnees Joaillerie / Horlogerie (2023-2024) : pipeline d'integration de donnees concurrence sur la stack data un client retail/luxe international (BigQuery, Dataflow)",
+          "POC LLM Web Dev (mai 2023) : premiere brique exploratoire sur les LLMs cote front. Trois ans plus tard, c'est devenu un projet structurant de l'infra IA un client retail/luxe international",
+          "LLM prive (2026, en cours) : pipeline data -> fine-tuning sur infra un client retail/luxe international -> evaluation perf -> monitoring production. Driver : confidentialite absolue, les donnees luxe ne quittent jamais l'infrastructure interne"
         ],
         "ordered": true
       },
@@ -5920,7 +5929,7 @@
           "Backend : Python, FastAPI, Uvicorn, Pandas, Jupyter pour les notebooks data science",
           "Frontend : Next.js + React + D3 pour la dataviz, Vue.js / Nuxt sur certains outils internes",
           "Data engineering : ETL custom sur BigQuery, transformations dbt-style, orchestration via Dataflow",
-          "GenAI : LLM prives fine-tunes sur infra Cartier, RAG sur le corpus interne, eval perf et monitoring continu en production",
+          "GenAI : LLM prives fine-tunes sur infra un client retail/luxe international, RAG sur le corpus interne, eval perf et monitoring continu en production",
           "Securite : Firebase Auth, SSO SAML/OIDC, parameterized queries (suite aux recommandations audit)"
         ],
         "ordered": false
@@ -5928,7 +5937,7 @@
       {
         "type": "callout",
         "tone": "teal",
-        "content": "L'IA souveraine pour une maison de luxe, ce n'est pas un slogan : c'est une contrainte architecture. Les donnees produit, les designs en cours, les analyses concurrence ne peuvent pas transiter chez un fournisseur tiers. Donc on ne deploie pas un wrapper sur OpenAI : on construit, on fine-tune, on heberge, on monitore. C'est la prestation que Cartier nous a confiee, et c'est celle qu'on rejoue aujourd'hui chez d'autres maisons de luxe et acteurs reglementes."
+        "content": "L'IA souveraine pour une maison de luxe, ce n'est pas un slogan : c'est une contrainte architecture. Les donnees produit, les designs en cours, les analyses concurrence ne peuvent pas transiter chez un fournisseur tiers. Donc on ne deploie pas un wrapper sur OpenAI : on construit, on fine-tune, on heberge, on monitore. C'est la prestation que un client retail/luxe international nous a confiee, et c'est celle qu'on rejoue aujourd'hui chez d'autres maisons de luxe et acteurs reglementes."
       },
       {
         "type": "h2",
@@ -5939,7 +5948,7 @@
         "items": [
           "Multi-projets, pas un seul gros chantier : Compass, Mapper, ETL, POC LLM, LLM prive. Chaque livrable a justifie le suivant",
           "Multi-fonctions : marketing produit, marketing pricing, data office, et aujourd'hui IA. Abbeal n'est pas range dans un silo unique",
-          "Multi-pays : Geneve (Cartier Suisse, entite contractante), Paris, Tokyo (echanges directs avec l'equipe Japon)",
+          "Multi-pays : Geneve (un client retail/luxe international Suisse, entite contractante), Paris, Tokyo (echanges directs avec l'equipe Japon)",
           "Continuite humaine : equipe pilote stable, transferts de competence quand la perimetre change, jamais de discontinuite dans la connaissance accumulee",
           "Posture studio premium : on ne staffe pas en regie au volume. On livre du produit, on travaille la qualite, on documente. C'est ce que valide le passage Compass -> LLM prive"
         ],
@@ -5951,13 +5960,13 @@
       },
       {
         "type": "p",
-        "content": "Une relation continue avec une marque comme Cartier, ca ne se decide pas a la signature. Ca se gagne livrable apres livrable. La premiere fois on est evalue sur un audit. La deuxieme sur du build. La troisieme sur de la data. La quatrieme sur de l'IA souveraine. A chaque etape, c'est la meme equipe et la meme exigence, juste un perimetre qui s'elargit. C'est exactement la posture qu'on cherche a etendre sur les autres maisons de luxe en Europe et au Japon."
+        "content": "Une relation continue avec une marque comme un client retail/luxe international, ca ne se decide pas a la signature. Ca se gagne livrable apres livrable. La premiere fois on est evalue sur un audit. La deuxieme sur du build. La troisieme sur de la data. La quatrieme sur de l'IA souveraine. A chaque etape, c'est la meme equipe et la meme exigence, juste un perimetre qui s'elargit. C'est exactement la posture qu'on cherche a etendre sur les autres maisons de luxe en Europe et au Japon."
       }
     ],
     "en": [
       {
         "type": "p",
-        "content": "Cartier. Jewellery and watchmaking house, part of Richemont Group. A continuous tech partnership, from the first audit in late 2021 to today's private LLM infrastructure. A trajectory no sales pitch can manufacture: it gets built one project after the other."
+        "content": "un client retail/luxe international. Jewellery and watchmaking house, part of Richemont Group. A continuous tech partnership, from the first audit in late 2021 to today's private LLM infrastructure. A trajectory no sales pitch can manufacture: it gets built one project after the other."
       },
       {
         "type": "h2",
@@ -5976,9 +5985,9 @@
         "items": [
           "Compass (audits 2023 + 2025): web app for pricing and benchmarking by marketing teams. Front audit in 2023 then Back audit in 2025 (14 P1/P2/P3 recommendations on security, performance, quality)",
           "Mapper V1 + 1.1 + RSP/WWP (2023): product mapping generator for watchmaking then jewellery marketing. 77 days of initial development then iterative extensions",
-          "Jewellery / Watchmaking Data ETL (2023-2024): competitive data integration pipeline on Cartier's data stack (BigQuery, Dataflow)",
-          "POC LLM Web Dev (May 2023): first exploratory brick on LLMs front-side. Three years later, it became a structuring project of Cartier's AI infra",
-          "Private LLM (2026, ongoing): data pipeline -> fine-tuning on Cartier infra -> performance evaluation -> production monitoring. Driver: absolute confidentiality, luxury data never leaves the internal infrastructure"
+          "Jewellery / Watchmaking Data ETL (2023-2024): competitive data integration pipeline on un client retail/luxe international's data stack (BigQuery, Dataflow)",
+          "POC LLM Web Dev (May 2023): first exploratory brick on LLMs front-side. Three years later, it became a structuring project of un client retail/luxe international's AI infra",
+          "Private LLM (2026, ongoing): data pipeline -> fine-tuning on un client retail/luxe international infra -> performance evaluation -> production monitoring. Driver: absolute confidentiality, luxury data never leaves the internal infrastructure"
         ],
         "ordered": true
       },
@@ -5993,7 +6002,7 @@
           "Backend: Python, FastAPI, Uvicorn, Pandas, Jupyter for data science notebooks",
           "Frontend: Next.js + React + D3 for dataviz, Vue.js / Nuxt on some internal tools",
           "Data engineering: custom ETL on BigQuery, dbt-style transformations, orchestration via Dataflow",
-          "GenAI: private LLMs fine-tuned on Cartier infra, RAG on internal corpus, perf eval and continuous production monitoring",
+          "GenAI: private LLMs fine-tuned on client infra, RAG on internal corpus, perf eval and continuous production monitoring",
           "Security: Firebase Auth, SAML/OIDC SSO, parameterized queries (following audit recommendations)"
         ],
         "ordered": false
@@ -6001,7 +6010,7 @@
       {
         "type": "callout",
         "tone": "teal",
-        "content": "Sovereign AI for a luxury house isn't a slogan, it's an architecture constraint. Product data, in-progress designs, competitive analyses can't transit through a third-party vendor. So we don't deploy a wrapper on OpenAI: we build, we fine-tune, we host, we monitor. That's the engagement Cartier entrusted us with, and the one we replay today with other luxury houses and regulated players."
+        "content": "Sovereign AI for a luxury house isn't a slogan, it's an architecture constraint. Product data, in-progress designs, competitive analyses can't transit through a third-party vendor. So we don't deploy a wrapper on OpenAI: we build, we fine-tune, we host, we monitor. That's the engagement un client retail/luxe international entrusted us with, and the one we replay today with other luxury houses and regulated players."
       },
       {
         "type": "h2",
@@ -6012,7 +6021,7 @@
         "items": [
           "Multi-project, not one big build: Compass, Mapper, ETL, POC LLM, private LLM. Each deliverable justified the next",
           "Multi-function: product marketing, pricing marketing, data office, and now AI. Abbeal isn't filed in a single silo",
-          "Multi-country: Geneva (Cartier Suisse, contracting entity), Paris, Tokyo (direct exchanges with Japan team)",
+          "Multi-country: Geneva (un client retail/luxe international Suisse, contracting entity), Paris, Tokyo (direct exchanges with Japan team)",
           "Human continuity: stable pilot team, skills transfer when scope shifts, never a break in accumulated knowledge",
           "Premium studio posture: we don't staff in volume time-and-materials. We ship product, we work quality, we document. That's what the Compass -> private LLM journey validates"
         ],
@@ -6024,13 +6033,13 @@
       },
       {
         "type": "p",
-        "content": "A continuous relationship with a brand like Cartier doesn't get decided at signature. It gets earned deliverable after deliverable. The first time you're judged on an audit. The second on a build. The third on data. The fourth on sovereign AI. At each step, it's the same team and the same demand, just a widening scope. That's exactly the posture we aim to extend with other luxury houses in Europe and Japan."
+        "content": "A continuous relationship with a brand like un client retail/luxe international doesn't get decided at signature. It gets earned deliverable after deliverable. The first time you're judged on an audit. The second on a build. The third on data. The fourth on sovereign AI. At each step, it's the same team and the same demand, just a widening scope. That's exactly the posture we aim to extend with other luxury houses in Europe and Japan."
       }
     ],
     "ja": [
       {
         "type": "p",
-        "content": "カルティエ。リシュモングループのジュエリー＆時計メゾン。継続的なテックパートナーシップ、2021年末の最初の監査から今日のプライベートLLMインフラまで。営業ピッチが作り出せない軌跡：プロジェクトを1つずつ積み重ねて構築されます。"
+        "content": "国際ラグジュアリー・リテール・クライアント：ジュエリー＆時計メゾン。継続的なテックパートナーシップ、2021年末の最初の監査から今日のプライベートLLMインフラまで。営業ピッチが作り出せない軌跡：プロジェクトを1つずつ積み重ねて構築されます。"
       },
       {
         "type": "h2",
@@ -6049,9 +6058,9 @@
         "items": [
           "Compass（監査2023 + 2025）：マーケティングチーム向けの価格設定とベンチマーキング用Webアプリ。2023年のフロント監査、その後2025年のバック監査（セキュリティ、パフォーマンス、品質に関する14のP1/P2/P3推奨事項）",
           "Mapper V1 + 1.1 + RSP/WWP（2023）：時計、その後ジュエリーマーケティング向けの製品マッピングジェネレーター。77日間の初期開発、その後反復拡張",
-          "ジュエリー / 時計データETL（2023-2024）：Cartierのデータスタック（BigQuery、Dataflow）上の競合データ統合パイプライン",
-          "POC LLM Web Dev（2023年5月）：LLMのフロントサイドでの最初の探索的ブリック。3年後、Cartier AIインフラの構造化プロジェクトに",
-          "プライベートLLM（2026年、進行中）：データパイプライン -> Cartierインフラでファインチューニング -> パフォーマンス評価 -> 本番モニタリング。ドライバー：絶対的な機密性、ラグジュアリーデータは内部インフラを離れない"
+          "ジュエリー / 時計データETL（2023-2024）：un client retail/luxe internationalのデータスタック（BigQuery、Dataflow）上の競合データ統合パイプライン",
+          "POC LLM Web Dev（2023年5月）：LLMのフロントサイドでの最初の探索的ブリック。3年後、un client retail/luxe international AIインフラの構造化プロジェクトに",
+          "プライベートLLM（2026年、進行中）：データパイプライン -> un client retail/luxe internationalインフラでファインチューニング -> パフォーマンス評価 -> 本番モニタリング。ドライバー：絶対的な機密性、ラグジュアリーデータは内部インフラを離れない"
         ],
         "ordered": true
       },
@@ -6066,7 +6075,7 @@
           "バックエンド：Python、FastAPI、Uvicorn、Pandas、データサイエンスノートブック用Jupyter",
           "フロントエンド：Next.js + React + データビズ用D3、一部の内部ツールでVue.js / Nuxt",
           "データエンジニアリング：BigQuery上のカスタムETL、dbtスタイル変換、Dataflow経由のオーケストレーション",
-          "GenAI：CartierインフラでファインチューニングされたプライベートLLM、内部コーパスでのRAG、パフォーマンス評価と継続的な本番モニタリング",
+          "GenAI：un client retail/luxe internationalインフラでファインチューニングされたプライベートLLM、内部コーパスでのRAG、パフォーマンス評価と継続的な本番モニタリング",
           "セキュリティ：Firebase Auth、SAML/OIDC SSO、パラメータ化クエリ（監査推奨事項に従う）"
         ],
         "ordered": false
@@ -6074,7 +6083,7 @@
       {
         "type": "callout",
         "tone": "teal",
-        "content": "ラグジュアリーメゾンのソブリンAIはスローガンではなく、アーキテクチャ制約です。製品データ、進行中のデザイン、競合分析はサードパーティベンダーを経由できません。したがってOpenAIのラッパーをデプロイするのではなく：構築し、ファインチューニングし、ホスティングし、モニタリングします。それがCartierが私たちに託したエンゲージメントであり、今日他のラグジュアリーメゾンや規制対象プレイヤーで再生するものです。"
+        "content": "ラグジュアリーメゾンのソブリンAIはスローガンではなく、アーキテクチャ制約です。製品データ、進行中のデザイン、競合分析はサードパーティベンダーを経由できません。したがってOpenAIのラッパーをデプロイするのではなく：構築し、ファインチューニングし、ホスティングし、モニタリングします。それがun client retail/luxe internationalが私たちに託したエンゲージメントであり、今日他のラグジュアリーメゾンや規制対象プレイヤーで再生するものです。"
       },
       {
         "type": "h2",
@@ -6085,7 +6094,7 @@
         "items": [
           "マルチプロジェクト、1つの大きなビルドではない：Compass、Mapper、ETL、POC LLM、プライベートLLM。各納品物が次を正当化",
           "マルチ機能：プロダクトマーケティング、価格マーケティング、データオフィス、そして今やAI。Abbealは単一のサイロに収まらない",
-          "マルチ国：ジュネーブ（Cartier Suisse、契約エンティティ）、パリ、東京（日本チームとの直接やり取り）",
+          "マルチ国：ジュネーブ（un client retail/luxe international Suisse、契約エンティティ）、パリ、東京（日本チームとの直接やり取り）",
           "人的継続性：安定したパイロットチーム、スコープが変わる時のスキル移転、蓄積された知識に断絶なし",
           "プレミアムスタジオポスチャ：ボリュームT&Mでスタッフィングしない。製品を出荷し、品質に取り組み、ドキュメント化する。それがCompass -> プライベートLLMの旅が検証するもの"
         ],
@@ -6097,13 +6106,13 @@
       },
       {
         "type": "p",
-        "content": "Cartierのようなブランドとの継続的な関係は、署名時に決定されません。納品物ごとに獲得されます。最初は監査で判断される。2回目はビルドで。3回目はデータで。4回目はソブリンAIで。各ステップで、同じチームと同じ要求、ただスコープが広がるだけ。それが、欧州と日本の他のラグジュアリーメゾンと拡張することを目指す姿勢です。"
+        "content": "un client retail/luxe internationalのようなブランドとの継続的な関係は、署名時に決定されません。納品物ごとに獲得されます。最初は監査で判断される。2回目はビルドで。3回目はデータで。4回目はソブリンAIで。各ステップで、同じチームと同じ要求、ただスコープが広がるだけ。それが、欧州と日本の他のラグジュアリーメゾンと拡張することを目指す姿勢です。"
       }
     ],
     "fr-ca": [
       {
         "type": "p",
-        "content": "Cartier. Maison de joaillerie et d'horlogerie du Groupe Richemont. Un partenariat tech continu, du premier audit fin 2021 jusqu'a l'infrastructure LLM privee aujourd'hui. Une trajectoire qu'aucun argumentaire commercial ne peut inventer : elle se construit projet apres projet."
+        "content": "un client retail/luxe international. Maison de joaillerie et d'horlogerie du Groupe Richemont. Un partenariat tech continu, du premier audit fin 2021 jusqu'a l'infrastructure LLM privee aujourd'hui. Une trajectoire qu'aucun argumentaire commercial ne peut inventer : elle se construit projet apres projet."
       },
       {
         "type": "h2",
@@ -6122,9 +6131,9 @@
         "items": [
           "Compass (audits 2023 + 2025) : appli web de tarification et balisage pour les equipes marketing. Audit frontal en 2023 puis audit arriere en 2025 (14 recommandations P1/P2/P3 sur securite, performance, qualite)",
           "Mapper V1 + 1.1 + RSP/WWP (2023) : generateur d'appariements produits pour le marketing horlogerie puis joaillerie. 77 jours de developpement initial puis extensions iteratives",
-          "ETL Donnees Joaillerie / Horlogerie (2023-2024) : pipeline d'integration de donnees concurrence sur la pile data Cartier (BigQuery, Dataflow)",
-          "POC LLM Web Dev (mai 2023) : premiere brique exploratoire sur les LLMs cote frontal. Trois ans plus tard, c'est devenu un mandat structurant de l'infra IA Cartier",
-          "LLM prive (2026, en cours) : pipeline data -> ajustement fin sur infra Cartier -> evaluation performance -> surveillance production. Moteur : confidentialite absolue, les donnees luxe ne quittent jamais l'infrastructure interne"
+          "ETL Donnees Joaillerie / Horlogerie (2023-2024) : pipeline d'integration de donnees concurrence sur la pile data un client retail/luxe international (BigQuery, Dataflow)",
+          "POC LLM Web Dev (mai 2023) : premiere brique exploratoire sur les LLMs cote frontal. Trois ans plus tard, c'est devenu un mandat structurant de l'infra IA un client retail/luxe international",
+          "LLM prive (2026, en cours) : pipeline data -> ajustement fin sur infra un client retail/luxe international -> evaluation performance -> surveillance production. Moteur : confidentialite absolue, les donnees luxe ne quittent jamais l'infrastructure interne"
         ],
         "ordered": true
       },
@@ -6139,7 +6148,7 @@
           "Arriere-plan : Python, FastAPI, Uvicorn, Pandas, Jupyter pour les calepins data science",
           "Frontal : Next.js + React + D3 pour la datavisualisation, Vue.js / Nuxt sur certains outils internes",
           "Ingenierie des donnees : ETL personnalise sur BigQuery, transformations style dbt, orchestration via Dataflow",
-          "GenIA : LLMs prives ajustes sur infra Cartier, RAG sur le corpus interne, evaluation perf et surveillance continue en production",
+          "GenIA : LLMs prives ajustes sur infra un client retail/luxe international, RAG sur le corpus interne, evaluation perf et surveillance continue en production",
           "Securite : Firebase Auth, SSO SAML/OIDC, requetes parametrees (suite aux recommandations d'audit)"
         ],
         "ordered": false
@@ -6147,7 +6156,7 @@
       {
         "type": "callout",
         "tone": "teal",
-        "content": "L'IA souveraine pour une maison de luxe, ce n'est pas un slogan : c'est une contrainte d'architecture. Les donnees produit, les designs en cours, les analyses concurrence ne peuvent pas transiter chez un fournisseur tiers. Donc on ne deploie pas un emballage sur OpenAI : on construit, on ajuste, on heberge, on surveille. C'est le mandat que Cartier nous a confie, et c'est celui qu'on rejoue aujourd'hui chez d'autres maisons de luxe et acteurs reglementes."
+        "content": "L'IA souveraine pour une maison de luxe, ce n'est pas un slogan : c'est une contrainte d'architecture. Les donnees produit, les designs en cours, les analyses concurrence ne peuvent pas transiter chez un fournisseur tiers. Donc on ne deploie pas un emballage sur OpenAI : on construit, on ajuste, on heberge, on surveille. C'est le mandat que un client retail/luxe international nous a confie, et c'est celui qu'on rejoue aujourd'hui chez d'autres maisons de luxe et acteurs reglementes."
       },
       {
         "type": "h2",
@@ -6158,7 +6167,7 @@
         "items": [
           "Multi-mandats, pas un seul gros chantier : Compass, Mapper, ETL, POC LLM, LLM prive. Chaque livrable a justifie le suivant",
           "Multi-fonctions : marketing produit, marketing tarification, bureau des donnees, et aujourd'hui IA. Abbeal n'est pas range dans un silo unique",
-          "Multi-pays : Geneve (Cartier Suisse, entite contractante), Paris, Tokyo (echanges directs avec l'equipe Japon)",
+          "Multi-pays : Geneve (un client retail/luxe international Suisse, entite contractante), Paris, Tokyo (echanges directs avec l'equipe Japon)",
           "Continuite humaine : equipe pilote stable, transferts de competence quand la portee change, jamais de discontinuite dans la connaissance accumulee",
           "Posture studio premium : on ne place pas en regie au volume. On livre du produit, on travaille la qualite, on documente. C'est ce que valide le passage Compass -> LLM prive"
         ],
@@ -6170,7 +6179,7 @@
       },
       {
         "type": "p",
-        "content": "Une relation continue avec une marque comme Cartier, ca ne se decide pas a la signature. Ca se gagne livrable apres livrable. La premiere fois on est evalue sur un audit. La deuxieme sur du build. La troisieme sur de la data. La quatrieme sur de l'IA souveraine. A chaque etape, c'est la meme equipe et la meme exigence, juste une portee qui s'elargit. C'est exactement la posture qu'on cherche a etendre sur les autres maisons de luxe en Europe et au Japon."
+        "content": "Une relation continue avec une marque comme un client retail/luxe international, ca ne se decide pas a la signature. Ca se gagne livrable apres livrable. La premiere fois on est evalue sur un audit. La deuxieme sur du build. La troisieme sur de la data. La quatrieme sur de l'IA souveraine. A chaque etape, c'est la meme equipe et la meme exigence, juste une portee qui s'elargit. C'est exactement la posture qu'on cherche a etendre sur les autres maisons de luxe en Europe et au Japon."
       }
     ]
   },
@@ -7525,180 +7534,856 @@
   },
   "paraito": {
     "fr": [
-      {"type": "p", "content": "Paraito est une startup quebecoise d'IA appliquee au droit immobilier. Sa plateforme automatise la collecte, l'analyse et la structuration des donnees du Registre foncier du Quebec pour accelerer les examens de titres des notaires : -70 % de temps de collecte documentaire, 3x plus de dossiers traites a effectif constant."},
-      {"type": "h2", "content": "Le contexte"},
-      {"type": "p", "content": "Le marche tech quebecois est en tension forte sur les profils IA, en particulier sur les Senior AI Engineers et les Lead Platform capables de scaler une plateforme produit IA. Pour soutenir leur croissance et industrialiser la plateforme, Paraito devait recruter vite et sur des profils tres specifiques (NLP juridique, traitement documentaire, modeles specialises sur le Registre foncier du Quebec)."},
-      {"type": "h2", "content": "La mission Abbeal"},
-      {"type": "p", "content": "Abbeal a livre 3 recrutements permanents strategiques en 2026 :"},
-      {"type": "list", "items": ["2 AI Engineers (coeur produit IA, traitement documentaire, modeles specialises sur le Registre foncier du Quebec)", "1 Lead Platform (architecture, scalabilite, fondations techniques)", "1 mobilite internationale : un des AI Engineers a ete source en France et accompagne sur sa relocation a Montreal via le programme Mobbeal"], "ordered": false},
-      {"type": "callout", "tone": "teal", "content": "La mobilite internationale Mobbeal est un axe differenciant Abbeal sur le marche tech quebecois en tension, particulierement en IA. Quand le pool de candidats local est sec, on va chercher en France ceux qui veulent traverser, et on prend en charge le visa, le logement, la famille."},
-      {"type": "h2", "content": "Les chiffres cles"},
-      {"type": "list", "items": ["2 semaines : delai moyen brief Paraito → closing candidat", "3 a 5 candidats par poste : shortlists resserrees, qualifiees techniquement par nos ingenieurs avant presentation client", "3 recrutements permanents : 2 AI Engineers + 1 Lead Platform", "1 mobilite internationale : France → Montreal via Mobbeal"], "ordered": false},
-      {"type": "h2", "content": "Pourquoi Abbeal"},
-      {"type": "p", "content": "Sur un marche IA quebecois en tension, on combine deux leviers : sourcing actif par des ingenieurs (pas par RH) sur les pools tech locaux + ouverture sur le pool France/Europe via Mobbeal. C'est cette combinaison qui permet de boucler des shortlists serieuses en 2 semaines au lieu de 2 mois."}
+      {
+        "type": "p",
+        "content": "Paraito est une startup quebecoise d'IA appliquee au droit immobilier. Sa plateforme automatise la collecte, l'analyse et la structuration des donnees du Registre foncier du Quebec pour accelerer les examens de titres des notaires : -70 % de temps de collecte documentaire, 3x plus de dossiers traites a effectif constant."
+      },
+      {
+        "type": "h2",
+        "content": "Le contexte"
+      },
+      {
+        "type": "p",
+        "content": "Le marche tech quebecois est en tension forte sur les profils IA, en particulier sur les Senior AI Engineers et les Lead Platform capables de scaler une plateforme produit IA. Pour soutenir leur croissance et industrialiser la plateforme, Paraito devait recruter vite et sur des profils tres specifiques (NLP juridique, traitement documentaire, modeles specialises sur le Registre foncier du Quebec)."
+      },
+      {
+        "type": "h2",
+        "content": "La mission Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "Abbeal a livre 3 recrutements permanents strategiques en 2026 :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "2 AI Engineers (coeur produit IA, traitement documentaire, modeles specialises sur le Registre foncier du Quebec)",
+          "1 Lead Platform (architecture, scalabilite, fondations techniques)",
+          "1 mobilite internationale : un des AI Engineers a ete source en France et accompagne sur sa relocation a Montreal via le programme Mobbeal"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "La mobilite internationale Mobbeal est un axe differenciant Abbeal sur le marche tech quebecois en tension, particulierement en IA. Quand le pool de candidats local est sec, on va chercher en France ceux qui veulent traverser, et on prend en charge le visa, le logement, la famille."
+      },
+      {
+        "type": "h2",
+        "content": "Les chiffres cles"
+      },
+      {
+        "type": "list",
+        "items": [
+          "2 semaines : delai moyen brief Paraito → closing candidat",
+          "3 a 5 candidats par poste : shortlists resserrees, qualifiees techniquement par nos ingenieurs avant presentation client",
+          "3 recrutements permanents : 2 AI Engineers + 1 Lead Platform",
+          "1 mobilite internationale : France → Montreal via Mobbeal"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "Sur un marche IA quebecois en tension, on combine deux leviers : sourcing actif par des ingenieurs (pas par RH) sur les pools tech locaux + ouverture sur le pool France/Europe via Mobbeal. C'est cette combinaison qui permet de boucler des shortlists serieuses en 2 semaines au lieu de 2 mois."
+      }
     ],
     "en": [
-      {"type": "p", "content": "Paraito is a Quebec AI startup applied to real estate law. Its platform automates the collection, analysis and structuring of data from the Quebec Land Registry to speed up notaries' title examinations: -70% on document collection time, 3x more files handled at constant headcount."},
-      {"type": "h2", "content": "Context"},
-      {"type": "p", "content": "The Quebec tech market is under strong strain on AI profiles, especially Senior AI Engineers and Lead Platform engineers capable of scaling an AI product platform. To support their growth and industrialise the platform, Paraito needed to hire fast and on very specific profiles (legal NLP, document processing, specialised models on the Quebec Land Registry)."},
-      {"type": "h2", "content": "The Abbeal engagement"},
-      {"type": "p", "content": "Abbeal delivered 3 strategic permanent hires in 2026:"},
-      {"type": "list", "items": ["2 AI Engineers (AI product core, document processing, specialised models on the Quebec Land Registry)", "1 Lead Platform (architecture, scalability, technical foundations)", "1 international mobility: one of the AI Engineers was sourced in France and supported on relocation to Montreal via the Mobbeal programme"], "ordered": false},
-      {"type": "callout", "tone": "teal", "content": "The Mobbeal international mobility is an Abbeal differentiator on the strained Quebec tech market, particularly on AI. When the local candidate pool is dry, we go looking in France for those who want to cross — and we handle the visa, housing and family."},
-      {"type": "h2", "content": "Key figures"},
-      {"type": "list", "items": ["2 weeks: average lead time from Paraito brief to candidate closing", "3 to 5 candidates per role: tight shortlists, technically qualified by our engineers before client presentation", "3 permanent hires: 2 AI Engineers + 1 Lead Platform", "1 international mobility: France → Montreal via Mobbeal"], "ordered": false},
-      {"type": "h2", "content": "Why Abbeal"},
-      {"type": "p", "content": "On a strained Quebec AI market, we combine two levers: active sourcing by engineers (not HR) on local tech pools + access to the France/Europe pool via Mobbeal. That combination lets us close serious shortlists in 2 weeks instead of 2 months."}
+      {
+        "type": "p",
+        "content": "Paraito is a Quebec AI startup applied to real estate law. Its platform automates the collection, analysis and structuring of data from the Quebec Land Registry to speed up notaries' title examinations: -70% on document collection time, 3x more files handled at constant headcount."
+      },
+      {
+        "type": "h2",
+        "content": "Context"
+      },
+      {
+        "type": "p",
+        "content": "The Quebec tech market is under strong strain on AI profiles, especially Senior AI Engineers and Lead Platform engineers capable of scaling an AI product platform. To support their growth and industrialise the platform, Paraito needed to hire fast and on very specific profiles (legal NLP, document processing, specialised models on the Quebec Land Registry)."
+      },
+      {
+        "type": "h2",
+        "content": "The Abbeal engagement"
+      },
+      {
+        "type": "p",
+        "content": "Abbeal delivered 3 strategic permanent hires in 2026:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "2 AI Engineers (AI product core, document processing, specialised models on the Quebec Land Registry)",
+          "1 Lead Platform (architecture, scalability, technical foundations)",
+          "1 international mobility: one of the AI Engineers was sourced in France and supported on relocation to Montreal via the Mobbeal programme"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "The Mobbeal international mobility is an Abbeal differentiator on the strained Quebec tech market, particularly on AI. When the local candidate pool is dry, we go looking in France for those who want to cross — and we handle the visa, housing and family."
+      },
+      {
+        "type": "h2",
+        "content": "Key figures"
+      },
+      {
+        "type": "list",
+        "items": [
+          "2 weeks: average lead time from Paraito brief to candidate closing",
+          "3 to 5 candidates per role: tight shortlists, technically qualified by our engineers before client presentation",
+          "3 permanent hires: 2 AI Engineers + 1 Lead Platform",
+          "1 international mobility: France → Montreal via Mobbeal"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Why Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "On a strained Quebec AI market, we combine two levers: active sourcing by engineers (not HR) on local tech pools + access to the France/Europe pool via Mobbeal. That combination lets us close serious shortlists in 2 weeks instead of 2 months."
+      }
     ],
     "ja": [
-      {"type": "p", "content": "パライトは不動産法に適用されるケベック州のAIスタートアップ。プラットフォームはケベック州不動産登記簿のデータ収集、分析、構造化を自動化し、公証人のタイトル検査を加速：文書収集時間を70%削減、同人員で3倍のファイル処理。"},
-      {"type": "h2", "content": "コンテキスト"},
-      {"type": "p", "content": "ケベックの技術市場はAIプロフィール、特にAI製品プラットフォームをスケールできるシニアAIエンジニアとリードプラットフォームエンジニアで強い緊張状態にある。成長を支え、プラットフォームを工業化するため、パライトは迅速に、非常に特定のプロフィール（法律NLP、文書処理、ケベック州不動産登記簿に特化したモデル）で採用する必要があった。"},
-      {"type": "h2", "content": "Abbealのミッション"},
-      {"type": "p", "content": "Abbealは2026年に3名の戦略的正社員採用を実現："},
-      {"type": "list", "items": ["AIエンジニア2名（AI製品の中核、文書処理、ケベック州不動産登記簿に特化したモデル）", "リードプラットフォーム1名（アーキテクチャ、スケーラビリティ、技術基盤）", "1名の国際モビリティ：AIエンジニアの1人がフランスでソースされ、Mobbealプログラム経由でモントリオールへの移転をサポート"], "ordered": false},
-      {"type": "callout", "tone": "teal", "content": "Mobbeal国際モビリティは、特にAIにおいて緊張状態のケベック技術市場におけるAbbealの差別化要因。地元の候補者プールが枯渇している場合、フランスで渡航希望者を探し、ビザ、住居、家族を弊社が対応します。"},
-      {"type": "h2", "content": "主要数値"},
-      {"type": "list", "items": ["2週間：パライトのブリーフから候補者クロージングまでの平均リードタイム", "ポストごとに3〜5候補者：エンジニアによる技術的資格確認後にクライアントへ提示する厳選ショートリスト", "正社員採用3名：AIエンジニア2名 + リードプラットフォーム1名", "1名の国際モビリティ：Mobbeal経由のフランス→モントリオール"], "ordered": false},
-      {"type": "h2", "content": "なぜAbbeal"},
-      {"type": "p", "content": "緊張状態のケベックAI市場で、2つのレバーを組み合わせます：地元の技術プールでのエンジニア（人事ではない）によるアクティブソーシング + Mobbeal経由のフランス/欧州プールへのアクセス。この組み合わせにより、2ヶ月ではなく2週間で本格的なショートリストをクロージングできます。"}
+      {
+        "type": "p",
+        "content": "パライトは不動産法に適用されるケベック州のAIスタートアップ。プラットフォームはケベック州不動産登記簿のデータ収集、分析、構造化を自動化し、公証人のタイトル検査を加速：文書収集時間を70%削減、同人員で3倍のファイル処理。"
+      },
+      {
+        "type": "h2",
+        "content": "コンテキスト"
+      },
+      {
+        "type": "p",
+        "content": "ケベックの技術市場はAIプロフィール、特にAI製品プラットフォームをスケールできるシニアAIエンジニアとリードプラットフォームエンジニアで強い緊張状態にある。成長を支え、プラットフォームを工業化するため、パライトは迅速に、非常に特定のプロフィール（法律NLP、文書処理、ケベック州不動産登記簿に特化したモデル）で採用する必要があった。"
+      },
+      {
+        "type": "h2",
+        "content": "Abbealのミッション"
+      },
+      {
+        "type": "p",
+        "content": "Abbealは2026年に3名の戦略的正社員採用を実現："
+      },
+      {
+        "type": "list",
+        "items": [
+          "AIエンジニア2名（AI製品の中核、文書処理、ケベック州不動産登記簿に特化したモデル）",
+          "リードプラットフォーム1名（アーキテクチャ、スケーラビリティ、技術基盤）",
+          "1名の国際モビリティ：AIエンジニアの1人がフランスでソースされ、Mobbealプログラム経由でモントリオールへの移転をサポート"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Mobbeal国際モビリティは、特にAIにおいて緊張状態のケベック技術市場におけるAbbealの差別化要因。地元の候補者プールが枯渇している場合、フランスで渡航希望者を探し、ビザ、住居、家族を弊社が対応します。"
+      },
+      {
+        "type": "h2",
+        "content": "主要数値"
+      },
+      {
+        "type": "list",
+        "items": [
+          "2週間：パライトのブリーフから候補者クロージングまでの平均リードタイム",
+          "ポストごとに3〜5候補者：エンジニアによる技術的資格確認後にクライアントへ提示する厳選ショートリスト",
+          "正社員採用3名：AIエンジニア2名 + リードプラットフォーム1名",
+          "1名の国際モビリティ：Mobbeal経由のフランス→モントリオール"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "なぜAbbeal"
+      },
+      {
+        "type": "p",
+        "content": "緊張状態のケベックAI市場で、2つのレバーを組み合わせます：地元の技術プールでのエンジニア（人事ではない）によるアクティブソーシング + Mobbeal経由のフランス/欧州プールへのアクセス。この組み合わせにより、2ヶ月ではなく2週間で本格的なショートリストをクロージングできます。"
+      }
     ],
     "fr-ca": [
-      {"type": "p", "content": "Paraito est une jeune pousse quebecoise d'IA appliquee au droit immobilier. Sa plateforme automatise la collecte, l'analyse et la structuration des donnees du Registre foncier du Quebec pour accelerer les examens de titres des notaires : -70 % de temps de collecte documentaire, 3x plus de dossiers traites a effectif constant."},
-      {"type": "h2", "content": "Le contexte"},
-      {"type": "p", "content": "Le marche techno quebecois est en tension forte sur les profils IA, en particulier sur les Senior AI Engineers et les Lead Platform capables de passer a l'echelle une plateforme produit IA. Pour soutenir leur croissance et industrialiser la plateforme, Paraito devait recruter vite et sur des profils tres specifiques (TLN juridique, traitement documentaire, modeles specialises sur le Registre foncier du Quebec)."},
-      {"type": "h2", "content": "Le mandat Abbeal"},
-      {"type": "p", "content": "Abbeal a livre 3 recrutements permanents strategiques en 2026 :"},
-      {"type": "list", "items": ["2 AI Engineers (coeur produit IA, traitement documentaire, modeles specialises sur le Registre foncier du Quebec)", "1 Lead Platform (architecture, mise a l'echelle, fondations techniques)", "1 mobilite internationale : un des AI Engineers a ete source en France et accompagne sur sa relocation a Montreal via le programme Mobbeal"], "ordered": false},
-      {"type": "callout", "tone": "teal", "content": "La mobilite internationale Mobbeal est un axe differenciant Abbeal sur le marche techno quebecois en tension, particulierement en IA. Quand le pool de candidats local est a sec, on va chercher en France ceux qui veulent traverser, et on prend en charge le visa, le logement, la famille."},
-      {"type": "h2", "content": "Les chiffres cles"},
-      {"type": "list", "items": ["2 semaines : delai moyen breffage Paraito → cloture candidat", "3 a 5 candidats par poste : courtes listes resserrees, qualifiees techniquement par nos ingenieurs avant presentation client", "3 recrutements permanents : 2 AI Engineers + 1 Lead Platform", "1 mobilite internationale : France → Montreal via Mobbeal"], "ordered": false},
-      {"type": "h2", "content": "Pourquoi Abbeal"},
-      {"type": "p", "content": "Sur un marche IA quebecois en tension, on combine deux leviers : recherche active par des ingenieurs (pas par RH) sur les pools techno locaux + ouverture sur le pool France/Europe via Mobbeal. C'est cette combinaison qui permet de boucler des courtes listes serieuses en 2 semaines au lieu de 2 mois."}
+      {
+        "type": "p",
+        "content": "Paraito est une jeune pousse quebecoise d'IA appliquee au droit immobilier. Sa plateforme automatise la collecte, l'analyse et la structuration des donnees du Registre foncier du Quebec pour accelerer les examens de titres des notaires : -70 % de temps de collecte documentaire, 3x plus de dossiers traites a effectif constant."
+      },
+      {
+        "type": "h2",
+        "content": "Le contexte"
+      },
+      {
+        "type": "p",
+        "content": "Le marche techno quebecois est en tension forte sur les profils IA, en particulier sur les Senior AI Engineers et les Lead Platform capables de passer a l'echelle une plateforme produit IA. Pour soutenir leur croissance et industrialiser la plateforme, Paraito devait recruter vite et sur des profils tres specifiques (TLN juridique, traitement documentaire, modeles specialises sur le Registre foncier du Quebec)."
+      },
+      {
+        "type": "h2",
+        "content": "Le mandat Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "Abbeal a livre 3 recrutements permanents strategiques en 2026 :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "2 AI Engineers (coeur produit IA, traitement documentaire, modeles specialises sur le Registre foncier du Quebec)",
+          "1 Lead Platform (architecture, mise a l'echelle, fondations techniques)",
+          "1 mobilite internationale : un des AI Engineers a ete source en France et accompagne sur sa relocation a Montreal via le programme Mobbeal"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "La mobilite internationale Mobbeal est un axe differenciant Abbeal sur le marche techno quebecois en tension, particulierement en IA. Quand le pool de candidats local est a sec, on va chercher en France ceux qui veulent traverser, et on prend en charge le visa, le logement, la famille."
+      },
+      {
+        "type": "h2",
+        "content": "Les chiffres cles"
+      },
+      {
+        "type": "list",
+        "items": [
+          "2 semaines : delai moyen breffage Paraito → cloture candidat",
+          "3 a 5 candidats par poste : courtes listes resserrees, qualifiees techniquement par nos ingenieurs avant presentation client",
+          "3 recrutements permanents : 2 AI Engineers + 1 Lead Platform",
+          "1 mobilite internationale : France → Montreal via Mobbeal"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "Sur un marche IA quebecois en tension, on combine deux leviers : recherche active par des ingenieurs (pas par RH) sur les pools techno locaux + ouverture sur le pool France/Europe via Mobbeal. C'est cette combinaison qui permet de boucler des courtes listes serieuses en 2 semaines au lieu de 2 mois."
+      }
     ]
   },
   "mobilitas": {
     "fr": [
-      {"type": "p", "content": "Mobilitas est un cabinet quebecois specialise en immigration et mobilite internationale, accompagnant particuliers et entreprises dans leurs demarches au Canada : permis d'etudes et de travail, mobilite jeunes professionnels (PVT/VIE), residence permanente, regroupement familial, citoyennete et programmes employeurs."},
-      {"type": "h2", "content": "Le point de depart"},
-      {"type": "p", "content": "Avant Abbeal, le quotidien Mobilitas etait fragmente : acquisition au bouche-a-oreille via WhatsApp, prise de RDV eclatee entre comptes Calendly individuels par consultant, facturation en suivi Excel manuel dans QuickBooks, multilingue non gere. Resultat : du temps perdu en assistanat administratif et des retards de paiement avant RDV."},
-      {"type": "h2", "content": "Le mandat Abbeal Studio"},
-      {"type": "p", "content": "Abbeal Studio a livre une plateforme complete en mode co-build :"},
-      {"type": "list", "items": ["Landing page multilingue (FR/EN/ES/PT) avec presentation des services et de l'equipe", "Prise de RDV 100 % en ligne avec formulaire de qualification routant chaque demande vers le bon conseiller selon l'expertise (etude, travail, residence, entreprise…)", "Integration native QuickBooks automatisant la creation client + facture + envoi du lien Calendly apres confirmation de paiement", "Espace client avec mandat de representation signe electroniquement (PandaDoc)", "Statistiques de frequentation pour piloter le SEO et l'acquisition"], "ordered": false},
-      {"type": "callout", "tone": "teal", "content": "L'integration QuickBooks change la regle du jeu : le client paie d'abord, le RDV se calage automatiquement, le mandat se signe electroniquement. Zero retard de paiement avant RDV, zero ressaisie cote assistanat. C'est ce qu'on appelle une plateforme transactionnelle, pas un site vitrine."},
-      {"type": "h2", "content": "Les resultats mesures"},
-      {"type": "list", "items": ["10 h / semaine economisees en travail manuel cote assistanat", "100 % des RDV pris en ligne (vs bouche-a-oreille / WhatsApp avant)", "QuickBooks integre, facturation et paiement automatises", "4 langues supportees (FR / EN / ES / PT)", "SEO opere sur statistiques internes pour piloter l'acquisition"], "ordered": false},
-      {"type": "h2", "content": "La stack"},
-      {"type": "list", "items": ["Front : Next.js + React + multilingue", "Integrations : QuickBooks API, Calendly, PandaDoc", "Methode : Studio co-build, sprints courts, feature flags", "Equipe : 3 engineers Abbeal Studio"], "ordered": false},
-      {"type": "h2", "content": "Pourquoi Abbeal Studio"},
-      {"type": "p", "content": "Mobilitas avait besoin d'une vraie equipe produit, pas d'un freelance Wix. Abbeal Studio livre des plateformes transactionnelles avec integrations metier (paiement, signature, agenda) qui changent vraiment l'efficience d'un cabinet professionnel. Le resultat ne se mesure pas en lignes de code : il se mesure en heures economisees par semaine."}
+      {
+        "type": "p",
+        "content": "Mobilitas est un cabinet quebecois specialise en immigration et mobilite internationale, accompagnant particuliers et entreprises dans leurs demarches au Canada : permis d'etudes et de travail, mobilite jeunes professionnels (PVT/VIE), residence permanente, regroupement familial, citoyennete et programmes employeurs."
+      },
+      {
+        "type": "h2",
+        "content": "Le point de depart"
+      },
+      {
+        "type": "p",
+        "content": "Avant Abbeal, le quotidien Mobilitas etait fragmente : acquisition au bouche-a-oreille via WhatsApp, prise de RDV eclatee entre comptes Calendly individuels par consultant, facturation en suivi Excel manuel dans QuickBooks, multilingue non gere. Resultat : du temps perdu en assistanat administratif et des retards de paiement avant RDV."
+      },
+      {
+        "type": "h2",
+        "content": "Le mandat Abbeal Studio"
+      },
+      {
+        "type": "p",
+        "content": "Abbeal Studio a livre une plateforme complete en mode co-build :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Landing page multilingue (FR/EN/ES/PT) avec presentation des services et de l'equipe",
+          "Prise de RDV 100 % en ligne avec formulaire de qualification routant chaque demande vers le bon conseiller selon l'expertise (etude, travail, residence, entreprise…)",
+          "Integration native QuickBooks automatisant la creation client + facture + envoi du lien Calendly apres confirmation de paiement",
+          "Espace client avec mandat de representation signe electroniquement (PandaDoc)",
+          "Statistiques de frequentation pour piloter le SEO et l'acquisition"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "L'integration QuickBooks change la regle du jeu : le client paie d'abord, le RDV se calage automatiquement, le mandat se signe electroniquement. Zero retard de paiement avant RDV, zero ressaisie cote assistanat. C'est ce qu'on appelle une plateforme transactionnelle, pas un site vitrine."
+      },
+      {
+        "type": "h2",
+        "content": "Les resultats mesures"
+      },
+      {
+        "type": "list",
+        "items": [
+          "10 h / semaine economisees en travail manuel cote assistanat",
+          "100 % des RDV pris en ligne (vs bouche-a-oreille / WhatsApp avant)",
+          "QuickBooks integre, facturation et paiement automatises",
+          "4 langues supportees (FR / EN / ES / PT)",
+          "SEO opere sur statistiques internes pour piloter l'acquisition"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "La stack"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Front : Next.js + React + multilingue",
+          "Integrations : QuickBooks API, Calendly, PandaDoc",
+          "Methode : Studio co-build, sprints courts, feature flags",
+          "Equipe : 3 engineers Abbeal Studio"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi Abbeal Studio"
+      },
+      {
+        "type": "p",
+        "content": "Mobilitas avait besoin d'une vraie equipe produit, pas d'un freelance Wix. Abbeal Studio livre des plateformes transactionnelles avec integrations metier (paiement, signature, agenda) qui changent vraiment l'efficience d'un cabinet professionnel. Le resultat ne se mesure pas en lignes de code : il se mesure en heures economisees par semaine."
+      }
     ],
     "en": [
-      {"type": "p", "content": "Mobilitas is a Quebec immigration and international mobility firm supporting individuals and businesses in their Canadian processes: study and work permits, young professional mobility (PVT/VIE), permanent residency, family reunification, citizenship and employer programmes."},
-      {"type": "h2", "content": "Starting point"},
-      {"type": "p", "content": "Before Abbeal, Mobilitas's day-to-day was fragmented: word-of-mouth acquisition via WhatsApp, fragmented Calendly accounts per consultant, manual Excel billing in QuickBooks, no multilingual handling. Result: time wasted on admin and late payments before appointments."},
-      {"type": "h2", "content": "The Abbeal Studio engagement"},
-      {"type": "p", "content": "Abbeal Studio delivered a complete platform in co-build mode:"},
-      {"type": "list", "items": ["Multilingual landing page (FR/EN/ES/PT) with services and team presentation", "100% online booking with qualification form routing each request to the right consultant by expertise (study, work, residency, business…)", "Native QuickBooks integration automating client creation + invoice + Calendly link sent after payment confirmation", "Client portal with electronically signed representation mandate (PandaDoc)", "Traffic analytics to drive SEO and acquisition"], "ordered": false},
-      {"type": "callout", "tone": "teal", "content": "The QuickBooks integration changes the game: the client pays first, the booking auto-schedules, the mandate is e-signed. Zero late payment before appointment, zero re-keying on the assistant side. That's what we call a transactional platform, not a brochure site."},
-      {"type": "h2", "content": "Measured outcomes"},
-      {"type": "list", "items": ["10h/week saved on manual work on the assistant side", "100% bookings made online (vs word-of-mouth / WhatsApp before)", "QuickBooks integrated, billing and payment automated", "4 languages supported (FR / EN / ES / PT)", "SEO driven by internal analytics to manage acquisition"], "ordered": false},
-      {"type": "h2", "content": "The stack"},
-      {"type": "list", "items": ["Front: Next.js + React + multilingual", "Integrations: QuickBooks API, Calendly, PandaDoc", "Method: Studio co-build, short sprints, feature flags", "Team: 3 engineers Abbeal Studio"], "ordered": false},
-      {"type": "h2", "content": "Why Abbeal Studio"},
-      {"type": "p", "content": "Mobilitas needed a real product team, not a Wix freelancer. Abbeal Studio ships transactional platforms with business integrations (payment, signature, calendar) that genuinely shift a professional firm's efficiency. The outcome isn't measured in lines of code: it's measured in hours saved per week."}
+      {
+        "type": "p",
+        "content": "Mobilitas is a Quebec immigration and international mobility firm supporting individuals and businesses in their Canadian processes: study and work permits, young professional mobility (PVT/VIE), permanent residency, family reunification, citizenship and employer programmes."
+      },
+      {
+        "type": "h2",
+        "content": "Starting point"
+      },
+      {
+        "type": "p",
+        "content": "Before Abbeal, Mobilitas's day-to-day was fragmented: word-of-mouth acquisition via WhatsApp, fragmented Calendly accounts per consultant, manual Excel billing in QuickBooks, no multilingual handling. Result: time wasted on admin and late payments before appointments."
+      },
+      {
+        "type": "h2",
+        "content": "The Abbeal Studio engagement"
+      },
+      {
+        "type": "p",
+        "content": "Abbeal Studio delivered a complete platform in co-build mode:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Multilingual landing page (FR/EN/ES/PT) with services and team presentation",
+          "100% online booking with qualification form routing each request to the right consultant by expertise (study, work, residency, business…)",
+          "Native QuickBooks integration automating client creation + invoice + Calendly link sent after payment confirmation",
+          "Client portal with electronically signed representation mandate (PandaDoc)",
+          "Traffic analytics to drive SEO and acquisition"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "The QuickBooks integration changes the game: the client pays first, the booking auto-schedules, the mandate is e-signed. Zero late payment before appointment, zero re-keying on the assistant side. That's what we call a transactional platform, not a brochure site."
+      },
+      {
+        "type": "h2",
+        "content": "Measured outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "10h/week saved on manual work on the assistant side",
+          "100% bookings made online (vs word-of-mouth / WhatsApp before)",
+          "QuickBooks integrated, billing and payment automated",
+          "4 languages supported (FR / EN / ES / PT)",
+          "SEO driven by internal analytics to manage acquisition"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "The stack"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Front: Next.js + React + multilingual",
+          "Integrations: QuickBooks API, Calendly, PandaDoc",
+          "Method: Studio co-build, short sprints, feature flags",
+          "Team: 3 engineers Abbeal Studio"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Why Abbeal Studio"
+      },
+      {
+        "type": "p",
+        "content": "Mobilitas needed a real product team, not a Wix freelancer. Abbeal Studio ships transactional platforms with business integrations (payment, signature, calendar) that genuinely shift a professional firm's efficiency. The outcome isn't measured in lines of code: it's measured in hours saved per week."
+      }
     ],
     "ja": [
-      {"type": "p", "content": "モビリタスはカナダでの手続きで個人および企業を支援する、ケベック州の移民・国際モビリティ事務所：就学・就労許可、若手プロフェッショナル・モビリティ（PVT/VIE）、永住権、家族再統合、市民権、雇用主プログラム。"},
-      {"type": "h2", "content": "出発点"},
-      {"type": "p", "content": "Abbealの前、モビリタスの日常業務は断片化していました：WhatsApp経由の口コミ獲得、コンサルタントごとに分散したCalendlyアカウント、QuickBooks内のExcel手動請求追跡、多言語対応なし。結果：管理業務での時間損失と予約前の支払い遅延。"},
-      {"type": "h2", "content": "Abbeal Studioの取り組み"},
-      {"type": "p", "content": "Abbeal Studioは共同構築モードで完全なプラットフォームを納品："},
-      {"type": "list", "items": ["サービスとチーム紹介の多言語（FR/EN/ES/PT）ランディングページ", "専門分野（学業、就労、住居、企業…）に応じて各リクエストを適切なコンサルタントにルーティングする資格認定フォーム付き100%オンライン予約", "支払い確認後のクライアント作成 + 請求書 + Calendlyリンク送信を自動化するQuickBooksネイティブ統合", "電子署名された代理人権限（PandaDoc）付きクライアントポータル", "SEOと獲得を管理するためのトラフィック分析"], "ordered": false},
-      {"type": "callout", "tone": "teal", "content": "QuickBooks統合がゲームを変えます：クライアントはまず支払い、予約は自動スケジュール、権限は電子署名。予約前の支払い遅延ゼロ、アシスタント側の再入力ゼロ。これがパンフレットサイトではなく、トランザクション型プラットフォームと呼ばれるものです。"},
-      {"type": "h2", "content": "測定された成果"},
-      {"type": "list", "items": ["アシスタント側で週10時間の手作業削減", "100%オンライン予約（以前の口コミ/WhatsApp比）", "QuickBooks統合、請求と支払い自動化", "4言語対応（FR / EN / ES / PT）", "獲得管理のための内部分析によるSEO運用"], "ordered": false},
-      {"type": "h2", "content": "スタック"},
-      {"type": "list", "items": ["フロント：Next.js + React + 多言語", "統合：QuickBooks API、Calendly、PandaDoc", "方法論：Studio共同構築、短いスプリント、フィーチャーフラグ", "チーム：Abbeal Studio 3名のエンジニア"], "ordered": false},
-      {"type": "h2", "content": "なぜAbbeal Studio"},
-      {"type": "p", "content": "モビリタスにはWixフリーランサーではなく、本物のプロダクトチームが必要でした。Abbeal Studioは、プロフェッショナル事務所の効率性を真に変えるビジネス統合（支払い、署名、カレンダー）を備えたトランザクション型プラットフォームを納品。成果はコード行数ではなく、週あたりの時間削減で測定されます。"}
+      {
+        "type": "p",
+        "content": "モビリタスはカナダでの手続きで個人および企業を支援する、ケベック州の移民・国際モビリティ事務所：就学・就労許可、若手プロフェッショナル・モビリティ（PVT/VIE）、永住権、家族再統合、市民権、雇用主プログラム。"
+      },
+      {
+        "type": "h2",
+        "content": "出発点"
+      },
+      {
+        "type": "p",
+        "content": "Abbealの前、モビリタスの日常業務は断片化していました：WhatsApp経由の口コミ獲得、コンサルタントごとに分散したCalendlyアカウント、QuickBooks内のExcel手動請求追跡、多言語対応なし。結果：管理業務での時間損失と予約前の支払い遅延。"
+      },
+      {
+        "type": "h2",
+        "content": "Abbeal Studioの取り組み"
+      },
+      {
+        "type": "p",
+        "content": "Abbeal Studioは共同構築モードで完全なプラットフォームを納品："
+      },
+      {
+        "type": "list",
+        "items": [
+          "サービスとチーム紹介の多言語（FR/EN/ES/PT）ランディングページ",
+          "専門分野（学業、就労、住居、企業…）に応じて各リクエストを適切なコンサルタントにルーティングする資格認定フォーム付き100%オンライン予約",
+          "支払い確認後のクライアント作成 + 請求書 + Calendlyリンク送信を自動化するQuickBooksネイティブ統合",
+          "電子署名された代理人権限（PandaDoc）付きクライアントポータル",
+          "SEOと獲得を管理するためのトラフィック分析"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "QuickBooks統合がゲームを変えます：クライアントはまず支払い、予約は自動スケジュール、権限は電子署名。予約前の支払い遅延ゼロ、アシスタント側の再入力ゼロ。これがパンフレットサイトではなく、トランザクション型プラットフォームと呼ばれるものです。"
+      },
+      {
+        "type": "h2",
+        "content": "測定された成果"
+      },
+      {
+        "type": "list",
+        "items": [
+          "アシスタント側で週10時間の手作業削減",
+          "100%オンライン予約（以前の口コミ/WhatsApp比）",
+          "QuickBooks統合、請求と支払い自動化",
+          "4言語対応（FR / EN / ES / PT）",
+          "獲得管理のための内部分析によるSEO運用"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "スタック"
+      },
+      {
+        "type": "list",
+        "items": [
+          "フロント：Next.js + React + 多言語",
+          "統合：QuickBooks API、Calendly、PandaDoc",
+          "方法論：Studio共同構築、短いスプリント、フィーチャーフラグ",
+          "チーム：Abbeal Studio 3名のエンジニア"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "なぜAbbeal Studio"
+      },
+      {
+        "type": "p",
+        "content": "モビリタスにはWixフリーランサーではなく、本物のプロダクトチームが必要でした。Abbeal Studioは、プロフェッショナル事務所の効率性を真に変えるビジネス統合（支払い、署名、カレンダー）を備えたトランザクション型プラットフォームを納品。成果はコード行数ではなく、週あたりの時間削減で測定されます。"
+      }
     ],
     "fr-ca": [
-      {"type": "p", "content": "Mobilitas est un cabinet quebecois specialise en immigration et mobilite internationale, accompagnant particuliers et entreprises dans leurs demarches au Canada : permis d'etudes et de travail, mobilite jeunes professionnels (PVT/EIC), residence permanente, regroupement familial, citoyennete et programmes employeurs."},
-      {"type": "h2", "content": "Le point de depart"},
-      {"type": "p", "content": "Avant Abbeal, le quotidien Mobilitas etait fragmente : acquisition au bouche-a-oreille via WhatsApp, prise de RDV eclatee entre comptes Calendly individuels par conseiller, facturation en suivi Excel manuel dans QuickBooks, multilingue non gere. Resultat : du temps perdu en assistanat administratif et des retards de paiement avant RDV."},
-      {"type": "h2", "content": "Le mandat Abbeal Studio"},
-      {"type": "p", "content": "Abbeal Studio a livre une plateforme complete en mode co-construction :"},
-      {"type": "list", "items": ["Page d'accueil multilingue (FR/EN/ES/PT) avec presentation des services et de l'equipe", "Prise de RDV 100 % en ligne avec formulaire de qualification acheminant chaque demande vers le bon conseiller selon l'expertise (etude, travail, residence, entreprise…)", "Integration native QuickBooks automatisant la creation client + facture + envoi du lien Calendly apres confirmation de paiement", "Espace client avec mandat de representation signe electroniquement (PandaDoc)", "Statistiques de frequentation pour piloter le SEO et l'acquisition"], "ordered": false},
-      {"type": "callout", "tone": "teal", "content": "L'integration QuickBooks change la regle du jeu : le client paie d'abord, le RDV se cale automatiquement, le mandat se signe electroniquement. Zero retard de paiement avant RDV, zero ressaisie cote assistanat. C'est ce qu'on appelle une plateforme transactionnelle, pas un site vitrine."},
-      {"type": "h2", "content": "Les resultats mesures"},
-      {"type": "list", "items": ["10 h / semaine economisees en travail manuel cote assistanat", "100 % des RDV pris en ligne (vs bouche-a-oreille / WhatsApp avant)", "QuickBooks integre, facturation et paiement automatises", "4 langues supportees (FR / EN / ES / PT)", "SEO opere sur statistiques internes pour piloter l'acquisition"], "ordered": false},
-      {"type": "h2", "content": "La pile"},
-      {"type": "list", "items": ["Frontal : Next.js + React + multilingue", "Integrations : QuickBooks API, Calendly, PandaDoc", "Methode : Studio co-construction, sprints courts, drapeaux de fonctionnalite", "Equipe : 3 engineers Abbeal Studio"], "ordered": false},
-      {"type": "h2", "content": "Pourquoi Abbeal Studio"},
-      {"type": "p", "content": "Mobilitas avait besoin d'une vraie equipe produit, pas d'un travailleur autonome Wix. Abbeal Studio livre des plateformes transactionnelles avec integrations metier (paiement, signature, agenda) qui changent vraiment l'efficience d'un cabinet professionnel. Le resultat ne se mesure pas en lignes de code : il se mesure en heures economisees par semaine."}
+      {
+        "type": "p",
+        "content": "Mobilitas est un cabinet quebecois specialise en immigration et mobilite internationale, accompagnant particuliers et entreprises dans leurs demarches au Canada : permis d'etudes et de travail, mobilite jeunes professionnels (PVT/EIC), residence permanente, regroupement familial, citoyennete et programmes employeurs."
+      },
+      {
+        "type": "h2",
+        "content": "Le point de depart"
+      },
+      {
+        "type": "p",
+        "content": "Avant Abbeal, le quotidien Mobilitas etait fragmente : acquisition au bouche-a-oreille via WhatsApp, prise de RDV eclatee entre comptes Calendly individuels par conseiller, facturation en suivi Excel manuel dans QuickBooks, multilingue non gere. Resultat : du temps perdu en assistanat administratif et des retards de paiement avant RDV."
+      },
+      {
+        "type": "h2",
+        "content": "Le mandat Abbeal Studio"
+      },
+      {
+        "type": "p",
+        "content": "Abbeal Studio a livre une plateforme complete en mode co-construction :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Page d'accueil multilingue (FR/EN/ES/PT) avec presentation des services et de l'equipe",
+          "Prise de RDV 100 % en ligne avec formulaire de qualification acheminant chaque demande vers le bon conseiller selon l'expertise (etude, travail, residence, entreprise…)",
+          "Integration native QuickBooks automatisant la creation client + facture + envoi du lien Calendly apres confirmation de paiement",
+          "Espace client avec mandat de representation signe electroniquement (PandaDoc)",
+          "Statistiques de frequentation pour piloter le SEO et l'acquisition"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "L'integration QuickBooks change la regle du jeu : le client paie d'abord, le RDV se cale automatiquement, le mandat se signe electroniquement. Zero retard de paiement avant RDV, zero ressaisie cote assistanat. C'est ce qu'on appelle une plateforme transactionnelle, pas un site vitrine."
+      },
+      {
+        "type": "h2",
+        "content": "Les resultats mesures"
+      },
+      {
+        "type": "list",
+        "items": [
+          "10 h / semaine economisees en travail manuel cote assistanat",
+          "100 % des RDV pris en ligne (vs bouche-a-oreille / WhatsApp avant)",
+          "QuickBooks integre, facturation et paiement automatises",
+          "4 langues supportees (FR / EN / ES / PT)",
+          "SEO opere sur statistiques internes pour piloter l'acquisition"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "La pile"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Frontal : Next.js + React + multilingue",
+          "Integrations : QuickBooks API, Calendly, PandaDoc",
+          "Methode : Studio co-construction, sprints courts, drapeaux de fonctionnalite",
+          "Equipe : 3 engineers Abbeal Studio"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi Abbeal Studio"
+      },
+      {
+        "type": "p",
+        "content": "Mobilitas avait besoin d'une vraie equipe produit, pas d'un travailleur autonome Wix. Abbeal Studio livre des plateformes transactionnelles avec integrations metier (paiement, signature, agenda) qui changent vraiment l'efficience d'un cabinet professionnel. Le resultat ne se mesure pas en lignes de code : il se mesure en heures economisees par semaine."
+      }
     ]
   },
   "bopizy": {
     "fr": [
-      {"type": "p", "content": "Bopizy est une startup francaise fondee en 2023 (region lilloise, incubee a Eurea Technologies) qui democratise le click & collect pour les marchands de proximite : bouchers, charcutiers, producteurs de marche, artisans locaux — « les oublies de la digitalisation »."},
-      {"type": "h2", "content": "La promesse produit"},
-      {"type": "list", "items": ["Cote marchand : creer son e-shop en 5 minutes, sans saisie produit fastidieuse. Le marchand prend son etal en photo, la computer vision detecte les produits et genere la fiche e-commerce automatiquement", "Cote consommateur : commander en quelques clics et venir chercher sa commande, ancre dans le commerce de quartier"], "ordered": false},
-      {"type": "h2", "content": "Le squad cross-Atlantique Abbeal"},
-      {"type": "p", "content": "Pour soutenir la construction de la plateforme, Abbeal a deploye 2 developpeurs full-time depuis Montreal, operant sur fuseau europeen pour rester synchrones avec les fondateurs en France et leurs premiers deploiements (lancement avec la communaute urbaine de Dunkerque) :"},
-      {"type": "list", "items": ["1 directeur technique : architecture microservices, plateforme d'hebergement (Cloud Run, Pub/Sub, Mongo Atlas), CI/CD, mise en place et animation Scrum", "1 developpeur fullstack TypeScript : parcours d'onboarding marchand avec integration IA generative (GPT-3.5 / Gemini) pour personnaliser les e-shops, APIs en DDD, validation Zod, acces Auth0, optimisation UX mobile"], "ordered": false},
-      {"type": "callout", "tone": "teal", "content": "Le squad cross-Atlantique Montreal-Lille n'est pas un gadget. Operer sur fuseau europeen depuis Montreal donne aux fondateurs une equipe presente en synchrone toute leur journee de bureau, plus 4 heures de continuite l'apres-midi quand l'equipe France est partie. C'est la version legere de Follow-the-Sun pour une seed startup."},
-      {"type": "h2", "content": "La stack technique"},
-      {"type": "list", "items": ["Front : Nuxt 3 + Vue.js + TypeScript", "Back : Node.js + DDD + Zod + Auth0", "Data : MongoDB Atlas", "Infra : GCP (Cloud Run, Pub/Sub)", "Paiements : Stripe", "IA : Computer Vision sur photo etal + GPT-3.5 / Gemini pour personnalisation onboarding", "Methode : Scrum, CI/CD, +10 microservices architecture"], "ordered": false},
-      {"type": "h2", "content": "Le resultat"},
-      {"type": "list", "items": ["+10 microservices architectures et operes (angle technique)", "5 minutes pour creer son e-shop marchand", "Computer vision sur photo d'etal → fiche produit automatisee", "2 devs full-time en mode squad cross-Atlantique (Montreal ↔ Lille)", "Plateforme en production avec premiers clients en test au printemps 2025"], "ordered": false},
-      {"type": "h2", "content": "Pourquoi Abbeal"},
-      {"type": "p", "content": "Une seed startup n'a pas les moyens de monter une equipe produit complete a Lille. Mais elle a besoin d'un directeur technique senior et d'un fullstack capable de coder vite. Abbeal a livre les deux depuis Montreal, sur fuseau europeen, avec une vraie autonomie technique. C'est notre format Mobbeal cross-Atlantique : un pole d'execution distant, totalement aligne avec les fondateurs."}
+      {
+        "type": "p",
+        "content": "Bopizy est une startup francaise fondee en 2023 (region lilloise, incubee a Eurea Technologies) qui democratise le click & collect pour les marchands de proximite : bouchers, charcutiers, producteurs de marche, artisans locaux — « les oublies de la digitalisation »."
+      },
+      {
+        "type": "h2",
+        "content": "La promesse produit"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Cote marchand : creer son e-shop en 5 minutes, sans saisie produit fastidieuse. Le marchand prend son etal en photo, la computer vision detecte les produits et genere la fiche e-commerce automatiquement",
+          "Cote consommateur : commander en quelques clics et venir chercher sa commande, ancre dans le commerce de quartier"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Le squad cross-Atlantique Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "Pour soutenir la construction de la plateforme, Abbeal a deploye 2 developpeurs full-time depuis Montreal, operant sur fuseau europeen pour rester synchrones avec les fondateurs en France et leurs premiers deploiements (lancement avec la communaute urbaine de Dunkerque) :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "1 directeur technique : architecture microservices, plateforme d'hebergement (Cloud Run, Pub/Sub, Mongo Atlas), CI/CD, mise en place et animation Scrum",
+          "1 developpeur fullstack TypeScript : parcours d'onboarding marchand avec integration IA generative (GPT-3.5 / Gemini) pour personnaliser les e-shops, APIs en DDD, validation Zod, acces Auth0, optimisation UX mobile"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "Le squad cross-Atlantique Montreal-Lille n'est pas un gadget. Operer sur fuseau europeen depuis Montreal donne aux fondateurs une equipe presente en synchrone toute leur journee de bureau, plus 4 heures de continuite l'apres-midi quand l'equipe France est partie. C'est la version legere de Follow-the-Sun pour une seed startup."
+      },
+      {
+        "type": "h2",
+        "content": "La stack technique"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Front : Nuxt 3 + Vue.js + TypeScript",
+          "Back : Node.js + DDD + Zod + Auth0",
+          "Data : MongoDB Atlas",
+          "Infra : GCP (Cloud Run, Pub/Sub)",
+          "Paiements : Stripe",
+          "IA : Computer Vision sur photo etal + GPT-3.5 / Gemini pour personnalisation onboarding",
+          "Methode : Scrum, CI/CD, +10 microservices architecture"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Le resultat"
+      },
+      {
+        "type": "list",
+        "items": [
+          "+10 microservices architectures et operes (angle technique)",
+          "5 minutes pour creer son e-shop marchand",
+          "Computer vision sur photo d'etal → fiche produit automatisee",
+          "2 devs full-time en mode squad cross-Atlantique (Montreal ↔ Lille)",
+          "Plateforme en production avec premiers clients en test au printemps 2025"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "Une seed startup n'a pas les moyens de monter une equipe produit complete a Lille. Mais elle a besoin d'un directeur technique senior et d'un fullstack capable de coder vite. Abbeal a livre les deux depuis Montreal, sur fuseau europeen, avec une vraie autonomie technique. C'est notre format Mobbeal cross-Atlantique : un pole d'execution distant, totalement aligne avec les fondateurs."
+      }
     ],
     "en": [
-      {"type": "p", "content": "Bopizy is a French startup founded in 2023 (Lille region, incubated at Eurea Technologies) that democratises click & collect for local merchants: butchers, charcutiers, market producers, local artisans — \"those forgotten by digitalisation.\""},
-      {"type": "h2", "content": "The product promise"},
-      {"type": "list", "items": ["Merchant side: set up your e-shop in 5 minutes, no tedious product entry. The merchant takes a photo of their stall, computer vision detects the products and generates the e-commerce listing automatically", "Consumer side: order in a few clicks and come pick up the order, anchored in neighbourhood commerce"], "ordered": false},
-      {"type": "h2", "content": "The Abbeal cross-Atlantic squad"},
-      {"type": "p", "content": "To support platform construction, Abbeal deployed 2 full-time developers from Montreal, operating on European time zone to stay in sync with the founders in France and their first deployments (launch with the Dunkerque urban community):"},
-      {"type": "list", "items": ["1 CTO: microservices architecture, hosting platform (Cloud Run, Pub/Sub, Mongo Atlas), CI/CD, Scrum setup and facilitation", "1 fullstack TypeScript developer: merchant onboarding journey with generative AI integration (GPT-3.5 / Gemini) to personalise e-shops, DDD APIs, Zod validation, Auth0 access, mobile UX optimisation"], "ordered": false},
-      {"type": "callout", "tone": "teal", "content": "The cross-Atlantic Montreal-Lille squad is not a gimmick. Operating on European time zone from Montreal gives founders a team present in sync throughout their office day, plus 4 hours of continuity in the afternoon when the France team is gone. It's the lightweight version of Follow-the-Sun for a seed startup."},
-      {"type": "h2", "content": "The tech stack"},
-      {"type": "list", "items": ["Front: Nuxt 3 + Vue.js + TypeScript", "Back: Node.js + DDD + Zod + Auth0", "Data: MongoDB Atlas", "Infra: GCP (Cloud Run, Pub/Sub)", "Payments: Stripe", "AI: Computer Vision on stall photo + GPT-3.5 / Gemini for onboarding personalisation", "Method: Scrum, CI/CD, 10+ microservices architecture"], "ordered": false},
-      {"type": "h2", "content": "The outcome"},
-      {"type": "list", "items": ["10+ microservices architected and operated (technical angle)", "5 minutes to create your merchant e-shop", "Computer vision on stall photo → automated product listing", "2 full-time devs in cross-Atlantic squad mode (Montreal ↔ Lille)", "Platform in production with first clients in test in spring 2025"], "ordered": false},
-      {"type": "h2", "content": "Why Abbeal"},
-      {"type": "p", "content": "A seed startup can't afford to build a full product team in Lille. But it needs a senior CTO and a fullstack capable of shipping fast. Abbeal delivered both from Montreal, on European time zone, with real technical autonomy. That's our Mobbeal cross-Atlantic format: a remote execution hub, fully aligned with the founders."}
+      {
+        "type": "p",
+        "content": "Bopizy is a French startup founded in 2023 (Lille region, incubated at Eurea Technologies) that democratises click & collect for local merchants: butchers, charcutiers, market producers, local artisans — \"those forgotten by digitalisation.\""
+      },
+      {
+        "type": "h2",
+        "content": "The product promise"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Merchant side: set up your e-shop in 5 minutes, no tedious product entry. The merchant takes a photo of their stall, computer vision detects the products and generates the e-commerce listing automatically",
+          "Consumer side: order in a few clicks and come pick up the order, anchored in neighbourhood commerce"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "The Abbeal cross-Atlantic squad"
+      },
+      {
+        "type": "p",
+        "content": "To support platform construction, Abbeal deployed 2 full-time developers from Montreal, operating on European time zone to stay in sync with the founders in France and their first deployments (launch with the Dunkerque urban community):"
+      },
+      {
+        "type": "list",
+        "items": [
+          "1 CTO: microservices architecture, hosting platform (Cloud Run, Pub/Sub, Mongo Atlas), CI/CD, Scrum setup and facilitation",
+          "1 fullstack TypeScript developer: merchant onboarding journey with generative AI integration (GPT-3.5 / Gemini) to personalise e-shops, DDD APIs, Zod validation, Auth0 access, mobile UX optimisation"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "The cross-Atlantic Montreal-Lille squad is not a gimmick. Operating on European time zone from Montreal gives founders a team present in sync throughout their office day, plus 4 hours of continuity in the afternoon when the France team is gone. It's the lightweight version of Follow-the-Sun for a seed startup."
+      },
+      {
+        "type": "h2",
+        "content": "The tech stack"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Front: Nuxt 3 + Vue.js + TypeScript",
+          "Back: Node.js + DDD + Zod + Auth0",
+          "Data: MongoDB Atlas",
+          "Infra: GCP (Cloud Run, Pub/Sub)",
+          "Payments: Stripe",
+          "AI: Computer Vision on stall photo + GPT-3.5 / Gemini for onboarding personalisation",
+          "Method: Scrum, CI/CD, 10+ microservices architecture"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "The outcome"
+      },
+      {
+        "type": "list",
+        "items": [
+          "10+ microservices architected and operated (technical angle)",
+          "5 minutes to create your merchant e-shop",
+          "Computer vision on stall photo → automated product listing",
+          "2 full-time devs in cross-Atlantic squad mode (Montreal ↔ Lille)",
+          "Platform in production with first clients in test in spring 2025"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Why Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "A seed startup can't afford to build a full product team in Lille. But it needs a senior CTO and a fullstack capable of shipping fast. Abbeal delivered both from Montreal, on European time zone, with real technical autonomy. That's our Mobbeal cross-Atlantic format: a remote execution hub, fully aligned with the founders."
+      }
     ],
     "ja": [
-      {"type": "p", "content": "Bopizyは、地域商人（肉屋、シャルキュトリ、市場生産者、地元職人 — 「デジタル化に取り残された人々」）向けのクリック&コレクトを民主化する、2023年設立のフランスのスタートアップ（リール地域、Eurea Technologiesでインキュベート）。"},
-      {"type": "h2", "content": "プロダクトの約束"},
-      {"type": "list", "items": ["商人側：5分でeショップを作成、面倒な商品入力なし。商人が屋台を撮影し、コンピュータビジョンが製品を検出してeコマース商品ページを自動生成", "消費者側：数クリックで注文し、注文を受け取りに行く、地域商業に根ざした"], "ordered": false},
-      {"type": "h2", "content": "Abbeal大西洋横断スクワッド"},
-      {"type": "p", "content": "プラットフォーム構築を支援するため、Abbealはモントリオールから2名のフルタイム開発者を配置、フランスの創業者と初期展開（ダンケルク都市共同体での立ち上げ）と同期するため欧州タイムゾーンで運用："},
-      {"type": "list", "items": ["CTO 1名：マイクロサービスアーキテクチャ、ホスティングプラットフォーム（Cloud Run、Pub/Sub、Mongo Atlas）、CI/CD、Scrumのセットアップとファシリテーション", "フルスタックTypeScript開発者1名：eショップをパーソナライズするための生成AI統合（GPT-3.5 / Gemini）を備えた商人オンボーディングジャーニー、DDD API、Zod検証、Auth0アクセス、モバイルUX最適化"], "ordered": false},
-      {"type": "callout", "tone": "teal", "content": "大西洋横断モントリオール-リールスクワッドはギミックではありません。モントリオールから欧州タイムゾーンで運用することで、創業者はオフィス勤務日全体で同期しているチームに加えて、フランスチームが帰った午後の4時間の継続性を得られます。シードスタートアップ向けのFollow-the-Sunの軽量版です。"},
-      {"type": "h2", "content": "技術スタック"},
-      {"type": "list", "items": ["フロント：Nuxt 3 + Vue.js + TypeScript", "バック：Node.js + DDD + Zod + Auth0", "データ：MongoDB Atlas", "インフラ：GCP（Cloud Run、Pub/Sub）", "決済：Stripe", "AI：屋台写真のコンピュータビジョン + オンボーディングパーソナライズ用GPT-3.5 / Gemini", "方法論：Scrum、CI/CD、10以上のマイクロサービスアーキテクチャ"], "ordered": false},
-      {"type": "h2", "content": "成果"},
-      {"type": "list", "items": ["設計・運用された10以上のマイクロサービス（技術的観点）", "マーチャントeショップ作成まで5分", "屋台写真のコンピュータビジョン → 自動商品ページ", "大西洋横断スクワッドモードで2名のフルタイム開発者（モントリオール ↔ リール）", "2025年春に最初のテストクライアントとともに本番稼働"], "ordered": false},
-      {"type": "h2", "content": "なぜAbbeal"},
-      {"type": "p", "content": "シードスタートアップにはリールに完全な製品チームを構築する余裕はありません。しかしシニアCTOと迅速にコーディングできるフルスタックが必要です。Abbealはモントリオールから欧州タイムゾーンで両方を、本物の技術的自律性とともに納品しました。それが私たちのMobbeal大西洋横断フォーマット：創業者と完全に整合したリモート実行ハブです。"}
+      {
+        "type": "p",
+        "content": "Bopizyは、地域商人（肉屋、シャルキュトリ、市場生産者、地元職人 — 「デジタル化に取り残された人々」）向けのクリック&コレクトを民主化する、2023年設立のフランスのスタートアップ（リール地域、Eurea Technologiesでインキュベート）。"
+      },
+      {
+        "type": "h2",
+        "content": "プロダクトの約束"
+      },
+      {
+        "type": "list",
+        "items": [
+          "商人側：5分でeショップを作成、面倒な商品入力なし。商人が屋台を撮影し、コンピュータビジョンが製品を検出してeコマース商品ページを自動生成",
+          "消費者側：数クリックで注文し、注文を受け取りに行く、地域商業に根ざした"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Abbeal大西洋横断スクワッド"
+      },
+      {
+        "type": "p",
+        "content": "プラットフォーム構築を支援するため、Abbealはモントリオールから2名のフルタイム開発者を配置、フランスの創業者と初期展開（ダンケルク都市共同体での立ち上げ）と同期するため欧州タイムゾーンで運用："
+      },
+      {
+        "type": "list",
+        "items": [
+          "CTO 1名：マイクロサービスアーキテクチャ、ホスティングプラットフォーム（Cloud Run、Pub/Sub、Mongo Atlas）、CI/CD、Scrumのセットアップとファシリテーション",
+          "フルスタックTypeScript開発者1名：eショップをパーソナライズするための生成AI統合（GPT-3.5 / Gemini）を備えた商人オンボーディングジャーニー、DDD API、Zod検証、Auth0アクセス、モバイルUX最適化"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "大西洋横断モントリオール-リールスクワッドはギミックではありません。モントリオールから欧州タイムゾーンで運用することで、創業者はオフィス勤務日全体で同期しているチームに加えて、フランスチームが帰った午後の4時間の継続性を得られます。シードスタートアップ向けのFollow-the-Sunの軽量版です。"
+      },
+      {
+        "type": "h2",
+        "content": "技術スタック"
+      },
+      {
+        "type": "list",
+        "items": [
+          "フロント：Nuxt 3 + Vue.js + TypeScript",
+          "バック：Node.js + DDD + Zod + Auth0",
+          "データ：MongoDB Atlas",
+          "インフラ：GCP（Cloud Run、Pub/Sub）",
+          "決済：Stripe",
+          "AI：屋台写真のコンピュータビジョン + オンボーディングパーソナライズ用GPT-3.5 / Gemini",
+          "方法論：Scrum、CI/CD、10以上のマイクロサービスアーキテクチャ"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "成果"
+      },
+      {
+        "type": "list",
+        "items": [
+          "設計・運用された10以上のマイクロサービス（技術的観点）",
+          "マーチャントeショップ作成まで5分",
+          "屋台写真のコンピュータビジョン → 自動商品ページ",
+          "大西洋横断スクワッドモードで2名のフルタイム開発者（モントリオール ↔ リール）",
+          "2025年春に最初のテストクライアントとともに本番稼働"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "なぜAbbeal"
+      },
+      {
+        "type": "p",
+        "content": "シードスタートアップにはリールに完全な製品チームを構築する余裕はありません。しかしシニアCTOと迅速にコーディングできるフルスタックが必要です。Abbealはモントリオールから欧州タイムゾーンで両方を、本物の技術的自律性とともに納品しました。それが私たちのMobbeal大西洋横断フォーマット：創業者と完全に整合したリモート実行ハブです。"
+      }
     ],
     "fr-ca": [
-      {"type": "p", "content": "Bopizy est une jeune pousse francaise fondee en 2023 (region lilloise, incubee a Eurea Technologies) qui democratise le click & collect pour les marchands de proximite : bouchers, charcutiers, producteurs de marche, artisans locaux — « les oublies de la numerisation »."},
-      {"type": "h2", "content": "La promesse produit"},
-      {"type": "list", "items": ["Cote marchand : creer son e-shop en 5 minutes, sans saisie produit fastidieuse. Le marchand prend son etal en photo, la vision par ordinateur detecte les produits et genere la fiche commerce electronique automatiquement", "Cote consommateur : commander en quelques clics et venir chercher sa commande, ancre dans le commerce de quartier"], "ordered": false},
-      {"type": "h2", "content": "L'equipe transatlantique Abbeal"},
-      {"type": "p", "content": "Pour soutenir la construction de la plateforme, Abbeal a deploye 2 developpeurs a temps plein depuis Montreal, operant sur fuseau europeen pour rester synchrones avec les fondateurs en France et leurs premiers deploiements (lancement avec la communaute urbaine de Dunkerque) :"},
-      {"type": "list", "items": ["1 directeur technique : architecture microservices, plateforme d'hebergement (Cloud Run, Pub/Sub, Mongo Atlas), CI/CD, mise en place et animation Scrum", "1 developpeur fullstack TypeScript : parcours d'integration marchand avec integration IA generative (GPT-3.5 / Gemini) pour personnaliser les e-shops, APIs en DDD, validation Zod, acces Auth0, optimisation UX mobile"], "ordered": false},
-      {"type": "callout", "tone": "teal", "content": "L'equipe transatlantique Montreal-Lille n'est pas un gadget. Operer sur fuseau europeen depuis Montreal donne aux fondateurs une equipe presente en synchrone toute leur journee de bureau, plus 4 heures de continuite l'apres-midi quand l'equipe France est partie. C'est la version legere de Follow-the-Sun pour une jeune pousse seed."},
-      {"type": "h2", "content": "La pile technique"},
-      {"type": "list", "items": ["Frontal : Nuxt 3 + Vue.js + TypeScript", "Arriere-plan : Node.js + DDD + Zod + Auth0", "Donnees : MongoDB Atlas", "Infra : GCP (Cloud Run, Pub/Sub)", "Paiements : Stripe", "IA : Vision par ordinateur sur photo etal + GPT-3.5 / Gemini pour personnalisation integration", "Methode : Scrum, CI/CD, +10 microservices architecture"], "ordered": false},
-      {"type": "h2", "content": "Le resultat"},
-      {"type": "list", "items": ["+10 microservices architectures et operes (angle technique)", "5 minutes pour creer son e-shop marchand", "Vision par ordinateur sur photo d'etal → fiche produit automatisee", "2 devs a temps plein en mode equipe transatlantique (Montreal ↔ Lille)", "Plateforme en production avec premiers clients en test au printemps 2025"], "ordered": false},
-      {"type": "h2", "content": "Pourquoi Abbeal"},
-      {"type": "p", "content": "Une jeune pousse seed n'a pas les moyens de monter une equipe produit complete a Lille. Mais elle a besoin d'un directeur technique senior et d'un fullstack capable de coder vite. Abbeal a livre les deux depuis Montreal, sur fuseau europeen, avec une vraie autonomie technique. C'est notre format Mobbeal transatlantique : un pole d'execution distant, totalement aligne avec les fondateurs."}
+      {
+        "type": "p",
+        "content": "Bopizy est une jeune pousse francaise fondee en 2023 (region lilloise, incubee a Eurea Technologies) qui democratise le click & collect pour les marchands de proximite : bouchers, charcutiers, producteurs de marche, artisans locaux — « les oublies de la numerisation »."
+      },
+      {
+        "type": "h2",
+        "content": "La promesse produit"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Cote marchand : creer son e-shop en 5 minutes, sans saisie produit fastidieuse. Le marchand prend son etal en photo, la vision par ordinateur detecte les produits et genere la fiche commerce electronique automatiquement",
+          "Cote consommateur : commander en quelques clics et venir chercher sa commande, ancre dans le commerce de quartier"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "L'equipe transatlantique Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "Pour soutenir la construction de la plateforme, Abbeal a deploye 2 developpeurs a temps plein depuis Montreal, operant sur fuseau europeen pour rester synchrones avec les fondateurs en France et leurs premiers deploiements (lancement avec la communaute urbaine de Dunkerque) :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "1 directeur technique : architecture microservices, plateforme d'hebergement (Cloud Run, Pub/Sub, Mongo Atlas), CI/CD, mise en place et animation Scrum",
+          "1 developpeur fullstack TypeScript : parcours d'integration marchand avec integration IA generative (GPT-3.5 / Gemini) pour personnaliser les e-shops, APIs en DDD, validation Zod, acces Auth0, optimisation UX mobile"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "callout",
+        "tone": "teal",
+        "content": "L'equipe transatlantique Montreal-Lille n'est pas un gadget. Operer sur fuseau europeen depuis Montreal donne aux fondateurs une equipe presente en synchrone toute leur journee de bureau, plus 4 heures de continuite l'apres-midi quand l'equipe France est partie. C'est la version legere de Follow-the-Sun pour une jeune pousse seed."
+      },
+      {
+        "type": "h2",
+        "content": "La pile technique"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Frontal : Nuxt 3 + Vue.js + TypeScript",
+          "Arriere-plan : Node.js + DDD + Zod + Auth0",
+          "Donnees : MongoDB Atlas",
+          "Infra : GCP (Cloud Run, Pub/Sub)",
+          "Paiements : Stripe",
+          "IA : Vision par ordinateur sur photo etal + GPT-3.5 / Gemini pour personnalisation integration",
+          "Methode : Scrum, CI/CD, +10 microservices architecture"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Le resultat"
+      },
+      {
+        "type": "list",
+        "items": [
+          "+10 microservices architectures et operes (angle technique)",
+          "5 minutes pour creer son e-shop marchand",
+          "Vision par ordinateur sur photo d'etal → fiche produit automatisee",
+          "2 devs a temps plein en mode equipe transatlantique (Montreal ↔ Lille)",
+          "Plateforme en production avec premiers clients en test au printemps 2025"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "h2",
+        "content": "Pourquoi Abbeal"
+      },
+      {
+        "type": "p",
+        "content": "Une jeune pousse seed n'a pas les moyens de monter une equipe produit complete a Lille. Mais elle a besoin d'un directeur technique senior et d'un fullstack capable de coder vite. Abbeal a livre les deux depuis Montreal, sur fuseau europeen, avec une vraie autonomie technique. C'est notre format Mobbeal transatlantique : un pole d'execution distant, totalement aligne avec les fondateurs."
+      }
     ]
   }
 }

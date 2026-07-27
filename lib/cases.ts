@@ -23,7 +23,7 @@ type Translatable<T> = { fr: T } & Partial<Record<Exclude<Locale, "fr">, T>>;
 export type CaseStudy = {
   slug: string;
   /** True = remonté en haut de /cases listing. Reservé aux 5 cases clients
-   *  nommés iconic (Cartier, BNP, Money Forward, Pichet, Le Monde) — preuve
+   *  nommés iconic (BNP, Money Forward, Pichet, Le Monde) — preuve
    *  sociale sur la page liste. Différent de `featuredOnHome` car la home
    *  préfère mettre en avant des cases chiffrés/anonymisés (KPI bruts).
    */
@@ -731,24 +731,17 @@ export const cases: CaseStudy[] = [
       "fr-ca": CASE_BODIES["groupe-reussite"]?.["fr-ca"],
     },
   },
-  // Cartier (Groupe Richemont) — case nommé. Relation entamée fin 2021 (NDA
-  // signé dec 2021), 4,5 ans de partenariat tech continu. Trajectoire :
-  // audits Compass (Front 2023, Back 2025) -> Mapper V1+1.1 horlogerie/
-  // joaillerie -> ETL data concurrence sur BigQuery -> POC LLM Web Dev
-  // (mai 2023) -> LLM privé fine-tuné sur infra Cartier (2026, en cours).
-  // Equipe Abbeal : Bertrand Behaghel (co-founder, kick-off), Adrien
-  // Casanova (lead Mapper), Adrien Abdi (Compass2). TODO_VERIFY_CONSULTANTS:
-  // liste exacte des consultants staffés en delivery a reconstituer via
-  // Boond. CAVEATS : pas de citation client (autorisation requise auprès
-  // d'Alexandre Poussard / brand-legal Richemont), pas de montants
-  // facturés, pas de noms de contacts, formulation prudente sur la perf
-  // du LLM privé. Logo cartier.svg deja present dans /public/logos/.
-  // Featured: false jusqu'à validation.
+  // W31 : case ANONYMISEE (Sebastien W31, client retire de liste blanche).
+  // Slug "cartier" et URL /cases/cartier PRESERVES pour continuite SEO
+  // (indexation Google 2026). Nom, logo, titre, sector, kpi, excerpt, body
+  // reformules en generique "client retail/luxe international". Trajectoire
+  // (audits Compass, Mapper, ETL BigQuery, LLM prive) preservee — c'est le
+  // proof-point technique qui compte. Featured=false (retire du carousel
+  // home + listing featured).
   {
     slug: "cartier",
-    featured: true,
+    featured: false,
     featuredOnHome: false,
-    clientLogo: "cartier",
     sector: {
       fr: "Joaillerie & horlogerie de luxe",
       en: "Luxury jewellery & watchmaking",
@@ -769,24 +762,24 @@ export const cases: CaseStudy[] = [
     kpi: {
       value: "LLM privé",
       label: {
-        fr: "fine-tuné sur infra Cartier",
-        en: "fine-tuned on Cartier infra",
-        ja: "Cartierインフラでファインチューニング",
-        "fr-ca": "ajusté sur infra Cartier",
+        fr: "fine-tuné sur infra client",
+        en: "fine-tuned on client infra",
+        ja: "クライアントインフラでファインチューニング",
+        "fr-ca": "ajusté sur infra client",
       },
     },
     publishedAt: "2026-01-15",
     title: {
-      fr: "Cartier : de l'audit au LLM privé en interne.",
-      en: "Cartier: from audit to in-house private LLM.",
-      ja: "カルティエ：監査から社内プライベートLLMまで。",
-      "fr-ca": "Cartier : de l'audit au LLM privé en interne.",
+      fr: "Client retail/luxe international : de l'audit au LLM privé en interne.",
+      en: "International retail/luxury client: from audit to in-house private LLM.",
+      ja: "国際ラグジュアリー・リテール・クライアント：監査から社内プライベートLLMまで。",
+      "fr-ca": "Client retail/luxe international : de l'audit au LLM privé en interne.",
     },
     excerpt: {
-      fr: "Compass (audits archi front + back), Mapper (générateur produits horlogerie + joaillerie), ETL data concurrence sur BigQuery, et désormais un LLM privé fine-tuné sur l'infra Cartier. Un partenariat tech long-terme sur la stack data et IA d'une maison de luxe.",
-      en: "Compass (front + back architecture audits), Mapper (watchmaking + jewellery product generator), competitive data ETL on BigQuery, and now a private LLM fine-tuned on Cartier's own infra. A long-term tech partnership on the data and AI stack of a luxury house.",
-      ja: "Compass（フロント＋バックエンド・アーキテクチャ監査）、Mapper（時計＋ジュエリー製品ジェネレーター）、BigQuery上の競合データETL、そして現在Cartier自社インフラでファインチューニングされたプライベートLLM。ラグジュアリーメゾンのデータ＆AIスタックでの長期テックパートナーシップ。",
-      "fr-ca": "Compass (audits architecture frontale + arriere), Mapper (generateur produits horlogerie + joaillerie), ETL donnees concurrence sur BigQuery, et desormais un LLM prive ajuste sur l'infra Cartier. Un partenariat tech long-terme sur la pile data et IA d'une maison de luxe.",
+      fr: "Compass (audits archi front + back), Mapper (générateur produits horlogerie + joaillerie), ETL data concurrence sur BigQuery, et désormais un LLM privé fine-tuné sur l'infra client. Un partenariat tech long-terme sur la stack data et IA d'une maison de luxe internationale.",
+      en: "Compass (front + back architecture audits), Mapper (watchmaking + jewellery product generator), competitive data ETL on BigQuery, and now a private LLM fine-tuned on the client's own infra. A long-term tech partnership on the data and AI stack of an international luxury house.",
+      ja: "Compass（フロント＋バックエンド・アーキテクチャ監査）、Mapper（時計＋ジュエリー製品ジェネレーター）、BigQuery上の競合データETL、そして現在クライアント自社インフラでファインチューニングされたプライベートLLM。国際ラグジュアリーメゾンのデータ＆AIスタックでの長期テックパートナーシップ。",
+      "fr-ca": "Compass (audits architecture frontale + arriere), Mapper (generateur produits horlogerie + joaillerie), ETL donnees concurrence sur BigQuery, et desormais un LLM prive ajuste sur l'infra client. Un partenariat tech long-terme sur la pile data et IA d'une maison de luxe internationale.",
     },
     body: {
       fr: CASE_BODIES["cartier"]?.fr ?? [],
@@ -1122,7 +1115,7 @@ export function getHomeFeaturedCases(): CaseStudy[] {
 }
 
 export function getAllCases(): CaseStudy[] {
-  // Tri composite : featured d'abord (clients iconic Cartier/BNP/Money Forward
+  // Tri composite : featured d'abord (clients iconic BNP/Money Forward
   // /Pichet/Le Monde remontent), puis par date desc en fallback. Cohérent
   // avec getAllArticles() et le marquee homepage qui pousse les 5 featured.
   return [...cases].sort((a, b) => {

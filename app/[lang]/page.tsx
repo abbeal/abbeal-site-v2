@@ -104,7 +104,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
     }));
 
   // Marquee Stories sur la home : on prend les cases avec featuredOnHome
-  // (4 anonymisés à fort KPI chiffré). Les 5 nommés (Cartier, BNP, Money
+  // (4 anonymisés à fort KPI chiffré). Les 5 nommés (BNP, Money
   // Forward, Pichet, Le Monde) restent featured pour /cases listing mais
   // n'apparaissent pas sur la home (decision Sebastien W19+1).
   const featuredCases = getHomeFeaturedCases().map((c) => ({
