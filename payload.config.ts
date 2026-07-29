@@ -1452,7 +1452,12 @@ const JobOffers: CollectionConfig = {
       type: "select",
       required: true,
       options: [
-        { label: "CDI", value: "cdi" },
+        { label: "CDI (France)", value: "cdi" },
+        // Ajout Vianney W31 : "Permanent" pour offres Japon / Canada
+        // (CDI = terme franco-francais, pas parlant sur ces marches).
+        // Mapping i18n : fr/fr-ca "Permanent", en "Permanent",
+        // ja "正社員" (seishain, standard JP).
+        { label: "Permanent (Canada / Japon)", value: "permanent" },
         { label: "Freelance / Contractor", value: "freelance" },
         { label: "Stage", value: "stage" },
         { label: "VIE", value: "vie" },
