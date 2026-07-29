@@ -79,7 +79,9 @@ export default async function CareerOG({
               ? "Freelance"
               : offer?.contractType === "cdi"
                 ? "CDI"
-                : ""}
+                : offer?.contractType === "permanent"
+                  ? "Permanent"
+                  : ""}
           </span>
         </div>
 

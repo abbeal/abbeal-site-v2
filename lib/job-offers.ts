@@ -34,6 +34,7 @@ export type JobOfferLocation =
   | "remote-ww";
 export type JobOfferContractType =
   | "cdi"
+  | "permanent"
   | "freelance"
   | "stage"
   | "vie"
@@ -115,6 +116,7 @@ const LOCATION_LABELS: Record<Locale, Record<JobOfferLocation, string>> = {
 const CONTRACT_LABELS: Record<Locale, Record<JobOfferContractType, string>> = {
   fr: {
     cdi: "CDI",
+    permanent: "Permanent",
     freelance: "Freelance",
     stage: "Stage",
     vie: "VIE",
@@ -123,6 +125,7 @@ const CONTRACT_LABELS: Record<Locale, Record<JobOfferContractType, string>> = {
   },
   en: {
     cdi: "Full-time",
+    permanent: "Permanent",
     freelance: "Contractor",
     stage: "Internship",
     vie: "VIE",
@@ -131,6 +134,7 @@ const CONTRACT_LABELS: Record<Locale, Record<JobOfferContractType, string>> = {
   },
   ja: {
     cdi: "正社員",
+    permanent: "正社員",
     freelance: "業務委託",
     stage: "インターン",
     vie: "VIE",
@@ -139,6 +143,7 @@ const CONTRACT_LABELS: Record<Locale, Record<JobOfferContractType, string>> = {
   },
   "fr-ca": {
     cdi: "Permanent",
+    permanent: "Permanent",
     freelance: "Pigiste",
     stage: "Stage",
     vie: "VIE",

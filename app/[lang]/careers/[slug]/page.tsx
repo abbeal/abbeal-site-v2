@@ -238,6 +238,7 @@ function CmsSchemaLd({
     new Date(Date.now() + 90 * 24 * 3600 * 1000).toISOString().slice(0, 10);
   const employmentTypeMap: Record<string, string> = {
     cdi: "FULL_TIME",
+    permanent: "FULL_TIME",
     freelance: "CONTRACTOR",
     stage: "INTERN",
     vie: "TEMPORARY",
