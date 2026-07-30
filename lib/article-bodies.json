@@ -11850,7 +11850,7 @@
       {
         "type": "callout",
         "tone": "teal",
-        "content": "→ [Part 2 · Why I Stopped Relying on Motivation](/en/insights/learning-japanese-my-journey-part-2-motivation) — the system Alex built to keep his Japanese habit alive when motivation faded."
+        "content": "→ Next parts: [Part 2 · Why I Stopped Relying on Motivation](/en/insights/learning-japanese-my-journey-part-2-motivation) · [Part 3 · Daily Routine and Recommendations](/en/insights/learning-japanese-my-journey-part-3-daily-routine-and-recommendations)"
       }
     ],
     "fr": [
@@ -11919,7 +11919,7 @@
       {
         "type": "callout",
         "tone": "teal",
-        "content": "→ [Partie 2 · Pourquoi j'ai arrêté de compter sur la motivation](/fr/insights/learning-japanese-my-journey-part-2-motivation) — le système qu'Alex a construit pour faire tenir son habitude japonais quand la motivation faiblit."
+        "content": "→ Suites : [Partie 2 · Pourquoi j'ai arrêté de compter sur la motivation](/fr/insights/learning-japanese-my-journey-part-2-motivation) · [Partie 3 · Routine quotidienne et recommandations](/fr/insights/learning-japanese-my-journey-part-3-daily-routine-and-recommendations)"
       }
     ],
     "ja": [
@@ -11988,7 +11988,7 @@
       {
         "type": "callout",
         "tone": "teal",
-        "content": "→ [パート2・なぜモチベーションに頼るのをやめたのか](/ja/insights/learning-japanese-my-journey-part-2-motivation) — モチベーションが薄れた時に日本語の習慣を維持するためにAlexが構築したシステム。"
+        "content": "→ 続き：[パート2 · なぜモチベーションに頼るのをやめたのか](/ja/insights/learning-japanese-my-journey-part-2-motivation) · [パート3 · 日々のルーティンとおすすめ](/ja/insights/learning-japanese-my-journey-part-3-daily-routine-and-recommendations)"
       }
     ],
     "fr-ca": [
@@ -12057,7 +12057,7 @@
       {
         "type": "callout",
         "tone": "teal",
-        "content": "→ [Partie 2 · Pourquoi j'ai arrêté de compter sur la motivation](/fr-ca/insights/learning-japanese-my-journey-part-2-motivation) — le système qu'Alex a construit pour faire tenir son habitude japonais quand la motivation faiblit."
+        "content": "→ Suites : [Partie 2 · Pourquoi j'ai arrêté de compter sur la motivation](/fr-ca/insights/learning-japanese-my-journey-part-2-motivation) · [Partie 3 · Routine quotidienne et recommandations](/fr-ca/insights/learning-japanese-my-journey-part-3-daily-routine-and-recommendations)"
       }
     ]
   }
