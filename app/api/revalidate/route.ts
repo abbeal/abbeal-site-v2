@@ -1,6 +1,10 @@
 /**
  * POST /api/revalidate — on-demand ISR revalidation.
  *
+ * Note W28 (rec Cowork) : reponse de rec de connexion Vercel <-> GitHub
+ * apres qu'un mauvais repo (abbealBZZZ/abbeal-site-v3) avait ete lie a
+ * la place de abbeal/abbeal-site-v2, ce qui empechait tout auto-deploy.
+ *
  * Pourquoi ce endpoint existe :
  *   La page /careers est SSG avec revalidate = 300 (5 min). En pratique,
  *   le cache Vercel CDN tient bien plus longtemps (35h+ observe en
