@@ -147,7 +147,7 @@ export const landingPages: LandingPage[] = [
       fr: "Le service de delivery 24/7 d'Abbeal : trois hubs senior (Paris, Montréal, Tokyo), handoffs structurés entre fuseaux, overlap maîtrisé, zéro dette technique. Vous gagnez 8 à 16 heures de cycle de delivery par jour ouvré, sans burn-out d'équipe ni surcoût de night shift.",
       en: "Abbeal's 24/7 software delivery service: three senior hubs (Paris, Montréal, Tokyo), structured handoffs across time zones, mastered overlap, zero technical debt. You gain 8 to 16 hours of delivery cycle per business day, with no team burn-out and no night-shift premium.",
       ja: "Abbealの24/7ソフトウェアデリバリーサービス：3つのシニアハブ（パリ・モントリオール・東京）、タイムゾーン間の構造化されたハンドオフ、計算された重なり、技術的負債ゼロ。チームのバーンアウトもナイトシフトの追加料金もなく、営業日あたり8〜16時間のデリバリーサイクルを獲得。",
-      "fr-ca": "Le service de delivery 24/7 d'Abbeal : trois pôles senior (Paris, Montréal, Tokyo), passations structurées entre fuseaux, chevauchement maîtrisé, zéro dette technique. Vous gagnez 8 à 16 heures de cycle de delivery par jour ouvré, sans burn-out d'équipe pis sans surcoût de quart de nuit.",
+      "fr-ca": "Le service de delivery 24/7 d'Abbeal : trois pôles senior (Paris, Montréal, Tokyo), passations structurées entre fuseaux, chevauchement maîtrisé, zéro dette technique. Vous gagnez 8 à 16 heures de cycle de delivery par jour ouvré, sans burn-out d'équipe et sans surcoût de quart de nuit.",
     },
     metaDescription: {
       fr: "24/7 follow-the-sun software delivery : service Abbeal multi-hubs (Paris, Montréal, Tokyo). +8 à +16h de cycle de delivery par jour, sans burn-out ni night shift. Devis SLA contractualisable.",
@@ -246,7 +246,7 @@ export const landingPages: LandingPage[] = [
       fr: "Hub Tokyo opérationnel depuis 2018 : Money Forward (digital banking from-scratch) et Le Monde (Insights data depuis Tokyo). On parle JFSA, on staffe en JLPT N2+, on livre en mode hybride Tamachi/remote.",
       en: "Tokyo hub operational since 2018: Money Forward (greenfield digital banking) and Le Monde (Insights data from Tokyo). We speak JFSA, we staff at JLPT N2+, we ship hybrid mode Tamachi/remote.",
       ja: "2018年から稼働中の東京拠点：マネーフォワード（ゼロから構築するデジタルバンキング）、ル・モンド（東京からのInsightsデータ）。JFSAに対応し、JLPT N2+でスタッフィングし、田町/リモートのハイブリッドモードで納品します。",
-      "fr-ca": "Pôle Tokyo opérationnel depuis 2018 : Money Forward (banque numérique greenfield) pis Le Monde (Insights data depuis Tokyo). On parle JFSA, on place en JLPT N2+, on livre en mode hybride Tamachi/à distance.",
+      "fr-ca": "Pôle Tokyo opérationnel depuis 2018 : Money Forward (banque numérique greenfield) et Le Monde (Insights data depuis Tokyo). On parle JFSA, on place en JLPT N2+, on livre en mode hybride Tamachi/à distance.",
     },
     // Pas de metaTitle : H1 deja keyword-frontloaded (voir commentaire H1),
     // le fallback pick(h1, locale) suffit.
@@ -703,16 +703,24 @@ export const landingPages: LandingPage[] = [
       // W31 QW1 : audit GSC W31 (27,6 sur 1075 imp), demande "developpement
       // logiciel Montreal" explicite. Densifie double-terme (logiciel +
       // informatique) pour capter les deux formulations sans perdre ranking.
+      // W32 : retrait "pis" de la variante fr-ca (audit Sebastien : joual
+      // oral non adapte au B2B ecrit).
       fr: "Entreprise de développement logiciel & informatique à Montréal — ESN, cabinet conseil TI et squads d'ingénierie seniors pour PME et grands groupes québécois.",
-      "fr-ca": "Entreprise de développement logiciel & informatique à Montréal — Cabinet conseil TI pis squads d'ingénierie séniors pour PME pis grands groupes québécois.",
+      "fr-ca": "Entreprise de développement logiciel & informatique à Montréal — Cabinet conseil TI et squads d'ingénierie séniors pour PME et grands groupes québécois.",
     },
     subtitle: {
       fr: "Hub Montréal depuis 2023 (4388 rue Saint-Denis, Plateau-Mont-Royal). Squads embarqués · recrutement tech · delivery clé en main. Software, IA, Data, Robotique. Clients Banque Nationale, Hydro-Québec, Desjardins, Cogeco. Vianney Blanquart au pilotage. Mobilité Mobbeal France↔Canada↔Japon possible.",
       "fr-ca": "Pôle Montréal depuis 2023 (4388 rue Saint-Denis, Plateau-Mont-Royal). Squads embarqués · recrutement tech · livraison clé en main. Logiciel, IA, Données, Robotique. Clients Banque Nationale, Hydro-Québec, Desjardins, Cogeco. Vianney Blanquart au pilotage. Mobilité Mobbeal France↔Canada↔Japon possible.",
     },
+    // W32 : metaTitle court (52 chars + " · Abbeal" template = 61) pour
+    // fix CTR nul (audit Sebastien : title 166 chars tronque par Google).
+    metaTitle: {
+      fr: "Entreprise de développement informatique à Montréal",
+      "fr-ca": "Entreprise de développement informatique à Montréal",
+    },
     metaDescription: {
-      fr: "Entreprise de développement informatique à Montréal : squads seniors embarqués, recrutement tech, delivery 24/7. Software, IA, Data, Robotique. Clients BNC, Hydro-Québec, Desjardins. Cadrage gratuit 30 min.",
-      "fr-ca": "Entreprise de développement informatique à Montréal : squads séniors embarqués, recrutement tech, livraison 24/7. Logiciel, IA, Données, Robotique. Clients BNC, Hydro-Québec, Desjardins. Cadrage gratuit 30 min.",
+      fr: "Squads d'ingénieurs seniors embarqués dans vos équipes, à Montréal. Développement logiciel, IA, data, robotique. Bureau local depuis 2023. Cadrage gratuit de 30 minutes.",
+      "fr-ca": "Squads d'ingénieurs séniors intégrés à vos équipes, à Montréal. Développement logiciel, IA, données, robotique. Bureau local depuis 2023. Cadrage gratuit de 30 minutes.",
     },
     body: {
       fr: BODIES["entreprise-developpement-informatique-montreal"]?.body?.fr ?? [],
@@ -879,7 +887,7 @@ export const landingPages: LandingPage[] = [
       fr: "3 hubs, mêmes standards : 7+ ans post-diplôme, pair-coding 2-3h par un ingénieur senior Abbeal, décision peer-review unanime. Taux d'acceptation 4 %. Vous voyez et vous gardez les vrais profils — pas de pyramide 1 senior / 5 juniors qu'on facture en time & material.",
       en: "3 hubs, same standards: 7+ years post-graduation, 2-3h pair-coding by an Abbeal senior engineer, unanimous peer review. 4% acceptance rate. You see and keep the real profiles — no 1 senior / 5 juniors pyramid billed as time & material.",
       ja: "3拠点、同一基準：卒業後7年以上、Abbealシニアエンジニアによる2〜3時間のペアコーディング、全会一致のピアレビュー。採用率4%。お客様は本物のプロファイルを見て、そして保持します — タイム＆マテリアルで請求される1シニア／5ジュニアのピラミッドはありません。",
-      "fr-ca": "3 pôles, mêmes standards : 7+ ans post-diplôme, pair-coding 2-3h par un ingénieur sénior Abbeal, décision peer-review unanime. Taux d'acceptation 4 %. Vous voyez pis vous gardez les vrais profils — pas de pyramide 1 sénior / 5 juniors facturée en temps & matériel.",
+      "fr-ca": "3 pôles, mêmes standards : 7+ ans post-diplôme, pair-coding 2-3h par un ingénieur sénior Abbeal, décision peer-review unanime. Taux d'acceptation 4 %. Vous voyez et vous gardez les vrais profils — pas de pyramide 1 sénior / 5 juniors facturée en temps & matériel.",
     },
     // W30 R4 : metaTitle enrichi avec "only" positioning claim. Abbeal
     // est deja #1 LLM (ChatGPT/Perplexity/Gemini) sur "IT staffing agency
@@ -966,20 +974,23 @@ export const landingPages: LandingPage[] = [
       "fr-ca": "// RECRUTEMENT MONTRÉAL",
     },
     h1: {
+      // W32 : retrait "pis" fr-ca (joual oral non adapte B2B ecrit).
       fr: "Recrutement tech à Montréal : ingénieurs et développeurs seniors.",
-      "fr-ca": "Recrutement techno à Montréal : ingénieurs pis développeurs séniors.",
+      "fr-ca": "Recrutement techno à Montréal : ingénieurs et développeurs séniors.",
     },
     subtitle: {
       fr: "Hub Montréal depuis 2023 (4388 rue Saint-Denis, Plateau-Mont-Royal). Recrutement senior 3-5 semaines vs 10-16 en canaux classiques. Sourcing par ingénieurs (pas RH généraliste), pair-coding, garantie 6 mois. 30+ postes fermés BNC, Hydro-Québec, Desjardins, Cogeco, Paraito. Note GMB 4.9★/12 avis.",
       "fr-ca": "Pôle Montréal depuis 2023 (4388 rue Saint-Denis, Plateau-Mont-Royal). Recrutement sénior 3-5 semaines vs 10-16 en canaux classiques. Recherche par ingénieurs (pas RH généraliste), pair-coding, garantie 6 mois. 30+ postes fermés BNC, Hydro-Québec, Desjardins, Cogeco, Paraito. Note GMB 4.9★/12 avis.",
     },
+    // W32 : metaTitle raccourci + retrait suffixe "— Abbeal" duplique
+    // (template [slug]/page.tsx ajoute deja " · Abbeal").
     metaTitle: {
-      fr: "Recrutement tech à Montréal | Développeurs & ingénieurs seniors — Abbeal",
-      "fr-ca": "Recrutement techno à Montréal | Développeurs & ingénieurs séniors — Abbeal",
+      fr: "Recrutement tech à Montréal — développeurs seniors",
+      "fr-ca": "Recrutement techno à Montréal — développeurs séniors",
     },
     metaDescription: {
-      fr: "Cabinet de recrutement tech à Montréal depuis 2023 : sourcing ingénieur-led, pair-coding technique, shortlist 7-10 jours, closing 48h. Garantie 6 mois. Clients BNC, Hydro-Québec, Desjardins. GMB 4.9★/12 avis.",
-      "fr-ca": "Firme de recrutement techno à Montréal depuis 2023 : recherche ingénieur-led, pair-coding technique, sélection restreinte 7-10 jours, conclusion 48h. Garantie 6 mois. Clients BNC, Hydro-Québec, Desjardins. GMB 4.9★/12 avis.",
+      fr: "Cabinet de recrutement tech à Montréal depuis 2023. Sourcing mené par des ingénieurs, pair-coding technique, shortlist en 7 à 10 jours, garantie 6 mois.",
+      "fr-ca": "Firme de recrutement techno à Montréal depuis 2023. Recherche menée par des ingénieurs, pair-coding technique, sélection restreinte en 7 à 10 jours, garantie 6 mois.",
     },
     body: {
       fr: BODIES["recrutement-tech-montreal"]?.body?.fr ?? [],
@@ -1146,13 +1157,13 @@ export const landingPages: LandingPage[] = [
       fr: "Hub Paris au 54 rue Greneta (2e). Ingénieurs seniors (7 à 12 ans d'XP) embarqués en régie et dans la durée, avec ownership de périmètre et peer-review collectif. Zéro junior déguisé. Vous parlez à un architecte, pas à un commercial.",
       en: "Paris hub at 54 rue Greneta (2nd). Senior engineers (7 to 12 years of experience) embedded on your team, ongoing capacity, with scope ownership and collective peer review. No disguised juniors. You talk to an architect, not a sales rep.",
       ja: "パリ拠点、Greneta通り54番地（2区）。シニアエンジニア（7〜12年の経験）をチームに組込み、継続的なキャパシティを提供、スコープオーナーシップと集合的ピアレビュー付き。ジュニアの偽装なし。営業ではなく、アーキテクトと話せます。",
-      "fr-ca": "Pôle Paris au 54 rue Greneta (2e). Ingénieurs séniors (7 à 12 ans d'XP) embarqués en régie pis dans la durée, avec ownership de portée pis peer-review collectif. Zéro junior déguisé. Vous parlez à un architecte, pas un représentant.",
+      "fr-ca": "Pôle Paris au 54 rue Greneta (2e). Ingénieurs séniors (7 à 12 ans d'XP) embarqués en régie et dans la durée, avec ownership de portée et peer-review collectif. Zéro junior déguisé. Vous parlez à un architecte, pas un représentant.",
     },
     metaDescription: {
       fr: "ESN à Paris qui ne place que des développeurs seniors (7-12 ans d'XP). Ingénieurs embarqués en régie, avec ownership et peer-review. Hub au 54 rue Greneta. Parlez à un architecte.",
       en: "Paris tech consulting firm that only places senior developers (7-12 years). Engineers embedded on your team, with ownership and peer review. Hub at 54 rue Greneta. Talk to an architect.",
       ja: "シニアデベロッパー（7〜12年の経験）のみを配置するパリのテックコンサルティングファーム。オーナーシップとピアレビュー付きでチームに組込まれるエンジニア。Greneta通り54番地。アーキテクトと相談。",
-      "fr-ca": "Firme de conseil tech à Paris qui ne place que des développeurs séniors (7-12 ans d'XP). Ingénieurs embarqués en régie, avec ownership pis peer-review. Pôle au 54 rue Greneta. Parlez à un architecte.",
+      "fr-ca": "Firme de conseil tech à Paris qui ne place que des développeurs séniors (7-12 ans d'XP). Ingénieurs embarqués en régie, avec ownership et peer-review. Pôle au 54 rue Greneta. Parlez à un architecte.",
     },
     body: {
       fr: BODIES["esn-paris-developpeurs-seniors"]?.body?.fr ?? [],

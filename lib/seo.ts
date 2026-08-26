@@ -38,6 +38,7 @@ const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
 export function pageAlternates(
   locale: Locale | string,
   path: string,
+  availableLocales?: Locale[],
 ): NonNullable<Metadata["alternates"]> {
   // Normalize: ensure path starts with "/" (or is empty for home)
   const cleanPath = path === "" || path === "/" ? "" : path.startsWith("/") ? path : `/${path}`;
@@ -45,23 +46,43 @@ export function pageAlternates(
   // Hreflang strategy:
   // - Each page has a self-canonical (canonical: this page)
   // - languages map uses BCP-47 tags ("fr-CA"), URL slug is "/fr-ca"
-  // - x-default → /en (lingua franca for international visitors when no
-  //   locale matches their browser preferences). This consolidates the
-  //   ranking signal between locale variants and avoids Google treating
-  //   each locale as a standalone duplicate. The previous removal of
-  //   x-default (in Vague 1) was a misdiagnosis — without x-default,
-  //   Google picks a locale at random as canonical and marks the rest
-  //   as duplicates, which is what "Page is duplicate" was actually
-  //   reporting on /en, /ja, /fr-ca.
+  // - x-default → /en (lingua franca) OR /fr when EN doesn't exist
+  //
+  // W32 fix (audit Sebastien 2026-08-26) : some landings only exist in
+  // some locales (ex: entreprise-developpement-informatique-montreal =
+  // fr + fr-ca only). Declaring EN / JA hreflang for pages that 404
+  // invalidates the whole cluster on Google. When `availableLocales` is
+  // passed, only those locales are listed in `languages`, and x-default
+  // targets the first available (prefers "en" > "fr" > any).
+  const localeToSlug: Record<string, string> = {
+    fr: "fr",
+    en: "en",
+    ja: "ja",
+    "fr-ca": "fr-ca",
+  };
+  const bcp47: Record<string, string> = {
+    fr: "fr",
+    en: "en",
+    ja: "ja",
+    "fr-ca": "fr-CA",
+  };
+  const all: Array<keyof typeof localeToSlug> = ["fr", "en", "ja", "fr-ca"];
+  const active = availableLocales && availableLocales.length > 0 ? availableLocales : all;
+  const languages: Record<string, string> = {};
+  for (const l of active) {
+    languages[bcp47[l]] = `${SITE}/${localeToSlug[l]}${cleanPath}`;
+  }
+  // x-default prefers EN if available, else FR, else first
+  const xDefaultLoc = active.includes("en" as Locale)
+    ? "en"
+    : active.includes("fr" as Locale)
+      ? "fr"
+      : active[0];
+  languages["x-default"] = `${SITE}/${localeToSlug[xDefaultLoc]}${cleanPath}`;
+
   return {
     canonical: `${SITE}/${locale}${cleanPath}`,
-    languages: {
-      fr: `${SITE}/fr${cleanPath}`,
-      en: `${SITE}/en${cleanPath}`,
-      ja: `${SITE}/ja${cleanPath}`,
-      "fr-CA": `${SITE}/fr-ca${cleanPath}`,
-      "x-default": `${SITE}/en${cleanPath}`,
-    },
+    languages,
   };
 }
 

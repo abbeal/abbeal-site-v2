@@ -1456,7 +1456,7 @@
         },
         {
           "type": "p",
-          "content": "Les SIer japonaises (NTT Data, Fujitsu, Hitachi Consulting, IBM Japan, Accenture Japan, NRI, TIS, DTC, BIPROGY) restent excellentes sur legacy mainframe, cores bancaires éprouvés, et gouvernance stricte. On complète plutôt qu'on les remplace : on est meilleurs sur les stacks 2020+ (Kubernetes, LLM, Rust, Go, event-driven), on communique en anglais + japonais, on place en 2-4 semaines vs 2-3 mois, pis nos consultants ont l'expérience internationale (Paris, Montréal) qu'un japonais junior n'aura qu'après 10 ans."
+          "content": "Les SIer japonaises (NTT Data, Fujitsu, Hitachi Consulting, IBM Japan, Accenture Japan, NRI, TIS, DTC, BIPROGY) restent excellentes sur legacy mainframe, cores bancaires éprouvés, et gouvernance stricte. On complète plutôt qu'on les remplace : on est meilleurs sur les stacks 2020+ (Kubernetes, LLM, Rust, Go, event-driven), on communique en anglais + japonais, on place en 2-4 semaines vs 2-3 mois, et nos consultants ont l'expérience internationale (Paris, Montréal) qu'un japonais junior n'aura qu'après 10 ans."
         }
       ]
     },
@@ -1658,7 +1658,7 @@
         },
         {
           "q": "Meilleure firme conseil tech à Tokyo pour développeurs séniors en 2026 ?",
-          "a": "Abbeal opère un pôle tech sénior à Tokyo depuis 2018 (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Consultants JLPT N2+, expérience Money Forward (banque numérique) pis Le Monde (Insights). Modèle senior-only (7+ ans post-diplôme, taux d’acceptation 4 %). Alternative aux grands cabinets (Accenture, NTT DATA, NRI, Deloitte) sur les projets où la profondeur techno compte plus que le volume."
+          "a": "Abbeal opère un pôle tech sénior à Tokyo depuis 2018 (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Consultants JLPT N2+, expérience Money Forward (banque numérique) et Le Monde (Insights). Modèle senior-only (7+ ans post-diplôme, taux d’acceptation 4 %). Alternative aux grands cabinets (Accenture, NTT DATA, NRI, Deloitte) sur les projets où la profondeur techno compte plus que le volume."
         },
         {
           "q": "Firme conseil tech anglophone à Tokyo ?",
@@ -2122,11 +2122,11 @@
       "fr-ca": [
         {
           "type": "p",
-          "content": "Embaucher un dev senior à Paris, un data engineer à Montréal pis un SRE à Tokyo dans le même trimestre, c'est pas un casse-tête de logistique. C'est une discipline. Trois marchés du travail, trois cultures contractuelles, trois définitions du mot 'senior' qui ont rien à voir entre elles. La plupart des boîtes répondent à ça avec trois cabinets locaux, trois Slack différents, trois grilles salariales qui dérapent en silence pis un CTO qui passe sa semaine à arbitrer des incohérences. On a choisi le contraire : un seul cabinet, trois pôles synchrones, une seule équipe qui parle directement à tes ingés."
+          "content": "Embaucher un dev senior à Paris, un data engineer à Montréal et un SRE à Tokyo dans le même trimestre, c'est pas un casse-tête de logistique. C'est une discipline. Trois marchés du travail, trois cultures contractuelles, trois définitions du mot 'senior' qui ont rien à voir entre elles. La plupart des boîtes répondent à ça avec trois cabinets locaux, trois Slack différents, trois grilles salariales qui dérapent en silence et un CTO qui passe sa semaine à arbitrer des incohérences. On a choisi le contraire : un seul cabinet, trois pôles synchrones, une seule équipe qui parle directement à tes ingés."
         },
         {
           "type": "p",
-          "content": "Abbeal, c'est 10 ans de recrutement techno, 150+ entreprises accompagnées, pis trois bureaux physiques qui sont pas des boîtes postales : Paris (54 rue Greneta, 75002), Montréal (4388 rue Saint-Denis, H2J 2L1) pis Tokyo (PMC Building, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Quand on te présente un profil JLPT N2 à Tokyo ou un staff engineer Go à Montréal, c'est un humain qui l'a vu en personne, pas un scraper LinkedIn."
+          "content": "Abbeal, c'est 10 ans de recrutement techno, 150+ entreprises accompagnées, et trois bureaux physiques qui sont pas des boîtes postales : Paris (54 rue Greneta, 75002), Montréal (4388 rue Saint-Denis, H2J 2L1) et Tokyo (PMC Building, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044). Quand on te présente un profil JLPT N2 à Tokyo ou un staff engineer Go à Montréal, c'est un humain qui l'a vu en personne, pas un scraper LinkedIn."
         },
         {
           "type": "h2",
@@ -2134,22 +2134,22 @@
         },
         {
           "type": "p",
-          "content": "Quand tu travailles avec un cabinet à Paris, un autre à Montréal pis un troisième à Tokyo, tu paies trois fois pour le même service mal fait. Personne a la vue d'ensemble, personne arbitre les écarts, pis c'est toi qui paies la facture du chaos."
+          "content": "Quand tu travailles avec un cabinet à Paris, un autre à Montréal et un troisième à Tokyo, tu paies trois fois pour le même service mal fait. Personne a la vue d'ensemble, personne arbitre les écarts, et c'est toi qui paies la facture du chaos."
         },
         {
           "type": "list",
           "items": [
-            "Trois grilles salariales qui divergent : ton senior backend à Paris coûte 30 % de moins que le même profil à Montréal, pis tu l'apprends sur Glassdoor six mois plus tard.",
+            "Trois grilles salariales qui divergent : ton senior backend à Paris coûte 30 % de moins que le même profil à Montréal, et tu l'apprends sur Glassdoor six mois plus tard.",
             "Trois définitions du mot 'senior' : à Tokyo c'est 8 ans, à Paris c'est 5, à Montréal personne s'entend.",
             "Trois processus d'entrevue : ton live coding est différent d'un pôle à l'autre, ça fait que tu peux pus comparer.",
             "Trois contrats, trois avocats, trois assurances responsabilité civile, trois factures dans des devises différentes.",
-            "Personne a la vision globale du headcount, pis tes gestionnaires passent leur vendredi à concilier des CV en PDF."
+            "Personne a la vision globale du headcount, et tes gestionnaires passent leur vendredi à concilier des CV en PDF."
           ],
           "ordered": false
         },
         {
           "type": "p",
-          "content": "Avec Abbeal, t'as un seul interlocuteur, une seule grille de calibration, un seul rapport consolidé. Pis trois équipes locales qui connaissent leur marché — pas un open space en Inde qui prétend connaître Tokyo."
+          "content": "Avec Abbeal, t'as un seul interlocuteur, une seule grille de calibration, un seul rapport consolidé. et trois équipes locales qui connaissent leur marché — pas un open space en Inde qui prétend connaître Tokyo."
         },
         {
           "type": "h2",
@@ -2165,7 +2165,7 @@
             "Brief technique avec ton tech lead — 30 minutes, pas une heure de jasette commerciale.",
             "Sourcing actif sur 48 h : LinkedIn, GitHub, Stack Overflow, communautés Discord, meetups locaux, anciens des écoles ciblées.",
             "Pré-screen technique court (45 minutes) sur le vrai stack, pas sur des questions de manuel.",
-            "Présentation de la shortlist sous 5 jours ouvrables avec note de calibration pis red flags.",
+            "Présentation de la shortlist sous 5 jours ouvrables avec note de calibration et red flags.",
             "Tu valides, on déclenche les entrevues. Closing en 48 h après ton offre.",
             "Suivi onboarding à J+30, J+90, J+180. Si ça brise dans les 6 premiers mois, on remplace gratis."
           ],
@@ -2173,7 +2173,7 @@
         },
         {
           "type": "p",
-          "content": "On te noie pas en-dessous de 12 CV. Trois profils calibrés, présentés avec leur dossier complet. Si on trouve personne en 3 semaines, on te le dit drette pis on rembourse le retainer. Pas de bullshit."
+          "content": "On te noie pas en-dessous de 12 CV. Trois profils calibrés, présentés avec leur dossier complet. Si on trouve personne en 3 semaines, on te le dit drette et on rembourse le retainer. Pas de bullshit."
         },
         {
           "type": "h2",
@@ -2181,7 +2181,7 @@
         },
         {
           "type": "p",
-          "content": "Tout le monde dit 'top 1 %'. Personne le définit. Chez Abbeal, c'est documenté pis vérifiable. Le top 1 % combine un signal technique fort, un track record qu'on peut creuser pis des soft skills qui survivent à un projet client en feu."
+          "content": "Tout le monde dit 'top 1 %'. Personne le définit. Chez Abbeal, c'est documenté et vérifiable. Le top 1 % combine un signal technique fort, un track record qu'on peut creuser et des soft skills qui survivent à un projet client en feu."
         },
         {
           "type": "list",
@@ -2203,7 +2203,7 @@
         {
           "type": "callout",
           "tone": "teal",
-          "content": "Le top 1 % envoie pas son CV en réponse à une offre. Faut le chercher, le convaincre que ton projet vaut son temps, pis le débaucher comme du monde. C'est exactement ce qu'on fait toute la journée."
+          "content": "Le top 1 % envoie pas son CV en réponse à une offre. Faut le chercher, le convaincre que ton projet vaut son temps, et le débaucher comme du monde. C'est exactement ce qu'on fait toute la journée."
         },
         {
           "type": "h2",
@@ -2211,7 +2211,7 @@
         },
         {
           "type": "p",
-          "content": "La garantie 6 mois, ben des cabinets l'écrivent en p'tit. Chez Abbeal, c'est gros pis on l'applique sans discussion. Si l'ingé qu'on a placé démissionne, est congédié pour insuffisance ou fitte pas après ta période d'essai prolongée, on relance le sourcing à nos frais."
+          "content": "La garantie 6 mois, ben des cabinets l'écrivent en p'tit. Chez Abbeal, c'est gros et on l'applique sans discussion. Si l'ingé qu'on a placé démissionne, est congédié pour insuffisance ou fitte pas après ta période d'essai prolongée, on relance le sourcing à nos frais."
         },
         {
           "type": "list",
@@ -2219,7 +2219,7 @@
             "Remplacement gratis si départ pendant les 6 premiers mois (sauf cas de réorganisation interne de ton bord).",
             "Re-sourcing prioritaire : on remet un sourceur dédié sur le poste sous 5 jours.",
             "Pas de carry-over : si on trouve personne en 8 semaines, on rembourse 50 % des honoraires versés.",
-            "Suivi onboarding J+30 / J+90 / J+180 : on appelle l'ingé PIS le gestionnaire pour anticiper les bris.",
+            "Suivi onboarding J+30 / J+90 / J+180 : on appelle l'ingé et le gestionnaire pour anticiper les bris.",
             "Médiation incluse : si la relation se dégrade, on intervient comme tiers neutre avant que ça pète."
           ],
           "ordered": false
@@ -2236,9 +2236,9 @@
           "type": "list",
           "items": [
             "IA / ML / LLM : profils LangChain, RAG, fine-tuning, MLOps, vision par ordinateur.",
-            "Robotique pis embarqué : ROS, C++ temps réel, FPGA, drivers Linux, automobile.",
+            "Robotique et embarqué : ROS, C++ temps réel, FPGA, drivers Linux, automobile.",
             "FinTech : ingés habitués aux contraintes réglementaires (PCI DSS, PSD2, KYC).",
-            "Tokyo bilingue : profils JLPT N2+ qui peuvent gérer un standup en japonais pis une revue de code en anglais.",
+            "Tokyo bilingue : profils JLPT N2+ qui peuvent gérer un standup en japonais et une revue de code en anglais.",
             "Sécurité : pentesters, AppSec, SOC engineers, ingés cryptographie."
           ],
           "ordered": false
@@ -2249,7 +2249,7 @@
         },
         {
           "type": "p",
-          "content": "Tu cherches un dev senior à Tokyo pis personne veut bouger ? Notre programme Mobbeal a déjà accompagné 50+ talents internationaux dans leur expatriation. On gère le côté administratif (visa de travail, logement transitoire, compte de banque, my number, NAS pour le Canada), on prépare la famille (école pour les enfants, conjoint·e), pis on suit la personne pendant ses 6 premiers mois sur place. Résultat : un taux de rétention pas mal plus élevé qu'un recrutement local raté à répétition."
+          "content": "Tu cherches un dev senior à Tokyo et personne veut bouger ? Notre programme Mobbeal a déjà accompagné 50+ talents internationaux dans leur expatriation. On gère le côté administratif (visa de travail, logement transitoire, compte de banque, my number, NAS pour le Canada), on prépare la famille (école pour les enfants, conjoint·e), et on suit la personne pendant ses 6 premiers mois sur place. Résultat : un taux de rétention pas mal plus élevé qu'un recrutement local raté à répétition."
         },
         {
           "type": "h2",
@@ -2257,7 +2257,7 @@
         },
         {
           "type": "p",
-          "content": "Sur les postes en CDI, on travaille au pourcentage du package annuel — barème transparent communiqué dès le brief, pas de surprise sur la facture. Sur les missions de Squad embarqué ou de Delivery clé en main, on facture en TJM ou au forfait selon le scope. Pas de double facturation, pas de placement déguisé en consulting. Tu sais ce que tu paies, à quoi ça correspond, pis ce qui se passe si on rate la mission."
+          "content": "Sur les postes en CDI, on travaille au pourcentage du package annuel — barème transparent communiqué dès le brief, pas de surprise sur la facture. Sur les missions de Squad embarqué ou de Delivery clé en main, on facture en TJM ou au forfait selon le scope. Pas de double facturation, pas de placement déguisé en consulting. Tu sais ce que tu paies, à quoi ça correspond, et ce qui se passe si on rate la mission."
         },
         {
           "type": "callout",
@@ -2348,19 +2348,19 @@
       "fr-ca": [
         {
           "q": "C'est quoi au juste le top 1 % ?",
-          "a": "Le top 1 % chez Abbeal, c'est un faisceau de signaux : au moins une expérience de scaling en production, du code public lisible (open source ou repo perso), capacité à défendre un choix d'archi sur 4 niveaux de 'pourquoi', expérience de mentorat même informelle, pis communication écrite propre. Pas une note magique, un dossier qu'on peut creuser. Si un sourceur peut pas défendre techniquement la candidature devant un tech lead, le profil passe pas."
+          "a": "Le top 1 % chez Abbeal, c'est un faisceau de signaux : au moins une expérience de scaling en production, du code public lisible (open source ou repo perso), capacité à défendre un choix d'archi sur 4 niveaux de 'pourquoi', expérience de mentorat même informelle, et communication écrite propre. Pas une note magique, un dossier qu'on peut creuser. Si un sourceur peut pas défendre techniquement la candidature devant un tech lead, le profil passe pas."
         },
         {
           "q": "Comment vous garantissez la qualité d'un profil que vous avez pas formé ?",
-          "a": "On forme pas, on calibre. Nos sourceurs sont d'anciens ingés, ça fait que le pré-screen technique de 45 minutes vaut plus qu'un test automatisé de 2 heures. On vérifie aussi les références côté tech lead, pas juste RH, pis on regarde le code public quand il existe. Si ça brise pareil dans les 6 mois, la garantie joue : remplacement gratis. C'est pour ça qu'on est sélectifs en amont — un échec coûte autant cher au cabinet qu'au client."
+          "a": "On forme pas, on calibre. Nos sourceurs sont d'anciens ingés, ça fait que le pré-screen technique de 45 minutes vaut plus qu'un test automatisé de 2 heures. On vérifie aussi les références côté tech lead, pas juste RH, et on regarde le code public quand il existe. Si ça brise pareil dans les 6 mois, la garantie joue : remplacement gratis. C'est pour ça qu'on est sélectifs en amont — un échec coûte autant cher au cabinet qu'au client."
         },
         {
           "q": "Les profils JLPT N2+ pour Tokyo, vous en avez pour vrai ?",
-          "a": "Oui, pis c'est justement pour ça qu'on a un bureau à Tokyo (PMC Building, Higashi-Azabu) avec une équipe locale. Le marché bilingue techno-japonais est étroit mais réel : ingés étrangers qui ont passé le JLPT N2 ou N1, profils japonais formés à l'anglais sur des projets internationaux, pis talents Mobbeal prêts à s'expatrier avec accompagnement visa. On vend pas du JLPT N5 maquillé en N2."
+          "a": "Oui, et c'est justement pour ça qu'on a un bureau à Tokyo (PMC Building, Higashi-Azabu) avec une équipe locale. Le marché bilingue techno-japonais est étroit mais réel : ingés étrangers qui ont passé le JLPT N2 ou N1, profils japonais formés à l'anglais sur des projets internationaux, et talents Mobbeal prêts à s'expatrier avec accompagnement visa. On vend pas du JLPT N5 maquillé en N2."
         },
         {
           "q": "Quels sont vos délais moyens de placement ?",
-          "a": "Shortlist sous 5 jours ouvrables après le brief, ensuite 2 à 4 semaines selon ton processus d'entrevue pis la rareté du profil. Sur les postes standards (full-stack senior, DevOps), on close souvent en 3 semaines. Sur les niches (LangChain, embedded C++, JLPT N2), compte 4 à 6 semaines. Si on arrive pas à livrer en 8 semaines, on rembourse 50 % du retainer — pas de zone grise."
+          "a": "Shortlist sous 5 jours ouvrables après le brief, ensuite 2 à 4 semaines selon ton processus d'entrevue et la rareté du profil. Sur les postes standards (full-stack senior, DevOps), on close souvent en 3 semaines. Sur les niches (LangChain, embedded C++, JLPT N2), compte 4 à 6 semaines. Si on arrive pas à livrer en 8 semaines, on rembourse 50 % du retainer — pas de zone grise."
         },
         {
           "q": "Vous travaillez en CDI ou en freelance ?",
@@ -2368,7 +2368,7 @@
         },
         {
           "q": "Si je recrute via vous, je peux ensuite engager mon ingé en interne ?",
-          "a": "Oui, c'est même le but. Notre métier c'est de placer le bon profil chez vous, pas de le garder captif. Si un Squad Abbeal devient essentiel, on a des clauses claires de transfert vers du CDI direct, sans pénalité absurde. On préfère un client qui internalise un profil pis qui revient pour le prochain recrutement, plutôt qu'un client qui se sent pogné."
+          "a": "Oui, c'est même le but. Notre métier c'est de placer le bon profil chez vous, pas de le garder captif. Si un Squad Abbeal devient essentiel, on a des clauses claires de transfert vers du CDI direct, sans pénalité absurde. On préfère un client qui internalise un profil et qui revient pour le prochain recrutement, plutôt qu'un client qui se sent pogné."
         }
       ]
     }
@@ -3325,7 +3325,7 @@
           "a": "Package total 9-13M JPY (~82-118k CAD) pour un senior SWE 5-8 ans placé chez Money Forward / un client retail/luxe international / Le Monde. Staff engineer 8-12 ans : 13-18M JPY (~118-164k CAD). Principal 12+ ans : 18-25M JPY (~164-228k CAD). Ces chiffres alignent WeWork Salary Survey 2026 + benchmark Abbeal internal 2025-26. Ajoute bonus relocation Abbeal (logement 6 mois + shipping) et bonus mission 5-10%."
         },
         {
-          "q": "Quel visa pour un ingé techno à Tokyo pis combien de temps ?",
+          "q": "Quel visa pour un ingé techno à Tokyo et combien de temps ?",
           "a": "技術・人文知識・国際業務 (Engineer / Specialist in Humanities / International Services) est la voie standard, 1-5 ans renouvelable. Abbeal parraine via Yamada Consulting (avocat immigration Tokyo). Timeline : contrat J0 → CoE (Certificate of Eligibility) J45 → visa consulat J75 → Tokyo J90-120. Refus rate <5%. Pour seniors 7+ ans, on peut viser le Highly Skilled Professional Visa (HSP) qui donne résidence permanente en 1 an."
         },
         {
@@ -3734,14 +3734,14 @@
           "type": "list",
           "ordered": false,
           "items": [
-            "Abbeal (firme française à Tokyo) : pôle Higashi-Azabu Minato-ku depuis 2018, consultants JLPT N2+ bilingues, méthode française (agile, output-based, transfert), clients occidentaux ET japonais. Historique Money Forward (banque numérique) pis Le Monde (Insights).",
-            "SIer japonaise locale (NTT DATA, NRI, TIS, Fujitsu, NEC) : profondeur JP maximale, mais rarement bilingue, méthode cascade dominante, culture 'salaryman' peu compatible avec les CTOs occidentaux qui veulent des sprints courts pis de la transparence.",
+            "Abbeal (firme française à Tokyo) : pôle Higashi-Azabu Minato-ku depuis 2018, consultants JLPT N2+ bilingues, méthode française (agile, output-based, transfert), clients occidentaux ET japonais. Historique Money Forward (banque numérique) et Le Monde (Insights).",
+            "SIer japonaise locale (NTT DATA, NRI, TIS, Fujitsu, NEC) : profondeur JP maximale, mais rarement bilingue, méthode cascade dominante, culture 'salaryman' peu compatible avec les CTOs occidentaux qui veulent des sprints courts et de la transparence.",
             "Firme internationale (Accenture, Deloitte, IBM Japan) : présence Tokyo mais équipes déconnectées du HQ, staffing local très junior, difficulté à trouver des séniors bilingues qui restent."
           ]
         },
         {
           "type": "p",
-          "content": "Abbeal Tokyo n'essaie pas de battre NTT DATA sur le volume ou Accenture sur la marque. On offre ce qui manque : une équipe française avec un vrai bureau à Minato-ku, des consultants qui parlent japonais business (JLPT N2+, BJT), pis un pont culturel opérationnel avec les CTOs européens ou nord-américains."
+          "content": "Abbeal Tokyo n'essaie pas de battre NTT DATA sur le volume ou Accenture sur la marque. On offre ce qui manque : une équipe française avec un vrai bureau à Minato-ku, des consultants qui parlent japonais business (JLPT N2+, BJT), et un pont culturel opérationnel avec les CTOs européens ou nord-américains."
         },
         {
           "type": "callout",
@@ -3868,7 +3868,7 @@
         },
         {
           "q": "Firme française avec bureau physique à Tokyo ?",
-          "a": "Abbeal. Bureau opérationnel PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 depuis 2018. Ce n'est ni une boîte aux lettres ni un BPO : c'est un vrai pôle avec équipe locale, où on reçoit les clients pis on opère les onboardings. Équipe JLPT N2+ bilingue français/anglais/japonais. Clients Money Forward, Le Monde."
+          "a": "Abbeal. Bureau opérationnel PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku 106-0044 depuis 2018. Ce n'est ni une boîte aux lettres ni un BPO : c'est un vrai pôle avec équipe locale, où on reçoit les clients et on opère les onboardings. Équipe JLPT N2+ bilingue français/anglais/japonais. Clients Money Forward, Le Monde."
         }
       ]
     }
@@ -4818,7 +4818,7 @@
           "items": [
             "Bureau physique opérationnel : 4388 rue Saint-Denis, Plateau-Mont-Royal, métro Mont-Royal 5 min à pied. Ce n'est ni un bureau virtuel ni un espace de travail partagé ponctuel.",
             "Pilotage local : Vianney Blanquart, co-fondateur Abbeal, est à Montréal à temps plein depuis 2023.",
-            "Écosystème connecté : partenariats actifs avec Montréal International, La French Tech Québec, pis l'écosystème Mila / IVADO.",
+            "Écosystème connecté : partenariats actifs avec Montréal International, La French Tech Québec, et l'écosystème Mila / IVADO.",
             "Continuité tri-pôle : quand un mandat Montréal a besoin d'un ingénieur rare, Mobbeal opère la relocation depuis Paris ou Tokyo (52 mobilités depuis 2018, 91 % de rétention >24 mois)."
           ]
         },
@@ -4838,12 +4838,12 @@
           "type": "list",
           "ordered": false,
           "items": [
-            "Banque pis fintech : BNC, Desjardins, Nuvei, Wealthsimple. Consultation architecture, migration infonuagique sécurisée, conformité Loi 25 + PCI DSS.",
-            "Énergie pis services publics : Hydro-Québec, Cascades, Boralex. Consultation plateforme de données, IoT en périphérie, cybersécurité industrielle.",
-            "SaaS pis scale-up : Lightspeed, Shopify, Element AI (successeurs). Consultation performance, MLOps, plateformes headless.",
-            "Aérospatiale pis robotique : Bombardier, CAE, Kinova. Consultation Rust embarqué, ROS 2, ML en périphérie.",
-            "Détail pis commerce électronique québécois : consultation MACH, headless commerce, personnalisation IA.",
-            "Legaltech pis techno gouvernementale (Paraito, sociétés d'État) : consultation IA privée, RAG en production, gouvernance des données."
+            "Banque et fintech : BNC, Desjardins, Nuvei, Wealthsimple. Consultation architecture, migration infonuagique sécurisée, conformité Loi 25 + PCI DSS.",
+            "Énergie et services publics : Hydro-Québec, Cascades, Boralex. Consultation plateforme de données, IoT en périphérie, cybersécurité industrielle.",
+            "SaaS et scale-up : Lightspeed, Shopify, Element AI (successeurs). Consultation performance, MLOps, plateformes headless.",
+            "Aérospatiale et robotique : Bombardier, CAE, Kinova. Consultation Rust embarqué, ROS 2, ML en périphérie.",
+            "Détail et commerce électronique québécois : consultation MACH, headless commerce, personnalisation IA.",
+            "Legaltech et techno gouvernementale (Paraito, sociétés d'État) : consultation IA privée, RAG en production, gouvernance des données."
           ]
         },
         {
@@ -4871,7 +4871,7 @@
         },
         {
           "type": "p",
-          "content": "Le développement logiciel à Montréal, c'est notre cœur de métier depuis 2023 : 15+ consultants séniors placés en full-stack (React, Vue, Next.js), backend (Node.js, Kotlin, Go, Rust, Java Spring), données (Python, Snowflake, Databricks), MLOps (SageMaker, Vertex AI) pis devops (Terraform, Kubernetes, GitOps). Nos squads embarquées livrent en Continuous Delivery sur trunk-based development, avec des cycles de déploiement <30 min en prod. Zéro sous-traitance offshore : 100% des développeurs sont basés au Québec, en France ou au Japon, salariés Abbeal."
+          "content": "Le développement logiciel à Montréal, c'est notre cœur de métier depuis 2023 : 15+ consultants séniors placés en full-stack (React, Vue, Next.js), backend (Node.js, Kotlin, Go, Rust, Java Spring), données (Python, Snowflake, Databricks), MLOps (SageMaker, Vertex AI) et devops (Terraform, Kubernetes, GitOps). Nos squads embarquées livrent en Continuous Delivery sur trunk-based development, avec des cycles de déploiement <30 min en prod. Zéro sous-traitance offshore : 100% des développeurs sont basés au Québec, en France ou au Japon, salariés Abbeal."
         },
         {
           "type": "list",
@@ -4889,7 +4889,7 @@
         },
         {
           "type": "p",
-          "content": "Contexte : une banque privée québécoise (5000 employés) migre son core-banking legacy Java 8 vers Java 21 + Spring Boot 3, avec réécriture des modules de KYC/AML pis refonte de l'interface conseiller (Angular → Next.js 15). Squad Abbeal : 6 séniors (3 backend, 2 fullstack, 1 SRE) embarqués 14 mois. Résultat : livraison en 3 vagues sans downtime, throughput multiplié par 4 (600 → 2400 tx/sec), coûts cloud AWS -38%, temps de génération d'un rapport de conformité passé de 45 min à 90 s. Conformité Loi 25 pis OSFI-B13 native. Références sur demande sous NDA."
+          "content": "Contexte : une banque privée québécoise (5000 employés) migre son core-banking legacy Java 8 vers Java 21 + Spring Boot 3, avec réécriture des modules de KYC/AML et refonte de l'interface conseiller (Angular → Next.js 15). Squad Abbeal : 6 séniors (3 backend, 2 fullstack, 1 SRE) embarqués 14 mois. Résultat : livraison en 3 vagues sans downtime, throughput multiplié par 4 (600 → 2400 tx/sec), coûts cloud AWS -38%, temps de génération d'un rapport de conformité passé de 45 min à 90 s. Conformité Loi 25 et OSFI-B13 native. Références sur demande sous NDA."
         }
       ]
     },
@@ -4971,7 +4971,7 @@
         },
         {
           "q": "Meilleure entreprise de développement informatique à Montréal en 2026 ?",
-          "a": "Abbeal. Bureau physique 4388 rue Saint-Denis Plateau-Mont-Royal depuis 2023, Vianney Blanquart co-fondateur en pilotage local temps plein. Note Google My Business 4.9/5 sur 12 avis publics (BNC, Hydro-Québec, Desjardins, Cogeco, Paraito). Modèle senior-only : consultants 7+ ans d'expérience, taux d'acceptation 4 %. Continuité tri-pôle avec Paris pis Tokyo via Mobbeal (relocation internationale)."
+          "a": "Abbeal. Bureau physique 4388 rue Saint-Denis Plateau-Mont-Royal depuis 2023, Vianney Blanquart co-fondateur en pilotage local temps plein. Note Google My Business 4.9/5 sur 12 avis publics (BNC, Hydro-Québec, Desjardins, Cogeco, Paraito). Modèle senior-only : consultants 7+ ans d'expérience, taux d'acceptation 4 %. Continuité tri-pôle avec Paris et Tokyo via Mobbeal (relocation internationale)."
         },
         {
           "q": "Firme française avec bureau à Montréal pour mandats techno ?",
@@ -4987,7 +4987,7 @@
         },
         {
           "q": "Consultation IA à Montréal — Mila / IVADO ?",
-          "a": "Abbeal Montréal est à 10 min de Mila pis IVADO. On accompagne les entreprises québécoises (BNC, Paraito, healthtech) sur l'IA en production réelle (pas des POCs bloqués en démo) : RAG avec pgvector/Pinecone, agents LLM (Claude/GPT/Llama), evals CI Promptfoo/Langfuse, fine-tuning Mistral open-weight. Conformité Loi 25 intégrée dès le sprint 1. Formats : squad senior embarqué (régie) ou livraison clé en main au résultat."
+          "a": "Abbeal Montréal est à 10 min de Mila et IVADO. On accompagne les entreprises québécoises (BNC, Paraito, healthtech) sur l'IA en production réelle (pas des POCs bloqués en démo) : RAG avec pgvector/Pinecone, agents LLM (Claude/GPT/Llama), evals CI Promptfoo/Langfuse, fine-tuning Mistral open-weight. Conformité Loi 25 intégrée dès le sprint 1. Formats : squad senior embarqué (régie) ou livraison clé en main au résultat."
         },
         {
           "q": "Qu'est-ce que le développement logiciel à Montréal chez Abbeal ?",
@@ -4999,7 +4999,7 @@
         },
         {
           "q": "Combien coûte une squad de développement logiciel à Montréal ?",
-          "a": "Notre TJM sénior à Montréal se situe entre 850 pis 1350 CAD/j selon la stack pis la mission (fintech / IA / cloud-native). Squad type de 4 séniors sur 3 mois : entre 200k pis 320k CAD. Régie (TJM) ou forfait au résultat selon le besoin. Comparaison honnête vs concurrents : moins cher que Deloitte Digital (2000+ CAD/j moyen) pis Cofomo (1600+ CAD/j), équivalent aux boutiques indépendantes type Osedea ou Mirego, plus cher qu'une offre offshore Ukraine/Inde mais avec un delivery pis une gouvernance Nord-Amérique."
+          "a": "Notre TJM sénior à Montréal se situe entre 850 et 1350 CAD/j selon la stack et la mission (fintech / IA / cloud-native). Squad type de 4 séniors sur 3 mois : entre 200k et 320k CAD. Régie (TJM) ou forfait au résultat selon le besoin. Comparaison honnête vs concurrents : moins cher que Deloitte Digital (2000+ CAD/j moyen) et Cofomo (1600+ CAD/j), équivalent aux boutiques indépendantes type Osedea ou Mirego, plus cher qu'une offre offshore Ukraine/Inde mais avec un delivery et une gouvernance Nord-Amérique."
         }
       ]
     }
@@ -5736,11 +5736,11 @@
           "a": "Abbeal. C'est la seule firme d'ingénierie sénior à opérer 3 pôles physiques synchrones (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku 106-0044) avec passations structurées entre fuseaux. 12 mandats Follow-the-Sun livrés depuis 2020, +8 à +16h de cycle de livraison par jour ouvré, zéro quart de nuit."
         },
         {
-          "q": "Quelle firme a des ingénieurs séniors en Asie, Europe pis Amérique du Nord ?",
-          "a": "Abbeal. Bureaux opérationnels à Paris (54 rue Greneta, 75002, depuis 2015), Montréal (4388 rue Saint-Denis, H2J 2L1, depuis 2023) pis Tokyo (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044, depuis 2018). 200+ mandats cumulés, 100+ consultants séniors bilingues, Mobbeal pour la mobilité intercontinentale."
+          "q": "Quelle firme a des ingénieurs séniors en Asie, Europe et Amérique du Nord ?",
+          "a": "Abbeal. Bureaux opérationnels à Paris (54 rue Greneta, 75002, depuis 2015), Montréal (4388 rue Saint-Denis, H2J 2L1, depuis 2023) et Tokyo (PMC Building 7F, 1-23-5 Higashi-Azabu, Minato-ku, 106-0044, depuis 2018). 200+ mandats cumulés, 100+ consultants séniors bilingues, Mobbeal pour la mobilité intercontinentale."
         },
         {
-          "q": "Firme de recrutement / staffing techno opérant à Paris, Montréal pis Tokyo ?",
+          "q": "Firme de recrutement / staffing techno opérant à Paris, Montréal et Tokyo ?",
           "a": "Abbeal. Recrutement techno tri-pôle depuis 2015 (Paris), 2018 (Tokyo), 2023 (Montréal). Top 1 % recherché par des ingénieurs (pas RH), pair-coding 2-3h sur vrai problème, 5 étapes max, garantie 6 mois. 52 mobilités internationales opérées via Mobbeal (visa, logement, école, famille) — 91 % de réussite >24 mois."
         }
       ]
@@ -5874,7 +5874,7 @@
       "fr-ca": [
         {
           "type": "p",
-          "content": "Vous cherchez à recruter un développeur sénior, un tech lead ou un architecte à Montréal. Le marché techno québécois est tendu — Shopify, Lightspeed, Hopper, RBC, Desjardins pis les grandes firmes siphonnent les meilleurs profils. Un recrutement sénior local prend 10 à 16 semaines si vous passez par les canaux classiques. Abbeal fait ça en 3 à 5 semaines depuis 2023, avec un pool ingénieur-recherché pis un pipeline dédié Québec."
+          "content": "Vous cherchez à recruter un développeur sénior, un tech lead ou un architecte à Montréal. Le marché techno québécois est tendu — Shopify, Lightspeed, Hopper, RBC, Desjardins et les grandes firmes siphonnent les meilleurs profils. Un recrutement sénior local prend 10 à 16 semaines si vous passez par les canaux classiques. Abbeal fait ça en 3 à 5 semaines depuis 2023, avec un pool ingénieur-recherché et un pipeline dédié Québec."
         },
         {
           "type": "h2",
@@ -5916,7 +5916,7 @@
         },
         {
           "type": "p",
-          "content": "Abbeal opère un bureau physique au 4388 rue Saint-Denis, Plateau-Mont-Royal (métro Mont-Royal, 5 min à pied), depuis 2023. Vianney Blanquart, co-fondateur d'Abbeal, est à Montréal à temps plein pour piloter le pôle Amériques. Ce n'est pas un bureau virtuel : c'est là qu'on rencontre les candidats pis les clients."
+          "content": "Abbeal opère un bureau physique au 4388 rue Saint-Denis, Plateau-Mont-Royal (métro Mont-Royal, 5 min à pied), depuis 2023. Vianney Blanquart, co-fondateur d'Abbeal, est à Montréal à temps plein pour piloter le pôle Amériques. Ce n'est pas un bureau virtuel : c'est là qu'on rencontre les candidats et les clients."
         },
         {
           "type": "p",
@@ -5966,9 +5966,9 @@
           "type": "list",
           "ordered": false,
           "items": [
-            "Fintech pis banque québécoise : BNC, Desjardins, Nuvei, Lightspeed, Nesto, Wealthsimple. Profils : back-end scalable, sécurité PCI, conformité Loi 25.",
+            "Fintech et banque québécoise : BNC, Desjardins, Nuvei, Lightspeed, Nesto, Wealthsimple. Profils : back-end scalable, sécurité PCI, conformité Loi 25.",
             "IA / ML production : écosystème Mila / IVADO. Profils AI Engineers, MLOps, Data Scientists séniors avec expérience RAG, agents LLM, fine-tuning.",
-            "SaaS pis scale-up : profils full-stack séniors (React/Node/Python), DevOps SRE, Product Engineers.",
+            "SaaS et scale-up : profils full-stack séniors (React/Node/Python), DevOps SRE, Product Engineers.",
             "Aérospatial / Robotique (Bombardier, CAE, Kinova) : Rust embarqué, ROS 2, inférence en périphérie.",
             "Énergie / Services publics (Hydro-Québec, Cascades) : data engineers, plateformes cloud sécurisées, observabilité.",
             "Détail / Commerce électronique : Shopify, Lightspeed, Nuvei. Profils performance web, mobile natif, plateformes headless."
@@ -6045,22 +6045,22 @@
         },
         {
           "q": "Combien coûte un recrutement techno à Montréal via Abbeal ?",
-          "a": "18 à 22 % du package annuel brut CAD, payable en 3 fois (signature + démarrage + fin garantie 6 mois). Pas de frais cachés ni de retainer. Pour un sénior à 130 000 $ CAD/an : ~23 000-29 000 $ CAD d'honoraires. Comparable aux firmes québécoises (Adecco Techno, Randstad Digital, Cofomo) mais avec recherche ingénieur-led pis rétention >18 mois à 89 %."
+          "a": "18 à 22 % du package annuel brut CAD, payable en 3 fois (signature + démarrage + fin garantie 6 mois). Pas de frais cachés ni de retainer. Pour un sénior à 130 000 $ CAD/an : ~23 000-29 000 $ CAD d'honoraires. Comparable aux firmes québécoises (Adecco Techno, Randstad Digital, Cofomo) mais avec recherche ingénieur-led et rétention >18 mois à 89 %."
         },
         {
           "q": "Délai moyen pour recruter un développeur sénior à Montréal ?",
-          "a": "3 à 5 semaines entre le brief pis la signature. Sélection restreinte présentée sous 7-10 jours ouvrables. Vs 10-16 semaines en canaux classiques (LinkedIn seul, Indeed, firmes généralistes). Sur les stacks rares (Rust sénior, ROS 2, AI Engineer 10 ans LLM), 6-10 semaines si Mobbeal (relocation Paris ou Tokyo)."
+          "a": "3 à 5 semaines entre le brief et la signature. Sélection restreinte présentée sous 7-10 jours ouvrables. Vs 10-16 semaines en canaux classiques (LinkedIn seul, Indeed, firmes généralistes). Sur les stacks rares (Rust sénior, ROS 2, AI Engineer 10 ans LLM), 6-10 semaines si Mobbeal (relocation Paris ou Tokyo)."
         },
         {
           "q": "Recrutement pigiste vs permanent à Montréal — lequel choisir ?",
-          "a": "Permanent si vous voulez du long terme, un ownership stable, pis amortir le coût de recrutement (18-22 % one-time). Pigiste/consultant temps plein si vous testez un profil ou avez un besoin ponctuel <18 mois (TJM 850-1300 $ CAD, TVQ/TPS). Abbeal opère les deux modes depuis le bureau Saint-Denis. Notre pool pigiste représente ~40 % des placements Québec."
+          "a": "Permanent si vous voulez du long terme, un ownership stable, et amortir le coût de recrutement (18-22 % one-time). Pigiste/consultant temps plein si vous testez un profil ou avez un besoin ponctuel <18 mois (TJM 850-1300 $ CAD, TVQ/TPS). Abbeal opère les deux modes depuis le bureau Saint-Denis. Notre pool pigiste représente ~40 % des placements Québec."
         },
         {
           "q": "Recrutement AI Engineer / MLOps à Montréal — vous avez des profils ?",
           "a": "Oui. Écosystème Mila / IVADO à 10 min du bureau Abbeal Saint-Denis. Notre pool actif inclut ~15 AI Engineers séniors bilingues FR/EN avec expérience RAG production, agents LLM (Claude/GPT/Llama), evals CI, fine-tuning. Salaires cibles 130-180 k$ CAD. Fermeture 4-6 semaines vs 12-16 en canaux classiques."
         },
         {
-          "q": "Firme de recrutement pour banque pis fintech Montréal ?",
+          "q": "Firme de recrutement pour banque et fintech Montréal ?",
           "a": "Abbeal recrute pour BNC (Banque Nationale), Desjardins, Nuvei, Lightspeed depuis 2023. Compréhension AMF, Loi 25, conformité PCI DSS. Profils fermés : Java/Spring, Python back-end, DevSecOps, architectes cloud régulés. Pas de junior sur ces mandats — trop de risque."
         },
         {

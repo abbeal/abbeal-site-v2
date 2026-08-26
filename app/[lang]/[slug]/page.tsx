@@ -61,10 +61,19 @@ export async function generateMetadata({
   const description = pick(page.metaDescription, locale);
   const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
   const url = `${SITE}/${locale}/${slug}`;
+  // W32 fix : ne declarer que les hreflang des locales qui ont vraiment un
+  // body pour ce slug (evite hreflang 404 -> cluster hreflang invalide par
+  // Google sur les landings FR-only ou FR+FR-CA only comme Montreal).
+  const availableLocales = (["fr","en","ja","fr-ca"] as const).filter(
+    (l) => {
+      const body = page.body[l];
+      return Boolean(body && body.length > 0);
+    },
+  );
   return {
     title: `${title} · Abbeal`,
     description,
-    alternates: pageAlternates(locale, `/${slug}`),
+    alternates: pageAlternates(locale, `/${slug}`, availableLocales),
     openGraph: {
       title,
       description,
