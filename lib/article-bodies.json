@@ -11734,11 +11734,11 @@
       },
       {
         "type": "p",
-        "content": "La promesse centrale du cours : apprendre la façon intelligente pis efficace de tester n'importe quelle application JavaScript."
+        "content": "La promesse centrale du cours : apprendre la façon intelligente et efficace de tester n'importe quelle application JavaScript."
       },
       {
         "type": "p",
-        "content": "Kent C. Dodds est un software engineer reconnu dans l'écosystème React, avec ben des contributions open-source. Il est l'auteur de [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/). Il a de l'expérience en pédagogie, pis tu peux attendre une qualité solide de Testing JavaScript."
+        "content": "Kent C. Dodds est un software engineer reconnu dans l'écosystème React, avec ben des contributions open-source. Il est l'auteur de [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/). Il a de l'expérience en pédagogie, et tu peux attendre une qualité solide de Testing JavaScript."
       },
       {
         "type": "h2",
@@ -11746,7 +11746,7 @@
       },
       {
         "type": "p",
-        "content": "En tant que software craftsman, tester c'est un must pour livrer des applications fiables. Chercher de meilleures façons de tester pis améliorer mes compétences en testing, c'est nécessaire pour livrer le meilleur à mes clients. J'avais utilisé [Enzyme](https://enzymejs.github.io/enzyme/) avant pis j'étais intéressé par React Testing Library pis sa philosophie de testing. Y'a probablement rien de mieux que de prendre un cours sur le testing JavaScript avec l'auteur de la lib."
+        "content": "En tant que software craftsman, tester c'est un must pour livrer des applications fiables. Chercher de meilleures façons de tester et améliorer mes compétences en testing, c'est nécessaire pour livrer le meilleur à mes clients. J'avais utilisé [Enzyme](https://enzymejs.github.io/enzyme/) avant et j'étais intéressé par React Testing Library et sa philosophie de testing. Y'a probablement rien de mieux que de prendre un cours sur le testing JavaScript avec l'auteur de la lib."
       },
       {
         "type": "h2",
@@ -11754,23 +11754,23 @@
       },
       {
         "type": "p",
-        "content": "Si tu pars de zéro dans l'écosystème de testing JavaScript, ça va être précieux pour toi. Même si t'es un vétéran, tu vas quand même apprendre des affaires pis avoir des perspectives fraîches sur le testing. Tu peux checker les modules couverts par le cours sur la landing page pis voir si ça vaut l'investissement."
+        "content": "Si tu pars de zéro dans l'écosystème de testing JavaScript, ça va être précieux pour toi. Même si t'es un vétéran, tu vas quand même apprendre des affaires et avoir des perspectives fraîches sur le testing. Tu peux checker les modules couverts par le cours sur la landing page et voir si ça vaut l'investissement."
       },
       {
         "type": "p",
-        "content": "Dans mon cas, j'avais de l'expérience en testing, mais j'ai quand même ben appris. Ça te donne une base solide que tu peux appliquer directement à tes projets perso pis pro. J'ai pu appliquer tout ce que j'ai appris pis l'enseigner aux développeurs avec qui j'ai travaillé."
+        "content": "Dans mon cas, j'avais de l'expérience en testing, mais j'ai quand même ben appris. Ça te donne une base solide que tu peux appliquer directement à tes projets perso et pro. J'ai pu appliquer tout ce que j'ai appris et l'enseigner aux développeurs avec qui j'ai travaillé."
       },
       {
         "type": "p",
-        "content": "Y'a quelques années, j'ai travaillé avec un client qui avait levé ben de l'argent pis qui entrait dans une phase de fast-growth. L'app avait pas de tests frontend, mais avait encore des tests E2E. À mesure que la codebase grandissait, on pouvait plus se fier juste au E2E parce que c'est lent pis ça peut pas couvrir tous les cas d'usage."
+        "content": "Y'a quelques années, j'ai travaillé avec un client qui avait levé ben de l'argent et qui entrait dans une phase de fast-growth. L'app avait pas de tests frontend, mais avait encore des tests E2E. À mesure que la codebase grandissait, on pouvait plus se fier juste au E2E parce que c'est lent et ça peut pas couvrir tous les cas d'usage."
       },
       {
         "type": "p",
-        "content": "C'est toujours difficile de convaincre la haute direction de prendre du temps pour ajouter plus de tests, mais on a persisté pis on a eu une chance. L'équipe savait que j'avais complété Testing JavaScript pis m'a proposé de prendre le lead sur la construction du système de testing dans la codebase existante."
+        "content": "C'est toujours difficile de convaincre la haute direction de prendre du temps pour ajouter plus de tests, mais on a persisté et on a eu une chance. L'équipe savait que j'avais complété Testing JavaScript et m'a proposé de prendre le lead sur la construction du système de testing dans la codebase existante."
       },
       {
         "type": "p",
-        "content": "J'ai relevé le défi pis mené l'effort jusqu'à ce que tous les outils pis les bonnes pratiques soient intégrés dans les équipes frontend. J'ai essayé de faire évoluer la culture vers une approche plus test-driven, pis les tests ont été ajoutés à la definition of done de chaque tâche. Tranquillement pas vite, la qualité du code s'est améliorée, la maintenabilité est devenue plus facile, les effets de bord ont été réduits, pis la satisfaction de faire du « bon travail » a augmenté. La plupart des développeurs sont fiers de livrer des fonctionnalités de haute qualité pis fiables."
+        "content": "J'ai relevé le défi et mené l'effort jusqu'à ce que tous les outils et les bonnes pratiques soient intégrés dans les équipes frontend. J'ai essayé de faire évoluer la culture vers une approche plus test-driven, et les tests ont été ajoutés à la definition of done de chaque tâche. Tranquillement pas vite, la qualité du code s'est améliorée, la maintenabilité est devenue plus facile, les effets de bord ont été réduits, et la satisfaction de faire du « bon travail » a augmenté. La plupart des développeurs sont fiers de livrer des fonctionnalités de haute qualité et fiables."
       },
       {
         "type": "p",
@@ -12000,19 +12000,19 @@
       },
       {
         "type": "p",
-        "content": "2 septembre 2022. J'ai atterri à l'aéroport de Haneda, Tokyo. C'était ma première fois au Japon, pis je n'étais pas là comme touriste mais pour y vivre pis travailler dans le bureau japonais d'Abbeal."
+        "content": "2 septembre 2022. J'ai atterri à l'aéroport de Haneda, Tokyo. C'était ma première fois au Japon, et je n'étais pas là comme touriste mais pour y vivre et travailler dans le bureau japonais d'Abbeal."
       },
       {
         "type": "p",
-        "content": "Tout était nouveau pis écrasant. Encore aujourd'hui, je me rappelle du mélange de nervosité pis d'excitation, pis de la première fois que j'ai utilisé mon japonais bancal dans une vraie situation. C'est ben drôle : la première fois que je suis allé au FamilyMart de Shibuya, quand le caissier m'a demandé si je voulais un sac de plastique, j'ai pas compris parce que j'avais juste appris le mot 「袋」(ふくろ) dans mon manuel. Il avait en fait dit 「レジ袋」(レジぶくろ), qui se traduit littéralement par « sac de caisse ». Mais à cause du rendaku, le changement sonore de ふくろ à ぶくろ, j'ai pas reconnu le mot que je connaissais."
+        "content": "Tout était nouveau et écrasant. Encore aujourd'hui, je me rappelle du mélange de nervosité et d'excitation, et de la première fois que j'ai utilisé mon japonais bancal dans une vraie situation. C'est ben drôle : la première fois que je suis allé au FamilyMart de Shibuya, quand le caissier m'a demandé si je voulais un sac de plastique, j'ai pas compris parce que j'avais juste appris le mot 「袋」(ふくろ) dans mon manuel. Il avait en fait dit 「レジ袋」(レジぶくろ), qui se traduit littéralement par « sac de caisse ». Mais à cause du rendaku, le changement sonore de ふくろ à ぶくろ, j'ai pas reconnu le mot que je connaissais."
       },
       {
         "type": "p",
-        "content": "C'était le début d'un long parcours. Ça fait 4 ans que j'ai commencé à apprendre le japonais. J'ai passé le JLPT N3 en janvier 2025. J'suis pas allé dans une école japonaise. J'suis arrivé icitte à 29 ans, j'ai commencé à travailler tout de suite, pis j'ai appris le japonais sur mon temps libre en chemin."
+        "content": "C'était le début d'un long parcours. Ça fait 4 ans que j'ai commencé à apprendre le japonais. J'ai passé le JLPT N3 en janvier 2025. J'suis pas allé dans une école japonaise. J'suis arrivé icitte à 29 ans, j'ai commencé à travailler tout de suite, et j'ai appris le japonais sur mon temps libre en chemin."
       },
       {
         "type": "p",
-        "content": "Te parler de ma routine d'étude pis des outils que j'utilise ça va rien changer si t'abandonnes six mois plus tard. Notre pire ennemi, c'est nous-mêmes. C'est pour ça que je veux commencer par partager l'état d'esprit qui m'a aidé à tenir. Dans la partie 2, je vais partager ce qui a marché pour moi pour continuer. Pis dans la partie finale, je vais te donner ma routine quotidienne pis mes recommandations de contenus."
+        "content": "Te parler de ma routine d'étude et des outils que j'utilise ça va rien changer si t'abandonnes six mois plus tard. Notre pire ennemi, c'est nous-mêmes. C'est pour ça que je veux commencer par partager l'état d'esprit qui m'a aidé à tenir. Dans la partie 2, je vais partager ce qui a marché pour moi pour continuer. et dans la partie finale, je vais te donner ma routine quotidienne et mes recommandations de contenus."
       },
       {
         "type": "h2",
@@ -12020,35 +12020,35 @@
       },
       {
         "type": "p",
-        "content": "Apprendre le japonais, c'est difficile. C'est pas juste comprendre pis parler des mots ou écrire des kanji. C'est aussi s'ouvrir à la culture du Japon, à son monde, à sa société, à sa façon de penser. Par exemple, « lire l'air » (空気を読む) c'est un des concepts les plus importants à saisir (ou au moins à essayer de saisir). Le japonais c'est une langue indirecte, à contexte élevé, avec des nuances que les manuels peuvent pas toujours capturer pis qui se saisissent juste à travers l'expérience pis parfois des situations gênantes..."
+        "content": "Apprendre le japonais, c'est difficile. C'est pas juste comprendre et parler des mots ou écrire des kanji. C'est aussi s'ouvrir à la culture du Japon, à son monde, à sa société, à sa façon de penser. Par exemple, « lire l'air » (空気を読む) c'est un des concepts les plus importants à saisir (ou au moins à essayer de saisir). Le japonais c'est une langue indirecte, à contexte élevé, avec des nuances que les manuels peuvent pas toujours capturer et qui se saisissent juste à travers l'expérience et parfois des situations gênantes..."
       },
       {
         "type": "p",
-        "content": "D'après mon expérience, en étudiant de façon constante au moins 2h par jour, ça prend environ 2-3 ans pour atteindre un certain niveau de fluidité pour la vie de tous les jours. Pour les contextes professionnels, ça prend plus que 5 ans. Ben sûr, y'en a qui apprennent plus vite, pis ben des variables peuvent ralentir ou accélérer le processus, comme les locuteurs chinois qui connaissent déjà les kanji."
+        "content": "D'après mon expérience, en étudiant de façon constante au moins 2h par jour, ça prend environ 2-3 ans pour atteindre un certain niveau de fluidité pour la vie de tous les jours. Pour les contextes professionnels, ça prend plus que 5 ans. Ben sûr, y'en a qui apprennent plus vite, et ben des variables peuvent ralentir ou accélérer le processus, comme les locuteurs chinois qui connaissent déjà les kanji."
       },
       {
         "type": "p",
-        "content": "Je veux pas donner de faux espoirs ou de rêves. Ça demande un effort constant sur une longue période. Ben du monde abandonne en chemin. C'est un danger auquel tout le monde fait face au début du parcours pis il est toujours tapi quelque part, prêt à nous sauter dessus dès qu'on montre de la faiblesse."
+        "content": "Je veux pas donner de faux espoirs ou de rêves. Ça demande un effort constant sur une longue période. Ben du monde abandonne en chemin. C'est un danger auquel tout le monde fait face au début du parcours et il est toujours tapi quelque part, prêt à nous sauter dessus dès qu'on montre de la faiblesse."
       },
       {
         "type": "p",
-        "content": "Y'a des années, j'ai découvert le **Growth Mindset de Carol Dweck**. Un growth mindset, c'est la croyance que l'intelligence pis les talents peuvent être développés par l'effort pis l'apprentissage. C'est l'opposé du fixed mindset, la croyance que l'intelligence pis le talent sont des traits statiques qu'on a ou qu'on a pas. Y'a de la profondeur pis de la nuance pis je recommande fortement cette conférence de **Carol Dweck**."
+        "content": "Y'a des années, j'ai découvert le **Growth Mindset de Carol Dweck**. Un growth mindset, c'est la croyance que l'intelligence et les talents peuvent être développés par l'effort et l'apprentissage. C'est l'opposé du fixed mindset, la croyance que l'intelligence et le talent sont des traits statiques qu'on a ou qu'on a pas. Y'a de la profondeur et de la nuance et je recommande fortement cette conférence de **Carol Dweck**."
       },
       {
         "type": "p",
-        "content": "Les affaires me viennent pas facilement, mais adopter un Growth Mindset m'aide à rester positif pis à croire que je peux m'améliorer pis que mes efforts vont pas me trahir. Même lentement, je dois continuer à bâtir mon japonais étape par étape. Y'a un mot japonais célèbre qui décrit ce processus : *Kaizen* (改善). Ça veut dire « changement pour le mieux », pis ça fait référence à la pratique de faire des petites améliorations continues au fil du temps."
+        "content": "Les affaires me viennent pas facilement, mais adopter un Growth Mindset m'aide à rester positif et à croire que je peux m'améliorer et que mes efforts vont pas me trahir. Même lentement, je dois continuer à bâtir mon japonais étape par étape. Y'a un mot japonais célèbre qui décrit ce processus : *Kaizen* (改善). Ça veut dire « changement pour le mieux », et ça fait référence à la pratique de faire des petites améliorations continues au fil du temps."
       },
       {
         "type": "p",
-        "content": "Ça a pris du temps mais avec quelques heures par jour, j'ai pu atteindre le niveau JLPT N3. Abbeal couvrait 2 heures par semaine de cours en ligne pis j'étudiais tout seul avant ou après le travail presque à tous les jours."
+        "content": "Ça a pris du temps mais avec quelques heures par jour, j'ai pu atteindre le niveau JLPT N3. Abbeal couvrait 2 heures par semaine de cours en ligne et j'étudiais tout seul avant ou après le travail presque à tous les jours."
       },
       {
         "type": "p",
-        "content": "Le N3 me semblait tellement loin quand j'ai commencé. Juste penser au nombre de kanji pis de vocabulaire à mémoriser me submergeait. J'osais pas penser trop loin au N2 parce qu'y a un saut significatif comparé aux exigences du N3."
+        "content": "Le N3 me semblait tellement loin quand j'ai commencé. Juste penser au nombre de kanji et de vocabulaire à mémoriser me submergeait. J'osais pas penser trop loin au N2 parce qu'y a un saut significatif comparé aux exigences du N3."
       },
       {
         "type": "p",
-        "content": "« Est-ce que je peux vraiment le faire ? » « Combien de temps ça va prendre ? » Y'a eu des moments où ces questions m'ont inondé la tête, pis j'ai commencé à douter de moi. En me rappelant d'adopter un growth mindset, j'ai évité le piège de tomber dans le doute de soi. Je me suis dit que même si j'suis moyen, avec un effort dédié, je peux le faire. Au final, je l'ai vraiment fait. Le N3 est derrière moi, pis le N2 est astheure à portée."
+        "content": "« Est-ce que je peux vraiment le faire ? » « Combien de temps ça va prendre ? » Y'a eu des moments où ces questions m'ont inondé la tête, et j'ai commencé à douter de moi. En me rappelant d'adopter un growth mindset, j'ai évité le piège de tomber dans le doute de soi. Je me suis dit que même si j'suis moyen, avec un effort dédié, je peux le faire. Au final, je l'ai vraiment fait. Le N3 est derrière moi, et le N2 est astheure à portée."
       },
       {
         "type": "p",
