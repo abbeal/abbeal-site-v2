@@ -104,11 +104,14 @@ export const cases: CaseStudy[] = [
       },
     },
     publishedAt: "2026-04-12",
+    // W36 QW4 : title EN outcome-first pour lifter CTR pos 6.48 / 0.26%.
+    // Ancien "Paraito: AI & Platform staffing to scale..." trop generique.
+    // Nouveau met l'outcome (3 hires / 6 weeks) en tete.
     title: {
-      fr: "Paraito : staffing AI & Platform pour scaler une legaltech québécoise.",
-      en: "Paraito: AI & Platform staffing to scale a Quebec legaltech.",
-      ja: "パライト：ケベック州リーガルテックのスケールアップのためのAI & プラットフォームスタッフィング。",
-      "fr-ca": "Paraito : recrutement IA & plateforme pour passer à l'échelle une legaltech québécoise.",
+      fr: "3 recrutements seniors en 6 semaines — Paraito (legaltech québécoise).",
+      en: "3 senior AI/Platform hires in 6 weeks — Paraito (Quebec legaltech).",
+      ja: "6週間で3名のシニア採用 — パライト（ケベック州リーガルテック）。",
+      "fr-ca": "3 recrutements séniors en 6 semaines — Paraito (legaltech québécoise).",
     },
     excerpt: {
       fr: "3 recrutements permanents (2 AI Engineers + 1 Lead Platform) en 6 semaines pour Paraito, legaltech québécoise qui automatise le Registre foncier (−70 % temps de collecte). Mobilité France→Montréal via Mobbeal incluse.",

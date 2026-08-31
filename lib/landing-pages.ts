@@ -542,10 +542,13 @@ export const landingPages: LandingPage[] = [
     },
     // W28 post-mortem : title SEO decouple du H1. H1 = punchline longue,
     // title = keyword-frontloaded court.
+    // W36 QW4 : metaTitle JA plus concret (pos 6.85 / 389 imp / 0 clic —
+    // audit Sebastien : le titre japonais ne convertit pas l impression).
+    // Ajout des 3 hubs geo + preuve "senior only" pour attirer le clic.
     metaTitle: {
       fr: "Recrutement tech international — Cabinet multi-pays",
       en: "International tech recruitment — Multi-country agency",
-      ja: "国際テック採用 — 多国籍エージェンシー",
+      ja: "外資系テック採用 · パリ・モントリオール・東京 · シニアのみ",
       "fr-ca": "Recrutement techno international — Cabinet multi-pays",
     },
     // W28 QW3 : "international tech recruitment" + "cabinet recrutement
