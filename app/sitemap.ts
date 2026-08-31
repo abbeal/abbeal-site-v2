@@ -90,11 +90,26 @@ const ROUTES = [
  * Without x-default, Google picks one locale at random as canonical and marks
  * the others as duplicates (which is what triggered "Page in double" on /en).
  */
-function altLanguages(path: string): Record<string, string> {
+function altLanguages(
+  path: string,
+  availableLocales?: readonly (typeof locales)[number][],
+): Record<string, string> {
+  // W36 fix (audit Sebastien 2026-08-31) : ne pas emettre d'alternate vers
+  // une locale ou la page n'existe pas (404). Sans filtrage, Google
+  // recupere le sitemap et crawle des URLs 404 — signaux hreflang
+  // incoherents sur les 5 landings geo-locales fr-only ou fr+fr-ca.
+  // Quand `availableLocales` est passe, seules ces locales sont listees,
+  // et x-default cascade en > fr > premier disponible.
+  const active = availableLocales && availableLocales.length > 0 ? availableLocales : locales;
   const langs = Object.fromEntries(
-    locales.map((l) => [htmlLang[l], `${SITE_URL}/${l}${path}`]),
+    active.map((l) => [htmlLang[l], `${SITE_URL}/${l}${path}`]),
   );
-  langs["x-default"] = `${SITE_URL}/en${path}`;
+  const xDefault = active.includes("en" as (typeof locales)[number])
+    ? "en"
+    : active.includes("fr" as (typeof locales)[number])
+      ? "fr"
+      : active[0];
+  langs["x-default"] = `${SITE_URL}/${xDefault}${path}`;
   return langs;
 }
 
@@ -218,15 +233,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // que celles ou la landing a du contenu — sinon Google indexerait des
   // pages au contenu fallback FR derriere des URL /en/... → duplicate.
   for (const lp of landingPages) {
-    for (const locale of locales) {
-      const bodyForLocale = lp.body[locale];
-      if (!bodyForLocale || bodyForLocale.length === 0) continue;
+    // W36 : calculer les locales avec body reel pour cette landing, et
+    // n'emettre les hreflang alternate QUE vers ces locales (evite le
+    // sitemap qui declare 12 URLs 404 comme signale par audit).
+    const availableLocalesForLp = locales.filter((l) => {
+      const b = lp.body[l];
+      return Boolean(b && b.length > 0);
+    });
+    for (const locale of availableLocalesForLp) {
       entries.push({
         url: `${SITE_URL}/${locale}/${lp.slug}`,
         lastModified: now,
         changeFrequency: "monthly",
         priority: 0.9,
-        alternates: { languages: altLanguages(`/${lp.slug}`) },
+        alternates: { languages: altLanguages(`/${lp.slug}`, availableLocalesForLp) },
       });
     }
   }

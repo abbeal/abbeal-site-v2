@@ -58,15 +58,46 @@ export async function generateMetadata({
 }: PageProps<"/[lang]/careers">): Promise<Metadata> {
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
-  const dict = (await getDictionary(lang as Locale)) as Dict;
+  const locale = lang as Locale;
+  const dict = (await getDictionary(locale)) as Dict;
   const title = `${dict.careers.seoTitle ?? dict.careers.h1} · Abbeal`;
-  const description = dict.careers.subtitle;
+
+  // W36 fix (audit Sebastien 2026-08-31) : la meta description hardcodee
+  // "Quatre roles ouverts" contredit les 56 offres publiees en CMS,
+  // ecrase le CTR sur la page la plus vue du site (/en/careers 3992 imp /
+  // 90j). Substitution dynamique : compte reel = CMS published + dict
+  // fallback roles, injecte dans le template locale.
+  const cmsOffers = await getPublishedJobOffers(locale);
+  const cmsSlugs = new Set(cmsOffers.map((o) => o.slug));
+  const dictOnlySlugs = dict.careers.roles
+    .map((r) => r.slug)
+    .filter((s) => !cmsSlugs.has(s));
+  const openCount = cmsOffers.length + dictOnlySlugs.length;
+  const description = renderCareersSubtitle(locale, openCount, dict.careers.subtitle);
   return {
     title,
     description,
-    alternates: pageAlternates(lang as Locale, "/careers"),
-    ...pageOpenGraph(lang as Locale, { title, description, path: "/careers" }),
+    alternates: pageAlternates(locale, "/careers"),
+    ...pageOpenGraph(locale, { title, description, path: "/careers" }),
   };
+}
+
+/** Substitue le compteur dynamique dans la meta description /careers.
+ *  Historique : subtitle contenait "Four roles open" / "Quatre rôles ouverts"
+ *  hardcode (audit W36 : 56 offres reelles vs 4 annonces). On reformule
+ *  par locale avec le count reel + fallback si le subtitle a change. */
+function renderCareersSubtitle(
+  locale: Locale,
+  n: number,
+  fallback: string,
+): string {
+  const templates: Record<Locale, string> = {
+    fr: `${n} rôles ouverts. Senior-only. Client stable, delivery propre, mobilité internationale possible via Mobbeal.`,
+    en: `${n} roles open. Senior-only. Stable clients, clean delivery, international mobility available via Mobbeal.`,
+    ja: `${n}件のポジション募集中。シニアのみ。安定したクライアント、クリーンなデリバリー、Mobbealによる海外赴任可能。`,
+    "fr-ca": `${n} postes ouverts. Postes chevronnés seulement. Client stable, livraison propre, mobilité internationale possible via Mobbeal.`,
+  };
+  return templates[locale] ?? fallback;
 }
 
 /** Convertit une JobOffer CMS en Role (shape attendue par le rendu et par
