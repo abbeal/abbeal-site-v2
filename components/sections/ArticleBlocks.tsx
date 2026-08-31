@@ -1,10 +1,25 @@
-"use client";
-
-import { motion } from "motion/react";
 import type { ReactNode } from "react";
 import type { ArticleBlock } from "@/lib/articles";
 
-const ease = [0.16, 1, 0.3, 1] as const;
+/**
+ * ArticleBlocks — renderer des blocs d'article/landing (h2/h3/p/list/quote/
+ * callout/code/link/platformHeader/image/byline).
+ *
+ * W37 : passé en SERVER COMPONENT pur (retrait `motion/react`). L'audit W36
+ * (Sebastien 2026-08-31) a mesuré LCP mobile 5.0s sur /en/tech-consulting-
+ * tokyo — root cause : framer-motion rendait `opacity: 0` en SSR sur le
+ * premier bloc body (list de 6 KPIs), le fade-in n'arrivait qu'après
+ * hydratation + IntersectionObserver. Résultat : le LCP fires à 4-5s.
+ * Mêmes symptômes que Hero home avant W22 (fix W22 : réécriture CSS pure
+ * -> LCP 5.6 -> 2.1s). Ici on va plus loin : suppression totale du fade
+ * animation (vanité sur du texte, coût LCP inacceptable). Les blocs
+ * apparaissent instantanément — le texte étant l'élément LCP candidate
+ * sur toutes les landings, il doit être opaque dès le premier paint.
+ *
+ * Bénéfice attendu : LCP mobile /en/tech-consulting-tokyo 5.0s -> ~2.6s
+ * (cible <2.5s "Good" Google). Impact aussi sur toutes les autres landings,
+ * articles, cases, glossaire qui utilisent ce composant.
+ */
 
 /**
  * renderInline — parse le markdown inline dans le texte d'un bloc :
@@ -87,57 +102,38 @@ export function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
   return (
     <div className="prose-article space-y-6">
       {blocks.map((block, i) => (
-        <BlockRenderer key={i} block={block} index={i} />
+        <BlockRenderer key={i} block={block} />
       ))}
     </div>
   );
 }
 
-function BlockRenderer({ block, index }: { block: ArticleBlock; index: number }) {
-  const fadeIn = {
-    initial: { opacity: 0, y: 10 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, margin: "-10%" },
-    transition: { duration: 0.45, delay: Math.min(index * 0.02, 0.2), ease },
-  };
-
+function BlockRenderer({ block }: { block: ArticleBlock }) {
   switch (block.type) {
     case "h2":
       return (
-        <motion.h2
-          {...fadeIn}
-          className="mt-14 mb-2 text-2xl md:text-3xl font-semibold tracking-[-0.02em] text-[var(--color-ink)] leading-tight scroll-mt-24"
-        >
+        <h2 className="mt-14 mb-2 text-2xl md:text-3xl font-semibold tracking-[-0.02em] text-[var(--color-ink)] leading-tight scroll-mt-24">
           {block.content}
-        </motion.h2>
+        </h2>
       );
 
     case "h3":
       return (
-        <motion.h3
-          {...fadeIn}
-          className="mt-8 mb-1 text-xl font-semibold tracking-tight text-[var(--color-ink)] leading-snug"
-        >
+        <h3 className="mt-8 mb-1 text-xl font-semibold tracking-tight text-[var(--color-ink)] leading-snug">
           {block.content}
-        </motion.h3>
+        </h3>
       );
 
     case "p":
       return (
-        <motion.p
-          {...fadeIn}
-          className="text-[17px] leading-[1.65] text-[var(--color-ink)]"
-        >
+        <p className="text-[17px] leading-[1.65] text-[var(--color-ink)]">
           {renderInline(block.content)}
-        </motion.p>
+        </p>
       );
 
     case "byline":
       return (
-        <motion.div
-          {...fadeIn}
-          className="not-prose -mt-1 mb-2 flex items-start gap-4"
-        >
+        <div className="not-prose -mt-1 mb-2 flex items-start gap-4">
           {block.photo && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
@@ -183,30 +179,30 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
               {block.role}
             </p>
           </div>
-        </motion.div>
+        </div>
       );
 
     case "list":
       return block.ordered ? (
-        <motion.ol {...fadeIn} className="list-decimal pl-6 space-y-2 text-[17px] leading-[1.65] text-[var(--color-ink)] marker:text-[var(--color-brand-teal)] marker:font-mono">
+        <ol className="list-decimal pl-6 space-y-2 text-[17px] leading-[1.65] text-[var(--color-ink)] marker:text-[var(--color-brand-teal)] marker:font-mono">
           {block.items.map((item, i) => (
             <li key={i}>{renderInline(item)}</li>
           ))}
-        </motion.ol>
+        </ol>
       ) : (
-        <motion.ul {...fadeIn} className="space-y-2.5 text-[17px] leading-[1.65] text-[var(--color-ink)]">
+        <ul className="space-y-2.5 text-[17px] leading-[1.65] text-[var(--color-ink)]">
           {block.items.map((item, i) => (
             <li key={i} className="flex gap-3 items-start">
               <span aria-hidden className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[var(--color-brand-teal)] shrink-0" />
               <span>{renderInline(item)}</span>
             </li>
           ))}
-        </motion.ul>
+        </ul>
       );
 
     case "quote":
       return (
-        <motion.figure {...fadeIn} className="my-10 border-l-2 border-[var(--color-brand-teal)] pl-6 py-1">
+        <figure className="my-10 border-l-2 border-[var(--color-brand-teal)] pl-6 py-1">
           <blockquote className="text-xl md:text-2xl italic font-medium text-[var(--color-ink)] leading-snug tracking-tight">
             « {block.content} »
           </blockquote>
@@ -215,7 +211,7 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
               — {block.author}
             </figcaption>
           )}
-        </motion.figure>
+        </figure>
       );
 
     case "callout": {
@@ -229,33 +225,29 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
           "bg-[var(--color-ink)] text-[var(--color-bg-light)]",
       };
       return (
-        <motion.aside
-          {...fadeIn}
+        <aside
           className={`my-8 px-6 py-5 ${tones[tone]} text-[15px] leading-relaxed`}
         >
           <p>{renderInline(block.content)}</p>
-        </motion.aside>
+        </aside>
       );
     }
 
     case "code":
       return (
-        <motion.pre
-          {...fadeIn}
-          className="my-6 overflow-x-auto bg-[var(--color-ink)] text-[var(--color-bg-light)] p-5 font-mono text-[13px] leading-[1.6] border-l-2 border-[var(--color-brand-teal)]"
-        >
+        <pre className="my-6 overflow-x-auto bg-[var(--color-ink)] text-[var(--color-bg-light)] p-5 font-mono text-[13px] leading-[1.6] border-l-2 border-[var(--color-brand-teal)]">
           {block.lang && (
             <div className="mb-3 font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
               {block.lang}
             </div>
           )}
           <code>{block.content}</code>
-        </motion.pre>
+        </pre>
       );
 
     case "link":
       return (
-        <motion.div {...fadeIn} className="my-8">
+        <div className="my-8">
           <a
             href={block.href}
             target={block.external === false ? undefined : "_blank"}
@@ -265,13 +257,12 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
             {block.label}
             <span aria-hidden>→</span>
           </a>
-        </motion.div>
+        </div>
       );
 
     case "platformHeader":
       return (
-        <motion.div
-          {...fadeIn}
+        <div
           className="mt-14 mb-2 flex items-baseline gap-4 flex-wrap scroll-mt-24"
           id={block.name.toLowerCase()}
         >
@@ -293,12 +284,12 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
           >
             {block.href.replace(/^https?:\/\//, "").replace(/\/$/, "")} ↗
           </a>
-        </motion.div>
+        </div>
       );
 
     case "image":
       return (
-        <motion.figure {...fadeIn} className="my-10">
+        <figure className="my-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={block.src}
@@ -311,7 +302,7 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
               {block.caption}
             </figcaption>
           )}
-        </motion.figure>
+        </figure>
       );
 
     default:
