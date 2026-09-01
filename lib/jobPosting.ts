@@ -80,6 +80,9 @@ export function jobOfferLocationToPlaces(
     tokyo: ["Tokyo"],
     kyoto: ["Kyoto"],
     osaka: ["Osaka"],
+    // "kansai" = ville non fixee. Expose les 2 sites Kyoto + Osaka au
+    // JobPosting Schema.org (Google for Jobs affichera la 1ere).
+    kansai: ["Kyoto", "Osaka"],
     montreal: ["Montreal"],
     "tri-geo": ["Paris", "Montreal", "Tokyo"],
     "remote-eu": [], // remote -> pas de jobLocation, applicantLocReq + telecom

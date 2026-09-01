@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect, permanentRedirect } from "next/navigation";
+import { resolveRedirect, buildRedirectDestination } from "@/lib/redirects";
 import { getDictionary } from "../../dictionaries";
 import { hasLocale, type Locale } from "@/lib/i18n";
 import { pageAlternates, pageOpenGraph } from "@/lib/seo";
@@ -93,7 +94,17 @@ export default async function JobOfferDetailPage({
   const locale = lang as Locale;
   const dict = (await getDictionary(locale)) as Dict;
   const loaded = await loadForSlug(slug, locale, dict);
-  if (!loaded) notFound();
+  if (!loaded) {
+    // W37 : avant 404, checker la table de redirects CMS. Permet de renommer
+    // un slug sans casser les liens deja envoyes (emails, DM LinkedIn, GSC).
+    const rule = await resolveRedirect(`/careers/${slug}`);
+    if (rule) {
+      const dest = buildRedirectDestination(rule.toPath, locale);
+      if (rule.permanent) permanentRedirect(dest);
+      redirect(dest);
+    }
+    notFound();
+  }
 
   const title = loaded.kind === "cms" ? loaded.offer.title : loaded.role.title;
   const crumbs = breadcrumbs(locale, [
