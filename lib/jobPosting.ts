@@ -25,7 +25,8 @@ export type CityAddress = {
   country: string; // ISO 3166-1 alpha-2
   region?: string; // addressRegion (subdivision admin)
   postalCode: string;
-  streetAddress: string;
+  streetAddress?: string; // Optional : villes hors hubs Abbeal (Kyoto/Osaka)
+  //                        n'ont pas d'adresse rue — le poste est chez client.
 };
 export const CITY_TO_ADDRESS: Record<string, CityAddress> = {
   Paris: {
@@ -52,6 +53,19 @@ export const CITY_TO_ADDRESS: Record<string, CityAddress> = {
     postalCode: "106-0044",
     streetAddress: "PMC Building, 1-23-5 Higashi-Azabu",
   },
+  // W37 : Kansai — pas de bureau Abbeal, adresse rue absente. Google
+  // JobPosting accepte addressLocality + region + postalCode sans street
+  // (cas frequent pour les postes chez client sans site fixe).
+  Kyoto: {
+    country: "JP",
+    region: "Kyoto Prefecture",
+    postalCode: "604-8005", // Nakagyo-ku (centre-ville, generique)
+  },
+  Osaka: {
+    country: "JP",
+    region: "Osaka Prefecture",
+    postalCode: "530-0001", // Kita-ku (quartier affaires, generique)
+  },
 };
 
 /** Map JobOfferLocation (enum CMS) -> tableau de Place Schema.org pour
@@ -64,6 +78,8 @@ export function jobOfferLocationToPlaces(
   const map: Record<string, string[]> = {
     paris: ["Paris"],
     tokyo: ["Tokyo"],
+    kyoto: ["Kyoto"],
+    osaka: ["Osaka"],
     montreal: ["Montreal"],
     "tri-geo": ["Paris", "Montreal", "Tokyo"],
     "remote-eu": [], // remote -> pas de jobLocation, applicantLocReq + telecom
@@ -77,7 +93,9 @@ export function jobOfferLocationToPlaces(
       "@type": "Place",
       address: {
         "@type": "PostalAddress",
-        streetAddress: addr.streetAddress,
+        ...(addr.streetAddress
+          ? { streetAddress: addr.streetAddress }
+          : {}),
         addressLocality: cities[i],
         ...(addr.region ? { addressRegion: addr.region } : {}),
         postalCode: addr.postalCode,
@@ -182,7 +200,9 @@ export function generateJobPostings(
         "@type": "Place",
         address: {
           "@type": "PostalAddress",
-          streetAddress: addr.streetAddress,
+          ...(addr.streetAddress
+            ? { streetAddress: addr.streetAddress }
+            : {}),
           addressLocality: city,
           ...(addr.region ? { addressRegion: addr.region } : {}),
           postalCode: addr.postalCode,
