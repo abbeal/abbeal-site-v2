@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect, permanentRedirect } from "next/navigation";
+import { resolveRedirect, buildRedirectDestination } from "@/lib/redirects";
 import { hasLocale, locales, type Locale } from "@/lib/i18n";
 import { getLandingPage, landingPageSlugs } from "@/lib/landing-pages";
 import { getArticle, pick } from "@/lib/articles";
@@ -95,9 +96,18 @@ export default async function LandingPage({
 }: PageProps<"/[lang]/[slug]">) {
   const { lang, slug } = await params;
   if (!hasLocale(lang)) notFound();
-  const page = getLandingPage(slug);
-  if (!page) notFound();
   const locale = lang as Locale;
+  const page = getLandingPage(slug);
+  if (!page) {
+    // W37 : avant 404, checker la table de redirects CMS.
+    const rule = await resolveRedirect(`/${slug}`);
+    if (rule) {
+      const dest = buildRedirectDestination(rule.toPath, locale);
+      if (rule.permanent) permanentRedirect(dest);
+      redirect(dest);
+    }
+    notFound();
+  }
 
   const tape = pick(page.tape, locale);
   const h1 = pick(page.h1, locale);

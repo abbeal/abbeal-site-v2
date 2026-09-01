@@ -30,6 +30,7 @@ export type JobOfferLocation =
   | "tokyo"
   | "kyoto"
   | "osaka"
+  | "kansai"
   | "montreal"
   | "tri-geo"
   | "remote-eu"
@@ -86,6 +87,7 @@ const LOCATION_LABELS: Record<Locale, Record<JobOfferLocation, string>> = {
     tokyo: "Tokyo",
     kyoto: "Kyoto",
     osaka: "Osaka",
+    kansai: "Kansai (Kyoto ou Osaka)",
     montreal: "Montréal",
     "tri-geo": "Paris / Montréal / Tokyo",
     "remote-eu": "Remote (EU)",
@@ -96,6 +98,7 @@ const LOCATION_LABELS: Record<Locale, Record<JobOfferLocation, string>> = {
     tokyo: "Tokyo",
     kyoto: "Kyoto",
     osaka: "Osaka",
+    kansai: "Kansai (Kyoto or Osaka)",
     montreal: "Montréal",
     "tri-geo": "Paris / Montréal / Tokyo",
     "remote-eu": "Remote (EU)",
@@ -106,6 +109,7 @@ const LOCATION_LABELS: Record<Locale, Record<JobOfferLocation, string>> = {
     tokyo: "東京",
     kyoto: "京都",
     osaka: "大阪",
+    kansai: "関西（京都または大阪）",
     montreal: "モントリオール",
     "tri-geo": "パリ / モントリオール / 東京",
     "remote-eu": "リモート（EU）",
@@ -116,6 +120,7 @@ const LOCATION_LABELS: Record<Locale, Record<JobOfferLocation, string>> = {
     tokyo: "Tokyo",
     kyoto: "Kyoto",
     osaka: "Osaka",
+    kansai: "Kansai (Kyoto ou Osaka)",
     montreal: "Montréal",
     "tri-geo": "Paris / Montréal / Tokyo",
     "remote-eu": "Télétravail (UE)",

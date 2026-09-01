@@ -1446,6 +1446,9 @@ const JobOffers: CollectionConfig = {
         // classe location=tokyo par defaut — chip "Tokyo" faux).
         { label: "Kyoto (Kansai)", value: "kyoto" },
         { label: "Osaka (Kansai)", value: "osaka" },
+        // "kansai" = ville non fixee ("Kyoto ou Osaka"), pour les offres
+        // regionales sans site final connu (ex : id 18 MS365).
+        { label: "Kansai (Kyoto ou Osaka)", value: "kansai" },
         { label: "Montréal", value: "montreal" },
         { label: "Tri-géo (Paris · Montréal · Tokyo)", value: "tri-geo" },
         { label: "Remote (EU)", value: "remote-eu" },
@@ -1543,6 +1546,89 @@ const JobOffers: CollectionConfig = {
   ],
 };
 
+// ---------------------------------------------------------------------------
+// Redirects — table de redirections 301/302 editable depuis le CMS.
+//
+// Use case initial (W37) : renommer un slug d'offre publique sans casser les
+// liens deja envoyes (emails candidats, DM LinkedIn, GSC index, permaliens
+// des posts LinkedIn qui figent le titre au premier scrape).
+//
+// Modele : `fromPath` = chemin SANS prefixe locale (ex "/careers/foo-tokyo").
+// Le check est fait cote page (voir lib/redirects.ts + les [slug] pages),
+// AVANT notFound() — donc les 4 locales sont couvertes par UNE seule entree.
+//
+// SEO : `permanent: true` par defaut → 301 (transfert de signal). Le mettre
+// a false uniquement pour un test A/B ou une redirection saisonniere.
+// ---------------------------------------------------------------------------
+const Redirects: CollectionConfig = {
+  slug: "redirects",
+  admin: {
+    useAsTitle: "fromPath",
+    defaultColumns: ["fromPath", "toPath", "permanent"],
+    description: "Redirections 301/302. fromPath sans prefixe locale (ex: /careers/old-slug).",
+    hidden: HIDDEN_FROM_EDITORS,
+  },
+  access: PUBLIC_READ_ADMIN_WRITE,
+  fields: [
+    {
+      name: "fromPath",
+      type: "text",
+      required: true,
+      unique: true,
+      index: true,
+      admin: {
+        description: "Chemin source SANS prefixe locale, commence par /. Ex: /careers/ancien-slug",
+      },
+    },
+    {
+      name: "toPath",
+      type: "text",
+      required: true,
+      admin: {
+        description: "Chemin destination SANS prefixe locale (redirect interne). Ex: /careers/nouveau-slug. Ou URL absolue https://... pour externe.",
+      },
+    },
+    {
+      name: "permanent",
+      type: "checkbox",
+      defaultValue: true,
+      admin: {
+        description: "301 (permanent, recommande pour SEO) vs 302 (temporaire).",
+      },
+    },
+    {
+      name: "note",
+      type: "textarea",
+      admin: {
+        description: "Contexte interne (raison, date, ticket). Non expose publiquement.",
+      },
+    },
+  ],
+  hooks: {
+    // Invalide le cache ISR des pages qui interrogent redirects (tag).
+    afterChange: [
+      async () => {
+        try {
+          const { revalidateTag } = await import("next/cache");
+          // Next 16 : signature (tag, profile) — "default" = default cacheLife.
+          revalidateTag("redirects", "default");
+        } catch {
+          // ok — outside next/cache context (ex : cron seed)
+        }
+      },
+    ],
+    afterDelete: [
+      async () => {
+        try {
+          const { revalidateTag } = await import("next/cache");
+          // Next 16 : signature (tag, profile) — "default" = default cacheLife.
+          revalidateTag("redirects", "default");
+        } catch {}
+      },
+    ],
+  },
+};
+
 // ═══════════════════════════════════════════════════════════════════════════
 //                             BUILD CONFIG
 // ═══════════════════════════════════════════════════════════════════════════
@@ -1577,7 +1663,7 @@ export default buildConfig({
     user: Users.slug,
     meta: { titleSuffix: "— Abbeal CMS" },
   },
-  collections: [Users, Articles, Cases, LandingPages, Glossary, TechRadar, Team, JobOffers],
+  collections: [Users, Articles, Cases, LandingPages, Glossary, TechRadar, Team, JobOffers, Redirects],
   editor: lexicalEditor(),
   localization: {
     locales: [
