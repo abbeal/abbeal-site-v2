@@ -1610,7 +1610,8 @@ const Redirects: CollectionConfig = {
       async () => {
         try {
           const { revalidateTag } = await import("next/cache");
-          revalidateTag("redirects");
+          // Next 16 : signature (tag, profile) — "default" = default cacheLife.
+          revalidateTag("redirects", "default");
         } catch {
           // ok — outside next/cache context (ex : cron seed)
         }
@@ -1620,7 +1621,8 @@ const Redirects: CollectionConfig = {
       async () => {
         try {
           const { revalidateTag } = await import("next/cache");
-          revalidateTag("redirects");
+          // Next 16 : signature (tag, profile) — "default" = default cacheLife.
+          revalidateTag("redirects", "default");
         } catch {}
       },
     ],
