@@ -28,6 +28,8 @@ export type JobOfferStatus = "draft" | "pending_review" | "published";
 export type JobOfferLocation =
   | "paris"
   | "tokyo"
+  | "kyoto"
+  | "osaka"
   | "montreal"
   | "tri-geo"
   | "remote-eu"
@@ -82,6 +84,8 @@ const LOCATION_LABELS: Record<Locale, Record<JobOfferLocation, string>> = {
   fr: {
     paris: "Paris",
     tokyo: "Tokyo",
+    kyoto: "Kyoto",
+    osaka: "Osaka",
     montreal: "Montréal",
     "tri-geo": "Paris / Montréal / Tokyo",
     "remote-eu": "Remote (EU)",
@@ -90,6 +94,8 @@ const LOCATION_LABELS: Record<Locale, Record<JobOfferLocation, string>> = {
   en: {
     paris: "Paris",
     tokyo: "Tokyo",
+    kyoto: "Kyoto",
+    osaka: "Osaka",
     montreal: "Montréal",
     "tri-geo": "Paris / Montréal / Tokyo",
     "remote-eu": "Remote (EU)",
@@ -98,6 +104,8 @@ const LOCATION_LABELS: Record<Locale, Record<JobOfferLocation, string>> = {
   ja: {
     paris: "パリ",
     tokyo: "東京",
+    kyoto: "京都",
+    osaka: "大阪",
     montreal: "モントリオール",
     "tri-geo": "パリ / モントリオール / 東京",
     "remote-eu": "リモート（EU）",
@@ -106,6 +114,8 @@ const LOCATION_LABELS: Record<Locale, Record<JobOfferLocation, string>> = {
   "fr-ca": {
     paris: "Paris",
     tokyo: "Tokyo",
+    kyoto: "Kyoto",
+    osaka: "Osaka",
     montreal: "Montréal",
     "tri-geo": "Paris / Montréal / Tokyo",
     "remote-eu": "Télétravail (UE)",

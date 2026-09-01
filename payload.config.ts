@@ -1441,6 +1441,11 @@ const JobOffers: CollectionConfig = {
       options: [
         { label: "Paris", value: "paris" },
         { label: "Tokyo", value: "tokyo" },
+        // W37 : ajout Kyoto + Osaka pour couvrir les postes Kansai
+        // (ex : id 18 Senior Data Scientist MS365 Kyoto/Osaka etait
+        // classe location=tokyo par defaut — chip "Tokyo" faux).
+        { label: "Kyoto (Kansai)", value: "kyoto" },
+        { label: "Osaka (Kansai)", value: "osaka" },
         { label: "Montréal", value: "montreal" },
         { label: "Tri-géo (Paris · Montréal · Tokyo)", value: "tri-geo" },
         { label: "Remote (EU)", value: "remote-eu" },
