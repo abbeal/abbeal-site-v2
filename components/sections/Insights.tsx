@@ -285,7 +285,10 @@ function TriPaysVisual() {
             </p>
             {/* Bandeau code pays en pied */}
             <div className="mt-3 flex items-center gap-2 border-t border-[var(--color-ink)]/15 pt-2">
-              <span className="font-mono text-[10px] font-semibold text-[var(--color-ink)]">
+              {/* W37 QW4 : font-medium (500) et non font-semibold (600) — le
+                  subset Geist Mono ne charge que 400/500, un 600 ici serait
+                  synthetise en faux-gras. A 10px l'ecart 500/600 est invisible. */}
+              <span className="font-mono text-[10px] font-medium text-[var(--color-ink)]">
                 {c.code}
               </span>
               <span className="font-mono text-[9px] text-[var(--color-muted)]">

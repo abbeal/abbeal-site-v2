@@ -27,13 +27,18 @@ const geistSans = Geist({
   preload: true,
 });
 
-// Geist Mono utilise uniquement en poids 400 (footer meta, tape labels,
-// mono spans) -> restreindre au minimum pour reduire le poids charge.
+// W37 QW4 : le subset ne chargeait QUE le 400, alors que la page utilise
+// aussi du Geist Mono 500 a 12 endroits — dont .tape-label (globals.css,
+// font-weight 500), present sur chaque section et above-the-fold sur la
+// home ("// 01 · Manifesto"), plus TriClock et Destinations. Resultat :
+// le navigateur synthetisait un faux-gras sur ces 12 elements.
+// Le 600 (4 occurrences dans Insights, sur du texte 10px) a ete ramene a
+// 500 cote composant plutot que de charger un 3e fichier de poids.
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400"],
+  weight: ["400", "500"],
   preload: true,
 });
 
