@@ -158,6 +158,29 @@ export function proxy(request: NextRequest) {
     sameSite: "lax",
     path: "/",
   });
+
+  // W37 QW2 : la racine nue "/" etait indexee par Google COMME URL DISTINCTE
+  // en plus des 4 locales (backlinks externes pointent sur abbeal.com nu).
+  // Mesure GSC 90j (2026-06-09 -> 2026-09-06) :
+  //     /      2852 impressions | 34 clics  | CTR 1.19%  | position 7.88
+  //     /en    2840 impressions | 424 clics | CTR 14.93% | position 7.28
+  // Position quasi identique, impressions quasi identiques : les deux URLs
+  // rankent sur les MEMES requetes et se cannibalisent. Quand Google sort "/"
+  // plutot que "/en", le snippet tombe dans la locale negociee au moment du
+  // crawl (souvent la mauvaise pour l'utilisateur) -> CTR divise par 12.
+  //
+  // Fix : noindex sur la racine EXACTE uniquement. Google continue de crawler
+  // et de suivre le 307 (les backlinks vers abbeal.com transmettent toujours
+  // vers la destination), mais n'indexe plus "/" comme URL concurrente. Les
+  // impressions se reportent sur les 4 locales, qui ont un CTR sain.
+  //
+  // ⚠️ NE JAMAIS elargir aux autres chemins sans prefixe (/careers, /cases...)
+  // sinon on desindexe le site entier : eux doivent rester crawlables pour que
+  // Google decouvre et suive la redirection vers leur version localisee.
+  if (pathname === "/") {
+    response.headers.set("X-Robots-Tag", "noindex, follow");
+  }
+
   return response;
 }
 

@@ -721,9 +721,13 @@ export const landingPages: LandingPage[] = [
       fr: "Entreprise de développement informatique à Montréal",
       "fr-ca": "Entreprise de développement informatique à Montréal",
     },
+    // W37 QW1 : la description faisait 169 chars -> Google tronque a ~155 et
+    // coupait le CTA en plein milieu ("Cadrage gratuit de 30 minu..."). Le CTA
+    // n'apparaissait donc JAMAIS en SERP. Reduite a 147/146 chars pour qu'il
+    // survive a la troncature.
     metaDescription: {
-      fr: "Squads d'ingénieurs seniors embarqués dans vos équipes, à Montréal. Développement logiciel, IA, data, robotique. Bureau local depuis 2023. Cadrage gratuit de 30 minutes.",
-      "fr-ca": "Squads d'ingénieurs séniors intégrés à vos équipes, à Montréal. Développement logiciel, IA, données, robotique. Bureau local depuis 2023. Cadrage gratuit de 30 minutes.",
+      fr: "Squads d'ingénieurs seniors embarqués dans vos équipes à Montréal. Logiciel, IA, data, robotique. Bureau local depuis 2023. Cadrage gratuit 30 min.",
+      "fr-ca": "Squads d'ingénieurs séniors intégrés à vos équipes à Montréal. Logiciel, IA, données, robotique. Bureau local depuis 2023. Cadrage gratuit 30 min.",
     },
     body: {
       fr: BODIES["entreprise-developpement-informatique-montreal"]?.body?.fr ?? [],
