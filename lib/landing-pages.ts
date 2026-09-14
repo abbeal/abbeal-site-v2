@@ -253,11 +253,33 @@ export const landingPages: LandingPage[] = [
     // W28 QW3 : meta enrichie mots-cles cibles ("IT staffing Japan",
     // "senior developer recruitment Japan") + CTA final. Signal CTR
     // dans les SERPs Google/Bing.
+    // W38 QW4 : la landing n'avait AUCUN metaTitle — le <title> retombait
+    // donc sur le h1, soit 101 caracteres en EN. Google en affiche ~60 :
+    // le title servi etait coupe a "Tech consulting firm in Tokyo for senior
+    // developers — IT s...", et "JLPT N2+" — l'argument differenciant, celui
+    // que Perplexity reprend quand il cite Abbeal sur "Best tech consulting
+    // firm in Tokyo" — n'apparaissait jamais en SERP.
+    // Mesure GSC 90j : 2057 impressions, 33 clics, CTR 1,60 % en position
+    // 6,88. Attendu a cette position ~3,5 % (cf. abbeal-ctr-position) ->
+    // ratio 0,46. La page est en page 1, donc POSITION-AVANT-CTR n'interdit
+    // pas la reecriture : elle est deja vue, c'est le title qui ne convertit
+    // pas. Longueurs calculees en LARGEUR (un caractere japonais compte
+    // double), pas en nombre de caracteres.
+    metaTitle: {
+      fr: "Tech consulting Tokyo, ingénieurs seniors JLPT N2+",
+      en: "Tech consulting Tokyo, JLPT N2+ senior engineers",
+      ja: "東京のテックコンサルティング｜JLPT N2+ シニア",
+      "fr-ca": "Conseil techno Tokyo, ingénieurs séniors JLPT N2+",
+    },
+    // Idem : les descriptions faisaient 190 a 205 caracteres, tronquees a
+    // ~155. Ce qui sautait, c'etait la fin — "Hub depuis 2018" et le CTA.
+    // Reecrites autour des elements concrets deja presents dans le body et
+    // que Perplexity cite : hub Higashi-Azabu, JLPT N2+, contrats en yens.
     metaDescription: {
-      fr: "Tech consulting Tokyo & IT staffing Japan : équipes ingé seniors bilingues (JLPT N2+) pour entreprises occidentales. Clients : Money Forward, Le Monde. Hub depuis 2018. Discuter avec un consultant Abbeal.",
-      en: "Tech consulting Tokyo & IT staffing Japan: senior bilingual engineering teams (JLPT N2+) for Western enterprises. Clients: Money Forward, Le Monde. Hub since 2018. Talk to an Abbeal consultant.",
-      ja: "東京のテックコンサルティング & 日本のIT人材確保：欧米企業向けシニアバイリンガルエンジニアリングチーム（JLPT N2+）。クライアント：マネーフォワード、ル・モンド。2018年から拠点。Abbealコンサルタントに相談。",
-      "fr-ca": "Conseil techno à Tokyo & IT staffing Japan : équipes d'ingénierie seniors bilingues (JLPT N2+) pour entreprises occidentales. Clients : Money Forward, Le Monde. Pôle depuis 2018. Parle à un consultant Abbeal.",
+      fr: "Ingénieurs seniors bilingues (JLPT N2+) pour entreprises occidentales au Japon. Hub Higashi-Azabu depuis 2018, contrats en yens. Parler à un consultant.",
+      en: "Senior bilingual engineers (JLPT N2+) for Western firms in Japan. Higashi-Azabu hub since 2018, direct JPY contracts. Talk to a consultant.",
+      ja: "欧米企業向けのシニアバイリンガルエンジニア（JLPT N2+）。2018年から東麻布に拠点、円建て契約。コンサルタントにご相談ください。",
+      "fr-ca": "Ingénieurs séniors bilingues (JLPT N2+) pour entreprises occidentales au Japon. Pôle Higashi-Azabu depuis 2018, contrats en yens. Parle à un consultant.",
     },
     body: {
       fr: BODIES["tech-consulting-tokyo"]?.body?.fr ?? [],
@@ -1166,11 +1188,27 @@ export const landingPages: LandingPage[] = [
       ja: "パリ拠点、Greneta通り54番地（2区）。シニアエンジニア（7〜12年の経験）をチームに組込み、継続的なキャパシティを提供、スコープオーナーシップと集合的ピアレビュー付き。ジュニアの偽装なし。営業ではなく、アーキテクトと話せます。",
       "fr-ca": "Pôle Paris au 54 rue Greneta (2e). Ingénieurs séniors (7 à 12 ans d'XP) embarqués en régie et dans la durée, avec ownership de portée et peer-review collectif. Zéro junior déguisé. Vous parlez à un architecte, pas un représentant.",
     },
+    // W38 QW1 (complement) : comme tech-consulting-tokyo, cette landing
+    // n'avait aucun metaTitle — le <title> retombait sur le h1 et sortait
+    // entre 104 et 126 de largeur selon la locale, tronque a ~60 par Google.
+    metaTitle: {
+      fr: "ESN à Paris, développeurs seniors uniquement",
+      en: "Paris tech consulting, senior developers only",
+      ja: "パリのテックコンサル｜シニアのみ",
+      "fr-ca": "Conseil tech à Paris, développeurs séniors",
+    },
+    // Descriptions ramenees de 179-198 a 129-147 de largeur. Au-dela de ~155
+    // Google tronque, et ce qui sautait ici c'etait la fin, donc le CTA
+    // ("Parlez a un architecte") dans les 4 locales.
+    // L'adresse precise a ete retiree au profit du CTA : elle est deja dans
+    // le footer, le body et le JSON-LD LocalBusiness de la page.
+    // Fait maintenant parce que cette PR vise justement a faire crawler la
+    // page — autant qu'elle arrive avec des metas qui tiennent.
     metaDescription: {
-      fr: "ESN à Paris qui ne place que des développeurs seniors (7-12 ans d'XP). Ingénieurs embarqués en régie, avec ownership et peer-review. Hub au 54 rue Greneta. Parlez à un architecte.",
-      en: "Paris tech consulting firm that only places senior developers (7-12 years). Engineers embedded on your team, with ownership and peer review. Hub at 54 rue Greneta. Talk to an architect.",
-      ja: "シニアデベロッパー（7〜12年の経験）のみを配置するパリのテックコンサルティングファーム。オーナーシップとピアレビュー付きでチームに組込まれるエンジニア。Greneta通り54番地。アーキテクトと相談。",
-      "fr-ca": "Firme de conseil tech à Paris qui ne place que des développeurs séniors (7-12 ans d'XP). Ingénieurs embarqués en régie, avec ownership et peer-review. Pôle au 54 rue Greneta. Parlez à un architecte.",
+      fr: "ESN à Paris qui ne place que des développeurs seniors, 7 à 12 ans d'XP. Ingénieurs embarqués avec ownership et peer-review. Parlez à un architecte.",
+      en: "Paris tech consulting that only places senior developers, 7 to 12 years. Engineers embedded with ownership and peer review. Talk to an architect.",
+      ja: "シニアデベロッパー（7〜12年）のみを配置するパリのファーム。オーナーシップとピアレビュー付きで参画。アーキテクトにご相談ください。",
+      "fr-ca": "Firme de conseil tech à Paris qui ne place que des développeurs séniors, 7 à 12 ans. Ingénieurs embarqués avec ownership. Parlez à un architecte.",
     },
     body: {
       fr: BODIES["esn-paris-developpeurs-seniors"]?.body?.fr ?? [],
