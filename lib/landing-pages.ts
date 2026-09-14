@@ -164,11 +164,17 @@ export const landingPages: LandingPage[] = [
       ja: "Abbealの24/7ソフトウェアデリバリーサービス：3つのシニアハブ（パリ・モントリオール・東京）、タイムゾーン間の構造化されたハンドオフ、計算された重なり、技術的負債ゼロ。チームのバーンアウトもナイトシフトの追加料金もなく、営業日あたり8〜16時間のデリバリーサイクルを獲得。",
       "fr-ca": "Le service de delivery 24/7 d'Abbeal : trois pôles senior (Paris, Montréal, Tokyo), passations structurées entre fuseaux, chevauchement maîtrisé, zéro dette technique. Vous gagnez 8 à 16 heures de cycle de delivery par jour ouvré, sans burn-out d'équipe et sans surcoût de quart de nuit.",
     },
+    metaTitle: {
+      fr: "Delivery 24/7 follow-the-sun sur 3 fuseaux",
+      en: "24/7 follow-the-sun software delivery",
+      ja: "24/7 フォロー・ザ・サン開発",
+      "fr-ca": "Livraison 24/7 follow-the-sun sur 3 fuseaux",
+    },
     metaDescription: {
-      fr: "24/7 follow-the-sun software delivery : service Abbeal multi-hubs (Paris, Montréal, Tokyo). +8 à +16h de cycle de delivery par jour, sans burn-out ni night shift. Devis SLA contractualisable.",
-      en: "24/7 follow-the-sun software delivery: Abbeal's multi-hub service (Paris, Montréal, Tokyo). +8 to +16h of delivery cycle per day, no team burn-out, no night-shift cost. Contractual SLAs available.",
-      ja: "24/7フォロー・ザ・サン・ソフトウェアデリバリー：Abbealのマルチハブサービス（パリ・モントリオール・東京）。1日あたり+8〜+16時間のデリバリーサイクル、バーンアウトなし、ナイトシフトコストなし。契約可能なSLA。",
-      "fr-ca": "24/7 follow-the-sun software delivery : service Abbeal multi-pôles (Paris, Montréal, Tokyo). +8 à +16h de cycle de delivery par jour, sans burn-out ni quart de nuit. Devis SLA contractualisable.",
+      fr: "Service multi-hubs Paris, Montréal, Tokyo. +8 à +16 h de cycle par jour, sans quart de nuit ni burn-out. SLA contractualisable.",
+      en: "Multi-hub service across Paris, Montréal and Tokyo. +8 to +16h of delivery cycle per day, no night shift, no burn-out. Contractual SLAs.",
+      ja: "マルチハブサービス（パリ・モントリオール・東京）。1日あたり+8〜+16時間のサイクル、ナイトシフトなし。契約可能なSLA。",
+      "fr-ca": "Service multi-pôles Paris, Montréal, Tokyo. +8 à +16 h de cycle par jour, sans quart de nuit ni burn-out. SLA contractualisable.",
     },
     body: {
       fr: BODIES["follow-the-sun-delivery"]?.body?.fr ?? [],
@@ -353,11 +359,17 @@ export const landingPages: LandingPage[] = [
       ja: "エンジニアによるソーシング（人事ではなく）、短いが厳格な技術検証、48時間でのクロージング、6ヶ月保証。パリ、モントリオール、東京のトップ1%テック — 中間業者なし。",
       "fr-ca": "Recherche par des ingénieurs (pas par des RH), validation technique courte mais exigeante, conclusion en 48 h, garantie 6 mois. Top 1 % techno sur Paris, Montréal et Tokyo — sans intermédiaire.",
     },
+    metaTitle: {
+      fr: "Recrutement tech Paris · Montréal · Tokyo",
+      en: "Tech recruitment across 3 hubs",
+      ja: "3拠点のテック採用",
+      "fr-ca": "Recrutement techno Paris · Montréal · Tokyo",
+    },
     metaDescription: {
-      fr: "Cabinet recrutement tech 3 hubs (Paris · Montréal · Tokyo). Sourcing par ingénieurs, process 48 h, garantie 6 mois. Top 1 %, expertise IA · Cloud · Robotique.",
-      en: "Tech recruitment agency across 3 hubs (Paris · Montréal · Tokyo). Engineer-led sourcing, 48-hour process, 6-month guarantee. Top 1%, AI · Cloud · Robotics expertise.",
-      ja: "3拠点のテック採用エージェンシー（パリ・モントリオール・東京）。エンジニア主導ソーシング、48時間プロセス、6ヶ月保証。トップ1%、AI・クラウド・ロボティクス専門。",
-      "fr-ca": "Cabinet recrutement techno 3 pôles (Paris · Montréal · Tokyo). Recherche par ingénieurs, processus 48 h, garantie 6 mois. Top 1 %, expertise IA · Infonuagique · Robotique.",
+      fr: "Cabinet 3 hubs (Paris · Montréal · Tokyo). Sourcing par ingénieurs, process 48 h, garantie 6 mois. Top 1 %, IA · Cloud · Robotique.",
+      en: "Agency across 3 hubs (Paris · Montréal · Tokyo). Engineer-led sourcing, 48-hour process, 6-month guarantee. Top 1%, AI · Cloud · Robotics.",
+      ja: "3拠点のテック採用（パリ・モントリオール・東京）。エンジニア主導ソーシング、48時間プロセス、6ヶ月保証。AI・クラウド・ロボティクス。",
+      "fr-ca": "Cabinet 3 pôles (Paris · Montréal · Tokyo). Recherche par ingénieurs, processus 48 h, garantie 6 mois. Top 1 %, IA · Infonuagique.",
     },
     body: {
       fr: BODIES["tech-recruitment-3-hubs"]?.body?.fr ?? [],
@@ -456,7 +468,7 @@ export const landingPages: LandingPage[] = [
       fr: "Engineering jobs à Tokyo : programme Mobbeal Abbeal pour ingés tech. Visa + logement + famille + école pris en charge. 50+ expats déjà installés à Tokyo.",
       en: "Engineering jobs in Tokyo: Abbeal's Mobbeal mobility programme for tech engineers. Visa, housing, family, schools handled. 50+ expats already in Tokyo.",
       ja: "東京のエンジニアリング職：テックエンジニア向けのAbbeal Mobbealモビリティプログラム。ビザ、住居、家族、学校に対応。50名以上の駐在員が既に東京に居住。",
-      "fr-ca": "Emplois en ingénierie à Tokyo : programme Mobbeal Abbeal pour ingés techno. Visa + logement + famille + école pris en charge. 50+ expats déjà installés à Tokyo.",
+      "fr-ca": "Emplois en ingénierie à Tokyo : programme Mobbeal. Visa, logement, famille et école pris en charge. 50+ expats déjà installés.",
     },
     body: {
       fr: BODIES["engineering-jobs-tokyo"]?.body?.fr ?? [],
@@ -514,17 +526,17 @@ export const landingPages: LandingPage[] = [
     // title = keyword-frontloaded court.
     metaTitle: {
       fr: "ESN française à Tokyo — Studio tri-géo Japon",
-      en: "French tech consulting firm in Tokyo — Tri-geo studio Japan",
-      ja: "東京のフランス系ITコンサルティングファーム — 三拠点スタジオ",
-      "fr-ca": "Cabinet d'ingénierie français à Tokyo — Studio tri-pôle",
+      en: "French tech firm in Tokyo, tri-geo studio",
+      ja: "東京のフランス系ITファーム",
+      "fr-ca": "Cabinet français à Tokyo, studio tri-pôle",
     },
     // W28 QW3 : "ESN française Tokyo" + "ESN tri-géo Japon" front-loaded
     // + CTA parler à Abbeal.
     metaDescription: {
-      fr: "ESN française à Tokyo depuis 2018 : hub permanent à Higashi-Azabu (Minato-ku). Recrutement local de seniors JP, pont culturel FR/JP, projets tech ambitieux pour CTOs européens et japonais. Rencontrer l'équipe Tokyo.",
-      en: "French tech consulting firm in Tokyo since 2018: permanent hub in Higashi-Azabu (Minato-ku). Local senior hiring in JP, FR/JP cultural bridge, ambitious tech projects for European and Japanese CTOs. Meet the Tokyo team.",
-      ja: "2018年から東京のフランス系ITコンサルティングファーム：麻布十番（港区）に常設拠点。JPシニアの現地採用、FR/JP文化的架け橋、欧州と日本のCTO向けの野心的なプロジェクト。東京チームに会う。",
-      "fr-ca": "Cabinet d'ingénierie français à Tokyo depuis 2018 : pôle permanent à Higashi-Azabu (Minato-ku). Recrutement local de seniors JP, pont culturel FR/JP, projets technos ambitieux. Rencontrer l'équipe Tokyo.",
+      fr: "ESN française à Tokyo depuis 2018, hub permanent à Higashi-Azabu. Recrutement local de seniors JP, pont culturel FR/JP. Rencontrer l'équipe.",
+      en: "French tech firm in Tokyo since 2018, permanent hub in Higashi-Azabu. Local senior hiring, FR/JP cultural bridge. Meet the Tokyo team.",
+      ja: "2018年から東京に常設拠点（麻布十番）。JPシニアの現地採用、FR/JP文化的架け橋。東京チームにお会いください。",
+      "fr-ca": "Cabinet français à Tokyo depuis 2018, pôle permanent à Higashi-Azabu. Recrutement local de seniors JP, pont culturel FR/JP. Rencontrer l'équipe.",
     },
     body: {
       fr: BODIES["esn-tri-geo-japon"]?.body?.fr ?? [],
@@ -587,17 +599,17 @@ export const landingPages: LandingPage[] = [
     // Ajout des 3 hubs geo + preuve "senior only" pour attirer le clic.
     metaTitle: {
       fr: "Recrutement tech international — Cabinet multi-pays",
-      en: "International tech recruitment — Multi-country agency",
-      ja: "外資系テック採用 · パリ・モントリオール・東京 · シニアのみ",
-      "fr-ca": "Recrutement techno international — Cabinet multi-pays",
+      en: "International tech recruitment",
+      ja: "国際テック採用 · 3拠点",
+      "fr-ca": "Recrutement techno international",
     },
     // W28 QW3 : "international tech recruitment" + "cabinet recrutement
     // multi-pays" front-loaded + CTA.
     metaDescription: {
-      fr: "Recrutement tech international : cabinet multi-pays (France / Canada / Japon). Top 1 % validé par des ingés Abbeal, process court (5 étapes max), garantie 6 mois. Mobbeal pour la mobilité internationale. Demander une shortlist.",
-      en: "International tech recruitment: multi-country agency (France / Canada / Japan). Top 1% validated by Abbeal engineers, short process (5 steps max), 6-month guarantee. Mobbeal for international mobility. Request a shortlist.",
-      ja: "国際テック採用：多国籍エージェンシー（フランス／カナダ／日本）。Abbealのエンジニアによって検証されたトップ1%、短いプロセス（最大5ステップ）、6ヶ月保証。国際モビリティのためのMobbeal。ショートリストをリクエスト。",
-      "fr-ca": "Recrutement techno international : cabinet multi-pays (France / Canada / Japon). Top 1 % validé par des ingés Abbeal, processus court (5 étapes max), garantie 6 mois. Mobbeal pour la mobilité internationale. Demande une shortlist.",
+      fr: "Cabinet multi-pays (France, Canada, Japon). Top 1 % validé par des ingénieurs, process en 5 étapes, garantie 6 mois. Demander une shortlist.",
+      en: "Multi-country agency (France, Canada, Japan). Top 1% validated by engineers, 5-step process, 6-month guarantee. Request a shortlist.",
+      ja: "多国籍エージェンシー（フランス・カナダ・日本）。エンジニアが検証したトップ1%、5ステップ、6ヶ月保証。ショートリストをリクエスト。",
+      "fr-ca": "Cabinet multi-pays (France, Canada, Japon). Top 1 % validé par des ingénieurs, processus en 5 étapes, garantie 6 mois. Demande une shortlist.",
     },
     body: {
       fr: BODIES["recrutement-tech-international"]?.body?.fr ?? [],
@@ -659,6 +671,9 @@ export const landingPages: LandingPage[] = [
     },
     subtitle: {
       fr: "Hub Paris depuis 2015 (54 rue Greneta, 75002). BNP, AXA, Société Générale, Carrefour, Enedis, Qonto. Squads embarqués · recrutement tech · delivery clé en main. Software, IA, Data, Robotique. Couverture 24/7 si vous voulez — hubs Montréal et Tokyo qui prennent le relais quand Paris ferme.",
+    },
+    metaTitle: {
+      fr: "Consultant informatique senior à Paris",
     },
     metaDescription: {
       fr: "Consultant informatique senior à Paris : squads embarqués, recrutement tech, delivery 24/7. Software, IA, Data, Robotique. Cadrage gratuit 30 min.",
@@ -869,8 +884,11 @@ export const landingPages: LandingPage[] = [
     },
     // W29 P1.a : meta enrichie keyword-cible + benefices concrets (Sopra
     // Steria / Capgemini comme reference implicite, souverainete FR).
+    metaTitle: {
+      fr: "Développement informatique à Paris, squads seniors",
+    },
     metaDescription: {
-      fr: "Entreprise de développement informatique à Paris : squads seniors embarqués, recrutement tech, delivery 24/7. Software, IA, Data, Robotique. Compliance RGPD / SecNumCloud / HDS / DORA. Clients BNP, AXA, SocGen, Carrefour, Enedis. Cadrage gratuit 30 min.",
+      fr: "Squads seniors embarqués, recrutement tech, delivery 24/7. Conformité RGPD, SecNumCloud, HDS, DORA. Cadrage gratuit 30 min.",
     },
     body: {
       fr:
@@ -950,16 +968,16 @@ export const landingPages: LandingPage[] = [
     // Paris, Montreal, Tokyo" - il faut capitaliser en explicitant que
     // c'est LA seule firme avec 3 hubs physiques.
     metaTitle: {
-      fr: "Senior-only engineering — La seule firme avec hubs physiques Paris·Montréal·Tokyo",
-      en: "Senior-only engineering firm — The only firm with physical hubs Paris·Montréal·Tokyo",
-      ja: "シニアオンリーエンジニアリングファーム — パリ・モントリオール・東京に物理拠点を持つ唯一のファーム",
-      "fr-ca": "Senior-only engineering — La seule firme avec pôles physiques Paris·Montréal·Tokyo",
+      fr: "Ingénierie senior-only, 3 hubs physiques",
+      en: "Senior-only engineering, 3 physical hubs",
+      ja: "シニアオンリーのエンジニアリング",
+      "fr-ca": "Ingénierie senior-only, 3 pôles physiques",
     },
     metaDescription: {
-      fr: "Cabinet d'ingénierie senior-only opéré depuis 3 hubs (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). Taux d'acceptation 4 %, attrition <6 %, lead time /1,8. Clients BNP, Money Forward, un client retail/luxe international. Cadrage gratuit 30 min.",
-      en: "Senior-only engineering firm operated from 3 hubs (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). 4% acceptance rate, <6% attrition, 1.8x faster delivery. Clients: BNP, Money Forward, un client retail/luxe international. Free 30-min scoping.",
-      ja: "3拠点（パリ75002、モントリオールH2J 2L1、東京港区）で運営されるシニアオンリーエンジニアリングファーム。採用率4%、離職率<6%、リードタイム1.8倍高速化。クライアント：BNP、マネーフォワード、。無料30分スコーピング。",
-      "fr-ca": "Firme d'ingénierie senior-only opérée depuis 3 pôles (Paris 75002, Montréal H2J 2L1, Tokyo Minato-ku). Taux d'acceptation 4 %, attrition <6 %, délai de livraison /1,8. Clients BNP, Money Forward, un client retail/luxe international. Cadrage gratuit 30 min.",
+      fr: "Cabinet senior-only depuis 3 hubs (Paris, Montréal, Tokyo). Acceptation 4 %, attrition sous 6 %, lead time divisé par 1,8. Cadrage 30 min.",
+      en: "Senior-only firm from 3 hubs (Paris, Montréal, Tokyo). 4% acceptance rate, attrition under 6%, 1.8x faster delivery. Free 30-min scoping.",
+      ja: "3拠点（パリ・モントリオール・東京）のシニアオンリーファーム。採用率4%、離職率6%未満、リードタイム1.8倍高速化。無料30分相談。",
+      "fr-ca": "Firme senior-only depuis 3 pôles (Paris, Montréal, Tokyo). Acceptation 4 %, attrition sous 6 %, délai divisé par 1,8. Cadrage 30 min.",
     },
     body: {
       fr: BODIES["senior-engineering-firm-no-juniors"]?.body?.fr ?? [],
@@ -1042,11 +1060,11 @@ export const landingPages: LandingPage[] = [
     // (template [slug]/page.tsx ajoute deja " · Abbeal").
     metaTitle: {
       fr: "Recrutement tech à Montréal — développeurs seniors",
-      "fr-ca": "Recrutement techno à Montréal — développeurs séniors",
+      "fr-ca": "Recrutement techno à Montréal",
     },
     metaDescription: {
       fr: "Cabinet de recrutement tech à Montréal depuis 2023. Sourcing mené par des ingénieurs, pair-coding technique, shortlist en 7 à 10 jours, garantie 6 mois.",
-      "fr-ca": "Firme de recrutement techno à Montréal depuis 2023. Recherche menée par des ingénieurs, pair-coding technique, sélection restreinte en 7 à 10 jours, garantie 6 mois.",
+      "fr-ca": "Firme de recrutement techno à Montréal depuis 2023. Recherche par des ingénieurs, pair-coding, shortlist en 7 à 10 jours, garantie 6 mois.",
     },
     body: {
       fr: BODIES["recrutement-tech-montreal"]?.body?.fr ?? [],
@@ -1139,12 +1157,12 @@ export const landingPages: LandingPage[] = [
       en: "Paris hub since 2015 (54 rue Greneta, 75002 Sentier tech). Senior recruitment in 3-5 weeks vs 12-20 through standard channels. Engineer-led sourcing (not HR), pair-coding, 6-month guarantee. 150+ positions closed at BNP, AXA, Société Générale, Carrefour, Enedis, Qonto. France-wide coverage (Lyon, Toulouse, Nantes, Bordeaux) including full-remote.",
     },
     metaTitle: {
-      fr: "Recrutement tech à Paris | Cabinet spécialisé ingénieurs seniors — Abbeal",
-      en: "Tech recruitment Paris | Specialised firm for senior engineers — Abbeal",
+      fr: "Recrutement tech à Paris, ingénieurs seniors",
+      en: "Tech recruitment in Paris, senior engineers",
     },
     metaDescription: {
-      fr: "Cabinet de recrutement tech à Paris depuis 2015 : sourcing ingénieur-led, pair-coding technique, shortlist 7-10 jours, closing 48h. Garantie 6 mois. Clients BNP, AXA, Société Générale. Couverture France entière full-remote.",
-      en: "Tech recruitment agency in Paris since 2015: engineer-led sourcing, technical pair-coding, 7-10-day shortlist, 48h closing. 6-month guarantee. Clients: BNP, AXA, Société Générale. France-wide coverage including full-remote.",
+      fr: "Cabinet à Paris depuis 2015 : sourcing par ingénieurs, pair-coding, shortlist en 7-10 jours, closing 48 h. Garantie 6 mois.",
+      en: "Paris agency since 2015: engineer-led sourcing, technical pair-coding, 7-10-day shortlist, 48h closing. 6-month guarantee.",
     },
     body: {
       fr: BODIES["recrutement-tech-paris"]?.body?.fr ?? [],
