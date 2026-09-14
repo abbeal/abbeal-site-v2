@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
+import { landingExistsInLocale } from "@/lib/landing-pages";
 
 /**
  * Hubs section — 6 cellules ville × service (audit Cowork W30+ Section C).
@@ -120,18 +121,25 @@ const T: Record<Locale, Labels> = {
 type HubCard = {
   city: "paris" | "montreal" | "tokyo";
   kind: "presta" | "recrut";
-  href: string;
+  /** Slug de la landing cible, sans prefixe de locale. Sert de cle de rendu
+   *  et de cle de verification d'existence (cf. filtre en fin de buildCards). */
+  slug: string;
+  /** null quand la landing n'existe pas dans la locale courante : la carte
+   *  est alors rendue en <div> et non en <Link>. Voir le commentaire en fin
+   *  de buildCards. */
+  href: string | null;
   title: string;
   desc: string;
 };
 
 function buildCards(locale: Locale, t: Labels): HubCard[] {
   const p = `/${locale}`;
-  return [
+  const all: HubCard[] = [
     // Paris
     {
       city: "paris",
       kind: "presta",
+      slug: "entreprise-developpement-informatique-paris",
       href: `${p}/entreprise-developpement-informatique-paris`,
       title: t.parisPrestaTitle,
       desc: t.parisPrestaDesc,
@@ -139,6 +147,7 @@ function buildCards(locale: Locale, t: Labels): HubCard[] {
     {
       city: "paris",
       kind: "recrut",
+      slug: "recrutement-tech-paris",
       href: `${p}/recrutement-tech-paris`,
       title: t.parisRecrutTitle,
       desc: t.parisRecrutDesc,
@@ -149,6 +158,7 @@ function buildCards(locale: Locale, t: Labels): HubCard[] {
     {
       city: "montreal",
       kind: "presta",
+      slug: "entreprise-developpement-informatique-montreal",
       href: `${p}/entreprise-developpement-informatique-montreal`,
       title: t.montrealPrestaTitle,
       desc: t.montrealPrestaDesc,
@@ -156,6 +166,7 @@ function buildCards(locale: Locale, t: Labels): HubCard[] {
     {
       city: "montreal",
       kind: "recrut",
+      slug: "recrutement-tech-montreal",
       href: `${p}/recrutement-tech-montreal`,
       title: t.montrealRecrutTitle,
       desc: t.montrealRecrutDesc,
@@ -164,6 +175,7 @@ function buildCards(locale: Locale, t: Labels): HubCard[] {
     {
       city: "tokyo",
       kind: "presta",
+      slug: "tech-consulting-tokyo",
       href: `${p}/tech-consulting-tokyo`,
       title: t.tokyoPrestaTitle,
       desc: t.tokyoPrestaDesc,
@@ -171,11 +183,38 @@ function buildCards(locale: Locale, t: Labels): HubCard[] {
     {
       city: "tokyo",
       kind: "recrut",
+      slug: "engineering-jobs-tokyo",
       href: `${p}/engineering-jobs-tokyo`,
       title: t.tokyoRecrutTitle,
       desc: t.tokyoRecrutDesc,
     },
   ];
+
+  // W38 — Neutralise le href des cartes dont la landing n'existe pas dans la
+  // locale courante. Avant ce garde, les 6 cartes etaient rendues avec un
+  // lien dans les 4 locales alors que 4 d'entre elles sont mono ou bi-locale :
+  // 9 couples carte/locale pointaient vers un 404, soit 36 liens sur /about,
+  // /careers, /hubs et /services (releve en production le 2026-09-14).
+  //
+  //     entreprise-developpement-informatique-paris    fr       -> 404 en en,ja,fr-ca
+  //     recrutement-tech-paris                         fr,en    -> 404 en ja,fr-ca
+  //     entreprise-developpement-informatique-montreal fr,fr-ca -> 404 en en,ja
+  //     recrutement-tech-montreal                      fr,fr-ca -> 404 en en,ja
+  //
+  // Le commentaire Montreal plus haut disait que "la carte reste en FR meme
+  // sur locales EN/JA" — mais une carte qui reste etait un lien 404 qui
+  // restait. Elle reste toujours affichee, simplement elle ne mene plus nulle
+  // part tant que la landing n'est pas traduite.
+  //
+  // Arbitrage Sebastien du 2026-09-14 : carte non cliquable plutot que carte
+  // filtree. Filtrer aurait fait tomber /ja/hubs de 6 cartes a 2, or le Japon
+  // est le marche ou Perplexity cite deja Abbeal en tete sur la requete
+  // locale — appauvrir ces pages pour un gain SEO nul serait un mauvais
+  // echange. Meme traitement que le correctif footer de cette PR, ou
+  // l'absence de href fait retomber sur du texte simple.
+  return all.map((c) =>
+    landingExistsInLocale(c.slug, locale) ? c : { ...c, href: null },
+  );
 }
 
 const CITY_LABEL: Record<HubCard["city"], string> = {
@@ -207,39 +246,62 @@ export function Hubs({ locale }: { locale: Locale }) {
       </p>
 
       <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {cards.map((c) => (
-          <Link
-            key={c.href}
-            href={c.href}
-            className="group flex flex-col justify-between rounded-md border border-[var(--color-border)] p-6 md:p-7 hover:border-[var(--color-brand-teal)] transition-colors bg-[var(--color-bg-paper)]"
-          >
-            <div>
-              <div className="flex items-center gap-3">
-                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
-                  {CITY_LABEL[c.city]}
-                </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--color-muted)]">
-                  · {KIND_TAG[locale][c.kind]}
-                </span>
+        {cards.map((c) => {
+          // Contenu identique dans les deux cas — seul l'enrobage change.
+          const inner = (
+            <>
+              <div>
+                <div className="flex items-center gap-3">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
+                    {CITY_LABEL[c.city]}
+                  </span>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--color-muted)]">
+                    · {KIND_TAG[locale][c.kind]}
+                  </span>
+                </div>
+                <h3 className="mt-4 font-semibold text-lg md:text-xl tracking-[-0.015em] leading-tight group-hover:text-[var(--color-brand-teal)] transition-colors">
+                  {c.title}
+                </h3>
+                <p className="mt-3 text-sm text-[var(--color-ink-soft)] leading-relaxed">
+                  {c.desc}
+                </p>
               </div>
-              <h3 className="mt-4 font-semibold text-lg md:text-xl tracking-[-0.015em] leading-tight group-hover:text-[var(--color-brand-teal)] transition-colors">
-                {c.title}
-              </h3>
-              <p className="mt-3 text-sm text-[var(--color-ink-soft)] leading-relaxed">
-                {c.desc}
-              </p>
+              {/* CTA uniquement sur une carte cliquable : un "Decouvrir →"
+                  sur une carte inerte serait trompeur. */}
+              {c.href && (
+                <div className="mt-6 inline-flex items-center gap-2 font-mono text-xs text-[var(--color-brand-teal)]">
+                  {t.ctaVerb}
+                  <span
+                    aria-hidden
+                    className="inline-block transition-transform duration-300 group-hover:translate-x-1.5"
+                  >
+                    →
+                  </span>
+                </div>
+              )}
+            </>
+          );
+
+          // href null = landing absente de cette locale (cf. buildCards).
+          // On garde la carte visible mais on ne produit pas de lien mort :
+          // pas de <Link>, pas de hover, pas de curseur pointer.
+          return c.href ? (
+            <Link
+              key={c.slug}
+              href={c.href}
+              className="group flex flex-col justify-between rounded-md border border-[var(--color-border)] p-6 md:p-7 hover:border-[var(--color-brand-teal)] transition-colors bg-[var(--color-bg-paper)]"
+            >
+              {inner}
+            </Link>
+          ) : (
+            <div
+              key={c.slug}
+              className="flex flex-col justify-between rounded-md border border-[var(--color-border)] p-6 md:p-7 bg-[var(--color-bg-paper)]"
+            >
+              {inner}
             </div>
-            <div className="mt-6 inline-flex items-center gap-2 font-mono text-xs text-[var(--color-brand-teal)]">
-              {t.ctaVerb}
-              <span
-                aria-hidden
-                className="inline-block transition-transform duration-300 group-hover:translate-x-1.5"
-              >
-                →
-              </span>
-            </div>
-          </Link>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
