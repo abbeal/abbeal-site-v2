@@ -53,7 +53,8 @@ function InsightVisual({
           {tag}
         </span>
         <span className="font-mono text-[10px] tracking-widest text-[var(--color-bg-light)]/80 px-1.5 py-1">
-          // {number}
+          {"// "}
+          {number}
         </span>
       </div>
     </div>

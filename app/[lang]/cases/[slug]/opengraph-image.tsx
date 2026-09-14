@@ -69,7 +69,7 @@ export default async function CaseOG({
                 backgroundColor: "#80E8BA",
               }}
             />
-            <span style={{ color: "#80E8BA" }}>// {sector}</span>
+            <span style={{ color: "#80E8BA" }}>{"// "}{sector}</span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
             {clientLogoUrl && (

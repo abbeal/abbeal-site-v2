@@ -243,10 +243,28 @@ function CmsSchemaLd({
   slug: string;
 }) {
   const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
-  const today = new Date().toISOString().slice(0, 10);
+  // W38 — validThrough se calcule depuis publishedAt, PAS depuis l'instant
+  // du rendu. Avec "Date.now() + 90 jours", la date d'expiration reculait a
+  // chaque regeneration ISR (revalidate = 300) : l'offre n'expirait jamais
+  // aux yeux de Google for Jobs, meme abandonnee depuis des mois. Ancrer sur
+  // publishedAt rend la valeur deterministe et semantiquement juste — une
+  // offre publiee le X expire le X+90.
+  // Corrige au passage l'erreur react-hooks/purity (appel impur pendant le
+  // rendu) que le lint ne remontait pas, faute d'aboutir avant W38.
+  const PUBLICATION_WINDOW_DAYS = 90;
+  const publishedAtDate = offer.publishedAt
+    ? new Date(offer.publishedAt)
+    : null;
   const validThrough =
     offer.closedAt ??
-    new Date(Date.now() + 90 * 24 * 3600 * 1000).toISOString().slice(0, 10);
+    (publishedAtDate && !Number.isNaN(publishedAtDate.getTime())
+      ? new Date(
+          publishedAtDate.getTime() +
+            PUBLICATION_WINDOW_DAYS * 24 * 3600 * 1000,
+        )
+          .toISOString()
+          .slice(0, 10)
+      : undefined);
   const employmentTypeMap: Record<string, string> = {
     cdi: "FULL_TIME",
     permanent: "FULL_TIME",
@@ -315,8 +333,12 @@ function CmsSchemaLd({
       name: "Abbeal",
       value: offer.slug,
     },
-    datePosted: offer.publishedAt || today,
-    validThrough,
+    // publishedAt est requis par la collection CMS, donc toujours renseigne
+    // en pratique. Le fallback precedent ("aujourd'hui") etait pire que son
+    // absence : il affirmait a Google que l'offre venait d'etre publiee, a
+    // chaque regeneration de la page.
+    ...(offer.publishedAt ? { datePosted: offer.publishedAt } : {}),
+    ...(validThrough ? { validThrough } : {}),
     employmentType: employmentTypeMap[offer.contractType] ?? "FULL_TIME",
     hiringOrganization: {
       "@type": "Organization",

@@ -58,7 +58,7 @@ export default async function ArticleOG({
                 backgroundColor: "#42B296",
               }}
             />
-            <span style={{ color: "#42B296" }}>// {tag}</span>
+            <span style={{ color: "#42B296" }}>{"// "}{tag}</span>
           </div>
           <span style={{ color: "#888" }}>{readTime}</span>
         </div>

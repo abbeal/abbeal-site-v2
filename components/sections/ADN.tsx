@@ -44,7 +44,8 @@ export function ADN({ dict }: { dict: Record<string, unknown> }) {
             className="group relative bg-[var(--color-bg-paper)] p-8 md:p-10 hover:bg-[var(--color-bg-cream)]/40 transition-colors"
           >
             <span className="font-mono text-xs tracking-widest text-[var(--color-muted)]">
-              // {pillar.number}
+              {"// "}
+              {pillar.number}
             </span>
             <h3 className="mt-6 text-2xl md:text-3xl font-semibold tracking-tight text-[var(--color-ink)]">
               {pillar.title}

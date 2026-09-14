@@ -244,7 +244,8 @@ export default async function ServiceDetailPage({
 
           <div className="flex items-baseline justify-between gap-6">
             <span className="font-mono text-xs tracking-widest text-[var(--color-bg-light)]/50">
-              // {s.number}
+              {"// "}
+              {s.number}
             </span>
             <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
               {subtitle}
@@ -332,7 +333,8 @@ export default async function ServiceDetailPage({
                 className="relative border border-[var(--color-border)] bg-[var(--color-bg-paper)] p-6"
               >
                 <span className="font-mono text-xs tracking-widest text-[var(--color-muted)]">
-                  // {String(i + 1).padStart(2, "0")}
+                  {"// "}
+                  {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-3 text-xl font-semibold tracking-tight">
                   {step.step}

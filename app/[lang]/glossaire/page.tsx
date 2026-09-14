@@ -43,7 +43,7 @@ const META = {
   "fr-ca": {
     title: "Glossaire techno · Abbeal",
     description:
-      "Définitions claires des termes techniques utilisés par les directeurs des TI : RAG, Kubernetes, DORA, SLO, MACH, DevSecOps, ROS 2 et plus de 40 autres. Sans verbiage.",
+      "Définitions claires des termes techniques pour directeurs des TI : RAG, Kubernetes, DORA, SLO, MACH, DevSecOps, ROS 2 et 40 autres.",
     tape: "// Glossaire",
     h1: "Le glossaire qu'on aurait voulu avoir.",
     subtitle:

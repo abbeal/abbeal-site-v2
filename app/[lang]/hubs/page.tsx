@@ -51,7 +51,7 @@ const T = {
     contactCtaBtn: "Nous contacter",
     metaTitle: "Nos hubs : Paris, Montréal, Tokyo — Bureaux Abbeal",
     metaDescription:
-      "Abbeal opère 3 hubs physiques : Paris (2015), Tokyo (2018), Montréal (2023). Adresses, équipes locales, clients. Prestation + recrutement tech dans chaque bureau.",
+      "Abbeal opère 3 hubs physiques : Paris (2015), Tokyo (2018), Montréal (2023). Adresses, équipes locales, clients. Prestation et recrutement.",
     faqTitle: "Questions fréquentes",
   },
   en: {
@@ -76,7 +76,7 @@ const T = {
     contactCtaBtn: "Contact us",
     metaTitle: "Our hubs: Paris, Montréal, Tokyo — Abbeal offices",
     metaDescription:
-      "Abbeal operates 3 physical hubs: Paris (2015), Tokyo (2018), Montréal (2023). Addresses, local teams, clients. Engineering delivery + tech recruitment in each office.",
+      "Abbeal operates 3 physical hubs: Paris (2015), Tokyo (2018), Montréal (2023). Addresses, local teams, clients. Delivery and tech recruitment.",
     faqTitle: "Frequently asked questions",
   },
   ja: {
@@ -101,7 +101,7 @@ const T = {
     contactCtaBtn: "お問い合わせ",
     metaTitle: "3拠点：パリ、モントリオール、東京 — Abbealオフィス",
     metaDescription:
-      "Abbealは3つの物理拠点を運営：パリ（2015年）、東京（2018年）、モントリオール（2023年）。住所、現地チーム、クライアント。各拠点にエンジニアリングデリバリー + テック採用。",
+      "Abbealは3つの物理拠点を運営：パリ（2015年）、東京（2018年）、モントリオール（2023年）。住所、現地チーム、クライアント。",
     faqTitle: "よくある質問",
   },
   "fr-ca": {
@@ -126,7 +126,7 @@ const T = {
     contactCtaBtn: "Nous contacter",
     metaTitle: "Nos pôles : Paris, Montréal, Tokyo — Bureaux Abbeal",
     metaDescription:
-      "Abbeal opère 3 pôles physiques : Paris (2015), Tokyo (2018), Montréal (2023). Adresses, équipes locales, clients. Prestation + recrutement techno dans chaque bureau.",
+      "Abbeal opère 3 pôles physiques : Paris (2015), Tokyo (2018), Montréal (2023). Adresses, équipes locales, clients. Prestation et recrutement.",
     faqTitle: "Questions fréquentes",
   },
 } as const;
