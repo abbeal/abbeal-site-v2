@@ -234,7 +234,8 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
             <li key={i} className="grid grid-cols-1 md:grid-cols-12 gap-6 py-8 md:py-10">
               <div className="md:col-span-2">
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-muted)]">
-                  // {String(i + 1).padStart(2, "0")}
+                  {"// "}
+                  {String(i + 1).padStart(2, "0")}
                 </p>
                 <p className="mt-2 font-semibold text-3xl md:text-4xl tabular-nums text-[var(--color-ink)]">
                   {item.year}

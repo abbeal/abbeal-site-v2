@@ -173,7 +173,8 @@ export function TechRadar({
               >
                 <div className="flex items-baseline justify-between">
                   <p className={`font-mono text-xs tracking-widest ${style.accent}`}>
-                    // {style.ringNumber}
+                    {"// "}
+                    {style.ringNumber}
                   </p>
                   <span className="font-mono text-[10px] uppercase tracking-wider text-[var(--color-muted)]">
                     {itemsInRing.length}

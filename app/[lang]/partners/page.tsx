@@ -70,7 +70,8 @@ export default async function PartnersPage({
             <div className="flex items-baseline justify-between flex-wrap gap-4 border-b border-[var(--color-border)] pb-5">
               <div>
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
-                  // {String(gi + 1).padStart(2, "0")}
+                  {"// "}
+                  {String(gi + 1).padStart(2, "0")}
                 </p>
                 <h2 className="mt-2 text-2xl md:text-3xl font-semibold tracking-[-0.02em] leading-tight">
                   {g.title}

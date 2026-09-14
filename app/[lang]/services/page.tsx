@@ -162,7 +162,8 @@ export default async function ServicesListingPage({
       {/* Hero */}
       <div className="max-w-3xl">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
-          // {dict.nav.services}
+          {"// "}
+          {dict.nav.services}
         </p>
         <h1 className="mt-6 font-semibold tracking-[-0.025em] text-[clamp(2.25rem,5vw,4rem)] leading-[1.05]">
           {t.title}

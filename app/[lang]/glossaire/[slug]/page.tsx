@@ -274,7 +274,8 @@ export default async function GlossaryEntryPage({
       {related.length > 0 && (
         <section className="mt-12 pt-10 border-t border-[var(--color-border)]">
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-muted)] mb-6">
-            // {t.related}
+            {"// "}
+            {t.related}
           </p>
           <ul className="space-y-4">
             {related.map((r) => {

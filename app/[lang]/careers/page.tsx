@@ -198,7 +198,6 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/careers
       />
       {jobPostings.map((jp, i) => (
         <script
-          // eslint-disable-next-line react/no-array-index-key
           key={`jp-${i}`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jp) }}
@@ -256,7 +255,8 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/careers
               className="border border-[var(--color-border)] bg-[var(--color-bg-paper)] p-5"
             >
               <p className="font-mono text-xs tracking-widest text-[var(--color-brand-teal)]">
-                // {step.number}
+                {"// "}
+                {step.number}
               </p>
               <h3 className="mt-3 text-lg font-semibold tracking-tight text-[var(--color-ink)]">
                 {step.title}

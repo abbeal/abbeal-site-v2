@@ -72,7 +72,7 @@ export default async function CareerOG({
                 backgroundColor: "#42B296",
               }}
             />
-            <span style={{ color: "#42B296" }}>// Hiring · {loc}</span>
+            <span style={{ color: "#42B296" }}>{"// Hiring · "}{loc}</span>
           </div>
           <span style={{ color: "#888" }}>
             {offer?.contractType === "freelance"

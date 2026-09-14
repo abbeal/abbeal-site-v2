@@ -85,7 +85,8 @@ export function Services({
                 >
                   <div className="flex items-start justify-between">
                     <span className="font-mono text-xs tracking-widest text-[var(--color-bg-light)]/50">
-                      // {item.number}
+                      {"// "}
+                      {item.number}
                     </span>
                     <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
                       {item.subtitle}

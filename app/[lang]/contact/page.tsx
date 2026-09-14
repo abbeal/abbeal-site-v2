@@ -147,7 +147,8 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
       {/* Alternative: form + offices + emails */}
       <div className="mt-16 pt-14 border-t border-dashed border-[var(--color-border)]">
         <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-muted)] mb-8">
-          // {d.altTitle}
+          {"// "}
+          {d.altTitle}
         </p>
       </div>
 

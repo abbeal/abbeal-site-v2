@@ -279,7 +279,8 @@ export default async function InsightsIndexPage({
               >
                 <div className="md:col-span-2">
                   <span className="font-mono text-xs tracking-widest text-[var(--color-muted)]">
-                    // {String(i + 1).padStart(2, "0")}
+                    {"// "}
+                    {String(i + 1).padStart(2, "0")}
                   </span>
                   <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
                     {article.tag}

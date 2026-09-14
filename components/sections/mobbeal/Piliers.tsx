@@ -39,7 +39,8 @@ export function Piliers({ dict }: { dict: Record<string, unknown> }) {
             className="group relative border border-[var(--color-border)] bg-[var(--color-bg-paper)] p-8 md:p-10 hover:border-[var(--color-brand-teal)] hover:-translate-y-1 transition-all duration-300"
           >
             <span className="font-mono text-xs tracking-widest text-[var(--color-muted)]">
-              // {item.number}
+              {"// "}
+              {item.number}
             </span>
             <h3 className="mt-6 text-2xl md:text-3xl font-semibold tracking-tight text-[var(--color-ink)]">
               {item.title}

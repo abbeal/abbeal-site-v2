@@ -75,7 +75,7 @@ export default async function GlossaryOG({
             }}
           />
           <span style={{ color: "#80E8BA" }}>
-            // Glossary{category ? ` · ${category}` : ""}
+            {"// Glossary{category ? ` · ${category}` : \"\"}"}
           </span>
         </div>
 

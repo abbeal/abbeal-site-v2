@@ -113,7 +113,8 @@ export default async function CasesIndexPage({
                     {c.sector} · {c.geo}
                   </p>
                   <span className="mt-2 inline-block font-mono text-xs tracking-widest text-[var(--color-muted)]">
-                    // {String(i + 1).padStart(2, "0")}
+                    {"// "}
+                    {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
                 <div className="text-right shrink-0">
