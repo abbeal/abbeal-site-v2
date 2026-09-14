@@ -77,6 +77,21 @@ export type LandingPage = {
   relatedCaseSlugs: string[];
   /** Slug d'article Insights à promouvoir (optionnel). */
   relatedArticleSlug?: string;
+  /** W38 — Slugs d'autres landings à promouvoir en bas de page ("Voir aussi").
+   *  Comble le chaînon manquant du maillage : on avait relatedCaseSlugs et
+   *  relatedArticleSlug, mais rien pour lier une landing à une autre. Une
+   *  landing sans lien entrant ne se fait pas crawler (cf.
+   *  esn-paris-developpeurs-seniors, 0 lien interne et jamais crawlée).
+   *
+   *  ⚠️ Le rendu FILTRE par locale : une landing dont le body n'existe pas
+   *  dans la locale courante n'est pas affichée. Sans ce filtre on fabrique
+   *  des liens vers des 404 — la moitié des landings sont mono ou bi-locale
+   *  (cf. le bug hreflang W35/W36, même cause racine).
+   *
+   *  Volontairement plafonné à 3 au rendu : l'objectif est un maillage
+   *  contextuel ciblé (2 à 4 liens, le niveau des landings qui s'indexent
+   *  bien), pas une liste à rallonge qui diluerait le signal. */
+  relatedLandingSlugs?: string[];
   /** Hero + meta. */
   tape: Translatable<string>;
   h1: Translatable<string>;
@@ -317,6 +332,9 @@ export const landingPages: LandingPage[] = [
     ],
     relatedCaseSlugs: ["thegreenbow", "neobrain-pwc-skillbot"],
     relatedArticleSlug: "recruter-top-1-tech-process-48h",
+    relatedLandingSlugs: [
+      "esn-paris-developpeurs-seniors",
+    ],
     tape: {
       fr: "// RECRUTEMENT",
       en: "// RECRUITMENT",
@@ -627,6 +645,9 @@ export const landingPages: LandingPage[] = [
     ],
     relatedCaseSlugs: ["bnp", "carrefour", "enedis"],
     relatedArticleSlug: "recruter-top-1-tech-process-48h",
+    relatedLandingSlugs: [
+      "esn-paris-developpeurs-seniors",
+    ],
     tape: {
       fr: "// CONSULTANT INFORMATIQUE PARIS",
     },
@@ -832,6 +853,9 @@ export const landingPages: LandingPage[] = [
     ],
     relatedCaseSlugs: ["bnp", "carrefour", "enedis"],
     relatedArticleSlug: "recruter-top-1-tech-process-48h",
+    relatedLandingSlugs: [
+      "esn-paris-developpeurs-seniors",
+    ],
     tape: {
       fr: "// ENTREPRISE INFORMATIQUE PARIS",
     },
@@ -900,6 +924,9 @@ export const landingPages: LandingPage[] = [
     ],
     relatedCaseSlugs: ["bnp", "money-forward"],
     relatedArticleSlug: "recruter-top-1-tech-process-48h",
+    relatedLandingSlugs: [
+      "esn-paris-developpeurs-seniors",
+    ],
     tape: {
       fr: "// SENIOR-ONLY",
       en: "// SENIOR-ONLY",
@@ -1168,6 +1195,11 @@ export const landingPages: LandingPage[] = [
       "leader-sport-pwa-conversion",
     ],
     relatedArticleSlug: "recruter-top-1-tech-process-48h",
+    relatedLandingSlugs: [
+      "senior-engineering-firm-no-juniors",
+      "consultant-informatique-paris",
+      "tech-recruitment-3-hubs",
+    ],
     tape: {
       fr: "// PARIS",
       en: "// PARIS",
@@ -1237,6 +1269,36 @@ export const landingPages: LandingPage[] = [
 
 export function getLandingPage(slug: string): LandingPage | undefined {
   return landingPages.find((p) => p.slug === slug);
+}
+
+/** W38 — Resout relatedLandingSlugs en landings reellement affichables dans
+ *  la locale demandee.
+ *
+ *  Le filtre sur body[locale] n'est pas cosmetique : la moitie des landings
+ *  n'existent que dans 1 ou 2 locales (consultant-informatique-paris est
+ *  fr-only, recrutement-tech-paris fr+en...). Sans lui, une page EN
+ *  afficherait un lien vers une landing fr-only, donc vers un 404 — c'est
+ *  exactement la cause racine du bug hreflang W35/W36.
+ *
+ *  Un slug inconnu est ignore silencieusement plutot que de faire planter le
+ *  rendu : ces slugs sont saisis a la main, une coquille ne doit pas casser
+ *  la page entiere. */
+export function getRelatedLandings(
+  slugs: string[] | undefined,
+  locale: Locale,
+  limit = 3,
+): LandingPage[] {
+  if (!slugs?.length) return [];
+  const out: LandingPage[] = [];
+  for (const slug of slugs) {
+    if (out.length >= limit) break;
+    const page = getLandingPage(slug);
+    if (!page) continue;
+    const body = page.body[locale];
+    if (!body || body.length === 0) continue;
+    out.push(page);
+  }
+  return out;
 }
 
 export const landingPageSlugs = landingPages.map((p) => p.slug);

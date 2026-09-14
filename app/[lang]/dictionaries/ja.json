@@ -521,14 +521,12 @@
         {
           "city": "パリ",
           "address": "54 rue Greneta, 75002 Paris",
-          "tag": "欧州拠点",
-          "href": "/consultant-informatique-paris"
+          "tag": "欧州拠点"
         },
         {
           "city": "モントリオール",
           "address": "4388 Rue Saint-Denis, QC H2J 2L1",
-          "tag": "アメリカ拠点",
-          "href": "/entreprise-developpement-informatique-montreal"
+          "tag": "アメリカ拠点"
         },
         {
           "city": "東京",
@@ -571,8 +569,7 @@
       "techConsultingTokyo": "東京のテックコンサルティング",
       "esnTriGeoJapon": "東京のフランス系ITファーム",
       "intlRecruitment": "国際テック採用",
-      "followTheSun": "24/7 フォロー・ザ・サン・デリバリー",
-      "esnParisSeniors": "パリのシニアデベロッパー"
+      "followTheSun": "24/7 フォロー・ザ・サン・デリバリー"
     }
   },
   "cookieBanner": {

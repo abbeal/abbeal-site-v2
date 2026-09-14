@@ -316,27 +316,6 @@ export function Footer({
                   "24/7 Follow-the-Sun delivery"}
               </Link>
             </li>
-            {/* W38 QW1 : esn-paris-developpeurs-seniors n'avait AUCUN lien
-                interne — creee via CMS apres le bandeau de W28, elle n'y a
-                jamais ete ajoutee. GSC la donne "Discovered - currently not
-                indexed", last_crawl_time null : Google connait l'URL (elle
-                est au sitemap depuis toujours) mais n'a jamais depense de
-                budget de crawl dessus. Ce n'est pas un defaut de decouverte,
-                c'est un defaut de priorite — et la priorite se gagne par le
-                maillage, pas par une soumission Indexing API.
-                Precedent qui valide le levier : esn-tri-geo-japon, ajoutee
-                a ce meme bandeau en W28 pour la meme raison, est aujourd'hui
-                "Submitted and indexed" (crawl du 2026-09-08). */}
-            <li>
-              <Link
-                href={`${p}/esn-paris-developpeurs-seniors`}
-                className="hover:text-[var(--color-brand-teal)] transition-colors"
-              >
-                {((d.footer as unknown as Record<string, Record<string, string>>)
-                  .landings ?? {}).esnParisSeniors ??
-                  "Développeurs seniors à Paris"}
-              </Link>
-            </li>
           </ul>
         </div>
 

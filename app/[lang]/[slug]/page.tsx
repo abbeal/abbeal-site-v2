@@ -3,7 +3,11 @@ import Link from "next/link";
 import { notFound, redirect, permanentRedirect } from "next/navigation";
 import { resolveRedirect, buildRedirectDestination } from "@/lib/redirects";
 import { hasLocale, locales, type Locale } from "@/lib/i18n";
-import { getLandingPage, landingPageSlugs } from "@/lib/landing-pages";
+import {
+  getLandingPage,
+  getRelatedLandings,
+  landingPageSlugs,
+} from "@/lib/landing-pages";
 import { getArticle, pick } from "@/lib/articles";
 import { getCase } from "@/lib/cases";
 import { ArticleBlocks } from "@/components/sections/ArticleBlocks";
@@ -269,11 +273,17 @@ export default async function LandingPage({
     ? getArticle(page.relatedArticleSlug)
     : undefined;
 
+  // W38 — Landings liées ("Voir aussi"). getRelatedLandings filtre sur
+  // body[locale] : une landing mono-locale n'apparait pas dans les autres
+  // locales, sinon on pointerait vers un 404.
+  const relatedLandings = getRelatedLandings(page.relatedLandingSlugs, locale);
+
   const t = {
     fr: {
       faqHeading: "Questions fréquentes",
       relatedCasesHeading: "// Cas clients liés",
       relatedArticleHeading: "// À lire ensuite",
+      relatedLandingsHeading: "// Voir aussi",
       ctaTitle: "Une question, un projet, une mission ?",
       ctaBtn: "Réserver un créneau (Calendly)",
     },
@@ -281,6 +291,7 @@ export default async function LandingPage({
       faqHeading: "Frequently asked questions",
       relatedCasesHeading: "// Related case studies",
       relatedArticleHeading: "// Read next",
+      relatedLandingsHeading: "// See also",
       ctaTitle: "Got a question, a project, an engagement?",
       ctaBtn: "Book a slot (Calendly)",
     },
@@ -288,6 +299,7 @@ export default async function LandingPage({
       faqHeading: "よくある質問",
       relatedCasesHeading: "// 関連ケース",
       relatedArticleHeading: "// 次に読む",
+      relatedLandingsHeading: "// 関連ページ",
       ctaTitle: "ご質問、プロジェクト、ミッションは？",
       ctaBtn: "枠を予約 (Calendly)",
     },
@@ -295,6 +307,7 @@ export default async function LandingPage({
       faqHeading: "Questions fréquentes",
       relatedCasesHeading: "// Cas clients liés",
       relatedArticleHeading: "// À lire ensuite",
+      relatedLandingsHeading: "// Voir aussi",
       ctaTitle: "Une question, un projet, un mandat ?",
       ctaBtn: "Réserver un créneau (Calendly)",
     },
@@ -420,6 +433,46 @@ export default async function LandingPage({
                 {pick(relatedArticle.excerpt, locale)}
               </p>
             </Link>
+          </div>
+        </section>
+      )}
+
+      {/* W38 — Landings liees ("Voir aussi"). Maillage interne landing ->
+          landing : il existait relatedCases et relatedArticle, mais rien
+          pour lier deux landings entre elles. Une landing sans lien entrant
+          ne se fait pas crawler (esn-paris-developpeurs-seniors : 0 lien,
+          jamais crawlee malgre 2 soumissions Indexing API).
+          Les liens sont filtres par locale en amont (getRelatedLandings),
+          donc pas de lien vers une landing mono-locale depuis une autre
+          locale. */}
+      {relatedLandings.length > 0 && (
+        <section className="border-b border-[var(--color-border)]">
+          <div className="mx-auto max-w-[1100px] px-6 md:px-10 py-16">
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-muted)] mb-8">
+              {t.relatedLandingsHeading}
+            </p>
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relatedLandings.map((rl) => (
+                <li key={rl.slug}>
+                  <Link
+                    href={`/${locale}/${rl.slug}`}
+                    className="group block border border-[var(--color-border)] bg-[var(--color-bg-paper)] p-6 hover:border-[var(--color-brand-teal)] transition-colors h-full"
+                  >
+                    <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-brand-teal)]">
+                      {pick(rl.tape, locale)}
+                    </p>
+                    <h3 className="mt-3 text-lg font-semibold tracking-tight leading-snug group-hover:text-[var(--color-brand-teal)] transition-colors">
+                      {rl.metaTitle
+                        ? pick(rl.metaTitle, locale)
+                        : pick(rl.h1, locale)}
+                    </h3>
+                    <p className="mt-3 text-[14px] text-[var(--color-ink-soft)] leading-relaxed">
+                      {pick(rl.metaDescription, locale)}
+                    </p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       )}

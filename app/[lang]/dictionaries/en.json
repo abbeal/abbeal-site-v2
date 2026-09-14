@@ -521,14 +521,12 @@
         {
           "city": "Paris",
           "address": "54 rue Greneta, 75002 Paris",
-          "tag": "EU Hub",
-          "href": "/consultant-informatique-paris"
+          "tag": "EU Hub"
         },
         {
           "city": "Montréal",
           "address": "4388 Rue Saint-Denis, QC H2J 2L1",
-          "tag": "Americas Hub",
-          "href": "/entreprise-developpement-informatique-montreal"
+          "tag": "Americas Hub"
         },
         {
           "city": "Tokyo",
@@ -571,8 +569,7 @@
       "techConsultingTokyo": "Tech consulting Tokyo",
       "esnTriGeoJapon": "French tech firm in Tokyo",
       "intlRecruitment": "International tech recruitment",
-      "followTheSun": "24/7 Follow-the-Sun delivery",
-      "esnParisSeniors": "Senior developers in Paris"
+      "followTheSun": "24/7 Follow-the-Sun delivery"
     }
   },
   "cookieBanner": {

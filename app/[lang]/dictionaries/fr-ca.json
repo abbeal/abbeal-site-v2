@@ -528,8 +528,7 @@
         {
           "city": "Paris",
           "address": "54 rue Greneta, 75002 Paris",
-          "tag": "Pôle Europe",
-          "href": "/consultant-informatique-paris"
+          "tag": "Pôle Europe"
         },
         {
           "city": "Tokyo",
@@ -572,8 +571,7 @@
       "techConsultingTokyo": "Conseil techno Tokyo",
       "esnTriGeoJapon": "Cabinet français à Tokyo",
       "intlRecruitment": "Recrutement techno international",
-      "followTheSun": "24/7 Follow-the-Sun delivery",
-      "esnParisSeniors": "Développeurs séniors à Paris"
+      "followTheSun": "24/7 Follow-the-Sun delivery"
     }
   },
   "cookieBanner": {
