@@ -23,6 +23,15 @@ type Dict = {
      *  la voix de marque ("Sans bullshit."). Fallback sur h1 si absent.
      *  (Même pattern que careers.seoTitle, ajout audit W24-t5.) */
     seoTitle?: string;
+    /** Description SEO dédiée — découplée du subtitle, sur le même principe
+     *  que seoTitle l'est du h1. Le subtitle affiché est volontairement court
+     *  ("Retours terrain des équipes Abbeal. Mises à jour trimestrielles.",
+     *  64 de largeur) : c'est la voix de marque. Mais servi comme meta
+     *  description, il n'utilisait que 40 % de la place SERP disponible sur
+     *  la page qui reference les 55 insights du site — une meta
+     *  sous-exploitee, que le controle de depassement ne voit pas.
+     *  Fallback sur subtitle si absent. (W38) */
+    seoDescription?: string;
     /** UI tag filter — labels localisés (audit W24-t5). */
     allTagsLabel?: string;
     tagFilterLabel?: string;
@@ -38,7 +47,11 @@ export async function generateMetadata({
   if (!hasLocale(lang)) return {};
   const dict = (await getDictionary(lang as Locale)) as Dict;
   const title = `${dict.insightsIndex.seoTitle ?? dict.insightsIndex.h1} · Abbeal`;
-  const description = dict.insightsIndex.subtitle;
+  // W38 — seoDescription plutot que subtitle : le subtitle affiche est court
+  // par choix editorial (64 de largeur), ce qui laissait 60 % de la place
+  // SERP inutilisee sur l'index qui reference les 55 insights du site.
+  const description =
+    dict.insightsIndex.seoDescription ?? dict.insightsIndex.subtitle;
   // Note : pageAlternates n'inclut PAS les query params -> canonical reste
   // /{locale}/insights meme quand l'utilisateur navigue ?tag=IA. Volontaire :
   // les pages filtrees ne sont pas des canonicals separes (sinon Google y
@@ -130,6 +143,9 @@ export default async function InsightsIndexPage({
   const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abbeal.com";
   const pageH1 = dict.insightsIndex.h1;
   const pageSubtitle = dict.insightsIndex.subtitle;
+  // W38 — meta description decouplee du subtitle affiche (cf. seoDescription).
+  const pageSeoDescription =
+    dict.insightsIndex.seoDescription ?? pageSubtitle;
 
   // Schema.org Blog (NEW W24-t5) — eligibilite "blog" rich result + boost
   // autorite topique sur les requetes "blog abbeal" / "insights abbeal".
@@ -140,7 +156,7 @@ export default async function InsightsIndexPage({
     "@context": "https://schema.org",
     "@type": "Blog",
     name: pageH1,
-    description: pageSubtitle,
+    description: pageSeoDescription,
     url: `${SITE}/${locale}/insights`,
     inLanguage: locale,
     publisher: {
@@ -163,7 +179,7 @@ export default async function InsightsIndexPage({
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: pageH1,
-    description: pageSubtitle,
+    description: pageSeoDescription,
     numberOfItems: articles.length,
     itemListElement: articles.map((a, i) => ({
       "@type": "ListItem",

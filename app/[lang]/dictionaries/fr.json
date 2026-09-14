@@ -982,11 +982,12 @@
     "tape": "// Insights",
     "h1": "Sans bullshit.",
     "subtitle": "Retours terrain des équipes Abbeal. Mises à jour trimestrielles.",
-    "seoTitle": "Insights tech — IA, Software, Data, Robotique · Tokyo, Paris, Montréal",
+    "seoTitle": "Insights tech — IA, software, data, robotique",
     "allTagsLabel": "Tous",
     "tagFilterLabel": "Filtrer par sujet",
     "noResultsLabel": "Aucun article pour ce sujet.",
-    "filteredByPrefix": "Filtré par"
+    "filteredByPrefix": "Filtré par",
+    "seoDescription": "Retours terrain des équipes Abbeal sur l'IA en production, le software, la data et la robotique. Publié depuis nos hubs de Paris, Montréal et Tokyo."
   },
   "legal": {
     "mentions": {
