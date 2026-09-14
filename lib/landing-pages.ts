@@ -1283,6 +1283,21 @@ export function getLandingPage(slug: string): LandingPage | undefined {
  *  Un slug inconnu est ignore silencieusement plutot que de faire planter le
  *  rendu : ces slugs sont saisis a la main, une coquille ne doit pas casser
  *  la page entiere. */
+/** W38 — Vrai si la landing a un body dans cette locale, donc si l'URL
+ *  /{locale}/{slug} existe reellement (generateStaticParams ne pre-genere
+ *  que ces couples, et dynamicParams est a false : tout le reste est un 404).
+ *
+ *  A utiliser par TOUT composant qui construit un lien vers une landing.
+ *  Sans ce garde, on fabrique des liens internes vers des 404 : c'etait le
+ *  cas du footer (5 liens) et de Hubs.tsx (9 couples carte/locale, 36 liens
+ *  rendus), les deux en production. */
+export function landingExistsInLocale(slug: string, locale: Locale): boolean {
+  const page = getLandingPage(slug);
+  if (!page) return false;
+  const body = page.body[locale];
+  return Boolean(body && body.length > 0);
+}
+
 export function getRelatedLandings(
   slugs: string[] | undefined,
   locale: Locale,
