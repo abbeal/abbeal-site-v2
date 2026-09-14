@@ -992,11 +992,12 @@
     "tape": "// インサイト",
     "h1": "誇張なし。",
     "subtitle": "Abbealチームの現場レポート。四半期更新。",
-    "seoTitle": "テックインサイト — AI、ソフトウェア、データ、ロボティクス · 東京・パリ・モントリオール",
+    "seoTitle": "テックインサイト — AI・データ・ロボティクス",
     "allTagsLabel": "すべて",
     "tagFilterLabel": "トピックで絞り込む",
     "noResultsLabel": "このトピックの記事はありません。",
-    "filteredByPrefix": "絞り込み"
+    "filteredByPrefix": "絞り込み",
+    "seoDescription": "本番環境のAI、ソフトウェア、データ、ロボティクスに関するAbbealエンジニアの現場レポート。パリ・モントリオール・東京の3拠点から発信。"
   },
   "legal": {
     "mentions": {

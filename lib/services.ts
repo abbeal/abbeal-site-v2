@@ -316,14 +316,14 @@ export const services: Service[] = [
     // <title> + meta description au terme commercial cible que cherchent
     // les CTOs EN-speaking.
     metaTitle: {
-      fr: "Squads embarqués — Staff Augmentation senior · Squads ingés intégrés | Abbeal",
-      en: "Engineering Staff Augmentation — Senior Embedded Squads | Abbeal",
-      ja: "エンジニアリング・スタッフ拡張 — シニア組み込みスクワッド | Abbeal",
+      fr: "Squads embarqués — staff augmentation senior | Abbeal",
+      en: "Engineering staff augmentation — senior squads | Abbeal",
+      ja: "スタッフ拡張 — シニア組み込みスクワッド | Abbeal",
     },
     metaDescription: {
-      fr: "Staff augmentation engineering : squads seniors embarqués chez nos clients (CTO, scale-ups, grands comptes). Ownership de périmètre, livraison 24/7 tri-géo. Cadrage gratuit 30 min.",
-      en: "Engineering staff augmentation: senior embedded squads integrated in your stack (CTO, scale-ups, enterprise). Scope ownership, 24/7 tri-geo delivery (Paris·Montreal·Tokyo). Free 30-min scoping call.",
-      ja: "エンジニアリング・スタッフ拡張：シニア組み込みスクワッドを貴社チームに統合（CTO、スケールアップ、大企業向け）。担当範囲のオーナーシップ、3拠点24/7デリバリー。30分の無料スコーピング。",
+      fr: "Squads seniors embarqués dans vos équipes : ownership de périmètre, livraison 24/7 depuis Paris, Montréal et Tokyo. Cadrage gratuit 30 min.",
+      en: "Senior squads embedded in your stack: scope ownership, 24/7 delivery from Paris, Montréal and Tokyo. Free 30-min scoping call.",
+      ja: "シニアスクワッドを貴社チームに統合。担当範囲のオーナーシップ、パリ・モントリオール・東京から24/7デリバリー。30分の無料スコーピング。",
     },
   },
 
