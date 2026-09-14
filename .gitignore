@@ -62,3 +62,6 @@ yarn-debug.log*
 yarn-error.log*
 .env.vercel.preview
 
+
+# eslint cache (W38 : lint sans cache prenait >9 min)
+.eslintcache

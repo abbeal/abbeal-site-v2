@@ -40,7 +40,7 @@ const T = {
       "Cadrage gratuit 30 min avec un Tech Lead senior Abbeal (pas un commercial). On identifie ensemble le bon format pour votre projet.",
     contactCtaBtn: "Parler à un Tech Lead",
     metaTitle:
-      "Services Abbeal — Squads seniors, recrutement tech, delivery clé en main",
+      "Services Abbeal — squads seniors, recrutement, delivery",
     metaDescription:
       "3 façons de collaborer avec Abbeal : staff augmentation seniors, recrutement tech top 1 %, delivery clé en main output-based. Paris · Montréal · Tokyo.",
   },
@@ -56,7 +56,7 @@ const T = {
       "Free 30-min scoping call with a senior Abbeal Tech Lead (not a sales rep). We'll identify together the right format for your project.",
     contactCtaBtn: "Talk to a Tech Lead",
     metaTitle:
-      "Abbeal services — Senior squads, tech recruitment, turnkey delivery",
+      "Abbeal services — senior squads, recruitment, delivery",
     metaDescription:
       "3 ways to collaborate with Abbeal: senior staff augmentation, top 1% tech recruitment, output-based turnkey delivery. Paris · Montréal · Tokyo.",
   },
@@ -72,7 +72,7 @@ const T = {
       "Abbealのシニアテックリード（営業担当ではありません）による無料30分スコーピングコール。プロジェクトに最適なフォーマットを一緒に特定します。",
     contactCtaBtn: "テックリードに相談",
     metaTitle:
-      "Abbealサービス — シニアスクワッド、テック採用、ターンキー納品",
+      "Abbealサービス — シニアスクワッド、採用、納品",
     metaDescription:
       "Abbealとの3つの協業方法：シニアスタッフ拡張、トップ1%テック採用、成果ベースのターンキー納品。パリ・モントリオール・東京。",
   },
@@ -88,9 +88,9 @@ const T = {
       "Cadrage gratuit 30 min avec un Tech Lead sénior Abbeal (pas un représentant). On identifie ensemble le bon format pour votre projet.",
     contactCtaBtn: "Parler à un Tech Lead",
     metaTitle:
-      "Services Abbeal — Squads séniors, recrutement techno, livraison clé en main",
+      "Services Abbeal — squads séniors, recrutement, livraison",
     metaDescription:
-      "3 façons de collaborer avec Abbeal : renforcement d'équipe séniors, recrutement techno top 1 %, livraison clé en main basée résultats. Paris · Montréal · Tokyo.",
+      "3 façons de collaborer : renforcement d'équipe séniors, recrutement techno top 1 %, livraison clé en main. Paris · Montréal · Tokyo.",
   },
 } as const;
 

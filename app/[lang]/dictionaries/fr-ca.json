@@ -615,8 +615,8 @@
   "mobbeal": {
     "nav": "Mobbeal",
     "meta": {
-      "title": "Mobbeal · Carrière à Tokyo ou Paris pour ingénieurs québécois",
-      "description": "Programme de mobilité internationale pour ingénieurs basés à Montréal. Tu gardes ton mandat, tu changes de vie. Visa 100%, portage, administratif géré. 50+ expatriés."
+      "title": "Mobbeal — carrière à Tokyo ou Paris",
+      "description": "Mobilité internationale pour ingénieurs de Montréal. Tu gardes ton mandat, tu changes de vie. Visa 100 %, portage et administratif gérés."
     },
     "hero": {
       "tape": "// Mobbeal · Programme de mobilité internationale",
@@ -858,7 +858,7 @@
     "h1": "Parler à un architecte.",
     "subtitle": "30 minutes, sans engagement. On comprend votre contexte, on vous dit honnêtement si on peut aider.",
     "metaTitle": "Contactez Abbeal — Montréal · Paris · Tokyo · Réponse en 24h",
-    "metaDescription": "Parle à un architecte Abbeal en 24h. Pôle Montréal (4388 Saint-Denis). Squad senior, IA en production, livraison continue. Cadrage gratuit, sans engagement.",
+    "metaDescription": "Parle à un architecte Abbeal en 24 h. Pôle Montréal (4388 Saint-Denis). Squad senior, IA en production. Cadrage gratuit.",
     "form": {
       "name": "Nom",
       "email": "Courriel professionnel",
@@ -1113,8 +1113,8 @@
   },
   "about": {
     "meta": {
-      "title": "L'équipe Abbeal — 100+ ingénieur·es seniors · Montréal · Paris · Tokyo",
-      "description": "Abbeal : pôle d'ingénierie tri-géo. Bureau Montréal (4388 Saint-Denis). 100+ ingénieur·es seniors sourcés par des ingés (pas des RH), shortlists 48h. 3 pôles."
+      "title": "L'équipe Abbeal — 100+ ingénieurs séniors, 3 pôles",
+      "description": "Pôle d'ingénierie tri-géo. Bureau Montréal (4388 Saint-Denis). 100+ ingénieurs séniors sourcés par des ingés, shortlists 48 h."
     },
     "tape": "// À propos",
     "h1Top": "Construit pour durer.",
